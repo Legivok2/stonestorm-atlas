@@ -1,5 +1,7 @@
 # GitHub Pages publikálás
 
+Nyilvános kalauz: **https://legivok2.github.io/stonestorm-atlas/**. A GitHub Pages `workflow` forrása beállítva; minden main-push az ellenőrzött kalauzt vagy az összes engedély rendelkezésre állásakor a teljes Atlast telepíti.
+
 ## Technológia és alkalmasság
 
 A Stonestorm Atlas statikus HTML/CSS/vanilla JavaScript oldal. A játékadatok generált helyi JavaScriptből töltődnek be; nincs futásidejű API, PHP, adatbázis vagy backend. A `serve.mjs` fejlesztői kiszolgáló, a GitHub Pages-en nem fut. A hash-alapú útvonalakhoz nincs szükség szerveroldali átirányításra.
@@ -19,7 +21,7 @@ GitHub Free esetén nyilvános repository szükséges a Pages-hez. A publikált 
 1. A korábbi Creator Kithez az `assets/images/sources.json` projektgazdai engedélynyilatkozatot rögzít.
 2. A 2103 letöltött kép, az ezekből képzett előnézetek és a játékmentési WebP-k újraközlési engedélye nincs igazolva. A hivatalos letölthetőség ténye rögzített; ez nem önálló újraközlési licenc.
 3. A forráscsomag teljes játék-lokalizációt is tartalmazhat; ennek terjesztési hatókörét szintén tisztázni kell.
-4. A GitHub CLI bejelentkezése 2026. november 7-én sikerült a Legivok2 fiókkal. Repository: https://github.com/Legivok2/stonestorm-atlas . A saját kód és a korábban engedélyezett Creator Kit kerül fel; a teljes játékadat-/képcsomag és az éles Pages-telepítés még függőben van.
+4. A GitHub CLI bejelentkezése 2026. november 7-én sikerült a Legivok2 fiókkal. Repository: https://github.com/Legivok2/stonestorm-atlas . A saját kód és a korábban engedélyezett Creator Kit felkerült. A nyilvános Pages-kiadás ezekből működő kezdőkalauzt épít; a teljes játékadat-/képcsomag továbbra is helyben marad.
 
 ## Saját forráskód frissítése az engedélyek rendezése előtt
 
@@ -32,7 +34,16 @@ git commit -m "Update Atlas source"
 git push origin main
 ```
 
-A repository új klónja még nem teljes alkalmazás-adatcsomag; a helyi teljes verzióból semmit nem töröltünk. A workflow először a szükséges adatokat, képeket és az engedélynyilvántartást vizsgálja. Hiány esetén a build és deploy kihagyásra kerül, nem hoz létre hibás vagy hiányos nyilvános oldalt. Az adatok és engedélyek rendezése után a teljes `stage:github` használható, és a következő push a teljes workflow-t indítja.
+A repository új klónja még nem teljes Atlas-adatcsomag; a helyi teljes verzióból semmit nem töröltünk. A workflow először a szükséges adatokat, képeket és az engedélynyilvántartást vizsgálja. Hiány esetén a `build:pages:guide` a meglévő kezdőkalauzt építi ki a korábban engedélyezett képekkel; a kiadási HTML egyértelműen jelzi, hogy a teljes Atlas még nem érhető el. A kereső, napi lista, kaszt-összehasonlító és Creator Kit-galéria működik. A teljes helyi `index.html` és funkciói érintetlenek. Az adatok és engedélyek rendezése után a teljes `stage:github` használható, és a következő push a teljes Atlas-workflow-t indítja.
+
+Az önálló kalauz új klónból is ellenőrizhető, csomagtelepítés nélkül:
+
+```powershell
+npm run build:pages:guide
+npm run test:pages:guide
+```
+
+A build csak a `guideFiles()` tételes, engedélyellenőrzött listáját másolja a `dist/` mappába. Ismeretlen vagy teljes Atlas-fájlokat tartalmazó korábbi `dist/` esetén leáll, így nem szivároghat át egy korábbi build játékanyaga. A workflow kizárólag a `dist/` tartalmát telepíti, nem a forrásmappát.
 
 Az engedélynyilvántartás: `.publication/permissions.json`. A `pending` státuszt csak valós, a nyilvános terjesztésre kiterjedő engedély/licenc és annak forráshivatkozása alapján szabad `confirmed` értékre állítani. Nem szükséges a helyi szerkesztéshez vagy a kizárólag helyi előnézethez.
 

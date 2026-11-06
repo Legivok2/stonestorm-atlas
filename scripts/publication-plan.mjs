@@ -41,6 +41,10 @@ export function runtimeFiles(){
     ...catalog.entries.flatMap(im=>[im.file,im.originalFile,im.thumbnail])
   ])].sort();
 }
+// A már engedélyezett kalauz önállóan is kiadható a teljes játékadatcsomag nélkül.
+export function guideFiles(){
+  return codeFiles().filter(file=>['index.html','.nojekyll','css/style.css','css/atlas.css','js/content.js','js/main.js'].includes(file)||/^assets\/images\/.*\.webp$/.test(file)||/^assets\/[^/]+\.svg$/.test(file));
+}
 export function sourceFiles(){
   const files=[...runtimeFiles(),'package.json','serve.mjs','README.md','PROJECT_STATUS.md','DATA_SOURCES.md','IMAGE_SOURCES.md','.gitignore','.gitattributes','.publication/permissions.json',
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',

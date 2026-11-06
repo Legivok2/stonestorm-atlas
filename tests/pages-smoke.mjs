@@ -1,11 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
-import {root,runtimeFiles,walk} from '../scripts/publication-plan.mjs';
+import {root,runtimeFiles,guideFiles,walk} from '../scripts/publication-plan.mjs';
 import {createPreview} from '../scripts/serve-pages.mjs';
 const local=process.argv.includes('--local-preview');
+const guide=process.argv.includes('--guide');
 const output=path.join(root,local?'.integration/pages-preview':'dist');
-const expected=runtimeFiles();
+const expected=guide?guideFiles():runtimeFiles();
 const actual=walk(output).map(file=>path.relative(output,file).split(path.sep).join('/'));
 assert.deepEqual([...actual].sort(),[...expected].sort(),'A kimenet csak a tételes futásidejű fájlokat tartalmazhatja.');
 const server=createPreview(output);
@@ -17,6 +18,12 @@ try{
   const queue=expected.filter(file=>file!=='.nojekyll');
   await Promise.all(Array.from({length:8},async()=>{while(queue.length){const file=queue.pop(),response=await fetch(new URL(file,base),{method:'HEAD'});assert.equal(response.status,200,file);assert.equal(Number(response.headers.get('content-length')),fs.statSync(path.join(output,file)).size,file);count++;}}));
   const html=await(await fetch(base)).text();
+  if(guide){
+    assert(!html.includes('src="js/atlas-data.js"'));
+    assert(!html.includes('src="js/image-data.js"'));
+    assert(html.includes('A kalauz már böngészhető.'));
+    for(const file of ['js/atlas-data.js','js/image-data.js','data/atlas.json','data/image-catalog.json'])assert.equal((await fetch(base+file)).status,404,file);
+  }
   for(const [,ref] of html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)){
     if(/^(?:https?:|mailto:|data:)/.test(ref))continue;
     assert(!ref.startsWith('/'),'Gyökérhez kötött hivatkozás: '+ref);

@@ -2,11 +2,15 @@
 
 A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alkalmazásban. Vanilla JavaScript, helyi képek és adatcsomag; nincs játékfiókkapcsolat, kötelező csomagtelepítés vagy keretrendszer.
 
-> **GitHub-forráskiadás, 2026. november 7.:** a repository a saját alkalmazáskódot és a korábban engedélyezett Creator Kit-elemeket tartalmazza. A teljes játékadat-csomag, lokalizáció, katalógusképek és származtatott előnézetek újraközlési engedélye még tisztázandó, ezért ezek nincsenek feltöltve. A teljes helyi projekt változatlanul működik; egy új klón önmagában még nem tartalmazza az Atlas futtatásához szükséges összes adatot. Az éles GitHub Pages-közzététel függőben van.
+> **Nyilvános kalauzkiadás, 2026. november 7.:** a repository a saját alkalmazáskódot és a korábban engedélyezett Creator Kit-elemeket tartalmazza. A GitHub Pages ezekből önálló, böngészőben megnyitható kezdőkalauzt épít: keresővel, napi listával, kaszt-összehasonlítóval és képgalériával. A teljes Atlas játékadat-csomagja, lokalizációja, katalógusképei és származtatott előnézetei az újraközlési engedély rendezéséig nincsenek feltöltve. A teljes helyi projekt változatlanul működik.
 
 ## Megnyitás
 
+**Böngészős kalauz (GitHub Pages): [legivok2.github.io/stonestorm-atlas](https://legivok2.github.io/stonestorm-atlas/)**. A megosztott linkhez nincs szükség letöltésre, GitHub-fiókra vagy telepítésre. A nyilvános kiadás az alábbiakban felsorolt teljes helyi Atlasnál kevesebb funkciót tartalmaz, amíg a játékanyagok engedélye nincs rendezve.
+
 GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stonestorm-atlas). A Pages-közzététel részletei: [DEPLOYMENT.md](docs/DEPLOYMENT.md). A teljes helyi csomag `/stonestorm-atlas/` alkönyvtáras működése ellenőrizve. A `stage:github:code` a saját forráskódot és engedélyezett Creator Kitet választja ki; a teljes `audit:publish`, `build:pages` és `stage:github` az ellenőrizetlen engedélyeknél leáll. A helyi teljes alkalmazás tovább működik.
+
+A nyilvános kalauz egy friss klónból is elkészíthető, játékadatok és npm-csomagtelepítés nélkül: `npm run build:pages:guide`, majd `npm run test:pages:guide`. A workflow minden main-push után automatikusan újratelepíti ezt a kiadást; a teljes Atlas csak az összes adat és engedély rendelkezésre állásakor kerülhet ki.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 

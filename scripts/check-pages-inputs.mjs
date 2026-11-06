@@ -24,7 +24,7 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const result=pagesReadiness(root);
   const output=`ready=${result.ready}\n`;
   if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,output);
-  const message=result.ready?'Minden adatfájl és engedély rendelkezésre áll; a Pages-build folytatható.':`A forráskód elérhető, a Pages-közzététel még vár. Hiányzó adat/asset: ${result.missing.length}; tisztázandó engedélycsoport: ${result.pending.join(', ')}.`;
+  const message=result.ready?'Minden adatfájl és engedély rendelkezésre áll; a teljes Pages-build folytatható.':`A teljes Atlas még vár; az engedélyezett kezdőkalauzt publikáljuk. Hiányzó adat/asset: ${result.missing.length}; tisztázandó engedélycsoport: ${result.pending.join(', ')}.`;
   console.log(message);
   if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'## Pages-készenlét\n\n'+message+'\n');
 }
