@@ -1,0 +1,27 @@
+{
+  "name": "stonestorm-atlas",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "build:data": "node scripts/build-data.mjs && python scripts/build-images.py",
+    "build:images": "python scripts/build-images.py",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/atlas.test.mjs tests/publication.test.mjs",
+    "test:dom": "node tests/dom-smoke.mjs && node tests/features-dom.mjs",
+    "test:http": "node tests/http-smoke.mjs",
+    "audit:publish": "node scripts/audit-publication.mjs",
+    "audit:inspect": "node scripts/audit-publication.mjs --inspection",
+    "build:pages": "node scripts/build-pages.mjs",
+    "build:pages:preview": "node scripts/build-pages.mjs --local-preview",
+    "preview:pages": "node scripts/serve-pages.mjs",
+    "test:pages": "node tests/pages-smoke.mjs",
+    "test:pages:preview": "node tests/pages-smoke.mjs --local-preview",
+    "prepare:github": "node scripts/prepare-github.mjs",
+    "prepare:github:review": "node scripts/prepare-github.mjs --local-review",
+    "stage:github": "node scripts/stage-github.mjs",
+    "stage:github:code": "node scripts/stage-github.mjs --code-only",
+    "check:pages:ready": "node scripts/check-pages-inputs.mjs"
+  }
+}

@@ -1,0 +1,70 @@
+name: Publish Stonestorm Atlas
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.inputs.outputs.ready }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Check licensed data availability
+        id: inputs
+        run: node scripts/check-pages-inputs.mjs
+
+  build:
+    needs: readiness
+    if: needs.readiness.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Check source and assets
+        run: npm run check
+      - name: Test models and data
+        run: npm test
+      - name: Check publication rights and secrets
+        run: npm run audit:publish
+      - name: Build approved static site
+        run: npm run build:pages
+      - name: Verify project-path hosting
+        run: npm run test:pages
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload only approved dist
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

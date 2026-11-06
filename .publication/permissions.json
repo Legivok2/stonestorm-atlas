@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-06",
+  "scopes": {
+    "creator-kit": {
+      "status": "confirmed",
+      "evidence": "assets/images/sources.json",
+      "basis": "A korábbi nyilvántartás a projektgazda nyilvános GitHub Pages-felhasználásra és optimalizálásra vonatkozó megerősítését rögzíti."
+    },
+    "game-art-catalog": {
+      "status": "pending",
+      "evidence": "",
+      "basis": "A felhasználó a hivatalos letölthetőséget megerősítette, de az újraközlésre és származtatott előnézetekre vonatkozó engedély vagy licenc nincs megadva."
+    },
+    "saved-game-art": {
+      "status": "pending",
+      "evidence": "",
+      "basis": "A játékmentési WebP-k nyilvános terjesztési engedélye nincs igazolva."
+    },
+    "game-data-and-localization": {
+      "status": "pending",
+      "evidence": "",
+      "basis": "A teljes mentett magyar lokalizáció és kliensből származó szövegek nyilvános forráscsomagban történő terjesztésének hatókörét is tisztázni kell."
+    }
+  }
+}

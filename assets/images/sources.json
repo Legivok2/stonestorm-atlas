@@ -1,0 +1,299 @@
+{
+  "permission": {
+    "status": "confirmed-by-project-owner",
+    "date": "2026-10-31",
+    "scope": "A felhasználó az SS mappából átadott képek nyilvános GitHub Pages rajongói oldalon való használatához és méretoptimalizálásához szükséges engedély meglétét megerősítette.",
+    "confirmation": "Igen, rendelkezem a szükséges engedéllyel"
+  },
+  "source_folder": "SS",
+  "items": [
+    {
+      "id": "key-art",
+      "provided_file": "stonestorm-images/01_key-art.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/01_key-art.jpg",
+      "original_sha256": "081946e2144ffce82dfb4bc379899b3ed3b0776a4cb55555cc81cf00bc2bc19a",
+      "outputs": [
+        {
+          "file": "key-art-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 43396
+        },
+        {
+          "file": "key-art-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 122928
+        },
+        {
+          "file": "key-art-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 216032
+        }
+      ]
+    },
+    {
+      "id": "village",
+      "provided_file": "stonestorm-images/02_village.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/02_village.jpg",
+      "original_sha256": "120a98d61d795182161214332d36524ab22b0b3fc98e5595b8628c3c10524bed",
+      "outputs": [
+        {
+          "file": "village-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 87830
+        },
+        {
+          "file": "village-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 269906
+        },
+        {
+          "file": "village-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 503860
+        }
+      ]
+    },
+    {
+      "id": "character-warrior",
+      "provided_file": "stonestorm-images/03_paper-doll-warrior.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/03_paper-doll-warrior.jpg",
+      "original_sha256": "61b2bb052381368b252f3469b8808ca908757f93c4b4a44d8987068fcf52b638",
+      "outputs": [
+        {
+          "file": "character-warrior-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 41650
+        },
+        {
+          "file": "character-warrior-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 119070
+        },
+        {
+          "file": "character-warrior-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 220590
+        }
+      ]
+    },
+    {
+      "id": "boss-flamebeard",
+      "provided_file": "stonestorm-images/04_boss-flamebeard.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/04_boss-flamebeard.jpg",
+      "original_sha256": "4e478bc10d1716e1141825cb9374a17085ab52fac45215e0dc341e8f79edcfde",
+      "outputs": [
+        {
+          "file": "boss-flamebeard-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 23320
+        },
+        {
+          "file": "boss-flamebeard-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 65574
+        },
+        {
+          "file": "boss-flamebeard-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 117696
+        }
+      ]
+    },
+    {
+      "id": "stone-rain",
+      "provided_file": "stonestorm-images/05_stone-rain.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/05_stone-rain.jpg",
+      "original_sha256": "85a5e424eacf7037b94053539f61b76f4f22d878b068a8cea5ff7a31079380a6",
+      "outputs": [
+        {
+          "file": "stone-rain-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 59008
+        },
+        {
+          "file": "stone-rain-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 182252
+        },
+        {
+          "file": "stone-rain-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 336094
+        }
+      ]
+    },
+    {
+      "id": "stormcatcher",
+      "provided_file": "stonestorm-images/06_stormcatcher-tower.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/06_stormcatcher-tower.jpg",
+      "original_sha256": "986b9608c2fdb6fecb19ebe3d825245fb1a71ef0592f69fb58193a49b7a371b4",
+      "outputs": [
+        {
+          "file": "stormcatcher-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 53924
+        },
+        {
+          "file": "stormcatcher-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 149544
+        },
+        {
+          "file": "stormcatcher-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 258896
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "provided_file": "stonestorm-images/07_fishing.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/07_fishing.jpg",
+      "original_sha256": "83d3b25fdd0d9783aa351bdde7e702ef48dab2574d3a4e6de7f98fed00ee35d8",
+      "outputs": [
+        {
+          "file": "fishing-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 47972
+        },
+        {
+          "file": "fishing-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 132316
+        },
+        {
+          "file": "fishing-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 245366
+        }
+      ]
+    },
+    {
+      "id": "kingdom-war",
+      "provided_file": "stonestorm-images/08_kingdom-war.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/08_kingdom-war.jpg",
+      "original_sha256": "191157d95c51cdd4970ee5f379a249f3c9f6b97ff711606b05ceafce31ed37fe",
+      "outputs": [
+        {
+          "file": "kingdom-war-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 43386
+        },
+        {
+          "file": "kingdom-war-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 124984
+        },
+        {
+          "file": "kingdom-war-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 225544
+        }
+      ]
+    },
+    {
+      "id": "rune-row",
+      "provided_file": "stonestorm-images/09_rune-row.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/09_rune-row.jpg",
+      "original_sha256": "d62c986e3027999ae10b7e682baf397a36374150dca690daf66796cf9ce2bfa6",
+      "outputs": [
+        {
+          "file": "rune-row-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 42640
+        },
+        {
+          "file": "rune-row-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 117170
+        },
+        {
+          "file": "rune-row-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 205628
+        }
+      ]
+    },
+    {
+      "id": "fair-wheel",
+      "provided_file": "stonestorm-images/10_fair-wheel.jpg",
+      "official_source": "https://stonestorm.gg/creator-kit/media/images/10_fair-wheel.jpg",
+      "original_sha256": "c11daf5f61b9f7f12b3b93da946205aa9ba04ae16ee573283049f7ae02c354ef",
+      "outputs": [
+        {
+          "file": "fair-wheel-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 52922
+        },
+        {
+          "file": "fair-wheel-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 160088
+        },
+        {
+          "file": "fair-wheel-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 286538
+        }
+      ]
+    },
+    {
+      "id": "logo-horizontal",
+      "provided_file": "stonestorm-logos/stonestorm-logo-horizontal-color.png",
+      "official_source": "https://stonestorm.gg/creator-kit/media/logos/stonestorm-logo-horizontal-color.png",
+      "original_sha256": "7fefbe849417489302ab30a012498f164b5947832cd3f1abc8a616cf4231497f",
+      "outputs": [
+        {
+          "file": "logo-horizontal.webp",
+          "width": 440,
+          "height": 166,
+          "bytes": 39094
+        }
+      ]
+    },
+    {
+      "id": "icon-stone",
+      "provided_file": "stonestorm-logos/stonestorm-icon-stone-color.png",
+      "official_source": "https://stonestorm.gg/creator-kit/media/logos/stonestorm-icon-stone-color.png",
+      "original_sha256": "e15cce43cce8995d23a8e6c115a6248c043fc9327909e86a58e97d9b9aad045b",
+      "outputs": [
+        {
+          "file": "icon-stone.webp",
+          "width": 128,
+          "height": 124,
+          "bytes": 7360
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {root,sourceFiles,audit} from './publication-plan.mjs';
+const report=audit(sourceFiles());
+fs.mkdirSync(path.join(root,'.publication'),{recursive:true});
+fs.writeFileSync(path.join(root,'.publication/audit.json'),JSON.stringify(report,null,2)+'\n');
+console.log(`Feltöltési jelölt: ${report.files} fájl, ${(report.bytes/1024/1024).toFixed(1)} MiB.`);
+console.log(`Hiányzó fájl: ${report.missing.length}; titok-/személyesadat-mintatalálat: ${report.secretOrPersonalFindings.length}; 100 MiB feletti fájl: ${report.largeFiles.length}.`);
+for(const finding of report.secretOrPersonalFindings)console.log(`${finding.file}:${finding.line} – ${finding.kind} (érték rejtve)`);
+for(const issue of report.rightsPending)console.log(`Engedély tisztázandó: ${issue.scope} (${issue.files} fájl).`);
+if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length||(!process.argv.includes('--inspection')&&report.rightsPending.length))process.exitCode=1;

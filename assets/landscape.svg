@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" fill="none">
+<defs>
+<linearGradient id="sky" x2="0" y2="850" gradientUnits="userSpaceOnUse"><stop stop-color="#111d2c"/><stop offset=".52" stop-color="#26333b"/><stop offset="1" stop-color="#0b131e"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#b88f68" stop-opacity=".26"/><stop offset="1" stop-color="#b88f68" stop-opacity="0"/></radialGradient>
+<linearGradient id="moon" x2=".8" y2="1"><stop stop-color="#d4b585"/><stop offset="1" stop-color="#94704d"/></linearGradient>
+<linearGradient id="mist" x2="0" y2="1"><stop stop-color="#7d9a9b" stop-opacity="0"/><stop offset=".5" stop-color="#7d9a9b" stop-opacity=".12"/><stop offset="1" stop-color="#7d9a9b" stop-opacity="0"/></linearGradient>
+<linearGradient id="stone" x2="1" y2="1"><stop stop-color="#344047"/><stop offset="1" stop-color="#101c26"/></linearGradient>
+<linearGradient id="gold" x2="0" y2="1"><stop stop-color="#c39c61"/><stop offset="1" stop-color="#72573b"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+<pattern id="stars" width="177" height="123" patternUnits="userSpaceOnUse"><circle cx="35" cy="22" r=".8" fill="#b1c0c3" opacity=".4"/><circle cx="138" cy="78" r=".6" fill="#c9ba9a" opacity=".3"/></pattern>
+</defs>
+<path fill="url(#sky)" d="M0 0h1600v850H0z"/><path fill="url(#stars)" d="M0 0h1600v430H0z"/>
+<ellipse cx="1117" cy="222" rx="380" ry="330" fill="url(#glow)"/>
+<circle cx="1132" cy="199" r="86" fill="url(#moon)" opacity=".8"/><circle cx="1132" cy="199" r="95" stroke="#c9ac7c" stroke-opacity=".12"/>
+<path d="m522 454 80-105 55 47 76-120 39 35 65-102 29 34 36-69 71 127 51-52 69 126 65-65 31 40 43-82 55 78 45-130 62 84 57-56 54 73v370H522Z" fill="#34434b" opacity=".65"/>
+<path d="m709 429 54-92 37 27 37-95 30 34 35-98 39 74 34-6 41 89 56-47 34 63 57-31 55 80 70-80 42 15 25-53 37 42 30-83 51 54 47-32 63 58v271H709Z" fill="#25353e"/>
+<path d="m865 303 37-98 38 75-25-17-14-37-13 57Z" fill="#89918c" opacity=".25"/><path d="m1308 314 28-86 51 58-29-16-18-27-12 46Z" fill="#a0a69a" opacity=".14"/>
+<path d="m400 620 121-74 72 34 75-80 41 18 83-67 79 51 70-62 51 46 66-34 63 33 62-30 98 20 52-46 68 55 56-22 56 45 89-60v403H400Z" fill="#192a34"/>
+<g filter="url(#blur)" opacity=".6"><ellipse cx="1010" cy="475" rx="420" ry="31" fill="#728a8c" opacity=".23"/><ellipse cx="1270" cy="571" rx="330" ry="37" fill="#9aa8a0" opacity=".16"/><ellipse cx="780" cy="633" rx="400" ry="25" fill="#819796" opacity=".13"/></g>
+<path d="M785 737c86-43 110-91 179-81 67 10 151-22 173-61 43 17 68 28 100 16 52 45 106 23 163 55l200-11v195H785Z" fill="#0b1721"/>
+<path d="m979 688 29-86 46-40 42 9 31-49 57-6 37 40 58 18 46 92-14 99-259 24Z" fill="url(#stone)"/>
+<path d="m1127 522-27 100-35 29-24 106m143-241-12 131 34 57-18 75m-94-208-46 49-23 81m197-95 21 79-29 68" stroke="#7e8b85" stroke-opacity=".14" stroke-width="2"/>
+<path d="M1048 575h196v12h-196Zm12-15h176v15h-176Zm12-11h151v11h-151Z" fill="#15212a" stroke="#767566" stroke-opacity=".35"/>
+<!-- Original multi-tier mountain pavilion -->
+<g><path d="M1094 453h113v96h-113Z" fill="#18262c"/><path d="M1104 458v90m27-89v89m43-89v89m23-89v89" stroke="#7c684c" stroke-width="5"/><path d="M1138 494h26v54h-26Z" fill="#0b1820"/><path d="M1109 478h15v29h-15Zm70 0h12v29h-12Z" fill="#c49b5a" opacity=".42"/>
+<path d="M1056 458c32-6 57-19 94-51 30 31 58 46 96 51l-12 8h-166Z" fill="#121e26" stroke="#857657" stroke-width="1.5"/><path d="M1081 451h142m-126-8h108m-96-8h74" stroke="#536365" stroke-opacity=".4"/>
+<path d="M1110 386h80v52h-80Z" fill="#1b2a30"/><path d="M1117 386v48m22-48v37m27-37v37m17-37v48" stroke="#766448" stroke-width="4"/><path d="M1142 392h17v22h-17Z" fill="#c89a58" opacity=".55"/>
+<path d="M1074 389c32-5 58-22 76-47 24 28 46 42 78 47l-9 7h-136Z" fill="#132029" stroke="#918061" stroke-width="1.4"/><path d="M1102 382h94m-78-9h62" stroke="#586866" stroke-opacity=".5"/>
+<path d="M1125 329h51v43h-51Z" fill="#19272e"/><path d="M1131 330v34m17-34v16m21-16v34" stroke="#7e6b49" stroke-width="3"/><path d="M1142 334h16v14h-16Z" fill="#d4a75f" opacity=".5"/>
+<path d="M1100 332c22-6 38-19 50-43 12 24 28 37 53 43l-9 6h-85Z" fill="#111e26" stroke="#a08a60" stroke-width="1.3"/><path d="M1150 265v25m-6-14h12m-10-6h8" stroke="#b29867" stroke-width="2"/>
+<path d="M1082 548v-17h138v17m-138-9h138m-119-8v17m22-17v17m54-17v17m22-17v17" stroke="#8b7655" stroke-width="2"/>
+<path d="M1135 551h33l11 11h-54Zm-10 11h54l10 12h-74Z" fill="#5a6058" opacity=".45"/></g>
+<!-- Far shrine and rope bridge -->
+<path d="M1247 602c77-51 139-83 219-101m-217 112c76-48 141-78 217-99m-207 91v-15m17 6v-16m18 7v-16m19 8v-17m19 8v-16m19 8v-16m19 8v-16m19 8v-16m19 9v-17m18 10v-17m18 10v-17" stroke="#85816b" stroke-opacity=".48" stroke-width="1.5"/>
+<path d="m1422 541 27-72 45-11 56 58 50 31v303h-204Z" fill="#0b1822"/>
+<path d="M1448 446h52v49h-52Z" fill="#14232b"/><path d="M1457 450v42m33-42v42" stroke="#6a604a" stroke-width="3"/><path d="M1468 457h12v20h-12Z" fill="#bf965b" opacity=".4"/><path d="M1429 448c21-3 38-18 46-33 13 20 26 30 47 33l-6 6h-80Z" fill="#0e1d26" stroke="#817454"/>
+<!-- Foreground pines -->
+<g fill="#08131c"><path d="M1484 850c-12-185 10-336 35-494l12 3c-31 196-29 338-21 491Z"/><path d="m1518 383-71 14 29-18-47 1 49-19-34-3 58-14 21-29 21 27 50 12-34 3 40 19-46-3 28 20-58-9Zm-8 79-95 20 41-26-55 2 68-25-39-3 61-16 29-29 17 30 60 18-43 1 46 27-64-10 32 24-71-8Zm-12 89-122 24 56-32-71 4 88-31-54-2 71-22 27-33 26 34 61 17-37 9 43 24-63-9 30 25-78-7Z"/><path d="m980 705-17-116h-5l13 116Zm-16-95-27 3 15-10-20 2 21-11-10-2 17-10 10 12 25 8-16 1 20 10-25-2 13 10Zm5 40-50 8 27-16-31 4 29-16-14-1 30-14 15 16 30 11-21 1 26 15-36-5 18 13Z"/></g>
+<path d="M0 814c220-23 413-12 582-23 161-11 238 28 414 4 165-22 273 24 604-16v71H0Z" fill="#0b111b"/>
+<g fill="#d5ad68" opacity=".6"><circle cx="941" cy="532" r="1.5"/><circle cx="1017" cy="578" r="1"/><circle cx="1292" cy="448" r="1.4"/><circle cx="1337" cy="613" r="1.2"/><circle cx="1088" cy="653" r="1.4"/><circle cx="1372" cy="377" r="1"/></g>
+</svg>
