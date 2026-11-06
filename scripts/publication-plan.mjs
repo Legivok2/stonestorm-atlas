@@ -54,7 +54,7 @@ export function sourceFiles(){
   return [...new Set(files)].sort();
 }
 export function assertSafeRelative(file){
-  if(path.isAbsolute(file)||file.includes('\\')||file.split('/').some(p=>p==='..'||p===''))throw Error('Nem biztonságos csomagútvonal: '+file);
+  if(path.posix.isAbsolute(file)||path.win32.isAbsolute(file)||/^[a-z]:/i.test(file)||file.includes('\\')||file.split('/').some(p=>p==='..'||p===''))throw Error('Nem biztonságos csomagútvonal: '+file);
   if(file.split('/').some(p=>p==='.env'||p.startsWith('.env.')||['.aws','.ssh','.codex'].includes(p)))throw Error('Titkos konfiguráció nem kerülhet a csomagba.');
   if(file==='Stonestorm.html'||file.startsWith('.integration/')||file.startsWith('.git/')||/\.(?:har|pem|pfx|zip|key)$/.test(file))throw Error('Tiltott publikációs fájl: '+file);
 }

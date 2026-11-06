@@ -61,6 +61,6 @@ test('Titokkereső felismeri a tesztkulcsot, de a jelentés nem tartalmazza az �
   assert(scanText(assignment,'fixture.js').length);
 });
 test('A csomagolás tiltja a könyvtárbejárást és a titkos konfigurációt',()=>{
-  for(const file of ['../private','js/../../private','C:/private','.env','assets/.env.local','Stonestorm.html','.git/config','private.key'])assert.throws(()=>assertSafeRelative(file),file);
+  for(const file of ['../private','js/../../private','C:/private','C:relative','/private','//server/private','.env','assets/.env.local','Stonestorm.html','.git/config','private.key'])assert.throws(()=>assertSafeRelative(file),file);
   assert.doesNotThrow(()=>assertSafeRelative('assets/images/key-art-640.webp'));
 });
