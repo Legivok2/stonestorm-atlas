@@ -9,6 +9,7 @@ const output=path.join(root,local?'.integration/pages-preview':'dist');
 const expected=guide?guideFiles():runtimeFiles();
 const actual=walk(output).map(file=>path.relative(output,file).split(path.sep).join('/'));
 assert.deepEqual([...actual].sort(),[...expected].sort(),'A kimenet csak a tételes futásidejű fájlokat tartalmazhatja.');
+if(!guide)for(const file of expected.filter(file=>/\.(?:html|css|js)$/.test(file)))assert(fs.readFileSync(path.join(output,file)).equals(fs.readFileSync(path.join(root,file))),'A teljes kiadás frontendje változatlanul egyezzen a helyi projekttel: '+file);
 const server=createPreview(output);
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin='http://127.0.0.1:'+server.address().port;

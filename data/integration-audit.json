@@ -1,0 +1,449 @@
+{
+  "archive": "Stonestorm_Codex_VSCode_Starter.zip",
+  "archiveGameImages": 48,
+  "savedGameImages": 48,
+  "byteIdenticalGroups": [
+    {
+      "sha256": "4359fa24a65cec36188e6510cd5a95d8aec72c4282746016992b354fc04c2522",
+      "files": [
+        "ATLAS_VSCODE_KEZIKONYV.md",
+        ".integration/starter/stonestorm-codex/ATLAS_VSCODE_KEZIKONYV.md"
+      ]
+    },
+    {
+      "sha256": "add597d1b6d1a7a26d96f255e466aeb41f3591d2445ea7295c5863546b06d3e0",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/bld_banner.webp",
+        "Stonestorm_files/bld_banner.webp"
+      ]
+    },
+    {
+      "sha256": "26a813c6036cc7c8778d7792a5fdcb734ca03b0307a3c0e33fe650a3eae5bb35",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/bld_dojo.webp",
+        "Stonestorm_files/bld_dojo.webp"
+      ]
+    },
+    {
+      "sha256": "f848e963156c93d527e6761b4da54ed0dbd39a052e6d0c6d804f463fe346c01f",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/bld_forge.webp",
+        "Stonestorm_files/bld_forge.webp"
+      ]
+    },
+    {
+      "sha256": "537cc8dca81421628f15e383e9e69df89e7fe2d4aaa9b2cf5b687c21e0a10b50",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/bld_hq.webp",
+        "Stonestorm_files/bld_hq.webp"
+      ]
+    },
+    {
+      "sha256": "8c4b6ee8525d966c494812602fbd621c4932096b722370d372cfb3bf769e403f",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/bld_warehouse.webp",
+        "Stonestorm_files/bld_warehouse.webp"
+      ]
+    },
+    {
+      "sha256": "c8b8d90b9d76f72070180680c55a2d008f3a3405bb345603934d6c4efac25bfe",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/brew_power.webp",
+        "Stonestorm_files/brew_power.webp"
+      ]
+    },
+    {
+      "sha256": "d6a8d77e3de7bd41c2f5bfedf01d77e2721ff8588d60ed4825457499068cf68d",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/brew_stoneskin.webp",
+        "Stonestorm_files/brew_stoneskin.webp"
+      ]
+    },
+    {
+      "sha256": "9b4cefd0fdf349db646a888920a6a6c8088265387749040a655ea1b3c6bccd4c",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_arena.webp",
+        "Stonestorm_files/btn_arena.webp"
+      ]
+    },
+    {
+      "sha256": "f5673d0dc77bca1f955874cfaf5b31c1bb494f0f8185a3321061581e6c80c788",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_character.webp",
+        "Stonestorm_files/btn_character.webp"
+      ]
+    },
+    {
+      "sha256": "a7fa6d2d31e3d96e3da4552ebd1d9fc605bcf72328179707920dcbf93785c1f1",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_city.webp",
+        "Stonestorm_files/btn_city.webp"
+      ]
+    },
+    {
+      "sha256": "740f5a5b4e6d515014cbdbebbe30e94cdb85eef3ea16b8bb15c951cd29d2f1e1",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_fullscreen.webp",
+        "Stonestorm_files/btn_fullscreen.webp"
+      ]
+    },
+    {
+      "sha256": "ec5b228e4bd2fc2a7fd8f9dd147111c73b3c5c5966b5f529d5256c9209772a11",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_guild.webp",
+        "Stonestorm_files/btn_guild.webp"
+      ]
+    },
+    {
+      "sha256": "6d45efbec305c1a2ccf94af98bd91d7a0026ba2d9217f105b91370cfd84bf3ee",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_help.webp",
+        "Stonestorm_files/btn_help.webp"
+      ]
+    },
+    {
+      "sha256": "838867e38218d878096d5b3a8971618fad0c7b2b8bebc3b6c81a49fb2bc7d4d6",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_hunt.webp",
+        "Stonestorm_files/btn_hunt.webp"
+      ]
+    },
+    {
+      "sha256": "e1444b0215f166cf4ce6e201304a90a9744da2b3867f3616220725716c6cf382",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_leads.webp",
+        "Stonestorm_files/btn_leads.webp"
+      ]
+    },
+    {
+      "sha256": "fdf602080d92014f0c7d35481458ea5ac18fd28f974afb29335ad19597dbbdcf",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_premium.webp",
+        "Stonestorm_files/btn_premium.webp"
+      ]
+    },
+    {
+      "sha256": "1a02bd531864bdf4b7ffa0a51fa9764a35399c9e983c74a58866f471b8b85684",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_ranking.webp",
+        "Stonestorm_files/btn_ranking.webp"
+      ]
+    },
+    {
+      "sha256": "11058202bcbe2eb5ef30af5653d48e569d0103cc50678ff7e8421d9296acdc0d",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_settings.webp",
+        "Stonestorm_files/btn_settings.webp"
+      ]
+    },
+    {
+      "sha256": "069421678dc1b0d63afff93c0e42f8b4780e8c16c7f958d4d9e818c5c1007b2e",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/btn_tower.webp",
+        "Stonestorm_files/btn_tower.webp"
+      ]
+    },
+    {
+      "sha256": "c1f2f46bdcca44ba6fc54c6aecb6d0d0efba3580c749cad767fa14eddf1d7480",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/coin_dragon.webp",
+        "Stonestorm_files/coin_dragon.webp"
+      ]
+    },
+    {
+      "sha256": "18684a51084beb9542f0ce07fbfda548a412eef0cab8c24b851f09163a28dd79",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/elixir_gold.webp",
+        "Stonestorm_files/elixir_gold.webp"
+      ]
+    },
+    {
+      "sha256": "852880d78e7706be175bf06b7d6a817c87d86ce1d5af412cd122774a9dc7c144",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/elixir_hunter.webp",
+        "Stonestorm_files/elixir_hunter.webp"
+      ]
+    },
+    {
+      "sha256": "bd7ff6f61171375fc443595b23c335ba4df64c4d0ecceb2fd80f41ad6b28d3d3",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/elixir_xp.webp",
+        "Stonestorm_files/elixir_xp.webp"
+      ]
+    },
+    {
+      "sha256": "1e959bebb213471f248a700c1b4132236565880cd3e83c7805c940ed057fe90a",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/emblem_storm.webp",
+        "Stonestorm_files/emblem_storm.webp"
+      ]
+    },
+    {
+      "sha256": "644a1bd70698a8de968f32a6c5c158bb86a85a25a1af8abdc9d1b513113d3a3b",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/emblem_wave.webp",
+        "Stonestorm_files/emblem_wave.webp"
+      ]
+    },
+    {
+      "sha256": "3eff04a5a1948d91a85c5fa3eac7d0c0877e335ed99eb688f01ad31ef3b77472",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/energy.webp",
+        "Stonestorm_files/energy.webp"
+      ]
+    },
+    {
+      "sha256": "0253c6ed4283e30262f183ae433d584aa9d51fdcf870d2a9f28ac72f608980f2",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/event_halloween.webp",
+        "Stonestorm_files/event_halloween.webp"
+      ]
+    },
+    {
+      "sha256": "73479d708f6e2d9dadac96f1429b9657247337f97d5854ba2b1327347f3abca9",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/frame_corner.webp",
+        "Stonestorm_files/frame_corner.webp"
+      ]
+    },
+    {
+      "sha256": "f439ff1574f542495534522dfb4c4756a08d33cd541734baf96fd2f28ef6aaf6",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/glow_ring.webp",
+        "Stonestorm_files/glow_ring.webp"
+      ]
+    },
+    {
+      "sha256": "a7c0da4bf616325a642484018a0abf449ee2b485ad7efe82dd0c1be44d06fcd6",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_banner_t3.webp",
+        "Stonestorm_files/guildyard_banner_t3.webp"
+      ]
+    },
+    {
+      "sha256": "9f0fe56079c464cd91ee71e7e4e46101e9bcb3d4c4e0d0d0185d2e940d29e6de",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_base.webp",
+        "Stonestorm_files/guildyard_base.webp"
+      ]
+    },
+    {
+      "sha256": "61e8e1ee3f9b94935727d0657bf8c0ef453130dc54e4e12deae2efff5ba8796a",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_dojo_t3.webp",
+        "Stonestorm_files/guildyard_dojo_t3.webp"
+      ]
+    },
+    {
+      "sha256": "65184811ad1d75d3fdc61a1843d14981cdba19fd2e6746faebab1fbc46325a91",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_forge_t3.webp",
+        "Stonestorm_files/guildyard_forge_t3.webp"
+      ]
+    },
+    {
+      "sha256": "0a9e117214b5ed67b0935fb5e1ca25286bdc0182617dc7fbec32234958ac3e26",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_hq_t3.webp",
+        "Stonestorm_files/guildyard_hq_t3.webp"
+      ]
+    },
+    {
+      "sha256": "b36eb6799aa98f5e41e9be33321a0e138d484eacff2b18af5e80276a89bc2009",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/guildyard_warehouse_t3.webp",
+        "Stonestorm_files/guildyard_warehouse_t3.webp"
+      ]
+    },
+    {
+      "sha256": "1891289773da6a0229dbece92f64951bac70222f76240ab572dfc1101d6a439d",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/luck_ore.webp",
+        "Stonestorm_files/luck_ore.webp"
+      ]
+    },
+    {
+      "sha256": "b723548ca72a5a95aa4a36b5efa6d8e0dc16c196545200312c62ea74f939e5ec",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/m4_boss.webp",
+        "Stonestorm_files/m4_boss.webp"
+      ]
+    },
+    {
+      "sha256": "4f016ecfb061be1b1c4cba2abf7f5dc5d4f866c79e91782897fd6512e8be361d",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/medallion_frame.webp",
+        "Stonestorm_files/medallion_frame.webp"
+      ]
+    },
+    {
+      "sha256": "f8f374ded711107de1861b12bfeb9ceb4631d98806563cee3e658ff52d1ff314",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/mine_smelter.webp",
+        "Stonestorm_files/mine_smelter.webp"
+      ]
+    },
+    {
+      "sha256": "9964f8a365313178d74f93dfd7684061a0b725aff1e3e8d74d441c7cee2c22bd",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/ninja_male_v2_l39.webp",
+        "Stonestorm_files/ninja_male_v2_l39.webp"
+      ]
+    },
+    {
+      "sha256": "c857a6abea5e086ccb4bd24ca49c10e437c91fc603c17ee844e87226f7d21d02",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/nyang_small.webp",
+        "Stonestorm_files/nyang_small.webp"
+      ]
+    },
+    {
+      "sha256": "40f88b28515225b9525452ae88bb4a61a910ea65f14f014b827ebadb17f302d2",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/offer_energychest.webp",
+        "Stonestorm_files/offer_energychest.webp"
+      ]
+    },
+    {
+      "sha256": "ba72d7c6228b776758fe0eb3eb7d194aacc33ff96e1db67d682928b6d9fdcac7",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/padlock.webp",
+        "Stonestorm_files/padlock.webp"
+      ]
+    },
+    {
+      "sha256": "ba9506b2e626535742c09262ef3a08bc65e8a5b0f029e4cb2d9f109300ee4b49",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/potion.webp",
+        "Stonestorm_files/potion.webp"
+      ]
+    },
+    {
+      "sha256": "8c994290b58d14ebbbfaa5425b28e4b0a57e193c3a117ab3c22f098bb4e26e7a",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/scroll_bg.webp",
+        "Stonestorm_files/scroll_bg.webp"
+      ]
+    },
+    {
+      "sha256": "7c4b021f8563fc050a06ffc36878a9acbb5df430ff653a1b452713fe87339045",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/scroll_bless.webp",
+        "Stonestorm_files/scroll_bless.webp"
+      ]
+    },
+    {
+      "sha256": "1d52d2ca866b0e438ad9f40eabe3eb3475c7f40e2106f52e7a497d9107f49f97",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/stone_shower.webp",
+        "Stonestorm_files/stone_shower.webp"
+      ]
+    },
+    {
+      "sha256": "25cfce1200e3e77878da4cf2585747fde2643bb9388037a0da52a84aa910d117",
+      "files": [
+        ".integration/starter/stonestorm-codex/dist/assets/game/vip_badge.webp",
+        "Stonestorm_files/vip_badge.webp"
+      ]
+    },
+    {
+      "sha256": "4ec0d855244c527fc0fd7073af97193fb6a05727fb793bd2c657d43f393f7e59",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/00_forrasjegyzek.json",
+        "source-data/00_forrasjegyzek.json"
+      ]
+    },
+    {
+      "sha256": "1f6169be75c19455442b4bd7e9d8873e40bba44fa87aebb749af2e0e757ac813",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/01_felszerelesek_es_szettek.json",
+        "source-data/01_felszerelesek_es_szettek.json"
+      ]
+    },
+    {
+      "sha256": "d0248beaa9fb6e04d7489527e0543f11a0dd31a134113e136405537309a34ed0",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/02_kovacsolas_bonuses_kovek.json",
+        "source-data/02_kovacsolas_bonuses_kovek.json"
+      ]
+    },
+    {
+      "sha256": "5de39b2794dd3faca6da41e8c43d32b930949196cd98002395876f422623c6b8",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/03_kiserok.json",
+        "source-data/03_kiserok.json"
+      ]
+    },
+    {
+      "sha256": "0d82abb9a278caff1063cf303b61ebff9a95e6d62707c1fb967ba2c1acac3247",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/04_hatasok.json",
+        "source-data/04_hatasok.json"
+      ]
+    },
+    {
+      "sha256": "73878a3c06cd573d59f57b9b53654e7888f153e053f455e6225144fbdc18ed37",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/05_kasztok_kepessegek_harcertek.json",
+        "source-data/05_kasztok_kepessegek_harcertek.json"
+      ]
+    },
+    {
+      "sha256": "422d12e137419e1ff17a712005d98758fe666593b35a5b0744d72d58db334526",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/06_terkepek_szornyek_bossok_kazamatak.json",
+        "source-data/06_terkepek_szornyek_bossok_kazamatak.json"
+      ]
+    },
+    {
+      "sha256": "8783673c0549dc20ece9bb5b4e7d9dfb0f49c4388b62c4e161f3ed29f1be6443",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/07_portyak_vadaszat_energia.json",
+        "source-data/07_portyak_vadaszat_energia.json"
+      ]
+    },
+    {
+      "sha256": "00821b344903596e8927b40f962b4242a0591d60bdb8f03d192d814b09c73ab7",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/08_anyagok_penzugyek_boltok.json",
+        "source-data/08_anyagok_penzugyek_boltok.json"
+      ]
+    },
+    {
+      "sha256": "834889bbef3aa970d60c1a66056d94ddf79789a204024d0bf4b7163c6849d413",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/09_otthon_tanulmanyok_egyeb_fejlodes.json",
+        "source-data/09_otthon_tanulmanyok_egyeb_fejlodes.json"
+      ]
+    },
+    {
+      "sha256": "ca34d25f000b9ddfdde76365538af6e337e0a46bd4a9b7145939f25af3e6f7bb",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/10_teljesitmenyek_kuldetesek.json",
+        "source-data/10_teljesitmenyek_kuldetesek.json"
+      ]
+    },
+    {
+      "sha256": "89f830699d19c54e2d49160b12e40eee83262813f60f611dda8f259c33df5ad9",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/11_cehes_epuletek_szintek_es_szabalyok.json",
+        "source-data/11_cehes_epuletek_szintek_es_szabalyok.json"
+      ]
+    },
+    {
+      "sha256": "d0a933eb9210a41f5388ae39060031adfcc6fe21f7ab1caccecf71e1ba53d295",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/12_rendszerkapcsolok_es_limitek.json",
+        "source-data/12_rendszerkapcsolok_es_limitek.json"
+      ]
+    },
+    {
+      "sha256": "7e9f96e7e0c10c117a0ba10357e82e4822649e82fc8dcee2b3615f2fb2a07e48",
+      "files": [
+        ".integration/starter/stonestorm-codex/source-data/13_teljes_magyar_forditas.json",
+        "source-data/13_teljes_magyar_forditas.json"
+      ]
+    }
+  ],
+  "decision": "A futó alkalmazás a meglévő Stonestorm_files képeit és a source-data eredeti JSON-fájljait használja. A .integration csak ideiglenes referencia és teszteszköz."
+}

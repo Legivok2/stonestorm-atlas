@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {runtimeFiles,sourceFiles,codeFiles,rightsIssues,scanText,assertSafeRelative,audit} from '../scripts/publication-plan.mjs';
+import {runtimeFiles,sourceFiles,codeFiles,rightsIssues,publicationOverrideApplies,scanText,assertSafeRelative,audit} from '../scripts/publication-plan.mjs';
 import {pagesReadiness} from '../scripts/check-pages-inputs.mjs';
 import {root} from '../scripts/publication-plan.mjs';
 
@@ -19,11 +19,18 @@ test('A külön forráskód-feltöltés nem terjeszti az ismeretlen engedélyű 
   assert.equal(audit(files).rightsPending.length,0);
   assert.equal(audit(files).secretOrPersonalFindings.length,0);
 });
-test('A teljes helyi adatok sem indítanak élesítést tisztázatlan engedély mellett',()=>{
+test('A teljes kiadás a meglévő adatokat és a közzétételi felhatalmazást is igényli',()=>{
   const readiness=pagesReadiness(root);
   assert.equal(readiness.missing.length,0);
-  // Az engedélyek későbbi rendezésekor is használható teszt: a készültség a nyilvántartásnak felel meg.
-  assert.equal(readiness.ready,readiness.pending.length===0);
+  assert.equal(readiness.ready,readiness.blockers.length===0);
+});
+test('A projektgazdai utasítás szűk hatókörű és nem minősül kiadói licencnek',()=>{
+  const scope='game-art-catalog';
+  const policy={scopes:{},publicationAuthorization:{status:'owner-requested-without-license-verification',scopes:[scope],statement:'A tesztbeli projektgazda kifejezett közzétételi utasítása.',grantedAt:'2026-11-07'}};
+  assert(publicationOverrideApplies(policy,scope));
+  assert(!publicationOverrideApplies(policy,'other-scope'));
+  assert(!publicationOverrideApplies({...policy,publicationAuthorization:{...policy.publicationAuthorization,statement:''}},scope));
+  assert.equal(rightsIssues(['stonestorm_image_tools/downloaded/weapons/example.webp'],policy).length,1);
 });
 
 test('A publikációs csomag nem tartalmazhat játékmentést vagy helyi titkos állományt',()=>{

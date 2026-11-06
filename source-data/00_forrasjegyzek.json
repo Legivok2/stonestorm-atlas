@@ -1,0 +1,22 @@
+{
+  "createdAt": "2026-11-06T18:31:47.334Z",
+  "sourceHashes": {
+    "api/content": "6b29dc393610bbdc2e67bf16ffe897f7a2844e5cba0b17359d4ebfe70ac7f19e",
+    "locale/base.hu": "34ba9425e0e247b339df63d91e429a81760af5c62a315925bb840f7a35c06659",
+    "locale/texts.hu": "a80161cc50da4bc1e12ad2845d455c5734b7a76853f49180f2d833b9ac8226f8",
+    "api/launch": "d8670c105906e714737b554e7f3ae3a16a751c4da8ad340b2a9eae5de9e2a8a8"
+  },
+  "coverage": {
+    "items": 182,
+    "pets": 22,
+    "mounts": 8,
+    "mobs": 64,
+    "maps": 6,
+    "bosses": 6,
+    "dungeons": 4,
+    "stackables": 131,
+    "achievementSets": 8
+  },
+  "untouchedRawSource": "stonestorm-public-content-2026-11-06.json",
+  "note": "A rendszerezett fájlok forrása a nyilvános API és kliensfordítás. Nem tartalmaznak belépési adatot, sessiont vagy személyes játékosadatokat."
+}

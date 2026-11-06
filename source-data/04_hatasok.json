@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "count": 8,
+  "mounts": [
+    {
+      "id": "pony",
+      "level": 1,
+      "travelMult": 0.9,
+      "currency": "nyang",
+      "price": 2000,
+      "days": 14,
+      "nameHu": "Pusztai póni",
+      "descriptionHu": "Szívós pusztai fajta. Kicsi, de egész nap bírja az utat.",
+      "timeReductionPctFromTravelMult": 10
+    },
+    {
+      "id": "mule",
+      "level": 8,
+      "travelMult": 0.85,
+      "currency": "nyang",
+      "price": 3500,
+      "days": 14,
+      "nameHu": "Hegyi öszvér",
+      "descriptionHu": "A hágók teherhordója. Makacs jószág, de a legmeredekebb ösvényen is biztos lábbal halad.",
+      "timeReductionPctFromTravelMult": 15
+    },
+    {
+      "id": "warhorse",
+      "level": 15,
+      "travelMult": 0.8,
+      "currency": "nyang",
+      "price": 15000,
+      "days": 14,
+      "nameHu": "Sztyeppei mén",
+      "descriptionHu": "A határvidék lovasainak hátasa. Nyugodt marad, amikor zúg a vihar.",
+      "timeReductionPctFromTravelMult": 20
+    },
+    {
+      "id": "miststeed",
+      "level": 20,
+      "travelMult": 0.75,
+      "currency": "nyang",
+      "price": 30000,
+      "days": 14,
+      "nameHu": "Ködparipa",
+      "descriptionHu": "A hegycsúcsok ködéből született. Mire észreveszed, már a következő völgyben jár.",
+      "timeReductionPctFromTravelMult": 25
+    },
+    {
+      "id": "charger",
+      "level": 25,
+      "travelMult": 0.7,
+      "currency": "nyang",
+      "price": 60000,
+      "days": 14,
+      "nameHu": "Vértes paripa",
+      "descriptionHu": "Páncélos harci ló a császári istállókból. Nehéz léptekkel is gyorsan halad.",
+      "timeReductionPctFromTravelMult": 30
+    },
+    {
+      "id": "stormtiger",
+      "level": 1,
+      "travelMult": 0.5,
+      "currency": "coins",
+      "price": 125,
+      "days": 14,
+      "ramp": [
+        {
+          "level": 1,
+          "travelMult": 0.8
+        },
+        {
+          "level": 15,
+          "travelMult": 0.7
+        },
+        {
+          "level": 20,
+          "travelMult": 0.6
+        },
+        {
+          "level": 25,
+          "travelMult": 0.5
+        }
+      ],
+      "nameHu": "Vihartigris",
+      "descriptionHu": "A Viharsárkány szikrái csíkozták. Villámként suhan a kövek között.",
+      "timeReductionPctFromTravelMult": 50
+    },
+    {
+      "id": "lidercparipa",
+      "level": 1,
+      "travelMult": 0.8,
+      "currency": "event",
+      "price": 0,
+      "days": 14,
+      "nameHu": "Lidércparipa",
+      "descriptionHu": "A Holt Kövek Éjszakájának paripája, lidércfényből szőve. Éjjel halványan dereng.",
+      "timeReductionPctFromTravelMult": 20
+    },
+    {
+      "id": "kilencfarku_roka",
+      "level": 1,
+      "travelMult": 0.5,
+      "currency": "event",
+      "price": 0,
+      "days": 30,
+      "ramp": [
+        {
+          "level": 1,
+          "travelMult": 0.8
+        },
+        {
+          "level": 15,
+          "travelMult": 0.7
+        },
+        {
+          "level": 20,
+          "travelMult": 0.6
+        },
+        {
+          "level": 25,
+          "travelMult": 0.5
+        }
+      ],
+      "nameHu": "Kilencfarkú róka",
+      "descriptionHu": "Hwaryeon ajándéka. Kilenc farka közül az egyik mindig a legrövidebb utat mutatja.",
+      "timeReductionPctFromTravelMult": 50
+    }
+  ],
+  "note": "A travelMult az időre vonatkozik; ebből energiamegtakarítás nem következik.",
+  "locale": {
+    "greeting": "Nyeregbe! Hátassal hamarabb kiérsz a kövekhez, és a lovam szerint te is jobban festesz rajta.",
+    "greetingRiding": "Na, hogy bírja a {{mount}}? Ha hosszabbítasz, a bérlet nem indul elölről, csak kitolódik a vége.",
+    "now": {
+      "title": "Mostani hátasod",
+      "none": "Most gyalog jársz. Bérelj hátast, és minden portya rövidebb lesz.",
+      "until": "Lejár: {{date}}",
+      "left": "még {{time}}"
+    },
+    "stored": {
+      "title": "Az istállóban vár",
+      "hint": "A jutalom-hátasok itt várnak, amíg mással lovagolsz. A napjaik csak lovaglás közben fogynak, a csere ingyenes.",
+      "ride": "Nyeregbe",
+      "rideLabel": "Nyeregbe: {{name}}",
+      "riding": "Nyeregben: {{name}}. Az előző hátasod az istállóban vár."
+    },
+    "mounts": {
+      "pony": {
+        "name": "Pusztai póni",
+        "flavor": "Szívós pusztai fajta. Kicsi, de egész nap bírja az utat."
+      },
+      "warhorse": {
+        "name": "Sztyeppei mén",
+        "flavor": "A határvidék lovasainak hátasa. Nyugodt marad, amikor zúg a vihar."
+      },
+      "charger": {
+        "name": "Vértes paripa",
+        "flavor": "Páncélos harci ló a császári istállókból. Nehéz léptekkel is gyorsan halad."
+      },
+      "stormtiger": {
+        "name": "Vihartigris",
+        "flavor": "A Viharsárkány szikrái csíkozták. Villámként suhan a kövek között."
+      },
+      "lidercparipa": {
+        "name": "Lidércparipa",
+        "flavor": "A Holt Kövek Éjszakájának paripája, lidércfényből szőve. Éjjel halványan dereng."
+      },
+      "kilencfarku_roka": {
+        "name": "Kilencfarkú róka",
+        "flavor": "Hwaryeon ajándéka. Kilenc farka közül az egyik mindig a legrövidebb utat mutatja."
+      },
+      "mule": {
+        "name": "Hegyi öszvér",
+        "flavor": "A hágók teherhordója. Makacs jószág, de a legmeredekebb ösvényen is biztos lábbal halad."
+      },
+      "miststeed": {
+        "name": "Ködparipa",
+        "flavor": "A hegycsúcsok ködéből született. Mire észreveszed, már a következő völgyben jár."
+      }
+    },
+    "list": "Hátasok",
+    "faster": "{{percent}}-kal rövidebb út",
+    "level": "{{level}}. szinttől",
+    "levelMissing": "{{level}}. szint kell hozzá",
+    "days_one": "{{count}} nap",
+    "days_other": "{{count}} nap",
+    "rentFor": "Bérlet: {{days}}",
+    "price": "Ár",
+    "rent": "Bérlés",
+    "extend": "Hosszabbítás",
+    "rentLabel": "Bérlés: {{name}}, {{days}}",
+    "extendLabel": "Hosszabbítás: {{name}}, +{{days}}",
+    "active": "Aktív",
+    "replaceWarning": "A mostani bérleted hátralévő ideje elvész.",
+    "replaceConfirm": "Mégis bérlem",
+    "rented": "Kibérelted: {{name}}. Lejár: {{date}}.",
+    "extended": "Meghosszabbítottad: {{name}}. Lejár: {{date}}.",
+    "cantAfford": "Nincs elég nyangod",
+    "errors": {
+      "level_required": "Ehhez a hátashoz magasabb szint kell.",
+      "unknown_mount": "Ilyen hátas nincs az istállóban."
+    },
+    "example": "{{minutes}} perces portya: {{short}} perc",
+    "tanaka": "Tanaka vadászat: +{{pct}}% hálókör",
+    "rampFull": "{{level}}. szinttől {{percent}}-kal rövidebb út"
+  }
+}

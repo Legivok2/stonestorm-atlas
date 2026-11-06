@@ -1,0 +1,3592 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "stackableCount": 131,
+  "stackables": [
+    {
+      "id": "mat_m1_dogs",
+      "kind": "material",
+      "sellPrice": 8,
+      "nameHu": "Kutyafog"
+    },
+    {
+      "id": "mat_m1_wolves",
+      "kind": "material",
+      "sellPrice": 14,
+      "nameHu": "Farkasbunda"
+    },
+    {
+      "id": "mat_m1_boars",
+      "kind": "material",
+      "sellPrice": 22,
+      "nameHu": "Vaddisznóagyar"
+    },
+    {
+      "id": "mat_m1_bears",
+      "kind": "material",
+      "sellPrice": 30,
+      "nameHu": "Medvekarom"
+    },
+    {
+      "id": "mat_m1_tigers",
+      "kind": "material",
+      "sellPrice": 40,
+      "nameHu": "Tigrisbőr"
+    },
+    {
+      "id": "mat_m2_pickpockets",
+      "kind": "material",
+      "sellPrice": 50,
+      "nameHu": "Lopott erszény"
+    },
+    {
+      "id": "mat_m2_archers",
+      "kind": "material",
+      "sellPrice": 60,
+      "nameHu": "Íjhúr"
+    },
+    {
+      "id": "mat_m2_axemen",
+      "kind": "material",
+      "sellPrice": 72,
+      "nameHu": "Fejszefok"
+    },
+    {
+      "id": "mat_m2_mercs",
+      "kind": "material",
+      "sellPrice": 85,
+      "nameHu": "Zsoldospecsét"
+    },
+    {
+      "id": "mat_m2_guards",
+      "kind": "material",
+      "sellPrice": 100,
+      "nameHu": "Testőrjelvény"
+    },
+    {
+      "id": "mat_m3_watchrocks",
+      "kind": "material",
+      "sellPrice": 110,
+      "nameHu": "Parittyaszíj"
+    },
+    {
+      "id": "mat_m3_bridges",
+      "kind": "material",
+      "sellPrice": 120,
+      "nameHu": "Letört agyar"
+    },
+    {
+      "id": "mat_m3_totems",
+      "kind": "material",
+      "sellPrice": 130,
+      "nameHu": "Totemgyöngy"
+    },
+    {
+      "id": "mat_m3_pens",
+      "kind": "material",
+      "sellPrice": 140,
+      "nameHu": "Kosszarv-amulett"
+    },
+    {
+      "id": "mat_m3_warcamp",
+      "kind": "material",
+      "sellPrice": 150,
+      "nameHu": "Harci festék"
+    },
+    {
+      "id": "mat_m4_scorpions",
+      "kind": "material",
+      "sellPrice": 160,
+      "nameHu": "Skorpiófullánk"
+    },
+    {
+      "id": "mat_m4_snakes",
+      "kind": "material",
+      "sellPrice": 170,
+      "nameHu": "Kígyópikkely"
+    },
+    {
+      "id": "mat_m4_bandits",
+      "kind": "material",
+      "sellPrice": 180,
+      "nameHu": "Indigó fátyol"
+    },
+    {
+      "id": "mat_m4_ruins",
+      "kind": "material",
+      "sellPrice": 190,
+      "nameHu": "Ősi érme"
+    },
+    {
+      "id": "mat_m4_golems",
+      "kind": "material",
+      "sellPrice": 200,
+      "nameHu": "Homokkőszilánk"
+    },
+    {
+      "id": "mat_m5_wolves",
+      "kind": "material",
+      "sellPrice": 210,
+      "nameHu": "Jeges farkasagyar"
+    },
+    {
+      "id": "mat_m5_warriors",
+      "kind": "material",
+      "sellPrice": 220,
+      "nameHu": "Fagyrúnás csont"
+    },
+    {
+      "id": "mat_m5_spirits",
+      "kind": "material",
+      "sellPrice": 230,
+      "nameHu": "Jégkristály"
+    },
+    {
+      "id": "mat_m5_yetis",
+      "kind": "material",
+      "sellPrice": 240,
+      "nameHu": "Jetiszőr-pamacs"
+    },
+    {
+      "id": "mat_m5_golems",
+      "kind": "material",
+      "sellPrice": 250,
+      "nameHu": "Fagyott szívkő"
+    },
+    {
+      "id": "mat_m6_hound_tooth",
+      "kind": "material",
+      "sellPrice": 260,
+      "nameHu": "Izzó kopófog"
+    },
+    {
+      "id": "mat_m6_obsidian_shard",
+      "kind": "material",
+      "sellPrice": 270,
+      "nameHu": "Obszidiánszilánk"
+    },
+    {
+      "id": "mat_m6_lava_scale",
+      "kind": "material",
+      "sellPrice": 280,
+      "nameHu": "Lávapikkely"
+    },
+    {
+      "id": "mat_m6_ash_mask",
+      "kind": "material",
+      "sellPrice": 290,
+      "nameHu": "Hamumaszk"
+    },
+    {
+      "id": "mat_m6_ember_core",
+      "kind": "material",
+      "sellPrice": 300,
+      "nameHu": "Parázsmag"
+    },
+    {
+      "id": "egg_m1",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Pettyes tojás"
+    },
+    {
+      "id": "egg_m2",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Csíkos tojás"
+    },
+    {
+      "id": "egg_m3",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Tenyérlenyomatos tojás"
+    },
+    {
+      "id": "egg_m4",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Aranyhomok-tojás"
+    },
+    {
+      "id": "egg_m5",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Jégerezetű tojás"
+    },
+    {
+      "id": "egg_m6",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Parázsló tojás"
+    },
+    {
+      "id": "egg_m1_pick",
+      "kind": "egg",
+      "sellPrice": 0,
+      "chosen": true,
+      "nameHu": "Pettyes tojás (választható)"
+    },
+    {
+      "id": "egg_m2_pick",
+      "kind": "egg",
+      "sellPrice": 0,
+      "chosen": true,
+      "nameHu": "Csíkos tojás (választható)"
+    },
+    {
+      "id": "shard",
+      "kind": "shard",
+      "sellPrice": 150,
+      "nameHu": "Viharkő-szilánk"
+    },
+    {
+      "id": "sample_wolf",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Farkasagyar-minta"
+    },
+    {
+      "id": "sample_boar",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Vaddisznóagyar-minta"
+    },
+    {
+      "id": "sample_bear",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Medvekarom-minta"
+    },
+    {
+      "id": "sample_tiger",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Tigrisszőr-minta"
+    },
+    {
+      "id": "sample_archer",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Nyílhegy-minta"
+    },
+    {
+      "id": "sample_mercenary",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Zsoldospecsét-minta"
+    },
+    {
+      "id": "sample_orc",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Orkamulett-minta"
+    },
+    {
+      "id": "sample_shaman",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Sámáncsont-minta"
+    },
+    {
+      "id": "sample_scorpion",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Skorpiófullánk-minta"
+    },
+    {
+      "id": "sample_mummy",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Romőrpólya-minta"
+    },
+    {
+      "id": "sample_snow_wolf",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Hósörény-minta"
+    },
+    {
+      "id": "sample_yeti",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Jetiszőr-minta"
+    },
+    {
+      "id": "sample_fire_imp",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Manószarv-minta"
+    },
+    {
+      "id": "sample_magma_giant",
+      "kind": "sample",
+      "sellPrice": 0,
+      "nameHu": "Magmaszív-minta"
+    },
+    {
+      "id": "potion",
+      "kind": "potion",
+      "sellPrice": 12,
+      "buyPrice": 60,
+      "nameHu": "Gyógyital"
+    },
+    {
+      "id": "scroll_bless",
+      "kind": "scroll",
+      "sellPrice": 500,
+      "nameHu": "Hamuóvó-tekercs"
+    },
+    {
+      "id": "luck_ore",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Szerencse-érc"
+    },
+    {
+      "id": "safe_stone",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Viharkő-por"
+    },
+    {
+      "id": "skill_book",
+      "kind": "scroll",
+      "sellPrice": 500,
+      "nameHu": "Képességkönyv"
+    },
+    {
+      "id": "patience_scroll",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Türelem-tekercs"
+    },
+    {
+      "id": "key_monkey",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Majomcsapda-kulcs"
+    },
+    {
+      "id": "key_wild",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Vadonodú kulcsa"
+    },
+    {
+      "id": "key_spider",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Pókfészek-kulcs"
+    },
+    {
+      "id": "key_dragon",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Sárkányfészek-kulcs"
+    },
+    {
+      "id": "soul_dust",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Lélekpor"
+    },
+    {
+      "id": "soul_ess_ember",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Parázsesszencia"
+    },
+    {
+      "id": "soul_ess_frost",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Jégesszencia"
+    },
+    {
+      "id": "soul_ess_pearl",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Mélységi gyöngy"
+    },
+    {
+      "id": "soul_ess_silk",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Pókselyem"
+    },
+    {
+      "id": "soul_ess_shadow",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Árnyfátyol"
+    },
+    {
+      "id": "soul_ess_storm",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Viharvér"
+    },
+    {
+      "id": "soul_raw_ruby",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Vérkő"
+    },
+    {
+      "id": "soul_raw_diamond",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Holdopál"
+    },
+    {
+      "id": "soul_raw_sapphire",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Azúrkő"
+    },
+    {
+      "id": "soul_raw_jade",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Smaragd"
+    },
+    {
+      "id": "soul_raw_onyx",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Éjkő"
+    },
+    {
+      "id": "soul_raw_garnet",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Nyers Napkő"
+    },
+    {
+      "id": "soul_eye_shard",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Sárkányszem-szilánk"
+    },
+    {
+      "id": "soul_eye",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Sárkányszem"
+    },
+    {
+      "id": "alch_blessing",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Alkimista áldása"
+    },
+    {
+      "id": "soul_ward",
+      "kind": "soul",
+      "sellPrice": 0,
+      "nameHu": "Lélekőr-pecsét"
+    },
+    {
+      "id": "cosm_dragonheart",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Díszlet-tekercs: Sárkányszív (cím)"
+    },
+    {
+      "id": "cosm_jade",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Díszlet-tekercs: Jáde keret"
+    },
+    {
+      "id": "cosm_ember",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Díszlet-tekercs: Parázs keret"
+    },
+    {
+      "id": "cosm_stormlord",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Díszlet-tekercs: Viharúr (cím)"
+    },
+    {
+      "id": "cosm_dragonfire",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Díszlet-tekercs: Sárkánytűz keret"
+    },
+    {
+      "id": "boss_ticket",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy"
+    },
+    {
+      "id": "boss_ticket_m1",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (1. térkép)"
+    },
+    {
+      "id": "boss_ticket_m2",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (2. térkép)"
+    },
+    {
+      "id": "boss_ticket_m3",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (3. térkép)"
+    },
+    {
+      "id": "boss_ticket_m4",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (4. térkép)"
+    },
+    {
+      "id": "boss_ticket_m5",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (5. térkép)"
+    },
+    {
+      "id": "boss_ticket_m6",
+      "kind": "key",
+      "sellPrice": 0,
+      "nameHu": "Boss-próbajegy (6. térkép)"
+    },
+    {
+      "id": "warp_hourglass",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Időugró homokóra"
+    },
+    {
+      "id": "bonuszolo_1",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Bónuszoló I"
+    },
+    {
+      "id": "bonuszolo_2",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Bónuszoló II"
+    },
+    {
+      "id": "bonuszolo_3",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Bónuszoló III"
+    },
+    {
+      "id": "bonuszolo_4",
+      "kind": "scroll",
+      "sellPrice": 0,
+      "nameHu": "Bónuszoló IV"
+    },
+    {
+      "id": "ore_copper",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_iron",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_silver",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_sun",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_frost",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_ember",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_quartz",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "ore_moonsilver",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_copper",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_iron",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_silver",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_sun",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_frost",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "bar_ember",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": null
+    },
+    {
+      "id": "gut_fishmeat",
+      "kind": "material",
+      "sellPrice": 12,
+      "nameHu": null
+    },
+    {
+      "id": "pet_thread",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kötelékfonal"
+    },
+    {
+      "id": "pet_core_wild",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Vadonodú-mag"
+    },
+    {
+      "id": "pet_core_monkey",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Majomcsapda-mag"
+    },
+    {
+      "id": "pet_core_spider",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Pókfészek-mag"
+    },
+    {
+      "id": "pet_core_dragon",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Sárkányfészek-mag"
+    },
+    {
+      "id": "pet_book_first_strike",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Előcsapás"
+    },
+    {
+      "id": "pet_book_shield_open",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Nyitópajzs"
+    },
+    {
+      "id": "pet_book_crit_dmg",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Éles karom"
+    },
+    {
+      "id": "pet_book_regen",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Gyógyító nyalás"
+    },
+    {
+      "id": "pet_book_thorns",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Tüskés bunda"
+    },
+    {
+      "id": "pet_book_potion_boost",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Gyógyfűszimat"
+    },
+    {
+      "id": "pet_book_idle_xp",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Tanulékony"
+    },
+    {
+      "id": "pet_book_idle_nyang",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Kincsszimat"
+    },
+    {
+      "id": "pet_book_loot_luck",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Szerencsemancs"
+    },
+    {
+      "id": "pet_book_keen_nose",
+      "kind": "material",
+      "sellPrice": 0,
+      "nameHu": "Kísérőkönyv: Jó szimat"
+    },
+    {
+      "id": "egg_u_wild",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Mohaagancs tojása"
+    },
+    {
+      "id": "egg_u_monkey",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Aranymajom tojása"
+    },
+    {
+      "id": "egg_u_spider",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Holdfonó tojása"
+    },
+    {
+      "id": "egg_u_dragon",
+      "kind": "egg",
+      "sellPrice": 0,
+      "nameHu": "Viharfióka tojása"
+    }
+  ],
+  "premium": {
+    "vip": {
+      "coins": 300,
+      "days": 7
+    },
+    "lookChange": {
+      "coins": 50
+    },
+    "nameChange": {
+      "coins": 200
+    },
+    "genderChange": {
+      "coins": 200
+    },
+    "kingdomChange": {
+      "coins": 200,
+      "cooldownDays": 30
+    }
+  },
+  "limits": {
+    "maxLevel": 60,
+    "inventorySize": 40,
+    "energyMax": 100,
+    "stoneCost": 20,
+    "bossAttemptsPerDay": 3,
+    "farmCapSeconds": 28800,
+    "looks": 2,
+    "forge": {
+      "luckOreBonus": 0.1
+    },
+    "skip": {
+      "expedition": {
+        "stepMinutes": 5,
+        "coinsPerStep": 1
+      },
+      "arena": {
+        "stepMinutes": 10,
+        "coinsPerStep": 1
+      },
+      "tower": {
+        "stepMinutes": 60,
+        "coinsPerStep": 10
+      },
+      "research": {
+        "stepMinutes": 120,
+        "coinsPerStep": 2
+      },
+      "book": {
+        "stepMinutes": 720,
+        "coinsPerStep": 2
+      },
+      "hatch": {
+        "stepMinutes": 180,
+        "coinsPerStep": 4,
+        "minCoins": 50
+      },
+      "guild_building": {
+        "stepMinutes": 120,
+        "coinsPerStep": 1
+      }
+    },
+    "guildSpeedup": [
+      {
+        "upTo": 5,
+        "coinsPerHour": 20
+      },
+      {
+        "upTo": 10,
+        "coinsPerHour": 50
+      },
+      {
+        "upTo": 15,
+        "coinsPerHour": 100
+      }
+    ],
+    "warp": {
+      "hours": [
+        1,
+        2,
+        4
+      ],
+      "coinsPerHour": 5,
+      "hoursPerDay": 8
+    },
+    "bagMaxTotal": 6
+  },
+  "leanEconomy": {
+    "alchemist": {
+      "xp_elixir": {
+        "effect": {
+          "xpMult": 0.1
+        },
+        "hours": 24,
+        "coins": 25
+      },
+      "hunter_elixir": {
+        "effect": {
+          "dropMult": 0.1
+        },
+        "hours": 24,
+        "coins": 25
+      },
+      "gold_elixir": {
+        "effect": {
+          "nyangMult": 0.1
+        },
+        "hours": 24,
+        "coins": 25
+      },
+      "power_brew": {
+        "effect": {
+          "atkMult": 0.05
+        },
+        "hours": 24,
+        "coins": 15
+      },
+      "stoneskin_brew": {
+        "effect": {
+          "defMult": 0.05
+        },
+        "hours": 24,
+        "coins": 15
+      }
+    },
+    "soulShop": {
+      "blessingCoins": 12,
+      "wardCoins": 25,
+      "dustPackQty": 50,
+      "essPackQty": 5,
+      "hufRef": {
+        "coins": 750,
+        "priceHuf": 7490
+      }
+    },
+    "patron": {
+      "0": {
+        "nextMin": 2000,
+        "perks": {
+          "refillsMax": 16,
+          "warpHoursMax": 8,
+          "keysPerDayMax": 3,
+          "chestChoices": 3,
+          "porQuota": 1,
+          "eyeQuota": 1,
+          "houseMult": 1,
+          "pouchCap": 100,
+          "freeRunRerolls": 0,
+          "freeMerchantRerolls": 0,
+          "badge": false,
+          "quickRun": false,
+          "autoCollect": false,
+          "runQueue": false,
+          "batchRefine": false,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "1": {
+        "nextMin": 6000,
+        "perks": {
+          "refillsMax": 16,
+          "warpHoursMax": 8,
+          "keysPerDayMax": 3,
+          "chestChoices": 3,
+          "porQuota": 2,
+          "eyeQuota": 1,
+          "houseMult": 1.25,
+          "pouchCap": 150,
+          "freeRunRerolls": 0,
+          "freeMerchantRerolls": 0,
+          "badge": true,
+          "quickRun": false,
+          "autoCollect": false,
+          "runQueue": false,
+          "batchRefine": false,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "2": {
+        "nextMin": 15000,
+        "perks": {
+          "refillsMax": 16,
+          "warpHoursMax": 8,
+          "keysPerDayMax": 3,
+          "chestChoices": 3,
+          "porQuota": 3,
+          "eyeQuota": 1,
+          "houseMult": 1.5,
+          "pouchCap": 200,
+          "freeRunRerolls": 0,
+          "freeMerchantRerolls": 0,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": false,
+          "runQueue": false,
+          "batchRefine": false,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "3": {
+        "nextMin": 30000,
+        "perks": {
+          "refillsMax": 17,
+          "warpHoursMax": 10,
+          "keysPerDayMax": 3,
+          "chestChoices": 4,
+          "porQuota": 4,
+          "eyeQuota": 2,
+          "houseMult": 1.75,
+          "pouchCap": 300,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 0,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": false,
+          "runQueue": false,
+          "batchRefine": false,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "4": {
+        "nextMin": 60000,
+        "perks": {
+          "refillsMax": 17,
+          "warpHoursMax": 10,
+          "keysPerDayMax": 4,
+          "chestChoices": 4,
+          "porQuota": 5,
+          "eyeQuota": 2,
+          "houseMult": 2,
+          "pouchCap": 400,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 0,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": false,
+          "batchRefine": false,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "5": {
+        "nextMin": 120000,
+        "perks": {
+          "refillsMax": 17,
+          "warpHoursMax": 10,
+          "keysPerDayMax": 4,
+          "chestChoices": 4,
+          "porQuota": 6,
+          "eyeQuota": 3,
+          "houseMult": 2.25,
+          "pouchCap": 600,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": false,
+          "batchRefine": true,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "6": {
+        "nextMin": 250000,
+        "perks": {
+          "refillsMax": 18,
+          "warpHoursMax": 12,
+          "keysPerDayMax": 5,
+          "chestChoices": 4,
+          "porQuota": 8,
+          "eyeQuota": 4,
+          "houseMult": 2.5,
+          "pouchCap": 800,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": true,
+          "batchRefine": true,
+          "blackMarketExtra": 0,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "7": {
+        "nextMin": 500000,
+        "perks": {
+          "refillsMax": 18,
+          "warpHoursMax": 12,
+          "keysPerDayMax": 5,
+          "chestChoices": 4,
+          "porQuota": 10,
+          "eyeQuota": 5,
+          "houseMult": 2.75,
+          "pouchCap": 1100,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": true,
+          "batchRefine": true,
+          "blackMarketExtra": 0,
+          "cosmetic": "frame_patron"
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "8": {
+        "nextMin": 1000000,
+        "perks": {
+          "refillsMax": 18,
+          "warpHoursMax": 12,
+          "keysPerDayMax": 6,
+          "chestChoices": 4,
+          "porQuota": 12,
+          "eyeQuota": 7,
+          "houseMult": 3,
+          "pouchCap": 1400,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": true,
+          "batchRefine": true,
+          "blackMarketExtra": 2,
+          "cosmetic": null
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "9": {
+        "nextMin": 2000000,
+        "perks": {
+          "refillsMax": 19,
+          "warpHoursMax": 12,
+          "keysPerDayMax": 6,
+          "chestChoices": 4,
+          "porQuota": 16,
+          "eyeQuota": 9,
+          "houseMult": 3.25,
+          "pouchCap": 1700,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": true,
+          "batchRefine": true,
+          "blackMarketExtra": 2,
+          "cosmetic": "title_patron"
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      },
+      "10": {
+        "nextMin": null,
+        "perks": {
+          "refillsMax": 19,
+          "warpHoursMax": 12,
+          "keysPerDayMax": 8,
+          "chestChoices": 4,
+          "porQuota": 20,
+          "eyeQuota": 12,
+          "houseMult": 3.5,
+          "pouchCap": 2000,
+          "freeRunRerolls": 1,
+          "freeMerchantRerolls": 1,
+          "badge": true,
+          "quickRun": true,
+          "autoCollect": true,
+          "runQueue": true,
+          "batchRefine": true,
+          "blackMarketExtra": 2,
+          "cosmetic": "frame_imperial"
+        },
+        "prices": {
+          "refill": {
+            "baseCoins": [
+              10,
+              13,
+              17,
+              22,
+              29,
+              37,
+              48,
+              63,
+              82,
+              106,
+              138,
+              179,
+              233,
+              303,
+              394,
+              512
+            ],
+            "extraCoins": [
+              665,
+              865,
+              1125,
+              1462
+            ],
+            "vipExtra": 1,
+            "energyCapBase": 400,
+            "energyCapPerRefill": 25
+          },
+          "warp": {
+            "extraCoinsPerHour": 8
+          },
+          "keys": {
+            "baseCoins": 20,
+            "extraCoins": 32
+          }
+        }
+      }
+    },
+    "fishing": {
+      "minLevel": 10,
+      "catchesPerDay": 25
+    }
+  },
+  "locale": {
+    "stackables": {
+      "bait_wonder": "Csodacsali",
+      "mat_m1_dogs": "Kutyafog",
+      "mat_m1_wolves": "Farkasbunda",
+      "mat_m1_boars": "Vaddisznóagyar",
+      "mat_m1_bears": "Medvekarom",
+      "mat_m1_tigers": "Tigrisbőr",
+      "mat_m2_pickpockets": "Lopott erszény",
+      "mat_m2_archers": "Íjhúr",
+      "mat_m2_axemen": "Fejszefok",
+      "mat_m2_mercs": "Zsoldospecsét",
+      "mat_m2_guards": "Testőrjelvény",
+      "mat_m3_watchrocks": "Parittyaszíj",
+      "mat_m3_bridges": "Letört agyar",
+      "mat_m3_totems": "Totemgyöngy",
+      "mat_m3_pens": "Kosszarv-amulett",
+      "mat_m3_warcamp": "Harci festék",
+      "mat_m4_scorpions": "Skorpiófullánk",
+      "mat_m4_snakes": "Kígyópikkely",
+      "mat_m4_bandits": "Indigó fátyol",
+      "mat_m4_ruins": "Ősi érme",
+      "mat_m4_golems": "Homokkőszilánk",
+      "mat_m5_wolves": "Jeges farkasagyar",
+      "mat_m5_warriors": "Fagyrúnás csont",
+      "mat_m5_spirits": "Jégkristály",
+      "mat_m5_yetis": "Jetiszőr-pamacs",
+      "mat_m5_golems": "Fagyott szívkő",
+      "mat_m6_hound_tooth": "Izzó kopófog",
+      "mat_m6_obsidian_shard": "Obszidiánszilánk",
+      "mat_m6_lava_scale": "Lávapikkely",
+      "mat_m6_ash_mask": "Hamumaszk",
+      "mat_m6_ember_core": "Parázsmag",
+      "sample_wolf": "Farkasagyar-minta",
+      "sample_boar": "Vaddisznóagyar-minta",
+      "sample_bear": "Medvekarom-minta",
+      "sample_tiger": "Tigrisszőr-minta",
+      "sample_archer": "Nyílhegy-minta",
+      "sample_mercenary": "Zsoldospecsét-minta",
+      "sample_orc": "Orkamulett-minta",
+      "sample_shaman": "Sámáncsont-minta",
+      "sample_scorpion": "Skorpiófullánk-minta",
+      "sample_mummy": "Romőrpólya-minta",
+      "sample_snow_wolf": "Hósörény-minta",
+      "sample_yeti": "Jetiszőr-minta",
+      "sample_fire_imp": "Manószarv-minta",
+      "sample_magma_giant": "Magmaszív-minta",
+      "egg_m1": "Pettyes tojás",
+      "egg_m2": "Csíkos tojás",
+      "egg_m1_pick": "Pettyes tojás (választható)",
+      "egg_m2_pick": "Csíkos tojás (választható)",
+      "egg_m3": "Tenyérlenyomatos tojás",
+      "egg_m4": "Aranyhomok-tojás",
+      "egg_m5": "Jégerezetű tojás",
+      "egg_m6": "Parázsló tojás",
+      "patience_scroll": "Türelem-tekercs",
+      "skill_book": "Képességkönyv",
+      "shard": "Viharkő-szilánk",
+      "safe_stone": "Viharkő-por",
+      "potion": "Gyógyital",
+      "scroll_bless": "Hamuóvó-tekercs",
+      "luck_ore": "Szerencse-érc",
+      "key_monkey": "Majomcsapda-kulcs",
+      "key_spider": "Pókfészek-kulcs",
+      "key_dragon": "Sárkányfészek-kulcs",
+      "key_wild": "Vadonodú kulcsa",
+      "soul_dust": "Lélekpor",
+      "soul_ess_ember": "Parázsesszencia",
+      "soul_ess_frost": "Jégesszencia",
+      "soul_ess_pearl": "Mélységi gyöngy",
+      "soul_ess_silk": "Pókselyem",
+      "soul_ess_shadow": "Árnyfátyol",
+      "soul_ess_storm": "Viharvér",
+      "soul_raw_ruby": "Nyers Vérkő",
+      "soul_raw_diamond": "Nyers Holdopál",
+      "soul_raw_sapphire": "Nyers Azúrkő",
+      "soul_raw_jade": "Nyers Smaragd",
+      "soul_raw_onyx": "Nyers Éjkő",
+      "soul_raw_garnet": "Nyers Napkő",
+      "soul_eye_shard": "Sárkányszem-szilánk",
+      "soul_eye": "Sárkányszem",
+      "alch_blessing": "Alkimista áldása",
+      "soul_ward": "Lélekőr-pecsét",
+      "cosm_dragonheart": "Díszlet-tekercs: Sárkányszív (cím)",
+      "cosm_jade": "Díszlet-tekercs: Jáde keret",
+      "cosm_ember": "Díszlet-tekercs: Parázs keret",
+      "cosm_stormlord": "Díszlet-tekercs: Viharúr (cím)",
+      "cosm_dragonfire": "Díszlet-tekercs: Sárkánytűz keret",
+      "boss_ticket": "Boss-próbajegy",
+      "boss_ticket_m1": "Boss-próbajegy (1. térkép)",
+      "boss_ticket_m2": "Boss-próbajegy (2. térkép)",
+      "boss_ticket_m3": "Boss-próbajegy (3. térkép)",
+      "boss_ticket_m4": "Boss-próbajegy (4. térkép)",
+      "boss_ticket_m5": "Boss-próbajegy (5. térkép)",
+      "boss_ticket_m6": "Boss-próbajegy (6. térkép)",
+      "warp_hourglass": "Időugró homokóra",
+      "bonuszolo_1": "Bónuszoló I",
+      "bonuszolo_2": "Bónuszoló II",
+      "bonuszolo_3": "Bónuszoló III",
+      "bonuszolo_4": "Bónuszoló IV",
+      "pet_thread": "Kötelékfonal",
+      "pet_core_wild": "Vadonodú-mag",
+      "pet_core_monkey": "Majomcsapda-mag",
+      "pet_core_spider": "Pókfészek-mag",
+      "pet_core_dragon": "Sárkányfészek-mag",
+      "pet_book_first_strike": "Kísérőkönyv: Előcsapás",
+      "pet_book_shield_open": "Kísérőkönyv: Nyitópajzs",
+      "pet_book_crit_dmg": "Kísérőkönyv: Éles karom",
+      "pet_book_regen": "Kísérőkönyv: Gyógyító nyalás",
+      "pet_book_thorns": "Kísérőkönyv: Tüskés bunda",
+      "pet_book_potion_boost": "Kísérőkönyv: Gyógyfűszimat",
+      "pet_book_idle_xp": "Kísérőkönyv: Tanulékony",
+      "pet_book_idle_nyang": "Kísérőkönyv: Kincsszimat",
+      "pet_book_loot_luck": "Kísérőkönyv: Szerencsemancs",
+      "pet_book_keen_nose": "Kísérőkönyv: Jó szimat",
+      "egg_u_wild": "Mohaagancs tojása",
+      "egg_u_monkey": "Aranymajom tojása",
+      "egg_u_spider": "Holdfonó tojása",
+      "egg_u_dragon": "Viharfióka tojása"
+    },
+    "stackKinds": {
+      "material": {
+        "name": "Alapanyag",
+        "hint": "A kovács +4-től felfelé kéri a fejlesztésekhez."
+      },
+      "potion": {
+        "name": "Ital",
+        "hint": "Harc közben a hősöd automatikusan megissza, ha nagyon fogy a HP-ja."
+      },
+      "scroll": {
+        "name": "Tekercs",
+        "hint": "Ha a kovácsnál balul sül el a fejlesztés, a tárgy megmarad, csak egy fokozatot visszaesik."
+      },
+      "shard": {
+        "name": "Viharkő-szilánk",
+        "hint": "A kovács +7-től felfelé kéri a fejlesztésekhez."
+      },
+      "key": {
+        "name": "Kulcs",
+        "hint": "Belépő a kazamatába: a Vadászat Kazamaták lapján használhatod."
+      },
+      "egg": {
+        "name": "Tojás",
+        "hint": "Kísérő kel ki belőle: a Karakter oldal Kísérők lapján keltetheted ki. Ülnöd nem kell rajta."
+      },
+      "sample": {
+        "name": "Minta",
+        "hint": "A szörnytudós kéri a kutatásához: a városban adhatod át neki. Ő mindig kér még egyet."
+      },
+      "soul": {
+        "name": "Viharszív-anyag",
+        "hint": "Az alkimista Viharszív fülén kell a kövek finomításához."
+      }
+    },
+    "stackHints": {
+      "luck_ore": "Egy kovácsolásnál nagyobb eséllyel sikerül a fejlesztés. Simogatni nem kell, de senki nem tiltja.",
+      "safe_stone": "Kudarcnál a tárgy nem ég el, és vissza sem esik. Hamuóvó-tekercset nem tehetsz mellé.",
+      "patience_scroll": "A képességkönyv olvasása utáni várakozás azonnal véget ér. Tekercsbe zárt türelem, hogy neked ne kelljen.",
+      "skill_book": "Egy olvasás a választott út képességéhez. Nem mindig sikerül, de ha igen, erősebb lesz.",
+      "soul_dust": "A Viharszív minden finomításához kell. Portyán, M5-M6-os háttér-vadászatban, hősi kazamatában és a Viharcsúcs felső emeletein gyűlik, nyers kő bontásából is jár.",
+      "soul_ess_ember": "A Vérkő finomításához kell. A Viharcsúcs 56-60. emeletén és M6-os portyán esik.",
+      "soul_ess_frost": "A Holdopál finomításához kell. M5-ös portyán és M5-ös háttér-vadászatban esik.",
+      "soul_ess_pearl": "Az Azúrkő finomításához kell. Nakshi adja halakért a halászatnál.",
+      "soul_ess_silk": "A Smaragd finomításához kell. A Pókfészek teljesítéséért jár, hősi módban több.",
+      "soul_ess_shadow": "Az Éjkő finomításához kell. Aréna-győzelemért eshet, naponta legfeljebb három.",
+      "soul_ess_storm": "A Napkő finomításához kell. A heti boss támadásaiért és a hősi Sárkányfészek főbossáért jár.",
+      "soul_raw_ruby": "Foglalatba téve Vérkő lesz belőle (Tűz, támadás). Ritkán esik a Parázsesszencia mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_raw_diamond": "Foglalatba téve Holdopál lesz belőle (Föld, életerő). Ritkán esik a Jégesszencia mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_raw_sapphire": "Foglalatba téve Azúrkő lesz belőle (Víz, védelem). Ritkán jár a Mélységi gyöngy mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_raw_jade": "Foglalatba téve Smaragd lesz belőle (Szél, kritikus esély). Ritkán jár a Pókselyem mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_raw_onyx": "Foglalatba téve Éjkő lesz belőle (Árny, kitérés). Ritkán jár az Árnyfátyol mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_raw_garnet": "Foglalatba téve Napkő lesz belőle (Villám, sebzés boss ellen). Ritkán jár a Viharvér mellé, a Lámpás Vándor is árulja. Bontva Lélekport ad.",
+      "soul_eye_shard": "Tíz Sárkányszem-szilánkból egy Sárkányszem lesz az alkimistánál. A heti boss, a hősi főboss, a Viharcsúcs 60. emelete és a legendás hal adja.",
+      "soul_eye": "A kövek minőségváltó lépcsőihez kell, és csak sikernél fogy. Tíz Sárkányszem-szilánkból az alkimistánál lesz, vagy Viharérméért veheted.",
+      "alch_blessing": "+10 pont egy finomítás esélyéhez, próbánként legfeljebb kettő.",
+      "soul_ward": "Ha a finomítás nem sikerül, a kő nem esik vissza. Csak kudarcnál fogy.",
+      "cosm_dragonheart": "Felhasználva a Sárkányszív cím végleg a tiéd.",
+      "cosm_jade": "Felhasználva a Jáde keret végleg a tiéd.",
+      "cosm_ember": "Felhasználva a Parázs keret végleg a tiéd.",
+      "cosm_stormlord": "Felhasználva a Viharúr cím végleg a tiéd.",
+      "cosm_dragonfire": "Felhasználva a Sárkánytűz keret végleg a tiéd.",
+      "egg_m1_pick": "Kísérő kel ki belőle, és te döntöd el, melyik: kikeltés előtt mind a hármat megmutatjuk a bónuszával. Nincs sorsolás, a tojás csak a döntésedre vár.",
+      "egg_m2_pick": "Kísérő kel ki belőle, és te döntöd el, melyik: kikeltés előtt mind a hármat megmutatjuk a bónuszával. Nincs sorsolás, a tojás csak a döntésedre vár.",
+      "boss_ticket": "Ha a mai boss-próbáid elfogytak, egy jegy még egy próbát ad. Nem jár le, és nem adható el.",
+      "warp_hourglass": "Egy óra időugrás a napi kereten belül, Viharérme nélkül. Nem jár le, és nem adható el.",
+      "bonuszolo_1": "Egy kiválasztott bónusz-sort új, véletlen sorra cserél, nyang nélkül, a kovács Bónuszok fülén. Csak 1-20. szintű tárgyon használható. A karakteredhez kötött, nem adható el.",
+      "bonuszolo_2": "Egy kiválasztott bónusz-sort új, véletlen sorra cserél, nyang nélkül, a kovács Bónuszok fülén. Csak 21-35. szintű tárgyon használható. A karakteredhez kötött, nem adható el.",
+      "bonuszolo_3": "Egy kiválasztott bónusz-sort új, véletlen sorra cserél, nyang nélkül, a kovács Bónuszok fülén. Csak 36-50. szintű tárgyon használható. A karakteredhez kötött, nem adható el.",
+      "bonuszolo_4": "Egy kiválasztott bónusz-sort új, véletlen sorra cserél, nyang nélkül, a kovács Bónuszok fülén. Csak 51-60. szintű tárgyon használható. A karakteredhez kötött, nem adható el.",
+      "pet_thread": "A kísérőd Kötelékének erősítéséhez kell, a Karakter oldal Kísérők lapján. Főleg kazamatákban esik, és elengedett kísérőből is marad.",
+      "pet_core_wild": "Kísérőd fejlődéséhez kell, amikor eléri a formája szintplafonját. A Vadonodú főbossza ejti.",
+      "pet_core_monkey": "Kísérőd fejlődéséhez kell, amikor eléri a formája szintplafonját. A Majomcsapda főbossza ejti.",
+      "pet_core_spider": "Kísérőd fejlődéséhez kell, amikor eléri a formája szintplafonját. A Pókfészek főbossza ejti.",
+      "pet_core_dragon": "Kísérőd fejlődéséhez kell, amikor eléri a formája szintplafonját. A Sárkányfészek főbossza ejti.",
+      "pet_book_first_strike": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_shield_open": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_crit_dmg": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_regen": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_thorns": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_potion_boost": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_idle_xp": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_idle_nyang": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_loot_luck": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele.",
+      "pet_book_keen_nose": "Megtanítja a fő kísérődnek a képességet; ha már tudja, szintet lép vele."
+    },
+    "shop": {
+      "greeting": "Gyere csak! Ami nálam van, az kell. Ami nincs, az nem is kell.",
+      "tabs": {
+        "buy": "Vásárlás",
+        "sell": "Eladás"
+      },
+      "buy": "Megveszem",
+      "fromLevel": "{{level}}. szinttől",
+      "buyCount_one": "Megveszem ({{count}} db)",
+      "buyCount_other": "Megveszem ({{count}} db)",
+      "cantAfford": "Nincs elég nyangod",
+      "bought": "Megvetted: {{name}} ({{nyang}} nyang).",
+      "emptyBag": "Üres a leltárad. Ritka pillanat, élvezd ki."
+    },
+    "premium": {
+      "title": "Viharérme",
+      "unit_one": "Viharérme",
+      "unit_other": "Viharérme",
+      "coinShort": "VÉ",
+      "balance": "Egyenleged",
+      "intro": "A Viharérme a türelmetlenek barátja: energiát, időt és egy csipet szerencsét vehetsz rajta, a végjátékban pedig a Viharszív gyorsabb fejlesztését, ami erősebbé is tesz. Az energia, az idő, a kovácskellék és a Viharszív-anyag játékkal is megszerezhető, csak lassabban; sok kinézet viszont csak itt kapható, például az alapító kinézetek és a Pompás díszek.",
+      "firstBonus": {
+        "ribbon": "Az első vásárlás duplán ér (legfeljebb +{{cap}})",
+        "text": "Az első vásárlásnál a csomag alap érméit még egyszer megkapod (legfeljebb {{cap}} Viharérmét), mert az első benyomás számít."
+      },
+      "testMode": "Tesztmód: a vásárlás azonnal teljesül, igazi fizetés nincs.",
+      "packs": {
+        "title": "Érmecsomagok",
+        "test": {
+          "name": "Fizetési teszt"
+        },
+        "s": {
+          "name": "Marék",
+          "flavor": "Egy marék érme, épp elég, hogy kiderüljön, tetszik-e a csillogás."
+        },
+        "ms": {
+          "name": "Zsebnyi",
+          "flavor": "Ha a marék már kevés, de az erszény még sok: egy zsebre való csengés, kis ráadással."
+        },
+        "m": {
+          "name": "Erszény",
+          "flavor": "Ez már csörög, ha megrázod, úgyhogy rázd csak nyugodtan."
+        },
+        "l": {
+          "name": "Ládika",
+          "flavor": "Kis láda nagy tervekkel, és még ráadás is jár hozzá."
+        },
+        "xl": {
+          "name": "Kincsesláda",
+          "flavor": "Ha kinyitod, még a kovács is áthajol a pult fölött."
+        },
+        "xxl": {
+          "name": "Sárkánykincs",
+          "flavor": "Egy sárkány teljes megtakarítása, és a sárkány állítólag beleegyezett."
+        },
+        "more": "Még több csomag",
+        "tab": "Csomagok",
+        "tabHint": "Érmecsomagok, alapító csomagok és ajánlatok."
+      },
+      "pack": {
+        "fallbackName": "{{coins}} Viharérme",
+        "bonus": "+{{amount}} ráadás",
+        "first": "+{{amount}} első vásárlás",
+        "buy": "Megveszem",
+        "testBuy": "Tesztvásárlás",
+        "buyLabel": "{{action}}: {{name}}, {{coins}} Viharérme, {{price}}"
+      },
+      "badges": {
+        "popular": "Népszerű",
+        "best_value": "Kiváló ár-érték",
+        "most_popular": "Legkeresettebb"
+      },
+      "receipt": {
+        "paid": "+{{amount}} Viharérme megérkezett.",
+        "paidFirst": "+{{amount}} Viharérme megérkezett. Az első vásárlás duplán ért!",
+        "pending": "A fizetés folyamatban van. Amint megerősítik, jóváírjuk az érméket.",
+        "vip": "Megvan a Császári menleveled! Lejár: {{date}}"
+      },
+      "failure": {
+        "title": "Most nem sikerült",
+        "dismiss": "Rendben"
+      },
+      "errors": {
+        "provider_unavailable": "Ezen a szerveren még nem lehet fizetni.",
+        "unknown_package": "Ez a csomag már nem kapható. Frissítettük a listát.",
+        "request_id_reused": "Ez a vásárlás összeakadt egy korábbival. Próbáld újra.",
+        "payment_failed": "A fizetés nem sikerült, és nem vontunk le semmit. Próbáld újra.",
+        "same_look": "Ez a mostani arcod.",
+        "same_gender": "Ez a hősöd mostani neme.",
+        "name_taken": "Ezt a nevet már valaki viseli. Válassz másikat.",
+        "pouch_cap": "Mára elérted a nyangos zsák plafonját. Holnap újra válthatsz.",
+        "pouch_level": "A nyangos zsák a {{minLevel}}. szinttől érhető el.",
+        "not_enough_coins": "Nincs elég Viharérméd."
+      },
+      "vip": {
+        "name": "Császári menlevél",
+        "forDays_one": "{{count}} napig:",
+        "forDays_other": "{{count}} napig:",
+        "bonuses": {
+          "xp": "+25% tapasztalat",
+          "nyang": "+20% nyang",
+          "drop": "+10% zsákmány",
+          "farmCap": "12 óráig gyűlő vadászzsák",
+          "energy": "Napi +20 energia",
+          "bossAttempts": "Eggyel több boss-próba"
+        },
+        "now": "most: {{value}}",
+        "base": "alap",
+        "hours_one": "{{count}} óra",
+        "hours_other": "{{count}} óra",
+        "activeUntil": "Lejár: {{date}}",
+        "inactive": "Most nincs Császári menleveled.",
+        "price": "{{coins}} VÉ",
+        "buy": "Megveszem",
+        "extend": "Meghosszabbítom",
+        "badge": "Menlevél",
+        "badgeTip": "Menleveles hős. Lejár: {{date}}",
+        "daysLeft_one": "még {{count}} nap",
+        "daysLeft_other": "még {{count}} nap"
+      },
+      "shortfall": {
+        "title": "Kevés a Viharérméd",
+        "text_one": "Ehhez még {{count}} VÉ hiányzik.",
+        "text_other": "Ehhez még {{count}} VÉ hiányzik.",
+        "buy": "Megveszem",
+        "pack": "+{{coins}} VÉ · {{price}}",
+        "buyLabel": "Megveszem: {{name}}, +{{coins}} Viharérme, {{price}}"
+      },
+      "legal": {
+        "title": "Tudnivalók",
+        "terms": "A vásárlásra az Általános Szerződési Feltételek vonatkoznak.",
+        "termsLink": "Elolvasom",
+        "age": "18 év alatt csak a szüleid vagy a gondviselőd hozzájárulásával vásárolj.",
+        "refund": "Visszatérítés: a megvett tartalmat (a Viharérmét is) a fizetés után azonnal jóváírjuk, ezért a vásárlás végleges, és az árát nem térítjük vissza, kivéve, ha a termék hibás, vagy ha jogszabály visszatérítést ír elő.",
+        "refundLink": "Elállási és visszatérítési szabályzat"
+      },
+      "look": {
+        "button": "Megjelenés",
+        "title": "Megjelenés",
+        "text": "Válassz arcot. Az új arcod a portrén, a figurán és a bal felső sarokban is látszik.",
+        "option": "{{n}}. arc",
+        "current": "Jelenlegi",
+        "confirm": "Megváltoztatom",
+        "confirmLabel": "Megváltoztatom: {{n}}. arc, {{coins}} Viharérme",
+        "pick": "Válassz egy másik arcot.",
+        "done": "Új arcod van. Jól áll!"
+      },
+      "gender": {
+        "button": "Nemváltás",
+        "title": "Nemváltás",
+        "text": "Válaszd ki a hősöd nemét. A szinted, a felszerelésed és a statjaid megmaradnak, csak a portréd és a figurád változik.",
+        "current": "Jelenlegi",
+        "confirm": "Megváltoztatom",
+        "confirmLabel": "Megváltoztatom: {{gender}}, {{coins}} Viharérme",
+        "pick": "Válaszd a másik nemet.",
+        "done": "Megvan az új alakod. Jól áll!"
+      },
+      "rename": {
+        "button": "Névváltás",
+        "title": "Névváltás",
+        "text": "Új név, ugyanaz a hős. A szint, a felszerelés és a becsület megmarad.",
+        "label": "Új név",
+        "hint": "3-16 betű vagy szám, szóköz és írásjel nélkül.",
+        "invalid": "A név 3-16 betűből vagy számból állhat, szóköz és írásjel nélkül.",
+        "tooLong": "Túl hosszú: legfeljebb {{max}} karakter lehet, most {{length}}.",
+        "same": "Ez a mostani neved.",
+        "preview": "Így látják majd",
+        "confirm": "Átnevezem",
+        "confirmLabel": "Átnevezem: {{name}}, {{coins}} Viharérme",
+        "done": "Mostantól {{name}} a neved."
+      },
+      "pouch": {
+        "title": "Nyangos zsák",
+        "intro": "Viharérmét válthatsz nyangra, ha sietsz. Nem muszáj: nyangot vadászat, portya és eladás is hoz bőven.",
+        "rate": "1 VÉ = {{nyang}} nyang a te szinteden",
+        "left": "Ma még {{left}} VÉ váltható, a napi plafon {{cap}} VÉ. A Pártfogó-rang emeli.",
+        "leftBase": "Ma még {{left}} VÉ váltható, a napi plafon {{cap}} VÉ.",
+        "size": "{{coins}} VÉ zsák",
+        "gives": "{{nyang}} nyang",
+        "buy": "Váltok {{coins}} VÉ",
+        "buyLabel": "Nyangos zsák: {{coins}} Viharérme helyett {{nyang}} nyang",
+        "tip": "{{coins}} Viharérméért {{nyang}} nyangot kapsz, azonnal.",
+        "confirm": "{{coins}} Viharérméért {{nyang}} nyangot kapsz. Váltod?",
+        "confirmYes": "Igen, váltok",
+        "whyCap": "Ez ma már nem fér a napi plafonodba: még {{left}} VÉ váltható. Holnap újra jöhetsz.",
+        "whyRank": "Ekkora zsák a napi plafonodba sem fér bele. A Pártfogó {{rank}} rangtól váltható, ott a napi plafon {{cap}} VÉ.",
+        "whyRankNone": "Ekkora zsák egyik Pártfogó-rang napi plafonjába sem fér bele.",
+        "whyCoins": "Nincs elég Viharérméd ehhez a zsákhoz.",
+        "locked": "A {{level}}. szinttől érhető el.",
+        "done": "Megkaptad: {{nyang}} nyang a zsákból.",
+        "loading": "A zsák árfolyamát nézem…"
+      },
+      "extraPacks": "Extra csomagok",
+      "sale": {
+        "badge": "Hétvégi akció",
+        "was": "eredeti ár: {{price}}",
+        "stack": "Halmozódik: vegyél előre most!",
+        "left": "{{pass}}: még {{left}}/{{max}} ezen az áron",
+        "used": "{{pass}}: az akciós vételek elfogytak (0/{{max}}), most a teljes ár érvényes."
+      }
+    },
+    "market": {
+      "lines": {
+        "sell": "Hozd, amit nem használsz! Fix áron veszem, alku nélkül, csak a napi keretre figyelj.",
+        "reserve": "Elfogyott, amit kerestél? Előjegyzem neked. A nyangod addig nálam pihen, és ha nem jön meg az áru, visszaadom.",
+        "bought": "Remek vétel! A Hármas Pecsét áruját még senki nem hozta vissza panasszal."
+      },
+      "view": {
+        "label": "Mit nézel?",
+        "items": "Tárgyak",
+        "stacks": "Kötegek"
+      },
+      "filters": {
+        "label": "Szűrők",
+        "slot": "Rekesz",
+        "anySlot": "Minden rekesz",
+        "class": "Kaszt",
+        "anyClass": "Minden kaszt",
+        "myClass": "{{name}} (te)",
+        "level": "Szint",
+        "anyLevel": "Minden szint",
+        "band": "{{min}}-{{max}}. szint",
+        "kind": "Fajta",
+        "anyKind": "Minden fajta",
+        "sort": "Rendezés",
+        "usable": "Csak ami rám jó",
+        "button": "Szűrők"
+      },
+      "sort": {
+        "deal": "Legjobb vétel",
+        "price_asc": "Ár szerint növekvő",
+        "price_desc": "Ár szerint csökkenő",
+        "level_desc": "Szint szerint",
+        "newest": "Legújabb"
+      },
+      "news": {
+        "label": "A Hármas Pecsét hírei",
+        "restock": "Friss áru {{time}} múlva",
+        "restocking": "Most pakolják ki a friss árut",
+        "restockUnknown": "Négyóránként friss áru",
+        "restockShort": "Friss áru: {{time}}",
+        "peddlerHere": "A Lámpás Vándor a téren van, még {{time}}",
+        "peddlerNext": "A Lámpás Vándor {{time}} múlva érkezik",
+        "peddlerHereShort": "Vándor itt: {{time}}",
+        "peddlerNextShort": "Vándor: {{time}}"
+      },
+      "deals": {
+        "title": "Napi alku",
+        "hint": "Négyóránként szintsávonként kettő, negyedével olcsóbban.",
+        "ribbon": "-{{discount}}%",
+        "was": "Eredeti ár:"
+      },
+      "bag": {
+        "room_one": "{{count}} szabad hely",
+        "room_other": "{{count}} szabad hely",
+        "full": "Tele a leltárad"
+      },
+      "bought": {
+        "stamp": "Megvetted!",
+        "equip": "Felveszem",
+        "equipped": "Rajtad van",
+        "inBag": "A leltáradban",
+        "equippedNotice": "Felvetted: {{name}}. Jól áll!"
+      },
+      "confirm": {
+        "title": "{{name}}: megveszed {{price}} nyangért?",
+        "yes": "Igen, megveszem"
+      },
+      "empty": {
+        "items": "A pult most üres. Négyóránként jön friss áru, nézz vissza később. Sangbo addig a pecsétet fényesíti.",
+        "filtered": "Ilyet most nem árul senki. Próbálj más szűrőt.",
+        "stacks": "Most senki nem árul ilyen köteget.",
+        "stacksHint": "A raktárosnál a mostani és az előző osztály kovácsanyaga mindig kapható, vagy jegyezd elő itt."
+      },
+      "stack": {
+        "onCounter_one": "{{count}} db a pulton",
+        "onCounter_other": "{{count}} db a pulton",
+        "dailyLeft_one": "Ma még {{count}} db vehető",
+        "dailyLeft_other": "Ma még {{count}} db vehető",
+        "dailyDone": "Mára elfogyott a kereted ebből. Holnap újra vehetsz.",
+        "unit": "Darabja",
+        "buy_one": "Megveszem ({{count}} db)",
+        "buy_other": "Megveszem ({{count}} db)",
+        "buyLabel_one": "{{count}} db {{name}} megvétele {{price}} nyangért",
+        "buyLabel_other": "{{count}} db {{name}} megvétele {{price}} nyangért",
+        "confirm_one": "{{count}} db {{name}}: megveszed {{price}} nyangért?",
+        "confirm_other": "{{count}} db {{name}}: megveszed {{price}} nyangért?",
+        "bought_one": "Megvetted: {{count}} db {{name}}. Már a leltáradban van.",
+        "bought_other": "Megvetted: {{count}} db {{name}}. Már a leltáradban van.",
+        "soldOut": "Elfogyott"
+      },
+      "bids": {
+        "left": "Alapanyagot és Viharkő-szilánkot azonnal vesz tőled, ma még {{nyang}} nyang értékben.",
+        "capped": "Mára a Hármas Pecsét nem vesz tőled többet. Holnap újra jöhetsz.",
+        "empty": "Nincs nálad olyan, amit a Hármas Pecsét most venne. Alapanyagot és Viharkő-szilánkot vadászat közben gyűjthetsz.",
+        "unit": "Darabjáért",
+        "have_one": "Nálad: {{count}} db",
+        "have_other": "Nálad: {{count}} db",
+        "sell_one": "Eladom ({{count}} db)",
+        "sell_other": "Eladom ({{count}} db)",
+        "sellLabel_one": "{{count}} db {{name}} eladása a Hármas Pecsétnek {{nyang}} nyangért",
+        "sellLabel_other": "{{count}} db {{name}} eladása a Hármas Pecsétnek {{nyang}} nyangért",
+        "tooMuch_one": "Ma már csak {{count}} db fér a keretbe",
+        "tooMuch_other": "Ma már csak {{count}} db fér a keretbe",
+        "sold_one": "Eladtad a Hármas Pecsétnek: {{count}} db {{name}}, {{nyang}} nyangért.",
+        "sold_other": "Eladtad a Hármas Pecsétnek: {{count}} db {{name}}, {{nyang}} nyangért.",
+        "all": "A Hármas Pecsét teljes árlistája",
+        "title": "Alapanyag és Viharkő-szilánk eladása"
+      },
+      "merchants": {
+        "weapon_dealer": {
+          "title": "Fegyverkovács",
+          "greeting": "Minden penge a te kezedre szabva. Hatóránként újakat kovácsolok.",
+          "bought": "Jó választás. Csak ne a hüvelyén próbáld ki!",
+          "quips": [
+            "Az egyik kardom tegnap megvágta a saját hüvelyét. Ennyire éles.",
+            "Kéz a markolaton, nyang a pulton. Ebben a sorrendben."
+          ]
+        },
+        "armor_dealer": {
+          "title": "Páncélkovács",
+          "greeting": "Vért, sisak, ékszer, mind a szintedhez. Hatóránként új adag jön ki a műhelyből.",
+          "bought": "Ez már tart valamit. Ha mégis behorpad, hozd vissza.",
+          "quips": [
+            "Minden darabot kipróbáltam. Ez a sisak például három medvét látott.",
+            "Szoros? Az jó. A szoros páncél nem lötyög, a lötyögő nem véd."
+          ]
+        },
+        "storekeeper": {
+          "title": "Raktáros",
+          "greeting": "Alapanyag, Viharkő-szilánk, tekercs, gyógyital, és ha kell, leltár-bővítés. Mindent kétszer megszámoltam.",
+          "bought": "Kiadtam, beírtam, lepecsételtem. Következő!",
+          "quips": [
+            "Egy, kettő, három. Még egyszer: egy, kettő, három. Stimmel.",
+            "Leltárbővítés? Okos döntés. A kacatnak is kell a hely."
+          ]
+        },
+        "black_market": {
+          "title": "Lámpás Vándor",
+          "greeting": "Ritka holmi, ritka ár. A lámpásom csak pár óráig ég, úgyhogy ne tökölj.",
+          "bought": "Nem kérdezem, mire kell. Te se kérdezd, honnan van.",
+          "quips": [
+            "A lámpásom nem csak világít. Figyel is.",
+            "Ezt a kardot egy sárkánytól kaptam. Vagy a sárkány tőlem. Már nem emlékszem.",
+            "Alku nincs, név nincs. Teát viszont kérhetsz.",
+            "Psszt. A Hármas Pecsét tud rólam, csak úgy tesz, mintha nem."
+          ]
+        }
+      },
+      "merchant": {
+        "refresh": {
+          "weapon_dealer": "Új kínálat {{time}} múlva",
+          "armor_dealer": "Új kínálat {{time}} múlva",
+          "storekeeper": "A napi keret {{time}} múlva újul",
+          "black_market": "A Vándor még {{time}} marad"
+        },
+        "refreshing": "Jön az új kínálat…",
+        "peddlerNext": "A Lámpás Vándor {{time}} múlva érkezik",
+        "peddlerAway": "A Lámpás Vándor most nincs a városban. Naponta kétszer bukkan fel a téren, lámpással a kezében.",
+        "empty": "Most nincs mit árulnom. Nézz be később!",
+        "buysLeft_one": "Ennél a látogatásnál még {{count}} vételed van",
+        "buysLeft_other": "Ennél a látogatásnál még {{count}} vételed van",
+        "noBuysLeft": "Erre a látogatásra elfogyott a vételed",
+        "reroll": "Új kínálat {{coins}} VÉ",
+        "rerollHint": "Az egész kínálat helyett most rögtön újat kapsz.",
+        "rerolled": "Friss áru került a pultra.",
+        "sealed": "Viharérmés",
+        "soldStamp": "Elkelt",
+        "bagName": "Leltár-bővítés",
+        "bagSlots": "+{{slots}} rekesz a leltáradba",
+        "bagCount_one": "Eddig {{count}} bővítésed van",
+        "bagCount_other": "Eddig {{count}} bővítésed van",
+        "bagTip": "+{{slots}} rekesz a leltáradba, véglegesen. Minden bővítés drágább az előzőnél.",
+        "bundle_one": "{{count}} db egy csomagban",
+        "bundle_other": "{{count}} db egy csomagban",
+        "today_one": "Ma még {{count}} vehető",
+        "today_other": "Ma még {{count}} vehető",
+        "extraScroll": "A napi kereten felül, dupla áron",
+        "stock_one": "Készleten: {{count}}",
+        "stock_other": "Készleten: {{count}}",
+        "coinsPrice": "{{coins}} VÉ",
+        "nyangPrice": "{{nyang}} nyang",
+        "buyLabel": "Megveszem: {{name}}, {{price}}",
+        "confirm": "Megveszed: {{name}}, {{price}}?",
+        "confirmStack_one": "Megveszed: {{count}} db {{name}}, {{price}}?",
+        "confirmStack_other": "Megveszed: {{count}} db {{name}}, {{price}}?",
+        "paid": "{{nyang}} nyang",
+        "paidCoins": "{{coins}} VÉ",
+        "bought": "Megvetted: {{name}} ({{paid}}).",
+        "boughtStack_one": "Megvetted: {{count}} db {{name}} ({{paid}}).",
+        "boughtStack_other": "Megvetted: {{count}} db {{name}} ({{paid}}).",
+        "boughtBag": "Nagyobb lett a leltárad: +{{slots}} rekesz ({{paid}})."
+      },
+      "peddler": {
+        "name": "Lámpás Vándor",
+        "sub": "Feketepiac",
+        "tip": "Ritka holmi borsos áron: szerencse-érc, viharkő-por, képességkönyv, tojás, kulcs és pár igazán erős tárgy.",
+        "until": "Még {{time}} marad",
+        "label": "Lámpás Vándor, még {{time}}"
+      },
+      "reroll": {
+        "tabs": {
+          "upgrade": "Fejlesztés",
+          "bonus": "Bónuszok"
+        },
+        "line": "Új bónuszt akarsz? Kalapálok, de a régit csak akkor dobom el, ha te is úgy akarod.",
+        "pick": "Melyik tárgyon váltsunk?",
+        "nothing": "Nincs nálad tárgy, amin bónuszt válthatnánk.",
+        "waiting": "Dönts!",
+        "current": "Mostani bónuszok",
+        "noBonuses": "Ezen nincs bónusz, így nincs mit váltani rajta.",
+        "hint": "Az új bónuszokat a régiek mellé teszem, és te döntesz. Egyet rögzíthetsz is, az biztosan marad.",
+        "oddsTitle": "Esélyek, apróbetű nélkül",
+        "oddsCount": "Ennyi új bónusz jön: {{list}}",
+        "oddsTier": "Bónuszonként az erősség, a leggyengébbtől a legerősebbig: {{list}}",
+        "locked": "Rögzítve",
+        "lockSingle": "Egy bónuszsoros tárgyon nem zárhatsz le sort: nem maradna mit újradobni.",
+        "go": "Bónuszváltás",
+        "noNyang": "Nincs elég nyangod a bónuszváltásra",
+        "chooseLead": "Itt a régi és az új. Melyik maradjon?",
+        "old": "Régi bónuszok",
+        "new": "Új bónuszok",
+        "empty": "Nincs bónusz",
+        "keepOld": "Megtartom a régit",
+        "takeNew": "Az újat kérem",
+        "accepted": "Kész! Az új bónuszok már rajta vannak: {{name}}.",
+        "kept": "Maradt a régi: {{name}}. A váltás árát a kovács megtartja.",
+        "oddsKinds": "Ezek a bónuszok jöhetnek: {{list}}",
+        "oddsKindsLine": "A kiválasztott sor helyére: {{list}}",
+        "lockHintNyang": "A lakattal megtarthatsz egy bónuszt a váltásnál ({{nyang}} nyang).",
+        "lockTipNyang": "Rögzítés: ez a bónusz a váltás után is biztosan megmarad. Ára {{nyang}} nyang, csak a váltáskor fizeted. Még egyszer rányomva leveszed.",
+        "lockLabelNyang": "{{bonus}} rögzítése {{nyang}} nyangért",
+        "lockHintCoins": "A lakattal megtarthatsz egy bónuszt a váltásnál ({{coins}} VÉ).",
+        "lockTipCoins": "Rögzítés: ez a bónusz a váltás után is biztosan megmarad. Ára {{coins}} VÉ, csak a váltáskor fizeted. Még egyszer rányomva leveszed.",
+        "lockLabelCoins": "{{bonus}} rögzítése {{coins}} VÉ-ért",
+        "hintV2": "Az új bónuszokat a régiek mellé teszem, és te döntesz. Annyiszor váltasz, ahányszor akarsz, napi korlát nincs; az ár a tárgy szintjével és +fokával nő. Egy bónuszt VÉ-ért rögzíthetsz, az biztosan marad.",
+        "kinds": {
+          "maxHp": "Max. HP",
+          "crit": "Kritikus esély",
+          "vsAnimal": "Állatok ellen",
+          "vsBandit": "Banditák ellen",
+          "vsOrc": "Orkok ellen",
+          "vsUndead": "Élőhalottak ellen",
+          "vsDesert": "Sivatagi lények ellen",
+          "vsIce": "Jeges lények ellen",
+          "vsFire": "Tüzes lények ellen",
+          "defence": "Védelem",
+          "attack": "Sebzés",
+          "nyang": "Nyangbónusz",
+          "xp": "XP-bónusz",
+          "evade": "Kitérés",
+          "vsBoss": "Bossok ellen",
+          "potionHeal": "Gyógyital-hatás",
+          "skillDamage": "Képesség-sebzés",
+          "critDamage": "Kritikus sebzés",
+          "lifesteal": "Életlopás",
+          "damageTaken": "Sebzéscsökkentés"
+        }
+      },
+      "errors": {
+        "offer_gone": "Ezt közben elvitték. Frissítettük a pultot.",
+        "market_own_hero": "Ezt a hőseid egyike adta el a Hármas Pecsétnek. Másik hősöddel nem vásárolhatod vissza.",
+        "offer_not_found": "Ez a tétel már nincs a pulton. Frissítettük a listát.",
+        "insufficient_funds": "Nincs elég nyangod.",
+        "inventory_full": "Tele a leltárad. Csinálj helyet, aztán gyere vissza.",
+        "limit_reached": "Erre most elfogyott a keret. Holnap (vagy a következő látogatáskor) újra jöhetsz.",
+        "not_bought": "Ezt a Hármas Pecsét nem veszi meg.",
+        "not_enough_items": "Nincs nálad ennyi belőle.",
+        "not_in_shop": "Ez már nincs a pulton. Frissítettük a kínálatot.",
+        "already_bought": "Ezt már megvetted. Frissítettük a kínálatot.",
+        "not_rerollable": "Itt nem lehet kínálatot cserélni.",
+        "insufficient_coins": "Nincs elég Viharérméd.",
+        "invalid_lock": "Ezt a sort nem rögzítheted. Egy bónuszsoros tárgyon nem zárhatsz le sort: nem maradna mit újradobni.",
+        "no_pending_reroll": "Ennél a tárgynál nincs mit eldönteni. Frissítettük.",
+        "reroll_pending": "Ezen a tárgyon félbemaradt bónuszváltás van. Előbb dönts a kovácsnál, a régi vagy az új bónuszok maradjanak.",
+        "request_id_reused": "Ez a kérés összeakadt egy korábbival. Próbáld újra.",
+        "house_item_cap": "Mára a Hármas Pecsét nem vesz tőled több felszerelést. Holnap újra jöhetsz.",
+        "item_equipped": "Ezt most viseled. Előbb vedd le, aztán add el.",
+        "item_not_found": "Ez a tárgy már nincs nálad. Frissítettük a leltárt.",
+        "orders_full": "Több előjegyzésed most nem lehet nyitva. Frissítettük a listát.",
+        "not_enough_nyang": "Nincs elég nyangod.",
+        "not_house_item": "Ezt a Hármas Pecsét nem árulja, így előjegyezni sem lehet.",
+        "not_tradable": "Ezt a Hármas Pecsét nem veszi meg.",
+        "order_not_found": "Ezt az előjegyzést már nem találom. Frissítettük a listát.",
+        "stale_state": "Közben elfogyott vagy változott. Frissítettük.",
+        "house_limit": "Ennyi már nem fér a mai keretedbe. A kártyán látod, ma még hány darab vehető.",
+        "item_locked": "Ezt a tárgyat lezártad. Előbb oldd fel a lakatot, aztán add el."
+      },
+      "cityTexts": {
+        "city": {
+          "actions": {
+            "weapon_dealer": "Fegyverek",
+            "armor_dealer": "Páncélok",
+            "storekeeper": "Raktár"
+          },
+          "placeHints": {
+            "weapon_dealer": "Fegyverek a szintedre, hatóránként új kínálat",
+            "armor_dealer": "Páncél, sisak, pajzs és ékszer, hatóránként új kínálat",
+            "storekeeper": "Alapanyag, Viharkő-szilánk, tekercs, gyógyital és leltár-bővítés"
+          }
+        },
+        "npc": {
+          "storekeeper": {
+            "ask": "Mi van ma a raktárban?",
+            "line": "Alapanyag a kovácshoz, Viharkő-szilánk, Hamuóvó-tekercs, gyógyital, és ha kinőtted a leltárad, bővítés is. Tekercsből naponta kettőt adok, a többiből is csak módjával: mindent kétszer számolok."
+          },
+          "weapon_dealer": {
+            "line": "Jobb? Nálam minden jobb, mint ami nálad van, és ezt nem csak az ár miatt mondom. Hatóránként új adagot kovácsolok, mind a te kasztodnak, a szintedhez szabva."
+          },
+          "armor_dealer": {
+            "line": "Vért, sisak, pajzs, csizma, de még ékszer is, mind a szintedhez igazítva. Hatóránként új adag jön ki a műhelyből, és ami innen megy el, az kitart."
+          }
+        }
+      },
+      "timeLeft": "Még {{time}}",
+      "expired": "Lejárt",
+      "buy": "Megveszem",
+      "buyLabel": "{{name}} megvétele {{price}} nyangért",
+      "cantAfford": "Nincs elég nyangod",
+      "bagFull": "Megtelt a leltárad",
+      "page": "{{page}}. oldal / {{pages}}",
+      "prev": "Előző oldal",
+      "next": "Következő oldal",
+      "boughtItem": "Megvetted: {{name}}. Már a leltáradban lapul.",
+      "tabs": {
+        "buy": "Vásárlás",
+        "sell": "Eladás",
+        "reserve": "Előjegyzés"
+      },
+      "sellItem": {
+        "title": "Felszerelés eladása",
+        "hint": "A Hármas Pecsét többet ad a felszerelésért, mint Minah, de naponta csak néhány darabot vesz.",
+        "pick": "Melyik tárgyat adod el?",
+        "none": "Nincs a leltáradban eladható felszerelés. A viselt és a lezárt tárgyat nem adhatod el.",
+        "loading": "Sangbo felméri a tárgyat…",
+        "price": "A Hármas Pecsét ennyit ad érte",
+        "shop": "Minah csak {{nyang}} nyangot adna érte.",
+        "left_one": "Ma még {{count}} tárgyat vesz tőled.",
+        "left_other": "Ma még {{count}} tárgyat vesz tőled.",
+        "capped": "Mára a Hármas Pecsét nem vesz tőled több felszerelést. Holnap újra jöhetsz, addig Minah is szívesen megveszi.",
+        "sell": "Eladom",
+        "sellLabel": "{{name}} eladása a Hármas Pecsétnek {{nyang}} nyangért",
+        "confirm": "Eladod: {{name}}, {{nyang}} nyangért? Később nem kérheted vissza.",
+        "yes": "Igen, eladom",
+        "sold": "Eladtad a Hármas Pecsétnek: {{name}}, {{nyang}} nyangért."
+      },
+      "reserve": {
+        "title": "Előjegyzéseid",
+        "rules": "Ha valami elfogyott a pultról, előjegyezheted. A nyangot most zároljuk, és a következő négyórás frissítéskor a Hármas Pecsét teljesíti, amennyit a készlet enged. Legfeljebb {{max}} előjegyzésed lehet, egyenként {{hours}} óráig, és ami nem teljesül, annak az ára visszajár.",
+        "empty": "Még nincs előjegyzésed. Ha valami elfogyott, itt kérheted.",
+        "progressLabel": "Teljesült",
+        "progress": "{{filled}}/{{qty}} db",
+        "unit": "Darabja",
+        "locked": "Zárolva",
+        "done": "Teljesült",
+        "cancel": "Visszavonás",
+        "cancelLabel": "Előjegyzés visszavonása: {{name}}",
+        "cancelConfirm": "Visszavonod? A még nem teljesült részre zárolt nyang visszajár.",
+        "cancelYes": "Igen, visszavonom",
+        "cancelled": "Visszavontad az előjegyzést: {{name}}. {{nyang}} nyang visszajött.",
+        "new": "Új előjegyzés",
+        "pick": "Mit jegyezzünk elő?",
+        "pickLoading": "Megnézem, mit jegyezhetsz elő…",
+        "noItems": "A Hármas Pecsét most semmit nem kínál, amit előjegyezhetnél.",
+        "price": "Zárolt darabár (legfeljebb)",
+        "priceHint": "Ha a Hármas Pecsét olcsóbban teljesíti, a különbözet visszajár.",
+        "total": "Zárolt összeg",
+        "noFunds": "Nincs elég nyangod a zároláshoz",
+        "cap": "Már {{max}} előjegyzésed van. Várd meg, amíg teljesül egy, vagy vonj vissza egyet.",
+        "submit": "Előjegyzem",
+        "placed_one": "Előjegyezted: {{count}} db {{name}}. Zárolva: {{nyang}} nyang. A következő frissítéskor érkezik, ha van készlet.",
+        "placed_other": "Előjegyezted: {{count}} db {{name}}. Zárolva: {{nyang}} nyang. A következő frissítéskor érkezik, ha van készlet."
+      },
+      "results_one": "{{count}} tétel",
+      "results_other": "{{count}} tétel"
+    },
+    "monet": {
+      "moon": {
+        "name": "Sárkányhold",
+        "kicker": "14 napos kártya",
+        "best": "Napi átvétellel a legjobb",
+        "perks": {
+          "now": "{{coins}} Viharérme azonnal",
+          "daily_one": "{{count}} napig minden nap {{coins}} VÉ és {{energy}} energia",
+          "daily_other": "{{count}} napig minden nap {{coins}} VÉ és {{energy}} energia",
+          "frame": "Holdezüst portrékeret, amíg él a kártya"
+        },
+        "total": "Összesen {{coins}} VÉ, ha minden nap átveszed ({{days}} nap).",
+        "status": {
+          "active_one": "Aktív, még {{count}} nap",
+          "active_other": "Aktív, még {{count}} nap",
+          "lastDay": "Utolsó átvételi nap: {{date}}",
+          "inactive": "Most nincs Sárkányholdad."
+        },
+        "claim": "Átveszem a mait",
+        "claimLabel": "Átveszem a mai Sárkányhold-jutalmat: {{coins}} VÉ és {{energy}} energia",
+        "claimed": "A mait átvetted. Újabb jutalom: {{when}}.",
+        "todayAt": "ma {{time}}",
+        "tomorrowAt": "holnap {{time}}",
+        "remind_one": "Már csak {{count}} napig tart. Ha most meghosszabbítod, az új napok a végéhez adódnak, egy sem vész el.",
+        "remind_other": "Már csak {{count}} napig tart. Ha most meghosszabbítod, az új napok a végéhez adódnak, egy sem vész el.",
+        "buy": "Megveszem",
+        "testBuy": "Tesztvásárlás",
+        "extend": "Meghosszabbítom",
+        "buyLabel": "{{action}}: Sárkányhold, {{price}}",
+        "limit_one": "Most nem hosszabbíthatod: legfeljebb {{count}} napot vehetsz előre.",
+        "limit_other": "Most nem hosszabbíthatod: legfeljebb {{count}} napot vehetsz előre.",
+        "notesTitle": "Jó tudni",
+        "notes": {
+          "claim": "A napi jutalmat a játékban veheted át: a HUD holdas érméjén vagy itt, ezen a kártyán.",
+          "missed": "A kihagyott nap elvész, nem gyűlik fel.",
+          "extend_one": "Ha újra megveszed, a napok a mostani kártya végéhez adódnak (legfeljebb {{count}} nap előre).",
+          "extend_other": "Ha újra megveszed, a napok a mostani kártya végéhez adódnak (legfeljebb {{count}} nap előre)."
+        },
+        "receipt": {
+          "paid": "+{{coins}} Viharérme megérkezett. A Sárkányhold mostantól minden nap vár rád.",
+          "extended": "Meghosszabbítva! +{{coins}} Viharérme megérkezett.",
+          "pending": "A fizetés folyamatban van. Amint megerősítik, jóváírjuk a Sárkányholdat.",
+          "claimed": "Mai Sárkányhold: +{{coins}} VÉ és +{{energy}} energia.",
+          "claimedCoins": "Mai Sárkányhold: +{{coins}} VÉ (az energiád tele volt)."
+        },
+        "popup": {
+          "eyebrow": "Hamarosan lejár",
+          "line": "{{name}}, a Sárkányholdad hamarosan lejár. Ha most hosszabbítasz, egyetlen napot sem veszítesz.",
+          "later": "Később"
+        }
+      },
+      "hud": {
+        "moon_one": "Sárkányhold, még {{count}} nap",
+        "moon_other": "Sárkányhold, még {{count}} nap",
+        "moonReady": "Sárkányhold: átveszem a mai jutalmat",
+        "moonTipReady": "Kattints, és átveszed a mai jutalmat: {{coins}} VÉ és {{energy}} energia.",
+        "moonTipDone": "A mait átvetted. Újabb jutalom: {{when}}.",
+        "moonTipRemind": "Hamarosan lejár: a Viharérme oldalon meghosszabbíthatod.",
+        "moonTipMissed": "A kihagyott nap elvész, ezért érdemes minden nap benézni.",
+        "season": "Viharút, {{tier}}. szakasz",
+        "seasonReady_one": "Viharút, {{tier}}. szakasz, {{count}} jutalom átvehető",
+        "seasonReady_other": "Viharút, {{tier}}. szakasz, {{count}} jutalom átvehető",
+        "seasonTier": "Szakasz: {{tier}}/{{max}}",
+        "seasonToday": "Ma: {{points}}/{{cap}} Viharpont",
+        "seasonReadyTip_one": "{{count}} szakasz jutalma vár rád.",
+        "seasonReadyTip_other": "{{count}} szakasz jutalma vár rád.",
+        "seasonHint": "Kattints, és megnyílik a Viharút."
+      },
+      "season": {
+        "title": "Viharút",
+        "number": "{{n}}. szezon",
+        "namedTitle": "{{n}}. szezon: {{name}}",
+        "names": {
+          "deadstones": "A Vihar első szezonja"
+        },
+        "daysLeft_one": "még {{count}} nap",
+        "daysLeft_other": "még {{count}} nap",
+        "lastDay": "ma ér véget",
+        "ends": "Vége: {{date}}",
+        "notStarted": "A Viharút a nyitáskor indul ({{date}}); addig nem gyűlik Viharpont.",
+        "tierLabel": "Szakasz",
+        "tierOf": "{{tier}}/{{max}}",
+        "toNext": "{{points}}/{{max}} Viharpont a következő szakaszig",
+        "maxed": "Végigértél a Viharúton!",
+        "today": "Ma: {{points}}/{{cap}} Viharpont",
+        "todayFull": "A mai keret betelt, holnap újra gyűjthetsz.",
+        "premiumOn": "Prémium sáv",
+        "wearing": "Címed: {{title}}",
+        "how": {
+          "title": "Így gyűjtesz Viharpontot",
+          "cap": "Naponta legfeljebb {{cap}} pont jön a játékból. A szakaszugrás ebbe nem számít bele.",
+          "points": "+{{points}}",
+          "capCatchUp": "Naponta legfeljebb {{cap}} pont jön a játékból. A felzárkózó keret a nap eleji pontjaidból számol: az átugrás csökkenti."
+        },
+        "kinds": {
+          "stones": "Viharkő összetörése",
+          "boss_wins": "Győzelem egy boss ellen",
+          "tasks_claimed": "Napi feladat jutalma",
+          "chests": "Napi vagy heti láda",
+          "dungeon_clears": "Kazamata teljesítése",
+          "tower_bosses": "Toronyboss legyőzése",
+          "arena_wins": "Megnyert párbaj az arénában",
+          "collects": "Zsákmány begyűjtése",
+          "heroic_clears": "Hősi kazamata teljesítése",
+          "world_boss_hits": "Támadás a heti boss ellen",
+          "storm_floors": "Emelet a Viharcsúcson",
+          "fish_caught": "Kifogott hal",
+          "lead_plays": "Végigjátszott nyom",
+          "portal_runs": "Portál-futam",
+          "rift_floors": "Viharhasadék-emelet",
+          "rune_games": "Befejezett Rúnasor"
+        },
+        "tracks": {
+          "free": "Ingyenes",
+          "premium": "Prémium"
+        },
+        "trackLabel": "A Viharút szakaszai",
+        "cell": {
+          "title": "{{tier}}. szakasz, {{track}} sáv",
+          "claimed": "Átvéve",
+          "claimable": "Átvehető",
+          "locked": "Még nem érted el",
+          "premium": "Prémiummal jár",
+          "nyangNote": "A nyang a mostani szinted szerint jár ({{level}}. szint).",
+          "levelNote": "Átvételkor a mostani szintedhez illő darab jár ({{level}}. szint).",
+          "soulNote": "Viharszív-anyag ({{level}}. szinttől): esszencia a leggyengebb kövedhez, Sárkányszem-szilánk és Lélekpor.",
+          "current": "Itt tartasz"
+        },
+        "claimAll_one": "Mind átvétele ({{count}})",
+        "claimAll_other": "Mind átvétele ({{count}})",
+        "claimAllTitle": "Mind átvétele",
+        "claimAllTip": "Minden elért szakasz jutalmát egyszerre átveszed, mindkét sávon. A nyang, a kazamatakulcs és a Bónuszoló a mostani szinted szerint jár.",
+        "nothing": "Most nincs átvehető jutalom. Játssz tovább, és jönnek a szakaszok.",
+        "claimedTitle": "Megérkezett",
+        "claimedSummary_one": "{{count}} szakasz jutalmát vetted át:",
+        "claimedSummary_other": "{{count}} szakasz jutalmát vetted át:",
+        "got": {
+          "title": "{{name}}: cím, amit a neved alá vehetsz fel.",
+          "frame": "{{name}}: keret, amit a portréd köré vehetsz fel."
+        },
+        "cosmeticWhere": "A címek és keretek nem a leltárba kerülnek: ezen az oldalon lent, a „{{section}}” résznél találod és veheted fel őket.",
+        "cosmeticShow": "Megmutatom",
+        "premium": {
+          "title": "Viharút prémium",
+          "active": "A prémium sáv a tiéd ebben a szezonban.",
+          "lead": "Nyisd meg a második sávot erre a szezonra. Összesen {{coins}} Viharérme jár rajta, és minden szakaszra jut valami.",
+          "cosmetics": "Csak itt: {{list}}.",
+          "readyNow_one": "Ha most megveszed, {{count}} már elért prémium szakasz jutalma rögtön átvehető.",
+          "readyNow_other": "Ha most megveszed, {{count}} már elért prémium szakasz jutalma rögtön átvehető.",
+          "readyNone": "A prémium szakaszok jutalma akkor válik átvehetővé, amikor eléred őket.",
+          "season": "Csak erre a szezonra szól (vége: {{date}}).",
+          "buy": "Megveszem",
+          "testBuy": "Tesztvásárlás",
+          "buyLabel": "{{action}}: Viharút prémium, {{price}}",
+          "receipt": "A prémium sáv megnyílt! Vedd át a jutalmakat.",
+          "boughtTitle": "A prémium sáv a tiéd!",
+          "boughtReady_one": "Megnyílt a második sáv. {{count}} prémium szakasz jutalma már átvehető, vedd át!",
+          "boughtReady_other": "Megnyílt a második sáv. {{count}} prémium szakasz jutalma már átvehető, vedd át!",
+          "boughtLater": "Megnyílt a második sáv. A prémium jutalmak a szakaszokkal együtt nyílnak: minden új szakasz után átveheted őket.",
+          "pending": "A fizetés folyamatban van. Amint megerősítik, megnyílik a prémium sáv.",
+          "reach": "Napi {{cap}} Viharponttal a szezon végéig eljutsz ide: {{tier}}. szakasz."
+        },
+        "skip": {
+          "title": "Szakaszugrás",
+          "text": "{{coins}} VÉ szakaszonként, egyszerre legfeljebb {{max}}. Nem érinti a napi Viharpont-keretet.",
+          "less": "Eggyel kevesebb szakasz",
+          "more": "Eggyel több szakasz",
+          "count_one": "{{count}} szakasz",
+          "count_other": "{{count}} szakasz",
+          "button": "Ugrás: {{coins}} VÉ",
+          "label_one": "{{count}} szakasz átugrása {{coins}} Viharérméért",
+          "label_other": "{{count}} szakasz átugrása {{coins}} Viharérméért",
+          "tip": "Azonnal {{points}} Viharpont. A jutalmakat utána a Mind átvétele gombbal veszed át.",
+          "done_one": "+{{count}} szakasz! Vedd át a jutalmakat.",
+          "done_other": "+{{count}} szakasz! Vedd át a jutalmakat.",
+          "complete": "Végigértél, nincs több átugorható szakasz.",
+          "textCatchUp": "{{coins}} VÉ szakaszonként, egyszerre legfeljebb {{max}}. Az átugrás után a mai felzárkózó kereted kisebb lesz: {{after}} Viharpont."
+        },
+        "previous": {
+          "title": "Az előző szezon",
+          "text_one": "Az előző szezonból ({{n}}. szezon) még {{count}} szakasz jutalma vár. Határidő: {{date}}. A Mind átvétele gomb ezt is hozza.",
+          "text_other": "Az előző szezonból ({{n}}. szezon) még {{count}} szakasz jutalma vár. Határidő: {{date}}. A Mind átvétele gomb ezeket is hozza."
+        }
+      },
+      "cosmetics": {
+        "title": "Címek, keretek és hátterek",
+        "lead": "A címed a profilodon látszik a neved alatt, a keret a portréd körül a HUD-on, a háttér a hősöd mögött.",
+        "kinds": {
+          "title": "Cím",
+          "frame": "Keret",
+          "badge": "Jelvény"
+        },
+        "worn": "Viseled",
+        "owned": "A tiéd",
+        "wear": "Felveszem",
+        "remove": "Leveszem",
+        "wearLabel": "Felveszem: {{name}}",
+        "removeLabel": "Leveszem: {{name}}",
+        "buy": "{{coins}} VÉ",
+        "buyLabel": "Megveszem: {{name}}, {{coins}} Viharérme",
+        "buyTip": "Egyszer veszed meg, utána bármikor felveheted vagy leveheted.",
+        "titleLine": "Cím: {{title}}",
+        "source": {
+          "season_free": "Viharút, ingyenes sáv, {{tier}}. szakasz",
+          "season_premium": "Viharút, prémium sáv, {{tier}}. szakasz",
+          "season_free_in": "Viharút, {{season}}. szezon, ingyenes sáv, {{tier}}. szakasz",
+          "season_premium_in": "Viharút, {{season}}. szezon, prémium sáv, {{tier}}. szakasz",
+          "season": "Viharút",
+          "referral": "Meghívó: az első jutalmazott barátod után",
+          "moon": "Sárkányhold: amíg él a kártyád",
+          "shop": "Viharérméért, egyszer kell megvenni",
+          "event": "Ünnepi bolt: csak az ünnep alatt szerezhető",
+          "arena": "Aréna-szezon jutalma",
+          "world_boss": "Heti boss: az első három",
+          "fishing": "Halásznapló: mind a 20 faj",
+          "patron": "Pártfogói rang jutalma",
+          "offer": "Csomag ajándéka",
+          "founder": "Alapító-ajándék: a nyitáskori levél személyes kódjával",
+          "creator": "Creator-kód ajándéka",
+          "launch": "Első hajnal: a nyitás első napjaiban létrehozott hősöknek",
+          "discord": "Discord: a fiók összekötése (a Day One Stormer tárgyai a nyitás előtti csatlakozásért)",
+          "discord_boost": "Discord: amíg boostolod a szerverünket (összekötött fiókkal)",
+          "discord_daily": "Discord: 30 napi jutalom a #daily-rewards csatornában (összekötött fiókkal)",
+          "rift": "Viharhasadék: a pecsétpolc és a Viharrang",
+          "runasor": "Rúnasor: Rúnalap-szilánkért vagy a Lidérclámpások keretdarabjaiért",
+          "fishing_gut": "Nakshi kése: halbontás lelete",
+          "achievement": "Teljesítmény: az új teljesítmények aranya és a teljes sorozatok",
+          "mutator": "Viharátok: a heti ranglista eleje",
+          "league": "Zászlóliga: két hét a céheddel e zászló alatt vagy feljebb",
+          "leads": "Nyomolvasó-pontok: a 10. pontért",
+          "party": "Csapat: az Első hét közös célja",
+          "founder_set": "Mindhárom Viharalapító csomag egy fiókban"
+        },
+        "items": {
+          "title_stormwalker": {
+            "name": "Viharjáró",
+            "desc": "Végigjártad a Viharutat. A cipőd talpa erről mesélhetne."
+          },
+          "title_stormrider": {
+            "name": "Viharlovas",
+            "desc": "A vihar hátán ültél végig a szezonon. A lovad ma is borzong."
+          },
+          "title_recruiter": {
+            "name": "Toborzó",
+            "desc": "Barátot hoztál a faluba. A kocsmáros külön köszöni."
+          },
+          "title_dragonheart": {
+            "name": "Sárkányszív",
+            "desc": "Bátor, vagy legalábbis annak látszik. A cím ezt mindenkinek elmondja."
+          },
+          "frame_moon": {
+            "name": "Holdezüst keret",
+            "desc": "Hűvös ezüst fény a portréd körül, amíg él a Sárkányholdad."
+          },
+          "frame_storm": {
+            "name": "Viharkék keret",
+            "desc": "Villámkék gyűrű, a prémium Viharút 15. szakaszán."
+          },
+          "frame_jade": {
+            "name": "Jáde keret",
+            "desc": "Nyugodt zöld kő, mint egy kerti tó. Csak gyorsabb vagy."
+          },
+          "frame_ember": {
+            "name": "Parázs keret",
+            "desc": "Izzó vörös szél, mintha épp a kovácstól jönnél."
+          },
+          "title_stormlord": {
+            "name": "Viharúr",
+            "desc": "A villám kérdez, te felelsz. Ritka cím, és mindenki látja, hogy a tiéd."
+          },
+          "frame_dragonfire": {
+            "name": "Sárkánytűz keret",
+            "desc": "Mély vörös láng nyaldossa a portrédat. A sárkányok is irigykednek."
+          },
+          "title_pumpkinking": {
+            "name": "Lámpásgyújtó",
+            "desc": "A Holt Kövek Éjszakáján minden kőnél lámpást gyújtott. A szellemek is köszönnek neki."
+          },
+          "title_santahelper": {
+            "name": "Mikulás segédje",
+            "desc": "Zoknit hord, zsákot cipel, és soha nem kérdezi, mi van benne."
+          },
+          "title_pinekeeper": {
+            "name": "Fenyőőrző",
+            "desc": "A Fenyőünnep őre: amíg ő vigyáz, a béke napjai kitartanak."
+          },
+          "title_fireworks": {
+            "name": "Tűzijáték-mester",
+            "desc": "Az óév utolsó éjszakáján az ő rakétái szelték ketté az eget."
+          },
+          "title_heartbreaker": {
+            "name": "Szívtipró",
+            "desc": "Darumedált gyűjtött, de a szíveket is összeszedte."
+          },
+          "title_arenachamp": {
+            "name": "Arénabajnok",
+            "desc": "Egy szezonon át te voltál az első. A homok még most is emlegeti."
+          },
+          "title_gladiator": {
+            "name": "Gladiátor",
+            "desc": "A tíz legjobb közé verekedted magad. A közönség a nevedet skandálja, nagyjából helyesen."
+          },
+          "title_duelist": {
+            "name": "Párbajhős",
+            "desc": "A szezon száz legjobbja között végeztél. Szép, tiszta munka."
+          },
+          "frame_laurel": {
+            "name": "Babérkoszorús keret",
+            "desc": "Zöldarany babér a portréd körül: az aréna élmezőnyének jele."
+          },
+          "title_arenafighter": {
+            "name": "Az aréna harcosa",
+            "desc": "Egy teljes szezont végigharcoltál az arénában."
+          },
+          "title_stormhunter": {
+            "name": "Viharvadász",
+            "desc": "A heti boss legkeményebb ütői között voltál. A boss emlékszik rád, nem szívesen."
+          },
+          "title_fishking": {
+            "name": "Halkirály",
+            "desc": "Mind a húsz halat kifogtad. Nakshi azóta kalappal köszön."
+          },
+          "frame_patron": {
+            "name": "Sárkány­pártfogó keret",
+            "desc": "Aranysárkány fonja körbe a portrédat. A VII. pártfogói rangtól jár."
+          },
+          "title_patron": {
+            "name": "Pártfogó",
+            "desc": "A város tudja, ki áll a kapui mögött. A IX. pártfogói rangtól választható."
+          },
+          "frame_imperial": {
+            "name": "Császári pártfogó címer",
+            "desc": "A császári pecsét a profilodon. A X. pártfogói rang jele."
+          },
+          "title_peakwalker": {
+            "name": "Csúcsjáró",
+            "desc": "Aki ide eljutott, már nem a lábát nézi, hanem a csúcsot. Késői csomag ajándéka."
+          },
+          "frame_goldlaurel": {
+            "name": "Aranybabér keret",
+            "desc": "Színarany babér a portréd körül. Az aréna legjobb tíz játékosának csomagjában jár."
+          },
+          "title_deadwarden": {
+            "name": "A Holt Kövek őre",
+            "desc": "A Holt Kövek Éjszakáján 900 lámpást gyűjtött. A kövek azóta csendesebbek."
+          },
+          "frame_ghostfire": {
+            "name": "Lidércláng",
+            "desc": "Hideg, kék lidércláng a portréd körül. A Holt Kövek Éjszakájának mérföldkő-jutalma."
+          },
+          "title_foxbane": {
+            "name": "Rókaűző",
+            "desc": "Újra és újra legyőzte Hwaryeont, a Kilencfarkút. A róka azóta messziről kerüli."
+          },
+          "title_founder": {
+            "name": "Alapító",
+            "desc": "Már a nyitás előtt itt volt. Az alapító kód ajándéka."
+          },
+          "frame_founder": {
+            "name": "Alapító pecsét",
+            "desc": "Az alapítók pecsétje a portréd körül. Az alapító kód ajándéka."
+          },
+          "title_firstdawn": {
+            "name": "Első hajnal",
+            "desc": "Ott volt az első hajnalon, amikor a kapuk megnyíltak."
+          },
+          "frame_creator": {
+            "name": "Alkotó",
+            "desc": "A Stonestorm creator-programjának kerete. Csak a creatorok kapják."
+          },
+          "frame_silklantern": {
+            "name": "Selyemlámpás",
+            "desc": "Selyemlámpások meleg fénye a portréd körül. A Selyemlámpás-csomagban jár."
+          },
+          "frame_ninetails": {
+            "name": "Kilencfarkú",
+            "desc": "Kilenc rókafarok öleli a portréd. A Viharút első szezonjának prémium jutalma."
+          },
+          "title_deadrider": {
+            "name": "A Holt Kövek lovasa",
+            "desc": "A Holt Kövek között lovagolt végig a Viharút első szezonjában."
+          },
+          "title_warbanner": {
+            "name": "Győzelmi zászlóvivő",
+            "desc": "A hét győztes királyságának zászlaját vitted a Királyságháborúban."
+          },
+          "title_purechamp": {
+            "name": "Tiszta penge",
+            "desc": "Egy szezonon át te voltál az első a Tiszta arénában. Lélek és főzet nélkül, csak te és a kardod."
+          },
+          "title_pureblade": {
+            "name": "Tiszta kéz",
+            "desc": "A Tiszta aréna tíz legjobbja közé verekedted magad, tea nélkül is."
+          },
+          "title_purefighter": {
+            "name": "Tisztán vívó",
+            "desc": "A Tiszta aréna száz legjobbja között végeztél. Becsületes munka."
+          },
+          "frame_cloudgold": {
+            "name": "Aranyfelhő keret",
+            "desc": "Szerencsehozó aranyfelhők úsznak a portréd körül. Eső ritkán esik rád, legalábbis a képen."
+          },
+          "title_goldpocket": {
+            "name": "Aranyzsebű",
+            "desc": "A zsebe nem csörög, mert az aranyat nem illik csörgetni. Mindenki tudja, mi van benne."
+          },
+          "name_goldleaf": {
+            "name": "Aranyfüst",
+            "desc": "Aranyfüst fénye fut végig a neveden. A csevegőben is, az arénában is."
+          },
+          "saddle_cloudsilk": {
+            "name": "Felhőselyem nyereg",
+            "desc": "Égkék selyem aranyfelhő-hímzéssel. A hátasod büszkébben lép benne, gyorsabban nem."
+          },
+          "decor_moonjar": {
+            "name": "Holdkorsó",
+            "desc": "Kerek, fehér, és semmi nincs benne. Pont ettől olyan szép. Kényelmet nem ad, csak tekintélyt."
+          },
+          "frame_pinetiger": {
+            "name": "Fenyő és tigris",
+            "desc": "Egy vén fenyőág, rajta egy elégedett tigris. Úgy döntött, hogy a portréd mostantól az ő pihenőhelye."
+          },
+          "title_tigertamer": {
+            "name": "Tigrisszelídítő",
+            "desc": "A tigris csak egyszer mordult rá. Azóta dorombol, ha meglátja."
+          },
+          "name_emberflow": {
+            "name": "Parázsfolyam",
+            "desc": "Izzó parázs hullámzik a betűidben. Hideg napokon különösen jól mutat."
+          },
+          "decor_tigerscreen": {
+            "name": "Tigrises paraván",
+            "desc": "Népi festmény: egy vigyorgó tigris és egy szarka, amely éppen leckézteti. Kényelmet nem ad."
+          },
+          "frame_phoenixplume": {
+            "name": "Főnixtoll keret",
+            "desc": "Lángszínű főnixtollak legyezője a portréd körül. Nem éget, csak ragyog."
+          },
+          "title_stormsovereign": {
+            "name": "Viharfejedelem",
+            "desc": "A vihar kopog, mielőtt belép hozzá. Ritka cím, és tényleg mindenki látja."
+          },
+          "name_stormlight": {
+            "name": "Viharfény",
+            "desc": "Cián villám fut át a neveden, és néha felvillan. A ranglista aljáról is észreveszik."
+          },
+          "saddle_stormhide": {
+            "name": "Viharkő nyereg",
+            "desc": "Palaszürke bőr, beépített viharkövek, villámöltések. A hátasod szerint csípős, szerinted gyönyörű."
+          },
+          "frame_stormcrown": {
+            "name": "Viharkorona",
+            "desc": "Villámmal repedt viharkövek arany foglalatban. Aki ezt viseli, annak a villám köszön előre."
+          },
+          "decor_stormstone": {
+            "name": "Trónoló viharkő",
+            "desc": "Egy igazi viharkő díszpárnán, saját kis trónon. Nem harap, csak néha szikrázik. Kényelmet nem ad."
+          },
+          "backdrop_bamboomoon": {
+            "name": "Holdfényes bambuszliget",
+            "desc": "Telihold, susogó bambusz, néhány szentjánosbogár. Itt a hősöd még a csendet is jól viseli."
+          },
+          "backdrop_blossomyard": {
+            "name": "Cseresznye­virágos udvar",
+            "desc": "Tavaszi udvar cseresznyefákkal és ívelt tetőkkel. A szirmokból a vállad is kap."
+          },
+          "backdrop_lanternnight": {
+            "name": "Lámpásünnep éjjele",
+            "desc": "Ezernyi papírlámpás száll a folyó fölé. Csak díszlet: lámpást nem gyűjt helyetted."
+          },
+          "backdrop_kingdombanners": {
+            "name": "A három királyság zászlói",
+            "desc": "A főnix, a tigris és a sárkány zászlaja lobog a hősöd mögött. Mindhárom királyság tisztelgése."
+          },
+          "backdrop_stormpeak": {
+            "name": "Viharcsúcs",
+            "desc": "Villámok a hegycsúcs fölött, izzó viharkövek a sziklák között. Itt a szél is tisztelettel fúj."
+          },
+          "backdrop_goldenhall": {
+            "name": "Aranypikkelyes csarnok",
+            "desc": "Aranypikkelyes oszlopok, vörös selyem, gyertyafény. A szőnyeg egyenesen a hősödhöz vezet."
+          },
+          "backdrop_stormthrone": {
+            "name": "Vihartrón",
+            "desc": "Felhők fölötti szikla, körülötte lebegő viharkövek és cián villámok. Akinek ez van, annak nem kell bemutatkoznia."
+          },
+          "backdrop_heavengate": {
+            "name": "Égi kapu",
+            "desc": "Napfelkelte az aranyfelhők között, és egy vörös kapu, amely mögött maga a hajnal áll."
+          },
+          "title_stormcaller": {
+            "name": "Stormcaller",
+            "desc": "Összekötötted a Discordodat, és meghallottad a vihar hívását. A közösség ismeri a nevedet."
+          },
+          "badge_dayone": {
+            "name": "Day One Stormer",
+            "desc": "Már a kapunyitás előtt ott volt a Discordunkon. Jelvény, ami örökre megmarad."
+          },
+          "frame_dayone": {
+            "name": "Day One Stormer keret",
+            "desc": "Viharkék villámok a portréd körül. A közösség a nyitáskor oldotta fel minden Day One Stormernek."
+          },
+          "frame_stormherald": {
+            "name": "Viharhírnök keret",
+            "desc": "Viharkék szél kavarog a portréd körül. 30 napi jutalomért jár a Discordunk #daily-rewards csatornájából."
+          },
+          "title_stormbooster": {
+            "name": "Stormbooster",
+            "desc": "Boostolod a Stonestorm Discord-szerverét. Veled erősebb a vihar."
+          },
+          "title_riftwalker": {
+            "name": "Hasadékjáró",
+            "desc": "Lejártad a Hasadékot. A lépcsőt is, ami nincs."
+          },
+          "frame_riftwalker": {
+            "name": "Hasadékjáró keret",
+            "desc": "Ibolyaszín repedés a portréd körül. Nem törött, ilyen a divat."
+          },
+          "title_riftseer": {
+            "name": "Hasadéklátó",
+            "desc": "Már az első kártyán tudod, mi vár a tizenötödiken. Majdnem."
+          },
+          "frame_riftseer": {
+            "name": "Hasadéklátó keret",
+            "desc": "Türkiz izzás, mint a repedés mélyén. Éjjel is látszik."
+          },
+          "title_riftlord": {
+            "name": "A Mélység ura",
+            "desc": "A Hasadék szörnyei a nevedet suttogják. Nem szeretettel."
+          },
+          "frame_riftlord": {
+            "name": "Mélységkeret",
+            "desc": "A Hasadék legmélyebb fénye a portréd körül."
+          },
+          "frame_riftcrown": {
+            "name": "Hasadékkorona keret",
+            "desc": "A heti ranglista első tíz helyezettjéé. Aranyban izzik."
+          },
+          "title_riftchampion": {
+            "name": "A Hasadék bajnoka",
+            "desc": "Egy héten át a sávod legjobbjai között voltál."
+          },
+          "title_riftrunner": {
+            "name": "Hasadékfutó",
+            "desc": "Ott voltál a heti ranglista első száz helyén."
+          },
+          "title_stormsworn": {
+            "name": "Viharfogadalmas",
+            "desc": "Tíz Viharrang a 60. szint után. A vihar már ismer."
+          },
+          "frame_stormrank": {
+            "name": "Viharrang-keret",
+            "desc": "Huszonöt rang fénye a portréd körül."
+          },
+          "title_stormeternal": {
+            "name": "Örök vihar",
+            "desc": "Ötven rang. A vihar nálad tart szünetet."
+          },
+          "frame_stormeternal": {
+            "name": "Örök vihar keret",
+            "desc": "Száz rang. Hófehér villám a portréd körül."
+          },
+          "frame_homecomer": {
+            "name": "Hazatérő",
+            "desc": "Meleg tűzhely-izzás a portréd körül. Annak, aki hosszú út után hazatért."
+          },
+          "frame_kofalu": {
+            "name": "Kőfalu kerete",
+            "desc": "Szürke kő, arany fuga. A Hazatérők hete közös céljának legfelső lépcsőjéért."
+          },
+          "title_kofalu": {
+            "name": "Kőfalu vendége",
+            "desc": "Ott voltál, amikor a világ együtt törte a köveket a Hazatérők hetén."
+          },
+          "title_wildkeeper": {
+            "name": "A falu határának őre",
+            "desc": "A falu határának minden lényét legalább tízszer legyőzted. A vadkutyák már köszönnek."
+          },
+          "title_roadwarden": {
+            "name": "Az utak őre",
+            "desc": "Az útonállók földjének minden lényét legalább tízszer legyőzted. Aranyfog kerülőutat keres."
+          },
+          "title_totembreaker": {
+            "name": "Totemtörő",
+            "desc": "Az agyarasok szurdokának minden lényét legalább tízszer legyőzted."
+          },
+          "title_sandstrider": {
+            "name": "Homokjáró",
+            "desc": "A romok sivatagának minden lényét legalább tízszer legyőzted. A homok már nem megy a csizmádba."
+          },
+          "title_frostwalker": {
+            "name": "Fagyjáró",
+            "desc": "A dermedt hágó minden lényét legalább tízszer legyőzted."
+          },
+          "title_emberwalker": {
+            "name": "Parázsjáró",
+            "desc": "A Parázsvidék minden lényét legalább tízszer legyőzted."
+          },
+          "title_monkeytamer": {
+            "name": "Majomszelídítő",
+            "desc": "A Majomcsapda minden lakóját legalább tízszer legyőzted. A Banánkirály már a nevedet is tudja."
+          },
+          "title_silkcutter": {
+            "name": "Selyemvágó",
+            "desc": "A Pókfészek minden lakóját legalább tízszer legyőzted."
+          },
+          "title_drakeslayer": {
+            "name": "Sárkányölő",
+            "desc": "A Sárkányfészek minden lakóját legalább tízszer legyőzted."
+          },
+          "title_cupangler": {
+            "name": "Kupahorgász",
+            "desc": "A heti Horgászversenyen a sávod első három horgásza között voltál."
+          },
+          "title_gangdochosen": {
+            "name": "Gangdo választottja",
+            "desc": "Gangdo próbájának heti ranglistáján a sávod első három kovácsa között voltál."
+          },
+          "title_firststorm": {
+            "name": "Az Első Vihar legendája",
+            "desc": "Csak az kaphatja meg, aki ott volt a nyitáskor. A krónika a nevedet is feljegyzi."
+          },
+          "frame_firststorm": {
+            "name": "Első Vihar-keret",
+            "desc": "Viharkék fém, arany villámok, a tetején koronás viharsárkány. A nyitás emléke a portrédon."
+          },
+          "backdrop_firststorm": {
+            "name": "Az Első Vihar erődje",
+            "desc": "Hegyi erőd éjjel, a csúcsok fölött villámlik, a kapuból arany fény árad."
+          },
+          "decor_firststorm": {
+            "name": "Gömbbe zárt vihar",
+            "desc": "Apró vihar egy üveggömbben, aranysárkány talapzaton. Kényelmet nem ad, csak tekintélyt."
+          },
+          "title_stormfounder": {
+            "name": "Viharalapító",
+            "desc": "Az alapítók egyike. Nélkületek nem lett volna falu."
+          },
+          "frame_stormfounder": {
+            "name": "Alapító keret",
+            "desc": "Bronzarany gyűrű viharfelhőkkel, alul üres zászló: a te neved helye."
+          },
+          "title_stormcaptain": {
+            "name": "Viharalapító kapitány",
+            "desc": "A Viharalapítók kapitánya. A falu tudja, ki állt ki elsőként."
+          },
+          "frame_stormkeeper": {
+            "name": "Az Első Vihar őrzője",
+            "desc": "Viharkövekkel kirakott arany gyűrű. Csak annak jár, aki mindhárom Viharalapító csomagot összegyűjtötte."
+          },
+          "frame_imperialcard": {
+            "name": "Császári keret",
+            "desc": "Karminvörös lakk, arany és jáde, a tetején császári pecsét. Amíg a Császári kártyád aktív."
+          },
+          "name_imperial": {
+            "name": "Császári névfény",
+            "desc": "Karmin és arany fény fut végig a neveden. Amíg a Császári kártyád aktív."
+          },
+          "frame_stormplus": {
+            "name": "Szélút keret",
+            "desc": "Ezüst és türkiz szalagok, a tetején iránytű-csillag. A Viharút+ szezonkerete."
+          },
+          "title_pioneer": {
+            "name": "Úttörő",
+            "desc": "Akkor álltál a legkisebb királyság zászlaja alá, amikor a legnagyobb szükség volt rád."
+          },
+          "title_runemaster": {
+            "name": "Rúnamester",
+            "desc": "Annyi Rúnasort játszott Dongsu teaházában, hogy a lapok már köszönnek neki."
+          },
+          "frame_wisplantern": {
+            "name": "Lidércfüzér",
+            "desc": "Hideg lidércfényű lámpások a portréd körül. A Holt Kövek Éjszakájának hét napján minden lámpást megtaláltál."
+          },
+          "title_masterangler": {
+            "name": "Mesterhorgász",
+            "desc": "Tíz különböző halat fárasztott ki úgy, hogy a zsinór végig a zöldben maradt. Nakshi szerint a hal is tiszteli."
+          },
+          "name_lostring": {
+            "name": "Gyöngyfény",
+            "desc": "Egy hal hasából előkerült gyűrű fénye a neveden. Hogy ki veszítette el, azt Nakshi sem tudja."
+          },
+          "title_bottlereader": {
+            "name": "Palackposta-olvasó",
+            "desc": "Öt darabból raktad össze a levelet. Hogy mi áll benne, az maradjon kettőnk titka."
+          },
+          "title_beastbreaker": {
+            "name": "Fenevadtörő",
+            "desc": "Ötvenszer verted el ugyanazt a vidéki bosst. Most már ő kerül téged."
+          },
+          "frame_beastbreaker": {
+            "name": "Fenevadtörő keret",
+            "desc": "Rozsdavörös karmolás a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_greathunter": {
+            "name": "Nagyvadász",
+            "desc": "Ezrével hullanak előtted a szörnyek. A többi vadász tőled kér tanácsot."
+          },
+          "frame_greathunter": {
+            "name": "Nagyvadász keret",
+            "desc": "Mohazöld agancsdísz a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_stonesplitter": {
+            "name": "Kőhasító",
+            "desc": "A kövek már a lépteid hangjától megrepednek."
+          },
+          "frame_stonesplitter": {
+            "name": "Kőhasító keret",
+            "desc": "Gránitszürke repedések a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_deepdelver": {
+            "name": "Mélyjáró",
+            "desc": "Ismered a kazamaták minden zugát, a sötéteket is."
+          },
+          "frame_deepdelver": {
+            "name": "Mélyjáró keret",
+            "desc": "Lila fáklyafény a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_deepwater": {
+            "name": "Mélyvízi horgász",
+            "desc": "A ritka halak már név szerint ismernek."
+          },
+          "frame_deepwater": {
+            "name": "Mélyvízi keret",
+            "desc": "Tengerkék hullámok a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_sparkhand": {
+            "name": "Szikrakéz",
+            "desc": "Ahol kalapácsot fogsz, szikra pattan, és a fegyver erősebb lesz."
+          },
+          "frame_sparkhand": {
+            "name": "Szikrakéz keret",
+            "desc": "Izzó szikrák a portréd körül. Jár, ha a sorozat minden látható teljesítménye arany."
+          },
+          "title_ghostbreaker": {
+            "name": "Kísértetűző",
+            "desc": "A kísértetkövek tőled tartanak, nem fordítva."
+          },
+          "title_faithful": {
+            "name": "Hűséges",
+            "desc": "Hétszázharminc napon léptél be. A vihar már számít rád."
+          },
+          "title_cursebreaker": {
+            "name": "Átoktörő",
+            "desc": "Egy héten a világod első száz helyezettje között törte meg a Viharátkot."
+          },
+          "title_curselord": {
+            "name": "A Viharátok ura",
+            "desc": "Egy héten a világod első tíz helyezettje között törte meg a Viharátkot."
+          },
+          "title_nyomolvaso": {
+            "name": "Nyomolvasó",
+            "desc": "Tíz nyomot váltott Nyomolvasó-pontra. Mindig megtalálja, amit más elhagy."
+          },
+          "title_hempbanner": {
+            "name": "Kenderzászlós"
+          },
+          "title_bronzebanner": {
+            "name": "Bronzzászlós"
+          },
+          "title_silverbanner": {
+            "name": "Ezüstzászlós"
+          },
+          "title_goldbanner": {
+            "name": "Aranyzászlós"
+          },
+          "title_jadebanner": {
+            "name": "Jádezászlós"
+          },
+          "title_stormbanner": {
+            "name": "Viharzászlós"
+          },
+          "title_firstweek": {
+            "name": "Útitárs",
+            "desc": "Csapatával az első héten mindannyian elérték a 15. szintet."
+          },
+          "title_legendnovember": {
+            "name": "A Ködhold legendája",
+            "desc": "A Havi legendaládából, 2026. november. Csak abban a hónapban szerezhető meg."
+          },
+          "frame_legendnovember": {
+            "name": "Ködhold-keret",
+            "desc": "A Havi legendaládából, 2026. november. Csak abban a hónapban szerezhető meg."
+          },
+          "backdrop_legendnovember": {
+            "name": "A Ködhold tava",
+            "desc": "A Havi legendaládából, 2026. november. Csak abban a hónapban szerezhető meg."
+          },
+          "title_legenddecember": {
+            "name": "A Fagyhold legendája",
+            "desc": "A Havi legendaládából, 2026. december. Csak abban a hónapban szerezhető meg."
+          },
+          "frame_legenddecember": {
+            "name": "Fagyhold-keret",
+            "desc": "A Havi legendaládából, 2026. december. Csak abban a hónapban szerezhető meg."
+          },
+          "backdrop_legenddecember": {
+            "name": "A Fagyhold hágója",
+            "desc": "A Havi legendaládából, 2026. december. Csak abban a hónapban szerezhető meg."
+          }
+        },
+        "receipt": {
+          "bought": "Megvetted: {{name}}.",
+          "worn": "Felvetted: {{name}}.",
+          "removed": "Levetted: {{name}}."
+        }
+      },
+      "rewards": {
+        "coins": "{{amount}} Viharérme",
+        "nyang": "{{amount}} nyang",
+        "energy": "{{amount}} energia",
+        "stack": "{{qty}} × {{name}}"
+      },
+      "referral": {
+        "button": "Hívd meg a barátod",
+        "buttonHint": "Közös jutalom: ha a barátod a te kódoddal kezd, mindketten Viharérmét kaptok.",
+        "title": "Hívd meg a barátod",
+        "lead": "Ha a barátod a te kódoddal kezd, és {{level}}. szintre lép, mindketten jutalmat kaptok.",
+        "codeTitle": "A kódod",
+        "copyCode": "Kód másolása",
+        "copyText": "Üzenet másolása",
+        "copied": "Kimásolva!",
+        "copyFailed": "Nem sikerült a másolás. Jelöld ki a szöveget, és másold ki kézzel.",
+        "shareTitle": "Üzenet a barátodnak",
+        "shareText": "Gyere Stonestormozni! Ha elkészítetted a hősöd, {{days}} napon belül add meg a kódomat a Viharérme oldalon (a bal oldali menüben), a „Hívd meg a barátod” gombnál: {{code}}. {{level}}. szinten {{coins}} Viharérme jár érte.",
+        "invitedTitle": "Meghívottjaid",
+        "invitedNone": "Még senki nem használta a kódodat.",
+        "invitedLevel": "{{level}}. szint",
+        "status": {
+          "pending": "{{level}}. szint felé tart",
+          "ready": "Jutalom átvehető",
+          "claimed": "Jutalom átvéve",
+          "capped": "Havi keret felett, jutalom nélkül",
+          "void": "Nem jár érte jutalom"
+        },
+        "claim": "Átveszem ({{coins}} VÉ)",
+        "claimTip": "A meghívottjaid után járó Viharérme. Az első alkalommal a Toborzó címet is megkapod.",
+        "claimed": "+{{coins}} Viharérme megérkezett.",
+        "claimedTitle": "+{{coins}} Viharérme megérkezett, és a tiéd a Toborzó cím!",
+        "cap": "Az utolsó 30 napban {{count}}/{{max}} meghívásért kaptál jutalmat.",
+        "redeemTitle": "Van meghívókódod?",
+        "redeemLead": "Beváltási határidő: {{date}}, és csak {{level}}. szint előtt.",
+        "redeemLabel": "Meghívókód",
+        "redeemPlaceholder": "Például ABCD2345",
+        "redeem": "Beváltom",
+        "redeemed": "Kész! {{name}} meghívottja vagy.",
+        "redeemedPending": "{{name}} hívott meg. {{level}}. szinten {{coins}} VÉ és {{nyang}} nyang vár rád.",
+        "redeemedDone": "{{name}} hívott meg. A meghívó jutalmát már megkaptad.",
+        "guestTitle": "Előbb mentsd el a hősöd",
+        "guestText": "Vendégként nincs meghívókódod, és kódot sem válthatsz be. Mentsd el a hősöd e-maillel, és már küldheted is a kódod.",
+        "guestSave": "Hős mentése",
+        "rulesTitle": "A szabályok",
+        "rules": {
+          "window": "A barátod a hőse elkészítése után {{days}} napon belül, {{level}}. szint előtt adhatja meg a kódodat.",
+          "reward": "Amikor {{level}}. szintre lép, ő {{inviteeCoins}} VÉ-t és {{nyang}} nyangot kap, te pedig {{inviterCoins}} VÉ-t veheted át itt.",
+          "title": "Az első jutalmazott meghívás után a Toborzó címet is megkapod.",
+          "cap": "30 naponként legfeljebb {{max}} meghívásért jár jutalom.",
+          "fair": "Olyan fiók nem válthatja be a kódodat, amely ugyanarról az eszközről vagy hálózatról játszik, mint te, így a jutalom tényleg az új barátokért jár.",
+          "email": "A jutalomhoz a barátodnak meg kell erősítenie az e-mail-címét."
+        },
+        "redeemedVoid": "{{name}} hívott meg, de ez a meghívás nem jár jutalommal.",
+        "needsEmail": "A jutalmad akkor érkezik, ha megerősíted az e-mail-címed.",
+        "linkTitle": "A meghívó linked",
+        "copyLink": "Link másolása",
+        "shareLink": "Megosztás",
+        "shareLinkText": "Gyere Stonestormozni velem! Ha a linkemmel kezdesz, a {{level}}. szinten {{coins}} Viharérme és {{nyang}} nyang jár neked."
+      },
+      "cheaper": {
+        "moon": "Másik út: a Sárkányhold {{price}}, azonnal {{coins}} VÉ, és {{days}} napig minden nap még {{daily}}.",
+        "offer": "Olcsóbb út: {{name}} ({{price}}), benne {{coins}} VÉ is.",
+        "link": "Megnézem",
+        "linkLabel": "Megnézem: {{name}}"
+      },
+      "errors": {
+        "moon_card_limit": "Most nem hosszabbíthatsz tovább: ennyi napot nem lehet előre megvenni.",
+        "order_pending": "Egy korábbi fizetésed még folyamatban van. Várj egy kicsit, utána próbáld újra.",
+        "moon_inactive": "Most nincs aktív Sárkányholdad.",
+        "boost_inactive": "A Stormbooster cím csak akkor viselhető, ha boostolod a Discord-szerverünket.",
+        "already_claimed": "A mai jutalmat már átvetted.",
+        "already_premium": "A prémium sáv már a tiéd ebben a szezonban.",
+        "nothing_to_claim": "Most nincs átvehető jutalom.",
+        "season_complete": "Végigértél a Viharúton, nincs több átugorható szakasz.",
+        "season_skip_too_many": "Ennyi szakasz már nincs hátra. Válassz kevesebbet.",
+        "already_owned": "Ez már a tiéd.",
+        "not_for_sale": "Ezt nem lehet megvenni, máshogy szerezheted meg.",
+        "cosmetic_not_owned": "Ez még nem a tiéd.",
+        "unknown_cosmetic": "Ilyen cím vagy keret nincs.",
+        "account_required": "Ehhez előbb mentsd el a hősöd e-maillel.",
+        "referral_guest": "Vendégként nem válthatsz be kódot. Előbb mentsd el a hősöd.",
+        "referral_unknown": "Ilyen kódot nem találtunk. Nézd meg, jól írtad-e.",
+        "referral_self": "A saját kódodat nem válthatod be.",
+        "referral_already": "Már beváltottál egy meghívókódot.",
+        "referral_too_late": "Ezt már nem válthatod be: lejárt a beváltás ideje, vagy már túl magas a szinted.",
+        "referral_cycle": "Ő a te meghívottad, ezért az ő kódját nem válthatod be.",
+        "referral_same_network": "Ezt a kódot innen nem lehet beváltani, mert ugyanarról a hálózatról vagy eszközről jöttök. Ha tényleg két külön játékos vagytok, próbáljátok külön eszközről, otthoni neten.",
+        "referral_other_world": "Ez a kód egy másik világ hőséé. A meghívókód csak a meghívó világában váltható be.",
+        "referral_account_used": "A fiókod egy korábbi hősöddel már beváltott meghívókódot.",
+        "referral_code_failed": "Most nem sikerült kódot készíteni. Próbáld újra kicsit később.",
+        "conflict": "Közben megváltozott valami. Frissítettük, próbáld újra.",
+        "referral_device": "Most nem sikerült a beváltás. Töltsd újra az oldalt, és próbáld újra."
+      },
+      "debt": {
+        "notice": "Viharérme-tartozás: {{debt}} VÉ. Az új Viharérme előbb ezt egyenlíti ki."
+      },
+      "spendToast": {
+        "amount_one": "−{{amount}} Viharérme",
+        "amount_other": "−{{amount}} Viharérme",
+        "reasons": {
+          "skip_travel": "Ugrás a következő állomásra",
+          "skip_travel_end": "Ugrás a kőig",
+          "expedition_reroll": "Új portya-ajánlatok",
+          "energy_refill": "Energia-feltöltés",
+          "elixir": "Alkimista-elixír",
+          "arena_reroll": "Új aréna-ellenfelek",
+          "arena_skip": "Aréna-várakozás átugorva",
+          "look_change": "Új megjelenés",
+          "name_change": "Névváltás",
+          "gender_change": "Nemváltás",
+          "stat_respec": "Statok újraosztása",
+          "dungeon_key": "Kazamata-kulcs",
+          "boss_attempt": "Extra boss-próba",
+          "fish_catches": "Extra fogások",
+          "fish_batch": "Nakshi horgászköre",
+          "bonus_lock": "Bónuszsor rögzítése",
+          "guild_speedup": "Céhépület gyorsítása",
+          "time_warp": "Időugrás",
+          "merchant_reroll": "Új árukínálat",
+          "black_market": "Lámpás Vándor tétele",
+          "mining_rush": "Azonnali tárnahozam",
+          "cosmetic": "Kozmetikum",
+          "cosmetic_scroll": "Kozmetikum-tekercs",
+          "season_skip": "Viharút-szakaszugrás",
+          "league_drum": "Tartalék hadidob",
+          "rain_sack": "Kőeső-zsák",
+          "offer": "Különleges ajánlat",
+          "pet_skip_hatch": "Azonnali kikelés",
+          "pet_feed_unlock": "Extra kísérő-etetés",
+          "pet_skin": "Kísérő-kinézet",
+          "pet_name": "Kísérő neve",
+          "scroll": "Viharérme-tétel",
+          "vip": "Császári menlevél",
+          "pouch_buy": "Nyangos zsák",
+          "research_skip": "Kutatási várakozás átugorva",
+          "research_elixir": "Kutató-elixír",
+          "rune_deck": "Extra Rúnasor-pakli",
+          "shop_reroll": "Új napi ajánlatok",
+          "home_finish": "Otthon-fok azonnal kész",
+          "home_extra": "Extra otthon-fok",
+          "furniture": "Bútor",
+          "path_reset": "Út visszaállítása",
+          "book_cooldown": "Könyv-várakozás átugorva",
+          "soul_shop": "Viharszív-tétel",
+          "mount": "Hátasbérlés",
+          "tower_reset": "Torony újraindítása",
+          "spent": "Elköltve",
+          "kingdom_change": "Királyságváltás",
+          "treasure_bundle": "Kincses batyu",
+          "energy_chest": "Energialáda"
+        }
+      },
+      "spendConfirm": {
+        "ask": "Megerősíted?",
+        "label": "Megerősíted? {{n}}",
+        "aria_one": "Koppints még egyszer, és elköltesz {{n}} Viharérmét",
+        "aria_other": "Koppints még egyszer, és elköltesz {{n}} Viharérmét"
+      }
+    },
+    "monet2": {
+      "refill": {
+        "after": "Utána {{coins}} VÉ.",
+        "tipText": "Egy feltöltés +{{amount}} energia. Az ár lépcsős, és minden nap elölről indul.",
+        "ladderTitle": "A mai feltöltések",
+        "step": "{{n}}. feltöltés: {{coins}} VÉ",
+        "extra": "A {{first}}-{{count}}. feltöltés egyre drágább ({{from}}-{{to}} VÉ).",
+        "reset_one": "Napváltáskor ({{at}}) újra {{count}} feltöltés, {{coins}} VÉ-től.",
+        "reset_other": "Napváltáskor ({{at}}) újra {{count}} feltöltés, {{coins}} VÉ-től.",
+        "ladderLine": "Napi létra: {{ladder}} VÉ",
+        "next": "{{used}}/{{total}} ma. A következő: {{coins}} VÉ."
+      },
+      "shop": {
+        "vat": "Az árak az áfát tartalmazzák."
+      },
+      "energyOut": {
+        "title": "Elfogyott az energia",
+        "refill": "Feltöltés: +{{amount}} energia, {{coins}} VÉ",
+        "late": "Holnap újra {{coins}} VÉ-től indul.",
+        "missing": "Még {{coins}} VÉ kell hozzá.",
+        "starterText": "{{coins}} VÉ és kezdő segítség, egyszer vehető",
+        "packText": "{{coins}} VÉ",
+        "moonText": "{{days}} napig naponta +{{energy}} energia és {{coins}} VÉ",
+        "open": "Megnézem",
+        "notNow": "Most nem",
+        "mute": "Ne mutasd többé",
+        "limit_one": "Mára elfogyott a feltöltés. Napváltáskor ({{at}}) újra {{count}}.",
+        "limit_other": "Mára elfogyott a feltöltés. Napváltáskor ({{at}}) újra {{count}}.",
+        "free": "Energia nélkül is van mit csinálni:",
+        "fishing": "Horgászat",
+        "arena": "Aréna",
+        "tower": "Torony",
+        "backHunt": "Vissza a portyához",
+        "today": "{{used}}/{{total}} ma."
+      },
+      "decor": {
+        "tab": "Díszek",
+        "tabHint": "A Pompás díszek darabonként és szettben. Statot nem adnak, minden darab előre látszik.",
+        "setsTitle": "Díszszettek",
+        "setsLead": "Egy téma darabjai egyben, {{pct}}% kedvezménnyel. A már meglévő darabokért nem fizetsz.",
+        "owned": "{{have}}/{{total}} megvan",
+        "complete": "A szett megvan, vagy csak egy darab hiányzik: azt a lenti listában veheted meg.",
+        "listPrice": "Darabonként {{coins}} VÉ",
+        "price": "{{coins}} VÉ",
+        "buy_one": "Szett ({{count}} darab)",
+        "buy_other": "Szett ({{count}} darab)",
+        "confirm": "{{name}} megvétele",
+        "confirmText_one": "A hiányzó {{count}} darab {{coins}} Viharérméért. Statot nem ad.",
+        "confirmText_other": "A hiányzó {{count}} darab {{coins}} Viharérméért. Statot nem ad.",
+        "bought": "{{name}}: a darabok a tieid, a Karakter lapon viselheted őket.",
+        "groupsLabel": "Díszfajták",
+        "groups": {
+          "sets": "Szettek",
+          "frame": "Keretek",
+          "title": "Címek",
+          "name": "Névfények",
+          "backdrop": "Hátterek",
+          "decor": "Vitrin-díszek",
+          "saddle": "Nyergek"
+        }
+      },
+      "sets": {
+        "set_cloudgold": "Aranyfelhő",
+        "set_moonyard": "Holdudvar",
+        "set_tiger": "Fenyő és tigris",
+        "set_lantern": "Lámpásünnep",
+        "set_phoenix": "Főnixtoll",
+        "set_peak": "Viharcsúcs",
+        "set_stormcrown": "Viharkorona"
+      },
+      "contents": {
+        "moon_one": "{{count}} nap Sárkányhold",
+        "moon_other": "{{count}} nap Sárkányhold"
+      },
+      "packs": {
+        "xxxl": {
+          "name": "Császári kincstár",
+          "flavor": "A legnagyobb csomag, a legjobb árfolyamon."
+        }
+      },
+      "offers": {
+        "founder_legend": {
+          "name": "Az Első Vihar legendája",
+          "desc": "Az Első Vihar legendája: cím, keret, háttér, vitrindísz, rengeteg Viharérme, hátas, menlevél, tekercsek, kőpor, szerencse-érc és Sárkányszem. Csak a nyitási időszakban, egyszer.",
+          "line": "Az első vihar egyszer jön. Aki itt volt, azt a krónika is megjegyzi."
+        },
+        "founder_pack": {
+          "name": "Viharalapító kapitány",
+          "desc": "Viharalapító cím és keret, sok Viharérme, menlevél, Csíkos tojás (választható), tekercsek és kőpor. Csak a nyitási időszakban, egyszer.",
+          "line": "Alapítók nélkül nincs falu. Köszönjük, hogy itt vagy az elején."
+        },
+        "founder_entry": {
+          "name": "Viharalapító",
+          "desc": "A Viharalapító cím, egy jó adag Viharérme, menlevél, tekercsek és kőpor. Csak a nyitási időszakban, egyszer.",
+          "line": "Itt voltál az elején. Ezt a krónika is megjegyzi."
+        },
+        "launch_storm": {
+          "name": "Nyitóheti viharláda",
+          "desc": "Viharérme, tekercsek, kőpor, szerencse-érc, bossjegyek és menlevél egy ládában. Csak a nyitóhéten, egyszer.",
+          "line": "Az első hét a legviharosabb. Legyen nálad minden, ami kell."
+        },
+        "comeback_s": {
+          "name": "Üdv újra!",
+          "desc": "Visszatérőknek: a Marék csomag dupla alap-Viharérmével.",
+          "line": "Rég láttunk, {{name}}! Egy kis útravaló a kezdéshez."
+        },
+        "comeback_l": {
+          "name": "Üdv újra!",
+          "desc": "Visszatérőknek: a Ládika csomag dupla alap-Viharérmével.",
+          "line": "Rég láttunk, {{name}}! A kincstár a régi barátoknak is nyitva."
+        },
+        "comeback_xl": {
+          "name": "Üdv újra!",
+          "desc": "Visszatérőknek: a Kincsesláda csomag dupla alap-Viharérmével.",
+          "line": "Rég láttunk, {{name}}! A kincstár a régi barátoknak is nyitva."
+        },
+        "comeback_royal": {
+          "name": "Üdv újra!",
+          "desc": "Visszatérőknek: a Királyi láda csomag dupla alap-Viharérmével.",
+          "line": "Rég láttunk, {{name}}! A kincstár a régi barátoknak is nyitva."
+        },
+        "comeback_xxl": {
+          "name": "Üdv újra!",
+          "desc": "Visszatérőknek: a Sárkánykincs csomag dupla alap-Viharérmével.",
+          "line": "Rég láttunk, {{name}}! A kincstár a régi barátoknak is nyitva."
+        },
+        "stormhunter_chest": {
+          "name": "Viharvadász-láda",
+          "desc": "500 Viharérme, 15 Boss-próbajegy és 5 kazamatakulcs, amit te osztasz el, 10 Hamuóvó-tekercs és 5 Viharkő-por. Hetente egyszer vehető.",
+          "line": "Vadászni indulsz? Egy hétre való muníció, és te döntöd el, hová viszed."
+        },
+        "legend_monthly": {
+          "name": "Havi legendaláda",
+          "desc": "30 napos Császári menlevél, 30 napra a Kilencfarkú róka, 2 500 Viharérme, Boss-próbajegyek, Hamuóvó-tekercsek, és a hónap saját címe, kerete és háttere. Havonta egyszer vehető.",
+          "line": "Minden hónapnak megvan a maga legendája. Ez a hónap a tiéd lehet."
+        }
+      },
+      "offerSettings": {
+        "title": "Ajánlatok",
+        "personalized": "Személyre szabott ajánlatok: a korábbi vásárlásaid alapján válogatjuk, mit mutatunk. Az ár mindenkinek ugyanaz. Kikapcsolva mindenki ugyanazt az alapnézetet kapja.",
+        "muted": {
+          "energy_out": "Az energiafal-kártya ajánlatai el vannak rejtve.",
+          "popup": "A felugró ajánlatok el vannak rejtve."
+        },
+        "unmute": "Visszakapcsolom"
+      },
+      "imperial": {
+        "kicker": "28 napos kártya",
+        "name": "Császári kártya",
+        "price": "{{price}} / {{days}} nap",
+        "now": "Azonnal {{coins}} VÉ",
+        "daily": "Naponta {{coins}} VÉ átvétellel, {{days}} napig (összesen {{total}} VÉ)",
+        "vip": "{{days}} nap Császári menlevél (a napi energia és a plusz feltöltés is)",
+        "look": "Amíg aktív: {{names}}",
+        "note": "Nem újul meg magától. Legfeljebb {{max}} napra előre veheted meg. Közvetlen statot nem ad; a menlevél gyorsítja a fejlődést (XP, nyang, zsákmány, energia).",
+        "active_one": "Még {{count}} nap, az utolsó átvételi nap: {{date}}",
+        "active_other": "Még {{count}} nap, az utolsó átvételi nap: {{date}}",
+        "claim": "Mai {{coins}} VÉ átvétele",
+        "buy": "Megveszem ({{price}})",
+        "testBuy": "Tesztvásárlás",
+        "extend": "Meghosszabbítom ({{price}})",
+        "limit": "Most nem hosszabbíthatod: legfeljebb {{max}} napra előre veheted meg.",
+        "pending": "A fizetés folyamatban van. A kártya a sikeres fizetés után aktív.",
+        "paid": "A Császári kártya aktív, {{coins}} VÉ jóváírva.",
+        "claimed": "{{coins}} VÉ jóváírva."
+      },
+      "seasonPlus": {
+        "name": "Viharút+",
+        "premium": "A Viharút prémium sávja",
+        "tiers_one": "Azonnal +{{count}} szakasz (ugyanazok a jutalmak, csak előbb)",
+        "tiers_other": "Azonnal +{{count}} szakasz (ugyanazok a jutalmak, csak előbb)",
+        "frame": "Saját szezonkeret: {{name}}",
+        "note": "Csak akkor vehető, ha még nincs prémium sávod ebben a szezonban.",
+        "buy": "Megveszem ({{price}})"
+      }
+    },
+    "alchemist": {
+      "elixirs": {
+        "xp_elixir": {
+          "name": "Tapasztalat-elixír",
+          "flavor": "Minden pofonból többet tanulsz, és ez a lényeg, nem a pofon."
+        },
+        "hunter_elixir": {
+          "name": "Vadászszerencse-elixír",
+          "flavor": "A szörnyek nem lesznek gazdagabbak, csak bőkezűbbek."
+        },
+        "gold_elixir": {
+          "name": "Aranyláz-elixír",
+          "flavor": "Mellékhatás: minden csörrenésre megfordulsz az utcán."
+        },
+        "power_brew": {
+          "name": "Bivalyerő-főzet",
+          "flavor": "Egy korty, és a fegyvered könnyebb lesz, az ajtók pedig gyengébbek."
+        },
+        "stoneskin_brew": {
+          "name": "Vastagbőr-főzet",
+          "flavor": "Lepereg rólad a karom, a nyíl, és még a céhvezér beszólása is."
+        }
+      },
+      "shelf": "Főzetek a polcon",
+      "buy": "Vásárlás",
+      "extend": "Hosszabbítás",
+      "buyNyang": "Nyangért",
+      "buyCoins": "VÉ-ért",
+      "extendNyang": "Hosszabbítás nyangért",
+      "extendCoins": "Hosszabbítás VÉ-ért",
+      "buyLabel": "{{name}}: {{action}}, {{price}}",
+      "priceNyang": "{{amount}} nyang",
+      "priceCoins": "{{amount}} Viharérme",
+      "active": "Hat még {{time}}",
+      "extendNote": "Újabb adag: a hatás {{hours}} órával tovább tart.",
+      "levelNote": "A nyangos ár a szinteddel együtt nő. Nyangért hetente egyszer veheted meg.",
+      "nyangUsed": "Nyangért ezen a héten már megvetted. Hétfőtől újra lehet.",
+      "bought": "{{name}} hat, {{time}} múlva jár le.",
+      "lines": {
+        "bought": [
+          "Egészségedre! Ha bizsereg, az jó jel. Ha bezöldülsz, szólj.",
+          "Egy húzásra, ne kortyolgasd! Na ugye, hogy nem is volt rossz.",
+          "Kitűnő választás. Én is ezt innám, ha nem lenne tilos a saját főzetemből inni.",
+          "Ha füstöl a füled, az a hatás. Ha a cipőd is, az már a mellékhatás.",
+          "Rázd fel, mielőtt megiszod. Vagy ne. Én sem szoktam."
+        ],
+        "extended": "Még egy adag? Ahogy gondolod. A hatás tovább tart, mellékhatás nincs. Állítólag."
+      },
+      "hud": {
+        "title": "Most ható főzetek",
+        "item": "{{name}}, még {{time}}",
+        "hint": "Az alkimistánál meghosszabbíthatod.",
+        "potions": "Italok ({{n}})"
+      },
+      "errors": {
+        "unknown_elixir": "Ilyen főzetet az alkimista nem árul.",
+        "elixir_nyang_weekly": "Ezt a főzetet nyangért ezen a héten már megvetted. Hétfőtől újra lehet."
+      },
+      "capNyang": "Nyangért: a szokásos szorzóplafonba számít.",
+      "capCoins": "Viharérméért: a plafon fölött is hat, legfeljebb +50%-ig.",
+      "hcGain": "+{{value}} Harcerő"
+    }
+  }
+}

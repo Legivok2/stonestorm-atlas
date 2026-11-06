@@ -2,15 +2,15 @@
 
 A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alkalmazásban. Vanilla JavaScript, helyi képek és adatcsomag; nincs játékfiókkapcsolat, kötelező csomagtelepítés vagy keretrendszer.
 
-> **Nyilvános kalauzkiadás, 2026. november 7.:** a repository a saját alkalmazáskódot és a korábban engedélyezett Creator Kit-elemeket tartalmazza. A GitHub Pages ezekből önálló, böngészőben megnyitható kezdőkalauzt épít: keresővel, napi listával, kaszt-összehasonlítóval és képgalériával. A teljes Atlas játékadat-csomagja, lokalizációja, katalógusképei és származtatott előnézetei az újraközlési engedély rendezéséig nincsenek feltöltve. A teljes helyi projekt változatlanul működik.
+> **Teljes Atlas-kiadás, 2026. november 7.:** a projektgazda kifejezetten kérte a teljes helyi változat publikálását, és feloldotta a korábbi engedélyellenőrzési feltételt. A GitHub Pages az eredeti `index.html`, CSS, JavaScript, játékadatok és képek alapján készül; nincs kalauzra egyszerűsített helyettesítő kiadás. A közzétételi utasítás az `.publication/permissions.json` fájlban szerepel, külön az igazolt licencektől.
 
 ## Megnyitás
 
-**Böngészős kalauz (GitHub Pages): [legivok2.github.io/stonestorm-atlas](https://legivok2.github.io/stonestorm-atlas/)**. A megosztott linkhez nincs szükség letöltésre, GitHub-fiókra vagy telepítésre. A nyilvános kiadás az alábbiakban felsorolt teljes helyi Atlasnál kevesebb funkciót tartalmaz, amíg a játékanyagok engedélye nincs rendezve.
+**Teljes weboldal (GitHub Pages): [legivok2.github.io/stonestorm-atlas](https://legivok2.github.io/stonestorm-atlas/)**. A megosztott linkhez nincs szükség letöltésre, GitHub-fiókra vagy telepítésre.
 
-GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stonestorm-atlas). A Pages-közzététel részletei: [DEPLOYMENT.md](docs/DEPLOYMENT.md). A teljes helyi csomag `/stonestorm-atlas/` alkönyvtáras működése ellenőrizve. A `stage:github:code` a saját forráskódot és engedélyezett Creator Kitet választja ki; a teljes `audit:publish`, `build:pages` és `stage:github` az ellenőrizetlen engedélyeknél leáll. A helyi teljes alkalmazás tovább működik.
+GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stonestorm-atlas). A Pages-közzététel és a későbbi frissítés részletei: [DEPLOYMENT.md](docs/DEPLOYMENT.md). A teljes csomag `/stonestorm-atlas/` alkönyvtáras működése ellenőrizve. A `stage:github` az auditált teljes forrás- és képcsomagot választja ki.
 
-A nyilvános kalauz egy friss klónból is elkészíthető, játékadatok és npm-csomagtelepítés nélkül: `npm run build:pages:guide`, majd `npm run test:pages:guide`. A workflow minden main-push után automatikusan újratelepíti ezt a kiadást; a teljes Atlas csak az összes adat és engedély rendelkezésre állásakor kerülhet ki.
+A teljes statikus kiadás: `npm run build:pages`, ellenőrzése: `npm run test:pages`. A workflow minden main-push után ezt telepíti. Hiányzó adat vagy közzétételi felhatalmazás esetén leáll, nem cseréli le az oldalt a korábbi kalauzkiadásra.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 
@@ -111,9 +111,9 @@ Megmaradt a 12 eredeti Creator Kit-grafika 32 WebP-változata. Az Atlas további
 
 Az új katalógus **2103** helyi WebP-t tartalmaz (2077 különböző tartalom): 882 azonosított, 314 részben azonosított, 907 ismeretlen kapcsolatú kép. Az 1587 kis előnézet a listákhoz készült, az eredetik változatlanok. A katalógus- és játékmentési képek nyilvános újraközlési engedélye nincs igazolva; a korábbi Creator Kit-engedély nem terjed ki rájuk automatikusan.
 
-A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A játékmentési grafikák nyilvános újraközlési engedélye még nincs igazolva. A projekt most helyi fejlesztési változat; nem történt publikálás.
+A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A további játékanyagok igazolt licencállapota nem változott; a teljes kiadás a projektgazda külön, 2026-11-07-i közzétételi utasítására készül. A licencállapot és a közzétételi felhatalmazás külön mezőben marad.
 
-A teljes munkamappa automatikus feltöltése helyett később csak a szükséges és engedélyezett futásidejű fájlokat csomagold: `index.html`, `css/`, `js/`, `assets/`, a használt régi WebP-k és a `stonestorm_image_tools/downloaded/` képei. **A mentett `Stonestorm.html`, játék-JS/CSS, letöltőscript, CSV, ZIP, `source-data/` és `.integration/` ne legyen a közzétett webhely része.** Az alkalmazáshivatkozások relatívak.
+A Pages-artifact csak a szükséges futásidejű fájlokat tartalmazza: `index.html`, `css/`, `js/`, `assets/`, a használt régi WebP-k és a `stonestorm_image_tools/downloaded/` képei. **A mentett `Stonestorm.html`, játék-JS/CSS, letöltőscript, CSV, ZIP, `source-data/` és `.integration/` nem része a közzétett webhelynek.** A feldolgozott forrásadatok és saját buildeszközök a forrás-repositoryban szerepelnek. Az alkalmazáshivatkozások relatívak.
 
 Részletes eredmények: [PROJECT_STATUS.md](PROJECT_STATUS.md). Források és hiányok: [DATA_SOURCES.md](DATA_SOURCES.md).
 

@@ -1,0 +1,1801 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "features": {
+    "smash": true,
+    "bossDrama": true,
+    "bossReact": false,
+    "rainFx": true,
+    "offerTargeting": true,
+    "energyOutCard": true,
+    "comebackTiers": true,
+    "cosmeticSets": true,
+    "founderPacks": true,
+    "imperialCard": true,
+    "whalePack": true,
+    "stormPassPlus": true,
+    "spendGuard": true,
+    "webSubscription": false,
+    "awakening": true,
+    "hardMode": true,
+    "towerEcho": true,
+    "worldBossChest": true,
+    "bossStars": true,
+    "play": true,
+    "bonuszolo": true,
+    "portals": true,
+    "guildLeague": true,
+    "firstTierX2": true,
+    "promoMax": true,
+    "coinMoney": false,
+    "webShopBonus": false,
+    "founderPopup": true,
+    "launchStormChest": false,
+    "storeRestore": false,
+    "starterUntilLevel": true,
+    "stormStair": true,
+    "passes": true,
+    "teahouse": true,
+    "rerollLadder": true,
+    "leagueDrumBuy": true,
+    "rainSack": false,
+    "forgePity": true,
+    "wheelOdds": true,
+    "hideTimedOffers": true,
+    "playExtraRuns": false,
+    "serverUnlockGates": false,
+    "freePathRepick": true,
+    "partyCode": false,
+    "saveMailDiscord": true,
+    "mutatorBoss": true,
+    "harceroBar": true,
+    "levelPrices": true,
+    "glossary": true,
+    "musicStream": false,
+    "eventPreview": true,
+    "todayClaimAll": true,
+    "pushAway": true,
+    "pushGuild": true,
+    "pushEvent": true,
+    "pushRecall": false,
+    "playRunGuard": true,
+    "paidCaps": true,
+    "braveBoss": true,
+    "crossKingdomGuilds": true,
+    "chatPresets": true,
+    "communityChat": true,
+    "petCombat": true,
+    "overflowCap": true,
+    "directMessages": true,
+    "signatureOutputs": true,
+    "stormAscension": true,
+    "friendGift": true,
+    "comebackTierBonus": false,
+    "inviteLink": true,
+    "friendRecall": true,
+    "contributionLine": true,
+    "progressionLabels": true,
+    "stonesHere": true,
+    "curveRamp": true,
+    "stoneLadder": true,
+    "entrySpots": true,
+    "petsV3": true,
+    "lootLadder": true,
+    "chaseVisible": true,
+    "fullSets": true,
+    "dungeonsV2": true,
+    "dungeonPaths": true,
+    "dungeonCurse": true,
+    "dungeonMinigames": true,
+    "dungeonRareGuest": true,
+    "dungeonPushDeeper": true,
+    "bonusV2": true,
+    "patron": false,
+    "premiumShop": false,
+    "nyangPouch": false,
+    "moonCard": false,
+    "towerResetPlus": true,
+    "petNames": true,
+    "treasureBundle": true,
+    "stormhunterChest": true,
+    "legendChest": true,
+    "energyChest": true,
+    "packPopup": true,
+    "rift": true,
+    "stormRank": false,
+    "mining": true,
+    "catchupWind": true,
+    "momentum": true,
+    "accrualCaps": true,
+    "exitCard": false,
+    "travelChest": true,
+    "comebackFree": true,
+    "webPush": false,
+    "winbackMail": false,
+    "homecoming": true,
+    "blackFriday": false,
+    "guildWeek": true,
+    "storyChapters": true,
+    "playerMetrics": true,
+    "weeklyBoards": true,
+    "fishingCup": true,
+    "forgePuzzle": true,
+    "bestiary": true,
+    "achievementsPlus": true,
+    "warTasks": true,
+    "guildRaidNights": true,
+    "kingdomPioneer": true,
+    "underdogBonus": true,
+    "perCapitaWar": true,
+    "kingdomSoftCap": true,
+    "kingdomSwitch": true,
+    "runasor": true,
+    "lanternHunt": true,
+    "fishingReel": true,
+    "fishingReveal": true,
+    "fishingGiant": true,
+    "fishGutting": true,
+    "creatorProgram": true,
+    "leads": true,
+    "armorSheen": true,
+    "waitingRoom": {
+      "enabled": true,
+      "activeWindowSeconds": 300,
+      "closeSeconds": 10,
+      "closeWindowSeconds": 5,
+      "closeInflightSheds": 30,
+      "closeStallSeconds": 4,
+      "warmupSeconds": 60,
+      "admitPerSecond": 60,
+      "admitBurst": 240,
+      "queueStaleSeconds": 15,
+      "pollSeconds": 5,
+      "frontPollSeconds": 1,
+      "holdSeconds": 600,
+      "passHours": 12,
+      "rampAfterSeconds": 30,
+      "rampEverySeconds": 10,
+      "rampMaxMult": 2
+    }
+  },
+  "limits": {
+    "maxLevel": 60,
+    "inventorySize": 40,
+    "energyMax": 100,
+    "stoneCost": 20,
+    "bossAttemptsPerDay": 3,
+    "farmCapSeconds": 28800,
+    "looks": 2,
+    "forge": {
+      "luckOreBonus": 0.1
+    },
+    "skip": {
+      "expedition": {
+        "stepMinutes": 5,
+        "coinsPerStep": 1
+      },
+      "arena": {
+        "stepMinutes": 10,
+        "coinsPerStep": 1
+      },
+      "tower": {
+        "stepMinutes": 60,
+        "coinsPerStep": 10
+      },
+      "research": {
+        "stepMinutes": 120,
+        "coinsPerStep": 2
+      },
+      "book": {
+        "stepMinutes": 720,
+        "coinsPerStep": 2
+      },
+      "hatch": {
+        "stepMinutes": 180,
+        "coinsPerStep": 4,
+        "minCoins": 50
+      },
+      "guild_building": {
+        "stepMinutes": 120,
+        "coinsPerStep": 1
+      }
+    },
+    "guildSpeedup": [
+      {
+        "upTo": 5,
+        "coinsPerHour": 20
+      },
+      {
+        "upTo": 10,
+        "coinsPerHour": 50
+      },
+      {
+        "upTo": 15,
+        "coinsPerHour": 100
+      }
+    ],
+    "warp": {
+      "hours": [
+        1,
+        2,
+        4
+      ],
+      "coinsPerHour": 5,
+      "hoursPerDay": 8
+    },
+    "bagMaxTotal": 6
+  },
+  "version": "ac0984e054de",
+  "tag": "IxVtD-AtDuNYWUmwXNXQ0qyqEgj",
+  "miscellaneous": {
+    "lean": {
+      "soul": {
+        "unlockLevel": 55,
+        "arenaFactor": 0.5,
+        "helpers": {
+          "blessPoints": 10,
+          "blessMax": 2,
+          "luckPoints": 5,
+          "luckMax": 1,
+          "cap": 95,
+          "starCap": 60
+        },
+        "rules": {
+          "dismantleDust": 20,
+          "eyeShardsPerEye": 10,
+          "pearl": {
+            "common": {
+              "pearls": 1,
+              "fish": 12,
+              "shards": 0
+            },
+            "rare": null,
+            "epic": {
+              "pearls": 1,
+              "fish": 1,
+              "shards": 0
+            },
+            "legendary": {
+              "pearls": 3,
+              "fish": 1,
+              "shards": 3
+            }
+          },
+          "pearlWaters": [
+            "m4",
+            "m5",
+            "m6"
+          ]
+        },
+        "batchMax": 10
+      },
+      "patron": {
+        "0": {
+          "nextMin": 2000,
+          "perks": {
+            "refillsMax": 16,
+            "warpHoursMax": 8,
+            "keysPerDayMax": 3,
+            "chestChoices": 3,
+            "porQuota": 1,
+            "eyeQuota": 1,
+            "houseMult": 1,
+            "pouchCap": 100,
+            "freeRunRerolls": 0,
+            "freeMerchantRerolls": 0,
+            "badge": false,
+            "quickRun": false,
+            "autoCollect": false,
+            "runQueue": false,
+            "batchRefine": false,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "1": {
+          "nextMin": 6000,
+          "perks": {
+            "refillsMax": 16,
+            "warpHoursMax": 8,
+            "keysPerDayMax": 3,
+            "chestChoices": 3,
+            "porQuota": 2,
+            "eyeQuota": 1,
+            "houseMult": 1.25,
+            "pouchCap": 150,
+            "freeRunRerolls": 0,
+            "freeMerchantRerolls": 0,
+            "badge": true,
+            "quickRun": false,
+            "autoCollect": false,
+            "runQueue": false,
+            "batchRefine": false,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "2": {
+          "nextMin": 15000,
+          "perks": {
+            "refillsMax": 16,
+            "warpHoursMax": 8,
+            "keysPerDayMax": 3,
+            "chestChoices": 3,
+            "porQuota": 3,
+            "eyeQuota": 1,
+            "houseMult": 1.5,
+            "pouchCap": 200,
+            "freeRunRerolls": 0,
+            "freeMerchantRerolls": 0,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": false,
+            "runQueue": false,
+            "batchRefine": false,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "3": {
+          "nextMin": 30000,
+          "perks": {
+            "refillsMax": 17,
+            "warpHoursMax": 10,
+            "keysPerDayMax": 3,
+            "chestChoices": 4,
+            "porQuota": 4,
+            "eyeQuota": 2,
+            "houseMult": 1.75,
+            "pouchCap": 300,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 0,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": false,
+            "runQueue": false,
+            "batchRefine": false,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "4": {
+          "nextMin": 60000,
+          "perks": {
+            "refillsMax": 17,
+            "warpHoursMax": 10,
+            "keysPerDayMax": 4,
+            "chestChoices": 4,
+            "porQuota": 5,
+            "eyeQuota": 2,
+            "houseMult": 2,
+            "pouchCap": 400,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 0,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": false,
+            "batchRefine": false,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "5": {
+          "nextMin": 120000,
+          "perks": {
+            "refillsMax": 17,
+            "warpHoursMax": 10,
+            "keysPerDayMax": 4,
+            "chestChoices": 4,
+            "porQuota": 6,
+            "eyeQuota": 3,
+            "houseMult": 2.25,
+            "pouchCap": 600,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": false,
+            "batchRefine": true,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "6": {
+          "nextMin": 250000,
+          "perks": {
+            "refillsMax": 18,
+            "warpHoursMax": 12,
+            "keysPerDayMax": 5,
+            "chestChoices": 4,
+            "porQuota": 8,
+            "eyeQuota": 4,
+            "houseMult": 2.5,
+            "pouchCap": 800,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": true,
+            "batchRefine": true,
+            "blackMarketExtra": 0,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "7": {
+          "nextMin": 500000,
+          "perks": {
+            "refillsMax": 18,
+            "warpHoursMax": 12,
+            "keysPerDayMax": 5,
+            "chestChoices": 4,
+            "porQuota": 10,
+            "eyeQuota": 5,
+            "houseMult": 2.75,
+            "pouchCap": 1100,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": true,
+            "batchRefine": true,
+            "blackMarketExtra": 0,
+            "cosmetic": "frame_patron"
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "8": {
+          "nextMin": 1000000,
+          "perks": {
+            "refillsMax": 18,
+            "warpHoursMax": 12,
+            "keysPerDayMax": 6,
+            "chestChoices": 4,
+            "porQuota": 12,
+            "eyeQuota": 7,
+            "houseMult": 3,
+            "pouchCap": 1400,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": true,
+            "batchRefine": true,
+            "blackMarketExtra": 2,
+            "cosmetic": null
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "9": {
+          "nextMin": 2000000,
+          "perks": {
+            "refillsMax": 19,
+            "warpHoursMax": 12,
+            "keysPerDayMax": 6,
+            "chestChoices": 4,
+            "porQuota": 16,
+            "eyeQuota": 9,
+            "houseMult": 3.25,
+            "pouchCap": 1700,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": true,
+            "batchRefine": true,
+            "blackMarketExtra": 2,
+            "cosmetic": "title_patron"
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        },
+        "10": {
+          "nextMin": null,
+          "perks": {
+            "refillsMax": 19,
+            "warpHoursMax": 12,
+            "keysPerDayMax": 8,
+            "chestChoices": 4,
+            "porQuota": 20,
+            "eyeQuota": 12,
+            "houseMult": 3.5,
+            "pouchCap": 2000,
+            "freeRunRerolls": 1,
+            "freeMerchantRerolls": 1,
+            "badge": true,
+            "quickRun": true,
+            "autoCollect": true,
+            "runQueue": true,
+            "batchRefine": true,
+            "blackMarketExtra": 2,
+            "cosmetic": "frame_imperial"
+          },
+          "prices": {
+            "refill": {
+              "baseCoins": [
+                10,
+                13,
+                17,
+                22,
+                29,
+                37,
+                48,
+                63,
+                82,
+                106,
+                138,
+                179,
+                233,
+                303,
+                394,
+                512
+              ],
+              "extraCoins": [
+                665,
+                865,
+                1125,
+                1462
+              ],
+              "vipExtra": 1,
+              "energyCapBase": 400,
+              "energyCapPerRefill": 25
+            },
+            "warp": {
+              "extraCoinsPerHour": 8
+            },
+            "keys": {
+              "baseCoins": 20,
+              "extraCoins": 32
+            }
+          }
+        }
+      }
+    },
+    "families": {
+      "rules": {
+        "marksMax": 28,
+        "setPity": 5,
+        "stormPity": 4,
+        "stars": {
+          "max": 3,
+          "setDupTrophies": 2,
+          "uniqueDupTrophies": 8
+        },
+        "trophy": {
+          "name": "Hőstett",
+          "icon": "ui/hostett",
+          "rounding": "random"
+        },
+        "reveal": {
+          "underPromise": {
+            "heroic": 0.25,
+            "unique": 0.5
+          }
+        },
+        "starEffects": {
+          "setPerStar": 0.01,
+          "uniqueLinePerStar": 0.02,
+          "effectRanks": [
+            {
+              "stars": 2,
+              "share": 0.1667
+            },
+            {
+              "stars": 3,
+              "share": 0.3333
+            }
+          ]
+        }
+      },
+      "families": [
+        {
+          "id": "m1",
+          "bossId": "boss_m1",
+          "mapIndex": 1,
+          "itemLevel": 11,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m1",
+            "icon": "icons/set_m1",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "maxHp",
+                    "value": 65
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsBandit",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "potionHeal",
+                    "value": 0.075
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m1",
+            "icon": "icons/uniq_m1",
+            "slot": "boots",
+            "lines": [
+              {
+                "type": "defence",
+                "tier": 3
+              },
+              {
+                "type": "maxHp",
+                "tier": 3
+              },
+              {
+                "type": "potionHeal",
+                "tier": 3
+              }
+            ],
+            "effect": {
+              "kind": "firstStrike",
+              "value": 3,
+              "storm": 4
+            },
+            "stormTier": 3
+          },
+          "loot": {
+            "set": {
+              "B": 0.22,
+              "A": 0.25,
+              "S": 0.3,
+              "first": 1,
+              "hard": 1
+            },
+            "unique": {
+              "B": 0.025,
+              "A": 0.03,
+              "S": 0.035,
+              "first": 0.025,
+              "hard": 0.15
+            },
+            "trophies": {
+              "B": 0,
+              "A": 0,
+              "S": 0,
+              "first": 0,
+              "hard": 0
+            }
+          }
+        },
+        {
+          "id": "m2",
+          "bossId": "boss_m2",
+          "mapIndex": 2,
+          "itemLevel": 26,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m2",
+            "icon": "icons/set_m2",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "attack",
+                    "value": 14
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsOrc",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "skillDamage",
+                    "value": 0.12
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m2",
+            "icon": "icons/uniq_m2",
+            "slot": "shield",
+            "lines": [
+              {
+                "type": "defence",
+                "tier": 3
+              },
+              {
+                "type": "maxHp",
+                "tier": 3
+              },
+              {
+                "type": "potionHeal",
+                "tier": 3
+              }
+            ],
+            "effect": {
+              "kind": "critHeal",
+              "value": 0.25,
+              "storm": 0.37
+            },
+            "stormTier": 4
+          },
+          "loot": {
+            "set": {
+              "B": 0.22,
+              "A": 0.25,
+              "S": 0.3,
+              "first": 1,
+              "hard": 1
+            },
+            "unique": {
+              "B": 0.025,
+              "A": 0.03,
+              "S": 0.035,
+              "first": 0.025,
+              "hard": 0.15
+            },
+            "trophies": {
+              "B": 1,
+              "A": 1,
+              "S": 2,
+              "first": 3,
+              "hard": 3
+            }
+          }
+        },
+        {
+          "id": "m3",
+          "bossId": "boss_m3",
+          "mapIndex": 3,
+          "itemLevel": 37,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m3",
+            "icon": "icons/set_m3",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "maxHp",
+                    "value": 145
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsDesert",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "critDamage",
+                    "value": 0.3
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m3",
+            "icon": "icons/uniq_m3",
+            "slot": "boots",
+            "lines": [
+              {
+                "type": "maxHp",
+                "tier": 4
+              },
+              {
+                "type": "defence",
+                "tier": 4
+              },
+              {
+                "type": "potionHeal",
+                "tier": 4
+              }
+            ],
+            "effect": {
+              "kind": "stun",
+              "value": 0.07,
+              "storm": 0.1
+            },
+            "stormTier": 5
+          },
+          "loot": {
+            "set": {
+              "B": 0.22,
+              "A": 0.25,
+              "S": 0.3,
+              "first": 1,
+              "hard": 1
+            },
+            "unique": {
+              "B": 0.025,
+              "A": 0.03,
+              "S": 0.035,
+              "first": 0.025,
+              "hard": 0.15
+            },
+            "trophies": {
+              "B": 1,
+              "A": 1,
+              "S": 2,
+              "first": 3,
+              "hard": 3
+            }
+          }
+        },
+        {
+          "id": "m4",
+          "bossId": "boss_m4",
+          "mapIndex": 4,
+          "itemLevel": 46,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m4",
+            "icon": "icons/set_m4",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "attack",
+                    "value": 21
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsIce",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "lifesteal",
+                    "value": 0.03
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m4",
+            "icon": "icons/uniq_m4",
+            "slot": "shield",
+            "lines": [
+              {
+                "type": "defence",
+                "tier": 4
+              },
+              {
+                "type": "maxHp",
+                "tier": 4
+              },
+              {
+                "type": "potionHeal",
+                "tier": 4
+              }
+            ],
+            "effect": {
+              "kind": "shell",
+              "value": 3,
+              "storm": 4,
+              "mult": 0.5
+            },
+            "stormTier": 5
+          },
+          "loot": {
+            "set": {
+              "B": 0.11,
+              "A": 0.135,
+              "S": 0.17,
+              "first": 1,
+              "hard": 0.6
+            },
+            "unique": {
+              "B": 0.015,
+              "A": 0.018,
+              "S": 0.021,
+              "first": 0.015,
+              "hard": 0.105
+            },
+            "trophies": {
+              "B": 1,
+              "A": 1,
+              "S": 2,
+              "first": 3,
+              "hard": 3
+            }
+          }
+        },
+        {
+          "id": "m5",
+          "bossId": "boss_m5",
+          "mapIndex": 5,
+          "itemLevel": 54,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m5",
+            "icon": "icons/set_m5",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "maxHp",
+                    "value": 190
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsFire",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "damageTaken",
+                    "value": 0.045
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m5",
+            "icon": "icons/uniq_m5",
+            "slot": "boots",
+            "lines": [
+              {
+                "type": "evade",
+                "tier": 4
+              },
+              {
+                "type": "maxHp",
+                "tier": 4
+              },
+              {
+                "type": "defence",
+                "tier": 4
+              }
+            ],
+            "effect": {
+              "kind": "cadence",
+              "value": 0.15,
+              "storm": 0.22,
+              "every": 3
+            },
+            "stormTier": 5
+          },
+          "loot": {
+            "set": {
+              "B": 0.11,
+              "A": 0.135,
+              "S": 0.17,
+              "first": 1,
+              "hard": 0.6
+            },
+            "unique": {
+              "B": 0.015,
+              "A": 0.018,
+              "S": 0.021,
+              "first": 0.015,
+              "hard": 0.105
+            },
+            "trophies": {
+              "B": 1,
+              "A": 1,
+              "S": 2,
+              "first": 3,
+              "hard": 3
+            }
+          }
+        },
+        {
+          "id": "m6",
+          "bossId": "boss_m6",
+          "mapIndex": 6,
+          "itemLevel": 60,
+          "marks": {
+            "win": 1,
+            "firstKill": 4,
+            "loss": 1,
+            "paidLoss": 0
+          },
+          "set": {
+            "id": "set_m6",
+            "icon": "icons/set_m6",
+            "slots": [
+              "weapon",
+              "armor",
+              "helmet",
+              "bracelet",
+              "necklace",
+              "earrings"
+            ],
+            "bonuses": [
+              {
+                "pieces": 2,
+                "stats": [
+                  {
+                    "stat": "attack",
+                    "value": 26
+                  }
+                ]
+              },
+              {
+                "pieces": 4,
+                "stats": [
+                  {
+                    "stat": "vsUndead",
+                    "value": 0.08
+                  },
+                  {
+                    "stat": "vsBoss",
+                    "value": 0.08
+                  }
+                ]
+              },
+              {
+                "pieces": 6,
+                "stats": [
+                  {
+                    "stat": "critDamage",
+                    "value": 0.525
+                  }
+                ]
+              }
+            ]
+          },
+          "unique": {
+            "id": "uniq_m6",
+            "icon": "icons/uniq_m6",
+            "slot": "shield",
+            "lines": [
+              {
+                "type": "maxHp",
+                "tier": 4
+              },
+              {
+                "type": "defence",
+                "tier": 4
+              },
+              {
+                "type": "potionHeal",
+                "tier": 4
+              }
+            ],
+            "effect": {
+              "kind": "thorns",
+              "value": 0.12,
+              "storm": 0.18
+            },
+            "stormTier": 5
+          },
+          "loot": {
+            "set": {
+              "B": 0.11,
+              "A": 0.135,
+              "S": 0.17,
+              "first": 1,
+              "hard": 0.6
+            },
+            "unique": {
+              "B": 0.015,
+              "A": 0.018,
+              "S": 0.021,
+              "first": 0.015,
+              "hard": 0.105
+            },
+            "trophies": {
+              "B": 1,
+              "A": 1,
+              "S": 2,
+              "first": 3,
+              "hard": 3
+            }
+          }
+        }
+      ],
+      "momentum": {
+        "perLoss": 0.07,
+        "maxLosses": 3
+      },
+      "dark": {
+        "awakening": {
+          "trophies": 8,
+          "nyangPerLevel": 20000
+        },
+        "familyLevels": [
+          11,
+          26,
+          37,
+          46,
+          54,
+          60
+        ],
+        "hard": {
+          "byBoss": {
+            "boss_m1": 20,
+            "boss_m2": 33,
+            "boss_m3": 44,
+            "boss_m4": 53,
+            "boss_m5": 60,
+            "boss_m6": 60
+          }
+        },
+        "starEffects": {
+          "setPerStar": 0.01,
+          "uniqueLinePerStar": 0.02,
+          "effectRanks": [
+            {
+              "stars": 2,
+              "share": 0.1667
+            },
+            {
+              "stars": 3,
+              "share": 0.3333
+            }
+          ]
+        },
+        "towerEcho": {
+          "mult": 1.5,
+          "trophies": 2,
+          "trophyMinLevel": 30,
+          "lossCooldownSec": 10
+        },
+        "worldBossChest": {
+          "tiers": {
+            "top10": 0.1,
+            "top50": 0.5
+          },
+          "marks": 2,
+          "odds": {
+            "top10": {
+              "rare": 0.45,
+              "heroic": 0.4,
+              "heroicPlus": 0.15
+            },
+            "top50": {
+              "rare": 0.73,
+              "heroic": 0.24,
+              "heroicPlus": 0.03
+            },
+            "rest": {
+              "rare": 0.89,
+              "heroic": 0.11,
+              "heroicPlus": 0
+            }
+          }
+        }
+      }
+    },
+    "achievementSets": [
+      {
+        "id": "beasts",
+        "title": "title_beastbreaker",
+        "frame": "frame_beastbreaker",
+        "achievements": [
+          "bigpaw_tamer",
+          "ruinback_breaker",
+          "frost_thawer",
+          "beard_singer",
+          "stripes_rival"
+        ]
+      },
+      {
+        "id": "hunt",
+        "title": "title_greathunter",
+        "frame": "frame_greathunter",
+        "achievements": [
+          "boar_hunter",
+          "bear_hunter",
+          "archer_hunter",
+          "guard_breaker",
+          "orc_hunter",
+          "totem_hunter",
+          "scorpion_hunter",
+          "mummy_hunter",
+          "yeti_hunter",
+          "colossus_breaker",
+          "imp_hunter",
+          "giant_hunter",
+          "wild_archer_hunter",
+          "dog_nightmare",
+          "pickpocket_bane"
+        ]
+      },
+      {
+        "id": "stones",
+        "title": "title_stonesplitter",
+        "frame": "frame_stonesplitter",
+        "achievements": [
+          "breeze_breaker",
+          "firestorm_breaker",
+          "shower_breaker"
+        ]
+      },
+      {
+        "id": "dungeons",
+        "title": "title_deepdelver",
+        "frame": "frame_deepdelver",
+        "achievements": [
+          "monkey_trapper",
+          "spider_nester",
+          "dragon_nester",
+          "room_walker",
+          "heroic_monkey",
+          "heroic_spider",
+          "banana_friend",
+          "silk_regular",
+          "dragon_regular"
+        ]
+      },
+      {
+        "id": "fishing",
+        "title": "title_deepwater",
+        "frame": "frame_deepwater",
+        "achievements": [
+          "rare_fisher",
+          "epic_fisher",
+          "boot_king"
+        ]
+      },
+      {
+        "id": "forge",
+        "title": "title_sparkhand",
+        "frame": "frame_sparkhand",
+        "achievements": [
+          "plus_five",
+          "plus_six",
+          "steady_hand"
+        ]
+      },
+      {
+        "id": "ghosts",
+        "title": "title_ghostbreaker",
+        "frame": null,
+        "achievements": [
+          "ghost_breaker"
+        ]
+      },
+      {
+        "id": "faithful",
+        "title": "title_faithful",
+        "frame": null,
+        "achievements": [
+          "faithful"
+        ]
+      }
+    ]
+  },
+  "launch": {
+    "registrationOpen": true,
+    "gameAccess": "open",
+    "paymentsEnabled": true,
+    "paymentsDisabledReason": null,
+    "shopRegionClosed": false,
+    "storePayments": {
+      "googleplay": true,
+      "appstore": false
+    },
+    "opensAt": "2026-10-31T17:00:00.000Z",
+    "openAtLaunch": true,
+    "turnstileSiteKey": null,
+    "country": "PA",
+    "source": "https://stonestorm.gg/api/launch"
+  }
+}

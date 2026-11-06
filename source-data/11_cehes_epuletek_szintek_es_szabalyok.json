@@ -1,0 +1,984 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/assets/rules-CT3MNQZh.js",
+    "supplementalSource": "https://stonestorm.gg/assets/GuildPage-D_gkotmz.js",
+    "dataKind": "official-public-client-code-derived"
+  },
+  "maxLevel": 15,
+  "rules": {
+    "upgradeHoursToTargetLevel": "targetLevel * 2",
+    "hqCapacity": "20 + 2*min(level,10) + 6*max(level-10,0)",
+    "forgeBonusPercent": "0.5 * level",
+    "dojoXpBonusPercent": "level",
+    "warehouseNyangBonusPercent": "level",
+    "bannerRaidAttackBonusPercent": "level",
+    "costFieldPath": "buildings[].next.price",
+    "materialFieldPath": "buildings[].next.bars",
+    "durationFieldPath": "buildings[].next.hours",
+    "missingCostsReason": "Az ellenőrzött céh mind az öt épületét fejlesztette, ezért a next objektum null volt."
+  },
+  "buildings": [
+    {
+      "kind": "hq",
+      "nameHu": "Főhadiszállás",
+      "levels": [
+        {
+          "level": 1,
+          "effect": 22,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 2,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 2,
+          "effect": 24,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 4,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 3,
+          "effect": 26,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 6,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 4,
+          "effect": 28,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 8,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 5,
+          "effect": 30,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 10,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 6,
+          "effect": 32,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 12,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 7,
+          "effect": 34,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 14,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 8,
+          "effect": 36,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 16,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 9,
+          "effect": 38,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 18,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 10,
+          "effect": 40,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 20,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 11,
+          "effect": 46,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 22,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 12,
+          "effect": 52,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 24,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 13,
+          "effect": 58,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 26,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 14,
+          "effect": 64,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 28,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 15,
+          "effect": 70,
+          "effectUnit": "members",
+          "upgradeHoursToLevel": 30,
+          "priceNyang": null,
+          "materialBars": null
+        }
+      ]
+    },
+    {
+      "kind": "forge",
+      "nameHu": "Kovácsműhely",
+      "levels": [
+        {
+          "level": 1,
+          "effect": 0.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 2,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 2,
+          "effect": 1,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 4,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 3,
+          "effect": 1.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 6,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 4,
+          "effect": 2,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 8,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 5,
+          "effect": 2.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 10,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 6,
+          "effect": 3,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 12,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 7,
+          "effect": 3.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 14,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 8,
+          "effect": 4,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 16,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 9,
+          "effect": 4.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 18,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 10,
+          "effect": 5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 20,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 11,
+          "effect": 5.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 22,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 12,
+          "effect": 6,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 24,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 13,
+          "effect": 6.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 26,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 14,
+          "effect": 7,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 28,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 15,
+          "effect": 7.5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 30,
+          "priceNyang": null,
+          "materialBars": null
+        }
+      ]
+    },
+    {
+      "kind": "dojo",
+      "nameHu": "Dódzsó",
+      "levels": [
+        {
+          "level": 1,
+          "effect": 1,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 2,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 2,
+          "effect": 2,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 4,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 3,
+          "effect": 3,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 6,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 4,
+          "effect": 4,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 8,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 5,
+          "effect": 5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 10,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 6,
+          "effect": 6,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 12,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 7,
+          "effect": 7,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 14,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 8,
+          "effect": 8,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 16,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 9,
+          "effect": 9,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 18,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 10,
+          "effect": 10,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 20,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 11,
+          "effect": 11,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 22,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 12,
+          "effect": 12,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 24,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 13,
+          "effect": 13,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 26,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 14,
+          "effect": 14,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 28,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 15,
+          "effect": 15,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 30,
+          "priceNyang": null,
+          "materialBars": null
+        }
+      ]
+    },
+    {
+      "kind": "warehouse",
+      "nameHu": "Raktár",
+      "levels": [
+        {
+          "level": 1,
+          "effect": 1,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 2,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 2,
+          "effect": 2,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 4,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 3,
+          "effect": 3,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 6,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 4,
+          "effect": 4,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 8,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 5,
+          "effect": 5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 10,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 6,
+          "effect": 6,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 12,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 7,
+          "effect": 7,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 14,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 8,
+          "effect": 8,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 16,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 9,
+          "effect": 9,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 18,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 10,
+          "effect": 10,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 20,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 11,
+          "effect": 11,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 22,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 12,
+          "effect": 12,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 24,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 13,
+          "effect": 13,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 26,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 14,
+          "effect": 14,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 28,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 15,
+          "effect": 15,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 30,
+          "priceNyang": null,
+          "materialBars": null
+        }
+      ]
+    },
+    {
+      "kind": "banner",
+      "nameHu": "Hadizászló",
+      "levels": [
+        {
+          "level": 1,
+          "effect": 1,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 2,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 2,
+          "effect": 2,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 4,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 3,
+          "effect": 3,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 6,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 4,
+          "effect": 4,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 8,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 5,
+          "effect": 5,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 10,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 6,
+          "effect": 6,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 12,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 7,
+          "effect": 7,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 14,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 8,
+          "effect": 8,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 16,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 9,
+          "effect": 9,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 18,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 10,
+          "effect": 10,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 20,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 11,
+          "effect": 11,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 22,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 12,
+          "effect": 12,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 24,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 13,
+          "effect": 13,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 26,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 14,
+          "effect": 14,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 28,
+          "priceNyang": null,
+          "materialBars": null
+        },
+        {
+          "level": 15,
+          "effect": 15,
+          "effectUnit": "percent",
+          "upgradeHoursToLevel": 30,
+          "priceNyang": null,
+          "materialBars": null
+        }
+      ]
+    }
+  ],
+  "locale": {
+    "title": "Céh",
+    "nav": {
+      "lockedNote": "Céhbe {{level}}. szinttől vesznek fel. Addig a céhek csak a kocsmai pletykákból ismernek."
+    },
+    "gate": {
+      "title": "Még zöldfülű vagy",
+      "text": "Céhet alapítani és céhbe lépni {{level}}. szinttől lehet. Most {{now}}. szintű vagy, úgyhogy irány vadászni!"
+    },
+    "tip": {
+      "guild": "Céh: {{name}} [{{tag}}]",
+      "role": "Rangod: {{role}}"
+    },
+    "roles": {
+      "leader": "Vezér",
+      "officer": "Tiszt",
+      "member": "Tag"
+    },
+    "lobby": {
+      "title": "Céhek",
+      "searchTitle": "Céhkereső",
+      "searchLabel": "Céh neve",
+      "searchPlaceholder": "Például Sárkányfog",
+      "searchHint": "Keress név vagy rövidítés szerint.",
+      "searchInvalid": "Betű és szám mehet, szóköz nélkül, legfeljebb 16 karakter.",
+      "search": "Keresés",
+      "list": "Talált céhek",
+      "publicMembers": "Tagok",
+      "publicMembersTitle": "{{name}} tagjai",
+      "publicMembersEmpty": "Nincs megjeleníthető tag.",
+      "empty": "Ilyen nevű céh nincs. Talán épp rád vár, hogy megalapítsd.",
+      "emptyAll": "Még egy céh sincs a királyságodban. Alapítsd meg te az elsőt!",
+      "level": "Épületszintek: {{level}}",
+      "members": "{{count}}/{{capacity}} fő",
+      "apply": "Jelentkezem",
+      "applied": "Jelentkeztél",
+      "withdraw": "Visszavonom",
+      "full": "Tele",
+      "appliedNote": "A levelet már olvassák. Vagy épp ebédelnek.",
+      "kingdomOnly": "Bármelyik céhbe beléphetsz, a királyságod nem számít.",
+      "recruiting": "Toboroz",
+      "open": "Azonnali belépés",
+      "approval": "Jelentkezés, a vezető dönt",
+      "criteria": "Feltétel: {{level}}. szint, {{harcero}} Harcerő",
+      "criteriaLevel": "Feltétel: {{level}}. szint",
+      "active_one": "{{count}} aktív tag az elmúlt 3 napban",
+      "active_other": "{{count}} aktív tag az elmúlt 3 napban",
+      "slots_one": "{{count}} szabad hely",
+      "slots_other": "{{count}} szabad hely",
+      "leaderSeen": {
+        "today": "A vezető ma játszott",
+        "yesterday": "A vezető tegnap játszott",
+        "days_one": "A vezető {{count}} napja játszott",
+        "days_other": "A vezető {{count}} napja játszott"
+      },
+      "homeKingdom": "Alapítva: {{kingdom}}",
+      "join": "Belépek",
+      "joined": "Beléptél a céhbe: {{name}}",
+      "suggested": {
+        "title": "Javasolt céh",
+        "lead": "Aktív céh szabad hellyel, ahová most rögtön beléphetsz.",
+        "none": "Most nincs olyan nyitott céh, ahová azonnal beléphetnél. Nézd meg lent a toborzó céheket."
+      },
+      "emptyOpen": "Most nincs szabad helyű céh a világodban. Keress név szerint, vagy alapíts egyet!",
+      "joinLimit": "Egy órán belül legfeljebb {{max}} céhbe léphetsz be. {{time}} múlva próbáld újra.",
+      "appliedInstead": "A(z) {{name}} céh közben jóváhagyásra váltott, ezért elküldtük a jelentkezésedet."
+    },
+    "found": {
+      "title": "Céhalapítás",
+      "intro": "Saját céh, saját erőd, saját viták. Az alapító lesz a vezér, és ő hallgatja a panaszokat is.",
+      "name": "Céh neve",
+      "nameHint": "3-16 betű vagy szám, szóköz nélkül.",
+      "nameInvalid": "3-16 betű vagy szám kell, szóköz és jel nélkül.",
+      "tag": "Céhjel",
+      "tagHint": "2-4 betű, ez áll majd a neved mellett.",
+      "tagInvalid": "2-4 betű kell, szám és szóköz nélkül.",
+      "emblem": "Címer",
+      "emblemNote": "A címert a céhszellem sorsolja az alapításkor. Fellebbezni nem lehet.",
+      "cost": "Alapítási díj",
+      "have": "Nálad: {{amount}}",
+      "short": "Még {{amount}} nyang hiányzik.",
+      "submit": "Megalapítom"
+    },
+    "hall": {
+      "war": "Hadszállás",
+      "role": "Rangod: {{role}}",
+      "members": "{{count}}/{{capacity}} tag",
+      "fortress": "Erőd, {{stage}}. szint",
+      "fortressNext_one": "Még {{count}} épületszint a következő erődszintig.",
+      "fortressNext_other": "Még {{count}} épületszint a következő erődszintig.",
+      "fortressMax": "Az erőd teljes pompájában áll. A szomszédok irigykednek.",
+      "loadError": "A céh adatai nem jöttek meg."
+    },
+    "treasury": {
+      "title": "Kincstár",
+      "amount": "Adomány",
+      "donate": "Adományozom",
+      "all": "Mind",
+      "done": "Köszönjük! A kincstár {{amount}} nyanggal gazdagabb lett, a lelkiismereted pedig tisztább.",
+      "invalid": "1 és {{max}} közötti egész számot adj meg.",
+      "history": {
+        "title": "Adományok naplója",
+        "empty": "Még nincs rögzített adomány.",
+        "more": "Továbbiak betöltése",
+        "failed": "A napló nem tölthető be."
+      }
+    },
+    "tabs": {
+      "label": "Céh részei",
+      "buildings": "Épületek",
+      "members": "Tagok"
+    },
+    "buildings": {
+      "hq": {
+        "name": "Főhadiszállás",
+        "effect": "{{value}} férőhely"
+      },
+      "forge": {
+        "name": "Kovácsműhely",
+        "effect": "+{{value}}% kovácsszerencse"
+      },
+      "dojo": {
+        "name": "Dódzsó",
+        "effect": "+{{value}}% XP"
+      },
+      "warehouse": {
+        "name": "Raktár",
+        "effect": "+{{value}}% nyang"
+      },
+      "banner": {
+        "name": "Hadizászló",
+        "effect": "+{{value}}% támadás a rajtaütésben"
+      },
+      "level": "{{level}}. szint",
+      "levelMax": "{{level}}. szint, a csúcs",
+      "next": "Ezután: {{effect}}",
+      "now": "Most: {{effect}}",
+      "none": "Most: még semmi",
+      "price": "Ár",
+      "time": "Idő",
+      "upgrade": "Fejlesztés",
+      "speedup": "Gyorsítás {{coins}} VÉ",
+      "speedupLabel": "Gyorsítás {{coins}} Viharérméért",
+      "building": "Épül, még {{time}} van hátra",
+      "buildingBar": "{{name}} építése",
+      "max": "Kész remekmű, ennél szebb már nem lesz.",
+      "officersOnly": "Fejleszteni tiszt vagy vezér tud. Te addig adakozz.",
+      "short": "Még {{amount}} nyang kell a kincstárba."
+    },
+    "members": {
+      "title": "Tagok",
+      "level": "{{level}}. szint",
+      "donated": "Adomány: {{amount}}",
+      "you": "te",
+      "actions": "Műveletek: {{name}}",
+      "promote": "Tisztté teszem",
+      "demote": "Lefokozom",
+      "handover": "Vezérré teszem",
+      "kick": "Kirúgom",
+      "leave": "Kilépek a céhből",
+      "applications": "Jelentkezők",
+      "noApplications": "Senki nem kopogtat. Egyelőre.",
+      "accept": "Felveszem",
+      "reject": "Elutasítom",
+      "confirmKick": {
+        "title": "Kirúgod?",
+        "text": "{{name}} kint marad az esőben, a kapu bezárul mögötte.",
+        "confirm": "Kirúgom"
+      },
+      "confirmHandover": {
+        "title": "Átadod a vezérséget?",
+        "text": "{{name}} lesz a vezér, te tiszt maradsz. A panaszokat mostantól ő hallgatja.",
+        "confirm": "Átadom"
+      },
+      "confirmLeave": {
+        "title": "Kilépsz a céhből?",
+        "text": "A kapu bezárul mögötted, az adományaid bent maradnak.",
+        "textLeader": "A kapu bezárul mögötted, a vezérséget {{name}} kapja.",
+        "textLast": "Utolsóként távozol: a céh feloszlik, a kincstár és az épületek vele vesznek.",
+        "confirm": "Kilépek"
+      },
+      "invite": {
+        "title": "Meghívás a céhbe",
+        "label": "A hős neve",
+        "hint": "A királyságod legalább 10. szintű, céh nélküli hősét hívhatod meg.",
+        "submit": "Meghívom",
+        "sent": "Elküldted a meghívót neki: {{name}}.",
+        "invalid": "Betű és szám mehet, szóköz nélkül, 3-16 karakter.",
+        "pending": "Válaszra váró meghívók: {{n}}",
+        "pendingList": "Válaszra váró meghívók",
+        "hintAny": "Bármelyik királyság legalább 10. szintű, céh nélküli hősét meghívhatod.",
+        "list": "Névsor",
+        "listTitle": "Meghívható hősök",
+        "listSearch": "Keresés név szerint",
+        "listHint": "Céh nélküli hősök, akik az elmúlt 7 napban játszottak, a legmagasabb szintűek elöl. Írd be a név elejét a szűkítéshez.",
+        "listEmpty": "Nincs ilyen hős. Próbálj más névkezdetet.",
+        "listInvited": "Meghívva",
+        "listInvalid": "Betű és szám mehet, szóköz nélkül."
+      },
+      "sort": {
+        "label": "Sorrend",
+        "level": "Szint",
+        "joined": "Belépés",
+        "donated": "Adomány"
+      },
+      "expires": "Lejár: {{time}}"
+    },
+    "board": {
+      "count": "{{count}}/{{max}}",
+      "tooLong": "Legfeljebb {{max}} jel fér a cetlire."
+    },
+    "raid": {
+      "title": "Rajtaütés",
+      "stage": "{{stage}}. kör",
+      "hp": "A boss HP-ja",
+      "fight": "Harcba!",
+      "fought": "Mára kiadtad a dühöd. Holnap újra mehetsz.",
+      "defeated": "A boss elesett! A következő holnap érkezik, kipihenten.",
+      "rules": "Naponta egy harc jár. Ha a boss elesik, mindenki nyangot és alapanyagot kap a sebzése arányában, a kincstár pedig 10%-ot.",
+      "todayDamage": "Mai sebzésed: {{amount}}",
+      "resultTitle": "Rajtaütés",
+      "damage": "Sebzésed",
+      "left": "Maradt: {{hp}} HP",
+      "felled": "Ledöntöttétek!",
+      "survived": "A boss még áll, de már sántít.",
+      "reward": "A jutalmad",
+      "rewardLater": "A jutalom a sebzés arányában oszlik el. A többiek akkor kapják meg a részüket, amikor legközelebb benéznek."
+    },
+    "errors": {
+      "renown_required": "Ehhez a szinthez több céh-hírnév kell (céh-műhely).",
+      "guild_not_found": "Ez a céh már nem létezik.",
+      "not_member": "Már nem vagy tagja ennek a céhnek.",
+      "forbidden": "Ehhez nincs elég magas rangod.",
+      "wrong_empire": "Ez a céh egy másik királysághoz hűséges.",
+      "already_applied": "Ide már jelentkeztél.",
+      "already_in_guild": "Már céhben van.",
+      "guild_own_hero": "Ebben a céhben már két hősöd játszik, egy fiókból legfeljebb kettő lehet egy céhben.",
+      "guild_full": "A céh megtelt. Majd ha bővítik a főhadiszállást.",
+      "application_not_found": "Ez a jelentkezés már nincs meg.",
+      "member_not_found": "Ez a tag már nincs a céhben.",
+      "cannot_target_self": "Magadat nem.",
+      "name_taken": "Ez a céhnév már foglalt.",
+      "tag_taken": "Ez a céhjel már foglalt.",
+      "level_too_low": "Céhet a 10. szinttől lehet alapítani.",
+      "insufficient_funds": "Nincs nálad ennyi nyang.",
+      "insufficient_treasury": "Kevés a nyang a kincstárban.",
+      "treasury_full": "A kincstár ládája már nem csukódik be. Költsetek!",
+      "upgrade_in_progress": "Ez az épület már épül.",
+      "no_upgrade": "Ez az épület már elkészült.",
+      "max_level": "Ez az épület elérte a csúcsot.",
+      "already_fought": "A mai harcodat már megvívtad.",
+      "raid_defeated": "A boss mára elesett.",
+      "applicant_email_required": "Őt most nem veheted fel: még nem erősítette meg az e-mail-címét.",
+      "treasury_held": "A kincstárban van elég nyang, de egy része nemrég belépett tagoktól jött, ezért épületre csak később költhető.",
+      "invite_wrong_empire": "Ő egy másik királyság hőse. A céhetekbe csak a saját királyságotok hősei léphetnek be.",
+      "invite_level_too_low": "Ő még nem érte el a 10. szintet, addig nem léphet céhbe.",
+      "invite_in_guild": "Ő már egy másik céh tagja.",
+      "invite_member": "Ő már a céhetek tagja.",
+      "already_invited": "Őt már meghívtátok, a válaszára vártok.",
+      "invite_limit": "Egyszerre legfeljebb 20 meghívó várhat válaszra. Várjátok meg, mit felelnek.",
+      "invite_not_found": "Ez a meghívó már nem él.",
+      "player_blocked": "Őt letiltottad. Ha meghívnád, előbb oldd fel a letiltást.",
+      "player_not_found": "Nincs ilyen nevű hős a világodban. Nézd meg, jól írtad-e.",
+      "guild_criteria": "Ehhez a céhhez legalább {{minLevel}}. szint és {{minHarcero}} Harcerő kell.",
+      "guild_criteria_level": "Ehhez a céhhez legalább {{minLevel}}. szint kell.",
+      "application_expired": "Ez a jelentkezés lejárt (72 óra után).",
+      "guild_rejoin_wait": "Ebből a céhből nemrég kirúgtak, ide {{time}} múlva léphetsz be újra."
+    },
+    "invites": {
+      "title": "Céhmeghívók",
+      "from": "{{name}} hívott meg.",
+      "accept": "Elfogadom",
+      "decline": "Elutasítom",
+      "dot": "Céhmeghívó vár rád"
+    },
+    "profile": {
+      "invite": "Meghívom a céhbe",
+      "invited": "Meghívó elküldve",
+      "otherKingdom": "Más királyság hőse. Csak a saját királyságod hőseit hívhatod meg.",
+      "lowLevel": "Még nem 10. szintű, csak utána hívhatod meg."
+    },
+    "settings": {
+      "title": "Toborzás",
+      "modeOpen": "Automatikus: aki megfelel a feltételeknek, azonnal belép",
+      "modeApproval": "Jóváhagyással: a jelentkezőket ti fogadjátok el",
+      "minLevel": "Legalacsonyabb szint",
+      "minHarcero": "Legkisebb Harcerő",
+      "recruiting": "Toborzunk (a céh a lista elején, Toboroz jellel)",
+      "text": "Toborzó szöveg",
+      "textHint": "Legfeljebb 140 karakter. Mindenki látja a céhkeresőben.",
+      "save": "Mentés",
+      "saved": "Elmentve",
+      "mode": "Belépés a céhbe",
+      "numberInvalid": "{{min}} és {{max}} közötti egész szám kell.",
+      "textTooLong": "Legfeljebb {{max}} karakter fér bele.",
+      "notice": {
+        "text": "A céhed mostantól automatikusan fogad új tagokat: aki megfelel a feltételeknek, azonnal belép. Ha inkább ti döntenétek, itt állítsd jóváhagyásra.",
+        "approval": "Jóváhagyásra állítom",
+        "keep": "Maradjon automatikus"
+      }
+    },
+    "system": {
+      "member_joined": "{{name}} csatlakozott a céhhez.",
+      "leader_handover": "{{old}} 7 napja nem járt itt, ezért a céhet mostantól {{new}} vezeti.",
+      "building_speedup": "{{name}} {{coins}} VÉ-ért befejezte az építkezést: {{building}}, {{level}}. szint.",
+      "energy_chest": "{{name}} Energialádát nyitott mindenkinek! (+{{energy}} energia)",
+      "support_treasury_out": "A support {{amount}} nyangot visszaadott {{name}} számára a céhkasszából ({{reason}}).",
+      "support_treasury_in": "A support {{amount}} nyangot a céhkasszába tett {{name}} részéről ({{reason}}).",
+      "support_why_mistaken_donation": "téves befizetés",
+      "support_why_misc": "support-korrekció"
+    },
+    "req": {
+      "title": "A(z) {{level}}. szint feltételei",
+      "met": "megvan",
+      "unmet": "hiányzik",
+      "members": "Feltételeknek megfelelő tagok: {{have}}/{{need}} (legalább {{level}}. szint, legalább {{time}} a céhben, megerősített e-mail)",
+      "treasury": "Kincstár: {{have}} / {{need}} nyang",
+      "bars": "Építőanyag: {{have}} / {{need}} rúd-egység (bármelyik rúd számít: {{list}})",
+      "held": "ebből {{amount}} {{time}}-ig zárolva"
+    },
+    "energyChest": {
+      "title": "Energialáda",
+      "desc": "Minden mostani céhtag ({{members}} fő) kap {{energy}} energiát levélben. Az ár a létszámmal nő.",
+      "today": "Ma kinyitva: {{today}} / {{perDay}}",
+      "buy": "Kinyitom mindenkinek: {{price}} VÉ",
+      "soldOut": "Mára elfogyott, holnap újra kinyitható.",
+      "done": "Kinyitva! Minden céhtag megkapta a levelet.",
+      "priceChanged": "Közben változott a létszám. Az új ár: {{price}} VÉ. Koppints újra, ha így is kéred.",
+      "error": "Ez most nem sikerült. Próbáld újra."
+    }
+  }
+}

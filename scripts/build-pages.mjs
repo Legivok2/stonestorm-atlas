@@ -5,7 +5,7 @@ import {root,runtimeFiles,sourceFiles,audit,assertSafeRelative} from './publicat
 const local=process.argv.includes('--local-preview');
 const result=audit(sourceFiles());
 if(result.missing.length||result.secretOrPersonalFindings.length||result.largeFiles.length)throw Error('A publikációs audit hibát talált. Részletek: npm run audit:publish.');
-if(!local&&result.rightsPending.length)throw Error('Publikálás leállítva: nincs igazolt engedély minden eredeti játékfájlra. A .publication/permissions.json nyilvántartását valós bizonyítékkal kell kiegészíteni.');
+if(!local&&result.rightsBlocking.length)throw Error('Publikálás leállítva: nincs közzétételi felhatalmazás minden játékfájlra. A .publication/permissions.json nyilvántartását ellenőrizd.');
 const destination=path.join(root,local?'.integration/pages-preview':'dist');
 const files=runtimeFiles(),previousFile=path.join(root,'.publication/pages-manifest.json');
 const previous=fs.existsSync(previousFile)?JSON.parse(fs.readFileSync(previousFile,'utf8')).files:[];

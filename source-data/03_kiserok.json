@@ -1,0 +1,1057 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "count": 22,
+  "types": [
+    {
+      "id": "pet_wolf",
+      "map": 1,
+      "perLevel": {
+        "xpMult": 0.01
+      },
+      "trait": "strike",
+      "rarity": "common",
+      "nameHu": "Farkaskölyök"
+    },
+    {
+      "id": "pet_boar",
+      "map": 1,
+      "perLevel": {
+        "nyangMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "common",
+      "nameHu": "Kismalac"
+    },
+    {
+      "id": "pet_bear",
+      "map": 1,
+      "perLevel": {
+        "hpMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "common",
+      "nameHu": "Medvebocs"
+    },
+    {
+      "id": "pet_monkey",
+      "map": 2,
+      "perLevel": {
+        "dropMult": 0.008
+      },
+      "trait": "mend",
+      "rarity": "common",
+      "nameHu": "Kis majom"
+    },
+    {
+      "id": "pet_falcon",
+      "map": 2,
+      "perLevel": {
+        "evadeBonus": 0.002
+      },
+      "trait": "strike",
+      "rarity": "common",
+      "nameHu": "Sólyom"
+    },
+    {
+      "id": "pet_dog",
+      "map": 2,
+      "perLevel": {
+        "atkMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "common",
+      "nameHu": "Kutya"
+    },
+    {
+      "id": "pet_goblin_pup",
+      "map": 3,
+      "perLevel": {
+        "nyangMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "rare",
+      "nameHu": "Koboldkölyök"
+    },
+    {
+      "id": "pet_ram",
+      "map": 3,
+      "perLevel": {
+        "hpMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "rare",
+      "nameHu": "Kiskos"
+    },
+    {
+      "id": "pet_vulture",
+      "map": 3,
+      "perLevel": {
+        "dropMult": 0.008
+      },
+      "trait": "strike",
+      "rarity": "rare",
+      "nameHu": "Keselyűfióka"
+    },
+    {
+      "id": "pet_camel",
+      "map": 4,
+      "perLevel": {
+        "xpMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "rare",
+      "nameHu": "Tevecsikó"
+    },
+    {
+      "id": "pet_fennec",
+      "map": 4,
+      "perLevel": {
+        "evadeBonus": 0.002
+      },
+      "trait": "strike",
+      "rarity": "rare",
+      "nameHu": "Fennek"
+    },
+    {
+      "id": "pet_scarab",
+      "map": 4,
+      "perLevel": {
+        "defMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "rare",
+      "nameHu": "Szkarabeusz"
+    },
+    {
+      "id": "pet_penguin",
+      "map": 5,
+      "perLevel": {
+        "nyangMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "heroic",
+      "nameHu": "Pingvin"
+    },
+    {
+      "id": "pet_snow_leopard",
+      "map": 5,
+      "perLevel": {
+        "atkMult": 0.005
+      },
+      "trait": "strike",
+      "rarity": "heroic",
+      "nameHu": "Hópárduckölyök"
+    },
+    {
+      "id": "pet_yeti_cub",
+      "map": 5,
+      "perLevel": {
+        "hpMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "heroic",
+      "nameHu": "Jetibocs"
+    },
+    {
+      "id": "pet_ember_imp",
+      "map": 6,
+      "perLevel": {
+        "critBonus": 0.002
+      },
+      "trait": "strike",
+      "rarity": "heroic",
+      "nameHu": "Parázsmanó"
+    },
+    {
+      "id": "pet_lava_turtle",
+      "map": 6,
+      "perLevel": {
+        "defMult": 0.005
+      },
+      "trait": "guard",
+      "rarity": "heroic",
+      "nameHu": "Lávateknős"
+    },
+    {
+      "id": "pet_salamander",
+      "map": 6,
+      "perLevel": {
+        "xpMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "heroic",
+      "nameHu": "Szalamandra"
+    },
+    {
+      "id": "pet_u_wild",
+      "map": 1,
+      "perLevel": {
+        "xpMult": 0.012
+      },
+      "trait": "strike",
+      "rarity": "unique",
+      "egg": "egg_u_wild",
+      "signature": "first_strike",
+      "dungeon": "wild",
+      "nameHu": "Mohaagancs"
+    },
+    {
+      "id": "pet_u_monkey",
+      "map": 2,
+      "perLevel": {
+        "dropMult": 0.01
+      },
+      "trait": "mend",
+      "rarity": "unique",
+      "egg": "egg_u_monkey",
+      "signature": "regen",
+      "dungeon": "monkey",
+      "nameHu": "Aranymajom"
+    },
+    {
+      "id": "pet_u_spider",
+      "map": 3,
+      "perLevel": {
+        "defMult": 0.006
+      },
+      "trait": "guard",
+      "rarity": "unique",
+      "egg": "egg_u_spider",
+      "signature": "thorns",
+      "dungeon": "spider",
+      "nameHu": "Holdfonó"
+    },
+    {
+      "id": "pet_u_dragon",
+      "map": 5,
+      "perLevel": {
+        "atkMult": 0.006
+      },
+      "trait": "strike",
+      "rarity": "unique",
+      "egg": "egg_u_dragon",
+      "signature": "crit_dmg",
+      "dungeon": "dragon",
+      "nameHu": "Viharfióka"
+    }
+  ],
+  "traits": {
+    "strike": {
+      "every": [
+        4,
+        4,
+        3,
+        3,
+        3
+      ],
+      "mult": [
+        0.3,
+        0.4,
+        0.4,
+        0.5,
+        0.6
+      ]
+    },
+    "mend": {
+      "belowHp": 0.4,
+      "pct": [
+        0.08,
+        0.1,
+        0.12,
+        0.15,
+        0.18
+      ]
+    },
+    "guard": {
+      "hits": 3,
+      "pct": [
+        0.3,
+        0.35,
+        0.4,
+        0.5,
+        0.6
+      ]
+    }
+  },
+  "rules": {
+    "maxLevel": 10,
+    "minHeroLevel": 10,
+    "maxPets": 12,
+    "hatchHours": 8,
+    "feedMaterialsPerLevel": 5,
+    "feedNyangPerLevel": 200,
+    "unlockCoins": 30,
+    "farmEggChance": 0.0003,
+    "bossEggChance": 0.03,
+    "stageLevels": [
+      5,
+      9
+    ],
+    "bond": {
+      "max": 5,
+      "cost": [
+        null,
+        {
+          "thread": 10,
+          "nyang": 20000,
+          "minLevel": 3
+        },
+        {
+          "thread": 25,
+          "nyang": 60000,
+          "minLevel": 5
+        },
+        {
+          "thread": 50,
+          "nyang": 150000,
+          "minLevel": 7
+        },
+        {
+          "thread": 90,
+          "nyang": 350000,
+          "minLevel": 9
+        }
+      ],
+      "releaseThread": {
+        "perLevel": 2,
+        "perBond": 10
+      }
+    },
+    "traitLevelScale": {
+      "base": 0.5,
+      "perLevel": 0.05
+    },
+    "rankTraitBonus": 0.1
+  },
+  "v3": {
+    "forms": {
+      "cost": [
+        null,
+        {
+          "core": "pet_core_wild",
+          "thread": 10,
+          "nyang": 20000
+        },
+        {
+          "core": "pet_core_monkey",
+          "thread": 25,
+          "nyang": 60000
+        },
+        {
+          "core": "pet_core_spider",
+          "thread": 50,
+          "nyang": 150000
+        },
+        {
+          "core": "pet_core_dragon",
+          "thread": 90,
+          "nyang": 350000
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "passive": [
+        0.5,
+        0.75,
+        1,
+        1.25,
+        1.5
+      ],
+      "traitLevelScale": {
+        "base": 0.75,
+        "perLevel": 0.005
+      },
+      "catchUp": {
+        "formsBelow": 1,
+        "levelShare": 0.8
+      },
+      "power": [
+        0.03,
+        0.06,
+        0.09,
+        0.11,
+        0.14
+      ]
+    },
+    "costs": {
+      "feed": {
+        "thread": 3,
+        "freePerDay": 1,
+        "heroXpMult": 100
+      },
+      "evolve": {
+        "cores": 2,
+        "threadMult": 2
+      },
+      "hatch": {
+        "nyangShare": 0.02,
+        "materials": 100
+      }
+    },
+    "xp": {
+      "toNextBase": 50,
+      "toNextPerLevel": 25,
+      "feedLevelShare": 1,
+      "feedMaterials": {
+        "base": 20,
+        "perLevel": 6
+      },
+      "share": {
+        "dungeon": 1,
+        "pet_room": 0.5,
+        "default": 0.4
+      }
+    },
+    "farmEggChance": 0.00005,
+    "rarity": {
+      "byMap": [
+        null,
+        "common",
+        "common",
+        "rare",
+        "rare",
+        "heroic",
+        "heroic"
+      ],
+      "growth": {
+        "common": 1,
+        "rare": 1.05,
+        "heroic": 1.1,
+        "unique": 1.15
+      },
+      "release": {
+        "common": 1,
+        "rare": 1.5,
+        "heroic": 2,
+        "unique": 3
+      }
+    },
+    "release": {
+      "base": 6,
+      "perLevel": 1,
+      "perForm": 15
+    },
+    "book": {
+      "perSpecies": 0.003,
+      "capPerKey": 0.012
+    },
+    "rankMinPetLevel": 10,
+    "skills": {
+      "first_strike": {
+        "kind": "combat",
+        "values": [
+          0.6,
+          1,
+          1.4,
+          1.8,
+          2.2
+        ]
+      },
+      "shield_open": {
+        "kind": "combat",
+        "values": [
+          0.05,
+          0.08,
+          0.11,
+          0.14,
+          0.18
+        ]
+      },
+      "crit_dmg": {
+        "kind": "combat",
+        "values": [
+          0.08,
+          0.14,
+          0.2,
+          0.26,
+          0.32
+        ]
+      },
+      "regen": {
+        "kind": "combat",
+        "values": [
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        "every": 3,
+        "times": 3
+      },
+      "thorns": {
+        "kind": "combat",
+        "values": [
+          0.05,
+          0.08,
+          0.11,
+          0.14,
+          0.18
+        ]
+      },
+      "potion_boost": {
+        "kind": "combat",
+        "values": [
+          0.03,
+          0.05,
+          0.07,
+          0.09,
+          0.12
+        ]
+      },
+      "idle_xp": {
+        "kind": "idle",
+        "values": [
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        "mod": "xpMult"
+      },
+      "idle_nyang": {
+        "kind": "idle",
+        "values": [
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        "mod": "nyangMult"
+      },
+      "loot_luck": {
+        "kind": "economy",
+        "values": [
+          0.01,
+          0.02,
+          0.03,
+          0.04,
+          0.05
+        ],
+        "mod": "dropMult"
+      },
+      "keen_nose": {
+        "kind": "dungeon",
+        "values": [
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.03
+        ]
+      }
+    },
+    "reference": {
+      "species": "pet_wolf",
+      "levelLag": 2,
+      "bands": [
+        {
+          "from": 10,
+          "form": 1,
+          "skills": []
+        },
+        {
+          "from": 13,
+          "form": 2,
+          "skills": []
+        },
+        {
+          "from": 16,
+          "form": 2,
+          "skills": [
+            {
+              "skillId": "first_strike",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "from": 23,
+          "form": 3,
+          "skills": [
+            {
+              "skillId": "first_strike",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "from": 38,
+          "form": 4,
+          "skills": [
+            {
+              "skillId": "first_strike",
+              "level": 1
+            },
+            {
+              "skillId": "shield_open",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "from": 53,
+          "form": 5,
+          "skills": [
+            {
+              "skillId": "first_strike",
+              "level": 2
+            },
+            {
+              "skillId": "shield_open",
+              "level": 1
+            },
+            {
+              "skillId": "crit_dmg",
+              "level": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dungeon": {
+    "eggs": {
+      "monkey": [
+        "egg_m2",
+        "egg_m3"
+      ],
+      "spider": [
+        "egg_m3",
+        "egg_m4"
+      ],
+      "dragon": [
+        "egg_m5",
+        "egg_m6"
+      ],
+      "wild": [
+        "egg_m1",
+        "egg_m2"
+      ]
+    },
+    "miniThread": [
+      1,
+      2
+    ],
+    "bossThread": [
+      3,
+      5
+    ],
+    "heroicMult": 2,
+    "firstClearThread": 10,
+    "bossEggChance": 0.08,
+    "heroicEggChance": 0.15,
+    "firstClearEgg": true,
+    "miniEggChance": 0.04
+  },
+  "rankBonusShare": 0.5,
+  "locale": {
+    "tab": "Kísérők",
+    "title": "Kísérők",
+    "intro": "Egyszerre csak egy kísérő tarthat veled, és csak ő ad bónuszt.",
+    "count": "{{count}}/{{max}} kísérő",
+    "empty": "Még nincs kísérőd. Tojásból kel ki, és amíg veled tart, bónuszt ad: több XP-t, nyangot vagy zsákmányt, vagy erősebb harcot.",
+    "eggDot": "Kikeltheted a tojásodat",
+    "sources": {
+      "title": "Honnan lesz tojásod?",
+      "wheelName": "Vásári kerék",
+      "wheel": "Naponta egyszer ingyen pörgethetsz, és a nyeremények között ott a Kísérő-tojás is.",
+      "wheelGo": "Pörgetek",
+      "huntName": "Vadászat",
+      "hunt": "A térképek bossai az első legyőzéskor hagyhatnak tojást, a vadászhelyek szörnyei ritkán. Hogy miért, azt Hakmun még kutatja.",
+      "huntV3": "A térképek bossai az első legyőzéskor hagyhatnak tojást; a vadászhelyek szörnyei csak nagyon ritkán.",
+      "huntGo": "Vadászni megyek",
+      "eventsName": "Ünnepi események",
+      "events": "Ünnepek idején az Ünnepi boltban ünnepi érméért tojást is vehetsz.",
+      "dungeon": "Kazamaták: főleg innen jönnek a tojások és a Kötelékfonal.",
+      "dungeonCard": "Kísérőtojás és Kötelékfonal",
+      "dungeonV3": "Kazamaták: innen jönnek a tojások, a fejlődési magok, a képességkönyvek és a Kötelékfonal.",
+      "dungeonCardV3": "Tojás, mag, képességkönyv"
+    },
+    "eggs": {
+      "title": "Tojások",
+      "hint": "8 óra alatt kel ki. Hogy ki bújik elő, az attól függ, melyik vidékről való a tojás.",
+      "chosenHint": "Te választod ki, melyik kísérő keljen ki belőle. 8 óra alatt kel ki.",
+      "hatch": "Kikeltés",
+      "hatchLabel": "{{name}} kikeltése",
+      "goHatch": "Keltetés",
+      "full": "Legfeljebb {{max}} kísérőd lehet, a szállás most tele van. Engedj el egyet, hogy legyen hely.",
+      "locked": "A {{level}}. szinttől keltetheted ki.",
+      "whyMats": "Még nem keltetheted ki: kevés hozzá az alapanyag.",
+      "whyNyang": "Még nem keltetheted ki: kevés hozzá a nyang.",
+      "whyBoth": "Még nem keltetheted ki: kevés hozzá az alapanyag és a nyang."
+    },
+    "choose": {
+      "title": "Ki keljen ki?",
+      "text": "Az a kísérő kel ki, akit most kiválasztasz. A választás végleges.",
+      "bonus": "1. szinten {{first}}, {{level}}. szinten {{max}}"
+    },
+    "hatching": {
+      "title": "Kelő tojás",
+      "mystery": "Még nem tudni, ki bújik elő.",
+      "chosen": "Belőle {{name}} bújik elő.",
+      "left": "Kikelésig: {{time}}",
+      "skip": "Ugrás",
+      "skipLabel": "Kikeltés most, {{coins}} Viharérméért",
+      "skipNote": "Minden megkezdett 3 óra {{coins}} VÉ.",
+      "skipMin": "Legalább {{min}} VÉ.",
+      "started": "A tojás melegszik. 8 óra múlva kikel."
+    },
+    "hatched": "Kikelt: {{name}}!",
+    "level": "{{level}}. szint",
+    "levelOf": "Szint: {{level}}/{{max}}",
+    "stages": {
+      "1": "Kölyök",
+      "2": "Fiatal",
+      "3": "Kifejlett"
+    },
+    "next": "A következő szinten: {{bonus}}",
+    "maxed": "Elérte a legmagasabb szintet.",
+    "feed": {
+      "button": "Etetés",
+      "label": "{{name}} etetése",
+      "cost": "Ára: {{need}} alapanyag és {{nyang}} nyang",
+      "materials": "Alapanyag ({{map}}): {{have}}/{{need}}",
+      "unlock": "+1 szint",
+      "unlockLabel": "{{name}} még egy szintet nő, {{coins}} Viharérméért",
+      "unlockNote": "Ma már evett. Még egy szint {{coins}} VÉ-ért.",
+      "full": "Mára jóllakott. Holnap ehet újra.",
+      "short": "Kevés az alapanyagod",
+      "poor": "Nincs elég nyangod",
+      "noXp": "Kevés a hősöd XP-je: {{need}} XP kell (szintet nem veszíthetsz).",
+      "xpCost": "−{{xp}} hős-XP",
+      "xpCostLabel": "A hősöd XP-jéből: {{xp}}",
+      "xpCostShare": "−{{xp}} hős-XP (a szinted {{pct}}%-a)",
+      "xpCostShareLabel": "A hősöd XP-jéből: {{xp}}, a szinted {{pct}}%-a",
+      "xpConfirm": "Ez {{xp}} hős-XP-t vesz el a hősödtől (a szinted {{pct}}%-a).",
+      "done": "{{name}} jóllakott, és {{level}}. szintre nőtt."
+    },
+    "cost": {
+      "progress": "{{have}} / {{need}} alapanyag",
+      "progressLabel": "Alapanyag: {{have}} / {{need}}. Bármelyik térkép vadászhelyeinek alapanyaga jó, a mostani térképé fogy először.",
+      "short": "Kell még {{n}} alapanyag a vadászhelyekről (bármelyik térképről).",
+      "shortNyang": "Kell még {{n}} nyang.",
+      "where": "Hol szerzem?",
+      "takes": "Ezt viszi el: {{list}}",
+      "chip": "{{name}}: {{take}} (van: {{held}})",
+      "more": "Még {{n}}: {{list}}"
+    },
+    "activate": "Aktiválás",
+    "activateLabel": "{{name}} aktiválása",
+    "active": "Aktív",
+    "rest": "Pihentetés",
+    "restLabel": "{{name}} pihentetése",
+    "activated": "{{name}} mostantól veled tart.",
+    "rested": "{{name}} pihen. Most egyik kísérőd sem ad bónuszt.",
+    "bonus": {
+      "xpMult": "XP +{{value}}%",
+      "nyangMult": "Nyang +{{value}}%",
+      "dropMult": "Zsákmány +{{value}}%",
+      "atkMult": "Támadás +{{value}}%",
+      "defMult": "Védelem +{{value}}%",
+      "hpMult": "HP +{{value}}%",
+      "critBonus": "Kritikus esély +{{value}}%",
+      "evadeBonus": "Kitérés +{{value}}%"
+    },
+    "types": {
+      "pet_wolf": {
+        "name": "Farkaskölyök"
+      },
+      "pet_boar": {
+        "name": "Kismalac"
+      },
+      "pet_bear": {
+        "name": "Medvebocs"
+      },
+      "pet_monkey": {
+        "name": "Kis majom"
+      },
+      "pet_falcon": {
+        "name": "Sólyom"
+      },
+      "pet_dog": {
+        "name": "Kutya"
+      },
+      "pet_goblin_pup": {
+        "name": "Koboldkölyök"
+      },
+      "pet_ram": {
+        "name": "Kiskos"
+      },
+      "pet_vulture": {
+        "name": "Keselyűfióka"
+      },
+      "pet_camel": {
+        "name": "Tevecsikó"
+      },
+      "pet_fennec": {
+        "name": "Fennek"
+      },
+      "pet_scarab": {
+        "name": "Szkarabeusz"
+      },
+      "pet_penguin": {
+        "name": "Pingvin"
+      },
+      "pet_snow_leopard": {
+        "name": "Hópárduckölyök"
+      },
+      "pet_yeti_cub": {
+        "name": "Jetibocs"
+      },
+      "pet_ember_imp": {
+        "name": "Parázsmanó"
+      },
+      "pet_lava_turtle": {
+        "name": "Lávateknős"
+      },
+      "pet_salamander": {
+        "name": "Szalamandra"
+      },
+      "pet_u_wild": {
+        "name": "Mohaagancs"
+      },
+      "pet_u_monkey": {
+        "name": "Aranymajom"
+      },
+      "pet_u_spider": {
+        "name": "Holdfonó"
+      },
+      "pet_u_dragon": {
+        "name": "Viharfióka"
+      }
+    },
+    "mods": "Kísérő: {{name}} ({{level}}. szint), {{bonus}}",
+    "companion": "{{name}}, a kísérőd",
+    "errors": {
+      "name_taken": "Ezt a nevet ebben a világban már egy másik kísérő viseli. Válassz másikat.",
+      "name_blocked": "Ez a név nem használható. Válassz másikat.",
+      "no_egg": "Ez a tojás már nincs meg. Frissítettük a listát.",
+      "unknown_egg": "Ebből a tojásból most nem kel ki semmi.",
+      "pets_full": "Legfeljebb 12 kísérőd lehet.",
+      "pet_not_found": "Ez a kísérő már nincs meg. Frissítettük a listát.",
+      "already_hatched": "Közben kikelt. Frissítettük a listát.",
+      "not_hatched": "Még nem kelt ki, várj egy kicsit.",
+      "already_fed": "Mára jóllakott. Holnap ehet újra.",
+      "max_level": "Elérte a legmagasabb szintet.",
+      "not_enough_materials": "Kevés az alapanyagod az etetéshez.",
+      "insufficient_funds": "Nincs elég nyangod az etetéshez.",
+      "request_id_reused": "Ez a kérés összeakadt egy korábbival. Próbáld újra.",
+      "pet_active": "Az aktív kísérőt előbb pihentesd, utána engedheted el.",
+      "pick_required": "Válaszd ki, melyik kísérő keljen ki.",
+      "invalid_pick": "Ez a kísérő ebből a tojásból nem kelhet ki. Válassz a listából.",
+      "pick_not_allowed": "Ennél a tojásnál nem választhatsz kísérőt.",
+      "level_too_low": "Kísérőt a {{level}}. szinttől nevelhetsz.",
+      "pet_bond_max": "A Kötelék már a legerősebb.",
+      "pet_bond_level": "A kísérőnek legalább {{level}}. szintűnek kell lennie.",
+      "no_thread": "Nincs elég Kötelékfonalad.",
+      "not_enough_xp": "Kevés a hősöd XP-je az etetéshez: {{need}} XP kell, most {{have}} van.",
+      "pet_form_level": "A kísérőnek el kell érnie a(z) {{level}}. szintet.",
+      "no_core": "Ehhez fejlődési mag kell: {{core}}.",
+      "pet_form_max": "Ez a kísérő már legendás.",
+      "pet_level_cap": "A kísérő elérte a szintkorlátját. Fejleszd tovább, vagy szintezd a hősödet.",
+      "pet_not_main": "Képességet csak a fő kísérőd tanulhat.",
+      "unknown_book": "Ez nem kísérő-képességkönyv.",
+      "no_book": "Ez a képességkönyv már nincs meg. Frissítettük a listát.",
+      "pet_skill_innate": "Ezt a képességet a kísérő veleszületetten tudja.",
+      "pet_skill_slot": "Ez a képességhely még nem nyílt meg. Előbb a szabad helyet töltsd ki.",
+      "pet_skill_held": "Ezt a képességet a kísérő egy másik helyen már tudja.",
+      "pet_skill_max": "Ez a képesség már 5. szintű.",
+      "pet_skin_locked": "Ezt a kinézetet még nem gyűjtötted be: előbb keltess ki egy ilyen kísérőt."
+    },
+    "release": {
+      "button": "Elengedés",
+      "label": "{{name}} elengedése",
+      "title": "Elengedés: {{name}}",
+      "text": "{{name}} ({{level}}. szint) végleg elmegy, és felszabadul a helye. Ezt nem lehet visszacsinálni, és semmit nem kapsz érte.",
+      "confirm": "Elengedem",
+      "done": "Elengedted: {{name}}. Felszabadult egy hely.",
+      "thread": "Elengedéskor {{thread}} Kötelékfonal marad nálad.",
+      "textBond": "{{name}} ({{level}}. szint) végleg elmegy, és felszabadul a helye. Ezt nem lehet visszacsinálni."
+    },
+    "locked": "A kísérők a {{level}}. szinttől érhetők el. Addig a tojásaid biztonságban megvárnak a táskádban.",
+    "introFights": "Egyszerre egy kísérő tarthat veled: ő ad bónuszt, és harcol is melletted.",
+    "bond": {
+      "title": "Kötelék",
+      "level": "Kötelék {{n}}/5",
+      "up": "Kötelék erősítése",
+      "cost": "{{thread}} Kötelékfonal és {{nyang}} nyang",
+      "needLevel": "A kísérőnek legalább {{level}}. szintűnek kell lennie.",
+      "done": "Erősebb lett a Kötelék: {{name}} {{n}}/5."
+    },
+    "trait": {
+      "strike": "Rárontás: minden {{every}}. ütésed után a kísérőd is lecsap ({{pct}}%).",
+      "mend": "Ápolás: harconként egyszer, ha az életerőd {{below}}% alá esik, visszaad {{pct}}%-ot.",
+      "guard": "Oltalom: az első {{hits}} ellenséges ütés {{pct}}%-kal kisebb."
+    },
+    "fight": {
+      "strike": "{{name}} lecsap!",
+      "mend": "{{name}} ápol",
+      "guard": "{{name}} oltalmaz",
+      "first": "{{name}} előcsap!",
+      "shield": "{{name}} pajzsa felfogja",
+      "regen": "{{name}} gyógyít",
+      "thorns": "{{name}} tüskéi visszaszúrnak",
+      "xp": "+{{xp}} kísérő XP"
+    },
+    "eggNew": "Új tojásod van: a Kísérők lapon vár",
+    "forms": {
+      "1": "Kölyök",
+      "2": "Fiatal",
+      "3": "Felnőtt",
+      "4": "Hős",
+      "5": "Legendás"
+    },
+    "skills": {
+      "first_strike": {
+        "name": "Előcsapás",
+        "desc": "A harc elején, az első ütés előtt lecsap: egy átlagos ütésed {{value}}%-ával."
+      },
+      "shield_open": {
+        "name": "Nyitópajzs",
+        "desc": "A harc elején {{value}}% életerőnyi pajzs."
+      },
+      "crit_dmg": {
+        "name": "Éles karom",
+        "desc": "A kritikus ütéseid sebzése +{{value}}%."
+      },
+      "regen": {
+        "name": "Gyógyító nyalás",
+        "desc": "Minden {{every}}. ütésed után az életerőd {{value}}%-át gyógyítja, harconként legfeljebb {{times}} alkalommal."
+      },
+      "thorns": {
+        "name": "Tüskés bunda",
+        "desc": "Aki megüt, visszakapja a sebzés {{value}}%-át."
+      },
+      "potion_boost": {
+        "name": "Gyógyfűszimat",
+        "desc": "A gyógyitalok az életerőd további {{value}}%-át töltik vissza."
+      },
+      "idle_xp": {
+        "name": "Tanulékony",
+        "desc": "Háttér-vadászatban +{{value}}% XP."
+      },
+      "idle_nyang": {
+        "name": "Kincsszimat",
+        "desc": "Háttér-vadászatban +{{value}}% nyang."
+      },
+      "loot_luck": {
+        "name": "Szerencsemancs",
+        "desc": "Zsákmány +{{value}}%."
+      },
+      "keen_nose": {
+        "name": "Jó szimat",
+        "desc": "A kazamaták ritka vendége +{{value}}% eséllyel jön."
+      }
+    },
+    "rarity": {
+      "common": "Közönséges",
+      "rare": "Ritka",
+      "heroic": "Hősi",
+      "unique": "Mitikus"
+    },
+    "introV3": "Egy fő kísérőt nevelsz egész játékon át: etetéssel nő, a kazamaták magjaival és fonalával fejlődik.",
+    "v3": {
+      "level": "Szint {{level}}/{{cap}}",
+      "capHero": "Nem nőhet a hősöd szintje fölé.",
+      "capForm": "Elérte a(z) {{form}} forma plafonját: fejleszd tovább!",
+      "evolve": "Fejlődés",
+      "slotLocked": "{{form}} formától",
+      "book": "Kísérő-könyv",
+      "bookCount": "{{n}}/{{max}} faj",
+      "makeMain": "Fő kísérő legyen",
+      "skinTitle": "Kinézet",
+      "main": "Fő kísérő",
+      "xp": "{{xp}}/{{next}} XP",
+      "feedXp": "+{{xp}} XP",
+      "needCore": "Kell hozzá: {{core}}",
+      "formMax": "Elérte a legmagasabb formát.",
+      "innate": "veleszületett",
+      "skillsTitle": "Képességek",
+      "slotTitle": "{{n}}. képességhely",
+      "slotEmpty": "Üres hely",
+      "swapNote": "Cserénél a régi képesség könyvei visszakerülnek a táskádba.",
+      "noBooks": "Nincs képességkönyved. A kazamatákban találsz.",
+      "useLearn": "Megtanítja",
+      "useLevel": "Szintet lép",
+      "useSwap": "Csere",
+      "useMax": "Már 5. szintű",
+      "useHeld": "Másik helyen tudja",
+      "useInnate": "Veleszületett",
+      "learned": "{{name}} képessége: {{skill}} ({{level}}. szint).",
+      "booksBack": "A képességkönyvek visszakerültek a táskádba.",
+      "bookBonus": "Gyűjtemény-bónusz: {{bonus}}",
+      "bookNone": "Minden új faj kis, végleges bónuszt ad, és a fő kísérőd a kinézetét is felveheti.",
+      "unseen": "Még nem láttad",
+      "skinOwn": "Saját kinézete",
+      "skinHint": "A könyvben szereplő fajok kinézetét viselheti.",
+      "skinFree": "Az első választás ingyenes.",
+      "skinCost": "Minden további váltás:",
+      "skinDone": "{{name}} új kinézetet kapott.",
+      "fed": "{{name}} jóllakott: +{{xp}} XP.",
+      "evolved": "{{name}} új formája: {{form}}!",
+      "caughtUp": "{{name}} felzárkózott: {{form}}, {{level}}. szint.",
+      "details": "Részletek",
+      "powerNext": "Erő: +{{now}}% Harcerő, fejlődés után +{{next}}%",
+      "feedShortMap": "Kevés az alapanyagod ({{map}})",
+      "skinWorn": "Kinézet: {{name}}",
+      "hcShare": "Harcerő +{{value}} ({{pct}})",
+      "hcNext": "{{level}}. szintig +{{value}}"
+    },
+    "evolve": {
+      "label": "{{name}} fejlődik",
+      "skip": "Kihagyás",
+      "continue": "Tovább",
+      "gain": {
+        "harcero": "Harcerő +{{n}}",
+        "slot": "Új képességhely",
+        "look": "Új kinézet",
+        "empowered": "Ősképesség felerősödött"
+      },
+      "gilhwa": {
+        "2": "Nézd csak, kedveském! Kinőtte a kölyökkort.",
+        "3": "Felnőtt lett. Most már ő vigyáz rád is.",
+        "4": "Hős! Az ilyen kísérőről mesélnek a vásárban.",
+        "5": "Legendás… Ilyet én is csak egyszer láttam, régen."
+      }
+    },
+    "feedRule": {
+      "free": "Ingyenes etetés ma: {{used}}/{{max}} elhasználva",
+      "freeNext": "Ingyenes etetés ma: {{used}}/{{max}} elhasználva · a következő ingyenes 00:00-kor (CET)",
+      "extra": "Extra etetés ma: {{coins}} VÉ (naponta egyszer)",
+      "extraUsed": "Extra etetés ma: elhasználva (naponta egyszer)"
+    },
+    "name": {
+      "give": "Név adása",
+      "giveLabel": "Név adása: {{name}}",
+      "rename": "Átnevezés",
+      "renameLabel": "{{name}} átnevezése",
+      "title": "Saját név a kísérődnek",
+      "hint": "Egyedi, végleges nevet adhatsz neki, amelyet a többi játékos is lát a harcokban és a profilodon. Ebben a világban senki más kísérője nem viselheti.",
+      "rule": "3-16 betű vagy szám, szóköz nélkül.",
+      "species": "Faja: {{species}}",
+      "label": "Új név",
+      "save": "Elnevezem",
+      "price": "Ára: {{coins}} Viharérme",
+      "saveLabel": "{{name}} lesz a neve {{coins}} Viharérméért",
+      "invalid": "3-16 betű vagy szám lehet, szóköz és írásjel nélkül.",
+      "done": "A kísérőd neve mostantól {{name}}."
+    }
+  }
+}

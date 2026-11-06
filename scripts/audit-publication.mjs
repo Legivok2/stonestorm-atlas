@@ -7,5 +7,5 @@ fs.writeFileSync(path.join(root,'.publication/audit.json'),JSON.stringify(report
 console.log(`Feltöltési jelölt: ${report.files} fájl, ${(report.bytes/1024/1024).toFixed(1)} MiB.`);
 console.log(`Hiányzó fájl: ${report.missing.length}; titok-/személyesadat-mintatalálat: ${report.secretOrPersonalFindings.length}; 100 MiB feletti fájl: ${report.largeFiles.length}.`);
 for(const finding of report.secretOrPersonalFindings)console.log(`${finding.file}:${finding.line} – ${finding.kind} (érték rejtve)`);
-for(const issue of report.rightsPending)console.log(`Engedély tisztázandó: ${issue.scope} (${issue.files} fájl).`);
-if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length||(!process.argv.includes('--inspection')&&report.rightsPending.length))process.exitCode=1;
+for(const issue of report.rightsPending)console.log(`Licenc tisztázandó: ${issue.scope} (${issue.files} fájl). ${report.rightsBlocking.some(x=>x.scope===issue.scope)?'Nincs közzétételi felhatalmazás.':'Publikálás a projektgazda külön, rögzített utasítására.'}`);
+if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length||(!process.argv.includes('--inspection')&&report.rightsBlocking.length))process.exitCode=1;

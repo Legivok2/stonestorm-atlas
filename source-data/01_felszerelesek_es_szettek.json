@@ -1,0 +1,4921 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "count": 182,
+  "itemSlots": [
+    "weapon",
+    "armor",
+    "helmet",
+    "shield",
+    "boots",
+    "bracelet",
+    "necklace",
+    "earrings"
+  ],
+  "items": [
+    {
+      "id": "w_warrior_0",
+      "slot": "weapon",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 6,
+        "atkMax": 10,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Rozsdás pallos"
+    },
+    {
+      "id": "w_warrior_1",
+      "slot": "weapon",
+      "level": 4,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 12,
+        "atkMax": 18,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Vas pallos"
+    },
+    {
+      "id": "w_warrior_l10",
+      "slot": "weapon",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 20,
+        "atkMax": 29,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Bronzmarkolatú pallos"
+    },
+    {
+      "id": "w_warrior_2",
+      "slot": "weapon",
+      "level": 14,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 32,
+        "atkMax": 46,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3150,
+      "buyPrice": 15750,
+      "nameHu": "Aranyberakásos pallos"
+    },
+    {
+      "id": "w_warrior_l20",
+      "slot": "weapon",
+      "level": 18,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 40,
+        "atkMax": 57,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Zsoldospallos"
+    },
+    {
+      "id": "w_warrior_3",
+      "slot": "weapon",
+      "level": 22,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 48,
+        "atkMax": 69,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4950,
+      "buyPrice": 24750,
+      "nameHu": "Sárkánypallos"
+    },
+    {
+      "id": "w_warrior_l32",
+      "slot": "weapon",
+      "level": 30,
+      "tier": 2,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 64,
+        "atkMax": 91,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6750,
+      "buyPrice": 33750,
+      "nameHu": "Totemfaragású pallos"
+    },
+    {
+      "id": "w_warrior_l38",
+      "slot": "weapon",
+      "level": 34,
+      "tier": 2,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 72,
+        "atkMax": 102,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7650,
+      "buyPrice": 38250,
+      "nameHu": "Törzsfő-pallos"
+    },
+    {
+      "id": "w_warrior_4",
+      "slot": "weapon",
+      "level": 41,
+      "tier": 3,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 86,
+        "atkMax": 122,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9225,
+      "buyPrice": 46125,
+      "nameHu": "Viharpallos"
+    },
+    {
+      "id": "w_warrior_l50",
+      "slot": "weapon",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 104,
+        "atkMax": 147,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Jégtörő pallos"
+    },
+    {
+      "id": "w_warrior_5",
+      "slot": "weapon",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "warrior"
+      ],
+      "values": {
+        "atkMin": 118,
+        "atkMax": 167,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Égszakító pallos"
+    },
+    {
+      "id": "w_ninja_0",
+      "slot": "weapon",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 6,
+        "atkMax": 10,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Csorba tőr"
+    },
+    {
+      "id": "w_ninja_1",
+      "slot": "weapon",
+      "level": 4,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 12,
+        "atkMax": 18,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Görbe acéltőr"
+    },
+    {
+      "id": "w_ninja_l10",
+      "slot": "weapon",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 20,
+        "atkMax": 29,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Agancsnyelű tőr"
+    },
+    {
+      "id": "w_ninja_2",
+      "slot": "weapon",
+      "level": 14,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 32,
+        "atkMax": 46,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3150,
+      "buyPrice": 15750,
+      "nameHu": "Fűrészes árnytőr"
+    },
+    {
+      "id": "w_ninja_l20",
+      "slot": "weapon",
+      "level": 18,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 40,
+        "atkMax": 57,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Haramiatőr"
+    },
+    {
+      "id": "w_ninja_3",
+      "slot": "weapon",
+      "level": 22,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 48,
+        "atkMax": 69,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4950,
+      "buyPrice": 24750,
+      "nameHu": "Sárkányfog-tőr"
+    },
+    {
+      "id": "w_ninja_l32",
+      "slot": "weapon",
+      "level": 30,
+      "tier": 2,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 64,
+        "atkMax": 91,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6750,
+      "buyPrice": 33750,
+      "nameHu": "Agyarhegyű tőr"
+    },
+    {
+      "id": "w_ninja_l38",
+      "slot": "weapon",
+      "level": 34,
+      "tier": 2,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 72,
+        "atkMax": 102,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7650,
+      "buyPrice": 38250,
+      "nameHu": "Vasagyar-tőr"
+    },
+    {
+      "id": "w_ninja_4",
+      "slot": "weapon",
+      "level": 41,
+      "tier": 3,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 86,
+        "atkMax": 122,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9225,
+      "buyPrice": 46125,
+      "nameHu": "Holdsarló-tőr"
+    },
+    {
+      "id": "w_ninja_l50",
+      "slot": "weapon",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 104,
+        "atkMax": 147,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Fagyfog-tőr"
+    },
+    {
+      "id": "w_ninja_5",
+      "slot": "weapon",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "ninja"
+      ],
+      "values": {
+        "atkMin": 118,
+        "atkMax": 167,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Árnyvihar-tőr"
+    },
+    {
+      "id": "w_mage_blade_0",
+      "slot": "weapon",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 6,
+        "atkMax": 10,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Sötét vaskard"
+    },
+    {
+      "id": "w_mage_blade_1",
+      "slot": "weapon",
+      "level": 4,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 12,
+        "atkMax": 18,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Rúnás lángkard"
+    },
+    {
+      "id": "w_mage_blade_l10",
+      "slot": "weapon",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 20,
+        "atkMax": 29,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Kovácstűz-kard"
+    },
+    {
+      "id": "w_mage_blade_2",
+      "slot": "weapon",
+      "level": 14,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 32,
+        "atkMax": 46,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3150,
+      "buyPrice": 15750,
+      "nameHu": "Szarvas lángkard"
+    },
+    {
+      "id": "w_mage_blade_l20",
+      "slot": "weapon",
+      "level": 18,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 40,
+        "atkMax": 57,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Rablólovag-kard"
+    },
+    {
+      "id": "w_mage_blade_3",
+      "slot": "weapon",
+      "level": 22,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 48,
+        "atkMax": 69,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4950,
+      "buyPrice": 24750,
+      "nameHu": "Démonszem-kard"
+    },
+    {
+      "id": "w_mage_blade_l32",
+      "slot": "weapon",
+      "level": 30,
+      "tier": 2,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 64,
+        "atkMax": 91,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6750,
+      "buyPrice": 33750,
+      "nameHu": "Őrtűz-kard"
+    },
+    {
+      "id": "w_mage_blade_l38",
+      "slot": "weapon",
+      "level": 34,
+      "tier": 2,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 72,
+        "atkMax": 102,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7650,
+      "buyPrice": 38250,
+      "nameHu": "Ostromtűz-kard"
+    },
+    {
+      "id": "w_mage_blade_4",
+      "slot": "weapon",
+      "level": 41,
+      "tier": 3,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 86,
+        "atkMax": 122,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9225,
+      "buyPrice": 46125,
+      "nameHu": "Lidércláng-kard"
+    },
+    {
+      "id": "w_mage_blade_l50",
+      "slot": "weapon",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 104,
+        "atkMax": 147,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Jégláng-kard"
+    },
+    {
+      "id": "w_mage_blade_5",
+      "slot": "weapon",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "mage_blade"
+      ],
+      "values": {
+        "atkMin": 118,
+        "atkMax": 167,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Pokolparázs-kard"
+    },
+    {
+      "id": "w_shaman_0",
+      "slot": "weapon",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 6,
+        "atkMax": 10,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Szakadt papírlegyező"
+    },
+    {
+      "id": "w_shaman_1",
+      "slot": "weapon",
+      "level": 4,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 12,
+        "atkMax": 18,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Felhőmintás selyemlegyező"
+    },
+    {
+      "id": "w_shaman_l10",
+      "slot": "weapon",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 20,
+        "atkMax": 29,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Darutollas legyező"
+    },
+    {
+      "id": "w_shaman_2",
+      "slot": "weapon",
+      "level": 14,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 32,
+        "atkMax": 46,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3150,
+      "buyPrice": 15750,
+      "nameHu": "Ezüstbordás legyező"
+    },
+    {
+      "id": "w_shaman_l20",
+      "slot": "weapon",
+      "level": 18,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 40,
+        "atkMax": 57,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Rejtett pengéjű legyező"
+    },
+    {
+      "id": "w_shaman_3",
+      "slot": "weapon",
+      "level": 22,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 48,
+        "atkMax": 69,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4950,
+      "buyPrice": 24750,
+      "nameHu": "Arany sárkánylegyező"
+    },
+    {
+      "id": "w_shaman_l32",
+      "slot": "weapon",
+      "level": 30,
+      "tier": 2,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 64,
+        "atkMax": 91,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6750,
+      "buyPrice": 33750,
+      "nameHu": "Sasszárny-legyező"
+    },
+    {
+      "id": "w_shaman_l38",
+      "slot": "weapon",
+      "level": 34,
+      "tier": 2,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 72,
+        "atkMax": 102,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7650,
+      "buyPrice": 38250,
+      "nameHu": "Szurdokszél-legyező"
+    },
+    {
+      "id": "w_shaman_4",
+      "slot": "weapon",
+      "level": 41,
+      "tier": 3,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 86,
+        "atkMax": 122,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9225,
+      "buyPrice": 46125,
+      "nameHu": "Villámtollas legyező"
+    },
+    {
+      "id": "w_shaman_l50",
+      "slot": "weapon",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 104,
+        "atkMax": 147,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Hóvihar-legyező"
+    },
+    {
+      "id": "w_shaman_5",
+      "slot": "weapon",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "shaman"
+      ],
+      "values": {
+        "atkMin": 118,
+        "atkMax": 167,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Hajnalfény-legyező"
+    },
+    {
+      "id": "a_warrior_0",
+      "slot": "armor",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 0,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 8,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Vasalt bőrvért"
+    },
+    {
+      "id": "a_warrior_1",
+      "slot": "armor",
+      "level": 5,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 1,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 14,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Vas lemezvért"
+    },
+    {
+      "id": "a_warrior_2",
+      "slot": "armor",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 2,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 19,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Tigrisvállas vért"
+    },
+    {
+      "id": "a_warrior_3",
+      "slot": "armor",
+      "level": 16,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 3,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 32,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3600,
+      "buyPrice": 18000,
+      "nameHu": "Ezüst tigrisvért"
+    },
+    {
+      "id": "a_warrior_l33",
+      "slot": "armor",
+      "level": 21,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 3,
+      "portrait": "l33",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 40,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Agyarvállas vért"
+    },
+    {
+      "id": "a_warrior_l39",
+      "slot": "armor",
+      "level": 31,
+      "tier": 2,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 3,
+      "portrait": "l39",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 56,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Szurdokőr-vért"
+    },
+    {
+      "id": "a_warrior_4",
+      "slot": "armor",
+      "level": 42,
+      "tier": 3,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 4,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 73,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9450,
+      "buyPrice": 47250,
+      "nameHu": "Viharacél vért"
+    },
+    {
+      "id": "a_warrior_l50",
+      "slot": "armor",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 4,
+      "portrait": "l50",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 86,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Gleccservért"
+    },
+    {
+      "id": "a_warrior_5",
+      "slot": "armor",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 5,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 97,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Sárkánykirály-vért"
+    },
+    {
+      "id": "a_ninja_0",
+      "slot": "armor",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 0,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 8,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Kék bőrruha"
+    },
+    {
+      "id": "a_ninja_1",
+      "slot": "armor",
+      "level": 5,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 1,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 14,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Láncujjas bőrmellény"
+    },
+    {
+      "id": "a_ninja_2",
+      "slot": "armor",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 2,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 19,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Bíbor árnyvért"
+    },
+    {
+      "id": "a_ninja_3",
+      "slot": "armor",
+      "level": 16,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 3,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 32,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3600,
+      "buyPrice": 18000,
+      "nameHu": "Sárkánypikkely-vért"
+    },
+    {
+      "id": "a_ninja_l33",
+      "slot": "armor",
+      "level": 21,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 3,
+      "portrait": "l33",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 40,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Vasfonatú vért"
+    },
+    {
+      "id": "a_ninja_l39",
+      "slot": "armor",
+      "level": 31,
+      "tier": 2,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 3,
+      "portrait": "l39",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 56,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Szakadékárny-vért"
+    },
+    {
+      "id": "a_ninja_4",
+      "slot": "armor",
+      "level": 42,
+      "tier": 3,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 4,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 73,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9450,
+      "buyPrice": 47250,
+      "nameHu": "Éjselyem vért"
+    },
+    {
+      "id": "a_ninja_l50",
+      "slot": "armor",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 4,
+      "portrait": "l50",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 86,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Fagyköd-vért"
+    },
+    {
+      "id": "a_ninja_5",
+      "slot": "armor",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 5,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 97,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Holdárnyék-vért"
+    },
+    {
+      "id": "a_mage_blade_0",
+      "slot": "armor",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 0,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 8,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Fekete vért"
+    },
+    {
+      "id": "a_mage_blade_1",
+      "slot": "armor",
+      "level": 5,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 1,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 14,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Fekete pikkelyvért"
+    },
+    {
+      "id": "a_mage_blade_2",
+      "slot": "armor",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 2,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 19,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Szarvas rúnavért"
+    },
+    {
+      "id": "a_mage_blade_3",
+      "slot": "armor",
+      "level": 16,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 3,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 32,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3600,
+      "buyPrice": 18000,
+      "nameHu": "Démonvért"
+    },
+    {
+      "id": "a_mage_blade_l33",
+      "slot": "armor",
+      "level": 21,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 3,
+      "portrait": "l33",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 40,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Totemrúnás vért"
+    },
+    {
+      "id": "a_mage_blade_l39",
+      "slot": "armor",
+      "level": 31,
+      "tier": 2,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 3,
+      "portrait": "l39",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 56,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Vasszarvú vért"
+    },
+    {
+      "id": "a_mage_blade_4",
+      "slot": "armor",
+      "level": 42,
+      "tier": 3,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 4,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 73,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9450,
+      "buyPrice": 47250,
+      "nameHu": "Lidércvért"
+    },
+    {
+      "id": "a_mage_blade_l50",
+      "slot": "armor",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 4,
+      "portrait": "l50",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 86,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Zúzmaradémon-vért"
+    },
+    {
+      "id": "a_mage_blade_5",
+      "slot": "armor",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 5,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 97,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Hamukirály-vért"
+    },
+    {
+      "id": "a_shaman_0",
+      "slot": "armor",
+      "level": 1,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 0,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 8,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Fehér-kék köntös"
+    },
+    {
+      "id": "a_shaman_1",
+      "slot": "armor",
+      "level": 5,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 1,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 14,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Kék szertartásköpeny"
+    },
+    {
+      "id": "a_shaman_2",
+      "slot": "armor",
+      "level": 8,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 2,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 19,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Főpapi palást"
+    },
+    {
+      "id": "a_shaman_3",
+      "slot": "armor",
+      "level": 16,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 3,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 32,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3600,
+      "buyPrice": 18000,
+      "nameHu": "Égi palást"
+    },
+    {
+      "id": "a_shaman_l33",
+      "slot": "armor",
+      "level": 21,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 3,
+      "portrait": "l33",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 40,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Szellemdobos palást"
+    },
+    {
+      "id": "a_shaman_l39",
+      "slot": "armor",
+      "level": 31,
+      "tier": 2,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 3,
+      "portrait": "l39",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 56,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Ősfenyő-palást"
+    },
+    {
+      "id": "a_shaman_4",
+      "slot": "armor",
+      "level": 42,
+      "tier": 3,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 4,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 73,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9450,
+      "buyPrice": 47250,
+      "nameHu": "Csillagszövésű palást"
+    },
+    {
+      "id": "a_shaman_l50",
+      "slot": "armor",
+      "level": 50,
+      "tier": 4,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 4,
+      "portrait": "l50",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 86,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Hófátyol-palást"
+    },
+    {
+      "id": "a_shaman_5",
+      "slot": "armor",
+      "level": 57,
+      "tier": 5,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 5,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 97,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12825,
+      "buyPrice": 64125,
+      "nameHu": "Hajnalpalást"
+    },
+    {
+      "id": "helmet_0",
+      "slot": "helmet",
+      "level": 3,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 5,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Szegecselt bőrsapka"
+    },
+    {
+      "id": "helmet_l8",
+      "slot": "helmet",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 12,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Vaspántos bőrsisak"
+    },
+    {
+      "id": "helmet_1",
+      "slot": "helmet",
+      "level": 16,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 16,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 3600,
+      "buyPrice": 18000,
+      "nameHu": "Lószőrforgós sisak"
+    },
+    {
+      "id": "helmet_l18",
+      "slot": "helmet",
+      "level": 21,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 20,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Nyílfogó sisak"
+    },
+    {
+      "id": "helmet_2",
+      "slot": "helmet",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Aranyszarvú sisak"
+    },
+    {
+      "id": "helmet_l30",
+      "slot": "helmet",
+      "level": 32,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 29,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7200,
+      "buyPrice": 36000,
+      "nameHu": "Csontálarcos sisak"
+    },
+    {
+      "id": "helmet_l35",
+      "slot": "helmet",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 33,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Kosszarvú csatasisak"
+    },
+    {
+      "id": "helmet_3",
+      "slot": "helmet",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 40,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Bronzálarcos sisak"
+    },
+    {
+      "id": "helmet_4",
+      "slot": "helmet",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 46,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Zúzmarás sisak"
+    },
+    {
+      "id": "helmet_5",
+      "slot": "helmet",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 51,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Lángtaréjos sisak"
+    },
+    {
+      "id": "shield_0",
+      "slot": "shield",
+      "level": 6,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 10,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Vasalt fapajzs"
+    },
+    {
+      "id": "shield_l11",
+      "slot": "shield",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 15,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Medvebőr-pajzs"
+    },
+    {
+      "id": "shield_1",
+      "slot": "shield",
+      "level": 18,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 22,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Tigrises acélpajzs"
+    },
+    {
+      "id": "shield_l21",
+      "slot": "shield",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 30,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Testőrpajzs"
+    },
+    {
+      "id": "shield_2",
+      "slot": "shield",
+      "level": 31,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 35,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Sárkányos aranypajzs"
+    },
+    {
+      "id": "shield_l31",
+      "slot": "shield",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 41,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Sziklafal-pajzs"
+    },
+    {
+      "id": "shield_l36",
+      "slot": "shield",
+      "level": 42,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 46,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 9450,
+      "buyPrice": 47250,
+      "nameHu": "Vörösmancs-pajzs"
+    },
+    {
+      "id": "shield_3",
+      "slot": "shield",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 50,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Teknőcpáncél-pajzs"
+    },
+    {
+      "id": "shield_4",
+      "slot": "shield",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 58,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Jégtükör-pajzs"
+    },
+    {
+      "id": "shield_5",
+      "slot": "shield",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 64,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Obszidiánpajzs"
+    },
+    {
+      "id": "boots_0",
+      "slot": "boots",
+      "level": 4,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 4,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Kopott vászoncsizma"
+    },
+    {
+      "id": "boots_l9",
+      "slot": "boots",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 9,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Vadászcsizma"
+    },
+    {
+      "id": "boots_1",
+      "slot": "boots",
+      "level": 19,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 13,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4275,
+      "buyPrice": 21375,
+      "nameHu": "Vasalt bőrcsizma"
+    },
+    {
+      "id": "boots_l19",
+      "slot": "boots",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 18,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Országúti csizma"
+    },
+    {
+      "id": "boots_2",
+      "slot": "boots",
+      "level": 33,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 22,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 7425,
+      "buyPrice": 37125,
+      "nameHu": "Aranyveretes csizma"
+    },
+    {
+      "id": "boots_l30",
+      "slot": "boots",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Hídjáró csizma"
+    },
+    {
+      "id": "boots_l35",
+      "slot": "boots",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 30,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Szirtjáró csizma"
+    },
+    {
+      "id": "boots_3",
+      "slot": "boots",
+      "level": 50,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 32,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 11250,
+      "buyPrice": 56250,
+      "nameHu": "Homokjáró csizma"
+    },
+    {
+      "id": "boots_4",
+      "slot": "boots",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 34,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Prémes hágócsizma"
+    },
+    {
+      "id": "boots_5",
+      "slot": "boots",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 38,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Parázsjáró csizma"
+    },
+    {
+      "id": "bracelet_0",
+      "slot": "bracelet",
+      "level": 3,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 66,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Réz karkötő"
+    },
+    {
+      "id": "bracelet_l14",
+      "slot": "bracelet",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 162,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Farkasfogas karkötő"
+    },
+    {
+      "id": "bracelet_1",
+      "slot": "bracelet",
+      "level": 18,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 246,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 4050,
+      "buyPrice": 20250,
+      "nameHu": "Jáde karkötő"
+    },
+    {
+      "id": "bracelet_l27",
+      "slot": "bracelet",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 342,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Pecsétes karkötő"
+    },
+    {
+      "id": "bracelet_l34",
+      "slot": "bracelet",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 474,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Gyantagyöngyös karkötő"
+    },
+    {
+      "id": "bracelet_2",
+      "slot": "bracelet",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 582,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Borostyán karkötő"
+    },
+    {
+      "id": "bracelet_3",
+      "slot": "bracelet",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 678,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Holdkő karkötő"
+    },
+    {
+      "id": "bracelet_4",
+      "slot": "bracelet",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 750,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Tűzopál karkötő"
+    },
+    {
+      "id": "necklace_0",
+      "slot": "necklace",
+      "level": 5,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.015,
+        "attack": 0
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Csontgyöngy nyaklánc"
+    },
+    {
+      "id": "necklace_l16",
+      "slot": "necklace",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.021,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Ezüstpénzes nyaklánc"
+    },
+    {
+      "id": "necklace_1",
+      "slot": "necklace",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.036,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Jádemedálos aranylánc"
+    },
+    {
+      "id": "necklace_l29",
+      "slot": "necklace",
+      "level": 31,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.041,
+        "attack": 0
+      },
+      "sellPrice": 6975,
+      "buyPrice": 34875,
+      "nameHu": "Csontfaragású nyaklánc"
+    },
+    {
+      "id": "necklace_l35",
+      "slot": "necklace",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.047,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Totemmedálos nyakék"
+    },
+    {
+      "id": "necklace_2",
+      "slot": "necklace",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.056,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Agyarmedálos lánc"
+    },
+    {
+      "id": "necklace_3",
+      "slot": "necklace",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.064,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Dércseppes nyakék"
+    },
+    {
+      "id": "necklace_4",
+      "slot": "necklace",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0.07,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Parázsszív nyakék"
+    },
+    {
+      "id": "earrings_0",
+      "slot": "earrings",
+      "level": 7,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 6
+      },
+      "sellPrice": 2250,
+      "buyPrice": 11250,
+      "nameHu": "Ezüst fülbevaló"
+    },
+    {
+      "id": "earrings_l18",
+      "slot": "earrings",
+      "level": 11,
+      "tier": 0,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 8
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Aranykarikás fülbevaló"
+    },
+    {
+      "id": "earrings_1",
+      "slot": "earrings",
+      "level": 21,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 13
+      },
+      "sellPrice": 4725,
+      "buyPrice": 23625,
+      "nameHu": "Jádecseppes fülbevaló"
+    },
+    {
+      "id": "earrings_l30",
+      "slot": "earrings",
+      "level": 26,
+      "tier": 1,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 15
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Szélcsengős fülbevaló"
+    },
+    {
+      "id": "earrings_l36",
+      "slot": "earrings",
+      "level": 37,
+      "tier": 2,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 21
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Agyarfüggős fülbevaló"
+    },
+    {
+      "id": "earrings_2",
+      "slot": "earrings",
+      "level": 46,
+      "tier": 3,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 25
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Gyöngyház fülbevaló"
+    },
+    {
+      "id": "earrings_3",
+      "slot": "earrings",
+      "level": 54,
+      "tier": 4,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 29
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Fagyvirág fülbevaló"
+    },
+    {
+      "id": "earrings_4",
+      "slot": "earrings",
+      "level": 60,
+      "tier": 5,
+      "classes": null,
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 32
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Lángrubin fülbevaló"
+    },
+    {
+      "id": "w_warrior_set_m1",
+      "slot": "weapon",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_l10",
+      "family": "m1",
+      "values": {
+        "atkMin": 26,
+        "atkMax": 38,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz fegyver"
+    },
+    {
+      "id": "a_warrior_set_m1",
+      "slot": "armor",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 1,
+      "art": "a_warrior_1",
+      "portrait": "set_m1",
+      "family": "m1",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz vért"
+    },
+    {
+      "id": "w_ninja_set_m1",
+      "slot": "weapon",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_l10",
+      "family": "m1",
+      "values": {
+        "atkMin": 26,
+        "atkMax": 38,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz fegyver"
+    },
+    {
+      "id": "a_ninja_set_m1",
+      "slot": "armor",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 1,
+      "art": "a_ninja_1",
+      "portrait": "set_m1",
+      "family": "m1",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz vért"
+    },
+    {
+      "id": "w_shaman_set_m1",
+      "slot": "weapon",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_l10",
+      "family": "m1",
+      "values": {
+        "atkMin": 26,
+        "atkMax": 38,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz fegyver"
+    },
+    {
+      "id": "a_shaman_set_m1",
+      "slot": "armor",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 1,
+      "art": "a_shaman_1",
+      "portrait": "set_m1",
+      "family": "m1",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz vért"
+    },
+    {
+      "id": "w_mage_blade_set_m1",
+      "slot": "weapon",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_l10",
+      "family": "m1",
+      "values": {
+        "atkMin": 26,
+        "atkMax": 38,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m1",
+      "slot": "armor",
+      "level": 11,
+      "tier": 0,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 1,
+      "art": "a_mage_blade_1",
+      "portrait": "set_m1",
+      "family": "m1",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 24,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 2475,
+      "buyPrice": 12375,
+      "nameHu": "Határcsősz vért"
+    },
+    {
+      "id": "w_warrior_set_m2",
+      "slot": "weapon",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_3",
+      "family": "m2",
+      "values": {
+        "atkMin": 56,
+        "atkMax": 80,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló fegyver"
+    },
+    {
+      "id": "a_warrior_set_m2",
+      "slot": "armor",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 3,
+      "art": "a_warrior_3",
+      "portrait": "set_m2",
+      "family": "m2",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 48,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló vért"
+    },
+    {
+      "id": "w_ninja_set_m2",
+      "slot": "weapon",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_3",
+      "family": "m2",
+      "values": {
+        "atkMin": 56,
+        "atkMax": 80,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló fegyver"
+    },
+    {
+      "id": "a_ninja_set_m2",
+      "slot": "armor",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 3,
+      "art": "a_ninja_3",
+      "portrait": "set_m2",
+      "family": "m2",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 48,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló vért"
+    },
+    {
+      "id": "w_shaman_set_m2",
+      "slot": "weapon",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_3",
+      "family": "m2",
+      "values": {
+        "atkMin": 56,
+        "atkMax": 80,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló fegyver"
+    },
+    {
+      "id": "a_shaman_set_m2",
+      "slot": "armor",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 3,
+      "art": "a_shaman_3",
+      "portrait": "set_m2",
+      "family": "m2",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 48,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló vért"
+    },
+    {
+      "id": "w_mage_blade_set_m2",
+      "slot": "weapon",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_3",
+      "family": "m2",
+      "values": {
+        "atkMin": 56,
+        "atkMax": 80,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m2",
+      "slot": "armor",
+      "level": 26,
+      "tier": 1,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 3,
+      "art": "a_mage_blade_3",
+      "portrait": "set_m2",
+      "family": "m2",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 48,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 5850,
+      "buyPrice": 29250,
+      "nameHu": "Útonálló vért"
+    },
+    {
+      "id": "w_warrior_set_m3",
+      "slot": "weapon",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_l38",
+      "family": "m3",
+      "values": {
+        "atkMin": 78,
+        "atkMax": 111,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös fegyver"
+    },
+    {
+      "id": "a_warrior_set_m3",
+      "slot": "armor",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 3,
+      "art": "a_warrior_l39",
+      "portrait": "set_m3",
+      "family": "m3",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 65,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös vért"
+    },
+    {
+      "id": "w_ninja_set_m3",
+      "slot": "weapon",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_l38",
+      "family": "m3",
+      "values": {
+        "atkMin": 78,
+        "atkMax": 111,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös fegyver"
+    },
+    {
+      "id": "a_ninja_set_m3",
+      "slot": "armor",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 3,
+      "art": "a_ninja_l39",
+      "portrait": "set_m3",
+      "family": "m3",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 65,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös vért"
+    },
+    {
+      "id": "w_shaman_set_m3",
+      "slot": "weapon",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_l38",
+      "family": "m3",
+      "values": {
+        "atkMin": 78,
+        "atkMax": 111,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös fegyver"
+    },
+    {
+      "id": "a_shaman_set_m3",
+      "slot": "armor",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 3,
+      "art": "a_shaman_l39",
+      "portrait": "set_m3",
+      "family": "m3",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 65,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös vért"
+    },
+    {
+      "id": "w_mage_blade_set_m3",
+      "slot": "weapon",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_l38",
+      "family": "m3",
+      "values": {
+        "atkMin": 78,
+        "atkMax": 111,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m3",
+      "slot": "armor",
+      "level": 37,
+      "tier": 2,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 3,
+      "art": "a_mage_blade_l39",
+      "portrait": "set_m3",
+      "family": "m3",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 65,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 8325,
+      "buyPrice": 41625,
+      "nameHu": "Medvebőrös vért"
+    },
+    {
+      "id": "w_warrior_set_m4",
+      "slot": "weapon",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_4",
+      "family": "m4",
+      "values": {
+        "atkMin": 96,
+        "atkMax": 136,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr fegyver"
+    },
+    {
+      "id": "a_warrior_set_m4",
+      "slot": "armor",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 4,
+      "art": "a_warrior_4",
+      "portrait": "set_m4",
+      "family": "m4",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 80,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr vért"
+    },
+    {
+      "id": "w_ninja_set_m4",
+      "slot": "weapon",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_4",
+      "family": "m4",
+      "values": {
+        "atkMin": 96,
+        "atkMax": 136,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr fegyver"
+    },
+    {
+      "id": "a_ninja_set_m4",
+      "slot": "armor",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 4,
+      "art": "a_ninja_4",
+      "portrait": "set_m4",
+      "family": "m4",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 80,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr vért"
+    },
+    {
+      "id": "w_shaman_set_m4",
+      "slot": "weapon",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_4",
+      "family": "m4",
+      "values": {
+        "atkMin": 96,
+        "atkMax": 136,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr fegyver"
+    },
+    {
+      "id": "a_shaman_set_m4",
+      "slot": "armor",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 4,
+      "art": "a_shaman_4",
+      "portrait": "set_m4",
+      "family": "m4",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 80,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr vért"
+    },
+    {
+      "id": "w_mage_blade_set_m4",
+      "slot": "weapon",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_4",
+      "family": "m4",
+      "values": {
+        "atkMin": 96,
+        "atkMax": 136,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m4",
+      "slot": "armor",
+      "level": 46,
+      "tier": 3,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 4,
+      "art": "a_mage_blade_4",
+      "portrait": "set_m4",
+      "family": "m4",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 80,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 10350,
+      "buyPrice": 51750,
+      "nameHu": "Romőr vért"
+    },
+    {
+      "id": "w_warrior_set_m5",
+      "slot": "weapon",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_5",
+      "family": "m5",
+      "values": {
+        "atkMin": 112,
+        "atkMax": 158,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar fegyver"
+    },
+    {
+      "id": "a_warrior_set_m5",
+      "slot": "armor",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 5,
+      "art": "a_warrior_5",
+      "portrait": "set_m5",
+      "family": "m5",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 92,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar vért"
+    },
+    {
+      "id": "w_ninja_set_m5",
+      "slot": "weapon",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_5",
+      "family": "m5",
+      "values": {
+        "atkMin": 112,
+        "atkMax": 158,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar fegyver"
+    },
+    {
+      "id": "a_ninja_set_m5",
+      "slot": "armor",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 5,
+      "art": "a_ninja_5",
+      "portrait": "set_m5",
+      "family": "m5",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 92,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar vért"
+    },
+    {
+      "id": "w_shaman_set_m5",
+      "slot": "weapon",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_5",
+      "family": "m5",
+      "values": {
+        "atkMin": 112,
+        "atkMax": 158,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar fegyver"
+    },
+    {
+      "id": "a_shaman_set_m5",
+      "slot": "armor",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 5,
+      "art": "a_shaman_5",
+      "portrait": "set_m5",
+      "family": "m5",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 92,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar vért"
+    },
+    {
+      "id": "w_mage_blade_set_m5",
+      "slot": "weapon",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_5",
+      "family": "m5",
+      "values": {
+        "atkMin": 112,
+        "atkMax": 158,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m5",
+      "slot": "armor",
+      "level": 54,
+      "tier": 4,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 5,
+      "art": "a_mage_blade_5",
+      "portrait": "set_m5",
+      "family": "m5",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 92,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 12150,
+      "buyPrice": 60750,
+      "nameHu": "Hóudvar vért"
+    },
+    {
+      "id": "w_warrior_set_m6",
+      "slot": "weapon",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "warrior"
+      ],
+      "art": "w_warrior_5",
+      "family": "m6",
+      "values": {
+        "atkMin": 124,
+        "atkMax": 175,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós fegyver"
+    },
+    {
+      "id": "a_warrior_set_m6",
+      "slot": "armor",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "warrior"
+      ],
+      "portraitTier": 5,
+      "art": "a_warrior_5",
+      "portrait": "set_m6",
+      "family": "m6",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 102,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós vért"
+    },
+    {
+      "id": "w_ninja_set_m6",
+      "slot": "weapon",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "ninja"
+      ],
+      "art": "w_ninja_5",
+      "family": "m6",
+      "values": {
+        "atkMin": 124,
+        "atkMax": 175,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós fegyver"
+    },
+    {
+      "id": "a_ninja_set_m6",
+      "slot": "armor",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "ninja"
+      ],
+      "portraitTier": 5,
+      "art": "a_ninja_5",
+      "portrait": "set_m6",
+      "family": "m6",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 102,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós vért"
+    },
+    {
+      "id": "w_shaman_set_m6",
+      "slot": "weapon",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "shaman"
+      ],
+      "art": "w_shaman_5",
+      "family": "m6",
+      "values": {
+        "atkMin": 124,
+        "atkMax": 175,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós fegyver"
+    },
+    {
+      "id": "a_shaman_set_m6",
+      "slot": "armor",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "shaman"
+      ],
+      "portraitTier": 5,
+      "art": "a_shaman_5",
+      "portrait": "set_m6",
+      "family": "m6",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 102,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós vért"
+    },
+    {
+      "id": "w_mage_blade_set_m6",
+      "slot": "weapon",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "mage_blade"
+      ],
+      "art": "w_mage_blade_5",
+      "family": "m6",
+      "values": {
+        "atkMin": 124,
+        "atkMax": 175,
+        "def": 0,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós fegyver"
+    },
+    {
+      "id": "a_mage_blade_set_m6",
+      "slot": "armor",
+      "level": 60,
+      "tier": 5,
+      "classes": [
+        "mage_blade"
+      ],
+      "portraitTier": 5,
+      "art": "a_mage_blade_5",
+      "portrait": "set_m6",
+      "family": "m6",
+      "values": {
+        "atkMin": 0,
+        "atkMax": 0,
+        "def": 102,
+        "maxHp": 0,
+        "crit": 0,
+        "attack": 0
+      },
+      "sellPrice": 13500,
+      "buyPrice": 67500,
+      "nameHu": "Csillagjós vért"
+    }
+  ],
+  "itemRules": {
+    "sockets": {
+      "byRarity": {
+        "common": 0,
+        "rare": 1,
+        "heroic": 2,
+        "unique": 2
+      },
+      "extraAtPlus": 7,
+      "extraFor": [
+        "heroic",
+        "unique"
+      ]
+    },
+    "overflowMax": 40
+  },
+  "collectionFamilies": {
+    "rules": {
+      "marksMax": 28,
+      "setPity": 5,
+      "stormPity": 4,
+      "stars": {
+        "max": 3,
+        "setDupTrophies": 2,
+        "uniqueDupTrophies": 8
+      },
+      "trophy": {
+        "name": "Hőstett",
+        "icon": "ui/hostett",
+        "rounding": "random"
+      },
+      "reveal": {
+        "underPromise": {
+          "heroic": 0.25,
+          "unique": 0.5
+        }
+      },
+      "starEffects": {
+        "setPerStar": 0.01,
+        "uniqueLinePerStar": 0.02,
+        "effectRanks": [
+          {
+            "stars": 2,
+            "share": 0.1667
+          },
+          {
+            "stars": 3,
+            "share": 0.3333
+          }
+        ]
+      }
+    },
+    "families": [
+      {
+        "id": "m1",
+        "bossId": "boss_m1",
+        "mapIndex": 1,
+        "itemLevel": 11,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m1",
+          "icon": "icons/set_m1",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "maxHp",
+                  "value": 65
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsBandit",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "potionHeal",
+                  "value": 0.075
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m1",
+          "icon": "icons/uniq_m1",
+          "slot": "boots",
+          "lines": [
+            {
+              "type": "defence",
+              "tier": 3
+            },
+            {
+              "type": "maxHp",
+              "tier": 3
+            },
+            {
+              "type": "potionHeal",
+              "tier": 3
+            }
+          ],
+          "effect": {
+            "kind": "firstStrike",
+            "value": 3,
+            "storm": 4
+          },
+          "stormTier": 3
+        },
+        "loot": {
+          "set": {
+            "B": 0.22,
+            "A": 0.25,
+            "S": 0.3,
+            "first": 1,
+            "hard": 1
+          },
+          "unique": {
+            "B": 0.025,
+            "A": 0.03,
+            "S": 0.035,
+            "first": 0.025,
+            "hard": 0.15
+          },
+          "trophies": {
+            "B": 0,
+            "A": 0,
+            "S": 0,
+            "first": 0,
+            "hard": 0
+          }
+        }
+      },
+      {
+        "id": "m2",
+        "bossId": "boss_m2",
+        "mapIndex": 2,
+        "itemLevel": 26,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m2",
+          "icon": "icons/set_m2",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "attack",
+                  "value": 14
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsOrc",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "skillDamage",
+                  "value": 0.12
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m2",
+          "icon": "icons/uniq_m2",
+          "slot": "shield",
+          "lines": [
+            {
+              "type": "defence",
+              "tier": 3
+            },
+            {
+              "type": "maxHp",
+              "tier": 3
+            },
+            {
+              "type": "potionHeal",
+              "tier": 3
+            }
+          ],
+          "effect": {
+            "kind": "critHeal",
+            "value": 0.25,
+            "storm": 0.37
+          },
+          "stormTier": 4
+        },
+        "loot": {
+          "set": {
+            "B": 0.22,
+            "A": 0.25,
+            "S": 0.3,
+            "first": 1,
+            "hard": 1
+          },
+          "unique": {
+            "B": 0.025,
+            "A": 0.03,
+            "S": 0.035,
+            "first": 0.025,
+            "hard": 0.15
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      },
+      {
+        "id": "m3",
+        "bossId": "boss_m3",
+        "mapIndex": 3,
+        "itemLevel": 37,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m3",
+          "icon": "icons/set_m3",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "maxHp",
+                  "value": 145
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsDesert",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "critDamage",
+                  "value": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m3",
+          "icon": "icons/uniq_m3",
+          "slot": "boots",
+          "lines": [
+            {
+              "type": "maxHp",
+              "tier": 4
+            },
+            {
+              "type": "defence",
+              "tier": 4
+            },
+            {
+              "type": "potionHeal",
+              "tier": 4
+            }
+          ],
+          "effect": {
+            "kind": "stun",
+            "value": 0.07,
+            "storm": 0.1
+          },
+          "stormTier": 5
+        },
+        "loot": {
+          "set": {
+            "B": 0.22,
+            "A": 0.25,
+            "S": 0.3,
+            "first": 1,
+            "hard": 1
+          },
+          "unique": {
+            "B": 0.025,
+            "A": 0.03,
+            "S": 0.035,
+            "first": 0.025,
+            "hard": 0.15
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      },
+      {
+        "id": "m4",
+        "bossId": "boss_m4",
+        "mapIndex": 4,
+        "itemLevel": 46,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m4",
+          "icon": "icons/set_m4",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "attack",
+                  "value": 21
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsIce",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "lifesteal",
+                  "value": 0.03
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m4",
+          "icon": "icons/uniq_m4",
+          "slot": "shield",
+          "lines": [
+            {
+              "type": "defence",
+              "tier": 4
+            },
+            {
+              "type": "maxHp",
+              "tier": 4
+            },
+            {
+              "type": "potionHeal",
+              "tier": 4
+            }
+          ],
+          "effect": {
+            "kind": "shell",
+            "value": 3,
+            "storm": 4,
+            "mult": 0.5
+          },
+          "stormTier": 5
+        },
+        "loot": {
+          "set": {
+            "B": 0.11,
+            "A": 0.135,
+            "S": 0.17,
+            "first": 1,
+            "hard": 0.6
+          },
+          "unique": {
+            "B": 0.015,
+            "A": 0.018,
+            "S": 0.021,
+            "first": 0.015,
+            "hard": 0.105
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      },
+      {
+        "id": "m5",
+        "bossId": "boss_m5",
+        "mapIndex": 5,
+        "itemLevel": 54,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m5",
+          "icon": "icons/set_m5",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "maxHp",
+                  "value": 190
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsFire",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "damageTaken",
+                  "value": 0.045
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m5",
+          "icon": "icons/uniq_m5",
+          "slot": "boots",
+          "lines": [
+            {
+              "type": "evade",
+              "tier": 4
+            },
+            {
+              "type": "maxHp",
+              "tier": 4
+            },
+            {
+              "type": "defence",
+              "tier": 4
+            }
+          ],
+          "effect": {
+            "kind": "cadence",
+            "value": 0.15,
+            "storm": 0.22,
+            "every": 3
+          },
+          "stormTier": 5
+        },
+        "loot": {
+          "set": {
+            "B": 0.11,
+            "A": 0.135,
+            "S": 0.17,
+            "first": 1,
+            "hard": 0.6
+          },
+          "unique": {
+            "B": 0.015,
+            "A": 0.018,
+            "S": 0.021,
+            "first": 0.015,
+            "hard": 0.105
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      },
+      {
+        "id": "m6",
+        "bossId": "boss_m6",
+        "mapIndex": 6,
+        "itemLevel": 60,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m6",
+          "icon": "icons/set_m6",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "attack",
+                  "value": 26
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsUndead",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "critDamage",
+                  "value": 0.525
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m6",
+          "icon": "icons/uniq_m6",
+          "slot": "shield",
+          "lines": [
+            {
+              "type": "maxHp",
+              "tier": 4
+            },
+            {
+              "type": "defence",
+              "tier": 4
+            },
+            {
+              "type": "potionHeal",
+              "tier": 4
+            }
+          ],
+          "effect": {
+            "kind": "thorns",
+            "value": 0.12,
+            "storm": 0.18
+          },
+          "stormTier": 5
+        },
+        "loot": {
+          "set": {
+            "B": 0.11,
+            "A": 0.135,
+            "S": 0.17,
+            "first": 1,
+            "hard": 0.6
+          },
+          "unique": {
+            "B": 0.015,
+            "A": 0.018,
+            "S": 0.021,
+            "first": 0.015,
+            "hard": 0.105
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      }
+    ],
+    "momentum": {
+      "perLoss": 0.07,
+      "maxLosses": 3
+    },
+    "dark": {
+      "awakening": {
+        "trophies": 8,
+        "nyangPerLevel": 20000
+      },
+      "familyLevels": [
+        11,
+        26,
+        37,
+        46,
+        54,
+        60
+      ],
+      "hard": {
+        "byBoss": {
+          "boss_m1": 20,
+          "boss_m2": 33,
+          "boss_m3": 44,
+          "boss_m4": 53,
+          "boss_m5": 60,
+          "boss_m6": 60
+        }
+      },
+      "starEffects": {
+        "setPerStar": 0.01,
+        "uniqueLinePerStar": 0.02,
+        "effectRanks": [
+          {
+            "stars": 2,
+            "share": 0.1667
+          },
+          {
+            "stars": 3,
+            "share": 0.3333
+          }
+        ]
+      },
+      "towerEcho": {
+        "mult": 1.5,
+        "trophies": 2,
+        "trophyMinLevel": 30,
+        "lossCooldownSec": 10
+      },
+      "worldBossChest": {
+        "tiers": {
+          "top10": 0.1,
+          "top50": 0.5
+        },
+        "marks": 2,
+        "odds": {
+          "top10": {
+            "rare": 0.45,
+            "heroic": 0.4,
+            "heroicPlus": 0.15
+          },
+          "top50": {
+            "rare": 0.73,
+            "heroic": 0.24,
+            "heroicPlus": 0.03
+          },
+          "rest": {
+            "rare": 0.89,
+            "heroic": 0.11,
+            "heroicPlus": 0
+          }
+        }
+      }
+    }
+  },
+  "locale": {
+    "item": {
+      "equipped": "Viselve",
+      "requiredLevel": "Szükséges szint: {{level}}",
+      "classOnly": "Kaszt: {{classes}}",
+      "anyClass": "Bármelyik kaszt viselheti",
+      "levelMissing_one": "Még {{count}} szint kell",
+      "levelMissing_other": "Még {{count}} szint kell",
+      "notYourClass": "Nem a te kasztod",
+      "damage": "Sebzés",
+      "defence": "Védelem",
+      "maxHp": "Max. HP",
+      "crit": "Kritikus esély",
+      "attack": "Sebzés",
+      "better": "jobb:",
+      "worse": "gyengébb:",
+      "comparedTo": "Most ezt viseled: {{name}}. A nyilak az alapértékeket vetik össze, a bónuszok nélkül.",
+      "bonuses": "Bónuszok",
+      "sellPrice": "Eladási ár",
+      "equip": "Felveszem",
+      "unequip": "Leveszem",
+      "toForge": "Kovácshoz",
+      "toForgeLabel": "Fejlesztés a kovácsnál: {{name}}, +{{plus}} fokozatra",
+      "sell": "Eladom",
+      "sellConfirm": "Biztosan eladod? Utána nem kapod vissza.",
+      "sellScrollConfirm": "A Hamuóvó-tekercs a kovácsnál megmentheti a tárgyadat. Biztosan eladod?",
+      "sellAllConfirm": "Az összeset eladod ({{count}} db). Biztosan?",
+      "sellRareConfirm": "{{name}}: értékes, és eladás után nem kapod vissza. Biztosan eladod?",
+      "notSellable": "Ezt nem adhatod el, de jól jön még.",
+      "sellYes": "Igen, eladom",
+      "owned_one": "{{count}} db",
+      "owned_other": "{{count}} db",
+      "pricePerPiece": "Darabja",
+      "quantity": "Darabszám",
+      "less": "Eggyel kevesebb",
+      "more": "Eggyel több",
+      "all": "Mind",
+      "total": "Összesen",
+      "sellCount": "Eladom ({{count}} db)"
+    },
+    "items": {
+      "w_warrior_0": "Rozsdás pallos",
+      "w_warrior_1": "Vas pallos",
+      "w_warrior_2": "Aranyberakásos pallos",
+      "w_warrior_3": "Sárkánypallos",
+      "w_warrior_4": "Viharpallos",
+      "w_warrior_5": "Égszakító pallos",
+      "w_ninja_0": "Csorba tőr",
+      "w_ninja_1": "Görbe acéltőr",
+      "w_ninja_2": "Fűrészes árnytőr",
+      "w_ninja_3": "Sárkányfog-tőr",
+      "w_ninja_4": "Holdsarló-tőr",
+      "w_ninja_5": "Árnyvihar-tőr",
+      "w_mage_blade_0": "Sötét vaskard",
+      "w_mage_blade_1": "Rúnás lángkard",
+      "w_mage_blade_2": "Szarvas lángkard",
+      "w_mage_blade_3": "Démonszem-kard",
+      "w_mage_blade_4": "Lidércláng-kard",
+      "w_mage_blade_5": "Pokolparázs-kard",
+      "w_shaman_0": "Szakadt papírlegyező",
+      "w_shaman_1": "Felhőmintás selyemlegyező",
+      "w_shaman_2": "Ezüstbordás legyező",
+      "w_shaman_3": "Arany sárkánylegyező",
+      "w_shaman_4": "Villámtollas legyező",
+      "w_shaman_5": "Hajnalfény-legyező",
+      "a_warrior_0": "Vasalt bőrvért",
+      "a_warrior_1": "Vas lemezvért",
+      "a_warrior_2": "Tigrisvállas vért",
+      "a_warrior_3": "Ezüst tigrisvért",
+      "a_warrior_4": "Viharacél vért",
+      "a_warrior_5": "Sárkánykirály-vért",
+      "a_ninja_0": "Kék bőrruha",
+      "a_ninja_1": "Láncujjas bőrmellény",
+      "a_ninja_2": "Bíbor árnyvért",
+      "a_ninja_3": "Sárkánypikkely-vért",
+      "a_ninja_4": "Éjselyem vért",
+      "a_ninja_5": "Holdárnyék-vért",
+      "a_mage_blade_0": "Fekete vért",
+      "a_mage_blade_1": "Fekete pikkelyvért",
+      "a_mage_blade_2": "Szarvas rúnavért",
+      "a_mage_blade_3": "Démonvért",
+      "a_mage_blade_4": "Lidércvért",
+      "a_mage_blade_5": "Hamukirály-vért",
+      "a_shaman_0": "Fehér-kék köntös",
+      "a_shaman_1": "Kék szertartásköpeny",
+      "a_shaman_2": "Főpapi palást",
+      "a_shaman_3": "Égi palást",
+      "a_shaman_4": "Csillagszövésű palást",
+      "a_shaman_5": "Hajnalpalást",
+      "helmet_0": "Szegecselt bőrsapka",
+      "helmet_1": "Lószőrforgós sisak",
+      "helmet_2": "Aranyszarvú sisak",
+      "helmet_3": "Bronzálarcos sisak",
+      "helmet_4": "Zúzmarás sisak",
+      "helmet_5": "Lángtaréjos sisak",
+      "shield_0": "Vasalt fapajzs",
+      "shield_1": "Tigrises acélpajzs",
+      "shield_2": "Sárkányos aranypajzs",
+      "shield_3": "Teknőcpáncél-pajzs",
+      "shield_4": "Jégtükör-pajzs",
+      "shield_5": "Obszidiánpajzs",
+      "boots_0": "Kopott vászoncsizma",
+      "boots_1": "Vasalt bőrcsizma",
+      "boots_2": "Aranyveretes csizma",
+      "boots_3": "Homokjáró csizma",
+      "boots_4": "Prémes hágócsizma",
+      "boots_5": "Parázsjáró csizma",
+      "bracelet_0": "Réz karkötő",
+      "bracelet_1": "Jáde karkötő",
+      "bracelet_2": "Borostyán karkötő",
+      "bracelet_3": "Holdkő karkötő",
+      "bracelet_4": "Tűzopál karkötő",
+      "necklace_0": "Csontgyöngy nyaklánc",
+      "necklace_1": "Jádemedálos aranylánc",
+      "necklace_2": "Agyarmedálos lánc",
+      "necklace_3": "Dércseppes nyakék",
+      "necklace_4": "Parázsszív nyakék",
+      "earrings_0": "Ezüst fülbevaló",
+      "earrings_1": "Jádecseppes fülbevaló",
+      "earrings_2": "Gyöngyház fülbevaló",
+      "earrings_3": "Fagyvirág fülbevaló",
+      "earrings_4": "Lángrubin fülbevaló",
+      "w_warrior_l10": "Bronzmarkolatú pallos",
+      "w_ninja_l10": "Agancsnyelű tőr",
+      "w_mage_blade_l10": "Kovácstűz-kard",
+      "w_shaman_l10": "Darutollas legyező",
+      "w_warrior_l20": "Zsoldospallos",
+      "w_ninja_l20": "Haramiatőr",
+      "w_mage_blade_l20": "Rablólovag-kard",
+      "w_shaman_l20": "Rejtett pengéjű legyező",
+      "w_warrior_l32": "Totemfaragású pallos",
+      "w_ninja_l32": "Agyarhegyű tőr",
+      "w_mage_blade_l32": "Őrtűz-kard",
+      "w_shaman_l32": "Sasszárny-legyező",
+      "w_warrior_l38": "Törzsfő-pallos",
+      "w_ninja_l38": "Vasagyar-tőr",
+      "w_mage_blade_l38": "Ostromtűz-kard",
+      "w_shaman_l38": "Szurdokszél-legyező",
+      "w_warrior_l50": "Jégtörő pallos",
+      "w_ninja_l50": "Fagyfog-tőr",
+      "w_mage_blade_l50": "Jégláng-kard",
+      "w_shaman_l50": "Hóvihar-legyező",
+      "a_warrior_l33": "Agyarvállas vért",
+      "a_ninja_l33": "Vasfonatú vért",
+      "a_mage_blade_l33": "Totemrúnás vért",
+      "a_shaman_l33": "Szellemdobos palást",
+      "a_warrior_l39": "Szurdokőr-vért",
+      "a_ninja_l39": "Szakadékárny-vért",
+      "a_mage_blade_l39": "Vasszarvú vért",
+      "a_shaman_l39": "Ősfenyő-palást",
+      "a_warrior_l50": "Gleccservért",
+      "a_ninja_l50": "Fagyköd-vért",
+      "a_mage_blade_l50": "Zúzmaradémon-vért",
+      "a_shaman_l50": "Hófátyol-palást",
+      "helmet_l8": "Vaspántos bőrsisak",
+      "helmet_l18": "Nyílfogó sisak",
+      "helmet_l30": "Csontálarcos sisak",
+      "helmet_l35": "Kosszarvú csatasisak",
+      "shield_l11": "Medvebőr-pajzs",
+      "shield_l21": "Testőrpajzs",
+      "shield_l31": "Sziklafal-pajzs",
+      "shield_l36": "Vörösmancs-pajzs",
+      "boots_l9": "Vadászcsizma",
+      "boots_l19": "Országúti csizma",
+      "boots_l30": "Hídjáró csizma",
+      "boots_l35": "Szirtjáró csizma",
+      "bracelet_l14": "Farkasfogas karkötő",
+      "bracelet_l27": "Pecsétes karkötő",
+      "bracelet_l34": "Gyantagyöngyös karkötő",
+      "necklace_l16": "Ezüstpénzes nyaklánc",
+      "necklace_l29": "Csontfaragású nyaklánc",
+      "necklace_l35": "Totemmedálos nyakék",
+      "earrings_l18": "Aranykarikás fülbevaló",
+      "earrings_l30": "Szélcsengős fülbevaló",
+      "earrings_l36": "Agyarfüggős fülbevaló",
+      "w_warrior_set_m1": "Határcsősz fegyver",
+      "a_warrior_set_m1": "Határcsősz vért",
+      "w_ninja_set_m1": "Határcsősz fegyver",
+      "a_ninja_set_m1": "Határcsősz vért",
+      "w_shaman_set_m1": "Határcsősz fegyver",
+      "a_shaman_set_m1": "Határcsősz vért",
+      "w_mage_blade_set_m1": "Határcsősz fegyver",
+      "a_mage_blade_set_m1": "Határcsősz vért",
+      "w_warrior_set_m2": "Útonálló fegyver",
+      "a_warrior_set_m2": "Útonálló vért",
+      "w_ninja_set_m2": "Útonálló fegyver",
+      "a_ninja_set_m2": "Útonálló vért",
+      "w_shaman_set_m2": "Útonálló fegyver",
+      "a_shaman_set_m2": "Útonálló vért",
+      "w_mage_blade_set_m2": "Útonálló fegyver",
+      "a_mage_blade_set_m2": "Útonálló vért",
+      "w_warrior_set_m3": "Medvebőrös fegyver",
+      "a_warrior_set_m3": "Medvebőrös vért",
+      "w_ninja_set_m3": "Medvebőrös fegyver",
+      "a_ninja_set_m3": "Medvebőrös vért",
+      "w_shaman_set_m3": "Medvebőrös fegyver",
+      "a_shaman_set_m3": "Medvebőrös vért",
+      "w_mage_blade_set_m3": "Medvebőrös fegyver",
+      "a_mage_blade_set_m3": "Medvebőrös vért",
+      "w_warrior_set_m4": "Romőr fegyver",
+      "a_warrior_set_m4": "Romőr vért",
+      "w_ninja_set_m4": "Romőr fegyver",
+      "a_ninja_set_m4": "Romőr vért",
+      "w_shaman_set_m4": "Romőr fegyver",
+      "a_shaman_set_m4": "Romőr vért",
+      "w_mage_blade_set_m4": "Romőr fegyver",
+      "a_mage_blade_set_m4": "Romőr vért",
+      "w_warrior_set_m5": "Hóudvar fegyver",
+      "a_warrior_set_m5": "Hóudvar vért",
+      "w_ninja_set_m5": "Hóudvar fegyver",
+      "a_ninja_set_m5": "Hóudvar vért",
+      "w_shaman_set_m5": "Hóudvar fegyver",
+      "a_shaman_set_m5": "Hóudvar vért",
+      "w_mage_blade_set_m5": "Hóudvar fegyver",
+      "a_mage_blade_set_m5": "Hóudvar vért",
+      "w_warrior_set_m6": "Csillagjós fegyver",
+      "a_warrior_set_m6": "Csillagjós vért",
+      "w_ninja_set_m6": "Csillagjós fegyver",
+      "a_ninja_set_m6": "Csillagjós vért",
+      "w_shaman_set_m6": "Csillagjós fegyver",
+      "a_shaman_set_m6": "Csillagjós vért",
+      "w_mage_blade_set_m6": "Csillagjós fegyver",
+      "a_mage_blade_set_m6": "Csillagjós vért"
+    },
+    "slots": {
+      "weapon": "Fegyver",
+      "armor": "Páncél",
+      "helmet": "Sisak",
+      "shield": "Pajzs",
+      "boots": "Csizma",
+      "bracelet": "Karkötő",
+      "necklace": "Nyaklánc",
+      "earrings": "Fülbevaló"
+    },
+    "gear": {
+      "rarity": {
+        "common": "Közönséges",
+        "rare": "Ritka",
+        "heroic": "Hősi",
+        "unique": "Mitikus",
+        "storm": "Viharedzett"
+      },
+      "tier": {
+        "text": "erősség {{tier}}/5"
+      },
+      "support": {
+        "cap": "plafon {{cap}}",
+        "capNow": "plafon {{cap}}, most {{applied}} hat",
+        "capFull": "plafon {{cap}}, már eléred",
+        "now": "most {{applied}} hat"
+      },
+      "sockets": {
+        "title": "Foglalat",
+        "aria": "Foglalatok: {{stones}} kő, {{open}} nyitott, {{closed}} +7-nél nyílik",
+        "count": "{{open}}/{{total}} nyitott foglalat"
+      },
+      "flags": {
+        "locked": "Lezárva"
+      },
+      "set": {
+        "line": "Szett: {{have}}/4 viselve",
+        "lineMax": "Szett: {{have}}/{{max}} viselve"
+      },
+      "unique": {
+        "effect": "Hatás: {{name}}",
+        "effects": {
+          "firstStrike": "Lesből",
+          "critHeal": "Kamatos kamat",
+          "stun": "Dobbantás",
+          "shell": "Kőhéj",
+          "cadence": "Keringő",
+          "thorns": "Tűzfal"
+        },
+        "desc": {
+          "firstStrike": "A harc első ütése ×{{v}} sebzést okoz{{alt}}.",
+          "critHeal": "A kritikus ütéseid a kiosztott sebzés {{v}}-át gyógyítják rajtad{{alt}}.",
+          "stun": "Minden ütésnek {{v}} esélye van arra, hogy kábítsa az ellenfelet, így az kihagyja a következő támadását{{alt}}.",
+          "shell": "Az első {{v}} kapott ütés {{cut}}-kal kevesebb sebzést okoz{{alt}}.",
+          "cadence": "Minden {{every}}. támadás {{v}}-kal több sebzést okoz{{alt}}.",
+          "thorns": "A támadó a neked okozott sebzés {{v}}-át kapja vissza{{alt}}."
+        },
+        "stormAlt": " ({{v}} viharedzetten)",
+        "pct": "{{v}}%"
+      },
+      "verdict": {
+        "better": "Jobb, mint a viselt",
+        "worse": "Gyengébb, mint a viselt",
+        "mixed": "Vegyes",
+        "same": "Nagyjából olyan, mint a viselt",
+        "empty": "Üres hely: tiszta nyereség",
+        "later": "Jobb lesz, {{level}}. szinttől",
+        "harcero": "Harcerő {{delta}}",
+        "mixedSet": "de a szetted {{after}}/4 lesz",
+        "mixedLine": "de kapod: {{line}}",
+        "mixedLost": "de elveszted: {{line}}",
+        "atPlus": "{{plus}} fejlesztve",
+        "raw": "Most, +{{plus}} szinten: Harcerő {{delta}}"
+      },
+      "compare": {
+        "worn": "Viselt",
+        "cand": "Új",
+        "vs": "→",
+        "none": "nincs",
+        "stat": "Érték",
+        "caption": "A viselt és az új tárgy értékei egymás mellett",
+        "betterHere": "(ez a jobb)",
+        "rawNow": "most: {{value}}"
+      },
+      "bag": {
+        "filters": "Szűrő",
+        "all": "Mind",
+        "better": "Jobb",
+        "otherClass": "Más kaszt",
+        "tooHigh": "Túl magas",
+        "locked": "Lezárt",
+        "filterCount": "{{name}} ({{count}})",
+        "upAria": "jobb, Harcerő +{{delta}}",
+        "levelAria": "{{level}}. szinttől",
+        "otherAria": "más kaszté",
+        "empty": "Üres a leltár. A vadászat és a portya hozza a tárgyakat.",
+        "sellWeak": "Eladás ({{count}})"
+      },
+      "stash": {
+        "title": "Tartalék",
+        "bar": "Tartalék: {{count}} vár",
+        "full": "Tele a Tartalék ({{count}}/{{max}})",
+        "open": "Megnézem",
+        "back": "Vissza",
+        "fullNote": "Amíg tele van, a vadászzsák nem gyűjthető be.",
+        "fewRoom": "Elöl a legjobbak: ha kevés a hely, a Hősi és a Ritka megy előbb.",
+        "safe": "Vedd át, vagy adj el, amit nem kérsz.",
+        "quickSell": "Gyors eladás ({{count}})",
+        "quickSellAria": "Közönségesek eladása ({{count}}): {{nyang}} nyang",
+        "quickHint": "A viseltnél gyengébb, le nem zárt Közönségesek a leltárból és a Tartalékból.",
+        "pickTitle": "Mit adsz el? A leggyengébb elöl.",
+        "warnValuable": "Hősi vagy Mitikus is van a kijelöltek közt: biztosan eladod?",
+        "error": "Az eladás nem sikerült. Próbáld újra.",
+        "mixItem": "{{count}} {{name}}",
+        "empty": "A Tartalék üres."
+      },
+      "hc": {
+        "name": "Harcerő",
+        "short": "Harcerő",
+        "aria": "Harcerő: {{value}}",
+        "ariaBrew": "Harcerő: {{value}}, a főzettel",
+        "text": "A hősöd ereje egy számban: a sebzésed és a szívósságod együtt.",
+        "now": "Most",
+        "base": "Alap (ranglista)",
+        "extra": "A ranglistán kívüli rész",
+        "notChance": "Hogy legyőzöl-e valakit, azt a harc előtti esély mondja meg.",
+        "brew": "Harci főzet hat még {{time}}",
+        "vsMap": "E térkép szörnyei ellen ({{tag}})",
+        "monsterAria": "A szörny Harcereje: {{value}}"
+      },
+      "side": {
+        "title": "Honnan jön a Harcerőd?",
+        "total": "Most {{full}} · alap {{base}}",
+        "intro": "A csíkos sorok a ranglistán nem számítanak.",
+        "sideLine": "Mellékrendszerek: +{{pct}}%",
+        "later": "Később nyílik: {{list}}",
+        "laterItem": "{{name}} ({{level}}.)",
+        "notInBase": "nem a ranglistán",
+        "go": "Megnézem",
+        "loading": "A bontás betöltése…",
+        "error": "A bontást nem sikerült betölteni.",
+        "retry": "Újrapróbálom",
+        "sources": {
+          "level": "Szint és statpontok",
+          "gear": "Felszerelés",
+          "plus": "Fejlesztés",
+          "lines": "Bónuszok és szettek",
+          "stones": "Szellemkövek",
+          "research": "Kutatás",
+          "pet": "Kísérő",
+          "guild": "Céh",
+          "house": "Ház",
+          "other": "Egyéb (esemény, királyság)",
+          "bought": "Vett statpont",
+          "brew": "Főzet",
+          "soul": "Viharszív"
+        }
+      },
+      "vs": {
+        "title": "Harcerő vagy esély?",
+        "progress": "Erősödtem?",
+        "progressA": "a Harcerő mutatja",
+        "item": "Jobb ez a tárgy?",
+        "itemA": "a Harcerő változása",
+        "fight": "Legyőzöm?",
+        "fightA": "a harc előtti esély",
+        "rule": "Ugyanazzal a Harcerővel két hős egészen más eséllyel mehet egy boss ellen: a kaszt és a bónuszok is számítanak."
+      },
+      "tabs": {
+        "bag": "Leltár",
+        "bagShort": "Leltár",
+        "stats": "Statok",
+        "short": {
+          "items": "Tárgyak",
+          "materials": "Anyagok",
+          "pets": "Kísérők",
+          "stats": "Statok"
+        }
+      },
+      "uniqueNames": {
+        "uniq_m1": "Öreg Csíkos papucsa",
+        "uniq_m2": "Aranyfog ládafedele",
+        "uniq_m3": "Nagymancs taposója",
+        "uniq_m4": "Romfal",
+        "uniq_m5": "Fagyúrnő táncipője",
+        "uniq_m6": "Lángszakáll tűzfala"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ﻿# Stonestorm Atlas – projektállapot
 
-Frissítve: **2026. november 6. – teljes képadatbázis, Képtár, összehasonlító, Character Planner.** A játékadatok továbbra is a 2026-11-06-i helyi pillanatképből származnak, az adatverzió `ac0984e054de`.
+Frissítve: **2026. november 7. – teljes Atlas GitHub Pages-kiadás.** A játékadatok továbbra is a 2026-11-06-i helyi pillanatképből származnak, az adatverzió `ac0984e054de`.
 
 ## A négy fejlesztés eredménye
 
@@ -12,7 +12,7 @@ A feltöltési jelölt körülbelül 181 MiB, a teljes statikus előnézet kör�
 
 A hivatalos sajtóoldal közvetlen ellenőrzését HTTP 403 korlátozta. A korábbi Creator Kit-engedély nyilvántartott; az új katalógus, játékmentési képek és teljes lokalizáció újraközlési engedélye nincs igazolva. A felhasználó a hivatalos letölthetőséget megerősítette, ami önmagában nem rögzít újraközlési licencet. Ezeknél a nyilvános build és feltöltési staging egyelőre leáll.
 
-A GitHub CLI bejelentkezése **2026. november 7-én sikerült**, fiók: Legivok2. A forráskód-kiválasztás (`npm run stage:github:code`) engedély- és titokellenőrzéssel működik. A nyilvános kiadáshoz önálló kalauzbuild készült (`build:pages:guide`), amely csak a saját kalauzt és a korábban engedélyezett Creator Kit-elemeket tartalmazza. A workflow a teljes Atlas adat-/engedélyhiánya esetén ezt építi és telepíti; a nyilvános felület jelzi a teljes Atlas korlátját. 15 meglévő modell-/publikációs teszt és 2 kalauzteszt sikeres; a kalauz 40 erőforrása HTTP 200 a Pages-alkönyvtár alatt. Útmutató: `docs/DEPLOYMENT.md`. A `.release/local-review/` és `.integration/pages-preview/` csak helyi átnézésre szolgál.
+A GitHub CLI bejelentkezése **2026. november 7-én sikerült**, fiók: Legivok2. A projektgazda ezt követően kifejezetten feloldotta a korábbi engedélyellenőrzési feltételt, és a teljes helyi változat publikálását kérte. Az utasítást külön `publicationAuthorization` mező rögzíti; a kiadói licenceket nem jelöltük ettől igazoltnak. A teljes `build:pages` és `stage:github` az összes eredeti futásidejű fájlt tartalmazza. A workflow-ból kikerült a kalauzra váltó ág; hiány esetén leáll. 16 adat-/modell-/publikációs teszt sikeres, és a teljes kiadás mind a 3758 erőforrása HTTP 200 a Pages-alkönyvtár alatt. Webcím: https://legivok2.github.io/stonestorm-atlas/ . Útmutató: `docs/DEPLOYMENT.md`.
 
 1. **Teljes képadatbázis-integráció:** a 2124 manifest-bejegyzésből 2103 helyi, érvényes WebP ellenőrizve. A manifest, CSV, képbyte-ok, méretek, SHA-256 és adatkapcsolatok egységes nyilvántartásba kerültek. Mind a 182 tárgy, 22 kísérő, 8 hátas, 64 ellenfél és 6 pálya kapott társított grafikát; a bizonytalan párosítások jelöltek.
 2. **Interaktív Képtár:** 26 kategória, élő keresés, kategória-/állapotszűrés, háromféle rendezés, 24 kép/oldal, nagy képnézet, eredeti felbontás és Wiki-kapcsolatok. Az ismeretlen képek külön kereshetők. Minden statisztika a generált katalógusból számolódik.
@@ -80,7 +80,7 @@ Mentés: `stonestorm-atlas-builds-v1`, legfeljebb 20 build. A régi kalauz ment�
 5. Bútorokhoz/házhoz valódi költség és bónuszadatok. Az 50 bútorgrafika önmagában nem igazol ilyen adatot.
 6. A 907 ismeretlen képkapcsolat ellenőrzése, további lokalizált nevek, 21 hiányzó video-WebP kezelése valódi videóformátumra vonatkozó új igény esetén.
 7. Valódi mobil/asztali, billentyűzetes és képernyőolvasós ellenőrzés.
-8. Nyilvános felhasználási engedélyek: a letöltött katalógus és játékmentési grafikák engedélye nincs igazolva. A korábbi Creator Kit-engedély külön maradt. Nem történt nyilvános publikálás.
+8. Nyilvános felhasználási engedélyek: a letöltött katalógus és játékmentési grafikák kiadói licence nincs igazolva. A korábbi Creator Kit-engedély külön maradt. A teljes kiadás a projektgazda 2026-11-07-i, rögzített közzétételi utasítására készül.
 
 ## Indítás
 

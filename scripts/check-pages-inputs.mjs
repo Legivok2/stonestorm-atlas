@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {publicationOverrideApplies} from './publication-plan.mjs';
 export function pagesReadiness(root){
   const required=['data/atlas.json','data/image-catalog.json','js/atlas-data.js','js/image-data.js'];
   const prefixes=['00_','01_','02_','03_','04_','05_','06_','07_','08_','09_','10_','11_','12_','13_'];
@@ -17,14 +18,16 @@ export function pagesReadiness(root){
   }
   const policy=JSON.parse(fs.readFileSync(path.join(root,'.publication/permissions.json'),'utf8'));
   const pending=Object.entries(policy.scopes).filter(([,scope])=>scope.status!=='confirmed'||!scope.evidence?.trim()).map(([name])=>name);
-  return {ready:!missing.length&&!pending.length,missing:[...new Set(missing)],pending};
+  const blockers=pending.filter(scope=>!publicationOverrideApplies(policy,scope));
+  return {ready:!missing.length&&!blockers.length,missing:[...new Set(missing)],pending,blockers};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
   const result=pagesReadiness(root);
   const output=`ready=${result.ready}\n`;
   if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,output);
-  const message=result.ready?'Minden adatfájl és engedély rendelkezésre áll; a teljes Pages-build folytatható.':`A teljes Atlas még vár; az engedélyezett kezdőkalauzt publikáljuk. Hiányzó adat/asset: ${result.missing.length}; tisztázandó engedélycsoport: ${result.pending.join(', ')}.`;
+  const message=result.ready?`A teljes Atlas adatcsomagja és közzétételi felhatalmazása rendelkezésre áll. Külön projektgazdai utasítással publikált, nem igazolt licencű csoportok: ${result.pending.join(', ')||'nincs'}.`:`A teljes Atlas nem publikálható. Hiányzó adat/asset: ${result.missing.length}; hiányzó felhatalmazás: ${result.blockers.join(', ')}. Nem helyettesítjük másik oldallal.`;
   console.log(message);
   if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'## Pages-készenlét\n\n'+message+'\n');
+  if(!result.ready&&process.argv.includes('--require-full'))process.exitCode=1;
 }

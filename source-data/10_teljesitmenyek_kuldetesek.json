@@ -1,0 +1,2733 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "achievementSets": [
+    {
+      "id": "beasts",
+      "title": "title_beastbreaker",
+      "frame": "frame_beastbreaker",
+      "achievements": [
+        "bigpaw_tamer",
+        "ruinback_breaker",
+        "frost_thawer",
+        "beard_singer",
+        "stripes_rival"
+      ]
+    },
+    {
+      "id": "hunt",
+      "title": "title_greathunter",
+      "frame": "frame_greathunter",
+      "achievements": [
+        "boar_hunter",
+        "bear_hunter",
+        "archer_hunter",
+        "guard_breaker",
+        "orc_hunter",
+        "totem_hunter",
+        "scorpion_hunter",
+        "mummy_hunter",
+        "yeti_hunter",
+        "colossus_breaker",
+        "imp_hunter",
+        "giant_hunter",
+        "wild_archer_hunter",
+        "dog_nightmare",
+        "pickpocket_bane"
+      ]
+    },
+    {
+      "id": "stones",
+      "title": "title_stonesplitter",
+      "frame": "frame_stonesplitter",
+      "achievements": [
+        "breeze_breaker",
+        "firestorm_breaker",
+        "shower_breaker"
+      ]
+    },
+    {
+      "id": "dungeons",
+      "title": "title_deepdelver",
+      "frame": "frame_deepdelver",
+      "achievements": [
+        "monkey_trapper",
+        "spider_nester",
+        "dragon_nester",
+        "room_walker",
+        "heroic_monkey",
+        "heroic_spider",
+        "banana_friend",
+        "silk_regular",
+        "dragon_regular"
+      ]
+    },
+    {
+      "id": "fishing",
+      "title": "title_deepwater",
+      "frame": "frame_deepwater",
+      "achievements": [
+        "rare_fisher",
+        "epic_fisher",
+        "boot_king"
+      ]
+    },
+    {
+      "id": "forge",
+      "title": "title_sparkhand",
+      "frame": "frame_sparkhand",
+      "achievements": [
+        "plus_five",
+        "plus_six",
+        "steady_hand"
+      ]
+    },
+    {
+      "id": "ghosts",
+      "title": "title_ghostbreaker",
+      "frame": null,
+      "achievements": [
+        "ghost_breaker"
+      ]
+    },
+    {
+      "id": "faithful",
+      "title": "title_faithful",
+      "frame": null,
+      "achievements": [
+        "faithful"
+      ]
+    }
+  ],
+  "achievements": {
+    "slayer": {
+      "tiers": [
+        500,
+        10000,
+        100000
+      ]
+    },
+    "wolf_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "bandit_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "boss_hunter": {
+      "tiers": [
+        1,
+        50,
+        300
+      ]
+    },
+    "old_tiger": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "bandit_chief": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "stone_breaker": {
+      "tiers": [
+        5,
+        100,
+        1000
+      ]
+    },
+    "explorer": {
+      "tiers": [
+        5,
+        100,
+        1000
+      ]
+    },
+    "tower_climber": {
+      "tiers": [
+        30,
+        75,
+        120
+      ]
+    },
+    "tower_lord": {
+      "tiers": [
+        1,
+        4,
+        20
+      ]
+    },
+    "trainer": {
+      "tiers": [
+        5,
+        25,
+        50
+      ]
+    },
+    "gatherer": {
+      "tiers": [
+        10,
+        150,
+        1500
+      ]
+    },
+    "wealthy": {
+      "tiers": [
+        10000,
+        1000000,
+        50000000
+      ]
+    },
+    "seller": {
+      "tiers": [
+        20,
+        500,
+        10000
+      ]
+    },
+    "shopper": {
+      "tiers": [
+        10,
+        250,
+        2500
+      ]
+    },
+    "researcher": {
+      "tiers": [
+        1,
+        4,
+        8
+      ]
+    },
+    "pet_keeper": {
+      "tiers": [
+        1,
+        5,
+        20
+      ]
+    },
+    "rider": {
+      "tiers": [
+        1,
+        5,
+        25
+      ]
+    },
+    "chest_hunter": {
+      "tiers": [
+        5,
+        50,
+        300
+      ]
+    },
+    "loyal": {
+      "tiers": [
+        7,
+        30,
+        100
+      ]
+    },
+    "looter": {
+      "tiers": [
+        10,
+        200,
+        2000
+      ]
+    },
+    "smith_apprentice": {
+      "tiers": [
+        10,
+        200,
+        2000
+      ]
+    },
+    "smith_master": {
+      "tiers": [
+        5,
+        100,
+        1000
+      ]
+    },
+    "plus_four": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "plus_seven": {
+      "tiers": [
+        1,
+        5,
+        25
+      ]
+    },
+    "plus_eight": {
+      "tiers": [
+        1,
+        3,
+        15
+      ]
+    },
+    "plus_nine": {
+      "tiers": [
+        1,
+        3,
+        10
+      ]
+    },
+    "veteran": {
+      "tiers": [
+        10,
+        30,
+        60
+      ]
+    },
+    "alchemist": {
+      "tiers": [
+        1,
+        25,
+        200
+      ]
+    },
+    "scholar": {
+      "tiers": [
+        1,
+        5,
+        9
+      ]
+    },
+    "pet_trainer": {
+      "tiers": [
+        5,
+        50,
+        200
+      ]
+    },
+    "duelist": {
+      "tiers": [
+        10,
+        200,
+        2000
+      ]
+    },
+    "gladiator": {
+      "tiers": [
+        5,
+        100,
+        1000
+      ]
+    },
+    "patron": {
+      "tiers": [
+        10000,
+        250000,
+        5000000
+      ]
+    },
+    "raider": {
+      "tiers": [
+        5,
+        50,
+        300
+      ]
+    },
+    "chronicler": {
+      "tiers": [
+        3,
+        6,
+        12
+      ]
+    },
+    "board_regular": {
+      "tiers": [
+        10,
+        150,
+        750
+      ]
+    },
+    "weekly_hero": {
+      "tiers": [
+        3,
+        30,
+        150
+      ]
+    },
+    "townsfolk_friend": {
+      "tiers": [
+        3,
+        9,
+        18
+      ]
+    },
+    "house_seller": {
+      "tiers": [
+        1,
+        25,
+        250
+      ]
+    },
+    "house_regular": {
+      "tiers": [
+        1,
+        25,
+        250
+      ]
+    },
+    "heroic": {
+      "tiers": [
+        1,
+        15,
+        60
+      ]
+    },
+    "heroic_dragon": {
+      "tiers": [
+        1,
+        5,
+        20
+      ]
+    },
+    "storm_climber": {
+      "tiers": [
+        20,
+        100,
+        400
+      ]
+    },
+    "angler": {
+      "tiers": [
+        10,
+        250,
+        2000
+      ]
+    },
+    "fish_collector": {
+      "tiers": [
+        6,
+        12,
+        20
+      ]
+    },
+    "legend_fisher": {
+      "tiers": [
+        1,
+        5,
+        25
+      ]
+    },
+    "season_veteran": {
+      "tiers": [
+        1,
+        3,
+        10
+      ]
+    },
+    "giant_slayer": {
+      "tiers": [
+        3,
+        30,
+        150
+      ]
+    },
+    "stonebreaker": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "bigpaw_tamer": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "ruinback_breaker": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "frost_thawer": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "beard_singer": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "boar_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "bear_hunter": {
+      "tiers": [
+        50,
+        500,
+        2500
+      ]
+    },
+    "archer_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "guard_breaker": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "orc_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "totem_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "scorpion_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "mummy_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "yeti_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "colossus_breaker": {
+      "tiers": [
+        50,
+        500,
+        2500
+      ]
+    },
+    "imp_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "giant_hunter": {
+      "tiers": [
+        50,
+        500,
+        2500
+      ]
+    },
+    "breeze_breaker": {
+      "tiers": [
+        10,
+        100,
+        500
+      ]
+    },
+    "firestorm_breaker": {
+      "tiers": [
+        5,
+        50,
+        250
+      ]
+    },
+    "monkey_trapper": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "spider_nester": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "dragon_nester": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "room_walker": {
+      "tiers": [
+        50,
+        500,
+        2500
+      ]
+    },
+    "heroic_monkey": {
+      "tiers": [
+        1,
+        5,
+        20
+      ]
+    },
+    "heroic_spider": {
+      "tiers": [
+        1,
+        5,
+        20
+      ]
+    },
+    "rare_fisher": {
+      "tiers": [
+        10,
+        100,
+        500
+      ]
+    },
+    "epic_fisher": {
+      "tiers": [
+        5,
+        50,
+        250
+      ]
+    },
+    "plus_five": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "plus_six": {
+      "tiers": [
+        1,
+        10,
+        50
+      ]
+    },
+    "ghost_breaker": {
+      "tiers": [
+        5,
+        50,
+        200
+      ]
+    },
+    "wild_archer_hunter": {
+      "tiers": [
+        100,
+        1000,
+        5000
+      ]
+    },
+    "boot_king": {
+      "tiers": [
+        25,
+        100,
+        500
+      ],
+      "hidden": true
+    },
+    "dog_nightmare": {
+      "tiers": [
+        1000,
+        5000,
+        20000
+      ],
+      "hidden": true
+    },
+    "banana_friend": {
+      "tiers": [
+        25,
+        100,
+        300
+      ],
+      "hidden": true
+    },
+    "pickpocket_bane": {
+      "tiers": [
+        500,
+        2500,
+        10000
+      ],
+      "hidden": true
+    },
+    "silk_regular": {
+      "tiers": [
+        25,
+        100,
+        300
+      ],
+      "hidden": true
+    },
+    "dragon_regular": {
+      "tiers": [
+        25,
+        100,
+        300
+      ],
+      "hidden": true
+    },
+    "stripes_rival": {
+      "tiers": [
+        100,
+        300,
+        1000
+      ],
+      "hidden": true
+    },
+    "shower_breaker": {
+      "tiers": [
+        100,
+        500,
+        2000
+      ],
+      "hidden": true
+    },
+    "steady_hand": {
+      "tiers": [
+        100,
+        500,
+        2000
+      ],
+      "hidden": true
+    },
+    "faithful": {
+      "tiers": [
+        200,
+        365,
+        730
+      ],
+      "hidden": true
+    }
+  },
+  "sidequests": {
+    "smith_1": {
+      "npc": "blacksmith",
+      "minLevel": 1,
+      "objective": {
+        "kind": "forge_attempts",
+        "target": null
+      }
+    },
+    "smith_2": {
+      "npc": "blacksmith",
+      "minLevel": 4,
+      "objective": {
+        "kind": "forge_success",
+        "target": "4"
+      }
+    },
+    "smith_3": {
+      "npc": "blacksmith",
+      "minLevel": 10,
+      "objective": {
+        "kind": "forge_success",
+        "target": "6"
+      }
+    },
+    "smith_4": {
+      "npc": "blacksmith",
+      "minLevel": 20,
+      "objective": {
+        "kind": "forge_success",
+        "target": "7"
+      }
+    },
+    "smith_5": {
+      "npc": "blacksmith",
+      "minLevel": 34,
+      "objective": {
+        "kind": "forge_success",
+        "target": "8"
+      }
+    },
+    "smith_6": {
+      "npc": "blacksmith",
+      "minLevel": 50,
+      "objective": {
+        "kind": "forge_success",
+        "target": "9"
+      }
+    },
+    "shop_1": {
+      "npc": "shopkeeper",
+      "minLevel": 1,
+      "objective": {
+        "kind": "items_bought",
+        "target": null
+      }
+    },
+    "shop_2": {
+      "npc": "shopkeeper",
+      "minLevel": 3,
+      "objective": {
+        "kind": "items_sold",
+        "target": null
+      }
+    },
+    "shop_3": {
+      "npc": "shopkeeper",
+      "minLevel": 8,
+      "objective": {
+        "kind": "nyang_earned",
+        "target": null
+      }
+    },
+    "shop_4": {
+      "npc": "shopkeeper",
+      "minLevel": 17,
+      "objective": {
+        "kind": "items_sold",
+        "target": null
+      }
+    },
+    "shop_5": {
+      "npc": "shopkeeper",
+      "minLevel": 27,
+      "objective": {
+        "kind": "nyang_earned",
+        "target": null
+      }
+    },
+    "shop_6": {
+      "npc": "shopkeeper",
+      "minLevel": 43,
+      "objective": {
+        "kind": "nyang_earned",
+        "target": null
+      }
+    },
+    "bio_1": {
+      "npc": "biologist",
+      "minLevel": 10,
+      "objective": {
+        "kind": "kills",
+        "target": "m1_alpha_wolf"
+      }
+    },
+    "bio_2": {
+      "npc": "biologist",
+      "minLevel": 10,
+      "objective": {
+        "kind": "research_steps",
+        "target": null
+      }
+    },
+    "bio_3": {
+      "npc": "biologist",
+      "minLevel": 12,
+      "objective": {
+        "kind": "kills",
+        "target": "m1_bear"
+      }
+    },
+    "bio_4": {
+      "npc": "biologist",
+      "minLevel": 22,
+      "objective": {
+        "kind": "kills",
+        "target": "m2_merc"
+      }
+    },
+    "bio_5": {
+      "npc": "biologist",
+      "minLevel": 45,
+      "objective": {
+        "kind": "kills",
+        "target": "m4_golem"
+      }
+    },
+    "bio_m4_1": {
+      "npc": "biologist",
+      "minLevel": 46,
+      "objective": {
+        "kind": "kills",
+        "target": "m4_mummy"
+      }
+    },
+    "bio_m4_2": {
+      "npc": "biologist",
+      "minLevel": 47,
+      "objective": {
+        "kind": "stones",
+        "target": "stone_m4_3"
+      }
+    },
+    "bio_m4_3": {
+      "npc": "biologist",
+      "minLevel": 48,
+      "objective": {
+        "kind": "research_steps",
+        "target": null
+      }
+    },
+    "bio_6": {
+      "npc": "biologist",
+      "minLevel": 53,
+      "objective": {
+        "kind": "kills",
+        "target": "m5_yeti"
+      }
+    },
+    "alch_1": {
+      "npc": "alchemist",
+      "minLevel": 5,
+      "objective": {
+        "kind": "kills",
+        "target": "m1_wolf"
+      }
+    },
+    "alch_2": {
+      "npc": "alchemist",
+      "minLevel": 6,
+      "objective": {
+        "kind": "elixirs",
+        "target": null
+      }
+    },
+    "alch_3": {
+      "npc": "alchemist",
+      "minLevel": 10,
+      "objective": {
+        "kind": "elixirs",
+        "target": null
+      }
+    },
+    "alch_4": {
+      "npc": "alchemist",
+      "minLevel": 19,
+      "objective": {
+        "kind": "elixirs",
+        "target": null
+      }
+    },
+    "alch_5": {
+      "npc": "alchemist",
+      "minLevel": 32,
+      "objective": {
+        "kind": "elixirs",
+        "target": null
+      }
+    },
+    "alch_6": {
+      "npc": "alchemist",
+      "minLevel": 49,
+      "objective": {
+        "kind": "elixirs",
+        "target": null
+      }
+    },
+    "stable_1": {
+      "npc": "stable",
+      "minLevel": 8,
+      "objective": {
+        "kind": "expeditions",
+        "target": null
+      }
+    },
+    "stable_2": {
+      "npc": "stable",
+      "minLevel": 8,
+      "objective": {
+        "kind": "mounts_rented",
+        "target": null
+      }
+    },
+    "stable_3": {
+      "npc": "stable",
+      "minLevel": 10,
+      "objective": {
+        "kind": "expeditions",
+        "target": null
+      }
+    },
+    "stable_4": {
+      "npc": "stable",
+      "minLevel": 21,
+      "objective": {
+        "kind": "expeditions",
+        "target": null
+      }
+    },
+    "stable_5": {
+      "npc": "stable",
+      "minLevel": 35,
+      "objective": {
+        "kind": "expeditions",
+        "target": null
+      }
+    },
+    "stable_6": {
+      "npc": "stable",
+      "minLevel": 52,
+      "objective": {
+        "kind": "expeditions",
+        "target": null
+      }
+    },
+    "captain_1": {
+      "npc": "captain",
+      "minLevel": 7,
+      "objective": {
+        "kind": "kills",
+        "target": "m1_boar"
+      }
+    },
+    "captain_2": {
+      "npc": "captain",
+      "minLevel": 8,
+      "objective": {
+        "kind": "stones",
+        "target": null
+      }
+    },
+    "captain_3": {
+      "npc": "captain",
+      "minLevel": 14,
+      "objective": {
+        "kind": "boss_wins",
+        "target": "boss_m1"
+      }
+    },
+    "captain_4": {
+      "npc": "captain",
+      "minLevel": 26,
+      "objective": {
+        "kind": "boss_wins",
+        "target": "boss_m2"
+      }
+    },
+    "captain_5": {
+      "npc": "captain",
+      "minLevel": 39,
+      "objective": {
+        "kind": "boss_wins",
+        "target": "boss_m3"
+      }
+    },
+    "captain_6": {
+      "npc": "captain",
+      "minLevel": 54,
+      "objective": {
+        "kind": "boss_wins",
+        "target": "boss_m4"
+      }
+    }
+  },
+  "onboarding": {
+    "unlocks": {
+      "city.wheel": {
+        "level": 3,
+        "notice": "unlock_wheel"
+      },
+      "hud.wheel": {
+        "level": 3
+      },
+      "hud.starter": {
+        "after": "starter"
+      },
+      "city.runasor": {
+        "level": 10,
+        "notice": "unlock_runasor",
+        "noticeAt": 17
+      },
+      "city.alchemist": {
+        "level": 5,
+        "notice": "unlock_alchemist",
+        "noticeAt": 6
+      },
+      "nav.arena": {
+        "level": 12,
+        "notice": "unlock_arena"
+      },
+      "nav.tower": {
+        "level": 7,
+        "notice": "unlock_tower"
+      },
+      "nav.ranking": {
+        "level": 7,
+        "notice": "unlock_ranking",
+        "noticeAt": 9
+      },
+      "city.stable": {
+        "level": 8,
+        "notice": "unlock_stable"
+      },
+      "nav.guild": {
+        "level": 10
+      },
+      "city.home": {
+        "level": 10,
+        "notice": "unlock_home",
+        "noticeAt": 14
+      },
+      "city.biologist": {
+        "level": 10,
+        "notice": "unlock_research",
+        "noticeAt": 18
+      },
+      "city.house": {
+        "level": 11,
+        "notice": "unlock_house"
+      },
+      "city.fisherman": {
+        "level": 10,
+        "notice": "unlock_fishing",
+        "noticeAt": 13
+      },
+      "hunt.dungeons": {
+        "level": 10
+      },
+      "hunt.rift": {
+        "level": 20,
+        "notice": "unlock_rift",
+        "noticeAt": 21
+      },
+      "arena.pure": {
+        "level": 20,
+        "notice": "unlock_pure",
+        "noticeAt": 22
+      },
+      "hud.season": {
+        "level": 10,
+        "notice": "unlock_season",
+        "noticeAt": 16
+      },
+      "hud.event": {
+        "level": 10,
+        "notice": "unlock_event"
+      },
+      "city.mining": {
+        "level": 10,
+        "notice": "unlock_mining",
+        "noticeAt": 15
+      },
+      "nav.leads": {
+        "level": 3
+      },
+      "hunt.portal": {
+        "level": 3,
+        "notice": "unlock_portal",
+        "noticeAt": 4
+      },
+      "hunt.worldboss": {
+        "level": 30,
+        "notice": "unlock_worldboss"
+      },
+      "hunt.heroic": {
+        "level": 55,
+        "notice": "unlock_heroic"
+      }
+    },
+    "firstBoss": {
+      "bossId": "boss_m1",
+      "level": 11,
+      "chapterId": "ch07"
+    }
+  },
+  "locale": {
+    "quests": {
+      "story": {
+        "ch10c": {
+          "title": "A Banánkirály adója",
+          "text": "A Majomcsapda ura minden arra járótól banánt kér vámnak. Mi nem fizetünk vámot, főleg nem banánban. Menj be, és beszélj vele a nyelvén: egy teljes Majomcsapda-kör után biztosan megérti.",
+          "objective": "Teljesítsd egyszer a Majomcsapdát.",
+          "done": "A Banánkirály mostantól ingyen enged át. Állítólag még egy fürtöt is küldött, de azt a futár megette."
+        },
+        "ch10b": {
+          "title": "Morgó hágó",
+          "text": "A hágón túl a kövek úgy dörögnek, mintha a hegy morogna. A falusiak szerint csak az idő, szerintem a banda rejtett alájuk valamit. Törj szét hármat a Zivatarkövekből, és nézzük meg, ki morog utána.",
+          "objective": "Törj szét 3 Zivatarkövet.",
+          "done": "Csend lett a hágón. Alattuk banda-zsák volt, tele lopott szerszámmal. Mondtam én."
+        },
+        "ch01": {
+          "title": "Újonc a kapuban",
+          "text": "Szóval te vagy az új. Láttam már ijesztőbbet is, bár az a tükörben volt. Mióta a viharok világító köveket szórnak ránk, a falu határában minden állat megvadult. Nekem olyan ember kell, aki nem fut el egy nyúl elől. Előbb erősödj meg egy kicsit, aztán beszélünk.",
+          "objective": "Érd el a 2. szintet.",
+          "done": "Na, a szél már nem visz el, ez is valami."
+        },
+        "ch02": {
+          "title": "Kőtörők",
+          "text": "Minden baj a kövekkel kezdődik. Ahol egy is földet ér, ott megvadul az állat, kiszárad a fű, és még a tehenek is gyanúsan néznek. A viharok kőtörői portyáról portyára járva tisztítják meg tőlük a vidéket, és mától te is közéjük tartozol, akár tetszik, akár nem.",
+          "objective": "Teljesíts 3 portyát.",
+          "done": "Három portya, és még mindkét füled megvan. Tehetséges vagy."
+        },
+        "ch03": {
+          "title": "Kutya egy helyzet",
+          "text": "A vadkutyák régen csak a szemétben turkáltak. Mióta egy viharkő a dombra esett, falkába verődtek, a farkasokat is maguk mellé hívták, és a pék szerint már kenyeret is követelnek. Ritkítsd meg őket, mielőtt adót kezdenek szedni. A vadászzsákod is ritkítja őket: gyűjtsd be gyakran, az is számít.",
+          "objective": "Ölj meg 50 vadállatot a környéken.",
+          "done": "Csend van a határban, ami gyanús, de most az egyszer örülök neki."
+        },
+        "ch04": {
+          "title": "Rendrakás",
+          "text": "Láttam a zsákodat. Rozsdás kard, horpadt sisak, egy csizma, amiben valaki meghalt, meg egy marék kutyafog. Ami nem kell, add el Minahnál, a boltban: a tárgyat és a fölösleges alapanyagot is megveszi. A gyengébb tárgyakat a Karakter oldal „Eladás” gombja egyszerre eladja. A nyang jól jön a kovácsnál.",
+          "objective": "Adj el 3 dolgot (tárgyat vagy alapanyagot).",
+          "done": "Könnyebb a zsák, nehezebb az erszény. Így kell ezt."
+        },
+        "ch05": {
+          "title": "Hármas csapás",
+          "text": "Azzal a fegyverrel legfeljebb a kerítést ijesztheted meg. Vidd el a kovácshoz, és hozasd fel +3-ra: +2-ig minden ütése biztosan sikerül, onnantól már a szerencse is dönt.",
+          "objective": "Fejlessz egy tárgyat +3-ra a kovácsnál.",
+          "done": "Plusz három, és a kovács napokig ezzel fog dicsekedni."
+        },
+        "ch06": {
+          "title": "Farkasok a kútnál",
+          "text": "A farkasok a kút körül settenkednek, és az asszonyok már csak hármasával mernek vízért menni. Költöztesd oda a vadászatodat: a Vadászat oldalon, a Vadászhelyek fülön válaszd a Farkasokat. Ott a zsákod is többet hoz, mint a kutyáknál.",
+          "objective": "Ölj meg 25 farkast.",
+          "done": "A kútnál megint lehet pletykálni. Ezt neked köszönhetik, bár sosem fogják bevallani."
+        },
+        "ch07": {
+          "title": "Öreg Csíkos",
+          "text": "Az erdő ura egy öreg, sebhelyes tigris, akit a falu csak Öreg Csíkosnak hív. Régen békén hagyott minket, de egy viharkő a barlangja mellé esett, és azóta úgy nézi a falut, ahogy én a vasárnapi ebédet. Menj, és beszélj vele a fegyvered nyelvén.",
+          "objective": "Győzd le Öreg Csíkost.",
+          "done": "Öreg Csíkos visszakullogott a barlangjába, hogy a sebeit nyalogassa. Vissza fog jönni, de már tudja, ki az úr ebben az erdőben."
+        },
+        "ch08": {
+          "title": "Nyeregbe!",
+          "text": "A kövek nem a kapu elé esnek, és mire gyalog odaérsz, már gyökeret eresztenek. Az istállóban bérelhetsz hátast, akár egy kis pónit is, ha a büszkeséged elbírja. Nyeregben hamarabb érsz oda, és ami még fontosabb, hamarabb érsz vissza.",
+          "objective": "Bérelj hátast az istállóban.",
+          "done": "Nyeregben egész tekintélyes vagy. Na jó, majdnem."
+        },
+        "ch09": {
+          "title": "Fehér homlokpántok",
+          "text": "A dombok felől rossz hírek jönnek. Egy fehér homlokpántos banda gyűjti a viharköveket, és amit nem tud elcipelni, azt helyben eladja. Erősödj meg, mert ezek nem farkasok: visszaütnek, és még nyugtát is adnak róla.",
+          "objective": "Érd el a 18. szintet.",
+          "done": "Tizennyolcas szint. A banditák már tudják a nevedet, csak még rosszul ejtik."
+        },
+        "ch10": {
+          "title": "Ki ér oda előbb?",
+          "text": "A dombok felől rossz hírek jönnek: egy fehér homlokpántos banda gyűjti a viharköveket, és amelyikhez előbb ér oda, abból fegyvert kovácsol ellenünk. Törj össze annyit, amennyit csak bírsz. Ha valaki kérdezi, miért, mondd, hogy a kapitány küldött, és a kapitány nem szeret veszíteni.",
+          "objective": "Teljesíts 5 portyát.",
+          "done": "Öt kő, és egyetlen bandita sem ért oda előbb. Ezt nevezem rendes munkának!"
+        },
+        "ch11": {
+          "title": "Aranyfog",
+          "text": "A banda feje Aranyfog. Azt mondják, a kövekből kitört aranyból csináltatott magának új fogsort, és most úgy mosolyog, mint egy kincseskamra. Menj, és hozd vissza, amit elvett. A fogait meghagyhatod neki, nem vagyunk barbárok.",
+          "objective": "Győzd le Aranyfogat.",
+          "done": "Aranyfog már nem mosolyog, a kincstárnok viszont igen."
+        },
+        "ch12": {
+          "title": "Nagyobb vihar jön",
+          "text": "A felderítőim szerint a viharok egyre nagyobbak, és a kövek egyre messzebbre esnek. A három királyság közben azon vitatkozik, kié az a kő, amelyik pont a határra pottyant. Neked egyetlen dolgod van: légy erősebb, mint a következő vihar.",
+          "objective": "Érd el a 30. szintet.",
+          "done": "Harmincas szint. Évek óta először mondom ki, hogy büszke vagyok rád. De ezt senkinek ne mondd el!"
+        },
+        "ch13": {
+          "title": "Dobok a szurdokban",
+          "text": "Mióta nagyobbak a viharok, a kövek egy része az agyarasok szurdokába hull. Az orkok eddig csak egymást verték, most viszont szekérre pakolják a köveket, és elviszik valahová. Orkok, akik önként dolgoznak? Ilyet még a seregben sem láttam. Menj, és ritkítsd meg őket.",
+          "objective": "Győzz le 500 ellenfelet az agyarasok szurdokában.",
+          "done": "Kevesebb ork, kevesebb szekér. A dobszót viszont még mindig hallom."
+        },
+        "ch14": {
+          "title": "Dobszó",
+          "text": "A szurdokban van egy kőfajta, amelyik úgy zúg, mint egy nagydob. Az orkok körbeállják, és a ritmusára masíroznak. Errefelé a ritmust én adom meg. Törd szét ezeket a köveket, mielőtt az egész szurdok egy ütemre lép.",
+          "objective": "Törj szét 4 Dobszókövet.",
+          "done": "Csend van. Az orkok megint összevissza járkálnak, ahogy illik."
+        },
+        "ch15": {
+          "title": "Hakmun mintái",
+          "text": "Hakmun azt mondja, hogy a kövek nemcsak megvadítják az állatokat, hanem meg is változtatják őket. Ehhez mintákat kér, sokat, és közben mindent el is magyaráz. Vidd el neki, amit kér, de ne kérdezz semmit, mert akkor estig ott ragadsz.",
+          "objective": "Adj át 4 mintát Hakmunnak.",
+          "done": "Hakmun szerint a kövek belsejében pikkely van. Ő ezt tudománynak hívja. Én bajnak."
+        },
+        "ch16": {
+          "title": "Pecsét a zsebben",
+          "text": "Az orkok nem tudnak írni, a hadnagyaik zsebében mégis leveleket találtunk. Valaki rendeléseket küld nekik: ennyi kő, ide, eddig. Menj a Haditáborba, és szedd össze az összes levelet. A hadnagyokat nem kell megkérdezni.",
+          "objective": "Győzz le 32 ordibáló hadnagyot a Haditáborban.",
+          "done": "Minden levélen ugyanaz a pecsét: egy csillag és egy félhold. Ilyet utoljára a régi császári udvarban láttam."
+        },
+        "ch17": {
+          "title": "Nagymancs",
+          "text": "A szurdok ura Nagymancs, az ork törzsfőnök. Akkora a tenyere, mint egy ajtó, a türelme meg akkora, mint egy gyufaszál. Ő gyűjti a köveket, és ő tudja, kinek. Győzd le, és kérdezd meg szépen. Ha nem felel, kérdezd meg csúnyán.",
+          "objective": "Győzd le Nagymancsot.",
+          "done": "Nagymancs bevallotta, hogy egy csuklyás öregembernek dolgozik, aki aranyban fizet. Azt is elárulta, hogy az öreg legutóbb a Pókfészek felé ment. Hát persze, hogy a pókok felé."
+        },
+        "ch18": {
+          "title": "Selyemgubó",
+          "text": "A Pókfészekben a Selyemkirálynő mindent megtart, ami a hálójába akad: embert, levelet, néha egy egész szekeret. Ha a csuklyás öreg arra járt, valami biztosan ott maradt utána. Járd végig a fészket, és nézz bele minden gubóba. Ha valamelyik visszanéz, üss.",
+          "objective": "Járd végig a Pókfészket.",
+          "done": "Az egyik gubóban egy futár volt, nála egy térkép a romok sivatagáról. A térkép sarkában egy név áll: Yeongsu."
+        },
+        "ch19": {
+          "title": "Fátyolos tábor",
+          "text": "Yeongsu. Így hívták a régi császár csillagjósát, aki a kövek éjszakáján meghalt. Legalábbis eddig így tudtuk. A romok sivatagát most fátyolos rablók őrzik, és senkit nem engednek a romok közelébe. Nyiss utat.",
+          "objective": "Győzz le 390 ellenfelet a romok sivatagában.",
+          "done": "Az út szabad. A homok viszont mindenhol ott van, még a fogam között is."
+        },
+        "ch20": {
+          "title": "Egy kis kovácsmunka",
+          "text": "A sivatagi rablók páncélja vastagabb, mint Gangdo bőre, és az nagy szó. Vidd el neki a fegyveredet, és kérd meg, hogy húzza fel +6-ra. Ő csak annyit fog mondani, hogy hm. Nála ez azt jelenti, hogy jó ötlet.",
+          "objective": "Fejlessz egy tárgyat +6-ra a kovácsnál.",
+          "done": "Gangdo ránézett a pengére, és azt mondta: elmegy. Tőle ez dicséret."
+        },
+        "ch21": {
+          "title": "Kilátás a Viharfogóból",
+          "text": "A Viharfogót a régi birodalom építette, hogy megfogja a vihart, mielőtt földet ér. Hakmun utánanézett: a terveit Yeongsu rajzolta. A kilencvenedik emeletről az egész sivatag látszik, és talán az is, merre gyűlnek a viharfelhők. Mássz fel, és nézz körül. A lépcső miatt pedig ne panaszkodj.",
+          "objective": "Juss fel a Viharfogó 90. emeletére.",
+          "done": "A felhők a sivatag közepe fölött forognak, mint a víz a lefolyóban. Ott valami nagyon nincs rendben."
+        },
+        "ch22": {
+          "title": "Vén Romhátú",
+          "text": "Amit a sivatag közepén dombnak néztünk, az egy teknős. Egy nagyon öreg, nagyon nagy és nagyon morcos teknős, a hátán egy egész rommal. Hakmun szerint az a rom Yeongsu csillagvizsgálója volt. Győzd le Vén Romhátút, és nézd meg, mit hagyott ott az öreg.",
+          "objective": "Győzd le Vén Romhátút.",
+          "done": "A romban megtaláltuk Yeongsu naplóját. A kövek a Viharsárkány pikkelyei: Yeongsu a kövek éjszakáján tépte le őket az égről, hogy elvegye az erejét. A császár meg akarta állítani, és belehalt."
+        },
+        "ch23": {
+          "title": "Három küldött",
+          "text": "A naplóban ott vannak Yeongsu leveleinek másolatai is. A kövek éjszakája után mindhárom testvérnek azt írta, hogy a másik kettő ölte meg az apjukat. Most mindhárom udvar küldött valakit, és az arénában tárgyalnak, mert csak az semleges. A bonghwai küldött csak azzal áll szóba, aki párbajt nyer, úgyhogy nyerj.",
+          "objective": "Nyerj 8 párbajt az arénában.",
+          "done": "A bonghwai küldött kezet fogott veled. A horangi felírta, mennyibe került. A mirui elment vacsorázni, mert hat óra volt."
+        },
+        "ch24": {
+          "title": "Hideg fogadtatás",
+          "text": "A napló szerint Yeongsu a dermedt hágón át menekült, és a hágót azóta senki nem járta meg élve. Ez eddig senkit nem zavart, mert senki nem akart arra menni. Most mi akarunk. Tisztítsd meg az utat, és öltözz rétegesen.",
+          "objective": "Győzz le 240 ellenfelet a dermedt hágón.",
+          "done": "A bajuszomon jégcsapok lógnak, de az út szabad."
+        },
+        "ch25": {
+          "title": "Befagyott vitézek",
+          "text": "A hágóban a régi császár testőreinek szellemei járnak, jégbe zárva. Ők üldözték Yeongsut a kövek éjszakáján, és itt érte őket a fagy. Hakmun szerint a Zúzmarakövek tartják őket fogva. Törd szét a köveket, hátha valamelyik testőr még emlékszik valamire.",
+          "objective": "Törj szét 4 Zúzmarakövet.",
+          "done": "Az egyik testőr végre megszólalt. Azt mondta, Yeongsu egy sárkánytojást vitt magával, aztán megkérdezte, hol a reggelije."
+        },
+        "ch26": {
+          "title": "Közös zászló alatt",
+          "text": "Most először a három királyság harcosai egy oldalon állnak, legalábbis amíg valaki meg nem kérdezi, kié a zászló. A céhek együtt indulnak a bossok ellen. Ha még nincs céhed, alapíts egyet, vagy állj be valahová. A viharok kőtörői sosem harcoltak egyedül.",
+          "objective": "Harcolj 2 céhes rajtaütésben. Ha nincs céhed, lépj be egybe, vagy alapíts sajátot (10 000 nyang).",
+          "done": "Bonghwaiak, horangiak és miruiak ültek egy asztalnál, és senki nem halt meg. Ezt jegyzőkönyvbe vettem."
+        },
+        "ch27": {
+          "title": "Fagyúrnő",
+          "text": "A hágó tetején Fagyúrnő ül a jégtrónján, és ő zárta le a hágót Yeongsu után. Hogy miért, azt nem tudjuk. Talán Yeongsu örök telet ígért neki. Győzd le, és ha egy kicsit megenyhül, kérdezd meg.",
+          "objective": "Győzd le Fagyúrnőt.",
+          "done": "Fagyúrnő megenyhült egy kicsit. Elárulta, hogy a tojásból ifjú sárkány kelt ki, és Yeongsu a Sárkányfészekben tartja láncon."
+        },
+        "ch28": {
+          "title": "A láncra vert sárkány",
+          "text": "A Sárkányfészekben egy ifjú sárkány ül láncon, és mindenkire tüzet okád, aki a közelébe megy. Nem csodálom, én is ezt tenném. Küzdj meg vele, és törd el a láncát. Nem fogja megköszönni, de nem is kell.",
+          "objective": "Járd végig a Sárkányfészket.",
+          "done": "A sárkány elrepült, és közben megpörkölte a sapkámat. Hakmun szerint sárkányul ez azt jelenti, hogy köszönöm."
+        },
+        "ch29": {
+          "title": "Hamuszekta",
+          "text": "Yeongsu már nem az a görnyedt csillagjós: a lopott sárkánytűz óriássá égette, és a szakálla azóta is lángol. A hamuszektások istenként imádják, és Lángszakállnak hívják. A Hamutemplomnál gyűlnek, oszlasd fel őket. Ha prédikálni kezdenek, ne hallgasd végig.",
+          "objective": "Győzz le 18 hamuszektást a Hamutemplomnál.",
+          "done": "A szekta szétszéledt. Az utolsó még azt kiabálta, hogy Lángszakáll halhatatlan. Majd meglátjuk."
+        },
+        "ch30": {
+          "title": "Lángszakáll",
+          "text": "Lángszakáll a kráter peremén vár, tele lopott sárkányerővel. Ő ölte meg a császárt, ő hazudott a testvéreknek, és miatta hullanak a kövek. Bonghwa, Horang és Miru ma reggel ugyanazt üzente, szóról szóra. Ilyen a kövek éjszakája óta nem volt. Győzd le.",
+          "objective": "Győzd le Lángszakállt.",
+          "done": "Lángszakáll elesett, a kövek mégis hullanak. Úgy látszik, valaki más is fogja a vihar gyeplőjét. Ma ünnepelünk, holnap utánajárunk."
+        },
+        "ch10p1": {
+          "title": "Cseréld le a szerencséd",
+          "text": "Gangdo szerint a fele bónuszod csak dísz. Én ugyan nem értek a kovácsoláshoz, de a dísznek a díszszemlén a helye. Menj el hozzá, és cseréltess le egy gyenge bónuszt.",
+          "objective": "Cserélj le egy bónuszt Gangdónál.",
+          "done": "Na ugye. Gangdo azt mondta, most már legalább nem szégyelli, hogy az ő kezéből jött ki."
+        },
+        "ch10p2": {
+          "title": "Pult a sarkon",
+          "text": "A piactéren három árus is áll, és mind azt állítja, hogy a legjobbat árulja. Nézz be hozzájuk, és vegyél valamit, ami jól jön. A pénzt ne sajnáld, a zsold úgyis jön.",
+          "objective": "Vegyél valamit egy árusnál: a Boltban, a Fegyverkovácsnál, a Páncélkovácsnál vagy a Raktárosnál.",
+          "done": "Jó vásár! Az árus azt mondta, ilyen udvarias vevője rég volt. Gyanús vagy."
+        },
+        "ch10p3": {
+          "title": "Egy korty bátorság",
+          "text": "Yakdo főzetei néha furcsa színűek, de a katonáim esküsznek rájuk. Igyál meg egyet a következő harc előtt, és figyeld, mennyivel könnyebb.",
+          "objective": "Igyál meg egy főzetet az alkimistától.",
+          "done": "Nos? Ugye, hogy jobban ment? Azt a lila mellékhatást meg majd kinövöd."
+        },
+        "ch10p4": {
+          "title": "Pecsétes alku",
+          "text": "A Hármas Pecsét pultján a három királyság kereskedői cserélnek. Ott mindig akad valami a kasztodnak és a szintednek. Vegyél egyet, és tanuld meg, mi mennyit ér.",
+          "objective": "Vegyél valamit a Hármas Pecsét pultján.",
+          "done": "Pecsét a pecsétre: megvan az első alkud. A kincstárnok szerint jó áron."
+        },
+        "ch10d": {
+          "title": "Monszun a hágón",
+          "text": "A banda a hágó túloldalán a Monszunköveket fosztogatja. Ezek már nem morognak, hanem dörögnek. Törj szét hármat, mielőtt Aranyfog emberei elcipelik őket.",
+          "objective": "Törj szét 3 Monszunkövet.",
+          "done": "Három Monszunkő, és a banda üres kézzel ment haza. Aranyfog ma rosszul fog aludni."
+        },
+        "ch10e": {
+          "title": "Aranyfog testőrei",
+          "text": "Aranyfog nem jár egyedül: a hágón túl a testőrei állják az utat, és mindenkitől vámot szednek. Ritkítsd meg a sorukat, hogy ő maga is előbújjon.",
+          "objective": "Győzz le 38 Testőrt.",
+          "done": "Harmincnyolc testőr! Aranyfog most már egyedül mosolyog, és nem sokáig."
+        },
+        "ch09d": {
+          "title": "Éjjeli vadászat",
+          "text": "A banda akkor jár, amikor mi pihenünk, és a dombok szörnyei nekik dolgoznak: ők jelzik, merre megyünk. Menj ki vadászni, és ritkítsd meg őket. Minden legyőzött szörny eggyel kevesebb szem, ami minket figyel.",
+          "objective": "Győzz le 200 ellenfelet.",
+          "done": "Kétszáz szörny, és a banda már éjjel sem mer kijönni. Így szeretem."
+        },
+        "ch09b": {
+          "title": "Nyomok a sárban",
+          "text": "A banditák nyomokat hagynak: egy rozsdás zárat, egy térképdarabot, egy repedt követ. A Nyomok lapon követheted őket. Járj utánuk, és nézd meg, hová vezetnek.",
+          "objective": "Kövess 3 nyomot a Nyomok lapon.",
+          "done": "A nyomok a dombok mögé vezetnek. Ott valaki köveket rejteget, és nem mi vagyunk azok."
+        },
+        "ch09c": {
+          "title": "Fel a Viharfogóba",
+          "text": "A banda vezére a Viharfogóban bújik meg, a harmincadik emeleten. Mássz fel, és kérdezd meg, ki fizeti. Ha nem felel, a lépcső hosszú, lefelé is.",
+          "objective": "Juss fel a Viharfogó 30. emeletére.",
+          "done": "A harmincadik emeleten csak egy üres zsákot és egy fehér homlokpántot találtál. Jó jel: elfutottak."
+        },
+        "ch12a": {
+          "title": "Szemek a szurdokban",
+          "text": "A felderítőim szerint a viharok egyre nagyobbak, és a kövek egyre messzebbre esnek. A szurdok peremén leselkedő orkok minden esést figyelnek, és valakinek jelentik. Vakítsd meg őket.",
+          "objective": "Győzz le 300 leselkedő orkot az agyarasok szurdokában.",
+          "done": "Az orkok most már a saját árnyékuktól is félnek. A kövek esését viszont más is figyeli. Majd kiderül, ki."
+        },
+        "ch16a": {
+          "title": "Vörös mancsok",
+          "text": "A Vörösmancskövek körül friss karomnyomok vannak, és mind a törzsfőnök sátra felé vezetnek. Nagymancs ezekből a kövekből gyűjti az erejét. Törj szét hármat, mielőtt elég lesz neki.",
+          "objective": "Törj szét 3 Vörösmancskövet.",
+          "done": "Három kő, és Nagymancs ma este dühösebb, mint valaha. Pont ezt akartuk."
+        },
+        "ch21a": {
+          "title": "Ami a felhőből jön",
+          "text": "A viharfelhő a sivatag közepe fölött forog, és minden héten kiköp egy szörnyet. Az egész világ együtt támad rá. Állj be te is, és üss rá a heti bossra.",
+          "objective": "Támadd meg 3-szor a heti bosst.",
+          "done": "Három ütés, és a szörny megtántorodott. A felhő viszont tovább forog. Valami táplálja."
+        },
+        "ch26a": {
+          "title": "Hófúvás",
+          "text": "A hágón a Hófúváskövek betemetik az utat, és Fagyúrnő a hó mögül figyel. Hakmun szerint a jég a kövekből táplálkozik. Törj szét hármat, és nyiss utat a vára felé.",
+          "objective": "Törj szét 3 Hófúváskövet.",
+          "done": "Az út szabad, a hó elállt. Fagyúrnő tudja, hogy jössz. Jó, ha tudja."
+        }
+      },
+      "tasks": {
+        "expeditions_2": "Két út, két kő",
+        "expeditions_3": "Három út, három kő",
+        "collects_3": "Három szüret",
+        "kills_150": "Százötven szörny bánja",
+        "kills_4000": "Ezerkétszáz szörny bánja",
+        "forge_1": "Egy kör a kovácsnál",
+        "forge_3": "Három kör a kovácsnál",
+        "boss_1": "Le a bosszal!",
+        "boss_2": "Két boss, egy nap",
+        "sells_3": "Lomtalanítás",
+        "sells_10": "Nagytakarítás",
+        "arena_1": "Becsületbeli ügy",
+        "arena_3": "Három győztes párbaj",
+        "tower_1": "Lépcsőzés",
+        "buys_2": "Kis bevásárlás",
+        "research_1": "A tudomány nevében",
+        "level_1": "Egy szinttel feljebb",
+        "nyang_10000": "Tízezer nyang, csak úgy",
+        "nyang_100000": "Százezer nyang",
+        "nyang_1000000": "Egymillió nyang"
+      },
+      "goal": {
+        "kills_one": "Győzz le {{goal}} szörnyet",
+        "kills_other": "Győzz le {{goal}} szörnyet",
+        "collects_one": "Gyűjtsd be a zsákmányt {{goal}} alkalommal",
+        "collects_other": "Gyűjtsd be a zsákmányt {{goal}} alkalommal",
+        "stones_one": "Törj össze {{goal}} viharkövet",
+        "stones_other": "Törj össze {{goal}} viharkövet",
+        "boss_wins_one": "Győzz le {{goal}} bosst",
+        "boss_wins_other": "Győzz le {{goal}} bosst",
+        "forge_attempts_one": "Próbálj meg {{goal}} fejlesztést a kovácsnál",
+        "forge_attempts_other": "Próbálj meg {{goal}} fejlesztést a kovácsnál",
+        "forge_success_one": "Fejlessz sikeresen {{goal}} tárgyat",
+        "forge_success_other": "Fejlessz sikeresen {{goal}} tárgyat",
+        "arena_wins_one": "Nyerj {{goal}} párbajt az arénában",
+        "arena_wins_other": "Nyerj {{goal}} párbajt az arénában",
+        "arena_fights_one": "Vívj {{goal}} párbajt az arénában",
+        "arena_fights_other": "Vívj {{goal}} párbajt az arénában",
+        "tower_floor_one": "Juss feljebb {{goal}} emeletet a toronyban",
+        "tower_floor_other": "Juss feljebb {{goal}} emeletet a toronyban",
+        "items_sold_one": "Adj el {{goal}} dolgot (tárgyat vagy alapanyagot): a boltban, vagy a Karakter oldalon az „Eladás” gombbal.",
+        "items_sold_other": "Adj el {{goal}} dolgot (tárgyat vagy alapanyagot): a boltban, vagy a Karakter oldalon az „Eladás” gombbal.",
+        "items_bought_one": "Vegyél {{goal}} dolgot a boltban",
+        "items_bought_other": "Vegyél {{goal}} dolgot a boltban",
+        "level_one": "Lépj feljebb {{goal}} szintet",
+        "level_other": "Lépj feljebb {{goal}} szintet",
+        "research_steps_one": "Adj át {{goal}} mintát Hakmunnak",
+        "research_steps_other": "Adj át {{goal}} mintát Hakmunnak",
+        "expeditions_one": "Teljesíts {{goal}} portyát",
+        "expeditions_other": "Teljesíts {{goal}} portyát",
+        "nyang_earned_one": "Szerezz {{goal}} nyangot",
+        "nyang_earned_other": "Szerezz {{goal}} nyangot",
+        "mounts_rented_one": "Bérelj {{goal}} hátast",
+        "mounts_rented_other": "Bérelj {{goal}} hátast",
+        "tower_bosses_one": "Győzz le {{goal}} toronybosst",
+        "tower_bosses_other": "Győzz le {{goal}} toronybosst",
+        "tasks_claimed_one": "Vedd át {{goal}} napi feladat jutalmát",
+        "tasks_claimed_other": "Vedd át {{goal}} napi feladat jutalmát",
+        "rerolls_one": "Cserélj le {{goal}} bónuszt Gangdónál",
+        "rerolls_other": "Cserélj le {{goal}} bónuszt Gangdónál"
+      },
+      "reward": {
+        "nyang": "{{amount}} nyang",
+        "xp": "{{amount}} XP",
+        "coins": "{{amount}} Viharérme",
+        "stack": "{{qty}} × {{name}}"
+      },
+      "login": {
+        "title": "Napi belépés",
+        "day": "{{day}}. nap",
+        "today": "Ma",
+        "streak_one": "Sorozat: {{count}} nap",
+        "streak_other": "Sorozat: {{count}} nap",
+        "claim": "Átvétel",
+        "claimed": "Átvéve",
+        "later": "Később",
+        "close": "Rendben",
+        "done": "A mai jutalmat már átvetted. Holnap jön a következő.",
+        "hint": "Lépj be minden nap, mert a hetedik napon Viharérme jár. Ha kihagysz egy napot, a sorozat megáll, és ott folytatod, ahol abbahagytad.",
+        "cell": "{{day}}. nap: {{reward}}",
+        "cellToday": "{{day}}. nap (ma): {{reward}}",
+        "cellClaimed": "{{day}}. nap: {{reward}}, átvéve",
+        "kind": {
+          "nyang": "{{qty}} nyang",
+          "potion": "{{qty}} gyógyital",
+          "material": "{{qty}} alapanyag",
+          "scroll": "{{qty}} Hamuóvó-tekercs",
+          "coins": "{{qty}} Viharérme"
+        },
+        "lines": {
+          "1": "Jó, hogy benéztél! Itt egy kis nyang a zsebedbe.",
+          "2": "Két gyógyital, mert a második nap mindig jobban fáj.",
+          "3": "Harmadik nap, dupla nyang. A kitartás kifizetődik.",
+          "4": "Alapanyag a kovácsnak, aki már előre dörzsöli a tenyerét.",
+          "5": "Ötödik nap, még több nyang. Kezdünk komolyan venni.",
+          "6": "Egy Hamuóvó-tekercs. Tedd el rosszabb napokra, a kovácsnál abból mindig akad.",
+          "7": "Hetedik nap: Viharérme! Holnap minden elölről kezdődik, de te már profi vagy."
+        }
+      },
+      "board": {
+        "tasks": "Mai feladatok",
+        "claim": "Átvétel",
+        "claimed": "Átvéve",
+        "progress": "{{progress}} / {{goal}}",
+        "progressLabel": "Haladás: {{name}}",
+        "reward": "Jutalom",
+        "newTasks": "Új feladatok {{time}} múlva",
+        "noTasks": "Ma nincs feladat a táblán. Nézz vissza holnap! Dongsu addig a dobját hangolja.",
+        "calendar": "Belépési naptár",
+        "chest": {
+          "title": "Napi láda",
+          "count": "{{claimed}} / {{total}} feladat átvéve",
+          "locked": "Vedd át mindhárom feladat jutalmát, és kinyithatod.",
+          "ready": "Kinyitható!",
+          "open": "Kinyitás",
+          "opened": "Ma már kinyitottad. Holnapra újra megtelik.",
+          "contents": "Két csomag alapanyag van benne, néha Viharérme is.",
+          "got": "A ládában ez volt:"
+        },
+        "tipTasks": "Minden nap három feladat vár a hirdetőtáblán. Ha mindhármat teljesíted, a napi láda is a tiéd."
+      },
+      "captain": {
+        "chapter": "{{n}}. fejezet",
+        "orders": "Parancs",
+        "rewards": "Jutalom",
+        "report": "Jelentés",
+        "readyLine": "Látom rajtad, hogy végeztél. Na, halljam a jelentést!",
+        "ready": "Kész, jelentheted!",
+        "locked": "{{level}}. szinttől jöhetsz a következő parancsért.",
+        "allDone": "Minden parancsot teljesítettél. Egyelőre.",
+        "completed_one": "Teljesített fejezetek ({{count}})",
+        "completed_other": "Teljesített fejezetek ({{count}})",
+        "done": "Teljesítve!",
+        "next": "Következő parancs",
+        "progressLabel": "Haladás: {{objective}}",
+        "dutyLine": "Most nincs parancsom, de szolgálat az mindig van.",
+        "recommended": "Ehhez ajánlott szint: {{level}}.",
+        "recommendedDuty": "Ehhez ajánlott szint: {{level}}. Addig erősödj: kovács, Fegyver- és Páncélkovács, portya és vadászat; lent a napi szolgálat is XP-t és zsoldot ad.",
+        "lockTip": {
+          "sub": "Zárolt fejezet",
+          "line": "A következő parancsot {{level}}. szinttől kapod.",
+          "need": "Szükséges szint",
+          "have": "A szinted",
+          "left": "Hátravan",
+          "leftValue_one": "{{count}} szint",
+          "leftValue_other": "{{count}} szint",
+          "duty": "Addig a napi szolgálat ad munkát és zsoldot."
+        }
+      },
+      "contracts": {
+        "title": "Napi szolgálat",
+        "introLocked": "Amíg nincs új parancsom, szolgálatba osztalak. Naponta három feladat, rendes zsolddal.",
+        "introFar": "Naponta három feladat, rendes zsolddal: ezekkel erősödsz a {{level}}. szintig.",
+        "introDone": "A parancsoknak vége, a szolgálatnak soha. Naponta három feladat, rendes zsolddal.",
+        "introKept": "A mai szolgálatot még befejezheted, a zsold akkor is jár.",
+        "resetsIn": "Új szolgálat {{time}} múlva",
+        "items": {
+          "patrol": {
+            "title": "Járőrözés",
+            "goal_one": "Győzz le {{goal}} ellenfelet itt: {{map}}.",
+            "goal_other": "Győzz le {{goal}} ellenfelet itt: {{map}}.",
+            "line": "A határ nem őrzi magát. Ritkítsd meg a környéket."
+          },
+          "stones": {
+            "title": "Kőtörő műszak",
+            "goal_one": "Törj szét {{goal}} viharkövet.",
+            "goal_other": "Törj szét {{goal}} viharkövet.",
+            "line": "Ahol kő esik, ott baj lesz. Ahol szétverik, ott nem."
+          },
+          "bosshunt": {
+            "title": "Bossvadászat",
+            "goal_one": "Győzz le {{goal}} bosst.",
+            "goal_other": "Győzz le {{goal}} bosst.",
+            "line": "A bossok azt hiszik, ma szabadnapjuk van. Szólj nekik, hogy nincs."
+          },
+          "dungeon": {
+            "title": "Kazamataszemle",
+            "goal_one": "Nyerj meg {{goal}} termet a kazamatákban.",
+            "goal_other": "Nyerj meg {{goal}} termet a kazamatákban.",
+            "line": "A kazamatákban mindig akad, aki rosszban sántikál. Nézz be."
+          },
+          "drill": {
+            "title": "Gyakorlótér",
+            "goal_one": "Nyerj {{goal}} párbajt az arénában.",
+            "goal_other": "Nyerj {{goal}} párbajt az arénában.",
+            "line": "Aki nem gyakorol, elfelejti, melyik vége éles a kardnak."
+          },
+          "forge": {
+            "title": "Fegyverszemle",
+            "goal_one": "Fejlessz sikeresen {{goal}} tárgyat a kovácsnál.",
+            "goal_other": "Fejlessz sikeresen {{goal}} tárgyat a kovácsnál.",
+            "line": "Gangdo panaszkodik, hogy unatkozik. Adj neki munkát."
+          },
+          "samples": {
+            "title": "Minták Hakmunnak",
+            "goal_one": "Adj át {{goal}} mintát Hakmunnak.",
+            "goal_other": "Adj át {{goal}} mintát Hakmunnak.",
+            "line": "Hakmun megint mintát kér. Vidd el neki, mielőtt ő jön érte."
+          },
+          "elixir": {
+            "title": "Erősítő főzet",
+            "goal_one": "Vegyél {{goal}} főzetet Yakdótól.",
+            "goal_other": "Vegyél {{goal}} főzetet Yakdótól.",
+            "line": "Yakdo szerint az új főzete csak egy kicsit robban. Próbáld ki."
+          },
+          "supply": {
+            "title": "Raktárrendezés",
+            "goal_one": "Adj el {{goal}} dolgot (tárgyat vagy alapanyagot).",
+            "goal_other": "Adj el {{goal}} dolgot (tárgyat vagy alapanyagot).",
+            "line": "A leltárad úgy csörög, mint egy ócskás szekere. Szabadulj meg a felesleggel."
+          },
+          "harvest": {
+            "title": "Zsákmányszemle",
+            "goal_one": "Gyűjtsd be a zsákmányt {{goal}} alkalommal.",
+            "goal_other": "Gyűjtsd be a zsákmányt {{goal}} alkalommal.",
+            "line": "A zsákmány nem hozza be magát. Ezt már az első napon is mondtam."
+          }
+        },
+        "tip": {
+          "sub": "Napi szolgálat",
+          "progress": "Haladás",
+          "reward": "Zsold",
+          "ready": "Kész, átveheted a zsoldot!",
+          "claimed": "A zsoldot már átvetted.",
+          "resetsIn": "Holnapra új szolgálat jön, {{time}} múlva."
+        }
+      },
+      "tracker": {
+        "label": "Fejezet",
+        "ready": "Jelentés!",
+        "locked": "{{level}}. szinttől",
+        "open": "{{chapter}}: {{title}}. {{status}}. A kapitányhoz visz.",
+        "statusProgress": "Haladás: {{progress}} / {{goal}}",
+        "statusReady": "Kész, jelentheted",
+        "statusLocked": "{{level}}. szinttől folytatódik",
+        "recommended": "Ajánlott szint: {{level}}.",
+        "dutyOpen": "Napi szolgálat. {{status}}. A kapitányhoz visz.",
+        "dutyStatus": "Kész: {{done}}/{{total}}",
+        "where": "Hová menj: {{npc}} (a városban arany kör jelöli).",
+        "navGuide": "Történet: {{objective}} ({{progress}}/{{goal}})",
+        "navGuideReady": "Történet: kész a parancs, jelentsd a kapitánynál."
+      },
+      "killHint": "A portyákon és a vadászaton megölt szörnyek is számítanak, a vadászaton megöltek a begyűjtéskor. A portyák a szintedhez igazodnak, ezért az alacsony szintű szörnyekre a vadászhelyükön vadássz.",
+      "guide": {
+        "tag": "A kapitány parancsa · {{chapter}}",
+        "order": "{{objective}} Haladás: {{progress}} / {{goal}}.",
+        "report": "Kész a parancs: itt jelentheted, és megkapod a jutalmat."
+      },
+      "marker": {
+        "captain": "A kapitány jelentést vár",
+        "board": "Jutalom vár a hirdetőtáblán",
+        "ready": "Kész a feladat, itt leadhatod.",
+        "new": "Újdonság vár itt.",
+        "guide": "A kapitány parancsa ide vezet: {{objective}}"
+      },
+      "errors": {
+        "task_not_found": "Ez a feladat már nincs a táblán. Frissítettük a listát.",
+        "unknown_chapter": "Ilyen fejezetet a kapitány nem ismer.",
+        "not_completed": "Ez még nincs kész. Frissítettük a haladásodat.",
+        "already_claimed": "Ezt a jutalmat már átvetted.",
+        "request_id_reused": "Ez a kérés már egy másik átvételhez tartozik. Töltsd be újra az oldalt, és próbáld meg még egyszer."
+      },
+      "weekly": {
+        "title": "Heti kihívások",
+        "resetsIn": "Új kihívások {{time}} múlva",
+        "noTasks": "Ezen a héten nincs kihívás a szintedhez. Nézz vissza hétfőn!",
+        "tasks": {
+          "expeditions_15": "Vándorhét",
+          "tower_boss_1": "A torony csúcsán",
+          "arena_5": "Az aréna bajnoka",
+          "kills_500": "Ötszáz szörny bánja",
+          "forge_3": "Kovácshét",
+          "tasks_10": "A tábla hőse",
+          "nyang_20000": "Húszezres hét",
+          "research_2": "Tudományos hét"
+        },
+        "tasksScaled": {
+          "kills_500": "Szörnyek bánja",
+          "nyang_20000": "Nyangos hét"
+        },
+        "chest": {
+          "title": "Heti láda",
+          "count": "{{claimed}} / {{total}} kihívás átvéve",
+          "locked": "Vedd át mindhárom heti kihívás jutalmát, és kinyithatod.",
+          "ready": "Kinyitható!",
+          "open": "Kinyitás",
+          "opened": "Ezen a héten már kinyitottad. Hétfőn újra megtelik.",
+          "contents": "Viharérme és alapanyagok lapulnak benne.",
+          "got": "A ládában ez volt:"
+        }
+      }
+    },
+    "achv": {
+      "tab": "Teljesítmények",
+      "readyCount": "{{count}} átvehető",
+      "intro": "Az alap teljesítmények minden jelvényéért Viharérme jár: bronzért {{bronze}}, ezüstért {{silver}}, aranyért {{gold}}. Az új teljesítmények aranya címet ad, egy teljes sorozat aranya keretet.",
+      "summary": "{{claimed}} / {{total}} jelvény",
+      "categories": {
+        "combat": "Harc",
+        "collecting": "Gyűjtés",
+        "crafting": "Fejlesztés",
+        "social": "Közösség"
+      },
+      "tiers": {
+        "bronze": "Bronz",
+        "silver": "Ezüst",
+        "gold": "Arany"
+      },
+      "progress": "{{value}} / {{goal}}",
+      "progressLabel": "Haladás: {{name}}",
+      "claim": "Átvétel",
+      "claimLabel": "{{tier}} jelvény átvétele: {{name}}, {{coins}} Viharérme",
+      "claimed": "Átvetted a jutalmat: {{name}}, {{tier}} jelvény.",
+      "claimAll": "Mind átvétele ({{count}} jelvény)",
+      "claimAllTitle": "Mind átvétele",
+      "claimAllTip": "Minden most átvehető jelvény egyszerre, mind a négy kategóriából.",
+      "claimedAll_one": "Átvettél {{count}} jelvényt, {{coins}} Viharérme jár érte.",
+      "claimedAll_other": "Átvettél {{count}} jelvényt, {{coins}} Viharérme jár értük.",
+      "allDone": "Mindhárom jelvény megvan",
+      "nextTier": "Következő: {{tier}}",
+      "tip": {
+        "reward": "{{coins}} VÉ",
+        "statusClaimed": "átvéve",
+        "statusReady": "átvehető",
+        "statusLeft": "még {{left}}",
+        "statusLocked": "előbb {{tier}} kell",
+        "note": "A jelvényeket sorban veheted át, mindegyiket egyszer.",
+        "rewardNone": "csak a haladásért",
+        "rewardTitle": "Cím: {{title}}",
+        "setFrame": "Ha a sorozat minden látható teljesítménye arany: {{frame}}"
+      },
+      "list": {
+        "slayer": {
+          "name": "Szörnyirtó",
+          "desc_one": "Győzz le {{goal}} szörnyet.",
+          "desc_other": "Győzz le {{goal}} szörnyet."
+        },
+        "wolf_hunter": {
+          "name": "Farkasvadász",
+          "desc_one": "Ejts el {{goal}} farkast.",
+          "desc_other": "Ejts el {{goal}} farkast."
+        },
+        "bandit_hunter": {
+          "name": "Zsoldosverő",
+          "desc_one": "Győzz le {{goal}} zsoldost.",
+          "desc_other": "Győzz le {{goal}} zsoldost."
+        },
+        "boss_hunter": {
+          "name": "Bossvadász",
+          "desc_one": "Győzz le {{goal}} bosst.",
+          "desc_other": "Győzz le {{goal}} bosst."
+        },
+        "old_tiger": {
+          "name": "Csíkos-szelídítő",
+          "desc_one": "Győzd le Öreg Csíkost {{goal}} alkalommal.",
+          "desc_other": "Győzd le Öreg Csíkost {{goal}} alkalommal."
+        },
+        "bandit_chief": {
+          "name": "Aranyfog réme",
+          "desc_one": "Győzd le Aranyfogat {{goal}} alkalommal.",
+          "desc_other": "Győzd le Aranyfogat {{goal}} alkalommal."
+        },
+        "stone_breaker": {
+          "name": "Kőtörő",
+          "desc_one": "Törj szét {{goal}} viharkövet.",
+          "desc_other": "Törj szét {{goal}} viharkövet."
+        },
+        "explorer": {
+          "name": "Felfedező",
+          "desc_one": "Teljesíts {{goal}} portyát.",
+          "desc_other": "Teljesíts {{goal}} portyát."
+        },
+        "tower_climber": {
+          "name": "Toronymászó",
+          "desc_one": "Mássz meg összesen {{goal}} emeletet a toronyban.",
+          "desc_other": "Mássz meg összesen {{goal}} emeletet a toronyban."
+        },
+        "tower_lord": {
+          "name": "A torony ura",
+          "desc_one": "Győzz le {{goal}} toronybosst.",
+          "desc_other": "Győzz le {{goal}} toronybosst."
+        },
+        "trainer": {
+          "name": "Edzett test",
+          "desc_one": "Vegyél {{goal}} statpontot nyangért.",
+          "desc_other": "Vegyél {{goal}} statpontot nyangért."
+        },
+        "gatherer": {
+          "name": "Gyűjtögető",
+          "desc_one": "Gyűjtsd be a vadászat zsákmányát {{goal}} alkalommal.",
+          "desc_other": "Gyűjtsd be a vadászat zsákmányát {{goal}} alkalommal."
+        },
+        "wealthy": {
+          "name": "Tele erszény",
+          "desc_one": "Szerezz összesen {{goal}} nyangot.",
+          "desc_other": "Szerezz összesen {{goal}} nyangot."
+        },
+        "seller": {
+          "name": "Lomtalanító",
+          "desc_one": "Adj el {{goal}} tárgyat.",
+          "desc_other": "Adj el {{goal}} tárgyat."
+        },
+        "shopper": {
+          "name": "Törzsvásárló",
+          "desc_one": "Vegyél {{goal}} dolgot a boltban.",
+          "desc_other": "Vegyél {{goal}} dolgot a boltban."
+        },
+        "researcher": {
+          "name": "Még egy minta",
+          "desc_one": "Teljesíts {{goal}} kutatási lépést.",
+          "desc_other": "Teljesíts {{goal}} kutatási lépést."
+        },
+        "pet_keeper": {
+          "name": "Kisállattartó",
+          "desc_one": "Keltess ki {{goal}} kísérőt.",
+          "desc_other": "Keltess ki {{goal}} kísérőt."
+        },
+        "rider": {
+          "name": "Nyeregben",
+          "desc_one": "Bérelj hátast {{goal}} alkalommal.",
+          "desc_other": "Bérelj hátast {{goal}} alkalommal."
+        },
+        "chest_hunter": {
+          "name": "Ládavadász",
+          "desc_one": "Nyiss ki {{goal}} ládát.",
+          "desc_other": "Nyiss ki {{goal}} ládát."
+        },
+        "loyal": {
+          "name": "Hűséges",
+          "desc_one": "Lépj be {{goal}} különböző napon.",
+          "desc_other": "Lépj be {{goal}} különböző napon."
+        },
+        "looter": {
+          "name": "Zsákmányoló",
+          "desc_one": "Találj {{goal}} tárgyat a zsákmányban.",
+          "desc_other": "Találj {{goal}} tárgyat a zsákmányban."
+        },
+        "smith_apprentice": {
+          "name": "Még egy fejlesztés",
+          "desc_one": "Próbálkozz {{goal}} fejlesztéssel a kovácsnál.",
+          "desc_other": "Próbálkozz {{goal}} fejlesztéssel a kovácsnál."
+        },
+        "smith_master": {
+          "name": "Kovácsmester",
+          "desc_one": "Érj el {{goal}} sikeres fejlesztést a kovácsnál.",
+          "desc_other": "Érj el {{goal}} sikeres fejlesztést a kovácsnál."
+        },
+        "plus_four": {
+          "name": "Négyes",
+          "desc_one": "Fejlessz {{goal}} tárgyat +4-re.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +4-re."
+        },
+        "plus_seven": {
+          "name": "Szerencsés hetes",
+          "desc_one": "Fejlessz {{goal}} tárgyat +7-re.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +7-re."
+        },
+        "plus_eight": {
+          "name": "Nyolcadik csoda",
+          "desc_one": "Fejlessz {{goal}} tárgyat +8-ra.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +8-ra."
+        },
+        "plus_nine": {
+          "name": "Kilences mennyország",
+          "desc_one": "Fejlessz {{goal}} tárgyat +9-re.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +9-re."
+        },
+        "veteran": {
+          "name": "Veterán",
+          "desc_one": "Juss el {{goal}}. szintig.",
+          "desc_other": "Juss el {{goal}}. szintig."
+        },
+        "alchemist": {
+          "name": "Bátor kóstoló",
+          "desc_one": "Igyál meg {{goal}} főzetet az alkimistánál.",
+          "desc_other": "Igyál meg {{goal}} főzetet az alkimistánál."
+        },
+        "scholar": {
+          "name": "Tudós",
+          "desc_one": "Olvass el sikerrel {{goal}} képességkönyvet.",
+          "desc_other": "Olvass el sikerrel {{goal}} képességkönyvet."
+        },
+        "pet_trainer": {
+          "name": "Állatbarát",
+          "desc_one": "Etesd meg a kísérődet {{goal}} alkalommal.",
+          "desc_other": "Etesd meg a kísérődet {{goal}} alkalommal."
+        },
+        "duelist": {
+          "name": "Párbajhős",
+          "desc_one": "Vívj {{goal}} párbajt az arénában.",
+          "desc_other": "Vívj {{goal}} párbajt az arénában."
+        },
+        "gladiator": {
+          "name": "Gladiátor",
+          "desc_one": "Nyerj {{goal}} párbajt az arénában.",
+          "desc_other": "Nyerj {{goal}} párbajt az arénában."
+        },
+        "patron": {
+          "name": "Mecénás",
+          "desc_one": "Adományozz {{goal}} nyangot a céhednek.",
+          "desc_other": "Adományozz {{goal}} nyangot a céhednek."
+        },
+        "raider": {
+          "name": "Rajtaütő",
+          "desc_one": "Vegyél részt {{goal}} céhes rajtaütésben.",
+          "desc_other": "Vegyél részt {{goal}} céhes rajtaütésben."
+        },
+        "chronicler": {
+          "name": "Krónikás",
+          "desc_one": "Teljesíts {{goal}} fejezetet a kapitánynál.",
+          "desc_other": "Teljesíts {{goal}} fejezetet a kapitánynál."
+        },
+        "board_regular": {
+          "name": "A tábla törzsvendége",
+          "desc_one": "Vedd át {{goal}} napi feladat jutalmát.",
+          "desc_other": "Vedd át {{goal}} napi feladat jutalmát."
+        },
+        "weekly_hero": {
+          "name": "A hét hőse",
+          "desc_one": "Vedd át {{goal}} heti kihívás jutalmát.",
+          "desc_other": "Vedd át {{goal}} heti kihívás jutalmát."
+        },
+        "townsfolk_friend": {
+          "name": "A város barátja",
+          "desc_one": "Teljesíts {{goal}} megbízást a város lakóinak.",
+          "desc_other": "Teljesíts {{goal}} megbízást a város lakóinak."
+        },
+        "heroic": {
+          "name": "Hősi kaland",
+          "desc_one": "Teljesíts {{goal}} hősi kazamatát.",
+          "desc_other": "Teljesíts {{goal}} hősi kazamatát."
+        },
+        "heroic_dragon": {
+          "name": "Sárkányszelídítő",
+          "desc_one": "Járd végig hősi módban a Sárkányfészket.",
+          "desc_other": "Járd végig hősi módban a Sárkányfészket {{goal}} alkalommal."
+        },
+        "storm_climber": {
+          "name": "Viharcsúcs-mászó",
+          "desc_one": "Mássz meg {{goal}} emeletet a Viharcsúcson.",
+          "desc_other": "Mássz meg {{goal}} emeletet a Viharcsúcson."
+        },
+        "angler": {
+          "name": "Horgász",
+          "desc_one": "Fogj ki {{goal}} halat.",
+          "desc_other": "Fogj ki {{goal}} halat."
+        },
+        "fish_collector": {
+          "name": "Halásznapló",
+          "desc_one": "Jegyezz be {{goal}} halfajt a naplóba.",
+          "desc_other": "Jegyezz be {{goal}} különböző halfajt a naplóba."
+        },
+        "legend_fisher": {
+          "name": "Legendás fogás",
+          "desc_one": "Fogj ki {{goal}} legendás halat.",
+          "desc_other": "Fogj ki {{goal}} legendás halat."
+        },
+        "season_veteran": {
+          "name": "Szezonról szezonra",
+          "desc_one": "Vegyél át {{goal}} aréna-szezon jutalmat.",
+          "desc_other": "Vegyél át {{goal}} aréna-szezon jutalmat."
+        },
+        "giant_slayer": {
+          "name": "Óriásverő",
+          "desc_one": "Támadd meg a heti bosst {{goal}} alkalommal.",
+          "desc_other": "Támadd meg a heti bosst {{goal}} alkalommal."
+        },
+        "house_seller": {
+          "name": "Felvásárlók barátja",
+          "desc_one": "Adj el {{goal}} tételt a Hármas Pecsétnek.",
+          "desc_other": "Adj el {{goal}} tételt a Hármas Pecsétnek."
+        },
+        "house_regular": {
+          "name": "A Hármas Pecsét vendége",
+          "desc_one": "Vegyél {{goal}} tételt a Hármas Pecséttől.",
+          "desc_other": "Vegyél {{goal}} tételt a Hármas Pecséttől."
+        },
+        "stonebreaker": {
+          "name": "Esernyő nélkül",
+          "desc_one": "Törj össze {{goal}} követ a Kőesőben.",
+          "desc_other": "Törj össze {{goal}} követ a Kőesőben."
+        },
+        "bigpaw_tamer": {
+          "name": "Nagymancs megszelídítője",
+          "desc_one": "Győzd le Nagymancsot {{goal}} alkalommal.",
+          "desc_other": "Győzd le Nagymancsot {{goal}} alkalommal."
+        },
+        "ruinback_breaker": {
+          "name": "Romhát-törő",
+          "desc_one": "Győzd le Vén Romhátút {{goal}} alkalommal.",
+          "desc_other": "Győzd le Vén Romhátút {{goal}} alkalommal."
+        },
+        "frost_thawer": {
+          "name": "Fagyolvasztó",
+          "desc_one": "Győzd le Fagyúrnőt {{goal}} alkalommal.",
+          "desc_other": "Győzd le Fagyúrnőt {{goal}} alkalommal."
+        },
+        "beard_singer": {
+          "name": "Szakállperzselő",
+          "desc_one": "Győzd le Lángszakállt {{goal}} alkalommal.",
+          "desc_other": "Győzd le Lángszakállt {{goal}} alkalommal."
+        },
+        "boar_hunter": {
+          "name": "Vaddisznó-vadász",
+          "desc_one": "Ejts el {{goal}} vaddisznót.",
+          "desc_other": "Ejts el {{goal}} vaddisznót."
+        },
+        "bear_hunter": {
+          "name": "Medvebirkózó",
+          "desc_one": "Ejts el {{goal}} medvét.",
+          "desc_other": "Ejts el {{goal}} medvét."
+        },
+        "archer_hunter": {
+          "name": "Íjászriasztó",
+          "desc_one": "Győzz le {{goal}} útonálló íjászt.",
+          "desc_other": "Győzz le {{goal}} útonálló íjászt."
+        },
+        "guard_breaker": {
+          "name": "Testőrök réme",
+          "desc_one": "Győzz le {{goal}} testőrt.",
+          "desc_other": "Győzz le {{goal}} testőrt."
+        },
+        "orc_hunter": {
+          "name": "Tajtékcsillapító",
+          "desc_one": "Győzz le {{goal}} tajtékzó orkot.",
+          "desc_other": "Győzz le {{goal}} tajtékzó orkot."
+        },
+        "totem_hunter": {
+          "name": "Totemdöntő",
+          "desc_one": "Győzz le {{goal}} totemrázó sámánt.",
+          "desc_other": "Győzz le {{goal}} totemrázó sámánt."
+        },
+        "scorpion_hunter": {
+          "name": "Skorpiótaposó",
+          "desc_one": "Győzz le {{goal}} homokskorpiót.",
+          "desc_other": "Győzz le {{goal}} homokskorpiót."
+        },
+        "mummy_hunter": {
+          "name": "Pólyabontó",
+          "desc_one": "Győzz le {{goal}} pólyás romőrt.",
+          "desc_other": "Győzz le {{goal}} pólyás romőrt."
+        },
+        "yeti_hunter": {
+          "name": "Jetiborzoló",
+          "desc_one": "Győzz le {{goal}} bozontos jetit.",
+          "desc_other": "Győzz le {{goal}} bozontos jetit."
+        },
+        "colossus_breaker": {
+          "name": "Kolosszusolvasztó",
+          "desc_one": "Győzz le {{goal}} fagyszívű kolosszust.",
+          "desc_other": "Győzz le {{goal}} fagyszívű kolosszust."
+        },
+        "imp_hunter": {
+          "name": "Manófogó",
+          "desc_one": "Győzz le {{goal}} tűzmanót.",
+          "desc_other": "Győzz le {{goal}} tűzmanót."
+        },
+        "giant_hunter": {
+          "name": "Óriásdöntő",
+          "desc_one": "Győzz le {{goal}} magmaóriást.",
+          "desc_other": "Győzz le {{goal}} magmaóriást."
+        },
+        "breeze_breaker": {
+          "name": "Fuvallattörő",
+          "desc_one": "Törj össze {{goal}} Fuvallatkövet.",
+          "desc_other": "Törj össze {{goal}} Fuvallatkövet."
+        },
+        "firestorm_breaker": {
+          "name": "Tűzviharszelídítő",
+          "desc_one": "Törj össze {{goal}} Tűzviharkövet.",
+          "desc_other": "Törj össze {{goal}} Tűzviharkövet."
+        },
+        "monkey_trapper": {
+          "name": "Csapdakerülő",
+          "desc_one": "Teljesítsd a Majomcsapdát {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Majomcsapdát {{goal}} alkalommal."
+        },
+        "spider_nester": {
+          "name": "Pókfészek-söprő",
+          "desc_one": "Teljesítsd a Pókfészket {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Pókfészket {{goal}} alkalommal."
+        },
+        "dragon_nester": {
+          "name": "Sárkányfészek-hódító",
+          "desc_one": "Teljesítsd a Sárkányfészket {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Sárkányfészket {{goal}} alkalommal."
+        },
+        "room_walker": {
+          "name": "Teremjáró",
+          "desc_one": "Nyerj meg {{goal}} kazamata-termet.",
+          "desc_other": "Nyerj meg {{goal}} kazamata-termet."
+        },
+        "heroic_monkey": {
+          "name": "Hős a dzsungelben",
+          "desc_one": "Járd végig hősi módban a Majomcsapdát {{goal}} alkalommal.",
+          "desc_other": "Járd végig hősi módban a Majomcsapdát {{goal}} alkalommal."
+        },
+        "heroic_spider": {
+          "name": "Hős a hálóban",
+          "desc_one": "Járd végig hősi módban a Pókfészket {{goal}} alkalommal.",
+          "desc_other": "Járd végig hősi módban a Pókfészket {{goal}} alkalommal."
+        },
+        "rare_fisher": {
+          "name": "Ritka kapás",
+          "desc_one": "Fogj ki {{goal}} ritka halat.",
+          "desc_other": "Fogj ki {{goal}} ritka halat."
+        },
+        "epic_fisher": {
+          "name": "Különleges fogás",
+          "desc_one": "Fogj ki {{goal}} különleges halat.",
+          "desc_other": "Fogj ki {{goal}} különleges halat."
+        },
+        "plus_five": {
+          "name": "Ötös",
+          "desc_one": "Fejlessz {{goal}} tárgyat +5-re.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +5-re."
+        },
+        "plus_six": {
+          "name": "Hatos",
+          "desc_one": "Fejlessz {{goal}} tárgyat +6-ra.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +6-ra."
+        },
+        "ghost_breaker": {
+          "name": "Szellemoszlató",
+          "desc_one": "Győzz {{goal}} Holt Kő ellen.",
+          "desc_other": "Győzz {{goal}} Holt Kő ellen."
+        },
+        "wild_archer_hunter": {
+          "name": "Maszkletépő",
+          "desc_one": "Győzz le {{goal}} gyékénymaszkos íjászt.",
+          "desc_other": "Győzz le {{goal}} gyékénymaszkos íjászt."
+        },
+        "boot_king": {
+          "name": "Csizmakirály",
+          "desc_one": "Fogj ki {{goal}} régi csizmát.",
+          "desc_other": "Fogj ki {{goal}} régi csizmát."
+        },
+        "dog_nightmare": {
+          "name": "A vadkutyák rémálma",
+          "desc_one": "Ejts el {{goal}} vadkutyát.",
+          "desc_other": "Ejts el {{goal}} vadkutyát."
+        },
+        "banana_friend": {
+          "name": "A Banánkirály régi ismerőse",
+          "desc_one": "Teljesítsd a Majomcsapdát {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Majomcsapdát {{goal}} alkalommal."
+        },
+        "pickpocket_bane": {
+          "name": "Zsebmetszők ostora",
+          "desc_one": "Győzz le {{goal}} zsebtolvajt.",
+          "desc_other": "Győzz le {{goal}} zsebtolvajt."
+        },
+        "silk_regular": {
+          "name": "A Selyemkirálynő törzsvendége",
+          "desc_one": "Teljesítsd a Pókfészket {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Pókfészket {{goal}} alkalommal."
+        },
+        "dragon_regular": {
+          "name": "Szénszakáll szomszédja",
+          "desc_one": "Teljesítsd a Sárkányfészket {{goal}} alkalommal.",
+          "desc_other": "Teljesítsd a Sárkányfészket {{goal}} alkalommal."
+        },
+        "stripes_rival": {
+          "name": "Öreg Csíkos örök riválisa",
+          "desc_one": "Győzd le Öreg Csíkost {{goal}} alkalommal.",
+          "desc_other": "Győzd le Öreg Csíkost {{goal}} alkalommal."
+        },
+        "shower_breaker": {
+          "name": "Zápor után",
+          "desc_one": "Törj össze {{goal}} Záporkövet.",
+          "desc_other": "Törj össze {{goal}} Záporkövet."
+        },
+        "steady_hand": {
+          "name": "Biztos kéz",
+          "desc_one": "Fejlessz {{goal}} tárgyat +1-re.",
+          "desc_other": "Fejlessz {{goal}} tárgyat +1-re."
+        },
+        "faithful": {
+          "name": "Hűséges vándor",
+          "desc_one": "Lépj be {{goal}} különböző napon.",
+          "desc_other": "Lépj be {{goal}} különböző napon."
+        }
+      },
+      "claimTitle": "Cím",
+      "claimLabelPlus": "{{tier}} jelvény átvétele: {{name}}, {{reward}}",
+      "gotCosmetics": "Új kozmetikum: {{names}}."
+    },
+    "tutorial": {
+      "name": "Gilhwa",
+      "role": "az útmutatód",
+      "ui": {
+        "next": "Tovább",
+        "go": "Mutasd",
+        "ok": "Értem",
+        "done": "Köszönöm!",
+        "pass": "Ezt most kihagyom",
+        "skip": "Kihagyom a bemutatót",
+        "notNow": "Most nem",
+        "save": "Mentem",
+        "later": "Később",
+        "counter": "{{n}}/{{total}}",
+        "reward": "Jutalom: {{what}}",
+        "rewardNyang": "{{amount}} nyang",
+        "rewardPotions_one": "{{count}} gyógyital",
+        "rewardPotions_other": "{{count}} gyógyital",
+        "rewardBoth": "{{nyang}} és {{potions}}",
+        "rewardGot": "Gilhwa útravalója: {{what}}",
+        "skipped": "Rendben, nem zavarlak. A kérdőjelnél bármikor folytathatjuk.",
+        "escHint": "Esc: kihagyás",
+        "skipConfirm": {
+          "text": "Kihagyod a bemutatót? A hátralévő leckék jutalmát ({{nyang}} nyang és {{potions}} gyógyital) így is megkapod, és a kérdőjelnél bármikor folytathatod.",
+          "textNoReward": "Kihagyod a bemutatót? A kérdőjelnél bármikor folytathatod.",
+          "stay": "Maradok",
+          "skip": "Kihagyom"
+        },
+        "skippedPaid": "Rendben, nem zavarlak. A jutalmakat jóváírtam: {{what}}. A kérdőjelnél bármikor folytathatjuk.",
+        "earlyAccess": "A Stonestorm a visszajelzéseitek alapján folyamatosan bővül, de a hősöd és a haladásod megmarad."
+      },
+      "steps": {
+        "city_go": "Szervusz, kedveském! A malomnál vadkutyák garázdálkodnak. Nyomd meg a Vadászat gombot, ott várnak a portyák.",
+        "npc_old_lady": "Nyomd meg a Vadászat gombot, ott várnak a portyák.",
+        "offers_short": "Ez rövid, csak pár perc. Pont neked való.",
+        "run_back": "A portyád vár ám! Gyere vissza, folytassuk.",
+        "city_back": "Erre, kedveském! Gyere vissza a faluba, a malomnál már várnak a vadkutyák.",
+        "run_resume": "A portyád ott tart, ahol hagytad. Folytassuk!",
+        "first_fight": "Kezdd a kutyával! Kattints a kártyájára, a harcot a hősöd automatikusan vívja.",
+        "loot_equip": "Ez jobb a réginél! Vedd fel, és máris a kezedben van.",
+        "fight_ok": "Szép munka! Ha megnézted a zsákmányt, mehetünk tovább.",
+        "run_next": "Ez az állomás megvolt. Irány a következő!",
+        "free_skip": "A kapu még zárva, de az első ugrást én állom. Máskor kivárod, vagy egy Viharérmével átugrod.",
+        "wanderer": "Egy vándor! Hallgasd meg, segíts neki, és meghálálja.",
+        "marker": "Látod a kis jelet a kártya sarkában? Ott a vándor holmija. Ha hármat összeszedsz, megjutalmaz.",
+        "first_chest": "Egy láda! Harc nélkül ad zsákmányt, nyisd ki bátran.",
+        "low_hp": "Most ne a vezért válaszd, kedveském. Előbb szusszanj egyet.",
+        "levelup_run": "Szintet léptél, ügyes! A pontokat a portya után együtt elosztjuk. Most nyomd meg a Később gombot.",
+        "guardians": "Itt a viharkő! Győzd le az őrzőit, utána választhatsz egy ládát.",
+        "run_done": "Megvolt az első portyád, ügyes vagy! Gyere, mutatom, mi jön most.",
+        "report_go": "Mugang kapitány várja a jelentésed. Ne várakoztasd, kedveském!",
+        "report_claim": "Itt jelented, hogy kész vagy. A jutalmat rögtön meg is kapod.",
+        "report_next": "Ez a következő parancsa. Fent a tekercs mindig mutatja, hol tartasz, és egy kattintással ide hoz.",
+        "levelup_spend": "Minden szint három statpontot ad. Gyere, elosztjuk őket!",
+        "stats_go": "Szintet léptél, és statpontot kaptál. Nézzük meg a hősöd!",
+        "stats_doll": "Ez vagy te. Amit felveszel, az rajtad is látszik.",
+        "stats_tab": "Új pontjaid vannak! A statjaidat a Statok fülön osztod el.",
+        "stats_add": "Ez a fő statod, ettől üt nagyobbat a fegyvered. Tegyél bele egy pontot!",
+        "stats_auto": "A többit nem kell egyenként kiszámolnod. A Javasolt elosztás a kasztodhoz illően szétosztja.",
+        "stats_save": "Most minden pont a helyén van. Mentsd el, és a hősöd máris erősebb!",
+        "farm_go": "Amíg portyázol, a vadászaid is dolgoznak. Nézzük, mit hoztak!",
+        "farm_collect": "Ide gyűlik a zsákmányuk. Hozd be!",
+        "farm_info": "A zsák {{hours}} óra alatt telik meg, utána a vadászok is pihennek. Nézz be naponta párszor!",
+        "farm_info_vip": "A Császári menlevéllel a zsák {{hours}} óra alatt telik meg, nélküle {{base}} óra alatt. Utána a vadászok is pihennek. Nézz be naponta párszor!",
+        "forge_city": "Gyere vissza a faluba, Gangdo már fűti a kohót.",
+        "city_tour": "Ez a falu. Ahol nyíl ugrál, oda benézhetsz. A felkiáltójel azt jelenti, hogy valaki vár rád: a piros kész feladatot jelez, a kék újdonságot.",
+        "forge_spot": "Ő Gangdo, a kovács. Mogorva, de a keze aranyat ér.",
+        "npc_blacksmith": "A Fejlesztés gomb visz a műhelybe.",
+        "forge_go": "Az első fejlesztések +2-ig biztosan sikerülnek, Gangdo megígérte. Nyomd meg a gombot!",
+        "forge_risk": "100% alatt már a szerencse is dönt. +{{noBurn}}-ig nem ég el: a kudarc csak a nyangot és az alapanyagot viszi. +{{burnFrom}} elég, ha nem sikerül, a foglalataiban ülő kövekkel együtt; a Hamuóvó-tekercs megvédi. Értékes kincs, ezért a +{{burnFrom}} kezdődő lépésekre tartogasd.",
+        "forge_risk_sure": "Az esély most {{pct}}%: ez a lépés biztosan sikerül. 100% alatt már a szerencse is dönt. +{{noBurn}}-ig nem ég el: a kudarc csak a nyangot és az alapanyagot viszi. +{{burnFrom}} elég, ha nem sikerül, a foglalataiban ülő kövekkel együtt; a Hamuóvó-tekercs megvédi. Értékes kincs, ezért a +{{burnFrom}} kezdődő lépésekre tartogasd.",
+        "forge_risk_risky": "Az esély most {{pct}}%, itt már a szerencse is dönt. +{{noBurn}}-ig nem ég el: a kudarc csak a nyangot és az alapanyagot viszi. +{{burnFrom}} elég, ha nem sikerül, a foglalataiban ülő kövekkel együtt; a Hamuóvó-tekercs megvédi. Értékes kincs, ezért a +{{burnFrom}} kezdődő lépésekre tartogasd.",
+        "shop_city": "Minah már kinyitotta a boltot. Gyere, nézzünk be hozzá!",
+        "shop_spot": "Minah boltjában mindig van gyógyital és alap felszerelés.",
+        "npc_shop": "A Vásárlás gombbal nézhetsz be a pult mögé.",
+        "shop_sell": "A gyógyitalt harc közben automatikusan iszod meg, ha fogy a HP-d. Mindig legyen nálad pár. Ami nem kell, itt eladhatod. Így hely is lesz a leltáradban, és nyangot is kapsz.",
+        "merchants": "Ő Kalbin, a fegyverkovács. Mindig a kasztodnak való fegyvert árul. Taesan páncélt árul, Jamul alapanyagot. Ha gyűlik a nyang, nézz be hozzájuk!",
+        "board_city": "Nézzük meg a hirdetőtáblát is, ott mindig akad munka.",
+        "board_spot": "A hirdetőtáblára minden nap új feladatokat szögelnek ki.",
+        "npc_board": "A Napi feladatok gomb nyitja a táblát.",
+        "board_tasks": "Minden nap három feladat vár. Ha mindet átveszed, a láda is kinyílik.",
+        "board_login": "Ez a belépési naptár. Gyere vissza minden nap, a hetedik napon Viharérme jár.",
+        "today_go": "Ha nem tudod, mi legyen a következő lépés, ez a lista megmondja.",
+        "today_list": "Fentről lefelé haladj. Az Odamegyek gomb oda is visz, ahol dolgod van.",
+        "coins_what": "Ez a Viharérme. Időt spórolhatsz vele, ugrásra és feltöltésre költheted, a végjátékban pedig a Viharszív fejlesztését is gyorsítja.",
+        "coins_free": "Húszat ajándékba kaptál, és ládákból, fejezetekért is jár. Venni is lehet, de nem muszáj.",
+        "run2_go": "Kipihented magad? Irány a következő portya!",
+        "energy": "A villám az energiád, minden portya ebből fogy. Napváltáskor ({{at}}) egyszerre megkapod a teljes napi energiádat, és akkor használod el, amikor akarod.",
+        "second_run": "Most te választasz. Én csak itt ülök, és drukkolok.",
+        "save_offer": "A hősöd most csak ebben a böngészőben él. Mentsd el, és kapsz érte húsz Viharérmét.",
+        "finale": "Ennyi volt a bevezető, kedveském. Ha elakadsz, a kérdőjelnél mindent újra megmutatok. És egyél rendesen!"
+      },
+      "tours": {
+        "skills": {
+          "1": "Ötödik szinttől két út közül választhatsz. Mindkettő új harci képességet és állandó bónuszt ad.",
+          "2": "A képességed könyvekkel fejlődik. Minden olvasás után pihenni kell egy kicsit."
+        },
+        "arena": {
+          "1": "Itt más hősökkel mérkőzöl. A győzelem becsületet és nyangot hoz, a vereség egy kis becsületbe kerül.",
+          "2": "Harc után öt percet pihensz. Az ellenfelek addig maradnak, óránként egyszer ingyen kérhetsz újakat."
+        },
+        "tower": {
+          "1": "Ez a Viharfogó, százhúsz emelet. Minden emelet első teljesítése jutalmat ad.",
+          "2": "20 percenként jár egy próba: győzelem és vereség után is pihensz 20 percet."
+        },
+        "research": {
+          "1": "Hakmun mintákat kér a vadászhelyekről. A minták vadászat közben hullanak, automatikusan gyűlnek.",
+          "2": "Átadás után két órát vizsgálja. Ha elég minta beválik, a felfedezés örökre erősít."
+        },
+        "alchemist": {
+          "1": "Yakdo főzetei egy ideig erősítenek: több tapasztalat, több nyang vagy erősebb ütés.",
+          "2": "Ha újra veszel, a hatás tovább tart. Nyangért és Viharérméért is kapható."
+        },
+        "pets": {
+          "1": "A tojásokból nyolc óra alatt kísérő kel. Tojást a szörnyek és a bossok hagynak maguk után.",
+          "2": "Egyszerre egy kísérő tart veled, és csak ő ad bónuszt. Etesd naponta, és erősödik.",
+          "1_v3": "A tojásokból nyolc óra alatt kísérő kel. A legtöbb tojás a kazamatákban vár rád.",
+          "2_v3": "Egy fő kísérőt nevelsz: etetéssel és harcokkal nő, a kazamaták magjaival fejlődik, és képességeket tanul."
+        },
+        "stable": {
+          "1": "Malgu hátasokat ad bérbe. Hátassal minden portya rövidebb.",
+          "2": "Ha hosszabbítasz, a bérlet nem indul elölről, csak kitolódik a vége."
+        },
+        "guild": {
+          "1": "Céhben együtt erősebbek vagytok. Jelentkezz egybe, vagy alapíts sajátot.",
+          "2": "A céh épületei minden tagot erősítenek, és naponta közösen nekieshettek a céh bossának."
+        },
+        "house": {
+          "1": "Sangbo a Hármas Pecsét pultjánál vesz és ad el. Amit itt veszel, a tiéd marad: kereskedni a hősök között nem lehet.",
+          "2": "A felszerelést jobb áron adhatod el itt, mint Minahnál, és ha valami elfogyott, előjegyezheted. Mindkettőnek napi kerete van.",
+          "3": "Kalbin, Taesan és Jamul pultja pár óránként cserélődik, és csak neked szól. Nézz be gyakran!"
+        },
+        "dungeons": {
+          "1": "A kazamatában tíz terem jön egymás után, a végén a főboss. Kulccsal lépsz be.",
+          "2": "A HP-d teremről teremre megmarad. Kazamatánként naponta egy kulcs ingyen jár."
+        },
+        "wheel": {
+          "1": "Bingbing kereke naponta egyszer ingyen forog. Pörgess bátran!",
+          "2": "Az esélyeket mindig itt látod, nincs titok. Viharérméért nem lehet pörgetni."
+        },
+        "achievements": {
+          "1": "Itt gyűlnek a teljesítményeid. Az alap teljesítmények jelvényeiért Viharérme jár, az újakért címek és keretek.",
+          "2": "Ami kész, azt itt veheted át, sorban, mindegyiket egyszer."
+        },
+        "vip": {
+          "1": "Itt veheted a Viharérmét. Időt és kényelmet ad, a végjátékban (Viharszív) erősebbé is tehet. Minden ár és esély ki van írva.",
+          "2": "A Császári menlevél 7 napig több tapasztalatot, nyangot és zsákmányt ad. Ötödik szinten egy napig ki is próbálhatod."
+        },
+        "path_pick": {
+          "1": "Választhatsz fejlődési utat! Ez adja a képességedet. A Karakter oldal Képesség fülén két út közül döntesz.",
+          "2": "Itt a két út. Mindkettő új harci képességet és állandó bónuszt ad. Olvasd el őket, aztán válassz egyet."
+        },
+        "unlock_10": {
+          "1": "Tizedik szint! Mostantól kutathatsz Hakmunnál, és céhbe is léphetsz.",
+          "2": "Kísérőt is nevelhetsz: tojásból kel ki, és amíg veled tart, bónuszt ad. Tojást a Vásári keréken nyerhetsz, és vadászat közben a bossok, szörnyek is hagynak. A Kísérők fülön kel ki.",
+          "3": "A Vadonodú a kísérőd első otthona: itt esnek a tojások, a fejlődés magja és az első képességkönyvek. Naponta {{free}} ingyen kulcs jár; ha aznap nem veszed át, éjfélkor elvész.",
+          "2_v3": "Kísérőt is nevelhetsz: az első tojásodat most megkapod, az első otthona pedig a Vadonodú kazamata. A Kísérők fülön kel ki."
+        },
+        "first_egg": {
+          "1": "Megvan az első tojásod! Keltesd ki most: a Karakter oldal Kísérők fülén nyolc óra alatt kikel.",
+          "2": "Ezzel a gombbal kelteted ki. Nyolc óra múlva előbújik a kísérőd: akkor aktiváld, és amíg veled tart, bónuszt ad.",
+          "2_v3": "Ezzel a gombbal kelteted ki. Nyolc óra múlva előbújik: legyen ő a fő kísérőd, és nőni kezd."
+        },
+        "unlock_20": {
+          "1": "Huszadik szint: megnyílt a kazamata. A Vadászat oldalon találod.",
+          "v2": "Megnyílt a Majomcsapda: itt nő Felnőtté a kísérőd."
+        },
+        "season": {
+          "1": "Ez a Viharút. Harcért, kőért, feladatért Viharpont jár, és minden szakasz jutalmat ad.",
+          "2": "Az ingyenes sáv mindenkié. A prémium sáv pénzért nyílik meg, de nélküle is végigjárhatod az utat.",
+          "3": "Amit elértél, itt veszed át: a Mind átvétele gomb mindkét sáv jutalmát egyszerre hozza."
+        },
+        "moon": {
+          "1": "Ez a Sárkányhold, a 14 napos kártya: 14 napig minden nap Viharérme és energia jár érte, ha átveszed.",
+          "2": "A napi jutalmat fent, a holdas érmén veszed át, vagy a Mai teendőkben. A kihagyott nap elvész, nem gyűlik fel."
+        },
+        "arena_season": {
+          "1": "Az aréna szezonokban jár, kedveském: négy hétig gyűjtöd a becsületet, a végén a helyezésed szerint jár a jutalom.",
+          "2": "Legalább tíz támadás kell, hogy rangsoroljanak. Szezon végén a becsület félútig visszaáll ezer felé, így mindenki újra nekifuthat."
+        },
+        "heroic": {
+          "1": "Hősi mód: ugyanaz a kazamata, csak a lakói közben megerősödtek. Két kulcsot kér a belépés.",
+          "2": "Hetente egyszer viheted végig kazamatánként. Cserébe jobb tárgyat és Viharkő-szilánkot ad, kedveském."
+        },
+        "world_boss": {
+          "1": "Ez a heti boss. Az egész falu üti, és minden ütés összeadódik.",
+          "2": "Naponta háromszor támadhatsz. Viharérméért sem lehet többet, itt mindenki egyforma.",
+          "3": "A hét végén vagy amikor elesik, a helyezésed szerint jutalmat kapsz. Ha a céhedből hárman ütitek, még ráadás is jár."
+        },
+        "tower_storm": {
+          "1": "A Viharfogó teteje fölött ott a Viharcsúcs: húsz emelet, ami minden hétfőn újra kezdődik.",
+          "2": "Minden emelet ad valamit, az ötödikek kovácssegédet, a csúcs Viharérmét. 20 percenként egy próba, mint lent."
+        },
+        "fishing": {
+          "1": "Itt választasz vizet és csalit. A drágább csalira a ritkább halak is ráharapnak.",
+          "2": "Dobd be, és amikor az úszó lebukik és felcsap a víz, kattints gyorsan! Ha előbb rántod, elúszik.",
+          "3": "A halat a vödörből eladhatod, vagy Nakshi alapanyagra cseréli. A naplóban gyűjtheted a fajokat, kedveském."
+        },
+        "soul": {
+          "1": "Ez a Viharszív, kedveském: hat foglalat, hat kő. Mindegyik kő egy fő értéket erősít, és minden harcban hat.",
+          "2": "Itt finomítod a kiválasztott követ. A próba előtt látod a pontos esélyt és az árat, és azt is, mi történik, ha nem sikerül.",
+          "3": "Az anyag a játékból jön: portyáról, kazamatából, halászatból, arénából. Viharérméért esélyt és védő pecsétet is vehetsz, de nem muszáj."
+        },
+        "patron": {
+          "1": "Ez a pártfogói rang. A valódi pénzben fizetett összegből jön, idővel nem csökken, visszatérítésnél igen.",
+          "2": "Itt látod mind a tíz rangot és minden jutalmukat előre. A rang a napi kereteket tágítja és kényelmet ad."
+        },
+        "statbuy": {
+          "0": "A statjaidat a Statok fülön látod: nyisd meg.",
+          "1": "Nyangért is vehetsz statpontot, kedveském. Minden pont drágítja a következőt, így mindig van mire költeni: ami a kovács után marad, itt erővé válik."
+        },
+        "runasor": {
+          "1": "Ez a Rúnasor, kedveském: egyszerre három lapot raksz ki. A legtöbbet a színsor ér: egy színből három egymás utáni szám, mint itt a vörös 3, 4, 5.",
+          "2": "A hármas ugyanaz a szám mindhárom színben, mint itt a 6-os. Ha a számok egymás után jönnek, de a színük vegyes, az vegyes sor, és kevesebbet ér.",
+          "3": "5 lap van a kezedben, 19 a pakliban. Ha nincs jó hármasod, dobj el egy lapot, és húzz helyette. Ha elfogy a pakli, és már nem tudsz kirakni, vége a játéknak. Több pont, jobb láda!"
+        },
+        "unlock_arena": {
+          "1": "Megnyílt az aréna, kedveském! Más hősökkel párbajozhatsz becsületért és nyangért. Megmutatom, hogyan megy."
+        },
+        "unlock_tower": {
+          "1": "Megnyílt a Viharfogó, a torony! Emeletről emeletre mászol, és minden új emelet jutalmat ad."
+        },
+        "unlock_research": {
+          "1": "Hakmun, a szörnytudós mostantól mintákat vár tőled. Minden felfedezése tartósan erősebbé tesz."
+        },
+        "unlock_fishing": {
+          "1": "A tónál Nakshi, a halász vár. Csalival horgászhatsz, és a nagy fogás szép pénzt ér."
+        },
+        "unlock_rift": {
+          "1": "Megnyílt a Viharhasadék a Kazamaták fülön: tizenöt emelet, kártyáról kártyára, minden nap új térképpel. Naponta 2 menet jár; a barátaid kötelei rövidítik a várakozást, 5 kötéllel pedig megnyílik a 3. menet. A pecsétért energiát, boss-próbát és kulcsot vehetsz."
+        },
+        "unlock_pure": {
+          "1": "Megnyílt a Tiszta aréna: ott csak a szinted, a statjaid és a felszerelésed számít, főzet nélkül."
+        },
+        "beat_bag": {
+          "1": "Ezen a tárgyon ▲ jel van: ha a viselt tárgyad +szintjére kovácsolod, jobb lesz annál. Koppints rá, és nézd meg."
+        },
+        "beat_rare": {
+          "1": "Nézd a keretét! A keret színe a ritkaság: szürke Közönséges, kék Ritka, lila Hősi, arany Mitikus. A ritkább tárgyon több a bónusz."
+        },
+        "beat_catchup": {
+          "1": "{{level}}. szinttől lassabban telik a vadászzsák: az XP és a nyang ×{{factor}}. A portyákkal és a harcokkal gyorsabban haladsz."
+        },
+        "beat_boss": {
+          "1": "Most már van esélyed Öreg Csíkos ellen: {{pct}}%! A Boss fülön hívd ki. Ha elsőre nem sikerül, a következő próba könnyebb.",
+          "1_react": "Most már van esélyed Öreg Csíkos ellen: {{pct}}%! A Boss fülön hívd ki. A harcban figyeld a jelzéseit, megmutatom, mire mit nyomj. Ha elsőre nem sikerül, a következő próba könnyebb."
+        },
+        "beat_boss_wait": {
+          "1": "Öreg Csíkos, a vidék bossa még erős neked: most {{pct}}% az esélyed. Erősödj: a kovácsnál +4-ig biztos a fejlesztés, a Fegyver- és a Páncélkovácsnál jobb holmit veszel, a portya és a vadászat XP-t hoz. A {{level}}. szint körül már nyerhetsz; szólok, ha jó az esélyed."
+        },
+        "beat_spot": {
+          "1": "Van jobb vadászhelyed: ott a zsák óránként kb. +{{xp}} XP-vel többet hoz. Költöztesd oda a vadászatot az „Ide megyek” gombbal!"
+        },
+        "beat_map2": {
+          "1": "Új vidék nyílt a térképen! A szörnyei {{level}}. szinttől valók. Ha a háttér-vadászat jobb vadászhelyet ajánl, menj át bátran."
+        },
+        "beat_spirit": {
+          "1": "Szellemkövet kaptál! Egy szörnyfajta ellen erősít. A Foglalatok fülön vár a tarsolyban: tedd egy tárgyad foglalatába, ott dolgozik.",
+          "1_here": "Szellemkövet kaptál! Ennek a térképnek a lényei ellen erősít. A berakás ingyenes: koppints a kőre a tarsolyban, aztán egy tárgyad szabad foglalatára."
+        },
+        "forge_bonus": {
+          "1": "Minden tárgyadon van bónusz, kedveském, és Gangdo újat kalapálhat a helyére. Nézzünk be hozzá!",
+          "2": "Ez a Bónuszok fül. Itt cserélheted le egy tárgy bónuszát: Gangdo a régi mellé újat sorsol, és te döntöd el, melyik marad.",
+          "3": "Válaszd ki a tárgyat, és nyomd meg a Bónuszváltás gombot. Nyangba kerül, és ha az új nem tetszik, megtarthatod a régit."
+        },
+        "first_book": {
+          "1": "Képességkönyvet kaptál, kedveském! Olvasd el a Képesség fülön: ha sikerül, a képességed szintet lép.",
+          "2": "Ezzel a gombbal olvasod el. Minden olvasás elvisz egy könyvet, és utána pihenned kell egy kicsit, de a sikeres olvasás erősebbé teszi a képességed."
+        },
+        "unlock_event": {
+          "1": "Megnyíltak az ünnepi események, kedveském! Fent ez az érem mutatja, mi fut most. Nézzük meg, mit tartogat!"
+        },
+        "unlock_season": {
+          "1": "Megnyílt a Viharút! Harcért, kőért és feladatért Viharpont jár, és minden szakasz jutalmat ad. Megmutatom."
+        },
+        "unlock_runasor": {
+          "1": "Dongsu teaházában megnyílt a Rúnasor, egy kártyajáték: a pontjaidért ládát nyitsz. Megmutatom, hogyan megy."
+        },
+        "halloween": {
+          "1": "Ez a Holt Kövek Éjszakája, az ünnep végéig tart. A Holt Kő három hullám szörnyet küld rád a szinteden. Minden napra jár pár próba, és a győzelemért Lidérclámpás a jutalom.",
+          "2": "Hétvégén Hwaryeon, a Kilencfarkú is előjön. Ő is Lidérclámpást ad, és elég győzelemért címet is kapsz.",
+          "3": "A napi feladatokért is Lidérclámpás jár. A lámpásokat a Lámpásboltban váltod be, amíg nyitva van."
+        },
+        "beat_badge": {
+          "1": "Jelvényt szereztél, kedveském! A jutalmát a Karakter oldal Jelvények fülén veheted át. Megmutatom.",
+          "2": "Ezzel a gombbal veszed át. Jelvény harcért, gyűjtésért és kovácsolásért is jár: bronz, ezüst és arany, mindegyikért újabb jutalom."
+        },
+        "unlock_wheel": {
+          "1": "Megnyílt Bingbing Vásári kereke, kedveském! Naponta egyszer ingyen pörgethetsz. Megmutatom."
+        },
+        "unlock_alchemist": {
+          "1": "Yakdo, az alkimista kinyitotta a boltját: a főzetei egy ideig erősítenek, több XP, több nyang vagy erősebb ütés jár tőlük. Nézzünk be hozzá!"
+        },
+        "unlock_stable": {
+          "1": "Megnyílt Malgu istállója: hátast bérelhetsz, és vele minden portya rövidebb. Megmutatom."
+        },
+        "unlock_ranking": {
+          "1": "A ranglistán látod, hol tartasz a többiekhez képest: szint, becsület, torony és céh szerint. Nézd meg!"
+        },
+        "unlock_house": {
+          "1": "Megnyílt a Hármas Pecsét pultja: Sangbo vesz és ad el, és a felszerelésért többet fizet, mint Minah. Megmutatom."
+        },
+        "unlock_home": {
+          "1": "A falu szélén vár a saját otthonod, kedveském: az első foka ingyen jár. Építsd, rendezd be, akassz trófeákat a falra. Megmutatom."
+        },
+        "unlock_mining": {
+          "1": "Gwangsu leenged a tárnákba! Ott ércet bányászol, az ércből rudat öntesz, a rúdból jobb csákány és bútor lesz az otthonodba. Megmutatom."
+        },
+        "ranking": {
+          "1": "Ez a ranglista. A fülek szint, becsület, torony és céh szerint rangsorolnak.",
+          "2": "Királyság szerint is szűrhetsz, és lapozhatsz. Feljebb kerülni szintlépéssel, aréna-győzelemmel és toronymászással lehet."
+        },
+        "home": {
+          "1": "Ez az otthonod. A Ház fülön építed a fokait: az első ingyen jár, a többi nyangba kerül, és naponta egy fok épülhet.",
+          "2": "A Berendezés fülön bútort teszel a szobába. A Trófeák fülön a falra akasztod a trófeáidat, a Persely fülön pedig félreteszel egy nagyobb célra."
+        },
+        "mining": {
+          "1": "Ez Gwangsu tárnája. Válassz egy eret, és indítsd el a csákányt: amíg vadászol, magától dolgozik, utána begyűjtöd az ércet.",
+          "2": "Az Olvasztóban az ércből rudat öntesz, a tüzelőt nyanggal fizeted.",
+          "3": "A Műhelyben a rúdból jobb csákány és bútor lesz az otthonodba."
+        },
+        "beat_lead": {
+          "1": "Nyomra bukkantál, kedveském! Minden nyom egy rövid ügyességi játék: minél ügyesebb vagy, annál jobb a jutalom. A Nyomok gombnál gyűlnek, legfeljebb hárman, és nem járnak le.",
+          "2": "Elsőre gyakoroljunk egyet! Ez a kör jutalom nélküli, csak a kezed tanulja a játékot, és közben elmondom, mit hogyan.",
+          "3": "Most élesben, kedveském! Nyomd meg a Játszd gombot. Bronz, ezüst vagy arany: a jobb eredmény több jutalmat ad."
+        },
+        "touch_hold": {
+          "1": "Tartsd lenyomva bármit, és megmondom, mi az."
+        },
+        "beat_spirit_merge": {
+          "1": "Három egyforma köved van! Gyere a Kovácshoz.",
+          "2": "A Foglalatok fülön vannak a köveid.",
+          "3": "Koppints a kőre: hármat egy jobb minőségűvé egyesíthetsz (az első egyesítés minden minőségen ingyenes), a lényfajta-követ pedig áthangolhatod másik fajtára."
+        },
+        "pet_evolve": {
+          "1": "Elérte a formája plafonját, és nálad a mag. Itt az ideje, kedveském: fejleszd!"
+        },
+        "beat_chase": {
+          "1": "A lila csak a kezdet. 28 Mitikus-pontért a boss Mitikus tárgyat ad (narancs), a nehéz módban Viharedzettet (piros). A boss kártyáján látod, hol tartasz."
+        }
+      },
+      "help": {
+        "button": "Segítség: mi ez itt?",
+        "show": "Mutasd végig",
+        "journal": "Tanácsok könyve",
+        "resume": "Bemutató folytatása",
+        "screens": {
+          "city": "Ez a falu. Akire rákattintasz, szóba áll veled: mesterek, árusok, a kapitány.",
+          "hunt": "Vadászat: innen indulsz portyára, és itt hozod be, amit a vadászaid gyűjtöttek.",
+          "portya": "Portya: tíz állomás, mindegyiken választasz. A végén a kő őrzői és egy láda vár.",
+          "character": "A hősöd: felszerelés, statok, fejlődési út, teljesítmények és a leltárad.",
+          "forge": "Gangdo műhelye: itt fejleszted a tárgyaidat, egészen +9-ig.",
+          "shop": "Minah boltja: gyógyital, alap felszerelés, és itt adod el, ami nem kell.",
+          "board": "Hirdetőtábla: napi feladatok, napi láda és a belépési naptár.",
+          "captain": "Mugang kapitány: a történet fejezetei, és a fejezetek közt a napi szolgálat.",
+          "today": "Mai teendők: minden, amivel most haladhatsz, fontossági sorrendben.",
+          "rankings": "Ranglista: itt látod, hol állsz a többi hős között.",
+          "skills": "Képesség: ötödik szinttől fejlődési utat választhatsz, és könyvekkel fejlesztheted a képességed.",
+          "arena": "Aréna: harc más hősök ellen becsületért és nyangért.",
+          "tower": "A Viharfogó: emeletről emeletre egyre erősebb ellenfelek, 20 percenként egy próba.",
+          "research": "Hakmun, a szörnytudós: minták a vadászatból, felfedezések örökös bónusszal.",
+          "alchemist": "Yakdo főzetei: egy ideig tartó erősítések.",
+          "pets": "Kísérők: tojásból kelnek, etetéssel erősödnek, és egyikük mindig veled tart.",
+          "stable": "Malgu istállója: hátas bérlése, hogy minden út rövidebb legyen.",
+          "guild": "Céh: közös erőd, közös boss, közös pletyka.",
+          "dungeons": "Kazamaták: tíz terem és egy főboss, kulccsal.",
+          "wheel": "Vásári kerék: naponta egy ingyenes pörgetés.",
+          "achievements": "Teljesítmények: célok bronz, ezüst és arany jelvénnyel; az alap jelvényekért Viharérme, az újakért címek és keretek.",
+          "vip": "Viharérme: időt és kényelmet vehetsz rajta, a végjátékban erőt is.",
+          "season": "Viharút: szakaszok Viharpontért, egy ingyenes és egy prémium sávval.",
+          "soul": "Viharszív: hat kő, lépcsőről lépcsőre finomítva, kiírt eséllyel.",
+          "patron": "Pártfogói rang: a fizetett összegből jön, és a napi kereteket tágítja.",
+          "house": "A Hármas Pecsét és az árusok: vétel, eladás és előjegyzés, fix áron.",
+          "runasor": "Rúnasor: Dongsu teaházának kártyajátéka. Egyszerre három lapot raksz ki, és a pontjaidért ládát nyitsz.",
+          "moon": "Sárkányhold: 14 napos kártya, minden nap Viharérme és energia jár érte, ha átveszed.",
+          "arena_season": "Aréna-szezon: négy hétig gyűjtöd a becsületet, a végén a helyezésed szerint jár a jutalom.",
+          "heroic": "Hősi kazamata: ugyanaz a kazamata erősebb lakókkal, hetente egyszer, jobb zsákmányért.",
+          "world_boss": "Heti boss: az egész falu üti, naponta háromszor támadhatsz, és a helyezésed szerint jár a jutalom.",
+          "tower_storm": "Viharcsúcs: húsz emelet a Viharfogó fölött, minden hétfőn újra kezdődik.",
+          "fishing": "Horgászat: vizet és csalit választasz, a fogást eladod, vagy Nakshi alapanyagra cseréli.",
+          "home": "Otthon: a házad fokai, a bútorok, a trófeafal és a persely.",
+          "mining": "Tárna: amíg vadászol, ércet bányászol, az ércből rudat öntesz, a rúdból csákány és bútor lesz.",
+          "pets_v3": "Kísérők: egy fő kísérő, öt forma, képességek a kazamaták könyveiből."
+        },
+        "captainLine": "Mugang kapitány adja a fejezeteket. Fent a kis tekercs mutatja a mostani parancsot.",
+        "huntOffers": "Itt választasz portyát. A rövidebb kevesebb energiát kér, a hosszabb többet ad.",
+        "huntFarm": "A háttér-vadászat akkor is gyűjt, amikor nem vagy itt. Néha hozd be, mielőtt megtelik a zsák.",
+        "portyaTrack": "Ez az út a kőig. A kapuk sorban nyílnak, közben pihenhetsz, vagy átugorhatod a várakozást.",
+        "portyaCards": "Minden állomáson egyet választasz. Ha a kártya fölé állsz, látod, mit ad és mennyire veszélyes.",
+        "portyaGate": "Ha minden állomás nyitva, a Végigjárom gomb helyetted választja az ajánlottat.",
+        "characterStats": "Szintenként három statpont jár. A fő statod a legfontosabb, de az Életerő sem árt.",
+        "characterBuy": "A 10. szinttől nyangért is vehetsz statpontot az érmés plusz gombbal. Az első vételt még egy koppintással megerősíted, az ár fölötte látszik.",
+        "characterBag": "Ez a leltárad. Kattints egy tárgyra, és felveheted, eladhatod vagy lezárhatod.",
+        "forgePick": "Balra választod ki, mit fejlesztesz. Az esély és az ár a fokozattal együtt változik.",
+        "rankingsLine": "A ranglista a szinted, a becsületed és a céhed szerint rangsorol.",
+        "forgeBonus": "A Bónuszok fülön a tárgy bónuszát cserélheted: az új a régi mellé kerül, és te döntöd el, melyik marad."
+      },
+      "lessons": {
+        "portya": "Az első portya",
+        "report": "Jelentés a kapitánynak",
+        "stats": "Statpontok",
+        "farm": "Háttér-vadászat",
+        "forge": "Kovács",
+        "shop": "Bolt és árusok",
+        "board": "Hirdetőtábla",
+        "today": "Mai teendők",
+        "coins": "Viharérme",
+        "run2": "Második portya",
+        "save": "A hős mentése",
+        "finale": "Búcsú"
+      },
+      "tourNames": {
+        "skills": "Képesség",
+        "arena": "Aréna",
+        "tower": "Torony",
+        "research": "Kutatás",
+        "alchemist": "Alkimista",
+        "pets": "Kísérők",
+        "stable": "Istálló",
+        "guild": "Céh",
+        "dungeons": "Kazamaták",
+        "wheel": "Vásári kerék",
+        "achievements": "Teljesítmények",
+        "vip": "Viharérme és Császári menlevél",
+        "season": "Viharút",
+        "moon": "Sárkányhold",
+        "arena_season": "Aréna-szezon",
+        "heroic": "Hősi kazamata",
+        "world_boss": "Heti boss",
+        "tower_storm": "Viharcsúcs",
+        "fishing": "Horgászat",
+        "soul": "Viharszív",
+        "patron": "Pártfogói rang",
+        "statbuy": "Statpont nyangért",
+        "house": "Hármas Pecsét és árusok",
+        "runasor": "Rúnasor",
+        "forge_bonus": "Bónuszváltás",
+        "path_pick": "Fejlődési út választása",
+        "first_egg": "Az első tojás",
+        "first_book": "Az első képességkönyv",
+        "beat_badge": "Az első jelvény",
+        "beat_lead": "Az első nyom",
+        "unlock_10": "Tizedik szint",
+        "unlock_20": "Huszadik szint",
+        "unlock_arena": "Megnyílt az aréna",
+        "unlock_tower": "Megnyílt a Viharfogó",
+        "unlock_research": "Hakmun mintái",
+        "unlock_rift": "Megnyílt a Viharhasadék",
+        "unlock_pure": "Megnyílt a Tiszta aréna",
+        "unlock_event": "Ünnepi események",
+        "unlock_season": "Megnyílt a Viharút",
+        "unlock_runasor": "Megnyílt a Rúnasor",
+        "unlock_wheel": "Megnyílt a Vásári kerék",
+        "unlock_alchemist": "Megnyílt az alkimista",
+        "unlock_stable": "Megnyílt az istálló",
+        "unlock_ranking": "A ranglista",
+        "unlock_house": "Megnyílt a Hármas Pecsét",
+        "unlock_fishing": "A halász",
+        "unlock_home": "A saját otthonod",
+        "unlock_mining": "Megnyíltak a tárnák",
+        "halloween": "A Holt Kövek Éjszakája",
+        "beat_bag": "Jobb tárgy a zsákban",
+        "beat_rare": "A ritkaság színei",
+        "beat_spot": "Jobb vadászhely",
+        "beat_catchup": "Lassabb vadászzsák",
+        "beat_boss_wait": "Az első boss: erősödj",
+        "beat_boss": "Az első boss: hívd ki",
+        "beat_map2": "Új vidék",
+        "beat_spirit": "Szellemkő",
+        "touch_hold": "Lenyomva tartás",
+        "beat_spirit_merge": "Egyesítés",
+        "pet_evolve": "Fejlődésre kész kísérő",
+        "beat_chase": "A boss kincsei"
+      },
+      "journal": {
+        "title": "Tanácsok könyve",
+        "intro": "Amit egyszer megmutattam, itt újra elolvashatod. Felejteni szabad, én is naponta háromszor keresem a szemüvegemet.",
+        "first": "Az első lépések",
+        "later": "Amit később tanulsz",
+        "show": "Mutasd",
+        "showLabel": "Mutasd újra: {{name}}",
+        "done": "Megvolt",
+        "doneLabel": "{{name}}, megvolt",
+        "locked": "{{level}}. szinttől",
+        "resume": "Bemutató folytatása",
+        "restart": "Bemutató újrakezdése",
+        "restartNote": "Az elejéről végigvezetlek. A jutalmakat már megkaptad, azok nem járnak újra.",
+        "error": "Most nem sikerült. Próbáld újra egy kicsit később.",
+        "relearn": "Gilhwa tanításai",
+        "again": "Újra",
+        "againLabel": "Újra: {{name}}"
+      }
+    }
+  }
+}

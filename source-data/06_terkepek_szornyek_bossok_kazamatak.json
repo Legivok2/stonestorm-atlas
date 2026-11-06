@@ -1,0 +1,4534 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "counts": {
+    "maps": 6,
+    "mobs": 64,
+    "bosses": 6,
+    "dungeons": 4
+  },
+  "maps": [
+    {
+      "id": "m1",
+      "index": 1,
+      "minLevel": 1,
+      "maxLevel": 15,
+      "spots": [
+        {
+          "id": "m1_dogs",
+          "mobId": "m1_dog",
+          "mobIds": [
+            "m1_dog"
+          ],
+          "materialId": "mat_m1_dogs",
+          "opensAt": 2
+        },
+        {
+          "id": "m1_wolves",
+          "mobId": "m1_wolf",
+          "mobIds": [
+            "m1_wolf",
+            "m1_alpha_wolf",
+            "m1_blue_wolf"
+          ],
+          "materialId": "mat_m1_wolves",
+          "opensAt": 5
+        },
+        {
+          "id": "m1_boars",
+          "mobId": "m1_boar",
+          "mobIds": [
+            "m1_boar",
+            "m1_red_boar"
+          ],
+          "materialId": "mat_m1_boars",
+          "opensAt": 8
+        },
+        {
+          "id": "m1_bears",
+          "mobId": "m1_bear",
+          "mobIds": [
+            "m1_bear"
+          ],
+          "materialId": "mat_m1_bears",
+          "opensAt": 12
+        },
+        {
+          "id": "m1_tigers",
+          "mobId": "m1_tiger",
+          "mobIds": [
+            "m1_tiger"
+          ],
+          "materialId": "mat_m1_tigers",
+          "opensAt": 14
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_breeze",
+          "level": 5,
+          "waves": [
+            "m1_dog",
+            "m1_wolf",
+            "m1_alpha_wolf"
+          ]
+        },
+        {
+          "id": "stone_m1_gust",
+          "level": 7,
+          "waves": [
+            "m1_alpha_wolf",
+            "m1_blue_wolf",
+            "m1_blue_wolf"
+          ],
+          "ladder": true
+        },
+        {
+          "id": "stone_shower",
+          "level": 10,
+          "waves": [
+            "m1_blue_wolf",
+            "m1_red_boar",
+            "m1_red_boar"
+          ]
+        },
+        {
+          "id": "stone_m1_3",
+          "level": 12,
+          "waves": [
+            "m1_red_boar",
+            "m1_bear",
+            "m1_tiger"
+          ],
+          "ladder": true
+        },
+        {
+          "id": "stone_m1_4",
+          "level": 14,
+          "waves": [
+            "m1_bear",
+            "m1_tiger",
+            "m1_tiger"
+          ],
+          "ladder": true
+        }
+      ],
+      "boss": {
+        "id": "boss_m1",
+        "mobId": "m1_boss"
+      },
+      "nameHu": "A falu határa"
+    },
+    {
+      "id": "m2",
+      "index": 2,
+      "minLevel": 15,
+      "maxLevel": 26,
+      "spots": [
+        {
+          "id": "m2_pickpockets",
+          "mobId": "m2_pickpocket",
+          "mobIds": [
+            "m2_pickpocket"
+          ],
+          "materialId": "mat_m2_pickpockets",
+          "opensAt": 16
+        },
+        {
+          "id": "m2_archers",
+          "mobId": "m2_archer",
+          "mobIds": [
+            "m2_archer",
+            "m2_wild_archer"
+          ],
+          "materialId": "mat_m2_archers",
+          "opensAt": 21
+        },
+        {
+          "id": "m2_axemen",
+          "mobId": "m2_axeman",
+          "mobIds": [
+            "m2_axeman",
+            "m2_cleaver"
+          ],
+          "materialId": "mat_m2_axemen",
+          "opensAt": 22
+        },
+        {
+          "id": "m2_mercs",
+          "mobId": "m2_merc",
+          "mobIds": [
+            "m2_merc",
+            "m2_wildman"
+          ],
+          "materialId": "mat_m2_mercs",
+          "opensAt": 23
+        },
+        {
+          "id": "m2_guards",
+          "mobId": "m2_guard",
+          "mobIds": [
+            "m2_guard"
+          ],
+          "materialId": "mat_m2_guards",
+          "opensAt": 25
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_m2_3",
+          "level": 16,
+          "waves": [
+            "m2_pickpocket",
+            "m2_pickpocket",
+            "m2_cleaver"
+          ],
+          "ladder": true,
+          "waveRoles": [
+            null,
+            "station",
+            null
+          ]
+        },
+        {
+          "id": "stone_m2_4",
+          "level": 17,
+          "waves": [
+            "m2_pickpocket",
+            "m2_cleaver",
+            "m2_archer"
+          ],
+          "ladder": true
+        },
+        {
+          "id": "stone_thunder",
+          "level": 19,
+          "waves": [
+            "m2_archer",
+            "m2_axeman",
+            "m2_wildman"
+          ]
+        },
+        {
+          "id": "stone_m2_5",
+          "level": 21,
+          "waves": [
+            "m2_axeman",
+            "m2_wildman",
+            "m2_merc"
+          ],
+          "ladder": true
+        },
+        {
+          "id": "stone_m2_6",
+          "level": 22,
+          "waves": [
+            "m2_wildman",
+            "m2_merc",
+            "m2_wild_archer"
+          ],
+          "ladder": true
+        },
+        {
+          "id": "stone_monsoon",
+          "level": 24,
+          "waves": [
+            "m2_wild_archer",
+            "m2_guard",
+            "m2_guard"
+          ]
+        }
+      ],
+      "boss": {
+        "id": "boss_m2",
+        "mobId": "m2_boss"
+      },
+      "nameHu": "Az útonállók földje"
+    },
+    {
+      "id": "m3",
+      "index": 3,
+      "minLevel": 26,
+      "maxLevel": 37,
+      "spots": [
+        {
+          "id": "m3_watchrocks",
+          "mobId": "m3_lookout",
+          "mobIds": [
+            "m3_lookout"
+          ],
+          "materialId": "mat_m3_watchrocks",
+          "opensAt": 26
+        },
+        {
+          "id": "m3_bridges",
+          "mobId": "m3_clubber",
+          "mobIds": [
+            "m3_clubber",
+            "m3_slinger"
+          ],
+          "materialId": "mat_m3_bridges",
+          "opensAt": 27
+        },
+        {
+          "id": "m3_totems",
+          "mobId": "m3_shaman",
+          "mobIds": [
+            "m3_shaman",
+            "m3_berserker"
+          ],
+          "materialId": "mat_m3_totems",
+          "opensAt": 30
+        },
+        {
+          "id": "m3_pens",
+          "mobId": "m3_ram",
+          "mobIds": [
+            "m3_ram",
+            "m3_berserker"
+          ],
+          "materialId": "mat_m3_pens",
+          "opensAt": 32
+        },
+        {
+          "id": "m3_warcamp",
+          "mobId": "m3_lieutenant",
+          "mobIds": [
+            "m3_lieutenant",
+            "m3_irontusk"
+          ],
+          "materialId": "mat_m3_warcamp",
+          "opensAt": 34
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_m3_1",
+          "level": 27,
+          "waves": [
+            "m3_slinger",
+            "m3_clubber",
+            "m3_shaman"
+          ]
+        },
+        {
+          "id": "stone_m3_2",
+          "level": 29,
+          "waves": [
+            "m3_clubber",
+            "m3_shaman",
+            "m3_berserker"
+          ]
+        },
+        {
+          "id": "stone_m3_3",
+          "level": 33,
+          "waves": [
+            "m3_berserker",
+            "m3_ram",
+            "m3_lieutenant"
+          ]
+        },
+        {
+          "id": "stone_m3_4",
+          "level": 35,
+          "waves": [
+            "m3_lieutenant",
+            "m3_irontusk",
+            "m3_irontusk"
+          ]
+        }
+      ],
+      "boss": {
+        "id": "boss_m3",
+        "mobId": "m3_boss"
+      },
+      "nameHu": "Az agyarasok szurdoka"
+    },
+    {
+      "id": "m4",
+      "index": 4,
+      "minLevel": 37,
+      "maxLevel": 46,
+      "spots": [
+        {
+          "id": "m4_scorpions",
+          "mobId": "m4_scorpion",
+          "mobIds": [
+            "m4_scorpion"
+          ],
+          "materialId": "mat_m4_scorpions",
+          "opensAt": 37
+        },
+        {
+          "id": "m4_snakes",
+          "mobId": "m4_sand_viper",
+          "mobIds": [
+            "m4_sand_viper",
+            "m4_cobra"
+          ],
+          "materialId": "mat_m4_snakes",
+          "opensAt": 39
+        },
+        {
+          "id": "m4_bandits",
+          "mobId": "m4_bandit",
+          "mobIds": [
+            "m4_bandit",
+            "m4_bandit_archer"
+          ],
+          "materialId": "mat_m4_bandits",
+          "opensAt": 42
+        },
+        {
+          "id": "m4_ruins",
+          "mobId": "m4_mummy",
+          "mobIds": [
+            "m4_mummy"
+          ],
+          "materialId": "mat_m4_ruins",
+          "opensAt": 44
+        },
+        {
+          "id": "m4_golems",
+          "mobId": "m4_golem",
+          "mobIds": [
+            "m4_golem"
+          ],
+          "materialId": "mat_m4_golems",
+          "opensAt": 45
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_m4_1",
+          "level": 38,
+          "waves": [
+            "m4_scorpion",
+            "m4_giant_scorpion",
+            "m4_sand_viper"
+          ]
+        },
+        {
+          "id": "stone_m4_2",
+          "level": 40,
+          "waves": [
+            "m4_sand_viper",
+            "m4_cobra",
+            "m4_bandit"
+          ]
+        },
+        {
+          "id": "stone_m4_3",
+          "level": 43,
+          "waves": [
+            "m4_cobra",
+            "m4_bandit_archer",
+            "m4_bandit_archer"
+          ]
+        },
+        {
+          "id": "stone_m4_4",
+          "level": 45,
+          "waves": [
+            "m4_bandit_archer",
+            "m4_mummy",
+            "m4_golem"
+          ]
+        }
+      ],
+      "boss": {
+        "id": "boss_m4",
+        "mobId": "m4_boss"
+      },
+      "nameHu": "A romok sivataga"
+    },
+    {
+      "id": "m5",
+      "index": 5,
+      "minLevel": 46,
+      "maxLevel": 54,
+      "spots": [
+        {
+          "id": "m5_wolves",
+          "mobId": "m5_snow_wolf",
+          "mobIds": [
+            "m5_snow_wolf"
+          ],
+          "materialId": "mat_m5_wolves",
+          "opensAt": 46
+        },
+        {
+          "id": "m5_warriors",
+          "mobId": "m5_snow_wraith",
+          "mobIds": [
+            "m5_snow_wraith",
+            "m5_frozen_warrior"
+          ],
+          "materialId": "mat_m5_warriors",
+          "opensAt": 47
+        },
+        {
+          "id": "m5_spirits",
+          "mobId": "m5_frost_spirit",
+          "mobIds": [
+            "m5_frost_spirit",
+            "m5_witch_apprentice"
+          ],
+          "materialId": "mat_m5_spirits",
+          "opensAt": 49
+        },
+        {
+          "id": "m5_yetis",
+          "mobId": "m5_yeti",
+          "mobIds": [
+            "m5_yeti",
+            "m5_elder_yeti"
+          ],
+          "materialId": "mat_m5_yetis",
+          "opensAt": 52
+        },
+        {
+          "id": "m5_golems",
+          "mobId": "m5_ice_golem",
+          "mobIds": [
+            "m5_ice_golem"
+          ],
+          "materialId": "mat_m5_golems",
+          "opensAt": 53
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_m5_1",
+          "level": 47,
+          "waves": [
+            "m5_snow_wolf",
+            "m5_snow_wraith",
+            "m5_frozen_warrior"
+          ]
+        },
+        {
+          "id": "stone_m5_2",
+          "level": 49,
+          "waves": [
+            "m5_frozen_warrior",
+            "m5_frost_spirit",
+            "m5_witch_apprentice"
+          ]
+        },
+        {
+          "id": "stone_m5_3",
+          "level": 52,
+          "waves": [
+            "m5_witch_apprentice",
+            "m5_yeti",
+            "m5_elder_yeti"
+          ]
+        },
+        {
+          "id": "stone_m5_4",
+          "level": 53,
+          "waves": [
+            "m5_yeti",
+            "m5_elder_yeti",
+            "m5_ice_golem"
+          ]
+        }
+      ],
+      "boss": {
+        "id": "boss_m5",
+        "mobId": "m5_boss"
+      },
+      "nameHu": "A dermedt hágó"
+    },
+    {
+      "id": "m6",
+      "index": 6,
+      "minLevel": 54,
+      "maxLevel": 60,
+      "spots": [
+        {
+          "id": "m6_ember_fields",
+          "mobId": "m6_flame_hound",
+          "mobIds": [
+            "m6_flame_hound"
+          ],
+          "materialId": "mat_m6_hound_tooth",
+          "opensAt": 54
+        },
+        {
+          "id": "m6_obsidian_spires",
+          "mobId": "m6_magma_beetle",
+          "mobIds": [
+            "m6_magma_beetle",
+            "m6_fire_imp"
+          ],
+          "materialId": "mat_m6_obsidian_shard",
+          "opensAt": 55
+        },
+        {
+          "id": "m6_lava_river",
+          "mobId": "m6_lava_lizard",
+          "mobIds": [
+            "m6_lava_lizard"
+          ],
+          "materialId": "mat_m6_lava_scale",
+          "opensAt": 56
+        },
+        {
+          "id": "m6_ash_temple",
+          "mobId": "m6_ash_cultist",
+          "mobIds": [
+            "m6_ash_cultist",
+            "m6_fire_tiger"
+          ],
+          "materialId": "mat_m6_ash_mask",
+          "opensAt": 57
+        },
+        {
+          "id": "m6_crater_rim",
+          "mobId": "m6_flame_knight",
+          "mobIds": [
+            "m6_flame_knight",
+            "m6_magma_giant"
+          ],
+          "materialId": "mat_m6_ember_core",
+          "opensAt": 59
+        }
+      ],
+      "stones": [
+        {
+          "id": "stone_m6_1",
+          "level": 54,
+          "waves": [
+            "m6_flame_hound",
+            "m6_magma_beetle",
+            "m6_fire_imp"
+          ]
+        },
+        {
+          "id": "stone_m6_2",
+          "level": 56,
+          "waves": [
+            "m6_fire_imp",
+            "m6_lava_lizard",
+            "m6_ash_cultist"
+          ]
+        },
+        {
+          "id": "stone_m6_3",
+          "level": 58,
+          "waves": [
+            "m6_ash_cultist",
+            "m6_fire_tiger",
+            "m6_flame_knight"
+          ]
+        },
+        {
+          "id": "stone_m6_4",
+          "level": 59,
+          "waves": [
+            "m6_lava_lizard",
+            "m6_fire_tiger",
+            "m6_flame_knight"
+          ]
+        }
+      ],
+      "boss": {
+        "id": "boss_m6",
+        "mobId": "m6_boss"
+      },
+      "nameHu": "Parázsvidék"
+    }
+  ],
+  "mobs": [
+    {
+      "id": "m1_dog",
+      "level": 2,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_dogs",
+      "mapIndex": 1,
+      "statLevel": 2,
+      "harcero": 148,
+      "maxHp": 351,
+      "atkMin": 37,
+      "atkMax": 53,
+      "def": 5,
+      "xp": 24,
+      "nyangMin": 10,
+      "nyangMax": 18,
+      "nameHu": "Vadkutya"
+    },
+    {
+      "id": "m1_wolf",
+      "level": 4,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_wolves",
+      "mapIndex": 1,
+      "statLevel": 4,
+      "harcero": 213,
+      "maxHp": 476,
+      "atkMin": 54,
+      "atkMax": 76,
+      "def": 8,
+      "xp": 36,
+      "nyangMin": 16,
+      "nyangMax": 28,
+      "nameHu": "Farkas"
+    },
+    {
+      "id": "m1_alpha_wolf",
+      "level": 5,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_wolves",
+      "mapIndex": 1,
+      "statLevel": 5,
+      "harcero": 244,
+      "maxHp": 542,
+      "atkMin": 62,
+      "atkMax": 88,
+      "def": 10,
+      "xp": 42,
+      "nyangMin": 19,
+      "nyangMax": 33,
+      "nameHu": "Falkavezér"
+    },
+    {
+      "id": "m1_blue_wolf",
+      "level": 7,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_wolves",
+      "mapIndex": 1,
+      "statLevel": 7,
+      "harcero": 334,
+      "maxHp": 735,
+      "atkMin": 86,
+      "atkMax": 121,
+      "def": 13,
+      "xp": 54,
+      "nyangMin": 25,
+      "nyangMax": 43,
+      "nameHu": "Ezüstbundás farkas"
+    },
+    {
+      "id": "m1_boar",
+      "level": 8,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_boars",
+      "mapIndex": 1,
+      "statLevel": 8,
+      "harcero": 382,
+      "maxHp": 833,
+      "atkMin": 99,
+      "atkMax": 138,
+      "def": 15,
+      "xp": 60,
+      "nyangMin": 28,
+      "nyangMax": 48,
+      "nameHu": "Vaddisznó"
+    },
+    {
+      "id": "m1_red_boar",
+      "level": 10,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_boars",
+      "mapIndex": 1,
+      "statLevel": 10,
+      "harcero": 498,
+      "maxHp": 1080,
+      "atkMin": 130,
+      "atkMax": 180,
+      "def": 18,
+      "xp": 72,
+      "nyangMin": 34,
+      "nyangMax": 58,
+      "nameHu": "Rozsdahátú vadkan"
+    },
+    {
+      "id": "m1_bear",
+      "level": 12,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_bears",
+      "mapIndex": 1,
+      "statLevel": 12,
+      "harcero": 657,
+      "maxHp": 1420,
+      "atkMin": 172,
+      "atkMax": 238,
+      "def": 21,
+      "xp": 84,
+      "nyangMin": 40,
+      "nyangMax": 68,
+      "nameHu": "Medve"
+    },
+    {
+      "id": "m1_tiger",
+      "level": 14,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m1_tigers",
+      "mapIndex": 1,
+      "statLevel": 14,
+      "harcero": 840,
+      "maxHp": 1805,
+      "atkMin": 220,
+      "atkMax": 304,
+      "def": 24,
+      "xp": 96,
+      "nyangMin": 46,
+      "nyangMax": 78,
+      "nameHu": "Tigris"
+    },
+    {
+      "id": "m1_boss",
+      "level": 11,
+      "tags": [
+        "animal",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 1,
+      "statLevel": 11,
+      "harcero": 548,
+      "maxHp": 661,
+      "atkMin": 116,
+      "atkMax": 306,
+      "def": 25,
+      "xp": 1950,
+      "nyangMin": 1480,
+      "nyangMax": 2520,
+      "nameHu": "Öreg Csíkos"
+    },
+    {
+      "id": "m2_pickpocket",
+      "level": 16,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_pickpockets",
+      "mapIndex": 2,
+      "statLevel": 16,
+      "harcero": 1044,
+      "maxHp": 2260,
+      "atkMin": 307,
+      "atkMax": 424,
+      "def": 28,
+      "xp": 108,
+      "nyangMin": 52,
+      "nyangMax": 88,
+      "nameHu": "Zsebtolvaj"
+    },
+    {
+      "id": "m2_cleaver",
+      "level": 17,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_axemen",
+      "mapIndex": 2,
+      "statLevel": 17,
+      "harcero": 1143,
+      "maxHp": 2475,
+      "atkMin": 337,
+      "atkMax": 465,
+      "def": 29,
+      "xp": 114,
+      "nyangMin": 55,
+      "nyangMax": 93,
+      "nameHu": "Kendős hentes"
+    },
+    {
+      "id": "m2_archer",
+      "level": 18,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_archers",
+      "mapIndex": 2,
+      "statLevel": 18,
+      "harcero": 1245,
+      "maxHp": 2693,
+      "atkMin": 367,
+      "atkMax": 506,
+      "def": 31,
+      "xp": 120,
+      "nyangMin": 58,
+      "nyangMax": 98,
+      "nameHu": "Útonálló íjász"
+    },
+    {
+      "id": "m2_axeman",
+      "level": 20,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_axemen",
+      "mapIndex": 2,
+      "statLevel": 20,
+      "harcero": 1527,
+      "maxHp": 3310,
+      "atkMin": 453,
+      "atkMax": 624,
+      "def": 34,
+      "xp": 132,
+      "nyangMin": 64,
+      "nyangMax": 108,
+      "nameHu": "Fejszés bandita"
+    },
+    {
+      "id": "m2_wildman",
+      "level": 21,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_mercs",
+      "mapIndex": 2,
+      "statLevel": 21,
+      "harcero": 1661,
+      "maxHp": 3585,
+      "atkMin": 491,
+      "atkMax": 676,
+      "def": 36,
+      "xp": 138,
+      "nyangMin": 67,
+      "nyangMax": 113,
+      "nameHu": "Gyékénymaszkos vadember"
+    },
+    {
+      "id": "m2_merc",
+      "level": 22,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_mercs",
+      "mapIndex": 2,
+      "statLevel": 22,
+      "harcero": 1830,
+      "maxHp": 3963,
+      "atkMin": 544,
+      "atkMax": 748,
+      "def": 37,
+      "xp": 144,
+      "nyangMin": 70,
+      "nyangMax": 118,
+      "nameHu": "Zsoldos"
+    },
+    {
+      "id": "m2_wild_archer",
+      "level": 23,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_archers",
+      "mapIndex": 2,
+      "statLevel": 23,
+      "harcero": 2028,
+      "maxHp": 4387,
+      "atkMin": 603,
+      "atkMax": 829,
+      "def": 39,
+      "xp": 150,
+      "nyangMin": 73,
+      "nyangMax": 123,
+      "nameHu": "Gyékénymaszkos íjász"
+    },
+    {
+      "id": "m2_guard",
+      "level": 25,
+      "tags": [
+        "bandit"
+      ],
+      "materialId": "mat_m2_guards",
+      "mapIndex": 2,
+      "statLevel": 25,
+      "harcero": 2348,
+      "maxHp": 5085,
+      "atkMin": 700,
+      "atkMax": 962,
+      "def": 42,
+      "xp": 162,
+      "nyangMin": 79,
+      "nyangMax": 133,
+      "nameHu": "Testőr"
+    },
+    {
+      "id": "m2_boss",
+      "level": 26,
+      "tags": [
+        "bandit",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 2,
+      "statLevel": 26,
+      "harcero": 3017,
+      "maxHp": 3522,
+      "atkMin": 632,
+      "atkMax": 1667,
+      "def": 57,
+      "xp": 4200,
+      "nyangMin": 3280,
+      "nyangMax": 5520,
+      "nameHu": "Aranyfog"
+    },
+    {
+      "id": "m3_lookout",
+      "level": 26,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_watchrocks",
+      "mapIndex": 3,
+      "statLevel": 26,
+      "harcero": 2564,
+      "maxHp": 4705,
+      "atkMin": 925,
+      "atkMax": 1271,
+      "def": 44,
+      "xp": 168,
+      "nyangMin": 82,
+      "nyangMax": 138,
+      "nameHu": "Leselkedő ork"
+    },
+    {
+      "id": "m3_slinger",
+      "level": 27,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_watchrocks",
+      "mapIndex": 3,
+      "statLevel": 27,
+      "harcero": 2790,
+      "maxHp": 5121,
+      "atkMin": 1008,
+      "atkMax": 1384,
+      "def": 45,
+      "xp": 174,
+      "nyangMin": 85,
+      "nyangMax": 143,
+      "nameHu": "Parittyás ork"
+    },
+    {
+      "id": "m3_clubber",
+      "level": 28,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_bridges",
+      "mapIndex": 3,
+      "statLevel": 28,
+      "harcero": 3074,
+      "maxHp": 5657,
+      "atkMin": 1114,
+      "atkMax": 1530,
+      "def": 47,
+      "xp": 180,
+      "nyangMin": 88,
+      "nyangMax": 148,
+      "nameHu": "Bunkós ork"
+    },
+    {
+      "id": "m3_shaman",
+      "level": 29,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_totems",
+      "mapIndex": 3,
+      "statLevel": 29,
+      "harcero": 3331,
+      "maxHp": 6112,
+      "atkMin": 1205,
+      "atkMax": 1654,
+      "def": 48,
+      "xp": 186,
+      "nyangMin": 91,
+      "nyangMax": 153,
+      "nameHu": "Totemrázó sámán"
+    },
+    {
+      "id": "m3_berserker",
+      "level": 32,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_totems",
+      "mapIndex": 3,
+      "statLevel": 32,
+      "harcero": 4157,
+      "maxHp": 7642,
+      "atkMin": 1509,
+      "atkMax": 2071,
+      "def": 53,
+      "xp": 208,
+      "nyangMin": 100,
+      "nyangMax": 168,
+      "nameHu": "Tajtékzó ork"
+    },
+    {
+      "id": "m3_ram",
+      "level": 33,
+      "tags": [
+        "animal"
+      ],
+      "materialId": "mat_m3_pens",
+      "mapIndex": 3,
+      "statLevel": 33,
+      "harcero": 4369,
+      "maxHp": 8053,
+      "atkMin": 1591,
+      "atkMax": 2183,
+      "def": 55,
+      "xp": 219,
+      "nyangMin": 103,
+      "nyangMax": 173,
+      "nameHu": "Faltörő kos"
+    },
+    {
+      "id": "m3_lieutenant",
+      "level": 34,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_warcamp",
+      "mapIndex": 3,
+      "statLevel": 34,
+      "harcero": 4664,
+      "maxHp": 8601,
+      "atkMin": 1700,
+      "atkMax": 2332,
+      "def": 56,
+      "xp": 232,
+      "nyangMin": 106,
+      "nyangMax": 178,
+      "nameHu": "Ordibáló hadnagy"
+    },
+    {
+      "id": "m3_irontusk",
+      "level": 36,
+      "tags": [
+        "orc"
+      ],
+      "materialId": "mat_m3_warcamp",
+      "mapIndex": 3,
+      "statLevel": 36,
+      "harcero": 5224,
+      "maxHp": 9653,
+      "atkMin": 1910,
+      "atkMax": 2619,
+      "def": 60,
+      "xp": 264,
+      "nyangMin": 112,
+      "nyangMax": 188,
+      "nameHu": "Vasagyarú ork"
+    },
+    {
+      "id": "m3_boss",
+      "level": 37,
+      "tags": [
+        "orc",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 3,
+      "statLevel": 37,
+      "harcero": 6839,
+      "maxHp": 7881,
+      "atkMin": 1422,
+      "atkMax": 3750,
+      "def": 80,
+      "xp": 7075,
+      "nyangMin": 4600,
+      "nyangMax": 7720,
+      "nameHu": "Nagymancs"
+    },
+    {
+      "id": "m4_scorpion",
+      "level": 37,
+      "tags": [
+        "desert",
+        "animal"
+      ],
+      "materialId": "mat_m4_scorpions",
+      "mapIndex": 4,
+      "statLevel": 37,
+      "harcero": 5813,
+      "maxHp": 10428,
+      "atkMin": 2196,
+      "atkMax": 3011,
+      "def": 61,
+      "xp": 283,
+      "nyangMin": 115,
+      "nyangMax": 193,
+      "nameHu": "Homokskorpió"
+    },
+    {
+      "id": "m4_giant_scorpion",
+      "level": 38,
+      "tags": [
+        "desert",
+        "animal"
+      ],
+      "materialId": "mat_m4_scorpions",
+      "mapIndex": 4,
+      "statLevel": 38,
+      "harcero": 6217,
+      "maxHp": 11182,
+      "atkMin": 2356,
+      "atkMax": 3230,
+      "def": 63,
+      "xp": 304,
+      "nyangMin": 118,
+      "nyangMax": 198,
+      "nameHu": "Óriásskorpió"
+    },
+    {
+      "id": "m4_sand_viper",
+      "level": 39,
+      "tags": [
+        "desert",
+        "animal"
+      ],
+      "materialId": "mat_m4_snakes",
+      "mapIndex": 4,
+      "statLevel": 39,
+      "harcero": 6687,
+      "maxHp": 11993,
+      "atkMin": 2528,
+      "atkMax": 3465,
+      "def": 64,
+      "xp": 327,
+      "nyangMin": 121,
+      "nyangMax": 203,
+      "nameHu": "Homoki vipera"
+    },
+    {
+      "id": "m4_cobra",
+      "level": 40,
+      "tags": [
+        "desert",
+        "animal"
+      ],
+      "materialId": "mat_m4_snakes",
+      "mapIndex": 4,
+      "statLevel": 40,
+      "harcero": 7280,
+      "maxHp": 13092,
+      "atkMin": 2761,
+      "atkMax": 3783,
+      "def": 66,
+      "xp": 352,
+      "nyangMin": 124,
+      "nyangMax": 208,
+      "nameHu": "Csuklyás kobra"
+    },
+    {
+      "id": "m4_bandit",
+      "level": 42,
+      "tags": [
+        "desert",
+        "bandit"
+      ],
+      "materialId": "mat_m4_bandits",
+      "mapIndex": 4,
+      "statLevel": 42,
+      "harcero": 8460,
+      "maxHp": 15238,
+      "atkMin": 3216,
+      "atkMax": 4406,
+      "def": 69,
+      "xp": 408,
+      "nyangMin": 130,
+      "nyangMax": 218,
+      "nameHu": "Fátyolos rabló"
+    },
+    {
+      "id": "m4_bandit_archer",
+      "level": 43,
+      "tags": [
+        "desert",
+        "bandit"
+      ],
+      "materialId": "mat_m4_bandits",
+      "mapIndex": 4,
+      "statLevel": 43,
+      "harcero": 8754,
+      "maxHp": 15761,
+      "atkMin": 3327,
+      "atkMax": 4558,
+      "def": 71,
+      "xp": 439,
+      "nyangMin": 133,
+      "nyangMax": 223,
+      "nameHu": "Fátyolos íjász"
+    },
+    {
+      "id": "m4_mummy",
+      "level": 44,
+      "tags": [
+        "desert",
+        "undead"
+      ],
+      "materialId": "mat_m4_ruins",
+      "mapIndex": 4,
+      "statLevel": 44,
+      "harcero": 9287,
+      "maxHp": 16728,
+      "atkMin": 3532,
+      "atkMax": 4838,
+      "def": 72,
+      "xp": 472,
+      "nyangMin": 136,
+      "nyangMax": 228,
+      "nameHu": "Pólyás romőr"
+    },
+    {
+      "id": "m4_golem",
+      "level": 45,
+      "tags": [
+        "desert"
+      ],
+      "materialId": "mat_m4_golems",
+      "mapIndex": 4,
+      "statLevel": 45,
+      "harcero": 9718,
+      "maxHp": 17495,
+      "atkMin": 3695,
+      "atkMax": 5061,
+      "def": 74,
+      "xp": 507,
+      "nyangMin": 139,
+      "nyangMax": 233,
+      "nameHu": "Homokkőgólem"
+    },
+    {
+      "id": "m4_boss",
+      "level": 46,
+      "tags": [
+        "desert",
+        "animal",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 4,
+      "statLevel": 46,
+      "harcero": 12433,
+      "maxHp": 14210,
+      "atkMin": 2571,
+      "atkMax": 6779,
+      "def": 98,
+      "xp": 13600,
+      "nyangMin": 5680,
+      "nyangMax": 9520,
+      "nameHu": "Vén Romhátú"
+    },
+    {
+      "id": "m5_snow_wolf",
+      "level": 46,
+      "tags": [
+        "ice",
+        "animal"
+      ],
+      "materialId": "mat_m5_wolves",
+      "mapIndex": 5,
+      "statLevel": 46,
+      "harcero": 10569,
+      "maxHp": 18801,
+      "atkMin": 4121,
+      "atkMax": 5643,
+      "def": 76,
+      "xp": 544,
+      "nyangMin": 142,
+      "nyangMax": 238,
+      "nameHu": "Hósörényű farkas"
+    },
+    {
+      "id": "m5_snow_wraith",
+      "level": 47,
+      "tags": [
+        "ice",
+        "undead"
+      ],
+      "materialId": "mat_m5_warriors",
+      "mapIndex": 5,
+      "statLevel": 47,
+      "harcero": 11479,
+      "maxHp": 20464,
+      "atkMin": 4486,
+      "atkMax": 6144,
+      "def": 77,
+      "xp": 583,
+      "nyangMin": 145,
+      "nyangMax": 243,
+      "nameHu": "Puffadt hólidérc"
+    },
+    {
+      "id": "m5_frozen_warrior",
+      "level": 48,
+      "tags": [
+        "ice",
+        "undead"
+      ],
+      "materialId": "mat_m5_warriors",
+      "mapIndex": 5,
+      "statLevel": 48,
+      "harcero": 12471,
+      "maxHp": 22220,
+      "atkMin": 4873,
+      "atkMax": 6672,
+      "def": 79,
+      "xp": 624,
+      "nyangMin": 148,
+      "nyangMax": 248,
+      "nameHu": "Befagyott vitéz"
+    },
+    {
+      "id": "m5_frost_spirit",
+      "level": 49,
+      "tags": [
+        "ice"
+      ],
+      "materialId": "mat_m5_spirits",
+      "mapIndex": 5,
+      "statLevel": 49,
+      "harcero": 13480,
+      "maxHp": 24089,
+      "atkMin": 5284,
+      "atkMax": 7234,
+      "def": 80,
+      "xp": 667,
+      "nyangMin": 151,
+      "nyangMax": 253,
+      "nameHu": "Zúzmaraszellem"
+    },
+    {
+      "id": "m5_witch_apprentice",
+      "level": 51,
+      "tags": [
+        "ice"
+      ],
+      "materialId": "mat_m5_spirits",
+      "mapIndex": 5,
+      "statLevel": 51,
+      "harcero": 15651,
+      "maxHp": 27992,
+      "atkMin": 6143,
+      "atkMax": 8409,
+      "def": 84,
+      "xp": 759,
+      "nyangMin": 157,
+      "nyangMax": 263,
+      "nameHu": "Vacogó boszorkánytanonc"
+    },
+    {
+      "id": "m5_yeti",
+      "level": 52,
+      "tags": [
+        "ice",
+        "animal"
+      ],
+      "materialId": "mat_m5_yetis",
+      "mapIndex": 5,
+      "statLevel": 52,
+      "harcero": 16340,
+      "maxHp": 29286,
+      "atkMin": 6428,
+      "atkMax": 8799,
+      "def": 85,
+      "xp": 808,
+      "nyangMin": 160,
+      "nyangMax": 268,
+      "nameHu": "Bozontos jeti"
+    },
+    {
+      "id": "m5_elder_yeti",
+      "level": 53,
+      "tags": [
+        "ice",
+        "animal"
+      ],
+      "materialId": "mat_m5_yetis",
+      "mapIndex": 5,
+      "statLevel": 53,
+      "harcero": 17182,
+      "maxHp": 30781,
+      "atkMin": 6758,
+      "atkMax": 9250,
+      "def": 87,
+      "xp": 859,
+      "nyangMin": 163,
+      "nyangMax": 273,
+      "nameHu": "Ősz jetiapó"
+    },
+    {
+      "id": "m5_ice_golem",
+      "level": 53,
+      "tags": [
+        "ice"
+      ],
+      "materialId": "mat_m5_golems",
+      "mapIndex": 5,
+      "statLevel": 53,
+      "harcero": 17182,
+      "maxHp": 30781,
+      "atkMin": 6758,
+      "atkMax": 9250,
+      "def": 87,
+      "xp": 859,
+      "nyangMin": 163,
+      "nyangMax": 273,
+      "nameHu": "Fagyszívű kolosszus"
+    },
+    {
+      "id": "m5_boss",
+      "level": 54,
+      "tags": [
+        "ice",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 5,
+      "statLevel": 54,
+      "harcero": 22061,
+      "maxHp": 25060,
+      "atkMin": 4542,
+      "atkMax": 11974,
+      "def": 115,
+      "xp": 22800,
+      "nyangMin": 6640,
+      "nyangMax": 11120,
+      "nameHu": "Fagyúrnő"
+    },
+    {
+      "id": "m6_flame_hound",
+      "level": 54,
+      "tags": [
+        "fire",
+        "animal"
+      ],
+      "materialId": "mat_m6_hound_tooth",
+      "mapIndex": 6,
+      "statLevel": 54,
+      "harcero": 18752,
+      "maxHp": 33522,
+      "atkMin": 7398,
+      "atkMax": 10125,
+      "def": 88,
+      "xp": 912,
+      "nyangMin": 166,
+      "nyangMax": 278,
+      "nameHu": "Lángkopó"
+    },
+    {
+      "id": "m6_magma_beetle",
+      "level": 54,
+      "tags": [
+        "fire",
+        "animal"
+      ],
+      "materialId": "mat_m6_obsidian_shard",
+      "mapIndex": 6,
+      "statLevel": 54,
+      "harcero": 18752,
+      "maxHp": 33522,
+      "atkMin": 7398,
+      "atkMax": 10125,
+      "def": 88,
+      "xp": 912,
+      "nyangMin": 166,
+      "nyangMax": 278,
+      "nameHu": "Magmabogár"
+    },
+    {
+      "id": "m6_fire_imp",
+      "level": 55,
+      "tags": [
+        "fire"
+      ],
+      "materialId": "mat_m6_obsidian_shard",
+      "mapIndex": 6,
+      "statLevel": 55,
+      "harcero": 20156,
+      "maxHp": 36080,
+      "atkMin": 7964,
+      "atkMax": 10899,
+      "def": 90,
+      "xp": 967,
+      "nyangMin": 169,
+      "nyangMax": 283,
+      "nameHu": "Tűzmanó"
+    },
+    {
+      "id": "m6_lava_lizard",
+      "level": 56,
+      "tags": [
+        "fire",
+        "animal"
+      ],
+      "materialId": "mat_m6_lava_scale",
+      "mapIndex": 6,
+      "statLevel": 56,
+      "harcero": 21990,
+      "maxHp": 39419,
+      "atkMin": 8702,
+      "atkMax": 11909,
+      "def": 92,
+      "xp": 1024,
+      "nyangMin": 172,
+      "nyangMax": 288,
+      "nameHu": "Lávagyík"
+    },
+    {
+      "id": "m6_ash_cultist",
+      "level": 56,
+      "tags": [
+        "fire",
+        "bandit"
+      ],
+      "materialId": "mat_m6_ash_mask",
+      "mapIndex": 6,
+      "statLevel": 56,
+      "harcero": 21990,
+      "maxHp": 39419,
+      "atkMin": 8702,
+      "atkMax": 11909,
+      "def": 92,
+      "xp": 1024,
+      "nyangMin": 172,
+      "nyangMax": 288,
+      "nameHu": "Hamuszektás"
+    },
+    {
+      "id": "m6_fire_tiger",
+      "level": 58,
+      "tags": [
+        "fire",
+        "animal"
+      ],
+      "materialId": "mat_m6_ash_mask",
+      "mapIndex": 6,
+      "statLevel": 58,
+      "harcero": 26084,
+      "maxHp": 46839,
+      "atkMin": 10344,
+      "atkMax": 14154,
+      "def": 95,
+      "xp": 1144,
+      "nyangMin": 178,
+      "nyangMax": 298,
+      "nameHu": "Parázstigris"
+    },
+    {
+      "id": "m6_flame_knight",
+      "level": 59,
+      "tags": [
+        "fire"
+      ],
+      "materialId": "mat_m6_ember_core",
+      "mapIndex": 6,
+      "statLevel": 59,
+      "harcero": 27014,
+      "maxHp": 48522,
+      "atkMin": 10718,
+      "atkMax": 14665,
+      "def": 96,
+      "xp": 1207,
+      "nyangMin": 181,
+      "nyangMax": 303,
+      "nameHu": "Lánglovag"
+    },
+    {
+      "id": "m6_magma_giant",
+      "level": 59,
+      "tags": [
+        "fire"
+      ],
+      "materialId": "mat_m6_ember_core",
+      "mapIndex": 6,
+      "statLevel": 59,
+      "harcero": 27014,
+      "maxHp": 48522,
+      "atkMin": 10718,
+      "atkMax": 14665,
+      "def": 96,
+      "xp": 1207,
+      "nyangMin": 181,
+      "nyangMax": 303,
+      "nameHu": "Magmaóriás"
+    },
+    {
+      "id": "m6_boss",
+      "level": 60,
+      "tags": [
+        "fire",
+        "boss"
+      ],
+      "materialId": null,
+      "mapIndex": 6,
+      "statLevel": 60,
+      "harcero": 33892,
+      "maxHp": 38276,
+      "atkMin": 6944,
+      "atkMax": 18306,
+      "def": 127,
+      "xp": 31800,
+      "nyangMin": 7360,
+      "nyangMax": 12320,
+      "nameHu": "Lángszakáll"
+    },
+    {
+      "id": "tower_boss_1",
+      "level": 16,
+      "tags": [
+        "bandit",
+        "boss"
+      ],
+      "materialId": null,
+      "statLevel": 16,
+      "harcero": 1229,
+      "maxHp": 1464,
+      "atkMin": 263,
+      "atkMax": 693,
+      "def": 36,
+      "xp": 2700,
+      "nyangMin": 2080,
+      "nyangMax": 3520,
+      "nameHu": null
+    },
+    {
+      "id": "tower_boss_2",
+      "level": 27,
+      "tags": [
+        "animal",
+        "boss"
+      ],
+      "materialId": null,
+      "statLevel": 27,
+      "harcero": 3283,
+      "maxHp": 3827,
+      "atkMin": 695,
+      "atkMax": 1832,
+      "def": 59,
+      "xp": 4350,
+      "nyangMin": 3400,
+      "nyangMax": 5720,
+      "nameHu": null
+    },
+    {
+      "id": "tower_boss_3",
+      "level": 43,
+      "tags": [
+        "undead",
+        "boss"
+      ],
+      "materialId": null,
+      "statLevel": 43,
+      "harcero": 10299,
+      "maxHp": 11815,
+      "atkMin": 2159,
+      "atkMax": 5692,
+      "def": 92,
+      "xp": 10975,
+      "nyangMin": 5320,
+      "nyangMax": 8920,
+      "nameHu": null
+    },
+    {
+      "id": "tower_boss_4",
+      "level": 59,
+      "tags": [
+        "fire",
+        "boss"
+      ],
+      "materialId": null,
+      "statLevel": 59,
+      "harcero": 31781,
+      "maxHp": 36152,
+      "atkMin": 6627,
+      "atkMax": 17470,
+      "def": 125,
+      "xp": 30175,
+      "nyangMin": 7240,
+      "nyangMax": 12120,
+      "nameHu": null
+    },
+    {
+      "id": "ev_dokkebi",
+      "level": 1,
+      "tags": [
+        "undead"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 124,
+      "maxHp": 306,
+      "atkMin": 29,
+      "atkMax": 44,
+      "def": 4,
+      "xp": 18,
+      "nyangMin": 7,
+      "nyangMax": 13,
+      "nameHu": "Dokkebi-tréfamester"
+    },
+    {
+      "id": "ev_lider",
+      "level": 1,
+      "tags": [
+        "undead"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 124,
+      "maxHp": 306,
+      "atkMin": 29,
+      "atkMax": 44,
+      "def": 4,
+      "xp": 18,
+      "nyangMin": 7,
+      "nyangMax": 13,
+      "nameHu": "Lidérc"
+    },
+    {
+      "id": "ev_silkghost",
+      "level": 1,
+      "tags": [
+        "undead"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 124,
+      "maxHp": 306,
+      "atkMin": 29,
+      "atkMax": 44,
+      "def": 4,
+      "xp": 18,
+      "nyangMin": 7,
+      "nyangMax": 13,
+      "nameHu": "Selyemlámpás-szellem"
+    },
+    {
+      "id": "ev_stonedead",
+      "level": 1,
+      "tags": [
+        "undead"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 124,
+      "maxHp": 306,
+      "atkMin": 29,
+      "atkMax": 44,
+      "def": 4,
+      "xp": 18,
+      "nyangMin": 7,
+      "nyangMax": 13,
+      "nameHu": "Kőholt harcos"
+    },
+    {
+      "id": "ev_whiteghost",
+      "level": 1,
+      "tags": [
+        "undead"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 124,
+      "maxHp": 306,
+      "atkMin": 29,
+      "atkMax": 44,
+      "def": 4,
+      "xp": 18,
+      "nyangMin": 7,
+      "nyangMax": 13,
+      "nameHu": "Fehér ruhás szellem"
+    },
+    {
+      "id": "ev_ninetails",
+      "level": 1,
+      "tags": [
+        "undead",
+        "boss"
+      ],
+      "materialId": null,
+      "statLevel": 1,
+      "harcero": 146,
+      "maxHp": 200,
+      "atkMin": 29,
+      "atkMax": 78,
+      "def": 5,
+      "xp": 450,
+      "nyangMin": 280,
+      "nyangMax": 520,
+      "nameHu": "Hwaryeon, a Kilencfarkú"
+    }
+  ],
+  "bosses": [
+    {
+      "id": "boss_m1",
+      "mobId": "m1_boss",
+      "mapIndex": 1,
+      "recommendedLevel": 11,
+      "nameHu": "Öreg Csíkos"
+    },
+    {
+      "id": "boss_m2",
+      "mobId": "m2_boss",
+      "mapIndex": 2,
+      "recommendedLevel": 26,
+      "nameHu": "Aranyfog"
+    },
+    {
+      "id": "boss_m3",
+      "mobId": "m3_boss",
+      "mapIndex": 3,
+      "recommendedLevel": 37,
+      "nameHu": "Nagymancs"
+    },
+    {
+      "id": "boss_m4",
+      "mobId": "m4_boss",
+      "mapIndex": 4,
+      "recommendedLevel": 46,
+      "nameHu": "Vén Romhátú"
+    },
+    {
+      "id": "boss_m5",
+      "mobId": "m5_boss",
+      "mapIndex": 5,
+      "recommendedLevel": 54,
+      "nameHu": "Fagyúrnő"
+    },
+    {
+      "id": "boss_m6",
+      "mobId": "m6_boss",
+      "mapIndex": 6,
+      "recommendedLevel": 60,
+      "nameHu": "Lángszakáll"
+    }
+  ],
+  "dungeons": [
+    {
+      "id": "wild",
+      "keyId": "key_wild",
+      "minLevel": 10,
+      "maxLevel": 18,
+      "keyCoins": 20,
+      "keysPerDay": 3,
+      "firstClearCoins": 5,
+      "minFreeSlots": 2,
+      "heroic": {
+        "minLevel": 55,
+        "keyCost": 2,
+        "firstClearCoins": 10,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_wild_cub",
+            "role": "regular",
+            "level": 55,
+            "maxHp": 20079,
+            "atkMin": 2412,
+            "atkMax": 3301,
+            "def": 90,
+            "harcero": 8392,
+            "xp": 967,
+            "nyang": 2475,
+            "item": false
+          },
+          {
+            "room": 2,
+            "creatureId": "d_wild_cub",
+            "role": "regular",
+            "level": 55,
+            "maxHp": 21284,
+            "atkMin": 2557,
+            "atkMax": 3499,
+            "def": 90,
+            "harcero": 8896,
+            "xp": 967,
+            "nyang": 2475,
+            "item": false
+          },
+          {
+            "room": 3,
+            "creatureId": "d_wild_boar",
+            "role": "regular",
+            "level": 56,
+            "maxHp": 24569,
+            "atkMin": 2952,
+            "atkMax": 4040,
+            "def": 92,
+            "harcero": 10255,
+            "xp": 1024,
+            "nyang": 2520,
+            "item": false
+          },
+          {
+            "room": 4,
+            "creatureId": "d_wild_boar",
+            "role": "regular",
+            "level": 56,
+            "maxHp": 25885,
+            "atkMin": 3110,
+            "atkMax": 4256,
+            "def": 92,
+            "harcero": 10804,
+            "xp": 1024,
+            "nyang": 2520,
+            "item": false
+          },
+          {
+            "room": 5,
+            "creatureId": "d_wild_alpha",
+            "role": "miniboss",
+            "level": 57,
+            "maxHp": 83118,
+            "atkMin": 6506,
+            "atkMax": 17150,
+            "def": 121,
+            "harcero": 51149,
+            "xp": 27075,
+            "nyang": 10260,
+            "item": true
+          },
+          {
+            "room": 6,
+            "creatureId": "d_wild_poacher",
+            "role": "regular",
+            "level": 57,
+            "maxHp": 30873,
+            "atkMin": 3710,
+            "atkMax": 5077,
+            "def": 93,
+            "harcero": 12882,
+            "xp": 1083,
+            "nyang": 2565,
+            "item": false
+          },
+          {
+            "room": 7,
+            "creatureId": "d_wild_poacher",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 35386,
+            "atkMin": 4253,
+            "atkMax": 5820,
+            "def": 95,
+            "harcero": 14771,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 8,
+            "creatureId": "d_wild_trapper",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 36947,
+            "atkMin": 4441,
+            "atkMax": 6077,
+            "def": 95,
+            "harcero": 15423,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 9,
+            "creatureId": "d_wild_trapper",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 39892,
+            "atkMin": 4796,
+            "atkMax": 6562,
+            "def": 96,
+            "harcero": 16647,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 10,
+            "creatureId": "d_wild_bearlord",
+            "role": "boss",
+            "level": 59,
+            "maxHp": 107816,
+            "atkMin": 8441,
+            "atkMax": 22255,
+            "def": 125,
+            "harcero": 61945,
+            "xp": 30175,
+            "nyang": 26550,
+            "item": true
+          }
+        ]
+      },
+      "trophies": {
+        "minLevel": 30,
+        "clear": 1,
+        "heroic": 2
+      },
+      "potionCap": 3,
+      "runPay": [
+        {
+          "xp": 6433,
+          "nyang": 22554
+        },
+        {
+          "xp": 7031,
+          "nyang": 24809
+        },
+        {
+          "xp": 9125,
+          "nyang": 27065
+        },
+        {
+          "xp": 12963,
+          "nyang": 29320
+        },
+        {
+          "xp": 16988,
+          "nyang": 31576
+        },
+        {
+          "xp": 22044,
+          "nyang": 33831
+        },
+        {
+          "xp": 28138,
+          "nyang": 36086
+        },
+        {
+          "xp": 32806,
+          "nyang": 38342
+        },
+        {
+          "xp": 36359,
+          "nyang": 40597
+        }
+      ],
+      "deeper": {
+        "hp": 2,
+        "atk": 2,
+        "rewardMult": 1.5
+      },
+      "recommendedLevel": 13,
+      "rooms": [
+        {
+          "room": 1,
+          "creatureId": "d_wild_cub",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 10,
+          "maxHp": 345,
+          "atkMin": 41,
+          "atkMax": 58,
+          "def": 18,
+          "harcero": 151,
+          "xp": 72,
+          "nyang": 300,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 2,
+          "creatureId": "d_wild_cub",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 10,
+          "maxHp": 366,
+          "atkMin": 44,
+          "atkMax": 61,
+          "def": 18,
+          "harcero": 161,
+          "xp": 72,
+          "nyang": 300,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 3,
+          "creatureId": "d_wild_boar",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 11,
+          "maxHp": 442,
+          "atkMin": 53,
+          "atkMax": 74,
+          "def": 20,
+          "harcero": 194,
+          "xp": 78,
+          "nyang": 330,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 4,
+          "creatureId": "d_wild_boar",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 11,
+          "maxHp": 465,
+          "atkMin": 56,
+          "atkMax": 78,
+          "def": 20,
+          "harcero": 204,
+          "xp": 78,
+          "nyang": 330,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 5,
+          "creatureId": "d_wild_alpha",
+          "role": "miniboss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 11,
+          "maxHp": 1379,
+          "atkMin": 110,
+          "atkMax": 289,
+          "def": 25,
+          "harcero": 744,
+          "xp": 1950,
+          "nyang": 1320,
+          "item": true,
+          "share": 0.1
+        },
+        {
+          "room": 6,
+          "creatureId": "d_wild_poacher",
+          "role": "regular",
+          "tags": [
+            "bandit"
+          ],
+          "level": 12,
+          "maxHp": 594,
+          "atkMin": 72,
+          "atkMax": 100,
+          "def": 21,
+          "harcero": 260,
+          "xp": 84,
+          "nyang": 360,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 7,
+          "creatureId": "d_wild_poacher",
+          "role": "regular",
+          "tags": [
+            "bandit"
+          ],
+          "level": 12,
+          "maxHp": 622,
+          "atkMin": 75,
+          "atkMax": 104,
+          "def": 21,
+          "harcero": 271,
+          "xp": 84,
+          "nyang": 360,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 8,
+          "creatureId": "d_wild_trapper",
+          "role": "regular",
+          "tags": [
+            "bandit"
+          ],
+          "level": 13,
+          "maxHp": 739,
+          "atkMin": 90,
+          "atkMax": 124,
+          "def": 23,
+          "harcero": 323,
+          "xp": 90,
+          "nyang": 390,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 9,
+          "creatureId": "d_wild_trapper",
+          "role": "regular",
+          "tags": [
+            "bandit"
+          ],
+          "level": 13,
+          "maxHp": 770,
+          "atkMin": 93,
+          "atkMax": 129,
+          "def": 23,
+          "harcero": 336,
+          "xp": 90,
+          "nyang": 390,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 10,
+          "creatureId": "d_wild_bearlord",
+          "role": "boss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 12,
+          "maxHp": 1828,
+          "atkMin": 145,
+          "atkMax": 383,
+          "def": 28,
+          "harcero": 1020,
+          "xp": 2100,
+          "nyang": 3600,
+          "item": true,
+          "share": 0.13
+        }
+      ]
+    },
+    {
+      "id": "monkey",
+      "keyId": "key_monkey",
+      "minLevel": 19,
+      "maxLevel": 26,
+      "keyCoins": 20,
+      "keysPerDay": 3,
+      "firstClearCoins": 10,
+      "minFreeSlots": 2,
+      "heroic": {
+        "minLevel": 55,
+        "keyCost": 2,
+        "firstClearCoins": 10,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_monkey_scout",
+            "role": "regular",
+            "level": 56,
+            "maxHp": 20444,
+            "atkMin": 2451,
+            "atkMax": 3355,
+            "def": 92,
+            "harcero": 8525,
+            "xp": 1024,
+            "nyang": 2520,
+            "item": false
+          },
+          {
+            "room": 2,
+            "creatureId": "d_monkey_scout",
+            "role": "regular",
+            "level": 56,
+            "maxHp": 21670,
+            "atkMin": 2599,
+            "atkMax": 3556,
+            "def": 92,
+            "harcero": 9036,
+            "xp": 1024,
+            "nyang": 2520,
+            "item": false
+          },
+          {
+            "room": 3,
+            "creatureId": "d_monkey_brawler",
+            "role": "regular",
+            "level": 57,
+            "maxHp": 24788,
+            "atkMin": 2973,
+            "atkMax": 4068,
+            "def": 93,
+            "harcero": 10333,
+            "xp": 1083,
+            "nyang": 2565,
+            "item": false
+          },
+          {
+            "room": 4,
+            "creatureId": "d_monkey_brawler",
+            "role": "regular",
+            "level": 57,
+            "maxHp": 26116,
+            "atkMin": 3132,
+            "atkMax": 4286,
+            "def": 93,
+            "harcero": 10886,
+            "xp": 1083,
+            "nyang": 2565,
+            "item": false
+          },
+          {
+            "room": 5,
+            "creatureId": "d_monkey_captain",
+            "role": "miniboss",
+            "level": 58,
+            "maxHp": 84868,
+            "atkMin": 6630,
+            "atkMax": 17482,
+            "def": 123,
+            "harcero": 52180,
+            "xp": 28600,
+            "nyang": 10440,
+            "item": true
+          },
+          {
+            "room": 6,
+            "creatureId": "d_monkey_archer",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 31523,
+            "atkMin": 3781,
+            "atkMax": 5174,
+            "def": 95,
+            "harcero": 13145,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 7,
+            "creatureId": "d_monkey_archer",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 34163,
+            "atkMin": 4099,
+            "atkMax": 5608,
+            "def": 96,
+            "harcero": 14242,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 8,
+            "creatureId": "d_monkey_shaman",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 35670,
+            "atkMin": 4280,
+            "atkMax": 5856,
+            "def": 96,
+            "harcero": 14871,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 9,
+            "creatureId": "d_monkey_shaman",
+            "role": "regular",
+            "level": 60,
+            "maxHp": 39631,
+            "atkMin": 4756,
+            "atkMax": 6507,
+            "def": 98,
+            "harcero": 16528,
+            "xp": 1272,
+            "nyang": 2700,
+            "item": false
+          },
+          {
+            "room": 10,
+            "creatureId": "d_monkey_king",
+            "role": "boss",
+            "level": 60,
+            "maxHp": 107108,
+            "atkMin": 8370,
+            "atkMax": 22066,
+            "def": 127,
+            "harcero": 61587,
+            "xp": 31800,
+            "nyang": 27000,
+            "item": true
+          }
+        ]
+      },
+      "trophies": {
+        "minLevel": 30,
+        "clear": 1,
+        "heroic": 2
+      },
+      "potionCap": 3,
+      "runPay": [
+        {
+          "xp": 39052,
+          "nyang": 42853
+        },
+        {
+          "xp": 41733,
+          "nyang": 45108
+        },
+        {
+          "xp": 44389,
+          "nyang": 47363
+        },
+        {
+          "xp": 47032,
+          "nyang": 49619
+        },
+        {
+          "xp": 49123,
+          "nyang": 51874
+        },
+        {
+          "xp": 51137,
+          "nyang": 54130
+        },
+        {
+          "xp": 53636,
+          "nyang": 56385
+        },
+        {
+          "xp": 56093,
+          "nyang": 58640
+        }
+      ],
+      "deeper": {
+        "hp": 2,
+        "atk": 2,
+        "rewardMult": 1.5
+      },
+      "recommendedLevel": 26,
+      "rooms": [
+        {
+          "room": 1,
+          "creatureId": "d_monkey_scout",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 19,
+          "maxHp": 926,
+          "atkMin": 114,
+          "atkMax": 157,
+          "def": 32,
+          "harcero": 405,
+          "xp": 126,
+          "nyang": 570,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 2,
+          "creatureId": "d_monkey_scout",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 19,
+          "maxHp": 981,
+          "atkMin": 121,
+          "atkMax": 166,
+          "def": 32,
+          "harcero": 429,
+          "xp": 126,
+          "nyang": 570,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 3,
+          "creatureId": "d_monkey_brawler",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 20,
+          "maxHp": 1160,
+          "atkMin": 143,
+          "atkMax": 197,
+          "def": 34,
+          "harcero": 506,
+          "xp": 132,
+          "nyang": 600,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 4,
+          "creatureId": "d_monkey_brawler",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 21,
+          "maxHp": 1324,
+          "atkMin": 163,
+          "atkMax": 225,
+          "def": 36,
+          "harcero": 580,
+          "xp": 138,
+          "nyang": 630,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 5,
+          "creatureId": "d_monkey_captain",
+          "role": "miniboss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 22,
+          "maxHp": 4340,
+          "atkMin": 351,
+          "atkMax": 923,
+          "def": 48,
+          "harcero": 2462,
+          "xp": 3600,
+          "nyang": 2640,
+          "item": true,
+          "share": 0.1
+        },
+        {
+          "room": 6,
+          "creatureId": "d_monkey_archer",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 23,
+          "maxHp": 1785,
+          "atkMin": 221,
+          "atkMax": 304,
+          "def": 39,
+          "harcero": 781,
+          "xp": 150,
+          "nyang": 690,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 7,
+          "creatureId": "d_monkey_archer",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 24,
+          "maxHp": 2040,
+          "atkMin": 253,
+          "atkMax": 347,
+          "def": 40,
+          "harcero": 887,
+          "xp": 156,
+          "nyang": 720,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 8,
+          "creatureId": "d_monkey_shaman",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 25,
+          "maxHp": 2260,
+          "atkMin": 280,
+          "atkMax": 385,
+          "def": 42,
+          "harcero": 987,
+          "xp": 162,
+          "nyang": 750,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 9,
+          "creatureId": "d_monkey_shaman",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 25,
+          "maxHp": 2355,
+          "atkMin": 292,
+          "atkMax": 401,
+          "def": 42,
+          "harcero": 1028,
+          "xp": 162,
+          "nyang": 750,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 10,
+          "creatureId": "d_monkey_king",
+          "role": "boss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 26,
+          "maxHp": 6968,
+          "atkMin": 563,
+          "atkMax": 1489,
+          "def": 57,
+          "harcero": 3978,
+          "xp": 4200,
+          "nyang": 7800,
+          "item": true,
+          "share": 0.13
+        }
+      ]
+    },
+    {
+      "id": "spider",
+      "keyId": "key_spider",
+      "minLevel": 32,
+      "maxLevel": 43,
+      "keyCoins": 20,
+      "keysPerDay": 3,
+      "firstClearCoins": 15,
+      "minFreeSlots": 2,
+      "heroic": {
+        "minLevel": 55,
+        "keyCost": 2,
+        "firstClearCoins": 10,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_spider_hatchling",
+            "role": "regular",
+            "level": 57,
+            "maxHp": 21506,
+            "atkMin": 2596,
+            "atkMax": 3553,
+            "def": 93,
+            "harcero": 8994,
+            "xp": 1083,
+            "nyang": 2565,
+            "item": false
+          },
+          {
+            "room": 2,
+            "creatureId": "d_spider_hatchling",
+            "role": "regular",
+            "level": 57,
+            "maxHp": 22796,
+            "atkMin": 2752,
+            "atkMax": 3766,
+            "def": 93,
+            "harcero": 9534,
+            "xp": 1083,
+            "nyang": 2565,
+            "item": false
+          },
+          {
+            "room": 3,
+            "creatureId": "d_spider_weaver",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 26389,
+            "atkMin": 3187,
+            "atkMax": 4360,
+            "def": 95,
+            "harcero": 11041,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 4,
+            "creatureId": "d_spider_weaver",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 27803,
+            "atkMin": 3357,
+            "atkMax": 4594,
+            "def": 95,
+            "harcero": 11633,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 5,
+            "creatureId": "d_spider_matron",
+            "role": "miniboss",
+            "level": 59,
+            "maxHp": 85432,
+            "atkMin": 6719,
+            "atkMax": 17715,
+            "def": 125,
+            "harcero": 52702,
+            "xp": 30175,
+            "nyang": 10620,
+            "item": true
+          },
+          {
+            "room": 6,
+            "creatureId": "d_spider_spitter",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 31731,
+            "atkMin": 3832,
+            "atkMax": 5243,
+            "def": 96,
+            "harcero": 13271,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 7,
+            "creatureId": "d_spider_spitter",
+            "role": "regular",
+            "level": 60,
+            "maxHp": 35386,
+            "atkMin": 4274,
+            "atkMax": 5848,
+            "def": 98,
+            "harcero": 14806,
+            "xp": 1272,
+            "nyang": 2700,
+            "item": false
+          },
+          {
+            "room": 8,
+            "creatureId": "d_spider_guard",
+            "role": "regular",
+            "level": 60,
+            "maxHp": 36948,
+            "atkMin": 4463,
+            "atkMax": 6106,
+            "def": 98,
+            "harcero": 15460,
+            "xp": 1272,
+            "nyang": 2700,
+            "item": false
+          },
+          {
+            "room": 9,
+            "creatureId": "d_spider_guard",
+            "role": "regular",
+            "level": 61,
+            "maxHp": 38407,
+            "atkMin": 4640,
+            "atkMax": 6348,
+            "def": 100,
+            "harcero": 16113,
+            "xp": 1339,
+            "nyang": 2745,
+            "item": false
+          },
+          {
+            "room": 10,
+            "creatureId": "d_spider_queen",
+            "role": "boss",
+            "level": 61,
+            "maxHp": 103804,
+            "atkMin": 8167,
+            "atkMax": 21529,
+            "def": 129,
+            "harcero": 60145,
+            "xp": 33475,
+            "nyang": 27450,
+            "item": true
+          }
+        ]
+      },
+      "trophies": {
+        "minLevel": 30,
+        "clear": 1,
+        "heroic": 2
+      },
+      "potionCap": 3,
+      "runPay": [
+        {
+          "xp": 59333,
+          "nyang": 72173
+        },
+        {
+          "xp": 59620,
+          "nyang": 74428
+        },
+        {
+          "xp": 59768,
+          "nyang": 76684
+        },
+        {
+          "xp": 59776,
+          "nyang": 78939
+        },
+        {
+          "xp": 60314,
+          "nyang": 81194
+        },
+        {
+          "xp": 61310,
+          "nyang": 83450
+        },
+        {
+          "xp": 62224,
+          "nyang": 85705
+        },
+        {
+          "xp": 67250,
+          "nyang": 87961
+        },
+        {
+          "xp": 72540,
+          "nyang": 90216
+        },
+        {
+          "xp": 82006,
+          "nyang": 92471
+        },
+        {
+          "xp": 92333,
+          "nyang": 94727
+        },
+        {
+          "xp": 103572,
+          "nyang": 96982
+        }
+      ],
+      "deeper": {
+        "hp": 2,
+        "atk": 2,
+        "rewardMult": 1.5
+      },
+      "recommendedLevel": 43,
+      "rooms": [
+        {
+          "room": 1,
+          "creatureId": "d_spider_hatchling",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 32,
+          "maxHp": 2825,
+          "atkMin": 352,
+          "atkMax": 483,
+          "def": 53,
+          "harcero": 1233,
+          "xp": 208,
+          "nyang": 960,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 2,
+          "creatureId": "d_spider_hatchling",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 33,
+          "maxHp": 3156,
+          "atkMin": 393,
+          "atkMax": 539,
+          "def": 55,
+          "harcero": 1373,
+          "xp": 219,
+          "nyang": 990,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 3,
+          "creatureId": "d_spider_weaver",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 34,
+          "maxHp": 3573,
+          "atkMin": 445,
+          "atkMax": 611,
+          "def": 56,
+          "harcero": 1548,
+          "xp": 232,
+          "nyang": 1020,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 4,
+          "creatureId": "d_spider_weaver",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 35,
+          "maxHp": 3979,
+          "atkMin": 496,
+          "atkMax": 681,
+          "def": 58,
+          "harcero": 1726,
+          "xp": 247,
+          "nyang": 1050,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 5,
+          "creatureId": "d_spider_matron",
+          "role": "miniboss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 36,
+          "maxHp": 12488,
+          "atkMin": 1015,
+          "atkMax": 2681,
+          "def": 77,
+          "harcero": 7591,
+          "xp": 6600,
+          "nyang": 4320,
+          "item": true,
+          "share": 0.1
+        },
+        {
+          "room": 6,
+          "creatureId": "d_spider_spitter",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 38,
+          "maxHp": 5543,
+          "atkMin": 692,
+          "atkMax": 949,
+          "def": 63,
+          "harcero": 2396,
+          "xp": 304,
+          "nyang": 1140,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 7,
+          "creatureId": "d_spider_spitter",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 39,
+          "maxHp": 6240,
+          "atkMin": 780,
+          "atkMax": 1069,
+          "def": 64,
+          "harcero": 2697,
+          "xp": 327,
+          "nyang": 1170,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 8,
+          "creatureId": "d_spider_guard",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 40,
+          "maxHp": 7089,
+          "atkMin": 886,
+          "atkMax": 1214,
+          "def": 66,
+          "harcero": 3065,
+          "xp": 352,
+          "nyang": 1200,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 9,
+          "creatureId": "d_spider_guard",
+          "role": "regular",
+          "tags": [
+            "animal"
+          ],
+          "level": 42,
+          "maxHp": 8611,
+          "atkMin": 1077,
+          "atkMax": 1476,
+          "def": 69,
+          "harcero": 3712,
+          "xp": 408,
+          "nyang": 1260,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 10,
+          "creatureId": "d_spider_queen",
+          "role": "boss",
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "level": 43,
+          "maxHp": 23992,
+          "atkMin": 1957,
+          "atkMax": 5159,
+          "def": 92,
+          "harcero": 13972,
+          "xp": 10975,
+          "nyang": 12900,
+          "item": true,
+          "share": 0.13
+        }
+      ]
+    },
+    {
+      "id": "dragon",
+      "keyId": "key_dragon",
+      "minLevel": 48,
+      "maxLevel": 60,
+      "keyCoins": 20,
+      "keysPerDay": 3,
+      "firstClearCoins": 20,
+      "minFreeSlots": 2,
+      "heroic": {
+        "minLevel": 55,
+        "keyCost": 2,
+        "firstClearCoins": 10,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_dragon_whelp",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 22964,
+            "atkMin": 2751,
+            "atkMax": 3764,
+            "def": 95,
+            "harcero": 9570,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 2,
+            "creatureId": "d_dragon_whelp",
+            "role": "regular",
+            "level": 58,
+            "maxHp": 24341,
+            "atkMin": 2916,
+            "atkMax": 3990,
+            "def": 95,
+            "harcero": 10144,
+            "xp": 1144,
+            "nyang": 2610,
+            "item": false
+          },
+          {
+            "room": 3,
+            "creatureId": "d_dragon_cultist",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 26643,
+            "atkMin": 3192,
+            "atkMax": 4367,
+            "def": 96,
+            "harcero": 11099,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 4,
+            "creatureId": "d_dragon_cultist",
+            "role": "regular",
+            "level": 59,
+            "maxHp": 28071,
+            "atkMin": 3363,
+            "atkMax": 4601,
+            "def": 96,
+            "harcero": 11694,
+            "xp": 1207,
+            "nyang": 2655,
+            "item": false
+          },
+          {
+            "room": 5,
+            "creatureId": "d_dragon_elder",
+            "role": "miniboss",
+            "level": 60,
+            "maxHp": 88757,
+            "atkMin": 6927,
+            "atkMax": 18259,
+            "def": 127,
+            "harcero": 54538,
+            "xp": 31800,
+            "nyang": 10800,
+            "item": true
+          },
+          {
+            "room": 6,
+            "creatureId": "d_dragon_drake",
+            "role": "regular",
+            "level": 60,
+            "maxHp": 32966,
+            "atkMin": 3950,
+            "atkMax": 5405,
+            "def": 98,
+            "harcero": 13739,
+            "xp": 1272,
+            "nyang": 2700,
+            "item": false
+          },
+          {
+            "room": 7,
+            "creatureId": "d_dragon_drake",
+            "role": "regular",
+            "level": 61,
+            "maxHp": 34397,
+            "atkMin": 4122,
+            "atkMax": 5640,
+            "def": 100,
+            "harcero": 14373,
+            "xp": 1339,
+            "nyang": 2745,
+            "item": false
+          },
+          {
+            "room": 8,
+            "creatureId": "d_dragon_guard",
+            "role": "regular",
+            "level": 61,
+            "maxHp": 35914,
+            "atkMin": 4304,
+            "atkMax": 5889,
+            "def": 100,
+            "harcero": 15007,
+            "xp": 1339,
+            "nyang": 2745,
+            "item": false
+          },
+          {
+            "room": 9,
+            "creatureId": "d_dragon_guard",
+            "role": "regular",
+            "level": 62,
+            "maxHp": 37295,
+            "atkMin": 4470,
+            "atkMax": 6115,
+            "def": 101,
+            "harcero": 15640,
+            "xp": 1408,
+            "nyang": 2790,
+            "item": false
+          },
+          {
+            "room": 10,
+            "creatureId": "d_dragon_young",
+            "role": "boss",
+            "level": 62,
+            "maxHp": 100796,
+            "atkMin": 7868,
+            "atkMax": 20744,
+            "def": 132,
+            "harcero": 58461,
+            "xp": 35200,
+            "nyang": 27900,
+            "item": true
+          }
+        ]
+      },
+      "trophies": {
+        "minLevel": 30,
+        "clear": 1,
+        "heroic": 2
+      },
+      "potionCap": 3,
+      "runPay": [
+        {
+          "xp": 175250,
+          "nyang": 108259
+        },
+        {
+          "xp": 193068,
+          "nyang": 110515
+        },
+        {
+          "xp": 212180,
+          "nyang": 112770
+        },
+        {
+          "xp": 225142,
+          "nyang": 115025
+        },
+        {
+          "xp": 238622,
+          "nyang": 117281
+        },
+        {
+          "xp": 252630,
+          "nyang": 119536
+        },
+        {
+          "xp": 267176,
+          "nyang": 121792
+        },
+        {
+          "xp": 282271,
+          "nyang": 124047
+        },
+        {
+          "xp": 291197,
+          "nyang": 126302
+        },
+        {
+          "xp": 297122,
+          "nyang": 128558
+        },
+        {
+          "xp": 302764,
+          "nyang": 130813
+        },
+        {
+          "xp": 308335,
+          "nyang": 133069
+        },
+        {
+          "xp": 313860,
+          "nyang": 135324
+        }
+      ],
+      "deeper": {
+        "hp": 2,
+        "atk": 2,
+        "rewardMult": 1.5
+      },
+      "recommendedLevel": 60,
+      "rooms": [
+        {
+          "room": 1,
+          "creatureId": "d_dragon_whelp",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "level": 48,
+          "maxHp": 8376,
+          "atkMin": 1050,
+          "atkMax": 1437,
+          "def": 79,
+          "harcero": 3603,
+          "xp": 624,
+          "nyang": 1440,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 2,
+          "creatureId": "d_dragon_whelp",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "level": 49,
+          "maxHp": 9640,
+          "atkMin": 1208,
+          "atkMax": 1654,
+          "def": 80,
+          "harcero": 4128,
+          "xp": 667,
+          "nyang": 1470,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 3,
+          "creatureId": "d_dragon_cultist",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "bandit"
+          ],
+          "level": 51,
+          "maxHp": 11815,
+          "atkMin": 1482,
+          "atkMax": 2028,
+          "def": 84,
+          "harcero": 5065,
+          "xp": 759,
+          "nyang": 1530,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 4,
+          "creatureId": "d_dragon_cultist",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "bandit"
+          ],
+          "level": 52,
+          "maxHp": 13025,
+          "atkMin": 1634,
+          "atkMax": 2236,
+          "def": 85,
+          "harcero": 5571,
+          "xp": 808,
+          "nyang": 1560,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 5,
+          "creatureId": "d_dragon_elder",
+          "role": "miniboss",
+          "tags": [
+            "fire",
+            "animal",
+            "boss"
+          ],
+          "level": 53,
+          "maxHp": 40677,
+          "atkMin": 3325,
+          "atkMax": 8764,
+          "def": 113,
+          "harcero": 25579,
+          "xp": 21475,
+          "nyang": 6360,
+          "item": true,
+          "share": 0.1
+        },
+        {
+          "room": 6,
+          "creatureId": "d_dragon_drake",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "level": 55,
+          "maxHp": 17721,
+          "atkMin": 2224,
+          "atkMax": 3044,
+          "def": 90,
+          "harcero": 7571,
+          "xp": 967,
+          "nyang": 1650,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 7,
+          "creatureId": "d_dragon_drake",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "level": 56,
+          "maxHp": 20254,
+          "atkMin": 2543,
+          "atkMax": 3479,
+          "def": 92,
+          "harcero": 8641,
+          "xp": 1024,
+          "nyang": 1680,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 8,
+          "creatureId": "d_dragon_guard",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "orc"
+          ],
+          "level": 58,
+          "maxHp": 25083,
+          "atkMin": 3150,
+          "atkMax": 4310,
+          "def": 95,
+          "harcero": 10702,
+          "xp": 1144,
+          "nyang": 1740,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 9,
+          "creatureId": "d_dragon_guard",
+          "role": "regular",
+          "tags": [
+            "fire",
+            "orc"
+          ],
+          "level": 59,
+          "maxHp": 27083,
+          "atkMin": 3402,
+          "atkMax": 4654,
+          "def": 96,
+          "harcero": 11552,
+          "xp": 1207,
+          "nyang": 1770,
+          "item": false,
+          "share": 0.04
+        },
+        {
+          "room": 10,
+          "creatureId": "d_dragon_young",
+          "role": "boss",
+          "tags": [
+            "fire",
+            "animal",
+            "boss"
+          ],
+          "level": 60,
+          "maxHp": 78028,
+          "atkMin": 6385,
+          "atkMax": 16831,
+          "def": 127,
+          "harcero": 45910,
+          "xp": 31800,
+          "nyang": 18000,
+          "item": true,
+          "share": 0.13
+        }
+      ]
+    }
+  ],
+  "worldBossRules": {
+    "minLevel": 30
+  },
+  "bossAttempts": {
+    "order": [
+      "free",
+      "bank",
+      "rift",
+      "bought",
+      "ticket"
+    ]
+  },
+  "endgame": {
+    "heroic": {
+      "minLevel": 55,
+      "keyCost": 2
+    }
+  },
+  "locale": {
+    "maps": {
+      "m1": "A falu határa",
+      "m2": "Az útonállók földje",
+      "m3": "Az agyarasok szurdoka",
+      "m4": "A romok sivataga",
+      "m5": "A dermedt hágó",
+      "m6": "Parázsvidék"
+    },
+    "mobs": {
+      "m1_dog": "Vadkutya",
+      "m1_wolf": "Farkas",
+      "m1_boar": "Vaddisznó",
+      "m1_bear": "Medve",
+      "m1_tiger": "Tigris",
+      "m1_alpha_wolf": "Falkavezér",
+      "m1_blue_wolf": "Ezüstbundás farkas",
+      "m1_red_boar": "Rozsdahátú vadkan",
+      "m1_boss": "Öreg Csíkos",
+      "m2_pickpocket": "Zsebtolvaj",
+      "m2_archer": "Útonálló íjász",
+      "m2_axeman": "Fejszés bandita",
+      "m2_merc": "Zsoldos",
+      "m2_guard": "Testőr",
+      "m2_cleaver": "Kendős hentes",
+      "m2_wildman": "Gyékénymaszkos vadember",
+      "m2_wild_archer": "Gyékénymaszkos íjász",
+      "m2_boss": "Aranyfog",
+      "m3_lookout": "Leselkedő ork",
+      "m3_slinger": "Parittyás ork",
+      "m3_clubber": "Bunkós ork",
+      "m3_shaman": "Totemrázó sámán",
+      "m3_berserker": "Tajtékzó ork",
+      "m3_ram": "Faltörő kos",
+      "m3_lieutenant": "Ordibáló hadnagy",
+      "m3_irontusk": "Vasagyarú ork",
+      "m3_boss": "Nagymancs",
+      "m4_scorpion": "Homokskorpió",
+      "m4_giant_scorpion": "Óriásskorpió",
+      "m4_sand_viper": "Homoki vipera",
+      "m4_cobra": "Csuklyás kobra",
+      "m4_bandit": "Fátyolos rabló",
+      "m4_bandit_archer": "Fátyolos íjász",
+      "m4_mummy": "Pólyás romőr",
+      "m4_golem": "Homokkőgólem",
+      "m4_boss": "Vén Romhátú",
+      "m5_snow_wolf": "Hósörényű farkas",
+      "m5_snow_wraith": "Puffadt hólidérc",
+      "m5_frozen_warrior": "Befagyott vitéz",
+      "m5_frost_spirit": "Zúzmaraszellem",
+      "m5_witch_apprentice": "Vacogó boszorkánytanonc",
+      "m5_yeti": "Bozontos jeti",
+      "m5_elder_yeti": "Ősz jetiapó",
+      "m5_ice_golem": "Fagyszívű kolosszus",
+      "m5_boss": "Fagyúrnő",
+      "m6_flame_hound": "Lángkopó",
+      "m6_magma_beetle": "Magmabogár",
+      "m6_fire_imp": "Tűzmanó",
+      "m6_lava_lizard": "Lávagyík",
+      "m6_ash_cultist": "Hamuszektás",
+      "m6_fire_tiger": "Parázstigris",
+      "m6_flame_knight": "Lánglovag",
+      "m6_magma_giant": "Magmaóriás",
+      "m6_boss": "Lángszakáll",
+      "d_monkey_scout": "Kukucsmajom",
+      "d_monkey_brawler": "Pofozómajom",
+      "d_monkey_archer": "Lombnyilas",
+      "d_monkey_shaman": "Romsámán",
+      "d_monkey_captain": "Liánkapitány",
+      "d_monkey_king": "Banánkirály",
+      "d_spider_hatchling": "Pókporonty",
+      "d_spider_weaver": "Csipkeszövő",
+      "d_spider_spitter": "Méregköpő",
+      "d_spider_guard": "Fészekőr",
+      "d_spider_matron": "Pókdajka",
+      "d_spider_queen": "Selyemkirálynő",
+      "d_dragon_whelp": "Parázsfióka",
+      "d_dragon_cultist": "Lánghívő",
+      "d_dragon_drake": "Kénsárkány",
+      "d_dragon_guard": "Pikkelytestőr",
+      "d_dragon_elder": "Szénszakáll",
+      "d_dragon_young": "Lángifjonc",
+      "d_wild_cub": "Vadonkölyök",
+      "d_wild_boar": "Tüskés vadkan",
+      "d_wild_poacher": "Orvvadász",
+      "d_wild_trapper": "Csapdaállító",
+      "d_wild_alpha": "Ordasvezér",
+      "d_wild_bearlord": "Mohahátú Medveúr",
+      "ev_dokkebi": "Dokkebi-tréfamester",
+      "ev_lider": "Lidérc",
+      "ev_silkghost": "Selyemlámpás-szellem",
+      "ev_stonedead": "Kőholt harcos",
+      "ev_whiteghost": "Fehér ruhás szellem",
+      "ev_ninetails": "Hwaryeon, a Kilencfarkú"
+    },
+    "bosses": {
+      "boss_m1": "Öreg Csíkos",
+      "boss_m2": "Aranyfog",
+      "boss_m3": "Nagymancs",
+      "boss_m4": "Vén Romhátú",
+      "boss_m5": "Fagyúrnő",
+      "boss_m6": "Lángszakáll"
+    },
+    "dungeon": {
+      "title": "Kazamaták",
+      "names": {
+        "monkey": "Majomcsapda",
+        "spider": "Pókfészek",
+        "dragon": "Sárkányfészek",
+        "wild": "Vadonodú"
+      },
+      "lore": {
+        "monkey": "Benőtt rom a dzsungelben, ahol a majmok rég eldöntötték, hogy a kalandor is csak egy nagyobb banán. A trónon a Banánkirály ül, és nem szereti, ha zavarják.",
+        "spider": "Nyirkos barlang, minden sarkában selyem, és benne valami, ami egykor kalandor volt. A mélyén a Selyemkirálynő szövi a terveit, meg a vacsoráját.",
+        "dragon": "Vulkáni barlang, ahol még a kövek is izzadnak. Egy ifjú sárkány fészkel itt, aki most tanulja, mennyire szeret tüzet okádni. Nagyon szeret.",
+        "wild": "Egy öreg medve odúja a falu határán túl, ahová a környék farkasai és az útonállók földjéről jött orvvadászok egyszerre költöztek be, és azóta sem tudják eldönteni, kié a hely. A legmélyén a Mohahátú Medveúr alszik, és szerinte mindkét bérlő tartozik a lakbérrel."
+      },
+      "levels": "{{min}}-{{max}}. szint",
+      "fromLevel": "{{level}}. szinttől",
+      "roles": {
+        "regular": "Kazamatalény",
+        "miniboss": "Miniboss",
+        "boss": "Főboss"
+      },
+      "room": "{{room}}. terem",
+      "rooms": "{{done}}/{{total}} terem",
+      "keyCount_one": "{{count}} kulcs",
+      "keyCount_other": "{{count}} kulcs",
+      "coins": "{{coins}} VÉ",
+      "entry": {
+        "tab": "Kazamaták",
+        "title": "Kazamaták",
+        "intro": "Tíz terem, a végén a főboss, aki {{level}}. szinttől hőstettet is ad. Kulccsal lépsz be, és a HP-⁠d teremről teremre megmarad.",
+        "introV2": "Tíz terem, a végén a főboss, aki {{level}}. szinttől hőstettet is ad. Itt esnek a kísérőd tojásai, a fejlődés magjai és a képességkönyvei, a főboss után pedig láda vár tapasztalattal és nyanggal.",
+        "locked": "A kazamaták {{level}}. szinttől nyílnak meg.",
+        "lockedHint": "Addig vadássz, törd a köveket, és vidd a fegyvered a kovácshoz.",
+        "open": "Irány a kazamaták",
+        "rowLocked": "Zárva, {{level}}. szinttől",
+        "rowRun": "Menet: {{done}}/{{total}} terem",
+        "rowFreeKey": "Napi kulcs vár",
+        "rowNoKey": "Nincs kulcsod"
+      },
+      "select": {
+        "title": "Kazamaták",
+        "intro": "Válaszd ki, hová szállsz le. Egyszerre egy menet futhat.",
+        "best": "Legjobb: {{done}}/{{total}} terem",
+        "bestNone": "Még nem jártál bent",
+        "cleared": "Kifosztva",
+        "open": "Belépek",
+        "resume": "Folytatás: {{room}}. terem",
+        "firstClear": "Első teljesítés: {{coins}} VÉ",
+        "firstClearDone": "Az első teljesítés jutalmát már megkaptad",
+        "items": "Biztos tárgy a minibosstól és a főbosstól",
+        "itemsV2": "Biztos tárgy a minibosstól és a főbosstól, a szinteden",
+        "freeKey": "Ma még jár egy ingyen kulcs",
+        "listLabel": "A kazamaták",
+        "freeKeysBanked_one": "{{count}} ingyen kulcs vár",
+        "freeKeysBanked_other": "{{count}} ingyen kulcs vár",
+        "uniquePity": "Mitikus kísérő: {{have}}/{{need}} teljesítés",
+        "purpose": "Főleg innen:",
+        "reach": "Kb. {{room}}. teremig jutnál"
+      },
+      "hall": {
+        "back": "Kazamaták",
+        "backLabel": "Vissza a kazamaták listájára",
+        "trackLabel": "A kazamata termei",
+        "nodeDone": "legyőzve",
+        "nodeNext": "következik",
+        "nodeAhead": "még előtted",
+        "next": "Következő ellenfél",
+        "start": "Az első terem lakója",
+        "hp": "HP",
+        "hpLabel": "A hősöd HP-⁠ja a menetben",
+        "potions_one": "{{count}} ital",
+        "potions_other": "{{count}} ital",
+        "run": "Menet",
+        "runDone": "{{done}}/{{total}} terem kész",
+        "fight": "Harc: {{room}}. terem",
+        "fightMiniboss": "Kihívom a minibosst",
+        "fightBoss": "Kihívom a főbosst",
+        "retreat": "Visszavonulás",
+        "retreatTitle": "Visszavonulsz?",
+        "retreatText": "A menet véget ér, a kulcs nem jár vissza. A legjobb eredményed megmarad, és a már megszerzett jutalom is a tiéd.",
+        "retreatConfirm": "Visszavonulok",
+        "enterTitle": "Belépés",
+        "enter": "Belépek",
+        "enterHint": "Egy kulcs elfogy, a menet teljes HP-⁠val indul.",
+        "keys": "Kulcsaid",
+        "riftKey": "+{{n}} Hasadék-kulcs, csak ma",
+        "claim": "Átveszem a napi kulcsot",
+        "claimHint": "Kazamatánként naponta egy ingyen kulcs jár.",
+        "claimHintV2": "Naponta {{free}} ingyen kulcs jár annak a kazamatának, ahol átveszed. Ha aznap nem veszed át, éjfélkor elvész, és egyszerre legfeljebb {{free}} ingyen kulcs lehet nálad.",
+        "claimed": "Mára nincs több ingyen kulcs (átvetted, vagy már {{free}} van nálad). Újak {{time}} múlva járnak.",
+        "buy": "Kulcs: {{coins}} VÉ",
+        "buyLeft_one": "Ma még {{count}} kulcsot vehetsz ide.",
+        "buyLeft_other": "Ma még {{count}} kulcsot vehetsz ide.",
+        "buyLimit": "Mára elfogytak a vehető kulcsok. {{time}} múlva újra vehetsz.",
+        "noKey": "Nincs kulcsod. Vedd át a napi kulcsot, vagy vegyél egyet Viharérméért.",
+        "bagSpace": "A menethez legalább {{count}} szabad rekesz kell a leltárban, most {{free}} van: a miniboss és a főboss biztos tárgyat ad.",
+        "locked": "Ide {{level}}. szinttől léphetsz be.",
+        "lockedHint": "Most {{level}}. szintű vagy.",
+        "otherRun": "Egyszerre egy menet futhat. Előbb fejezd be vagy add fel ezt: {{name}}.",
+        "toOtherRun": "Átmegyek",
+        "itemRoom": "Ez a terem biztos tárgyat ad: kell hozzá egy szabad hely a leltárban.",
+        "bagFull": "Megtelt a leltárad. Adj el vagy vegyél fel valamit, mielőtt a bosshoz mész.",
+        "toBag": "Leltár",
+        "keyClaimed": "Megvan a napi kulcs.",
+        "keyBought": "Megvetted a kulcsot.",
+        "entered": "Beléptél. Sok szerencsét!",
+        "claimBank_one": "Átveszem az ingyen kulcsot",
+        "claimBank_other": "Átveszem a {{count}} ingyen kulcsot",
+        "potionsCap": "Ital: {{left}}/{{cap}} ebben a menetben",
+        "collected": "Eddig összegyűjtött",
+        "chestPay": "Teljesítési láda",
+        "runPanel": "A menet",
+        "buffs": "Aktív bónuszok",
+        "buffAtk": "+{{pct}}% sebzés",
+        "buffUntil": {
+          "miniboss": "a minibossig",
+          "boss": "a főbossig"
+        },
+        "buffUntilRoom": "{{room}}. teremig",
+        "buffTip": "Hat a következő bossig: {{name}} ({{room}}. terem), az ő harcában is.",
+        "chestGoal": "Végigjutásért",
+        "chestGoalTip": "Ha mind a 10 termet megnyered, a végén ezt a ládát is megkapod. Minden megnyert terem a saját jutalmát adja.",
+        "openChest": "Nyisd ki a ládát",
+        "chestHint": "A főboss legyőzve: a láda a tiéd",
+        "loot": "Eddig összegyűjtött",
+        "lootNone": "Még semmi",
+        "lootTip": "Amit ez a menet eddig adott: már a tiéd, visszavonulásnál és vereségnél is megmarad.",
+        "lootItems": "Tárgyak: {{count}}"
+      },
+      "fight": {
+        "kicker": "{{name}}, {{room}}. terem",
+        "kickerMiniboss": "{{name}}, miniboss",
+        "kickerBoss": "{{name}}, főboss",
+        "skill": "Főboss-képesség: {{name}}"
+      },
+      "summary": {
+        "clearedTitle": "Kifosztva!",
+        "lostTitle": "Vereség",
+        "leftTitle": "Visszavonultál",
+        "clearedLine": "Legyőzted: {{boss}}. {{total}} terem, egytől egyig a tiéd.",
+        "lostLine": "{{foe}} megállított. Teljesített termek: {{done}}/{{total}}.",
+        "keyRefunded": "A napi ingyen kulcsod visszajárt, ma még egyszer nekifuthatsz.",
+        "leftLine": "Épségben kijutottál. Teljesített termek: {{done}}/{{total}}.",
+        "best": "Legjobb eredményed: {{done}}/{{total}} terem",
+        "firstClear": "Első teljesítés",
+        "coins": "Viharérme",
+        "xp": "XP",
+        "nyang": "Nyang",
+        "loot": "Zsákmány a menetből",
+        "lootOrder": "A legértékesebb elöl",
+        "noLoot": "Ebből a menetből nem hoztál tárgyat. Csak tapasztalatot, az viszont nem fér a zsákba.",
+        "noLootV2": "Ebből a menetből nem hoztál tárgyat. A termek tapasztalata és nyangja így is a tiéd.",
+        "partial": "Amit az oldal újratöltése előtt szereztél, az itt nem látszik, de a tiéd.",
+        "again_one": "Van még {{count}} kulcsod, bármikor visszamehetsz.",
+        "again_other": "Van még {{count}} kulcsod, bármikor visszamehetsz.",
+        "label": "A menet eredménye",
+        "total": "Összesen",
+        "petLoot": "Kísérő-zsákmány",
+        "uniquePity": "Mitikus kísérő: {{have}}/{{need}} teljesítés"
+      },
+      "tip": {
+        "rooms": "10 terem: nyolc kazamatalény, az 5. teremben miniboss, a 10.-ben a főboss.",
+        "entry": "Belépés",
+        "key": "Kulcs",
+        "keysHave": "Kulcsaid",
+        "freeKey": "Napi ingyen kulcs",
+        "freeKeyYes": "Átvehető",
+        "freeKeyNo": "Átvéve",
+        "buyToday": "Ma vehető",
+        "buyValue": "{{left}}/{{max}}, darabja {{coins}} VÉ",
+        "best": "Legjobb menet",
+        "rewards": "Jutalom",
+        "perRoom": "Termenként XP és nyang",
+        "items": "A miniboss és a főboss biztosan ad egy {{min}}-{{max}}. szintű tárgyat, +0 és +4 között, bónuszokkal.",
+        "firstClear": "Első teljesítés: {{coins}} Viharérme",
+        "rules": "A HP-⁠d teremről teremre megmarad, az italokat a harcban magadtól iszod. Ha vesztesz, a menet véget ér, de a legjobb eredményed megmarad.",
+        "rulesV2": "A HP-⁠d teremről teremre megmarad, és legfeljebb {{cap}} italt iszol egy menetben, magadtól, a harcban. Ha vesztesz, a menet véget ér, de a legjobb eredményed megmarad.",
+        "level": "Szint",
+        "maxHp": "HP",
+        "atk": "Támadás",
+        "def": "Védelem",
+        "xp": "XP",
+        "nyang": "Nyang",
+        "item": "Tárgy",
+        "itemYes": "Biztos tárgy",
+        "stateDone": "Ebben a menetben már legyőzted.",
+        "stateNext": "Ő következik.",
+        "stateAhead": "Még előtted áll.",
+        "keyHow": "Kazamatánként naponta egy ingyen jár, a többit {{coins}} VÉ-ért veheted (naponta legfeljebb {{max}} darabot). Belépéskor egy elfogy.",
+        "keyHowV2": "Naponta {{free}} ingyen kulcs jár; ha aznap nem veszed át, éjfélkor elvész, és egyszerre legfeljebb {{free}} lehet nálad. A többit {{coins}} VÉ-ért veheted (naponta legfeljebb {{max}} darabot). Belépéskor egy elfogy.",
+        "hp": "A menet HP-⁠ja teremről teremre megmarad. Gyógyulni csak itallal lehet, a harc közben.",
+        "potions": "A harcban magadtól iszol, ha fogy a HP-⁠d. Italt a boltban vehetsz.",
+        "potionsV2": "A harcban magadtól iszol, ha fogy a HP-⁠d, de egy menetben legfeljebb {{cap}} italt. Italt a boltban vehetsz.",
+        "retreat": "A menet véget ér, a kulcs elvész. A legjobb eredményed megmarad.",
+        "enter": "Egy kulcs elfogy, és teljes HP-⁠val indulsz. Kezdőterem: {{room}}.",
+        "lockedTitle": "Zárva",
+        "lockedLine": "{{level}}. szinttől léphetsz be. Most {{now}}. szintű vagy.",
+        "resetIn": "Új ingyen kulcsok {{time}} múlva."
+      },
+      "trophy": {
+        "label": "Hőstett",
+        "daily_one": "Főboss: +{{count}} hőstett naponta",
+        "daily_other": "Főboss: +{{count}} hőstett naponta",
+        "heroic_one": "Hősi főboss: +{{count}} hőstett",
+        "heroic_other": "Hősi főboss: +{{count}} hőstett",
+        "from": "Hőstett a főbosstól {{level}}. szinttől",
+        "done": "A mai hőstett megvan, holnap újra jár",
+        "missed": "Hőstett: {{pct}}% esély volt (alacsony szintű kazamata), most nem esett."
+      },
+      "errors": {
+        "no_key": "Nincs kulcsod ehhez a kazamatához.",
+        "run_active": "Már fut egy menet. Előbb fejezd be vagy add fel.",
+        "no_run": "Ebben a kazamatában most nincs futó menet.",
+        "level_too_low": "Ehhez a kazamatához magasabb szint kell.",
+        "buy_limit": "Mára elfogytak a vehető kulcsok.",
+        "already_claimed": "Mára nincs több ingyen kulcs.",
+        "unknown_dungeon": "Ilyen kazamata nincs.",
+        "inventory_full": "Megtelt a leltárad: a boss tárgyának kell egy szabad hely.",
+        "bag_space": "A menethez legalább két szabad rekesz kell a leltárban.",
+        "no_chest": "Ebben a kazamatában most nincs kinyitható láda.",
+        "chest_pending": "Előbb nyisd ki a ládát: a főboss már legyőzve.",
+        "room_not_fight": "Ez a terem most nem harc. Előbb dönts a teremben."
+      },
+      "skills": {
+        "wild_maul": "Medvemancs",
+        "wild_roar": "Erdőrázó üvöltés",
+        "monkey_slam": "Királyi csapás",
+        "monkey_feast": "Banánlakoma",
+        "spider_bite": "Mérgező marás",
+        "spider_web": "Selyemháló",
+        "dragon_claw": "Sárkánykarom",
+        "dragon_breath": "Tűzokádás",
+        "dragon_rage": "Sárkánydüh"
+      },
+      "spice": {
+        "curse": {
+          "title": "Heti átok",
+          "chip": "Átok: {{name}}",
+          "loot": "+{{pct}}% menetláda",
+          "until": "{{time}} múlva vált",
+          "desc": {
+            "tough_short": "A bossoknak +10% életerejük van, és a harcok 30%-kal rövidebbek.",
+            "potions_only": "Csak ital gyógyít: az életlopás és a gyógyító képességek most nem hatnak.",
+            "fury": "A bossok 40%-kal erősebben ütnek, de 20%-kal kevesebb az életerejük.",
+            "iron": "A bossok védelme 60%-kal nagyobb.",
+            "dry": "Ebben a kazamatában nincs ital. Cserébe a bossok 15%-kal gyengébben ütnek."
+          },
+          "noPotions": "nincs ital"
+        },
+        "doors": {
+          "title": "Jutalom a győzelemért",
+          "hint": "Válassz egy ajtót. A következő terem harca így is, úgy is vár."
+        },
+        "door": {
+          "fight": {
+            "name": "Harc",
+            "line": "Ezt a termet {{name}} őrzi."
+          },
+          "treasure": {
+            "name": "Kincses­kamra",
+            "lock": "Lezárt láda: nyisd ki a zárat. Minél jobban megy, annál több jár.",
+            "cracks": "Kőhasítás: hasítsd ketté a viharkövet. Minél jobban megy, annál több jár.",
+            "plain": "Kincsesláda vár az ajtó mögött."
+          },
+          "trap": {
+            "name": "Csapda",
+            "line": "{{pct}}% HP-t veszítesz, de gazdagabb a zsákmány."
+          },
+          "shrine_heal": {
+            "name": "Gyógyító oltár",
+            "line": "Visszaad {{pct}}% HP-t."
+          },
+          "shrine_buff": {
+            "name": "Harci oltár",
+            "line": "+{{pct}}% sebzés a következő bossig."
+          },
+          "pet": {
+            "name": "Kísérő­terem",
+            "line": "{{pet}} egyedül harcol, és nem veszíthet: +{{xp}} kísérő-XP.",
+            "lineShort": "{{pet}} egyedül harcol, és nem veszíthet."
+          },
+          "golden": {
+            "name": "Arany {{name}}",
+            "line": "Ritka vendég: a következő teremben vele harcolsz. Erősebb, de gazdagabb zsákmányt ad."
+          },
+          "hidden": {
+            "name": "Rejtett terem",
+            "line": "Ritka vendég: kincseskamra dupla zsákmánnyal."
+          }
+        },
+        "treasure": {
+          "play": "Játszom",
+          "open": "Csak kinyitom",
+          "openHint": "Játék nélkül a legkisebb zsákmány jár."
+        },
+        "outcome": {
+          "hp": "{{delta}} HP",
+          "buff": "+{{pct}}% sebzés a következő bossig",
+          "heroXp": "+{{xp}} hős-XP",
+          "grade": {
+            "bronze": "Bronz",
+            "silver": "Ezüst",
+            "gold": "Arany"
+          }
+        },
+        "pet": {
+          "title": "Kísérőterem",
+          "fights": "{{pet}} egyedül harcol",
+          "xp": "+{{xp}} kísérő-XP",
+          "skip": "Koppints az átugráshoz",
+          "atCap": "{{pet}}: szintkorláton van, most nem kap kísérő-XP-t"
+        },
+        "guest": {
+          "banner": "Ritka vendég!"
+        },
+        "deeper": {
+          "title": "Mélyebbre?",
+          "deal": "{{power}}× erősebb boss, +{{bonus}}% jutalom",
+          "line": "A boss alatt egy bónuszszint vár. Győzelem: a láda +{{bonus}}% és egy plusz bosstárgy. Bukás: elveszted a menetládát.",
+          "go": "Mélyebbre megyek",
+          "confirmTitle": "Mélyebbre mész?",
+          "confirmText": "Ha a bónuszszinten elbuksz, a menetláda elvész. A teljesített termek és a boss zsákmánya megmarad.",
+          "won": "Legyőzted a bónuszszintet: a láda +{{bonus}}%.",
+          "lost": "Elbuktál a bónuszszinten. A menetláda elveszett.",
+          "kicker": "{{name}} · bónuszszint"
+        },
+        "errors": {
+          "room_not_fight": "Előbb dönts: ajtó vagy kincseskamra vár.",
+          "no_doors": "Most nincs választható ajtó.",
+          "no_treasure": "Nincs nyitott kincseskamra.",
+          "treasure_playing": "A játék még nyitva van: előbb fejezd be.",
+          "no_chest": "Nincs láda, amiért mélyebbre mehetnél.",
+          "no_run": "Ebben a kazamatában már nincs futó menet.",
+          "request_id_reused": "Ez a kérés összeakadt egy korábbival. Próbáld újra.",
+          "bad_door": "Ilyen ajtó nincs. Válassz a látható ajtók közül."
+        }
+      }
+    },
+    "endgame": {
+      "cityTexts": {
+        "npc": {
+          "fisherman": {
+            "name": "Nakshi, a halász",
+            "greeting": "Csak halkan, a halak hallanak. Ha horgászni jöttél, ülj le, a csali a ládában van.",
+            "ask": "Megtanítasz horgászni?",
+            "line": "Bedobod, aztán figyeled az úszót. Ha lebukik, rántsd meg, de ne előbb! A türelmetlen ember csak a csalit eteti.",
+            "locked": "Ülj le, ha fáradt vagy. Horgászni a tizedik szinttől engedlek, addig a halak is pihennek."
+          }
+        },
+        "city": {
+          "actions": {
+            "fishing": "Horgászat"
+          },
+          "placeHints": {
+            "fisherman": "Horgászat: halak, csali és halásznapló"
+          }
+        }
+      },
+      "common": {
+        "claim": "Átveszem",
+        "claimAll": "Mind átvétele",
+        "claimed": "Átvéve",
+        "rank": "{{rank}}.",
+        "rankLabel": "Helyezés",
+        "reward": "Jutalom",
+        "rewards": "Jutalmak",
+        "loading": "Betöltés…",
+        "retry": "Újra",
+        "none": "Még senki",
+        "you": "Te",
+        "coins": "{{count}} VÉ",
+        "nyang": "{{value}} nyang",
+        "left": "Még {{time}}",
+        "daysHours": "{{days}} nap {{hours}} óra",
+        "levelFrom": "{{level}}. szinttől"
+      },
+      "season": {
+        "tab": "Szezon",
+        "banner": "{{season}}. szezon",
+        "week": "{{week}}/{{weeks}}. hét",
+        "ends": "A szezon végéig: {{time}}",
+        "ownRank": "Helyezésed: {{rank}}.",
+        "ownUnranked": "Még nem rangsorolt: {{fights}}/{{min}} támadás",
+        "band": "Sávod: {{band}}",
+        "claimReady_one": "{{count}} szezon jutalma vár rád",
+        "claimReady_other": "{{count}} szezon jutalma vár rád",
+        "intro": "A szezon négy hét. A végén a helyezésed szerint jár a jutalom, a becsületed pedig félútig visszaáll ezer felé.",
+        "rules": "Legalább {{min}} támadás kell a rangsorhoz. A védekezés is számít a becsületbe, de csak a támadás visz előre.",
+        "bandsTitle": "Szezon végi jutalom",
+        "bands": {
+          "champion": "Bajnok",
+          "elite": "Élmezőny",
+          "top50": "Ötven legjobb",
+          "top100": "Száz legjobb",
+          "fighter": "Bajvívó"
+        },
+        "bandRange": {
+          "champion": "1. hely",
+          "elite": "2-10. hely",
+          "top50": "11-50. hely",
+          "top100": "51-100. hely",
+          "fighter": "mindenki más a minimummal"
+        },
+        "unclaimedTitle": "Átvehető szezonjutalom",
+        "unclaimedLine": "{{season}}. szezon: {{rank}}. hely, {{band}}",
+        "historyTitle": "Korábbi szezonjaid",
+        "historyEmpty": "Még nem zárult le szezon. A mostani vége: {{date}}.",
+        "historyRow": "{{season}}. szezon · {{rank}}. hely · {{band}}",
+        "lastTopTitle": "Az előző szezon legjobbjai",
+        "weeklyTitle": "Heti dicsőségtábla",
+        "weeklyLead": "Minden hét végén rögzítjük a száz legjobbat.",
+        "weeklyEmpty": "Az első heti tábla a hét végén készül el.",
+        "weekLabel": "Hét: {{week}}",
+        "honor": "becsület",
+        "claimDone": "Átvetted a szezon jutalmát.",
+        "fxLabel": "Szezonjutalom"
+      },
+      "heroic": {
+        "chip": "Hősi",
+        "title": "Hősi mód",
+        "lead": "Ugyanaz a kazamata, csak a lakói közben megerősödtek. Jobb tárgy, ritka kovácssegéd, hetente egyszer.",
+        "levels": "{{min}}-{{max}}. szintű lények",
+        "cost_one": "Belépés: {{count}} kulcs",
+        "cost_other": "Belépés: {{count}} kulcs",
+        "lockedLevel": "{{level}}. szinttől nyílik.",
+        "lockedLevelShort": "{{level}}. szinttől",
+        "lockedClear": "Előbb járd végig rendes módban.",
+        "weekly": "Hetente egyszer teljesíthető.",
+        "weeklyDone": "Ezen a héten megvolt. Újra: {{time}} múlva.",
+        "weeklyDoneShort": "E heti kész",
+        "best": "Legjobb hősi menet: {{done}}/{{total}}. terem",
+        "loot": "+2 és +7 közötti tárgy, Viharkő-szilánk, néha Hamuóvó-tekercs, Szerencse-érc vagy Viharkő-por",
+        "firstClear": "Első hősi teljesítés: {{coins}} Viharérme",
+        "firstClearDone": "Az első hősi teljesítés jutalmát már megkaptad",
+        "go": "Hősi mód",
+        "goLabel": "Hősi mód: {{name}}",
+        "normal": "Rendes mód",
+        "enter_one": "Belépés ({{count}} kulcs)",
+        "enter_other": "Belépés ({{count}} kulcs)",
+        "noKeys_one": "Kell még {{count}} kulcs.",
+        "noKeys_other": "Kell még {{count}} kulcs.",
+        "hallLevels": "Hősi · {{min}}-{{max}}. szint"
+      },
+      "worldboss": {
+        "title": "Heti boss",
+        "lead": "Az egész falu üti. A sebzésetek összeadódik, és aki egyszer is odacsapott, jutalmat kap.",
+        "card": "Heti boss",
+        "cardLine": "{{name}}: {{pct}}% HP",
+        "cardDefeated": "{{name}} elesett. Nézd meg a jutalmad!",
+        "cardLocked": "{{level}}. szinttől támadhatod.",
+        "open": "Odamegyek",
+        "names": {
+          "wb_grizzly": "Tomboló Nagymancs",
+          "wb_ruin": "Viharhozó Romhátú",
+          "wb_frost": "Förgeteges Fagyúrnő",
+          "wb_flame": "Haragos Lángszakáll"
+        },
+        "taunts": {
+          "wb_grizzly": "Egész télen aludtam. Most éhes vagyok, és ti kicsik vagytok.",
+          "wb_ruin": "A homok alatt ezer évig vártam. Ráérek, de nem szeretek.",
+          "wb_frost": "Fáztok? Pedig még csak bemutatkoztam.",
+          "wb_flame": "Ki hagyta nyitva a kaput? Mindegy, már úgyis ég."
+        },
+        "hp": "Közös HP",
+        "hpValue": "{{hp}} / {{max}}",
+        "endsIn": "A hét végéig: {{time}}",
+        "defeated": "Elesett",
+        "defeatedLine": "A boss elesett! A jutalmad átvehető.",
+        "defeatedOver": "A boss elesett. Jövő héten új boss jön.",
+        "attacks": "Mai támadások",
+        "attacksValue": "{{left}}/{{max}}",
+        "attack": "Támadás",
+        "attackLabel": "Támadás, még {{left}} ma",
+        "noAttacks": "Mára elfogytak a támadásaid. Holnap újra.",
+        "locked": "Csak {{level}}. szinttől támadhatsz.",
+        "me": "Hozzájárulásod",
+        "myDamage": "{{damage}} sebzés · {{hits}} támadás",
+        "myRank": "Helyezésed: {{rank}}.",
+        "myRankShort": "{{rank}}. hely",
+        "noHits": "Még nem támadtál a héten.",
+        "guild": "Céhbónusz",
+        "guildOn": "{{count}} céhtársad ütötte: a ráadás jár.",
+        "guildOff": "{{count}}/{{min}} céhtárs ütötte. Ha meglesz mind, mindenki ráadást kap.",
+        "guildNone": "Céh nélkül nincs céhbónusz.",
+        "top": "A legjobbak",
+        "topEmpty": "Még senki nem támadott. Légy az első!",
+        "rewardsTitle": "Jutalmak",
+        "participation": "Mindenkinek, aki ütött",
+        "bands": {
+          "top3": "1-3. hely",
+          "top10": "4-10. hely vagy a legjobb 5%",
+          "quarter": "a legjobb negyed",
+          "half": "a legjobb fele"
+        },
+        "guildReward": "Céhbónusz: +{{pct}}% nyang és",
+        "undefeated": "Ha a hét végéig nem esik el, a jutalom fele jár, Viharérme és cím nélkül.",
+        "soulFrom": "{{level}}. szinttől:",
+        "soulNote": "{{level}}. szinttől a heti boss Viharszív-anyagot is ad: az esszencia a leggyengebb kövedhez jár, a nyers kő egy új foglalathoz. Ha a boss nem esik el, ebből is a fele jár.",
+        "claimTitle": "Átvehető jutalom",
+        "claimLine": "{{rank}}. hely ({{week}})",
+        "claimDone": "Átvetted a heti boss jutalmát.",
+        "result": {
+          "damage": "{{damage}} sebzés",
+          "applied": "a közös HP-ból {{applied}}",
+          "kill": "A végső csapás a tiéd!",
+          "fallen": "A boss elesett!",
+          "left": "Még {{left}} támadásod van ma."
+        },
+        "fxLabel": "Találat!"
+      },
+      "storm": {
+        "title": "Viharcsúcs",
+        "lead": "A Viharfogó teteje fölött is van húsz emelet. A Háziúr hetente új lakóknak adja ki őket, így minden hétfőn kezdheted elölről.",
+        "progress": "E heti csúcs",
+        "reward": "E heti jutalom",
+        "progressValue": "{{floor}}/{{max}}. emelet",
+        "resets": "Lakócsere: {{time}} múlva",
+        "done": "Ezen a héten a csúcson vagy. Hétfőn új lakók költöznek be.",
+        "next": "{{floor}}. emelet",
+        "milestone": "Mérföldkő",
+        "topTitle": "A hét legmagasabbjai",
+        "topEmpty": "Ezen a héten még senki nem mászott fel.",
+        "crown": "Viharcsúcs: {{floor}}/{{max}}",
+        "fightLabel": "Harc: {{floor}}. emelet, {{name}}",
+        "kicker": "Viharcsúcs, {{floor}}. emelet"
+      },
+      "fishing": {
+        "title": "Horgászat",
+        "lead": "Nakshi stégje. Válassz vizet és csalit, dobd be, és amikor kapás van, rántsd meg!",
+        "locked": "Nakshi csak {{level}}. szinttől enged a stégre.",
+        "spot": "Víz",
+        "spotLocked": "A térkép még zárva",
+        "spotOpensAtLevel": "{{level}}. szinttől nyílik",
+        "bait": "Csali",
+        "baitOwned": "{{count}} db",
+        "buy": "Vétel",
+        "buyLabel": "{{qty}} db {{name}}, {{price}} nyang",
+        "unitPrice": "{{price}} nyang / db",
+        "packQty": "{{qty}} db",
+        "sinkNote": "A horgászat nem pénzkereset: a halak cserében érnek ({{items}}), eladva a csali árának csak egy részét hozzák vissza.",
+        "saleEstimate": "Eladva átlagosan ~{{nyang}} nyang / csali",
+        "buyHint": "Fajtánként legfeljebb {{max}} darab lehet nálad.",
+        "period": "Napszak",
+        "periodLeft": "{{period}} még {{time}}",
+        "periods": {
+          "dawn": "Hajnal",
+          "day": "Nappal",
+          "dusk": "Alkony",
+          "night": "Éjjel"
+        },
+        "catches": "Mai fogás",
+        "catchesValue": "{{count}}/{{max}}",
+        "moreCatches": {
+          "button": "+{{catches}} fogás · {{coins}} VÉ",
+          "tip": "Megemeli a mai fogáskeretet. Az ár a napon belül minden vásárlással duplázódik, napváltáskor visszaáll."
+        },
+        "cast": "Bedobás",
+        "castLabel": "Bedobás: {{spot}}, {{bait}}",
+        "hook": "Rántsd meg!",
+        "hookLabel": "Bevágás most",
+        "waiting": "Figyeld az úszót…",
+        "bite": "Kapás!",
+        "outcome": {
+          "caught": "Megvan!",
+          "early": "Korán rántottad, a hal megijedt.",
+          "late": "Elkéstél, a hal lerágta a csalit."
+        },
+        "newSpecies": "Új faj a naplóban!",
+        "record": "Új rekord!",
+        "setDone": "Teljes a gyűjtemény: {{name}}",
+        "limit": "Mára elég. Holnap is lesz hal.",
+        "extra": {
+          "cast": "Bedobás ({{energy}} energia)",
+          "note": "Mára megvan a napi fogás, de Nakshi még enged: plusz fogás {{energy}} energiáért (hátra: {{left}}).",
+          "noEnergy": "A plusz fogáshoz {{energy}} energia kell. Pihenj egy kicsit, a halak megvárnak.",
+          "done": "Mára a plusz fogásokat is kifogtad. Holnap is lesz hal."
+        },
+        "noBait": "Nincs csalid. Vegyél a ládából!",
+        "weight": "{{weight}}",
+        "odds": "Esélyek most",
+        "oddsHint": "A csali és a napszak dönti el, mi akad horogra.",
+        "tabs": {
+          "pond": "Stég",
+          "creel": "Vödör",
+          "log": "Halásznapló"
+        },
+        "creelEmpty": "Üres a vödör. Fogj valamit! A csizma is számít.",
+        "sell": "Eladás",
+        "creelWorth": "A teljes vödör eladva: {{value}} nyang",
+        "sellLabel": "{{qty}} db {{name}} eladása, {{nyang}} nyang",
+        "trade": "Csere Nakshinál",
+        "tradeLabel": "{{qty}} db {{name}} cseréje",
+        "tradeNeeds": "{{qty}} db kell hozzá",
+        "tradeFor": "{{qty}} hal = {{reward}}",
+        "tradeMaterials": "{{count}} alapanyag a víz térképéről",
+        "logLead": "{{count}}/{{total}} faj",
+        "logUnknown": "Még nem fogtad ki",
+        "logBest": "Legnagyobb: {{weight}}",
+        "logCount": "Kifogva: {{count}} db",
+        "where": "Itt: {{spots}}",
+        "when": "Mikor: {{periods}}",
+        "anytime": "bármikor",
+        "sets": "Gyűjtemények",
+        "setNames": {
+          "set_m1": "Malompatak",
+          "set_m2": "Nádas",
+          "set_m3": "Szurdokfolyó",
+          "set_m4": "Oázis",
+          "set_m5": "Jégtó",
+          "set_m6": "Parázstó",
+          "set_legend": "Legendák",
+          "set_all": "Teljes napló"
+        },
+        "setClaim": "Átveszem",
+        "setProgress": "{{done}}/{{total}}",
+        "spots": {
+          "m1": "Malompatak",
+          "m2": "Nádas",
+          "m3": "Szurdokfolyó",
+          "m4": "Oázis",
+          "m5": "Jégtó",
+          "m6": "Parázstó"
+        },
+        "baits": {
+          "bait_worm": {
+            "name": "Giliszta",
+            "desc": "Olcsó és becsületes. A legtöbb hal nem válogat."
+          },
+          "bait_shrimp": {
+            "name": "Rákcsali",
+            "desc": "A ritkább halak is megkívánják. Kétszer annyi esély a különlegesre."
+          },
+          "bait_storm": {
+            "name": "Viharcsali",
+            "desc": "Viharkőből faragott, sistereg a vízben. A legendák erre jönnek elő."
+          },
+          "bait_wonder": {
+            "name": "Csodacsali",
+            "desc": "5 darab negyedik fokú csali: a ritka és az epikus hal szinte magától ugrik a vödörbe."
+          }
+        },
+        "rarity": {
+          "common": "közönséges",
+          "rare": "ritka",
+          "epic": "különleges",
+          "legendary": "legendás",
+          "junk": "kacat"
+        },
+        "fish": {
+          "fish_bleak": {
+            "name": "Küsz",
+            "desc": "Kicsi, gyors, és mindig ő eszi meg a csalit elsőnek."
+          },
+          "fish_carp": {
+            "name": "Tükörponty",
+            "desc": "Minden pikkelyében magát nézi. Elégedett vele."
+          },
+          "fish_moonkoi": {
+            "name": "Holdkoi",
+            "desc": "Csak éjjel jön fel, amikor a hold is a vízbe néz."
+          },
+          "fish_roach": {
+            "name": "Bodorka",
+            "desc": "Piros a szeme, de nem a sírástól."
+          },
+          "fish_pike": {
+            "name": "Csuka",
+            "desc": "Hajnalban és alkonyatkor a legéhesebb, de napközben sem válogat. Rád is vadászik."
+          },
+          "fish_goldcat": {
+            "name": "Aranyfogú harcsa",
+            "desc": "A banditák szerint ő volt a vezérük. A harcsa tagadja."
+          },
+          "fish_trout": {
+            "name": "Sebes pisztráng",
+            "desc": "Annyira siet, hogy néha a horgot is megelőzi."
+          },
+          "fish_tusk": {
+            "name": "Agyaras márna",
+            "desc": "Az orkoktól tanulta a mogorva nézést."
+          },
+          "fish_totem": {
+            "name": "Totemhal",
+            "desc": "A sámánok faragták, aztán véletlenül vízbe ejtették. Megélt."
+          },
+          "fish_sandperch": {
+            "name": "Homoki sügér",
+            "desc": "Az oázisban is hunyorog. Túl sok a nap."
+          },
+          "fish_scorpion": {
+            "name": "Skorpióhal",
+            "desc": "Ne simogasd meg. Komolyan."
+          },
+          "fish_mummy": {
+            "name": "Pólyás angolna",
+            "desc": "Ezer éve pihen a pólyájában. Ma sem szeretné, ha zavarnád."
+          },
+          "fish_ruffe": {
+            "name": "Fagyos durbincs",
+            "desc": "Didereg, de nem hagyja abba az úszást."
+          },
+          "fish_hairycat": {
+            "name": "Szőrös harcsa",
+            "desc": "A jetik szerint rokon. A harcsák szerint nem."
+          },
+          "fish_crystal": {
+            "name": "Kristálypisztráng",
+            "desc": "Hajnalban csillog a legszebben. Kár lenne megenni."
+          },
+          "fish_emberbream": {
+            "name": "Parázskeszeg",
+            "desc": "Már sütve fogod ki."
+          },
+          "fish_lavaeel": {
+            "name": "Lávaangolna",
+            "desc": "Napközben a hamu alatt bujkál, nehogy megégesse a nap. Lávából van. Ironikus."
+          },
+          "fish_phoenix": {
+            "name": "Főnixhal",
+            "desc": "Ha elengeded, hajnalban újra kikel. Nem engeded el."
+          },
+          "fish_stormcarp": {
+            "name": "Viharponty",
+            "desc": "Éjjel villámlik a víz, ha a közelben jár. Legendás."
+          },
+          "fish_dragonkoi": {
+            "name": "Sárkánykoi",
+            "desc": "A Viharsárkány kedvenc hala. Állítólag beszél is, csak ritkán."
+          },
+          "junk_boot": {
+            "name": "Hínáros csizma",
+            "desc": "A párját is keresed? Ne tedd."
+          }
+        },
+        "claimDone": "Átvetted a gyűjtemény jutalmát.",
+        "sold": "Eladtad: {{nyang}} nyang",
+        "traded": "Nakshi elégedetten bólint.",
+        "bought": "Megvetted a csalit.",
+        "fxCatch": "Megvan!",
+        "auto": {
+          "bigBite": "Kapás! Nagy hal akadt a horogra.",
+          "hintBig": "A közönséges és a ritka hal mindig kint van. Ha különleges vagy legendás hal akad a horogra, Nakshi megáll, és azt te fárasztod ki."
+        },
+        "cupCasts": "Versenydobás: {{left}}/{{max}}, nem a napi fogásaidból"
+      },
+      "reward": {
+        "coins": "{{count}} Viharérme",
+        "nyang": "{{value}} nyang",
+        "stack": "{{qty}} db {{name}}",
+        "cosmetic": "{{name}}"
+      },
+      "today": {
+        "arena_season": {
+          "title": "Aréna-szezon",
+          "where": "Az Aréna oldal Szezon füle.",
+          "ready_one": "{{count}} szezon jutalma vár rád.",
+          "ready_other": "{{count}} szezon jutalma vár rád."
+        },
+        "world_boss": {
+          "title": "Heti boss",
+          "where": "A Kazamaták oldal tetején, vagy innen.",
+          "ready": "Még {{count}} támadásod van ma.",
+          "claim": "A heti boss jutalma átvehető.",
+          "done": "Mára elfogytak a támadásaid.",
+          "fallen": "A heti boss elesett. Jövő héten új jön."
+        },
+        "heroic": {
+          "title": "Hősi kazamaták",
+          "where": "A Kazamaták oldal, a kapuk alatt.",
+          "ready_one": "{{count}} hősi kazamata vár, van hozzá kulcsod.",
+          "ready_other": "{{count}} hősi kazamata vár, van hozzá kulcsod.",
+          "free": "E héten még {{count}}/{{max}} hősi menet szabad.",
+          "done": "Az e heti hősi menetek megvannak."
+        },
+        "fishing": {
+          "title": "Horgászat",
+          "where": "Nakshi stégje a városban.",
+          "ready": "Mára még {{count}}/{{max}} fogás.",
+          "noBait": "Mára még {{count}} fogás, de előbb csali kell.",
+          "done": "Mára kifogtad a halaid."
+        },
+        "tower_storm": {
+          "ready": "Viharcsúcs, következő emelet: {{floor}}.",
+          "resting": "Viharcsúcs: {{value}}/{{max}} emelet, 20 percenként egy próba.",
+          "top": "E heti csúcs megvan. Hétfőn újra."
+        },
+        "fishing_cup": {
+          "title": "Horgászverseny",
+          "soon": "Ma {{from}} és {{to}} között: a legnagyobb halad számít.",
+          "open": "Most tart, még {{left}}.",
+          "where": "Nakshi stégje a városban, a Verseny fül."
+        }
+      },
+      "errors": {
+        "no_energy": "Nincs elég energiád a plusz fogáshoz.",
+        "level_too_low": "Ehhez még magasabb szint kell.",
+        "no_bait": "Elfogyott a csali.",
+        "catch_limit": "Mára elérted a napi fogást.",
+        "cast_active": "Már bent van a horog. Várd ki a kapást!",
+        "cast_done": "Ez a bedobás már lezárult.",
+        "too_early": "Még nem, a hal még küzd!",
+        "unknown_cast": "Ezt a bedobást nem találjuk.",
+        "spot_locked": "Ez a víz még zárva van.",
+        "bait_full": "Ennyi csali már nem fér el nálad.",
+        "insufficient_funds": "Nincs elég nyangod.",
+        "not_enough_fish": "Nincs elég ebből a halból.",
+        "not_tradable": "Ezt Nakshi sem kéri. Érthető.",
+        "set_incomplete": "A gyűjtemény még nem teljes.",
+        "already_claimed": "Ezt már átvetted.",
+        "nothing_to_claim": "Most nincs átvehető jutalom.",
+        "no_attacks": "Mára elfogytak a támadásaid.",
+        "boss_defeated": "A boss közben elesett. Nézd meg a jutalmad!",
+        "no_boss": "A heti boss még nem érkezett meg. Frissíts!",
+        "heroic_locked": "Ezen a héten már végigjártad hősi módban.",
+        "not_cleared": "Előbb járd végig rendes módban.",
+        "storm_week_done": "Ezen a héten a csúcson vagy.",
+        "unknown_week": "Erről a hétről nincs tábla.",
+        "mutator_closed": "A Viharátok most nem fut. Hétfőn új indul."
+      },
+      "mutator": {
+        "title": "Viharátok",
+        "card": "Viharátok",
+        "cardLine": "Minden héten egy ismert boss, új átokkal. Világonkénti ranglista.",
+        "open": "Megnézem",
+        "lockedLine": "{{level}}. szinttől nyílik.",
+        "closed": "Az első Viharátok hétfőn indul: {{date}}",
+        "curse": "A hét átka: {{name}}",
+        "boss": "{{name}}, a te szintedre szabva",
+        "attempt": "Próba",
+        "attemptsLeft_one": "Ma még {{count}} próba",
+        "attemptsLeft_other": "Ma még {{count}} próba",
+        "noAttempts": "Mára elfogytak a próbáid. Holnap újra.",
+        "scoreRule": "A legjobb próbád számít: a sebzésed a boss életerejének ezrelékében. Ha legyőzöd, 1000 pont, és minden megmaradt körért +{{bonus}}.",
+        "score": "{{score}} pont",
+        "best": "Heti legjobb: {{score}} pont",
+        "rank": "Helyezésed a világodban: {{rank}}.",
+        "endsAt": "A hét zárása: {{time}}",
+        "rewardTop": "A zárásnál az első {{top}} címet kap: Átoktörő. Az első {{elite}}: A Viharátok ura.",
+        "rewardAll": "Minden résztvevőnek: {{shards}} Viharkő-szilánk és {{nyang}} nyang, a hét után átvehető.",
+        "claim": "Átveszem a múlt heti jutalmat",
+        "result": {
+          "killed": "Legyőzted! {{score}} pont",
+          "fought": "{{score}} pont: a boss életerejének {{pct}}%-át vitted le."
+        },
+        "curses": {
+          "tough_short": {
+            "name": "Kőbőr",
+            "desc": "A bossnak +10% életereje van, és a harc 30%-kal rövidebb."
+          },
+          "potions_only": {
+            "name": "Száraz seb",
+            "desc": "Csak ital gyógyít: az életlopás és a gyógyító képességek most nem hatnak."
+          },
+          "fury": {
+            "name": "Tombolás",
+            "desc": "A boss 40%-kal erősebben üt, de 20%-kal kevesebb az életereje."
+          },
+          "iron": {
+            "name": "Vaspáncél",
+            "desc": "A boss védelme 60%-kal nagyobb."
+          },
+          "dry": {
+            "name": "Üres tarisznya",
+            "desc": "Ebben a harcban nincs ital. Cserébe a boss 15%-kal gyengébben üt."
+          }
+        },
+        "tabs": {
+          "label": "Heti kihívások",
+          "boss": "Heti boss",
+          "mutator": "Viharátok"
+        },
+        "board": "Ranglista a világodban",
+        "boardEmpty": "Ezen a héten még senki nem próbálta. Légy az első!",
+        "claimTitle": "Átvehető jutalom",
+        "claimDone": "Átvetted a Viharátok jutalmát.",
+        "rulesTitle": "Pontozás és jutalmak"
+      }
+    }
+  }
+}

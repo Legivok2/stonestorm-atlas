@@ -1,6 +1,13 @@
 {
   "version": 1,
-  "reviewedAt": "2026-11-06",
+  "reviewedAt": "2026-11-07",
+  "publicationAuthorization": {
+    "status": "owner-requested-without-license-verification",
+    "grantedAt": "2026-11-07",
+    "scopes": ["game-art-catalog", "saved-game-art", "game-data-and-localization"],
+    "statement": "Igen, feloldom a feltételt; a teljes helyi változatot publikáld.",
+    "basis": "A projektgazda a teljes, helyben ellenőrzött oldal összes játékból származó képének és feldolgozott adatcsomagjának nyilvános publikálását kifejezetten kérte, és feloldotta a korábbi engedélyellenőrzési feltételt. Ez közzétételi utasítás, nem igazolt kiadói licenc."
+  },
   "scopes": {
     "creator-kit": {
       "status": "confirmed",

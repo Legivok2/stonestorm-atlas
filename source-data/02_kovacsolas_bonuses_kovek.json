@@ -1,0 +1,8429 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "forge": {
+    "chances": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.45,
+      0.35
+    ],
+    "chancesByTier": [
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ]
+    ],
+    "plusMult": [
+      1,
+      1.1,
+      1.2,
+      1.31,
+      1.43,
+      1.56,
+      1.7,
+      1.86,
+      2.03,
+      2.22
+    ]
+  },
+  "bonus": {
+    "tiers": {
+      "common": {
+        "range": [
+          1,
+          3
+        ],
+        "weights": [
+          75,
+          22,
+          3,
+          0,
+          0
+        ]
+      },
+      "rare": {
+        "range": [
+          1,
+          4
+        ],
+        "weights": [
+          60,
+          28,
+          10,
+          2,
+          0
+        ]
+      },
+      "heroic": {
+        "range": [
+          2,
+          5
+        ],
+        "weights": [
+          0,
+          55,
+          32,
+          11,
+          2
+        ]
+      },
+      "unique": {
+        "range": [
+          3,
+          5
+        ],
+        "weights": [
+          0,
+          0,
+          34,
+          33,
+          33
+        ]
+      }
+    },
+    "tierLevel": {
+      "from1": 40,
+      "mult1": 0.7,
+      "from2": 50,
+      "mult2": 0.5
+    },
+    "reroll": {
+      "base": 300,
+      "exp": 1.45,
+      "mult": 1.5,
+      "plusStep": 0.1,
+      "from": 40,
+      "expAbove": 2.45,
+      "plusStepAbove": 0.15,
+      "rarity": {
+        "rare": 1.25,
+        "heroic": 1.5,
+        "unique": 2
+      }
+    },
+    "lockCoins": 10,
+    "lockFrom": 40,
+    "lockGrowth": 0,
+    "flatValues": {
+      "xp": [
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1
+      ],
+      "nyang": [
+        0.05,
+        0.08,
+        0.12,
+        0.16,
+        0.2
+      ]
+    },
+    "lineMult": 1,
+    "lineMultBands": {
+      "low": 1.25,
+      "mid": 1.75,
+      "high": 1.9
+    }
+  },
+  "polish": {
+    "steps": 3,
+    "pctPerStep": 0.035,
+    "cap": {
+      "maxHp": 150,
+      "crit": 0.04,
+      "vsAnimal": 0.08,
+      "vsBandit": 0.08,
+      "defence": 18,
+      "attack": 15,
+      "nyang": 0.12,
+      "xp": 0.06,
+      "evade": 0.03,
+      "vsOrc": 0.08,
+      "vsUndead": 0.08,
+      "vsDesert": 0.08,
+      "vsIce": 0.08,
+      "vsFire": 0.08,
+      "vsBoss": 0.08,
+      "potionHeal": 0.06,
+      "skillDamage": 0.12,
+      "critDamage": 0.2,
+      "lifesteal": 0.025,
+      "damageTaken": 0.05
+    },
+    "capTier": 3,
+    "minLevel": 15
+  },
+  "stones": {
+    "types": [
+      "attack",
+      "vsAnimal",
+      "vsBandit",
+      "vsOrc",
+      "vsDesert",
+      "vsIce",
+      "vsFire",
+      "vsUndead",
+      "vsBoss",
+      "maxHp",
+      "defence",
+      "evade"
+    ],
+    "rules": {
+      "share": 0.5,
+      "fits": {
+        "weapon": [
+          "attack",
+          "vsBoss",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsUndead"
+        ],
+        "armor": [
+          "maxHp",
+          "defence",
+          "evade"
+        ],
+        "helmet": [
+          "maxHp",
+          "defence",
+          "evade"
+        ],
+        "shield": [
+          "maxHp",
+          "defence",
+          "evade"
+        ],
+        "boots": [
+          "maxHp",
+          "defence",
+          "evade"
+        ],
+        "bracelet": [
+          "maxHp",
+          "defence",
+          "evade",
+          "vsBoss",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsUndead"
+        ],
+        "necklace": [
+          "maxHp",
+          "defence",
+          "evade",
+          "vsBoss",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsUndead"
+        ],
+        "earrings": [
+          "maxHp",
+          "defence",
+          "evade",
+          "vsBoss",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsUndead"
+        ]
+      }
+    },
+    "fees": {
+      "chisel": {
+        "nyang": [
+          20000,
+          45000,
+          90000,
+          180000,
+          360000
+        ],
+        "shards": 5
+      },
+      "merge": {
+        "nyang": [
+          45000,
+          130000,
+          390000,
+          1150000
+        ],
+        "shardsPerGrade": 4
+      },
+      "attune": {
+        "materialsPerGrade": 15,
+        "nyangPerGrade": 8000,
+        "materials": {
+          "vsAnimal": "mat_m1_wolves",
+          "vsBandit": "mat_m2_guards",
+          "vsOrc": "mat_m3_warcamp",
+          "vsDesert": "mat_m4_golems",
+          "vsIce": "mat_m5_golems",
+          "vsFire": "mat_m6_ember_core",
+          "vsUndead": "mat_m6_ash_mask"
+        }
+      }
+    },
+    "directions": [
+      {
+        "kind": "boss",
+        "source": "m1",
+        "stones": [
+          "vsAnimal",
+          "maxHp"
+        ]
+      },
+      {
+        "kind": "boss",
+        "source": "m2",
+        "stones": [
+          "vsBandit",
+          "attack"
+        ]
+      },
+      {
+        "kind": "boss",
+        "source": "m3",
+        "stones": [
+          "vsOrc",
+          "defence"
+        ]
+      },
+      {
+        "kind": "boss",
+        "source": "m4",
+        "stones": [
+          "vsDesert",
+          "evade"
+        ]
+      },
+      {
+        "kind": "boss",
+        "source": "m5",
+        "stones": [
+          "vsIce",
+          "maxHp"
+        ]
+      },
+      {
+        "kind": "boss",
+        "source": "m6",
+        "stones": [
+          "vsFire",
+          "vsBoss"
+        ]
+      },
+      {
+        "kind": "tower",
+        "source": "tower_boss_3",
+        "stones": [
+          "vsUndead"
+        ]
+      }
+    ],
+    "sources": {
+      "scroll_bless": [
+        {
+          "kind": "stonerain",
+          "ref": "stonerain.json#reward",
+          "main": true
+        },
+        {
+          "kind": "storm_stone"
+        },
+        {
+          "kind": "map_boss",
+          "ref": "bosses.json#bossReward.scrollChance"
+        },
+        {
+          "kind": "storekeeper",
+          "ref": "market.json#merchants.storekeeper.scroll.perDay"
+        },
+        {
+          "kind": "portya_chest",
+          "ref": "runs.json#chests",
+          "match": "bless"
+        },
+        {
+          "kind": "fishing_trade",
+          "ref": "fishing.json#trade.epic"
+        },
+        {
+          "kind": "fishing_set",
+          "ref": "fishing.json#sets"
+        },
+        {
+          "kind": "heroic_dungeon",
+          "ref": "endgame.json#heroic.drops"
+        },
+        {
+          "kind": "world_boss",
+          "ref": "endgame.json#worldBoss.bands"
+        },
+        {
+          "kind": "wheel",
+          "ref": "wheel.json#slices"
+        },
+        {
+          "kind": "sidequest",
+          "ref": "sidequests.json"
+        },
+        {
+          "kind": "event_shop",
+          "ref": "calendar.json#themes"
+        },
+        {
+          "kind": "league",
+          "ref": "league.json#rewards"
+        }
+      ],
+      "safe_stone": [
+        {
+          "kind": "fishing_trade",
+          "ref": "fishing.json#trade.legendary"
+        },
+        {
+          "kind": "heroic_dungeon",
+          "ref": "endgame.json#heroic.drops.boss"
+        },
+        {
+          "kind": "sidequest",
+          "ref": "sidequests.json"
+        },
+        {
+          "kind": "event_shop",
+          "ref": "calendar.json#themes"
+        },
+        {
+          "kind": "black_market",
+          "ref": "market.json#merchants.black_market.stacks"
+        },
+        {
+          "kind": "league",
+          "ref": "league.json#rewards"
+        }
+      ],
+      "luck_ore": [
+        {
+          "kind": "mining_luck",
+          "ref": "mining.json#luck.item",
+          "main": true
+        },
+        {
+          "kind": "fishing_trade",
+          "ref": "fishing.json#trade.legendary"
+        },
+        {
+          "kind": "heroic_dungeon",
+          "ref": "endgame.json#heroic.drops.boss"
+        },
+        {
+          "kind": "wheel",
+          "ref": "wheel.json#slices"
+        },
+        {
+          "kind": "sidequest",
+          "ref": "sidequests.json"
+        },
+        {
+          "kind": "event_shop",
+          "ref": "calendar.json#themes"
+        },
+        {
+          "kind": "black_market",
+          "ref": "market.json#merchants.black_market.stacks"
+        },
+        {
+          "kind": "stonerain",
+          "ref": "stonerain.json#reward.materials"
+        },
+        {
+          "kind": "league",
+          "ref": "league.json#rewards"
+        }
+      ],
+      "shard": [
+        {
+          "kind": "storm_stone"
+        },
+        {
+          "kind": "map_boss",
+          "ref": "bosses.json#bossReward.shardMax"
+        },
+        {
+          "kind": "storekeeper",
+          "ref": "market.json#merchants.storekeeper.shardPerDay"
+        },
+        {
+          "kind": "portya_chest",
+          "ref": "runs.json#chests",
+          "match": "shards"
+        },
+        {
+          "kind": "fishing_trade",
+          "ref": "fishing.json#trade.rare"
+        },
+        {
+          "kind": "heroic_dungeon",
+          "ref": "endgame.json#heroic.drops"
+        },
+        {
+          "kind": "league",
+          "ref": "league.json#rewards"
+        }
+      ],
+      "spirit": [
+        {
+          "kind": "map_boss",
+          "ref": "stones.json#drops.boss.count"
+        },
+        {
+          "kind": "golden_vezer",
+          "pending": "bosses"
+        },
+        {
+          "kind": "lead",
+          "ref": "crumpled_map",
+          "pending": "leads"
+        },
+        {
+          "kind": "lead",
+          "ref": "golden_trail",
+          "pending": "leads"
+        }
+      ],
+      "bonuszolo_1": [
+        {
+          "kind": "runasor",
+          "ref": "runasor.json#chest",
+          "match": "bonuszolo",
+          "main": true
+        }
+      ],
+      "bonuszolo_2": [
+        {
+          "kind": "runasor",
+          "ref": "runasor.json#chest",
+          "match": "bonuszolo",
+          "main": true
+        }
+      ],
+      "bonuszolo_3": [
+        {
+          "kind": "runasor",
+          "ref": "runasor.json#chest",
+          "match": "bonuszolo",
+          "main": true
+        }
+      ],
+      "bonuszolo_4": [
+        {
+          "kind": "runasor",
+          "ref": "runasor.json#chest",
+          "match": "bonuszolo",
+          "main": true
+        }
+      ],
+      "skill_book": [
+        {
+          "kind": "storm_stone"
+        },
+        {
+          "kind": "map_boss"
+        },
+        {
+          "kind": "event_shop",
+          "ref": "calendar.json#themes"
+        },
+        {
+          "kind": "rift_shelf",
+          "ref": "rift.json#shelf"
+        }
+      ],
+      "pet_thread": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.bossThread.1",
+          "main": true
+        }
+      ],
+      "egg_m1": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.wild",
+          "main": true
+        }
+      ],
+      "egg_m2": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.wild",
+          "main": true
+        },
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.monkey"
+        }
+      ],
+      "egg_m3": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.monkey",
+          "main": true
+        },
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.spider"
+        }
+      ],
+      "egg_m4": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.spider",
+          "main": true
+        }
+      ],
+      "egg_m5": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.dragon",
+          "main": true
+        }
+      ],
+      "egg_m6": [
+        {
+          "kind": "dungeon",
+          "ref": "pets.json#dungeon.dragon",
+          "main": true
+        }
+      ],
+      "pet_core_wild": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#wild",
+          "match": "pet_core_wild",
+          "main": true
+        }
+      ],
+      "pet_core_monkey": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#monkey",
+          "match": "pet_core_monkey",
+          "main": true
+        }
+      ],
+      "pet_core_spider": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#spider",
+          "match": "pet_core_spider",
+          "main": true
+        }
+      ],
+      "pet_core_dragon": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#dragon",
+          "match": "pet_core_dragon",
+          "main": true
+        }
+      ],
+      "egg_u_wild": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#wild",
+          "match": "egg_u_wild",
+          "main": true
+        }
+      ],
+      "egg_u_monkey": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#monkey",
+          "match": "egg_u_monkey",
+          "main": true
+        }
+      ],
+      "egg_u_spider": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#spider",
+          "match": "egg_u_spider",
+          "main": true
+        }
+      ],
+      "egg_u_dragon": [
+        {
+          "kind": "dungeon",
+          "ref": "dungeons.json#dragon",
+          "match": "egg_u_dragon",
+          "main": true
+        }
+      ],
+      "pet_book_shield_open": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.wild.shield_open",
+          "main": true
+        }
+      ],
+      "pet_book_first_strike": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.wild.first_strike",
+          "main": true
+        }
+      ],
+      "pet_book_idle_xp": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.wild.idle_xp",
+          "main": true
+        }
+      ],
+      "pet_book_crit_dmg": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.monkey.crit_dmg",
+          "main": true
+        },
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.dragon.crit_dmg"
+        }
+      ],
+      "pet_book_regen": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.monkey.regen",
+          "main": true
+        }
+      ],
+      "pet_book_idle_nyang": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.monkey.idle_nyang",
+          "main": true
+        }
+      ],
+      "pet_book_thorns": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.spider.thorns",
+          "main": true
+        },
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.dragon.thorns"
+        }
+      ],
+      "pet_book_potion_boost": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.spider.potion_boost",
+          "main": true
+        }
+      ],
+      "pet_book_keen_nose": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.spider.keen_nose",
+          "main": true
+        }
+      ],
+      "pet_book_loot_luck": [
+        {
+          "kind": "dungeon",
+          "ref": "spine.json#hero.pets.book.pools.dragon.loot_luck",
+          "main": true
+        }
+      ]
+    },
+    "forge": {
+      "noBurnUpTo": 4,
+      "maxChance": 0.95,
+      "luckOreBonus": 0.1,
+      "failure": {
+        "unprotected": "destroy",
+        "blessScroll": "minusOne",
+        "safeStone": "keep"
+      },
+      "safeStonesPerDay": 3,
+      "safeStonesPerTry": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "ui": {
+      "defaultProtection": "last",
+      "firstProtection": [
+        "scroll",
+        "none"
+      ],
+      "autoSafe": false,
+      "confirmUnprotected": [
+        "stones",
+        "heroic",
+        "unique",
+        "worn"
+      ],
+      "confirmOncePerVisit": true
+    },
+    "trade": {
+      "marketKeepsStones": true,
+      "npcSellConfirm": true
+    },
+    "items": {
+      "line": {
+        "tiers": {
+          "maxHp": [
+            40,
+            80,
+            150,
+            250,
+            400
+          ],
+          "crit": [
+            0.01,
+            0.02,
+            0.04,
+            0.07,
+            0.1
+          ],
+          "vsAnimal": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsBandit": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "defence": [
+            5,
+            10,
+            18,
+            28,
+            40
+          ],
+          "attack": [
+            5,
+            10,
+            15,
+            22,
+            30
+          ],
+          "nyang": [
+            0.05,
+            0.08,
+            0.12,
+            0.16,
+            0.2
+          ],
+          "xp": [
+            0.02,
+            0.04,
+            0.06,
+            0.08,
+            0.1
+          ],
+          "evade": [
+            0.01,
+            0.02,
+            0.03,
+            0.04,
+            0.05
+          ],
+          "vsOrc": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsUndead": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsDesert": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsIce": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsFire": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "vsBoss": [
+            0.02,
+            0.05,
+            0.08,
+            0.12,
+            0.2
+          ],
+          "potionHeal": [
+            0.02,
+            0.04,
+            0.06,
+            0.08,
+            0.1
+          ],
+          "skillDamage": [
+            0.03,
+            0.07,
+            0.12,
+            0.17,
+            0.24
+          ],
+          "critDamage": [
+            0.06,
+            0.12,
+            0.2,
+            0.28,
+            0.4
+          ],
+          "lifesteal": [
+            0.01,
+            0.015,
+            0.025,
+            0.035,
+            0.05
+          ],
+          "damageTaken": [
+            0.02,
+            0.03,
+            0.05,
+            0.07,
+            0.1
+          ]
+        },
+        "mode": "itemLevel",
+        "scaled": [
+          "attack",
+          "maxHp",
+          "defence"
+        ],
+        "levelOffset": 5,
+        "levelDivisor": 25,
+        "percent": [
+          "crit",
+          "evade",
+          "xp",
+          "nyang",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsUndead",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsBoss",
+          "potionHeal",
+          "skillDamage",
+          "critDamage",
+          "lifesteal",
+          "damageTaken"
+        ]
+      },
+      "sockets": {
+        "byRarity": {
+          "common": 0,
+          "rare": 1,
+          "heroic": 2,
+          "unique": 2
+        },
+        "extraAtPlus": 7,
+        "extraFor": [
+          "heroic",
+          "unique"
+        ]
+      },
+      "prices": {
+        "1": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "3": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "4": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "5": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "6": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "7": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "8": [
+          2700,
+          5400,
+          9900,
+          18000,
+          27000,
+          40500,
+          58500,
+          81000,
+          112500
+        ],
+        "11": [
+          2970,
+          5940,
+          10890,
+          19800,
+          29700,
+          44550,
+          64350,
+          89100,
+          123750
+        ],
+        "14": [
+          3780,
+          7560,
+          13860,
+          25200,
+          37800,
+          56700,
+          81900,
+          113400,
+          157500
+        ],
+        "16": [
+          4320,
+          8640,
+          15840,
+          28800,
+          43200,
+          64800,
+          93600,
+          129600,
+          180000
+        ],
+        "18": [
+          4860,
+          9720,
+          17820,
+          32400,
+          48600,
+          72900,
+          105300,
+          145800,
+          202500
+        ],
+        "19": [
+          5130,
+          10260,
+          18810,
+          34200,
+          51300,
+          76950,
+          111150,
+          153900,
+          213750
+        ],
+        "21": [
+          5670,
+          11340,
+          20790,
+          37800,
+          56700,
+          85050,
+          122850,
+          170100,
+          236250
+        ],
+        "22": [
+          5940,
+          11880,
+          21780,
+          39600,
+          59400,
+          89100,
+          128700,
+          178200,
+          247500
+        ],
+        "26": [
+          7020,
+          14040,
+          25740,
+          46800,
+          70200,
+          105300,
+          152100,
+          210600,
+          292500
+        ],
+        "30": [
+          8100,
+          16200,
+          29700,
+          54000,
+          81000,
+          121500,
+          175500,
+          243000,
+          337500
+        ],
+        "31": [
+          8370,
+          16740,
+          30690,
+          55800,
+          83700,
+          125550,
+          181350,
+          251100,
+          348750
+        ],
+        "32": [
+          8640,
+          17280,
+          31680,
+          57600,
+          86400,
+          129600,
+          187200,
+          259200,
+          360000
+        ],
+        "33": [
+          8910,
+          17820,
+          32670,
+          59400,
+          89100,
+          133650,
+          193050,
+          267300,
+          371250
+        ],
+        "34": [
+          9180,
+          18360,
+          33660,
+          61200,
+          91800,
+          137700,
+          198900,
+          275400,
+          382500
+        ],
+        "37": [
+          9990,
+          19980,
+          36630,
+          66600,
+          99900,
+          149850,
+          216450,
+          299700,
+          416250
+        ],
+        "41": [
+          11070,
+          22140,
+          40590,
+          73800,
+          110700,
+          166050,
+          245846,
+          340402,
+          472781
+        ],
+        "42": [
+          11340,
+          22680,
+          41580,
+          75600,
+          113400,
+          170100,
+          257985,
+          357210,
+          496125
+        ],
+        "46": [
+          12420,
+          24840,
+          45540,
+          82800,
+          124200,
+          186300,
+          309465,
+          428490,
+          595125
+        ],
+        "50": [
+          13500,
+          27000,
+          49500,
+          90000,
+          135000,
+          202500,
+          365625,
+          506250,
+          703125
+        ],
+        "54": [
+          14580,
+          29160,
+          53460,
+          97200,
+          145800,
+          218700,
+          426465,
+          590490,
+          820125
+        ],
+        "57": [
+          15390,
+          30780,
+          56430,
+          102600,
+          153900,
+          230850,
+          475166,
+          657923,
+          913781
+        ],
+        "60": [
+          16200,
+          32400,
+          59400,
+          108000,
+          162000,
+          243000,
+          526500,
+          729000,
+          1012500
+        ]
+      }
+    }
+  },
+  "itemRulesExtended": {
+    "plusMult": [
+      1,
+      1.1,
+      1.2,
+      1.31,
+      1.43,
+      1.56,
+      1.7,
+      1.86,
+      2.03,
+      2.22
+    ],
+    "previewBelow": 9,
+    "chances": [
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ],
+      [
+        1,
+        1,
+        0.95,
+        0.9,
+        0.8,
+        0.7,
+        0.55,
+        0.45,
+        0.35
+      ]
+    ],
+    "maxChance": 0.95,
+    "forgeMats": {
+      "weapon:1": [
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "weapon:2": [
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "weapon:3": [
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "weapon:4": [
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "weapon:5": [
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "weapon:6": [
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:1": [
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:2": [
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:3": [
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:4": [
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:5": [
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "armor:6": [
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:1": [
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:2": [
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:3": [
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:4": [
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:5": [
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "helmet:6": [
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:1": [
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:2": [
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:3": [
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:4": [
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:5": [
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "shield:6": [
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:1": [
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:2": [
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:3": [
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:4": [
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:5": [
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "boots:6": [
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:1": [
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_dogs",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:2": [
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_pickpockets",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:3": [
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_pens",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:4": [
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_bandits",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:5": [
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "bracelet:6": [
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_hound_tooth",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:1": [
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_wolves",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_bears",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:2": [
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_axemen",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_mercs",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:3": [
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_warcamp",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_totems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:4": [
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_scorpions",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_ruins",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:5": [
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_warriors",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_spirits",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "necklace:6": [
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_obsidian_shard",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ash_mask",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:1": [
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m1_boars",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m1_tigers",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:2": [
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m2_archers",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m2_guards",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:3": [
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m3_bridges",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m3_watchrocks",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:4": [
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m4_snakes",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m4_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:5": [
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m5_yetis",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m5_golems",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ],
+      "earrings:6": [
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 1
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 2
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 1
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 2
+          },
+          {
+            "itemId": "shard",
+            "qty": 2
+          }
+        ],
+        [
+          {
+            "itemId": "mat_m6_lava_scale",
+            "qty": 3
+          },
+          {
+            "itemId": "mat_m6_ember_core",
+            "qty": 3
+          },
+          {
+            "itemId": "shard",
+            "qty": 3
+          }
+        ]
+      ]
+    },
+    "mapTops": [
+      15,
+      26,
+      37,
+      46,
+      54,
+      60
+    ],
+    "sell": {
+      "1": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "3": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "4": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "5": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "6": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "7": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "8": [
+        2250,
+        2475,
+        2700,
+        2925,
+        3150,
+        3375,
+        3600,
+        3825,
+        4050,
+        4275
+      ],
+      "11": [
+        2475,
+        2723,
+        2970,
+        3218,
+        3465,
+        3713,
+        3960,
+        4208,
+        4455,
+        4703
+      ],
+      "14": [
+        3150,
+        3465,
+        3780,
+        4095,
+        4410,
+        4725,
+        5040,
+        5355,
+        5670,
+        5985
+      ],
+      "16": [
+        3600,
+        3960,
+        4320,
+        4680,
+        5040,
+        5400,
+        5760,
+        6120,
+        6480,
+        6840
+      ],
+      "18": [
+        4050,
+        4455,
+        4860,
+        5265,
+        5670,
+        6075,
+        6480,
+        6885,
+        7290,
+        7695
+      ],
+      "19": [
+        4275,
+        4703,
+        5130,
+        5558,
+        5985,
+        6413,
+        6840,
+        7268,
+        7695,
+        8123
+      ],
+      "21": [
+        4725,
+        5198,
+        5670,
+        6143,
+        6615,
+        7088,
+        7560,
+        8033,
+        8505,
+        8978
+      ],
+      "22": [
+        4950,
+        5445,
+        5940,
+        6435,
+        6930,
+        7425,
+        7920,
+        8415,
+        8910,
+        9405
+      ],
+      "26": [
+        5850,
+        6435,
+        7020,
+        7605,
+        8190,
+        8775,
+        9360,
+        9945,
+        10530,
+        11115
+      ],
+      "30": [
+        6750,
+        7425,
+        8100,
+        8775,
+        9450,
+        10125,
+        10800,
+        11475,
+        12150,
+        12825
+      ],
+      "31": [
+        6975,
+        7673,
+        8370,
+        9068,
+        9765,
+        10463,
+        11160,
+        11858,
+        12555,
+        13253
+      ],
+      "32": [
+        7200,
+        7920,
+        8640,
+        9360,
+        10080,
+        10800,
+        11520,
+        12240,
+        12960,
+        13680
+      ],
+      "33": [
+        7425,
+        8168,
+        8910,
+        9653,
+        10395,
+        11138,
+        11880,
+        12623,
+        13365,
+        14108
+      ],
+      "34": [
+        7650,
+        8415,
+        9180,
+        9945,
+        10710,
+        11475,
+        12240,
+        13005,
+        13770,
+        14535
+      ],
+      "37": [
+        8325,
+        9158,
+        9990,
+        10823,
+        11655,
+        12488,
+        13320,
+        14153,
+        14985,
+        15818
+      ],
+      "41": [
+        9225,
+        10148,
+        11070,
+        11993,
+        12915,
+        13838,
+        14760,
+        15683,
+        16605,
+        17528
+      ],
+      "42": [
+        9450,
+        10395,
+        11340,
+        12285,
+        13230,
+        14175,
+        15120,
+        16065,
+        17010,
+        17955
+      ],
+      "46": [
+        10350,
+        11385,
+        12420,
+        13455,
+        14490,
+        15525,
+        16560,
+        17595,
+        18630,
+        19665
+      ],
+      "50": [
+        11250,
+        12375,
+        13500,
+        14625,
+        15750,
+        16875,
+        18000,
+        19125,
+        20250,
+        21375
+      ],
+      "54": [
+        12150,
+        13365,
+        14580,
+        15795,
+        17010,
+        18225,
+        19440,
+        20655,
+        21870,
+        23085
+      ],
+      "57": [
+        12825,
+        14108,
+        15390,
+        16673,
+        17955,
+        19238,
+        20520,
+        21803,
+        23085,
+        24368
+      ],
+      "60": [
+        13500,
+        14850,
+        16200,
+        17550,
+        18900,
+        20250,
+        21600,
+        22950,
+        24300,
+        25650
+      ]
+    },
+    "sellRarity": {
+      "rare": {
+        "1": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "3": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "4": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "5": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "6": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "7": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "8": [
+          3600,
+          3960,
+          4320,
+          4680,
+          5040,
+          5400,
+          5760,
+          6120,
+          6480,
+          6840
+        ],
+        "11": [
+          3960,
+          4356,
+          4752,
+          5148,
+          5544,
+          5940,
+          6336,
+          6732,
+          7128,
+          7524
+        ],
+        "14": [
+          5040,
+          5544,
+          6048,
+          6552,
+          7056,
+          7560,
+          8064,
+          8568,
+          9072,
+          9576
+        ],
+        "16": [
+          5760,
+          6336,
+          6912,
+          7488,
+          8064,
+          8640,
+          9216,
+          9792,
+          10368,
+          10944
+        ],
+        "18": [
+          6480,
+          7128,
+          7776,
+          8424,
+          9072,
+          9720,
+          10368,
+          11016,
+          11664,
+          12312
+        ],
+        "19": [
+          6840,
+          7524,
+          8208,
+          8892,
+          9576,
+          10260,
+          10944,
+          11628,
+          12312,
+          12996
+        ],
+        "21": [
+          7560,
+          8316,
+          9072,
+          9828,
+          10584,
+          11340,
+          12096,
+          12852,
+          13608,
+          14364
+        ],
+        "22": [
+          7920,
+          8712,
+          9504,
+          10296,
+          11088,
+          11880,
+          12672,
+          13464,
+          14256,
+          15048
+        ],
+        "26": [
+          9360,
+          10296,
+          11232,
+          12168,
+          13104,
+          14040,
+          14976,
+          15912,
+          16848,
+          17784
+        ],
+        "30": [
+          10800,
+          11880,
+          12960,
+          14040,
+          15120,
+          16200,
+          17280,
+          18360,
+          19440,
+          20520
+        ],
+        "31": [
+          11160,
+          12276,
+          13392,
+          14508,
+          15624,
+          16740,
+          17856,
+          18972,
+          20088,
+          21204
+        ],
+        "32": [
+          11520,
+          12672,
+          13824,
+          14976,
+          16128,
+          17280,
+          18432,
+          19584,
+          20736,
+          21888
+        ],
+        "33": [
+          11880,
+          13068,
+          14256,
+          15444,
+          16632,
+          17820,
+          19008,
+          20196,
+          21384,
+          22572
+        ],
+        "34": [
+          12240,
+          13464,
+          14688,
+          15912,
+          17136,
+          18360,
+          19584,
+          20808,
+          22032,
+          23256
+        ],
+        "37": [
+          13320,
+          14652,
+          15984,
+          17316,
+          18648,
+          19980,
+          21312,
+          22644,
+          23976,
+          25308
+        ],
+        "41": [
+          14760,
+          16236,
+          17712,
+          19188,
+          20664,
+          22140,
+          23616,
+          25092,
+          26568,
+          28044
+        ],
+        "42": [
+          15120,
+          16632,
+          18144,
+          19656,
+          21168,
+          22680,
+          24192,
+          25704,
+          27216,
+          28728
+        ],
+        "46": [
+          16560,
+          18216,
+          19872,
+          21528,
+          23184,
+          24840,
+          26496,
+          28152,
+          29808,
+          31464
+        ],
+        "50": [
+          18000,
+          19800,
+          21600,
+          23400,
+          25200,
+          27000,
+          28800,
+          30600,
+          32400,
+          34200
+        ],
+        "54": [
+          19440,
+          21384,
+          23328,
+          25272,
+          27216,
+          29160,
+          31104,
+          33048,
+          34992,
+          36936
+        ],
+        "57": [
+          20520,
+          22572,
+          24624,
+          26676,
+          28728,
+          30780,
+          32832,
+          34884,
+          36936,
+          38988
+        ],
+        "60": [
+          21600,
+          23760,
+          25920,
+          28080,
+          30240,
+          32400,
+          34560,
+          36720,
+          38880,
+          41040
+        ]
+      },
+      "heroic": {
+        "1": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "3": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "4": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "5": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "6": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "7": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "8": [
+          5625,
+          6188,
+          6750,
+          7313,
+          7875,
+          8438,
+          9000,
+          9563,
+          10125,
+          10688
+        ],
+        "11": [
+          6188,
+          6806,
+          7425,
+          8044,
+          8663,
+          9281,
+          9900,
+          10519,
+          11138,
+          11756
+        ],
+        "14": [
+          7875,
+          8663,
+          9450,
+          10238,
+          11025,
+          11813,
+          12600,
+          13388,
+          14175,
+          14963
+        ],
+        "16": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "18": [
+          10125,
+          11138,
+          12150,
+          13163,
+          14175,
+          15188,
+          16200,
+          17213,
+          18225,
+          19238
+        ],
+        "19": [
+          10688,
+          11756,
+          12825,
+          13894,
+          14962,
+          16031,
+          17100,
+          18169,
+          19238,
+          20306
+        ],
+        "21": [
+          11813,
+          12994,
+          14175,
+          15356,
+          16538,
+          17719,
+          18900,
+          20081,
+          21263,
+          22444
+        ],
+        "22": [
+          12375,
+          13613,
+          14850,
+          16088,
+          17325,
+          18563,
+          19800,
+          21038,
+          22275,
+          23513
+        ],
+        "26": [
+          14625,
+          16088,
+          17550,
+          19013,
+          20475,
+          21938,
+          23400,
+          24863,
+          26325,
+          27788
+        ],
+        "30": [
+          16875,
+          18563,
+          20250,
+          21938,
+          23625,
+          25313,
+          27000,
+          28688,
+          30375,
+          32063
+        ],
+        "31": [
+          17438,
+          19181,
+          20925,
+          22669,
+          24413,
+          26156,
+          27900,
+          29644,
+          31388,
+          33131
+        ],
+        "32": [
+          18000,
+          19800,
+          21600,
+          23400,
+          25200,
+          27000,
+          28800,
+          30600,
+          32400,
+          34200
+        ],
+        "33": [
+          18563,
+          20419,
+          22275,
+          24131,
+          25988,
+          27844,
+          29700,
+          31556,
+          33413,
+          35269
+        ],
+        "34": [
+          19125,
+          21038,
+          22950,
+          24863,
+          26775,
+          28688,
+          30600,
+          32513,
+          34425,
+          36338
+        ],
+        "37": [
+          20813,
+          22894,
+          24975,
+          27056,
+          29137,
+          31219,
+          33300,
+          35381,
+          37463,
+          39544
+        ],
+        "41": [
+          23063,
+          25369,
+          27675,
+          29981,
+          32287,
+          34594,
+          36900,
+          39206,
+          41513,
+          43819
+        ],
+        "42": [
+          23625,
+          25988,
+          28350,
+          30713,
+          33075,
+          35438,
+          37800,
+          40163,
+          42525,
+          44888
+        ],
+        "46": [
+          25875,
+          28463,
+          31050,
+          33638,
+          36225,
+          38813,
+          41400,
+          43988,
+          46575,
+          49163
+        ],
+        "50": [
+          28125,
+          30938,
+          33750,
+          36563,
+          39375,
+          42188,
+          45000,
+          47813,
+          50625,
+          53438
+        ],
+        "54": [
+          30375,
+          33413,
+          36450,
+          39488,
+          42525,
+          45563,
+          48600,
+          51638,
+          54675,
+          57713
+        ],
+        "57": [
+          32063,
+          35269,
+          38475,
+          41681,
+          44888,
+          48094,
+          51300,
+          54506,
+          57713,
+          60919
+        ],
+        "60": [
+          33750,
+          37125,
+          40500,
+          43875,
+          47250,
+          50625,
+          54000,
+          57375,
+          60750,
+          64125
+        ]
+      },
+      "unique": {
+        "1": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "3": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "4": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "5": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "6": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "7": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "8": [
+          9000,
+          9900,
+          10800,
+          11700,
+          12600,
+          13500,
+          14400,
+          15300,
+          16200,
+          17100
+        ],
+        "11": [
+          9900,
+          10890,
+          11880,
+          12870,
+          13860,
+          14850,
+          15840,
+          16830,
+          17820,
+          18810
+        ],
+        "14": [
+          12600,
+          13860,
+          15120,
+          16380,
+          17640,
+          18900,
+          20160,
+          21420,
+          22680,
+          23940
+        ],
+        "16": [
+          14400,
+          15840,
+          17280,
+          18720,
+          20160,
+          21600,
+          23040,
+          24480,
+          25920,
+          27360
+        ],
+        "18": [
+          16200,
+          17820,
+          19440,
+          21060,
+          22680,
+          24300,
+          25920,
+          27540,
+          29160,
+          30780
+        ],
+        "19": [
+          17100,
+          18810,
+          20520,
+          22230,
+          23940,
+          25650,
+          27360,
+          29070,
+          30780,
+          32490
+        ],
+        "21": [
+          18900,
+          20790,
+          22680,
+          24570,
+          26460,
+          28350,
+          30240,
+          32130,
+          34020,
+          35910
+        ],
+        "22": [
+          19800,
+          21780,
+          23760,
+          25740,
+          27720,
+          29700,
+          31680,
+          33660,
+          35640,
+          37620
+        ],
+        "26": [
+          23400,
+          25740,
+          28080,
+          30420,
+          32760,
+          35100,
+          37440,
+          39780,
+          42120,
+          44460
+        ],
+        "30": [
+          27000,
+          29700,
+          32400,
+          35100,
+          37800,
+          40500,
+          43200,
+          45900,
+          48600,
+          51300
+        ],
+        "31": [
+          27900,
+          30690,
+          33480,
+          36270,
+          39060,
+          41850,
+          44640,
+          47430,
+          50220,
+          53010
+        ],
+        "32": [
+          28800,
+          31680,
+          34560,
+          37440,
+          40320,
+          43200,
+          46080,
+          48960,
+          51840,
+          54720
+        ],
+        "33": [
+          29700,
+          32670,
+          35640,
+          38610,
+          41580,
+          44550,
+          47520,
+          50490,
+          53460,
+          56430
+        ],
+        "34": [
+          30600,
+          33660,
+          36720,
+          39780,
+          42840,
+          45900,
+          48960,
+          52020,
+          55080,
+          58140
+        ],
+        "37": [
+          33300,
+          36630,
+          39960,
+          43290,
+          46620,
+          49950,
+          53280,
+          56610,
+          59940,
+          63270
+        ],
+        "41": [
+          36900,
+          40590,
+          44280,
+          47970,
+          51660,
+          55350,
+          59040,
+          62730,
+          66420,
+          70110
+        ],
+        "42": [
+          37800,
+          41580,
+          45360,
+          49140,
+          52920,
+          56700,
+          60480,
+          64260,
+          68040,
+          71820
+        ],
+        "46": [
+          41400,
+          45540,
+          49680,
+          53820,
+          57960,
+          62100,
+          66240,
+          70380,
+          74520,
+          78660
+        ],
+        "50": [
+          45000,
+          49500,
+          54000,
+          58500,
+          63000,
+          67500,
+          72000,
+          76500,
+          81000,
+          85500
+        ],
+        "54": [
+          48600,
+          53460,
+          58320,
+          63180,
+          68040,
+          72900,
+          77760,
+          82620,
+          87480,
+          92340
+        ],
+        "57": [
+          51300,
+          56430,
+          61560,
+          66690,
+          71820,
+          76950,
+          82080,
+          87210,
+          92340,
+          97470
+        ],
+        "60": [
+          54000,
+          59400,
+          64800,
+          70200,
+          75600,
+          81000,
+          86400,
+          91800,
+          97200,
+          102600
+        ]
+      }
+    },
+    "nyang": {
+      "1": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "2": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "3": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "4": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "5": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "6": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "7": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "8": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "9": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "10": [
+        2700,
+        5400,
+        9900,
+        18000,
+        27000,
+        40500,
+        58500,
+        81000,
+        112500
+      ],
+      "11": [
+        2970,
+        5940,
+        10890,
+        19800,
+        29700,
+        44550,
+        64350,
+        89100,
+        123750
+      ],
+      "12": [
+        3240,
+        6480,
+        11880,
+        21600,
+        32400,
+        48600,
+        70200,
+        97200,
+        135000
+      ],
+      "13": [
+        3510,
+        7020,
+        12870,
+        23400,
+        35100,
+        52650,
+        76050,
+        105300,
+        146250
+      ],
+      "14": [
+        3780,
+        7560,
+        13860,
+        25200,
+        37800,
+        56700,
+        81900,
+        113400,
+        157500
+      ],
+      "15": [
+        4050,
+        8100,
+        14850,
+        27000,
+        40500,
+        60750,
+        87750,
+        121500,
+        168750
+      ],
+      "16": [
+        4320,
+        8640,
+        15840,
+        28800,
+        43200,
+        64800,
+        93600,
+        129600,
+        180000
+      ],
+      "17": [
+        4590,
+        9180,
+        16830,
+        30600,
+        45900,
+        68850,
+        99450,
+        137700,
+        191250
+      ],
+      "18": [
+        4860,
+        9720,
+        17820,
+        32400,
+        48600,
+        72900,
+        105300,
+        145800,
+        202500
+      ],
+      "19": [
+        5130,
+        10260,
+        18810,
+        34200,
+        51300,
+        76950,
+        111150,
+        153900,
+        213750
+      ],
+      "20": [
+        5400,
+        10800,
+        19800,
+        36000,
+        54000,
+        81000,
+        117000,
+        162000,
+        225000
+      ],
+      "21": [
+        5670,
+        11340,
+        20790,
+        37800,
+        56700,
+        85050,
+        122850,
+        170100,
+        236250
+      ],
+      "22": [
+        5940,
+        11880,
+        21780,
+        39600,
+        59400,
+        89100,
+        128700,
+        178200,
+        247500
+      ],
+      "23": [
+        6210,
+        12420,
+        22770,
+        41400,
+        62100,
+        93150,
+        134550,
+        186300,
+        258750
+      ],
+      "24": [
+        6480,
+        12960,
+        23760,
+        43200,
+        64800,
+        97200,
+        140400,
+        194400,
+        270000
+      ],
+      "25": [
+        6750,
+        13500,
+        24750,
+        45000,
+        67500,
+        101250,
+        146250,
+        202500,
+        281250
+      ],
+      "26": [
+        7020,
+        14040,
+        25740,
+        46800,
+        70200,
+        105300,
+        152100,
+        210600,
+        292500
+      ],
+      "27": [
+        7290,
+        14580,
+        26730,
+        48600,
+        72900,
+        109350,
+        157950,
+        218700,
+        303750
+      ],
+      "28": [
+        7560,
+        15120,
+        27720,
+        50400,
+        75600,
+        113400,
+        163800,
+        226800,
+        315000
+      ],
+      "29": [
+        7830,
+        15660,
+        28710,
+        52200,
+        78300,
+        117450,
+        169650,
+        234900,
+        326250
+      ],
+      "30": [
+        8100,
+        16200,
+        29700,
+        54000,
+        81000,
+        121500,
+        175500,
+        243000,
+        337500
+      ],
+      "31": [
+        8370,
+        16740,
+        30690,
+        55800,
+        83700,
+        125550,
+        181350,
+        251100,
+        348750
+      ],
+      "32": [
+        8640,
+        17280,
+        31680,
+        57600,
+        86400,
+        129600,
+        187200,
+        259200,
+        360000
+      ],
+      "33": [
+        8910,
+        17820,
+        32670,
+        59400,
+        89100,
+        133650,
+        193050,
+        267300,
+        371250
+      ],
+      "34": [
+        9180,
+        18360,
+        33660,
+        61200,
+        91800,
+        137700,
+        198900,
+        275400,
+        382500
+      ],
+      "35": [
+        9450,
+        18900,
+        34650,
+        63000,
+        94500,
+        141750,
+        204750,
+        283500,
+        393750
+      ],
+      "36": [
+        9720,
+        19440,
+        35640,
+        64800,
+        97200,
+        145800,
+        210600,
+        291600,
+        405000
+      ],
+      "37": [
+        9990,
+        19980,
+        36630,
+        66600,
+        99900,
+        149850,
+        216450,
+        299700,
+        416250
+      ],
+      "38": [
+        10260,
+        20520,
+        37620,
+        68400,
+        102600,
+        153900,
+        222300,
+        307800,
+        427500
+      ],
+      "39": [
+        10530,
+        21060,
+        38610,
+        70200,
+        105300,
+        157950,
+        228150,
+        315900,
+        438750
+      ],
+      "40": [
+        10800,
+        21600,
+        39600,
+        72000,
+        108000,
+        162000,
+        234000,
+        324000,
+        450000
+      ],
+      "41": [
+        11070,
+        22140,
+        40590,
+        73800,
+        110700,
+        166050,
+        245846,
+        340402,
+        472781
+      ],
+      "42": [
+        11340,
+        22680,
+        41580,
+        75600,
+        113400,
+        170100,
+        257985,
+        357210,
+        496125
+      ],
+      "43": [
+        11610,
+        23220,
+        42570,
+        77400,
+        116100,
+        174150,
+        270416,
+        374423,
+        520031
+      ],
+      "44": [
+        11880,
+        23760,
+        43560,
+        79200,
+        118800,
+        178200,
+        283140,
+        392040,
+        544500
+      ],
+      "45": [
+        12150,
+        24300,
+        44550,
+        81000,
+        121500,
+        182250,
+        296156,
+        410063,
+        569531
+      ],
+      "46": [
+        12420,
+        24840,
+        45540,
+        82800,
+        124200,
+        186300,
+        309465,
+        428490,
+        595125
+      ],
+      "47": [
+        12690,
+        25380,
+        46530,
+        84600,
+        126900,
+        190350,
+        323066,
+        447323,
+        621281
+      ],
+      "48": [
+        12960,
+        25920,
+        47520,
+        86400,
+        129600,
+        194400,
+        336960,
+        466560,
+        648000
+      ],
+      "49": [
+        13230,
+        26460,
+        48510,
+        88200,
+        132300,
+        198450,
+        351146,
+        486203,
+        675281
+      ],
+      "50": [
+        13500,
+        27000,
+        49500,
+        90000,
+        135000,
+        202500,
+        365625,
+        506250,
+        703125
+      ],
+      "51": [
+        13770,
+        27540,
+        50490,
+        91800,
+        137700,
+        206550,
+        380396,
+        526703,
+        731531
+      ],
+      "52": [
+        14040,
+        28080,
+        51480,
+        93600,
+        140400,
+        210600,
+        395460,
+        547560,
+        760500
+      ],
+      "53": [
+        14310,
+        28620,
+        52470,
+        95400,
+        143100,
+        214650,
+        410816,
+        568823,
+        790031
+      ],
+      "54": [
+        14580,
+        29160,
+        53460,
+        97200,
+        145800,
+        218700,
+        426465,
+        590490,
+        820125
+      ],
+      "55": [
+        14850,
+        29700,
+        54450,
+        99000,
+        148500,
+        222750,
+        442406,
+        612563,
+        850781
+      ],
+      "56": [
+        15120,
+        30240,
+        55440,
+        100800,
+        151200,
+        226800,
+        458640,
+        635040,
+        882000
+      ],
+      "57": [
+        15390,
+        30780,
+        56430,
+        102600,
+        153900,
+        230850,
+        475166,
+        657923,
+        913781
+      ],
+      "58": [
+        15660,
+        31320,
+        57420,
+        104400,
+        156600,
+        234900,
+        491985,
+        681210,
+        946125
+      ],
+      "59": [
+        15930,
+        31860,
+        58410,
+        106200,
+        159300,
+        238950,
+        509096,
+        704903,
+        979031
+      ],
+      "60": [
+        16200,
+        32400,
+        59400,
+        108000,
+        162000,
+        243000,
+        526500,
+        729000,
+        1012500
+      ]
+    }
+  },
+  "homeForge": {
+    "noBurnUpTo": 4,
+    "maxChance": 0.95,
+    "luckOreBonus": 0.1
+  },
+  "locale": {
+    "forge": {
+      "greeting": "Hozd csak! A tűz forró, a kalapács nehéz, a bátorság a te dolgod.",
+      "pick": "Mit fejlesszünk?",
+      "back": "Vissza a felszereléshez",
+      "nothing": "Most nincs fejleszthető tárgyad. Hozz valamit a vadászatról! Gangdo addig a kalapácsát fényesíti.",
+      "allMaxed": "Minden tárgyad elérte a +{{plus}}-et, ennél tovább már nem fejleszthető. Gangdo meghatódott, de ezt tagadja.",
+      "chance": "Esély",
+      "cost": "Költség",
+      "have": "Van: {{amount}}",
+      "becomes": "utána",
+      "noChange": "(most nem változik)",
+      "useScroll_one": "Hamuóvó-tekercs használata ({{count}} db)",
+      "useScroll_other": "Hamuóvó-tekercs használata ({{count}} db)",
+      "scrollHint": "Kudarcnál a tárgy megmarad, de egy fokozatot visszaesik.",
+      "burnWarning": "Ha nem sikerül, a tárgy a Szellemköveivel együtt elég.",
+      "noYang": "Nincs elég nyangod ehhez a fejlesztéshez. Gangdo hitelre nem kalapál.",
+      "noMaterials": "Hiányzik: {{list}}.",
+      "upgrade": "Fejlesztés +{{plus}}",
+      "working": "A kovács dolgozik…",
+      "resultSuccess": "Sikerült: {{name}} +{{plus}}",
+      "resultBurnt": "Elégett: {{name}}",
+      "resultSaved": "Megmaradt: {{name}} +{{plus}}",
+      "missingOne": "Hiányzik: {{n}} {{name}}",
+      "missingMany_one": "Hiányzik: {{count}} alapanyag",
+      "missingMany_other": "Hiányzik: {{count}} alapanyag"
+    },
+    "bonuses": {
+      "maxHp": "Max. HP +{{value}}",
+      "crit": "Kritikus esély +{{value}}%",
+      "vsAnimal": "Állatok ellen +{{value}}%",
+      "vsBandit": "Banditák ellen +{{value}}%",
+      "vsOrc": "Orkok ellen +{{value}}%",
+      "vsUndead": "Élőhalottak ellen +{{value}}%",
+      "vsDesert": "Sivatagi lények ellen +{{value}}%",
+      "vsIce": "Jeges lények ellen +{{value}}%",
+      "vsFire": "Tüzes lények ellen +{{value}}%",
+      "defence": "Védelem +{{value}}",
+      "attack": "Sebzés +{{value}}",
+      "nyang": "Nyangbónusz +{{value}}%",
+      "xp": "XP-bónusz +{{value}}%",
+      "evade": "Kitérés +{{value}}%",
+      "vsBoss": "Bossok ellen +{{value}}%",
+      "potionHeal": "Gyógyital-hatás +{{value}}%",
+      "skillDamage": "Képesség-sebzés +{{value}}%",
+      "critDamage": "Kritikus sebzés +{{value}}%",
+      "lifesteal": "Életlopás +{{value}}%",
+      "damageTaken": "Sebzéscsökkentés +{{value}}%"
+    },
+    "stones": {
+      "stone_breeze": "Fuvallatkő",
+      "stone_m1_gust": "Szélrohamkő",
+      "stone_shower": "Záporkő",
+      "stone_thunder": "Zivatarkő",
+      "stone_monsoon": "Monszunkő",
+      "stone_m3_1": "Szurdokszélkő",
+      "stone_m3_2": "Dobszókő",
+      "stone_m3_3": "Agyarkő",
+      "stone_m3_4": "Vörösmancskő",
+      "stone_m4_1": "Délibábkő",
+      "stone_m4_2": "Homokszélkő",
+      "stone_m4_3": "Porviharkő",
+      "stone_m4_4": "Számumkő",
+      "stone_m5_1": "Dérkő",
+      "stone_m5_2": "Zúzmarakő",
+      "stone_m5_3": "Hófúváskő",
+      "stone_m5_4": "Hóviharkő",
+      "stone_m6_1": "Parázskő",
+      "stone_m6_2": "Hamukő",
+      "stone_m6_3": "Lángkő",
+      "stone_m6_4": "Tűzviharkő",
+      "stone_m1_3": "Szitálókő",
+      "stone_m1_4": "Jégesőkő",
+      "stone_m2_3": "Villámkő",
+      "stone_m2_4": "Fergetegkő",
+      "stone_m2_5": "Felhőszakadáskő",
+      "stone_m2_6": "Tájfunkő"
+    },
+    "extended": {
+      "gear": {
+        "rarity": {
+          "common": "Közönséges",
+          "rare": "Ritka",
+          "heroic": "Hősi",
+          "unique": "Mitikus",
+          "storm": "Viharedzett"
+        },
+        "tier": {
+          "text": "erősség {{tier}}/5"
+        },
+        "support": {
+          "cap": "plafon {{cap}}",
+          "capNow": "plafon {{cap}}, most {{applied}} hat",
+          "capFull": "plafon {{cap}}, már eléred",
+          "now": "most {{applied}} hat"
+        },
+        "sockets": {
+          "title": "Foglalat",
+          "aria": "Foglalatok: {{stones}} kő, {{open}} nyitott, {{closed}} +7-nél nyílik",
+          "count": "{{open}}/{{total}} nyitott foglalat"
+        },
+        "flags": {
+          "locked": "Lezárva"
+        },
+        "set": {
+          "line": "Szett: {{have}}/4 viselve",
+          "lineMax": "Szett: {{have}}/{{max}} viselve"
+        },
+        "unique": {
+          "effect": "Hatás: {{name}}",
+          "effects": {
+            "firstStrike": "Lesből",
+            "critHeal": "Kamatos kamat",
+            "stun": "Dobbantás",
+            "shell": "Kőhéj",
+            "cadence": "Keringő",
+            "thorns": "Tűzfal"
+          },
+          "desc": {
+            "firstStrike": "A harc első ütése ×{{v}} sebzést okoz{{alt}}.",
+            "critHeal": "A kritikus ütéseid a kiosztott sebzés {{v}}-át gyógyítják rajtad{{alt}}.",
+            "stun": "Minden ütésnek {{v}} esélye van arra, hogy kábítsa az ellenfelet, így az kihagyja a következő támadását{{alt}}.",
+            "shell": "Az első {{v}} kapott ütés {{cut}}-kal kevesebb sebzést okoz{{alt}}.",
+            "cadence": "Minden {{every}}. támadás {{v}}-kal több sebzést okoz{{alt}}.",
+            "thorns": "A támadó a neked okozott sebzés {{v}}-át kapja vissza{{alt}}."
+          },
+          "stormAlt": " ({{v}} viharedzetten)",
+          "pct": "{{v}}%"
+        },
+        "verdict": {
+          "better": "Jobb, mint a viselt",
+          "worse": "Gyengébb, mint a viselt",
+          "mixed": "Vegyes",
+          "same": "Nagyjából olyan, mint a viselt",
+          "empty": "Üres hely: tiszta nyereség",
+          "later": "Jobb lesz, {{level}}. szinttől",
+          "harcero": "Harcerő {{delta}}",
+          "mixedSet": "de a szetted {{after}}/4 lesz",
+          "mixedLine": "de kapod: {{line}}",
+          "mixedLost": "de elveszted: {{line}}",
+          "atPlus": "{{plus}} fejlesztve",
+          "raw": "Most, +{{plus}} szinten: Harcerő {{delta}}"
+        },
+        "compare": {
+          "worn": "Viselt",
+          "cand": "Új",
+          "vs": "→",
+          "none": "nincs",
+          "stat": "Érték",
+          "caption": "A viselt és az új tárgy értékei egymás mellett",
+          "betterHere": "(ez a jobb)",
+          "rawNow": "most: {{value}}"
+        },
+        "bag": {
+          "filters": "Szűrő",
+          "all": "Mind",
+          "better": "Jobb",
+          "otherClass": "Más kaszt",
+          "tooHigh": "Túl magas",
+          "locked": "Lezárt",
+          "filterCount": "{{name}} ({{count}})",
+          "upAria": "jobb, Harcerő +{{delta}}",
+          "levelAria": "{{level}}. szinttől",
+          "otherAria": "más kaszté",
+          "empty": "Üres a leltár. A vadászat és a portya hozza a tárgyakat.",
+          "sellWeak": "Eladás ({{count}})"
+        },
+        "stash": {
+          "title": "Tartalék",
+          "bar": "Tartalék: {{count}} vár",
+          "full": "Tele a Tartalék ({{count}}/{{max}})",
+          "open": "Megnézem",
+          "back": "Vissza",
+          "fullNote": "Amíg tele van, a vadászzsák nem gyűjthető be.",
+          "fewRoom": "Elöl a legjobbak: ha kevés a hely, a Hősi és a Ritka megy előbb.",
+          "safe": "Vedd át, vagy adj el, amit nem kérsz.",
+          "quickSell": "Gyors eladás ({{count}})",
+          "quickSellAria": "Közönségesek eladása ({{count}}): {{nyang}} nyang",
+          "quickHint": "A viseltnél gyengébb, le nem zárt Közönségesek a leltárból és a Tartalékból.",
+          "pickTitle": "Mit adsz el? A leggyengébb elöl.",
+          "warnValuable": "Hősi vagy Mitikus is van a kijelöltek közt: biztosan eladod?",
+          "error": "Az eladás nem sikerült. Próbáld újra.",
+          "mixItem": "{{count}} {{name}}",
+          "empty": "A Tartalék üres."
+        },
+        "hc": {
+          "name": "Harcerő",
+          "short": "Harcerő",
+          "aria": "Harcerő: {{value}}",
+          "ariaBrew": "Harcerő: {{value}}, a főzettel",
+          "text": "A hősöd ereje egy számban: a sebzésed és a szívósságod együtt.",
+          "now": "Most",
+          "base": "Alap (ranglista)",
+          "extra": "A ranglistán kívüli rész",
+          "notChance": "Hogy legyőzöl-e valakit, azt a harc előtti esély mondja meg.",
+          "brew": "Harci főzet hat még {{time}}",
+          "vsMap": "E térkép szörnyei ellen ({{tag}})",
+          "monsterAria": "A szörny Harcereje: {{value}}"
+        },
+        "side": {
+          "title": "Honnan jön a Harcerőd?",
+          "total": "Most {{full}} · alap {{base}}",
+          "intro": "A csíkos sorok a ranglistán nem számítanak.",
+          "sideLine": "Mellékrendszerek: +{{pct}}%",
+          "later": "Később nyílik: {{list}}",
+          "laterItem": "{{name}} ({{level}}.)",
+          "notInBase": "nem a ranglistán",
+          "go": "Megnézem",
+          "loading": "A bontás betöltése…",
+          "error": "A bontást nem sikerült betölteni.",
+          "retry": "Újrapróbálom",
+          "sources": {
+            "level": "Szint és statpontok",
+            "gear": "Felszerelés",
+            "plus": "Fejlesztés",
+            "lines": "Bónuszok és szettek",
+            "stones": "Szellemkövek",
+            "research": "Kutatás",
+            "pet": "Kísérő",
+            "guild": "Céh",
+            "house": "Ház",
+            "other": "Egyéb (esemény, királyság)",
+            "bought": "Vett statpont",
+            "brew": "Főzet",
+            "soul": "Viharszív"
+          }
+        },
+        "vs": {
+          "title": "Harcerő vagy esély?",
+          "progress": "Erősödtem?",
+          "progressA": "a Harcerő mutatja",
+          "item": "Jobb ez a tárgy?",
+          "itemA": "a Harcerő változása",
+          "fight": "Legyőzöm?",
+          "fightA": "a harc előtti esély",
+          "rule": "Ugyanazzal a Harcerővel két hős egészen más eséllyel mehet egy boss ellen: a kaszt és a bónuszok is számítanak."
+        },
+        "tabs": {
+          "bag": "Leltár",
+          "bagShort": "Leltár",
+          "stats": "Statok",
+          "short": {
+            "items": "Tárgyak",
+            "materials": "Anyagok",
+            "pets": "Kísérők",
+            "stats": "Statok"
+          }
+        },
+        "uniqueNames": {
+          "uniq_m1": "Öreg Csíkos papucsa",
+          "uniq_m2": "Aranyfog ládafedele",
+          "uniq_m3": "Nagymancs taposója",
+          "uniq_m4": "Romfal",
+          "uniq_m5": "Fagyúrnő táncipője",
+          "uniq_m6": "Lángszakáll tűzfala"
+        }
+      },
+      "itemtip": {
+        "verdict": {
+          "better": "Jobb, mint a viselt",
+          "worse": "Rosszabb, mint a viselt",
+          "same": "Nagyjából olyan, mint a viselt",
+          "empty": "Üres hely: tiszta nyereség",
+          "mixed": "Vegyes"
+        },
+        "vs": "Viselt: {{name}}",
+        "colThis": "Új",
+        "colWorn": "Viselt",
+        "lost": "Elveszted",
+        "gained": "Kapod",
+        "plus": "Fokozat",
+        "level": "Szükséges szint",
+        "raceHere": "a térképeden: {{names}}",
+        "raceNone": "a térképeden nincs ilyen",
+        "reason": "{{gain}}, de {{loss}}",
+        "gainBase": "Jobb az alapérték",
+        "gainBonus": "Kapod: {{list}}",
+        "lossBase": "gyengébb az alapérték",
+        "lossBonus": "elveszted: {{list}}",
+        "polishChip": "Csiszolt: {{n}}/{{max}}",
+        "polishPart": "csiszolás {{value}}",
+        "polishTotals": "Csiszolásból: {{list}}",
+        "mapSlayer": "E térkép szörnyei ellen ({{tag}})",
+        "itemLevel": "Tárgyszint {{level}}",
+        "base": "alap {{base}} × {{mult}} (+{{plus}})",
+        "lineHc": "{{value}} Harcerő",
+        "lineRange": "T1-T{{top}}: {{min}} … {{max}}",
+        "lineRangeFrom": "T{{bottom}}-T{{top}}: {{min}} … {{max}}",
+        "lineMult": "×{{mult}}"
+      },
+      "stones": {
+        "stone": {
+          "long": "Szellemkő: {{type}}, {{grade}}. minőség",
+          "stack": "Szellemkő: {{name}}",
+          "bossValue": "Bossok ellen +{{value}}%",
+          "type": {
+            "attack": "sebzés",
+            "vsAnimal": "állatok ellen",
+            "vsBandit": "banditák ellen",
+            "vsOrc": "orkok ellen",
+            "vsDesert": "sivatagi lények ellen",
+            "vsIce": "jeges lények ellen",
+            "vsFire": "tüzes lények ellen",
+            "vsUndead": "élőhalottak ellen",
+            "vsBoss": "bossok ellen",
+            "maxHp": "max. HP",
+            "defence": "védelem",
+            "evade": "kitérés"
+          },
+          "short": {
+            "attack": "Sebzés",
+            "vsAnimal": "Állat",
+            "vsBandit": "Bandita",
+            "vsOrc": "Ork",
+            "vsDesert": "Sivatag",
+            "vsIce": "Jég",
+            "vsFire": "Tűz",
+            "vsUndead": "Élőhalott",
+            "vsBoss": "Boss",
+            "maxHp": "Max. HP",
+            "defence": "Védelem",
+            "evade": "Kitérés"
+          }
+        },
+        "sell": {
+          "title": "Eladod a kövekkel együtt?",
+          "stones_one": "Eladáskor elvész {{count}} Szellemkő:",
+          "stones_other": "Eladáskor elvész {{count}} Szellemkő:",
+          "chiselFirst": "Ha megtartanád, vésd ki előbb a kovácsnál (Foglalatok).",
+          "go": "Eladom a kövekkel"
+        }
+      }
+    }
+  }
+}

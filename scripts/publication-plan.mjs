@@ -73,6 +73,13 @@ export function rightsIssues(files,policy){
   }
   return [...groups].map(([scope,files])=>({scope,files,status:policy.scopes?.[scope]?.status??'missing'}));
 }
+export function publicationOverrideApplies(policy,scope){
+  const authorization=policy.publicationAuthorization;
+  return authorization?.status==='owner-requested-without-license-verification'&&
+    Array.isArray(authorization.scopes)&&authorization.scopes.includes(scope)&&
+    typeof authorization.statement==='string'&&!!authorization.statement.trim()&&
+    /^\d{4}-\d{2}-\d{2}$/.test(authorization.grantedAt??'');
+}
 export function scanText(text,file){
   const patterns=[
     ['GitHub credential',/\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,})\b/g],
@@ -98,5 +105,7 @@ export function audit(files){
     if(size>=100*1024*1024)large.push({file,bytes:size});
     if(/\.(?:html|css|js|mjs|json|md|py|csv|ya?ml)$/.test(file))findings.push(...scanText(fs.readFileSync(target,'utf8'),file));
   }
-  return {version:1,files:files.length,bytes,missing,secretOrPersonalFindings:findings,largeFiles:large,rightsPending:rightsIssues(files,policy),excluded:['Stonestorm.html','Stonestorm_files mentett JS/CSS','eredeti ZIP','munkameneti/HAR/credential fájlok','.integration/','helyi IDE- és titkos konfigurációk'],limitations:'Mintákon alapuló ellenőrzés; nem minden lehetséges személyes adat automatikus felismerése.'};
+  const rightsPending=rightsIssues(files,policy);
+  const rightsBlocking=rightsPending.filter(issue=>!publicationOverrideApplies(policy,issue.scope));
+  return {version:1,files:files.length,bytes,missing,secretOrPersonalFindings:findings,largeFiles:large,rightsPending,rightsBlocking,excluded:['Stonestorm.html','Stonestorm_files mentett JS/CSS','eredeti ZIP','munkameneti/HAR/credential fájlok','.integration/','helyi IDE- és titkos konfigurációk'],limitations:'Mintákon alapuló ellenőrzés; nem minden lehetséges személyes adat automatikus felismerése.'};
 }

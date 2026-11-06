@@ -20,9 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Check licensed data availability
+      - name: Require full Atlas data and publication authorization
         id: inputs
-        run: node scripts/check-pages-inputs.mjs
+        run: node scripts/check-pages-inputs.mjs --require-full
 
   build:
     needs: readiness
@@ -38,26 +38,15 @@ jobs:
         with:
           node-version: '22'
       - name: Check source and assets
-        if: needs.readiness.outputs.ready == 'true'
         run: npm run check
       - name: Test models and data
-        if: needs.readiness.outputs.ready == 'true'
         run: npm test
       - name: Check publication rights and secrets
-        if: needs.readiness.outputs.ready == 'true'
         run: npm run audit:publish
       - name: Build approved static site
-        if: needs.readiness.outputs.ready == 'true'
         run: npm run build:pages
       - name: Verify project-path hosting
-        if: needs.readiness.outputs.ready == 'true'
         run: npm run test:pages
-      - name: Build approved guide while full Atlas awaits permission
-        if: needs.readiness.outputs.ready != 'true'
-        run: npm run build:pages:guide
-      - name: Verify guide resources and project-path hosting
-        if: needs.readiness.outputs.ready != 'true'
-        run: npm run test:pages:guide
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload only approved dist

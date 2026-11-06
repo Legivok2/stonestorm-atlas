@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "capturedAt": "2026-11-06",
+    "source": "https://stonestorm.gg/api/content",
+    "localeSources": [
+      "https://stonestorm.gg/assets/hu-BjYjcku_.js",
+      "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js"
+    ],
+    "dataKind": "official-public-client-data",
+    "warning": "A kliensnek küldött adatok nem feltétlenül egyeznek a szerver teljes, aktuális szabályrendszerével."
+  },
+  "dataHome": {
+    "levelGates": {
+      "heroic": 55,
+      "worldBoss": 30,
+      "fishing": 10,
+      "soul": 55
+    },
+    "forge": {
+      "noBurnUpTo": 4,
+      "maxChance": 0.95,
+      "luckOreBonus": 0.1
+    }
+  },
+  "lean": {
+    "research": {
+      "costs": {
+        "skipCoins": 2,
+        "elixirCoins": 4
+      },
+      "perVisit": 6
+    },
+    "researchSteps": {
+      "wolf": {
+        "minLevel": 10,
+        "sampleId": "sample_wolf",
+        "sampleMobId": "m1_wolf",
+        "samplesNeeded": 10,
+        "reward": {
+          "atkMult": 0.02
+        }
+      },
+      "boar": {
+        "minLevel": 14,
+        "sampleId": "sample_boar",
+        "sampleMobId": "m1_boar",
+        "samplesNeeded": 10,
+        "reward": {
+          "hpMult": 0.03
+        }
+      },
+      "bear": {
+        "minLevel": 18,
+        "sampleId": "sample_bear",
+        "sampleMobId": "m1_bear",
+        "samplesNeeded": 10,
+        "reward": {
+          "defMult": 0.02
+        }
+      },
+      "tiger": {
+        "minLevel": 22,
+        "sampleId": "sample_tiger",
+        "sampleMobId": "m1_tiger",
+        "samplesNeeded": 10,
+        "reward": {
+          "critBonus": 0.01
+        }
+      },
+      "archer": {
+        "minLevel": 26,
+        "sampleId": "sample_archer",
+        "sampleMobId": "m2_archer",
+        "samplesNeeded": 10,
+        "reward": {
+          "evadeBonus": 0.01
+        }
+      },
+      "mercenary": {
+        "minLevel": 30,
+        "sampleId": "sample_mercenary",
+        "sampleMobId": "m2_merc",
+        "samplesNeeded": 10,
+        "reward": {
+          "atkMult": 0.03
+        }
+      },
+      "orc": {
+        "minLevel": 34,
+        "sampleId": "sample_orc",
+        "sampleMobId": "m3_clubber",
+        "samplesNeeded": 10,
+        "reward": {
+          "hpMult": 0.04
+        }
+      },
+      "shaman": {
+        "minLevel": 38,
+        "sampleId": "sample_shaman",
+        "sampleMobId": "m3_shaman",
+        "samplesNeeded": 10,
+        "reward": {
+          "defMult": 0.03
+        }
+      },
+      "scorpion": {
+        "minLevel": 42,
+        "sampleId": "sample_scorpion",
+        "sampleMobId": "m4_scorpion",
+        "samplesNeeded": 10,
+        "reward": {
+          "atkMult": 0.02
+        }
+      },
+      "mummy": {
+        "minLevel": 45,
+        "sampleId": "sample_mummy",
+        "sampleMobId": "m4_mummy",
+        "samplesNeeded": 10,
+        "reward": {
+          "hpMult": 0.03
+        }
+      },
+      "snow_wolf": {
+        "minLevel": 48,
+        "sampleId": "sample_snow_wolf",
+        "sampleMobId": "m5_snow_wolf",
+        "samplesNeeded": 10,
+        "reward": {
+          "defMult": 0.02
+        }
+      },
+      "yeti": {
+        "minLevel": 51,
+        "sampleId": "sample_yeti",
+        "sampleMobId": "m5_yeti",
+        "samplesNeeded": 10,
+        "reward": {
+          "critBonus": 0.01
+        }
+      },
+      "fire_imp": {
+        "minLevel": 55,
+        "sampleId": "sample_fire_imp",
+        "sampleMobId": "m6_fire_imp",
+        "samplesNeeded": 10,
+        "reward": {
+          "evadeBonus": 0.01
+        }
+      },
+      "magma_giant": {
+        "minLevel": 58,
+        "sampleId": "sample_magma_giant",
+        "sampleMobId": "m6_magma_giant",
+        "samplesNeeded": 10,
+        "reward": {
+          "atkMult": 0.03
+        }
+      }
+    },
+    "soul": {
+      "unlockLevel": 55,
+      "arenaFactor": 0.5,
+      "helpers": {
+        "blessPoints": 10,
+        "blessMax": 2,
+        "luckPoints": 5,
+        "luckMax": 1,
+        "cap": 95,
+        "starCap": 60
+      },
+      "rules": {
+        "dismantleDust": 20,
+        "eyeShardsPerEye": 10,
+        "pearl": {
+          "common": {
+            "pearls": 1,
+            "fish": 12,
+            "shards": 0
+          },
+          "rare": null,
+          "epic": {
+            "pearls": 1,
+            "fish": 1,
+            "shards": 0
+          },
+          "legendary": {
+            "pearls": 3,
+            "fish": 1,
+            "shards": 3
+          }
+        },
+        "pearlWaters": [
+          "m4",
+          "m5",
+          "m6"
+        ]
+      },
+      "batchMax": 10
+    },
+    "soulStones": {
+      "ruby": {
+        "stat": "atk",
+        "unit": "pct",
+        "essenceId": "soul_ess_ember",
+        "rawId": "soul_raw_ruby"
+      },
+      "diamond": {
+        "stat": "hp",
+        "unit": "pct",
+        "essenceId": "soul_ess_frost",
+        "rawId": "soul_raw_diamond"
+      },
+      "sapphire": {
+        "stat": "def",
+        "unit": "pct",
+        "essenceId": "soul_ess_pearl",
+        "rawId": "soul_raw_sapphire"
+      },
+      "jade": {
+        "stat": "crit",
+        "unit": "pp",
+        "essenceId": "soul_ess_silk",
+        "rawId": "soul_raw_jade"
+      },
+      "onyx": {
+        "stat": "evade",
+        "unit": "pp",
+        "essenceId": "soul_ess_shadow",
+        "rawId": "soul_raw_onyx"
+      },
+      "garnet": {
+        "stat": "boss",
+        "unit": "pct",
+        "essenceId": "soul_ess_storm",
+        "rawId": "soul_raw_garnet"
+      }
+    }
+  },
+  "locale": {
+    "research": {
+      "title": "Kutatás",
+      "stepOf": "Kutatás: {{n}}/{{total}}",
+      "steps": {
+        "wolf": {
+          "title": "Kőerezet a fogban",
+          "story": "Farkasagyar! Nézze, nézze csak: a zománcán apró kék erezet fut, pont olyan, mint a viharkövek repedései. Ezek a farkasok nem egyszerűen megvadultak, hanem rágcsálták a köveket, és a kő beleivódott a fogukba! Hozzon tíz jó mintát, és kiderítem, hogyan fordíthatjuk ezt az erőt a maga javára.",
+          "family": "Farkasok"
+        },
+        "boar": {
+          "title": "Kőpor a csontokban",
+          "story": "Vaddisznóagyar! A disznók pont ott túrnak, ahol a kövek becsapódtak, és a por a csontjaikban gyűlik össze. Képzelje, a viharkő pora nem mérgezi őket, hanem szívósabbá teszi! Ha megfejtem az arányt, maga is kibír majd egy-két ütéssel többet.",
+          "family": "Vaddisznók"
+        },
+        "bear": {
+          "title": "A viharok évgyűrűi",
+          "story": "Medvekarom, végre! Keresztben elvágva rétegeket mutat, mint a fák évgyűrűi, és minden réteg egy-egy vihart őriz. A medvék nem a kövektől erősödnek, hanem minden vihar után vastagabb páncélt növesztenek. Ezt a trükköt el kell lesnünk!",
+          "family": "Medvék"
+        },
+        "tiger": {
+          "title": "Villám a csíkokban",
+          "story": "Tigrisszőr! Tudta, hogy a csíkjai pontosan úgy ágaznak el, mint a villám? Minden tigris egy kis vihart hord a bundájában, és amikor ugrik, a kő szikrája vezeti a mancsát. Innen tudják mindig, hol a leggyengébb pont!",
+          "family": "Tigrisek"
+        },
+        "archer": {
+          "title": "A szilánk emlékezete",
+          "story": "Nyílhegy egy útonálló tegezéből, és nem vasból van, hanem csiszolt viharkő-szilánkból! A szilánk emlékszik a viharra, amelyből jött, és repülés közben arrafelé húz. Ha megértjük, merre húz, maga mindig egy szempillantással előbb tér ki előle.",
+          "family": "Íjászok"
+        },
+        "mercenary": {
+          "title": "Pecsét és szilánk",
+          "story": "Zsoldospecsét, és nézze, a közepébe viharkő-forgácsot foglaltak! Valaki szervezetten gyűjti a köveket, és a zsoldosok neki dolgoznak. Ez már nem biológia, ez összeesküvés, de a forgács attól még ugyanolyan izgalmas!",
+          "family": "Zsoldosok"
+        },
+        "orc": {
+          "title": "Régebbi a birodalomnál",
+          "story": "Agyarból faragott ork amulett, és a jelek rajta régebbiek a birodalomnál! Az orkok már akkor ismerték a köveket, amikor nálunk még csak eső esett. Úgy tűnik, a viharok nem először érkeztek, csak mi felejtettük el őket.",
+          "family": "Bunkós orkok"
+        },
+        "shaman": {
+          "title": "A vihar szíve",
+          "story": "A sámán csontja a spirállal, és most már értem: ez nem díszítés, hanem térkép! Minden vihar egyetlen pont körül forog, és a kövek ugyanannak a szívnek a darabjai. Ha megtaláljuk azt a szívet, talán a viharoknak is véget vethetünk!",
+          "family": "Totemrázó sámánok"
+        },
+        "scorpion": {
+          "title": "Homokba temetett vihar",
+          "story": "Skorpiófullánk! Nézd csak a hegyét: a méreg megkristályosodott, és benne ugyanaz a kék erezet fut, mint a farkasok fogában. A sivatagban a kövek nem csapódtak be, hanem homok alá kerültek, és a skorpiók rájuk fészkeltek. Hozz tíz mintát, és kiderítem, hogyan szúrhatsz te is pontosan oda, ahová kell.",
+          "family": "Skorpiók"
+        },
+        "mummy": {
+          "title": "A pólyák titka",
+          "story": "Egy darab pólya a romőrről, és nem vászon, hanem kőporral átitatott selyem! Valaki régen így bugyolálta be az őröket, hogy a vihar ne árthasson nekik, és azóta is állnak. Ha megfejtem a szövést, te is kibírsz majd egy-két ütéssel többet. A szaga ellen sajnos nincs recept.",
+          "family": "Pólyás romőrök"
+        },
+        "snow_wolf": {
+          "title": "Fagyott spirál",
+          "story": "Hósörényű farkasszőr, és a jég a szálakban nem véletlenül fagyott meg: apró spirálokba rendeződik, mint a sámán csontján. A hágón közelebb van a vihar szíve, a farkasok érzik, és vastagabb bundát növesztenek ellene. Ezt a bundát kölcsönvesszük. Tudományos célra, természetesen.",
+          "family": "Hósörényű farkasok"
+        },
+        "yeti": {
+          "title": "Szikra a bozontban",
+          "story": "Bozontos jetiszőr! Tudtad, hogy a jeti nem a hidegtől ilyen bozontos, hanem a villámtól? Minden szálban egy szikra alszik, és amikor a jeti ugrik, pont a gyenge pontra viszi a mancsát. Csak még egy minta, és utána tényleg csak még egy.",
+          "family": "Jetik"
+        },
+        "fire_imp": {
+          "title": "Parázs a zsebben",
+          "story": "Tűzmanó-szarv, még langyos! A manók a kövek parazsát a zsebükben hordják, és ettől olyan fürgék, hogy a saját árnyékukat is lehagyják. Ha rájövök, hogyan csinálják, te is kitérsz, mielőtt a csapás odaér.",
+          "family": "Tűzmanók"
+        },
+        "magma_giant": {
+          "title": "A vihar szíve dobog",
+          "story": "Magmaóriás-szív, és nézd, ver! Lassan, mint egy nagy dob a föld alatt. Ez egy darab abból a szívből, ami körül minden vihar forog: a kövek innen jöttek, és ide húznak vissza. Ha megértem a dobbanását, minden ütésed vele együtt dobban majd.",
+          "family": "Magmaóriások"
+        }
+      },
+      "lines": {
+        "ready": "Van mintája? Adja csak ide, remeg a kezem az izgalomtól!",
+        "waiting": "Az előző mintákat még vizsgálom. Egy kis türelmet, a tudomány nem siet.",
+        "noSample": "Még nincs mintája? Ne csüggedjen, a vadászat is kutatás, csak hangosabb.",
+        "locked": "Ehhez a kutatáshoz még túl zöldfülű, bocsásson meg. Jöjjön vissza, ha már {{level}}. szintű!",
+        "allDone": "Minden kutatást befejeztünk! Most írom a könyvet. Maga is benne lesz, a harmadik fejezetben.",
+        "success": [
+          "Tökéletes minta! Ezt rögtön a nagyító alá teszem.",
+          "Igen, igen, IGEN! Pontosan ez kellett.",
+          "Nézze ezt az erezetet! Gyönyörű. Mármint tudományosan.",
+          "Pontosan ez hiányzott! Mármint ez, és még egy. De ez is nagyon jó.",
+          "Bevált! Ezt lábjegyzetben is megemlítem. Kétszer."
+        ],
+        "fail": [
+          "Ó, ez sajnos elporladt, mielőtt lejegyezhettem volna.",
+          "Hm. Ez inkább sár, mint minta. Semmi baj, a tudomány is sokat bukik.",
+          "Elszennyeződött. A kudarc is adat, csak kevésbé szórakoztató.",
+          "Ez sajnos nem minta, hanem egy nagyon meggyőző kavics.",
+          "Nem vált be. Hozzon még egyet. És utána még egyet, biztos, ami biztos."
+        ],
+        "complete": "Megvan! A tizedik minta is a helyén, a felfedezés kész. Ezt nézd!",
+        "skip": "Jó, jó, megnézem gyorsabban. A nagyítót már úgyis kipucoltam.",
+        "elixir": "Ettől a cseppentőtől a következő minták szinte biztosan beválnak!"
+      },
+      "sample": {
+        "delivered": "Átadott minták",
+        "owned": "Nálad: {{count}} db",
+        "source": "Vizsgált lény",
+        "fromLabel": "Minta forrása",
+        "from": "{{family}} dobják (portya, {{map}}. térkép): {{familyPct}}; más szintedhez illő harc: {{pct}}",
+        "fromAny": "Bármely szintedhez illő megnyert harc: {{pct}}",
+        "fromLocked": "A {{level}}. szinttől",
+        "rule": "A minta csak megnyert aktív harcból esik (portya, kő őrzői, boss, kazamata, torony), AFK-vadászatból soha. Csak az aktív lépésnél gyűlik.",
+        "ruleHelp": "Mintát csak az általad megnyert harcok dobhatnak (portya, kő őrzői, boss, kazamata, torony), a fent jelzett eséllyel. Az AFK-vadászat sosem ad mintát. Csak az aktív lépéshez gyűlik minta: a lépés indulása előtt megnyert harc nem hoz."
+      },
+      "chance": {
+        "label": "Sikeresély",
+        "elixir": "elixírrel"
+      },
+      "next": {
+        "label": "Következő átadás",
+        "now": "Most",
+        "in": "{{time}} múlva"
+      },
+      "deliver": "Átadás",
+      "deliverMany_one": "Átadok {{count}} mintát",
+      "deliverMany_other": "Átadok {{count}} mintát",
+      "deliverHint": "Egy átadással legfeljebb {{count}} mintát adhatsz le, a vizsgálat sorban halad, amíg a kutatás el nem készül. Ami beválik, a számlálót növeli, ami nem, kárba vész. Mintánként 2 óra a vizsgálat, utána jöhet a következő átadás.",
+      "result": {
+        "success": "A minta bevált",
+        "fail": "A minta nem vált be",
+        "batch_one": "{{accepted}} / {{count}} minta vált be",
+        "batch_other": "{{accepted}} / {{count}} minta vált be"
+      },
+      "skip": {
+        "label": "Várakozás átugrása",
+        "hint": "A vizsgálat rögtön kész, és jöhet a következő átadás."
+      },
+      "elixir": {
+        "label": "Kutató-elixír",
+        "hint": "+30% sikeresély a következő átadás minden mintájára.",
+        "active": "Az elixír a következő átadás minden mintájára hat."
+      },
+      "coinsLabel_one": "{{label}}, {{count}} Viharérme",
+      "coinsLabel_other": "{{label}}, {{count}} Viharérme",
+      "discoveries": {
+        "title": "Felfedezések",
+        "count": "{{done}} / {{total}} kész",
+        "number": "{{n}}. felfedezés",
+        "open": "Felfedezés megnyitása: {{title}}",
+        "current": "Folyamatban",
+        "sealed": "Lezárt kutatás",
+        "bonus": "Állandó bónusz",
+        "reveal": "Felfedezés!",
+        "ok": "Remek!"
+      },
+      "mods": {
+        "xpMult": "XP +{{value}}",
+        "nyangMult": "Nyang +{{value}}",
+        "dropMult": "Zsákmány +{{value}}",
+        "atkMult": "Támadás +{{value}}",
+        "defMult": "Védelem +{{value}}",
+        "hpMult": "HP +{{value}}",
+        "critBonus": "Kritikus esély +{{value}}",
+        "evadeBonus": "Kitérés +{{value}}"
+      },
+      "lockedNote": "A kutatást {{level}}. szinttől kezdheted el. Addig is erősödj a vadászhelyeken!",
+      "allDoneTitle": "Minden kutatás kész",
+      "allDoneText_one": "A felfedezés a tiéd, a bónusza végleg hat.",
+      "allDoneText_other": "Mind a {{count}} felfedezés a tiéd, a bónuszaik végleg hatnak.",
+      "errors": {
+        "level_required": "Ehhez a kutatáshoz magasabb szint kell.",
+        "no_sample": "Nincs nálad minta. A szinteden megnyert harcok adhatnak mintát (a háttér-vadászat nem).",
+        "cooldown": "A szörnytudós még az előző mintát vizsgálja.",
+        "no_cooldown": "Nincs mit átugrani: most is átadhatsz mintát.",
+        "research_complete": "Minden kutatás kész.",
+        "elixir_active": "Az elixír már hat a következő átadásra.",
+        "insufficient_funds": "Nincs elég nyangod a vizsgálat díjára."
+      },
+      "fee": {
+        "label": "Vizsgálat díja"
+      }
+    },
+    "doll": {
+      "figure": "{{name}} teljes alakos figurája a viselt felszerelésben",
+      "weapon": {
+        "emptyTitle": "Nincs fegyvered",
+        "emptyHint": "Puszta kézzel? A boltban vehetsz fegyvert.",
+        "toShop": "Fegyver: üres. Irány a bolt"
+      }
+    }
+  },
+  "caution": "A dataHome megléte önmagában nem bizonyít későbbi játékmeneti hozamot a házépítésből."
+}

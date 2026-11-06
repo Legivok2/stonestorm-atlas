@@ -1,0 +1,243 @@
+{
+  "stats": {
+    "manifestEntries": 2124,
+    "available": 2103,
+    "missing": 21,
+    "invalid": 0,
+    "uniqueContent": 2077,
+    "duplicateGroups": 18,
+    "categories": 26,
+    "identified": 882,
+    "unknown": 907,
+    "partial": 314
+  },
+  "missing": [
+    {
+      "id": "video/boss_m1",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/mage_blade_female_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/mage_blade_female_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/mage_blade_male_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/mage_blade_male_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/ninja_female_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/ninja_female_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/ninja_male_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/ninja_male_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/shaman_female_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/shaman_female_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/shaman_male_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/shaman_male_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/stone_breeze",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/stone_monsoon",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/stone_shower",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/stone_thunder",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/warrior_female_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/warrior_female_pick",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/warrior_male_idle",
+      "downloadStatus": "ValueError"
+    },
+    {
+      "id": "video/warrior_male_pick",
+      "downloadStatus": "ValueError"
+    }
+  ],
+  "invalid": [],
+  "duplicates": [
+    {
+      "sha256": "d6d9c9f2c354b2d91997866feb9281b403a978c934fe9c9ababac9e9ab5010be",
+      "images": [
+        "stones/stone_breeze",
+        "stones/stone_m1_3",
+        "stones/stone_m1_gust"
+      ]
+    },
+    {
+      "sha256": "0cb7867d7cf455779e649256b9ed5b84827086cff8028939cb3f4c5486a68f70",
+      "images": [
+        "stones/stone_breeze_broken",
+        "stones/stone_m1_3_broken",
+        "stones/stone_m1_gust_broken"
+      ]
+    },
+    {
+      "sha256": "3d725596d4ee50d072cac50a05cc63a0354fcf757ee9758865b64b78abaf1c01",
+      "images": [
+        "stones/stone_breeze_cracked",
+        "stones/stone_m1_gust_cracked"
+      ]
+    },
+    {
+      "sha256": "1d52d2ca866b0e438ad9f40eabe3eb3475c7f40e2106f52e7a497d9107f49f97",
+      "images": [
+        "stones/stone_m1_4",
+        "stones/stone_shower"
+      ]
+    },
+    {
+      "sha256": "58935803a21a76ab39230a66bcdca2b0053644092cfa9ecc0a9b7646c56fbf0f",
+      "images": [
+        "stones/stone_m1_4_broken",
+        "stones/stone_shower_broken"
+      ]
+    },
+    {
+      "sha256": "be8cdca77ccec2a0ee712cb62d4d0eaa2c305bc3bd36e0381619b259cc9714ba",
+      "images": [
+        "stones/stone_m2_3",
+        "stones/stone_m2_6",
+        "stones/stone_thunder"
+      ]
+    },
+    {
+      "sha256": "94a669eded8f385c7a263cddfdb96543071c284f84ebc052c430cedc47d3379a",
+      "images": [
+        "stones/stone_m2_3_broken",
+        "stones/stone_m2_6_broken",
+        "stones/stone_thunder_broken"
+      ]
+    },
+    {
+      "sha256": "72738836b38fba7c8f16411e24f52f600ae6a303e5218c682dfa3bc8ed320a2e",
+      "images": [
+        "stones/stone_m2_3_cracked",
+        "stones/stone_m2_6_cracked"
+      ]
+    },
+    {
+      "sha256": "01a4dace0f0d7edb96af75de73e25c0dd8e31e0cb5915bbd502acd26a80f52fa",
+      "images": [
+        "stones/stone_m2_4",
+        "stones/stone_m2_5",
+        "stones/stone_monsoon"
+      ]
+    },
+    {
+      "sha256": "0ede38e0cd76fcc9574faf659aaf87cf20c38f9db3ccb751174c54dc825bc023",
+      "images": [
+        "stones/stone_m2_4_broken",
+        "stones/stone_m2_5_broken",
+        "stones/stone_monsoon_broken"
+      ]
+    },
+    {
+      "sha256": "3f35c0cede25873942443b9d9f21146662a8fd8c7da72b281ba27d34e89bd8c2",
+      "images": [
+        "stones/stone_m2_4_cracked",
+        "stones/stone_m2_5_cracked"
+      ]
+    },
+    {
+      "sha256": "09d13b593252cc622d3d04e4c922968f6331cf34dc4c3df9dc79666a4b0b84cd",
+      "images": [
+        "scenes/backdrop_firststorm",
+        "scenes/backdrop_legenddecember",
+        "scenes/backdrop_legendnovember"
+      ]
+    },
+    {
+      "sha256": "1891289773da6a0229dbece92f64951bac70222f76240ab572dfc1101d6a439d",
+      "images": [
+        "icons/luck_ore",
+        "icons/ore_luck"
+      ]
+    },
+    {
+      "sha256": "f45c2e34d269eab18f765e11e3ec9011a54f45b567a2bc3a429d569e0cf580a1",
+      "images": [
+        "icons/patience_scroll",
+        "icons/scroll_patience"
+      ]
+    },
+    {
+      "sha256": "cf30302741acdc1ad9256e919bacda14149d6a9438aeb983a8bfb60306e7ea42",
+      "images": [
+        "ui/banner_blue",
+        "ui/flag_blue"
+      ]
+    },
+    {
+      "sha256": "95124fe03577b484745b0f2c274f77eabe5ede36591036db54db3b8bd2d3a2b6",
+      "images": [
+        "ui/banner_red",
+        "ui/flag_red"
+      ]
+    },
+    {
+      "sha256": "b203d360537cee72a1e4f127ae017dcb7b7ed95236cd7ad119bcb566396da5c7",
+      "images": [
+        "ui/banner_yellow",
+        "ui/flag_yellow"
+      ]
+    },
+    {
+      "sha256": "9cfacdc468b571722d59b56672080e356336f0af4600386323b1087f2276756f",
+      "images": [
+        "uikit/frame_firststorm",
+        "uikit/frame_legenddecember",
+        "uikit/frame_legendnovember"
+      ]
+    }
+  ],
+  "csvStatuses": {
+    "ValueError": 21,
+    "downloaded": 2035,
+    "already_exists": 68
+  },
+  "unlistedLocalFiles": []
+}

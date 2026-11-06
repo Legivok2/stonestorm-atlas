@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {root,sourceFiles,codeFiles,audit} from './publication-plan.mjs';
 const codeOnly=process.argv.includes('--code-only');
 const files=codeOnly?codeFiles():sourceFiles(),report=audit(files);
-if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length||report.rightsPending.length)throw Error('A GitHub-feltöltés előkészítése leállt: az audit és az engedélyek még nem rendben vannak.');
+if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length||report.rightsBlocking.length)throw Error('A GitHub-feltöltés előkészítése leállt: az audit vagy a közzétételi felhatalmazás hiányos.');
 const tracked=execFileSync('git',['ls-files','-z'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean);
 const allowed=new Set(files);
 const unexpected=tracked.filter(file=>!allowed.has(file));

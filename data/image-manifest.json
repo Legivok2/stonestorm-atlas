@@ -1,0 +1,162 @@
+[
+  {
+    "id": "btn_character",
+    "file": "Stonestorm_files/btn_character.webp",
+    "sha256": "f5673d0dc77bca1f955874cfaf5b31c1bb494f0f8185a3321061581e6c80c788",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_character.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_hunt",
+    "file": "Stonestorm_files/btn_hunt.webp",
+    "sha256": "838867e38218d878096d5b3a8971618fad0c7b2b8bebc3b6c81a49fb2bc7d4d6",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_hunt.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_guild",
+    "file": "Stonestorm_files/btn_guild.webp",
+    "sha256": "ec5b228e4bd2fc2a7fd8f9dd147111c73b3c5c5966b5f529d5256c9209772a11",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_guild.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_city",
+    "file": "Stonestorm_files/btn_city.webp",
+    "sha256": "a7fa6d2d31e3d96e3da4552ebd1d9fc605bcf72328179707920dcbf93785c1f1",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_city.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_tower",
+    "file": "Stonestorm_files/btn_tower.webp",
+    "sha256": "069421678dc1b0d63afff93c0e42f8b4780e8c16c7f958d4d9e818c5c1007b2e",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_tower.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_help",
+    "file": "Stonestorm_files/btn_help.webp",
+    "sha256": "6d45efbec305c1a2ccf94af98bd91d7a0026ba2d9217f105b91370cfd84bf3ee",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_help.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_arena",
+    "file": "Stonestorm_files/btn_arena.webp",
+    "sha256": "9b4cefd0fdf349db646a888920a6a6c8088265387749040a655ea1b3c6bccd4c",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_arena.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "btn_premium",
+    "file": "Stonestorm_files/btn_premium.webp",
+    "sha256": "fdf602080d92014f0c7d35481458ea5ac18fd28f974afb29335ad19597dbbdcf",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/btn_premium.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "bld_hq",
+    "file": "Stonestorm_files/bld_hq.webp",
+    "sha256": "537cc8dca81421628f15e383e9e69df89e7fe2d4aaa9b2cf5b687c21e0a10b50",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/bld_hq.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Azonosított céhes épület"
+  },
+  {
+    "id": "bld_forge",
+    "file": "Stonestorm_files/bld_forge.webp",
+    "sha256": "f848e963156c93d527e6761b4da54ed0dbd39a052e6d0c6d804f463fe346c01f",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/bld_forge.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Azonosított céhes épület"
+  },
+  {
+    "id": "bld_dojo",
+    "file": "Stonestorm_files/bld_dojo.webp",
+    "sha256": "26a813c6036cc7c8778d7792a5fdcb734ca03b0307a3c0e33fe650a3eae5bb35",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/bld_dojo.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Azonosított céhes épület"
+  },
+  {
+    "id": "bld_warehouse",
+    "file": "Stonestorm_files/bld_warehouse.webp",
+    "sha256": "8c4b6ee8525d966c494812602fbd621c4932096b722370d372cfb3bf769e403f",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/bld_warehouse.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Azonosított céhes épület"
+  },
+  {
+    "id": "bld_banner",
+    "file": "Stonestorm_files/bld_banner.webp",
+    "sha256": "add597d1b6d1a7a26d96f255e466aeb41f3591d2445ea7295c5863546b06d3e0",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/bld_banner.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Azonosított céhes épület"
+  },
+  {
+    "id": "guildyard_base",
+    "file": "Stonestorm_files/guildyard_base.webp",
+    "sha256": "9f0fe56079c464cd91ee71e7e4e46101e9bcb3d4c4e0d0d0185d2e940d29e6de",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/guildyard_base.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "m4_boss",
+    "file": "Stonestorm_files/m4_boss.webp",
+    "sha256": "b723548ca72a5a95aa4a36b5efa6d8e0dc16c196545200312c62ea74f939e5ec",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/m4_boss.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Csak a 4. pálya bossához"
+  },
+  {
+    "id": "energy",
+    "file": "Stonestorm_files/energy.webp",
+    "sha256": "3eff04a5a1948d91a85c5fa3eac7d0c0877e335ed99eb688f01ad31ef3b77472",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/energy.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "nyang_small",
+    "file": "Stonestorm_files/nyang_small.webp",
+    "sha256": "c857a6abea5e086ccb4bd24ca49c10e437c91fc603c17ee844e87226f7d21d02",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/nyang_small.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "coin_dragon",
+    "file": "Stonestorm_files/coin_dragon.webp",
+    "sha256": "c1f2f46bdcca44ba6fc54c6aecb6d0d0efba3580c749cad767fa14eddf1d7480",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/coin_dragon.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "luck_ore",
+    "file": "Stonestorm_files/luck_ore.webp",
+    "sha256": "1891289773da6a0229dbece92f64951bac70222f76240ab572dfc1101d6a439d",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/luck_ore.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  },
+  {
+    "id": "emblem_storm",
+    "file": "Stonestorm_files/emblem_storm.webp",
+    "sha256": "1e959bebb213471f248a700c1b4132236565880cd3e83c7805c940ed057fe90a",
+    "source": "Felhasználói játékmentés; ZIP: dist/assets/game/emblem_storm.webp",
+    "permission": "unverified-public-reuse",
+    "usage": "Kategóriaikon / azonosított rendszerillusztráció"
+  }
+]

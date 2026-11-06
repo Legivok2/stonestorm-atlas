@@ -4,7 +4,7 @@ import {root,sourceFiles,audit,assertSafeRelative,walk} from './publication-plan
 const review=process.argv.includes('--local-review');
 const files=sourceFiles(),report=audit(files);
 if(report.missing.length||report.secretOrPersonalFindings.length||report.largeFiles.length)throw Error('A forráscsomag auditja hibát talált.');
-if(!review&&report.rightsPending.length)throw Error('GitHub-feltöltési csomag nem készül: a játékfájlok terjesztési engedélye tisztázandó. Helyi ellenőrzéshez: npm run prepare:github:review.');
+if(!review&&report.rightsBlocking.length)throw Error('GitHub-feltöltési csomag nem készül: nincs közzétételi felhatalmazás minden játékfájlra. Helyi ellenőrzéshez: npm run prepare:github:review.');
 const directory=path.join(root,'.release',review?'local-review':'stonestorm-atlas');
 const manifestPath=path.join(root,'.publication',review?'source-review-manifest.json':'source-manifest.json');
 const previous=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath,'utf8')).files:[];
