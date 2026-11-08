@@ -20,11 +20,11 @@ function sibling(saved,blocked=false){
   win.HTMLDialogElement.prototype.showModal=function(){this.open=true;};win.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new win.Event('close'));};
   if(blocked)Object.defineProperty(win,'localStorage',{get(){throw new Error('Storage blocked for test');}});
   else if(saved)win.localStorage.setItem('stonestorm-atlas-builds-v1',saved);
-  for(const name of ['content','main','atlas-data','atlas-math','image-data','image-store','planner-model','atlas-features','atlas'])win.eval(fs.readFileSync(path.join(root,'js',name+'.js'),'utf8'));
+  for(const script of win.document.querySelectorAll('script[src]'))win.eval(fs.readFileSync(path.join(root,script.getAttribute('src')),'utf8'));
   return win;
 }
 try{
-  for(const name of ['content','main','atlas-data','atlas-math','image-data','image-store','planner-model','atlas-features','atlas'])w.eval(fs.readFileSync(path.join(root,'js',name+'.js'),'utf8'));
+  for(const script of d.querySelectorAll('script[src]'))w.eval(fs.readFileSync(path.join(root,script.getAttribute('src')),'utf8'));
   check();
   await go('#atlas/gallery');assert.equal(d.querySelectorAll('.catalog-card').length,24);
   for(const category of w.STONESTORM_IMAGES.categories){input('#catalog-category',category.id);assert(d.querySelectorAll('.catalog-card').length>0,category.id);}

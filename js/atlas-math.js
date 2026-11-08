@@ -19,5 +19,20 @@
     const runs=Math.floor(budget/energy);
     return {perEnergy:xp/energy,perHour:xp/minutes*60,runs,totalXp:runs*xp,totalMinutes:runs*minutes};
   }
-  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency});
+  function parsePercent(input) {
+    if(typeof input==='number')return valid(input)?input:null;
+    if(typeof input!=='string'||! /^(?:\d+(?:[.,]\d*)?|[.,]\d+)$/.test(input.trim()))return null;
+    const number=Number(input.trim().replace(',','.'));
+    return valid(number)?number:null;
+  }
+  function cappedPercent(amount,cap) {
+    if(!valid(amount)||!valid(cap,Number.MIN_VALUE,100))return null;
+    const effective=Math.min(amount,cap);
+    return {amount,cap,effective,excess:amount-effective,fill:effective/cap};
+  }
+  function sumBonuses(gear,other) {
+    if(!valid(gear)||!valid(other)||!valid(gear+other))return null;
+    return {gear,other,total:gear+other,effective:null,cap:null};
+  }
+  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,cappedPercent,sumBonuses});
 })();

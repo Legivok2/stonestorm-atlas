@@ -1,7 +1,8 @@
 /* A Képtár, összehasonlító és karaktertervező ugyanannak az Atlasnak a moduljai. */
 globalThis.AtlasExtensions={
-  categories:[['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield']],
+  categories:[['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield']],
   init(ui){
+    const statLimits=globalThis.AtlasStatLimitsUI.init(ui);
     const {db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render}=ui;
     const $=s=>document.querySelector(s);
     const catalog=media.catalog;
@@ -134,6 +135,7 @@ globalThis.AtlasExtensions={
       $('#planner-saved').addEventListener('change',e=>{planner.savedId=e.target.value;render();$('#planner-saved').focus({preventScroll:true});});
     }
     function afterRender(page){
+      if(page==='stat-limits'&&!state.query)statLimits.afterRender();
       if(page==='gallery'&&!state.query){
         updateGallery();
         for(const [id,key,event] of [['catalog-query','query','input'],['catalog-category','category','change'],['catalog-status','status','change'],['catalog-sort','sort','change']])$('#'+id).addEventListener(event,e=>{gallery[key]=e.target.value;gallery.page=1;updateGallery();});
@@ -189,6 +191,6 @@ globalThis.AtlasExtensions={
       }
     }
     function home(){return `<div class="feature-links"><a href="#atlas/gallery">${media.render(media.get('uikit','btn_help'),{thumbnail:true})}<span>Képtár<small>${num(catalog.stats.available)} eredeti grafika</small></span></a><a href="#atlas/compare">${media.render(media.get('uikit','btn_character'),{thumbnail:true})}<span>Felszerelés-összehasonlító<small>Két megjelenés egymás mellett</small></span></a><a href="#atlas/planner">${media.render(media.get('uikit','btn_arena'),{thumbnail:true})}<span>Karaktertervező<small>Építs, hasonlíts össze, ments</small></span></a></div>`;}
-    return {screens:{gallery:galleryPage,compare:comparePage,planner:plannerPage},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home};
+    return {screens:{gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home};
   }
 };

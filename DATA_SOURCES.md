@@ -4,6 +4,14 @@ Integráció dátuma: **2026-11-06**. Kizárólag a felhasználó által helyben
 
 ## Forrásjegyzék
 
+### Stat limitek és közölt játékosértékek (2026-11-08)
+
+A `js/stat-limits.js` a központi limitadatbázis. A `harcero.rules.reductionCap = 0.75`, `critCap = 0.5` és `evadeCap = 0.12` értékeket a `source-data/05_kasztok_kepessegek_harcertek.json` mentett szabályaival egyeztettük. Ezekből a 75%-os sebzéscsökkentési, 50%-os kritikus és 12%-os bosskitérési korlát szerepel a kalkulátorban. Nyers védelmi pontból nincs átváltás.
+
+A normál ellenfelekre vonatkozó 35%-ot a projektgazda adta meg játékbeli súgóadatként. A mentett magyar `tipCapped` szöveg valóban megkülönbözteti a boss- és normálkorlátot, de helyettesítési paramétereket tartalmaz; a 35%-os számérték forrása itt a projektgazdai közlés.
+
+A +84,7% teljes XP, +31,1% felszerelés-XP, +130% teljes nyang és +116,4% felszerelés-nyang a projektgazda által közölt játékos-képernyőképek adatai. Nem önállóan megvizsgált képfájlok vagy maximummérések. Az ezek közötti különbségek számított különbségek; a felület nem nevezi őket függetlenül mért egyéb bónusznak. A számtani összeg nem igazolja a tényleges játékbeli érvényesülést.
+
 ### Új képadatbázis és Planner-források
 
 - `stonestorm_image_tools/manifest.json`: 2124 kategorizált bejegyzés; a `variants` metaadat nem önálló kategórialista.

@@ -1,6 +1,14 @@
 ﻿# Stonestorm Atlas – projektállapot
 
-Frissítve: **2026. november 7. – teljes Atlas GitHub Pages-kiadás.** A játékadatok továbbra is a 2026-11-06-i helyi pillanatképből származnak, az adatverzió `ac0984e054de`.
+Frissítve: **2026. november 8. – Stat limitek és interaktív kalkulátor.** A játékadatok továbbra is a 2026-11-06-i helyi pillanatképből származnak, az adatverzió `ac0984e054de`.
+
+## Stat limitek
+
+Új navigációs oldal: `#atlas/stat-limits`. Nyolc statisztika központi adatmodellből, megbízhatósági jelölésekkel és forrásokkal. A négy harci eredményt három százalékos karakteradatból számítjuk: sebzéscsökkentés, kritikus esély és a két ellenféltípusra külön korlátozott kitérés. A sávok a plafonig számított értéket, a szövegek az elvesző százalékpontokat mutatják. A nyers védelemből nincs átváltás.
+
+Az XP-/nyangösszegző elkülöníti a felszerelést, az egyéb forrásokat, a számtani összeget és az ismeretlen tényleges érvényesülést. A megfigyelt játékosértékek nem maximumok. A támadás, HP, XP és nyang felső korlátja továbbra sem igazolt. A 35%-os normál kitérés a projektgazda által közölt súgóadat.
+
+21 egység-/adat-/publikációs teszt sikeres. A valódi Chromiumteszt 1440×1000, 390×844 és 320×760 nézetben ellenőrizte a navigációt, a kalkulációkat, a hibás bevitelt, az állapotmegőrzést és a túlcsordulás hiányát. A statikus csomag 3760 kiszolgált erőforrásának HTTP-tesztje sikeres. A korábbi `Pages-retry.txt` projektgazdai commit beemelve, megőrizve.
 
 ## A négy fejlesztés eredménye
 

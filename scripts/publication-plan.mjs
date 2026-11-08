@@ -47,6 +47,7 @@ export function guideFiles(){
 }
 export function sourceFiles(){
   const files=[...runtimeFiles(),'package.json','serve.mjs','README.md','PROJECT_STATUS.md','DATA_SOURCES.md','IMAGE_SOURCES.md','.gitignore','.gitattributes','.publication/permissions.json',
+    ...(fs.existsSync(path.join(root,'Pages-retry.txt'))?['Pages-retry.txt']:[]),
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',
     ...['scripts','tests','source-data','data','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|json|ya?ml)$/.test(p)).map(relative)),
     ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md'].map(file=>'docs/'+file)
@@ -103,7 +104,7 @@ export function audit(files){
     if(!fs.existsSync(target)){missing.push(file);continue;}
     const size=fs.statSync(target).size;bytes+=size;
     if(size>=100*1024*1024)large.push({file,bytes:size});
-    if(/\.(?:html|css|js|mjs|json|md|py|csv|ya?ml)$/.test(file))findings.push(...scanText(fs.readFileSync(target,'utf8'),file));
+    if(/\.(?:html|css|js|mjs|json|md|txt|py|csv|ya?ml)$/.test(file))findings.push(...scanText(fs.readFileSync(target,'utf8'),file));
   }
   const rightsPending=rightsIssues(files,policy);
   const rightsBlocking=rightsPending.filter(issue=>!publicationOverrideApplies(policy,issue.scope));

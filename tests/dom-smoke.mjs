@@ -20,7 +20,7 @@ let validate=()=>{};
 const go=async hash=>{w.location.hash=hash;await new Promise(r=>setTimeout(r,0));errorsCheck();validate();};
 const input=(selector,v,type='input')=>{const el=d.querySelector(selector);assert(el,selector);el.value=String(v);el.dispatchEvent(new w.Event(type,{bubbles:true}));errorsCheck();};
 try{
-  for(const file of ['content','main','atlas-data','atlas-math','image-data','image-store','planner-model','atlas-features','atlas'])w.eval(fs.readFileSync(path.join(root,'js',file+'.js'),'utf8'));
+  for(const script of d.querySelectorAll('script[src]'))w.eval(fs.readFileSync(path.join(root,script.getAttribute('src')),'utf8'));
   errorsCheck();
   const db=w.STONESTORM_ATLAS;
   const allowedPages=new Set([...d.querySelectorAll('[data-atlas-page]')].map(a=>a.dataset.atlasPage));
