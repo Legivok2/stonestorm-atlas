@@ -6,6 +6,10 @@ Integráció dátuma: **2026-11-06**. Kizárólag a felhasználó által helyben
 
 ### Stat limitek és közölt játékosértékek (2026-11-08)
 
+A kritikus rendszer kiegészítése: a `harcero.combat.hero.critMult = 1.5` és a `harcero.rules.supportCaps.critDamage = 0.75` a helyi `05_kasztok_kepessegek_harcertek.json` fájlban ellenőrzött; a harci `hero.supportCaps.critDamage` ugyancsak 0.75. A kalkulátor a megadott hozzáadó képletet használja, nem állít teljes harci sebzésképletet.
+
+A fegyverbónusz-táblázat hat szintsávja és harminc T1–T5 értéke a projektgazda által megadott 2026-11-06-i `spine.lines.percent` klienskivonatból származik. A helyi `02_kovacsolas_bonuses_kovek.json` `stones.items.line.tiers.critDamage` adataival a 6/12/20/28/40%-os alaptier ellenőrizhető. A mentett kliens kódja valóban `fromLevel` alapján választ a `lines.percent` sávokból, de a helyi tematikus JSON nem tartalmazza a teljes magasabb szintű `spine.lines.percent` listát. Ezért a magasabb sávokat nem nevezzük ettől függetlenül ellenőrzött szerveradatnak; a generálási esélyek ismeretlenek.
+
 A `js/stat-limits.js` a központi limitadatbázis. A `harcero.rules.reductionCap = 0.75`, `critCap = 0.5` és `evadeCap = 0.12` értékeket a `source-data/05_kasztok_kepessegek_harcertek.json` mentett szabályaival egyeztettük. Ezekből a 75%-os sebzéscsökkentési, 50%-os kritikus és 12%-os bosskitérési korlát szerepel a kalkulátorban. Nyers védelmi pontból nincs átváltás.
 
 A normál ellenfelekre vonatkozó 35%-ot a projektgazda adta meg játékbeli súgóadatként. A mentett magyar `tipCapped` szöveg valóban megkülönbözteti a boss- és normálkorlátot, de helyettesítési paramétereket tartalmaz; a 35%-os számérték forrása itt a projektgazdai közlés.

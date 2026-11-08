@@ -34,5 +34,24 @@
     if(!valid(gear)||!valid(other)||!valid(gear+other))return null;
     return {gear,other,total:gear+other,effective:null,cap:null};
   }
-  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,cappedPercent,sumBonuses});
+  function parseSignedPercent(input) {
+    if(typeof input==='number')return valid(input,-Infinity)?input:null;
+    if(typeof input==='string'&&/^[+-]/.test(input.trim())){
+      const text=input.trim(),amount=parsePercent(text.slice(1));return amount===null?null:(text.startsWith('-')?-amount:amount)||0;
+    }
+    return parsePercent(input);
+  }
+  function criticalDamage(normalDamage,chance,bonus,gearBonus,rules) {
+    if(!valid(normalDamage)||!valid(chance)||!valid(bonus,-Infinity)||!valid(gearBonus,-Infinity)||!valid(rules?.baseMultiplier,Number.MIN_VALUE))return null;
+    const totalBonus=(bonus+gearBonus)||0;
+    if(!valid(totalBonus,-Infinity))return null;
+    const effectiveChance=cappedPercent(chance,rules.chanceCap),effectiveBonus=cappedPercent(Math.max(0,totalBonus),rules.damageBonusCap);
+    if(!effectiveChance||!effectiveBonus)return null;
+    const multiplier=rules.baseMultiplier+effectiveBonus.effective/100;
+    const criticalHit=normalDamage*multiplier,p=effectiveChance.effective/100;
+    const averageDamage=normalDamage*(1-p)+criticalHit*p;
+    if(!valid(criticalHit)||!valid(averageDamage))return null;
+    return {normalDamage,totalBonus,chance:effectiveChance,bonus:effectiveBonus,multiplier,criticalHit,averageDamage,negativeIgnored:Math.max(0,-totalBonus)};
+  }
+  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,parseSignedPercent,cappedPercent,sumBonuses,criticalDamage});
 })();

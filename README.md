@@ -33,7 +33,7 @@ Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-f
 - **Teljes Képtár:** 2103 ellenőrzött helyi kép 26 kategóriában, állapotszűrővel, kereséssel, rendezéssel, nagy képnézettel és Wiki-kapcsolatokkal: `#atlas/gallery`.
 - **Felszerelés-/kinézet-összehasonlító:** négy kaszt, férfi/női, két grafikai változat, két fegyver/páncél/teljes karakterkép összevetése: `#atlas/compare`.
 - **Character Planner:** validált nyolc felszerelési hely, +0–+9, valódi szettkapcsolatok, kísérő/hátas, teljes karakterelőnézet, A/B build, helyi mentés és megosztási link: `#atlas/planner`.
-- **📊 Stat limitek:** nyolc statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, százalékpontban jelzett veszteség, XP-/nyangösszegző: `#atlas/stat-limits`.
+- **📊 Stat limitek:** kilenc statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, kritikus sebzésmodell, fegyverbónusz-táblázat és XP-/nyangösszegző: `#atlas/stat-limits`.
 
 A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására példa: `#atlas/equipment/item/w_warrior_0`. A modális adatlap Escape-pel és a bezárógombbal zárható.
 
@@ -42,6 +42,10 @@ A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására
 A központi adatok a `js/stat-limits.js` fájlban találhatók; a felület a `js/stat-limits-ui.js`, a tiszta százalékszámítások az `atlas-math.js` részei. A 75%-os korlát sebzéscsökkentésre vonatkozik, nem védelmi pontokra. A normál kitérés 35%-a a projektgazda által közölt súgóadat; a többi harci korlát a mentett szabályokkal egyeztetett.
 
 A +84,7% XP és +130% nyang elért, közölt játékosértékek, nem maximumok. A teljes és a felszerelésből származó érték különbsége csak számtani különbség. Az összegző nem igazolja a ténylegesen érvényesülő bónuszt. A támadás, HP, XP- és nyangbónusz felső korlátja továbbra sem igazolt.
+
+A kritikus kalkulátor külön kezeli az esélyt (legfeljebb 50%) és a kritikus sebzésbónuszt (legfeljebb +75%). A szorzó `1,5 + érvényesülő bónusz / 100`, maximum 2,25×. A 10 000 / 50% / +40% példa 19 000 kritikus és 14 500 átlagsebzést ad. Az átlag egyszerűsített modell, nem tartalmazza a védelem, kitérés, képességek vagy más módosítók hatását. A kiegészítő felszerelésbónusz üresen nulla; negatív összesített bónusznál az alapszorzó marad.
+
+A hat fegyverszintsáv harminc T1–T5 bónusza kattintással betölthető; szintváltáskor a kiválasztott fokozat követi a megfelelő sávot. A T-fokozatokat nem nevezzük hivatalos ritkaságnak. Ezek kliensalapértékek, nem igazolt szerveroldali kiosztási vagy generálási esélyek. A helyi kivonatban az alaptier ellenőrizhető; a teljes magasabb szintű sávlistát a projektgazdai klienskivonat alapján tároljuk.
 
 Az új egységtesztek az `npm test` részei. Az opcionális, valódi Chromiumteszt 1440, 390 és 320 px szélességen fut: `npm run test:stats:browser`. A Playwright és böngészője csak a helyi `.integration/browser-qa/` QA-mappába települt, nem az alkalmazás függősége; a felület és a Pages-build csomagtelepítés nélkül működik.
 
