@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {addonSource,addonArtifacts,addonZip,assertAddonPackage} from './addon-package.mjs';
 
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function walk(directory){
@@ -21,6 +22,7 @@ export function codeFiles(){
   return [...new Set([
     'index.html','.nojekyll','package.json','serve.mjs','README.md','PROJECT_STATUS.md','DATA_SOURCES.md','IMAGE_SOURCES.md','.gitignore','.gitattributes','.publication/permissions.json','assets/images/sources.json',
     ...creatorFiles,
+    ...addonSource,...addonArtifacts,
     ...walk(path.join(root,'assets')).filter(p=>path.dirname(p)===path.join(root,'assets')&&p.endsWith('.svg')).map(relative),
     ...walk(path.join(root,'css')).filter(p=>p.endsWith('.css')).map(relative),
     ...walk(path.join(root,'js')).filter(p=>p.endsWith('.js')&&!['atlas-data.js','image-data.js'].includes(path.basename(p))).map(relative),
@@ -34,6 +36,7 @@ export function runtimeFiles(){
   const catalog=JSON.parse(fs.readFileSync(path.join(root,'data/image-catalog.json'),'utf8'));
   return [...new Set([
     'index.html','.nojekyll',
+    ...addonArtifacts,
     ...walk(path.join(root,'css')).filter(p=>p.endsWith('.css')).map(relative),
     ...walk(path.join(root,'js')).filter(p=>p.endsWith('.js')).map(relative),
     ...walk(path.join(root,'assets')).filter(p=>/\.(?:webp|png|jpe?g|gif|svg|woff2?)$/.test(p)).map(relative),
@@ -47,6 +50,7 @@ export function guideFiles(){
 }
 export function sourceFiles(){
   const files=[...runtimeFiles(),'package.json','serve.mjs','README.md','PROJECT_STATUS.md','DATA_SOURCES.md','IMAGE_SOURCES.md','.gitignore','.gitattributes','.publication/permissions.json',
+    ...addonSource,
     ...(fs.existsSync(path.join(root,'Pages-retry.txt'))?['Pages-retry.txt']:[]),
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',
     ...['scripts','tests','source-data','data','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|json|ya?ml)$/.test(p)).map(relative)),
@@ -57,7 +61,7 @@ export function sourceFiles(){
 export function assertSafeRelative(file){
   if(path.posix.isAbsolute(file)||path.win32.isAbsolute(file)||/^[a-z]:/i.test(file)||file.includes('\\')||file.split('/').some(p=>p==='..'||p===''))throw Error('Nem biztonságos csomagútvonal: '+file);
   if(file.split('/').some(p=>p==='.env'||p.startsWith('.env.')||['.aws','.ssh','.codex'].includes(p)))throw Error('Titkos konfiguráció nem kerülhet a csomagba.');
-  if(file==='Stonestorm.html'||file.startsWith('.integration/')||file.startsWith('.git/')||/\.(?:har|pem|pfx|zip|key)$/.test(file))throw Error('Tiltott publikációs fájl: '+file);
+  if(file==='Stonestorm.html'||file.startsWith('.integration/')||file.startsWith('.git/')||/\.(?:har|pem|pfx|key)$/.test(file)||(file.endsWith('.zip')&&file!==addonZip))throw Error('Tiltott publikációs fájl: '+file);
 }
 export function scopeFor(file){
   if(file.startsWith('stonestorm_image_tools/downloaded/')||file.startsWith('assets/catalog-thumbs/'))return 'game-art-catalog';
@@ -96,6 +100,7 @@ export function scanText(text,file){
   return patterns.flatMap(([kind,pattern])=>[...text.matchAll(pattern)].map(match=>({file,kind,line:text.slice(0,match.index).split('\n').length})));
 }
 export function audit(files){
+  if(files.includes(addonZip))assertAddonPackage(root); // A ZIP csak a tételes, vizsgált forrásból állhat.
   const policy=JSON.parse(fs.readFileSync(path.join(root,'.publication/permissions.json'),'utf8'));
   const missing=[],findings=[],large=[];let bytes=0;
   for(const file of files){

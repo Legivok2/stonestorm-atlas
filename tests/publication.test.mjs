@@ -37,7 +37,7 @@ test('A publikációs csomag nem tartalmazhat játékmentést vagy helyi titkos 
   for(const file of sourceFiles()){
     assert(!file.startsWith('.integration/'));
     assert(!file.startsWith('.git/'));
-    assert(!file.endsWith('.zip'));
+    if(file.endsWith('.zip'))assert.equal(file,'downloads/stonestorm-statcap-overlay.zip');
     assert.notEqual(file,'Stonestorm.html');
     if(file.startsWith('Stonestorm_files/'))assert(file.endsWith('.webp'));
   }
@@ -61,6 +61,6 @@ test('Titokkereső felismeri a tesztkulcsot, de a jelentés nem tartalmazza az �
   assert(scanText(assignment,'fixture.js').length);
 });
 test('A csomagolás tiltja a könyvtárbejárást és a titkos konfigurációt',()=>{
-  for(const file of ['../private','js/../../private','C:/private','C:relative','/private','//server/private','.env','assets/.env.local','Stonestorm.html','.git/config','private.key'])assert.throws(()=>assertSafeRelative(file),file);
+  for(const file of ['../private','js/../../private','C:/private','C:relative','/private','//server/private','.env','assets/.env.local','Stonestorm.html','.git/config','private.key','private.zip','downloads/other.zip'])assert.throws(()=>assertSafeRelative(file),file);
   assert.doesNotThrow(()=>assertSafeRelative('assets/images/key-art-640.webp'));
 });

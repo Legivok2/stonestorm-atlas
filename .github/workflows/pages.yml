@@ -37,6 +37,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Package beta addon and release metadata
+        run: npm run build:addon
       - name: Check source and assets
         run: npm run check
       - name: Test models and data

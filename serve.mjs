@@ -4,12 +4,12 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const port=Number(process.env.PORT??4173);
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png','.zip':'application/zip'};
 const server=http.createServer((req,res)=>{
   let name;
   try {name=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\/+/, '') || 'index.html';} catch {res.writeHead(400).end();return;}
   const clean=!name.split('/').some(part=>part==='.'||part==='..'||part.startsWith('.'));
-  const allowed=clean&&(name==='index.html'||/^(?:css|js|assets|data)\/[a-zA-Z0-9_./-]+$/.test(name)||/^Stonestorm_files\/[a-zA-Z0-9_-]+\.webp$/.test(name)||/^stonestorm_image_tools\/downloaded\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+\.webp$/.test(name));
+  const allowed=clean&&(name==='index.html'||['downloads/stonestorm-statcap-overlay.zip','downloads/stat-addon.json'].includes(name)||/^(?:css|js|assets|data)\/[a-zA-Z0-9_./-]+$/.test(name)||/^Stonestorm_files\/[a-zA-Z0-9_-]+\.webp$/.test(name)||/^stonestorm_image_tools\/downloaded\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+\.webp$/.test(name));
   const file=path.resolve(root,name);
   if(!['GET','HEAD'].includes(req.method)||!allowed||!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()) {res.writeHead(404).end('Nem található');return;}
   const image=/\.(?:webp|png|svg)$/.test(name);

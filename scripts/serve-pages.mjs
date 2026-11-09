@@ -4,7 +4,7 @@ import http from 'node:http';
 import {fileURLToPath} from 'node:url';
 export function createPreview(directory,prefix='/stonestorm-atlas/'){
   const base=path.resolve(directory);
-  const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.svg':'image/svg+xml'};
+  const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.svg':'image/svg+xml','.zip':'application/zip'};
   return http.createServer((req,res)=>{
     let name;try{const url=new URL(req.url,'http://localhost');if(!url.pathname.startsWith(prefix)){res.writeHead(404).end();return;}name=decodeURIComponent(url.pathname.slice(prefix.length))||'index.html';}catch{res.writeHead(400).end();return;}
     if(!['GET','HEAD'].includes(req.method)||name.includes('\\')||name.split('/').some(p=>p==='..'||p==='.'||p.startsWith('.'))){res.writeHead(404).end();return;}

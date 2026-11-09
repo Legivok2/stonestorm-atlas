@@ -4,6 +4,10 @@ Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott f�
 
 ## Forrásjegyzék
 
+### Felhasználói Chrome-addon (2026-11-09)
+
+Stonestorm Stat Cap Overlay v0.9.3, készítő a manifest szerint Patrik. A felhasználó által átadott hét futásidejű fájl változatlan másolata az `addons/stonestorm-statcap-overlay/` mappában szerepel; az `import.json` SHA-256 lenyomatokat rögzít. Ez az import nem új, Atlas által ellenőrzött statképlet-adatforrás: az addon meglévő számításait nem módosítja, és nem írja felül az Atlas megbízhatósági jelöléseit. A kiegészített README, PRIVACY és PUBLISH dokumentáció az integráció része. A ZIP tartalma a kijelölt fájlokkal bájtra ellenőrzött; a generált kiadási JSON csak verziót, fájlméretet és csomaglenyomatot közöl, karakteradatot nem.
+
 ### Kísérők: v3 és jelenlegi megfigyelés (2026-11-09)
 
 - Kivonat: `data/pet-system-evidence.json`, API-verzió `658dc911d321`. Olvasott ágak: `pets.rules`, `pets.v3.forms/costs/xp/skills/reference/book`, `spine.hero.pets`, `features.petCombat/petsV3`. Az eredeti 14 forrásfájl és hash változatlan.

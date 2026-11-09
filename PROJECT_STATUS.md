@@ -1,6 +1,14 @@
 ﻿# Stonestorm Atlas – projektállapot
 
-Frissítve: **2026. november 9. – v3 kísérőfejlődés javítása.** A teljes tárgy-/kép-/Planner-pillanatkép továbbra is 2026-11-06-i (`ac0984e054de`). A külön bónuszpool-, statlimit- és kísérőkiegészítés 2026-11-09-i nyilvános kliensadatból származik (`658dc911d321`).
+Frissítve: **2026. november 9. – Stat Addon v0.9.3 BÉTA integráció.** A teljes tárgy-/kép-/Planner-pillanatkép továbbra is 2026-11-06-i (`ac0984e054de`). A külön bónuszpool-, statlimit- és kísérőkiegészítés 2026-11-09-i nyilvános kliensadatból származik (`658dc911d321`).
+
+## Stat Addon – BÉTA
+
+Az átadott Stonestorm Stat Cap Overlay v0.9.3 forrása az `addons/stonestorm-statcap-overlay/` mappában van. A hét eredeti futásidejű fájl bájtra változatlan; hash-nyilvántartás és az eredeti capture-refresh teszt megőrizve. A jobb alsó, sötét-arany gomb egyetlen bezárható, görgethető panelt nyit; nincs új menüpont. ZIP-letöltés, telepítési és kézi frissítési útmutató, BÉTA-jelölés, opcionális saját verzió és automatikus újverzió-jelzés tartozik hozzá.
+
+A `build:addon` determinisztikus ZIP-et és verzió-/méret-/SHA-256 adatot készít. A Pages-build és a workflow ezt használja, az audit csak a tételes forrással egyező addon-ZIP-et engedi át. A játékmentési ZIP-ek általános tiltása megmarad. A forrás és dokumentáció GitHubra, a ZIP és kiadási adat a webhelyre kerül. A verziófigyelő csak az Atlas saját JSON-ját kéri le; a játékbeli számításokhoz nem kapcsolódik.
+
+Ellenőrzés: 50 automatizált adat-/modell-/publikációs teszt és az eredeti capture-refresh teszt sikeres. Valódi Chromium 1440/390/320 px: panel, letöltött ZIP/hash, verziójelzés, kézi verziórögzítés, fókusz és túlcsordulás ellenőrizve. A 0.9.10-es új kiadás, hibás metaadat, hálózati hiba és tiltott helyi tárolás szimulációja is sikeres. A ZIP-et Python zipfile is hibátlannak találta.
 
 ## Kísérőrendszer
 

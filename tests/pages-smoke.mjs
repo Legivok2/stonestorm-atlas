@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {root,runtimeFiles,guideFiles,walk} from '../scripts/publication-plan.mjs';
 import {createPreview} from '../scripts/serve-pages.mjs';
+import {createHash} from 'node:crypto';
 const local=process.argv.includes('--local-preview');
 const guide=process.argv.includes('--guide');
 const output=path.join(root,local?'.integration/pages-preview':'dist');
@@ -19,6 +20,11 @@ try{
   const queue=expected.filter(file=>file!=='.nojekyll');
   await Promise.all(Array.from({length:8},async()=>{while(queue.length){const file=queue.pop(),response=await fetch(new URL(file,base),{method:'HEAD'});assert.equal(response.status,200,file);assert.equal(Number(response.headers.get('content-length')),fs.statSync(path.join(output,file)).size,file);count++;}}));
   const html=await(await fetch(base)).text();
+  if(!guide){
+    const release=await(await fetch(base+'downloads/stat-addon.json')).json(),zip=await fetch(base+release.zip+'?v='+release.version);
+    assert.equal(zip.status,200);assert.match(zip.headers.get('content-type'),/application\/zip/);
+    const bytes=Buffer.from(await zip.arrayBuffer());assert.equal(bytes.length,release.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),release.sha256);
+  }
   if(guide){
     assert(!html.includes('src="js/atlas-data.js"'));
     assert(!html.includes('src="js/image-data.js"'));

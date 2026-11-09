@@ -12,6 +12,8 @@ export function guideHtml(source){
   }
   html=html.replace(/^.*<script src="js\/(?!content\.js|main\.js)[^"]+" defer><\/script>.*\r?\n/gm,'');
   html=html.replace(/^.*<link rel="stylesheet" href="css\/atlas-tools\.css" \/>.*\r?\n/gm,'');
+  html=html.replace(/^.*<link rel="stylesheet" href="css\/stat-addon\.css" \/>.*\r?\n/gm,'');
+  html=html.replace(/    <button id="stat-addon-toggle"[\s\S]*?<\/section>\r?\n/,'');
   replace(/<nav id="main-nav"[\s\S]*?<\/nav>/,`<nav id="main-nav" aria-label="Fő navigáció">
           <a class="active" href="#kezdolap" aria-current="location">Kezdőlap</a>
           <a href="#utmutato">Kezdőkalauz</a>

@@ -13,6 +13,7 @@ __pycache__/
 *.tmp
 *.bak
 *.zip
+!downloads/stonestorm-statcap-overlay.zip
 *.har
 *.sqlite*
 *.db

@@ -13,10 +13,13 @@ A `build:pages` változtatás nélkül másolja az eredeti `index.html`, CSS és
 A `.github/workflows/pages.yml` minden main-push után:
 
 1. megköveteli a teljes adatcsomagot és a közzétételi felhatalmazást;
-2. ellenőrzi a szintaxist, adatokat, modelleket és hivatkozásokat;
-3. lefuttatja a titok-/személyesadat-mintakeresőt;
-4. felépíti a teljes `dist/` csomagot, és HTTP-n teszteli minden erőforrását;
-5. kizárólag a `dist/` tartalmát telepíti GitHub Pages-re.
+2. elkészíti az addon jóváhagyott ZIP-jét, verzióadatát és helyi tartalékadatát;
+3. ellenőrzi a szintaxist, adatokat, modelleket és hivatkozásokat;
+4. lefuttatja a titok-/személyesadat-mintakeresőt;
+5. felépíti a teljes `dist/` csomagot, és HTTP-n teszteli minden erőforrását, a ZIP méretét és SHA-256 lenyomatát is;
+6. kizárólag a `dist/` tartalmát telepíti GitHub Pages-re.
+
+Addonforrás: `addons/stonestorm-statcap-overlay/`. Állandó publikus letöltés: `downloads/stonestorm-statcap-overlay.zip`; verzióellenőrzés: `downloads/stat-addon.json`. A `.gitignore` és a publikációs fájllista egyetlen pontos ZIP-kivételt enged; az audit megköveteli, hogy a ZIP, a JSON és a generált `js/addon-release.js` egyezzen a jelenlegi, tételes addonforrással. Más ZIP továbbra sem publikálható. Új addonkiadás előtt `npm run build:addon`, majd a generált fájlok commitolása szükséges; részletek: [addon kiadási útmutató](../addons/stonestorm-statcap-overlay/PUBLISH.md).
 
 Hiány esetén a workflow leáll; nem helyettesíti a teljes oldalt egy másik változattal. A GitHub repository **Settings → Pages → Source** beállítása `GitHub Actions` (`build_type: workflow`), HTTPS bekapcsolva.
 

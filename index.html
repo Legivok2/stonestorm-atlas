@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/atlas.css" />
     <link rel="stylesheet" href="css/atlas-tools.css" />
+    <link rel="stylesheet" href="css/stat-addon.css" />
     <script src="js/content.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/atlas-data.js" defer></script>
@@ -38,6 +39,9 @@
     <script src="js/bonus-ui.js" defer></script>
     <script src="js/atlas-features.js" defer></script>
     <script src="js/atlas.js" defer></script>
+    <script src="js/addon-version.js" defer></script>
+    <script src="js/addon-release.js" defer></script>
+    <script src="js/stat-addon.js" defer></script>
   </head>
   <body>
     <svg
@@ -1056,5 +1060,30 @@
       hidden
       >↑</a
     >
+    <button id="stat-addon-toggle" class="stat-addon-toggle" type="button" aria-expanded="false" aria-controls="stat-addon-panel" hidden>⚔ Stat Addon – BÉTA <span id="stat-addon-indicator" class="stat-addon-indicator" hidden aria-hidden="true">🔔</span></button>
+    <section id="stat-addon-panel" class="stat-addon-panel" role="dialog" aria-modal="false" aria-labelledby="stat-addon-title" hidden>
+      <button id="stat-addon-close" class="stat-addon-close" type="button" aria-label="Addonpanel bezárása">×</button>
+      <p class="eyebrow">INGYENES CHROME-BŐVÍTMÉNY · PATRIK</p>
+      <h2 id="stat-addon-title">Stonestorm Stat Cap Overlay</h2>
+      <span id="stat-addon-version"></span>
+      <p>A karakterstatisztikák, felszerelésbónuszok és statlimitek összehasonlítása közvetlenül a játék fölött.</p>
+      <p class="stat-addon-beta"><strong>BÉTA-állapot.</strong> Felismerési hibák és adateltérések előfordulhatnak.</p>
+      <p id="stat-addon-update" class="stat-addon-update" role="status" hidden>🔔 Új verzió elérhető!</p>
+      <a id="stat-addon-download" class="stat-addon-download" href="downloads/stonestorm-statcap-overlay.zip" download>ZIP letöltése</a>
+      <p id="stat-addon-size" class="stat-addon-size"></p>
+      <h3>Telepítés · asztali Chrome</h3>
+      <ol><li>Csomagold ki a ZIP-et egy állandó mappába.</li><li>Nyisd meg: <code>chrome://extensions</code>, és kapcsold be a <strong>Fejlesztői módot</strong>.</li><li><strong>Kicsomagolt bővítmény betöltése</strong>: válaszd a <code>manifest.json</code> fájlt közvetlenül tartalmazó mappát.</li><li>Frissítsd a Stonestorm játékoldalát.</li></ol>
+      <h3>Frissítés · kézzel</h3>
+      <p>Az új ZIP fájljaival cseréld le a korábbi fájlokat ugyanabban a mappában. A bővítmények oldalán kattints az <strong>Újratöltés</strong> ikonra, majd frissítsd a játékot is. A meglévő bővítményt ne távolítsd el a frissítéshez.</p>
+      <p class="stat-addon-note">A panel mobilon is elérhető; a telepítési lépések asztali Chrome-ra vonatkoznak. Nincs automatikus telepítés vagy Chrome Web Store-frissítés.</p>
+      <details><summary>Saját verzió és frissítési jelzés</summary>
+        <p class="stat-addon-note">Az Atlas nem tudja automatikusan kiolvasni a telepített verziót. Megadott verzió hiányában az előzőleg látott kiadáshoz hasonlít. A verzióadatot csak ebben a böngészőben tárolja.</p>
+        <p id="stat-addon-baseline"></p>
+        <form id="stat-addon-version-form"><label for="stat-addon-installed-input">Telepített verzióm (opcionális)</label><input id="stat-addon-installed-input" type="text" inputmode="decimal" maxlength="23" aria-describedby="stat-addon-installed-error" /><div class="stat-addon-actions"><button type="submit">Verzió mentése</button><button id="stat-addon-installed" type="button">Ezt a verziót telepítettem</button></div><p id="stat-addon-installed-error" class="stat-addon-error" role="status"></p></form>
+      </details>
+      <div class="stat-addon-actions"><button id="stat-addon-check" type="button">Frissítés keresése</button><a href="https://github.com/Legivok2/stonestorm-atlas/tree/main/addons/stonestorm-statcap-overlay" target="_blank" rel="noopener noreferrer">Forrás és adatkezelés ↗</a></div>
+      <p id="stat-addon-check-status" class="stat-addon-status" aria-live="polite"></p>
+      <details class="stat-addon-integrity"><summary>ZIP ellenőrzőösszeg · SHA-256</summary><code id="stat-addon-sha"></code></details>
+    </section>
   </body>
 </html>

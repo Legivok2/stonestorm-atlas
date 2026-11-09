@@ -22,7 +22,19 @@ npm start
 
 Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-fájlból töltődnek be. A fájlként megnyitás és a mobilos tördelés új Atlas-verzióját valódi böngészőben még ellenőrizni kell. Futó XAMPP Apache mellett az alternatív cím `http://localhost/StoneStorm/`.
 
+## Ingyenes Chrome-addon · BÉTA
+
+**[Stonestorm Stat Cap Overlay v0.9.3 – ZIP letöltése](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. A manifest, a két futásidejű szkript és az ikonok bájtra változatlanok; a statisztikai számításokat az integráció nem módosítja.
+
+Asztali Chrome: csomagold ki a ZIP-et állandó mappába, nyisd meg a `chrome://extensions` oldalt, kapcsold be a Fejlesztői módot, és a **Kicsomagolt bővítmény betöltése** gombbal válaszd a manifestet tartalmazó mappát. Frissítéskor ugyanott cseréld le a fájlokat, majd töltsd újra a meglévő bővítményt és a játék lapját. Részletes [telepítési útmutató](addons/stonestorm-statcap-overlay/README.md) és [adatkezelési összefoglaló](addons/stonestorm-statcap-overlay/PRIVACY.md).
+
+Az Atlas oldalbetöltéskor, panelnyitáskor, visszatéréskor és látható lapon 15 percenként lekéri a saját Pages-kiadási JSON-ját. Új verziónál **„🔔 Új verzió elérhető!”** jelzés jelenik meg. A letöltés és telepítés kézi. Az addon telepített verziója nem olvasható ki automatikusan: a panelen megadhatod, vagy a korábban látott kiadáshoz történik a hasonlítás. Hálózati hiba esetén a legutóbb ismert letöltés megmarad.
+
+Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `downloads/stonestorm-statcap-overlay.zip`, `downloads/stat-addon.json`; generálás: `npm run build:addon`. A Pages-build ezt automatikusan elkészíti, és kizárólag ezt a tételesen ellenőrzött ZIP-kivételt publikálja. Új kiadás előtt a manifest verzióját emeld, készítsd újra és commitold a csomagot is: [PUBLISH.md](addons/stonestorm-statcap-overlay/PUBLISH.md). Ellenőrzések: `npm run check:addon`, `npm run test:addon:source`, `npm run test:addon:browser`.
+
 ## Mi található benne?
+
+- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.3-hoz, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
 
 - 182 felszerelés, 6 szettcsalád, 22 kísérő, 10 kísérőkészség és 8 hátas.
 - **Kísérőfejlődés:** az 50-es végső szintet követő, ötformás megfigyelési modell, négy átváltozás, 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek és látható klienskonfliktus: `#atlas/pets`. A Planner külön formát és kísérőszintet kezel.

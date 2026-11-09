@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {root,runtimeFiles,sourceFiles,audit,assertSafeRelative} from './publication-plan.mjs';
+import {buildAddon} from './addon-package.mjs';
+buildAddon(root);
 const local=process.argv.includes('--local-preview');
 const result=audit(sourceFiles());
 if(result.missing.length||result.secretOrPersonalFindings.length||result.largeFiles.length)throw Error('A publikációs audit hibát talált. Részletek: npm run audit:publish.');

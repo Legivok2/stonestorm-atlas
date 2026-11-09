@@ -1,0 +1,14 @@
+{
+  "version": "0.9.3",
+  "importedAt": "2026-11-09",
+  "source": "User-provided Stonestorm Stat Cap Overlay v0.9.3",
+  "runtimeSha256": {
+    "manifest.json": "9b23da1b6feb413222bebbdc68182c1879daebbe63b0def4807c66ffe9f896ce",
+    "capture.js": "7a5c77512c759ec9af098f87c5e48097ab862b6bd4351b5eb93f627e8e0682d9",
+    "content.js": "7e1549708913e21c6c79a508c01753f479c6f6dd59dbf77bd7c34138e9e4a1cd",
+    "icons/icon-128.png": "22a0949ca8ab6e32decbb293704de62851538ca937dda519bd8f9caf0e8e8c1a",
+    "icons/icon-16.png": "ea0694e4a187723bad0f4d4556812f7f9e677dd9dcf578aa46ebdc399078222f",
+    "icons/icon-32.png": "8675d7f287d20a54c38750e37615d8a89520dfc7b8d390be28c8fa18dcb59c03",
+    "icons/icon-48.png": "9a39e21a445e4a4c1305efa006acf544dd6e5d2b4e8d3aa1f4814a3d60a6da19"
+  }
+}
