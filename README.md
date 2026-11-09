@@ -33,7 +33,8 @@ Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-f
 - **Teljes Képtár:** 2103 ellenőrzött helyi kép 26 kategóriában, állapotszűrővel, kereséssel, rendezéssel, nagy képnézettel és Wiki-kapcsolatokkal: `#atlas/gallery`.
 - **Felszerelés-/kinézet-összehasonlító:** négy kaszt, férfi/női, két grafikai változat, két fegyver/páncél/teljes karakterkép összevetése: `#atlas/compare`.
 - **Character Planner:** validált nyolc felszerelési hely, +0–+9, valódi szettkapcsolatok, kísérő/hátas, teljes karakterelőnézet, A/B build, helyi mentés és megosztási link: `#atlas/planner`.
-- **📊 Stat limitek:** kilenc statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, kritikus sebzésmodell, fegyverbónusz-táblázat és XP-/nyangösszegző: `#atlas/stat-limits`.
+- **📊 Stat limitek:** tíz statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, kritikus sebzésmodell, fegyverbónusz-táblázat és forrásos XP-/nyang-/zsákmánykalkulátor: `#atlas/stat-limits`.
+- **Bónuszrendszer:** egységes 20-as tárgybónusz-katalógus, külön fegyver-/páncél-/ékszerpoolok, tíz bónuszforrás dokumentációja, tárgyadatlap-kapcsolatok és a megosztott jutalomkalkulátor: `#atlas/bonuses`.
 
 A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására példa: `#atlas/equipment/item/w_warrior_0`. A modális adatlap Escape-pel és a bezárógombbal zárható.
 
@@ -41,7 +42,11 @@ A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására
 
 A központi adatok a `js/stat-limits.js` fájlban találhatók; a felület a `js/stat-limits-ui.js`, a tiszta százalékszámítások az `atlas-math.js` részei. A 75%-os korlát sebzéscsökkentésre vonatkozik, nem védelmi pontokra. A normál kitérés 35%-a a projektgazda által közölt súgóadat; a többi harci korlát a mentett szabályokkal egyeztetett.
 
-A +84,7% XP és +130% nyang elért, közölt játékosértékek, nem maximumok. A teljes és a felszerelésből származó érték különbsége csak számtani különbség. Az összegző nem igazolja a ténylegesen érvényesülő bónuszt. A támadás, HP, XP- és nyangbónusz felső korlátja továbbra sem igazolt.
+A +84,7% XP és +130% nyang elért, közölt játékosértékek, nem maximumok. A teljes és a felszerelésből származó érték különbsége csak számtani különbség. Az XP, nyang és zsákmány normál alapplafonja a megadott modellben 100%; a megfigyelt menlevél +25/+20/+10 százalékpontot adhat ezen felül. A támadás és HP felső korlátja továbbra sem igazolt; a jutalombónuszok forrásonkénti szerveres besorolása nem teljesen ismert.
+
+A központi `js/bonus-system.js` tárolja a húsz megnevezést, az értéktípusokat, a külön típuspoolokat és forrásbesorolásokat. Ezt használják a felszerelésadatlapok és a Planner statcímkéi is. A `js/bonus-ui.js` ugyanazt a jutalomkalkulátort jeleníti meg a Stat limitek és a Bónuszrendszer oldalon. A modell képlete: `min(normál összeg, 100) + különleges összeg`. A menlevél már benne van a teljes gyűjtött értékben: `118 + 25 = 143 → 100 + 25 = 125`, a veszteség 18 százalékpont. Ismeretlen forrásbesorolásnál feltételes tartomány, saját besorolásnál ellenőrizendő modelljelölés látható.
+
+A pooladatok a 2026-11-09-én olvasott nyilvános kliensadatból származnak (`658dc911d321`); a kivonat a `data/bonus-system-evidence.json` fájlban található. A nem igazolt altípus-hozzárendeléseket, súlyokból számított generálási esélyeket és főzethatások összevonását nem találjuk ki. A régebbi teljes játékpillanatkép változatlan marad.
 
 A kritikus kalkulátor külön kezeli az esélyt (legfeljebb 50%) és a kritikus sebzésbónuszt (legfeljebb +75%). A szorzó `1,5 + érvényesülő bónusz / 100`, maximum 2,25×. A 10 000 / 50% / +40% példa 19 000 kritikus és 14 500 átlagsebzést ad. Az átlag egyszerűsített modell, nem tartalmazza a védelem, kitérés, képességek vagy más módosítók hatását. A kiegészítő felszerelésbónusz üresen nulla; negatív összesített bónusznál az alapszorzó marad.
 

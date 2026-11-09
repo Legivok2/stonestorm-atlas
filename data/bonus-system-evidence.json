@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "checkedAt": "2026-11-09",
+    "url": "https://stonestorm.gg/api/content",
+    "version": "658dc911d321",
+    "sha256": "795913391aea4a6b611d0953cda6c5765e0dc8e074f5a744573fe279def53ccf",
+    "scope": "Nyilvános kliensadat; nem igazolja a teljes szerveroldali jutalomképletet. A korábbi teljes pillanatképet nem írja felül."
+  },
+  "itemBonusIds": [
+    "maxHp",
+    "crit",
+    "vsAnimal",
+    "vsBandit",
+    "defence",
+    "attack",
+    "nyang",
+    "xp",
+    "evade",
+    "vsOrc",
+    "vsUndead",
+    "vsDesert",
+    "vsIce",
+    "vsFire",
+    "vsBoss",
+    "potionHeal",
+    "skillDamage",
+    "critDamage",
+    "lifesteal",
+    "damageTaken"
+  ],
+  "reward": {
+    "cap": 2,
+    "interpretation": "2× teljes szorzó: a megadott modellben +100% alapbónusz. A források pontos besorolását önmagában nem igazolja."
+  },
+  "pools": {
+    "weapon": [
+      [
+        "attack",
+        3,
+        1
+      ],
+      [
+        "crit",
+        2,
+        1
+      ],
+      [
+        "vsBoss",
+        1.5,
+        11
+      ],
+      [
+        "skillDamage",
+        1.5,
+        15
+      ],
+      [
+        "critDamage",
+        1.5,
+        26
+      ]
+    ],
+    "armor": [
+      [
+        "maxHp",
+        2,
+        1
+      ],
+      [
+        "defence",
+        2,
+        1
+      ],
+      [
+        "evade",
+        1,
+        1
+      ],
+      [
+        "potionHeal",
+        1.5,
+        11
+      ],
+      [
+        "damageTaken",
+        1.5,
+        26
+      ]
+    ],
+    "jewel": [
+      [
+        "attack",
+        3,
+        1
+      ],
+      [
+        "maxHp",
+        2,
+        1
+      ],
+      [
+        "crit",
+        2,
+        1
+      ],
+      [
+        "defence",
+        1,
+        1
+      ],
+      [
+        "vsBoss",
+        1,
+        11
+      ],
+      [
+        "potionHeal",
+        1,
+        11
+      ],
+      [
+        "skillDamage",
+        1,
+        15
+      ],
+      [
+        "critDamage",
+        1,
+        26
+      ],
+      [
+        "damageTaken",
+        0.5,
+        26
+      ],
+      [
+        "evade",
+        0.5,
+        1
+      ]
+    ]
+  },
+  "imperialText": {
+    "xp": "+25% tapasztalat",
+    "nyang": "+20% nyang",
+    "drop": "+10% zsákmány",
+    "farmCap": "12 óráig gyűlő vadászzsák",
+    "energy": "Napi +20 energia",
+    "bossAttempts": "Eggyel több boss-próba"
+  },
+  "potionText": {
+    "normal": "Nyangért: a szokásos szorzóplafonba számít.",
+    "overflow": "Viharérméért: a plafon fölött is hat, legfeljebb +50%-ig."
+  },
+  "observedImperial": {
+    "xp": 25,
+    "nyang": 20,
+    "drop": 10,
+    "source": "Projektgazdai megfigyelés, 2026-11-09; a teljes gyűjtött érték már tartalmazza a menlevelet."
+  }
+}

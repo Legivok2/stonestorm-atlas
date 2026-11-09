@@ -1,14 +1,22 @@
 ﻿# Stonestorm Atlas – projektállapot
 
-Frissítve: **2026. november 8. – Stat limitek, kritikus sebzés és fegyverbónuszok.** A játékadatok továbbra is a 2026-11-06-i helyi pillanatképből származnak, az adatverzió `ac0984e054de`.
+Frissítve: **2026. november 9. – egységes bónuszkatalógus és forrásos jutalomplafon.** A teljes tárgy-/kép-/Planner-pillanatkép továbbra is 2026-11-06-i (`ac0984e054de`). A külön bónuszpool-kiegészítés 2026-11-09-i nyilvános kliensadatból származik (`658dc911d321`).
+
+## Bónuszrendszer
+
+Új Atlas-oldal: `#atlas/bonuses`. Húsz egységes tárgybónusznév és értéktípus, három külön típuspool, a nem igazolt altípusok külön jelölése. A felszerelésadatlapok a saját pooljukhoz kapcsolódnak; ismeretlen hozzárendelésnél nem mutatunk hamis elérhetőséget. A statcímkék és a százalékos formázás a közös katalógust használják.
+
+A Stat limitek és a Bónuszrendszer ugyanazt a forrásos XP-/nyang-/zsákmánykalkulátort használja. Normál alapplafon 100%, megfigyelt menlevél-többlet +25/+20/+10 százalékpont. Teljes gyűjtött, alapplafon, különleges rész, modell szerinti érvényesülés és veszteség külön látható. A 143→125→18 példa működik. Tíz dokumentált forrás; az ismeretlen besorolások feltételes tartományt, a kézi besorolások ellenőrizendő jelölést kapnak. A főzetek beszerzéstől függő szabálya nincs megalapozatlanul általánosítva.
+
+34 egység-/adat-/modell-/publikációs teszt és 3762 erőforrás helyi HTTP-tesztje sikeres. A Chromiumteszt 1440×1000, 390×844 és 320×760 nézetben lefutott a katalógusra, a poolokra, a három jutalomtípusra, a bizonytalan forrásokra és a korábbi kritikus kalkulátorra.
 
 ## Stat limitek
 
-Új navigációs oldal: `#atlas/stat-limits`. Kilenc statisztika központi adatmodellből, megbízhatósági jelölésekkel és forrásokkal. A négy alap harci eredményt három százalékos karakteradatból számítjuk: sebzéscsökkentés, kritikus esély és a két ellenféltípusra külön korlátozott kitérés. A sávok a plafonig számított értéket, a szövegek az elvesző százalékpontokat mutatják. A nyers védelemből nincs átváltás.
+Navigációs oldal: `#atlas/stat-limits`. Tíz statisztika központi adatmodellből, megbízhatósági jelölésekkel és forrásokkal. A négy alap harci eredményt három százalékos karakteradatból számítjuk: sebzéscsökkentés, kritikus esély és a két ellenféltípusra külön korlátozott kitérés. A sávok a plafonig számított értéket, a szövegek az elvesző százalékpontokat mutatják. A nyers védelemből nincs átváltás.
 
 A külön kritikus kalkulátor a normál sebzésből, az esélyből, a bónuszból és opcionális kiegészítő felszerelésbónuszból számol. 1,5× alap, +75%-os hozzáadó bónuszplafon, maximum 2,25×; az esély külön legfeljebb 50%. Kijelzi az összesített, érvényesülő és elvesző bónuszt, a kritikus és egyszerűsített átlagsebzést. Hat fegyverszintsáv, harminc színkódolt T-fokozat, automatikus mezőkitöltés és szintváltás. Nincs ismeretlen szerveres esély vagy hivatalos ritkasági besorolás kitalálva.
 
-Az XP-/nyangösszegző elkülöníti a felszerelést, az egyéb forrásokat, a számtani összeget és az ismeretlen tényleges érvényesülést. A megfigyelt játékosértékek nem maximumok. A támadás, HP, XP és nyang felső korlátja továbbra sem igazolt. A 35%-os normál kitérés a projektgazda által közölt súgóadat.
+Az XP-/nyangmegfigyelések megmaradtak történeti, kijelzett összegekként, nem maximumként vagy bizonyított érvényesülésként. Az összegzőt a fenti forrásos plafonmodell váltotta fel. A támadás és HP felső korlátja továbbra sem igazolt. A 35%-os normál kitérés a projektgazda által közölt súgóadat.
 
 27 egység-/adat-/publikációs teszt sikeres. A valódi Chromiumteszt 1440×1000, 390×844 és 320×760 nézetben ellenőrizte a navigációt, a kritikus példát, a külön 50%/75% korlátot, minden fegyversávhatárt, a hibás bevitelt, az állapotmegőrzést és a túlcsordulás hiányát. A statikus csomag 3760 kiszolgált erőforrásának HTTP-tesztje sikeres. A korábbi `Pages-retry.txt` projektgazdai commit beemelve, megőrizve.
 

@@ -53,5 +53,12 @@
     if(!valid(criticalHit)||!valid(averageDamage))return null;
     return {normalDamage,totalBonus,chance:effectiveChance,bonus:effectiveBonus,multiplier,criticalHit,averageDamage,negativeIgnored:Math.max(0,-totalBonus)};
   }
-  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,parseSignedPercent,cappedPercent,sumBonuses,criticalDamage});
+  function rewardBonus(normal,special,unknown,cap) {
+    if(![normal,special,unknown].every(value=>valid(value))||!valid(normal+special+unknown))return null;
+    const base=cappedPercent(normal,cap),allNormal=cappedPercent(normal+unknown,cap);
+    if(!base||!allNormal)return null;
+    const total=normal+special+unknown,minEffective=allNormal.effective+special,maxEffective=base.effective+special+unknown;
+    return {normal,special,unknown,total,baseCap:cap,baseEffective:base.effective,minEffective,maxEffective,effective:unknown?null:minEffective,minLost:Math.max(0,total-maxEffective),maxLost:Math.max(0,total-minEffective),lost:unknown?null:Math.max(0,total-minEffective)};
+  }
+  globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,parseSignedPercent,cappedPercent,sumBonuses,criticalDamage,rewardBonus});
 })();

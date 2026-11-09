@@ -13,10 +13,11 @@
   const slots=db.labels.slots, rarities={common:'Gyakori',rare:'Ritka',heroic:'Hősi',unique:'Egyedi'};
   const classNames=Object.fromEntries(db.classes.map(x=>[x.id,x.name]));
   const buildingEffects={hq:'Céhtagok férőhelye',forge:'Kovácsolási bónusz',dojo:'XP-bónusz',warehouse:'Nyangbónusz',banner:'Céhes portyatámadás'};
-  const statNames={atkMin:'Min. sebzés',atkMax:'Max. sebzés',def:'Védelem',defence:'Védelem',maxHp:'Max. életerő',maxSp:'Max. mana',attack:'Támadás',crit:'Kritikus esély',str:'Erő',dex:'Ügyesség',vit:'Vitalitás',int:'Intelligencia',xpMult:'XP-bónusz',nyangMult:'Nyangbónusz',atkMult:'Sebzésbónusz',hpMult:'Életerőbónusz',defMult:'Védelembónusz',critBonus:'Kritikus esély',evadeBonus:'Kitérés',vsBoss:'Bossok ellen',vsBandit:'Banditák ellen',vsOrc:'Orkok ellen',vsAnimal:'Állatok ellen',vsUndead:'Élőholtak ellen',vsHuman:'Emberek ellen',potionHeal:'Gyógyital hatása',skillDamage:'Képességsebzés',dropMult:'Zsákmánybónusz',lifesteal:'Életlopás',ignoreDef:'Védelemáttörés',spCost:'Manaköltség',every:'Ütések közötti gyakoriság',hits:'Találatok száma',mult:'Sebzésszorzó'};
+  const statNames={atkMin:'Min. sebzés',atkMax:'Max. sebzés',def:globalThis.StonestormBonuses.byId.defence.name,maxSp:'Max. mana',str:'Erő',dex:'Ügyesség',vit:'Vitalitás',int:'Intelligencia',xpMult:'XP-bónusz',nyangMult:'Nyangbónusz',atkMult:'Sebzésbónusz',hpMult:'Életerőbónusz',defMult:'Védelembónusz',critBonus:'Kritikus esély',evadeBonus:'Kitérés',vsHuman:'Emberek ellen',dropMult:'Zsákmánybónusz',ignoreDef:'Védelemáttörés',spCost:'Manaköltség',every:'Ütések közötti gyakoriság',hits:'Találatok száma',mult:'Sebzésszorzó'};
+  Object.assign(statNames,Object.fromEntries(globalThis.StonestormBonuses.entries.map(entry=>[entry.id,entry.name])));
   const label=k=>statNames[k]??k;
   // Százalékos statisztikák kulcs szerint, nem az érték nagysága alapján.
-  const fraction=k=>/Mult$|Bonus$|^vs[A-Z]|^(crit|potionHeal|skillDamage|lifesteal|ignoreDef)$/.test(k);
+  const fraction=k=>globalThis.StonestormBonuses.byId[k]?.unit==='percent'||/Mult$|Bonus$|^vs[A-Z]|^(crit|potionHeal|skillDamage|lifesteal|ignoreDef)$/.test(k);
   const value=(k,v)=>fraction(k)?pct(v):num(v);
   const icon=(name,cls='')=>`<svg class="atlas-icon ${esc(cls)}" aria-hidden="true"><use href="#${esc(name)}" /></svg>`;
   const images=Object.fromEntries(db.images.map(x=>[x.id,x.file]));
@@ -216,6 +217,7 @@
       body=`<p>${esc(buildingEffects[id])} · a célzott épületszint szerint.</p>`+table(['Szint','Hatás','Fejlesztési idő','Teljes gyorsítás','Nyang','Alapanyag'],x.levels.map(l=>[l.level,num(l.effect)+(l.effectUnit==='members'?' fő':'%'),l.upgradeHoursToLevel+' óra',num(math.speedup(l.upgradeHoursToLevel,l.level,db.economy.limits.guildSpeedup))+' VÉ','Nem ismert','Nem ismert']))+notice(db.guild.rules.missingCostsReason);
     }
     const chosen=media?.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id);
+    if(kind==='item')body+=extension.bonusInfo?.(x.slot)??'';
     if(chosen)image=media.render(chosen,{className:'atlas-detail-art',alt:x.name});
     const pictures=media?.related(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id)??[];
     return `<p class="eyebrow">STONESTORM ATLAS / ADATLAP</p>${image}<div class="atlas-detail-glyph">${glyph(kind==='item'?x.slot:kind)}</div><h2 id="atlas-detail-title">${esc(x.name??x.id)}</h2><p class="atlas-detail-id">${esc(id)}</p>${extension.actions?.(kind,x)??''}${body}${pictures.length?related('Kapcsolódó grafikák',`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">Teljes Képtár →</a>`):''}${rows([['Angol megnevezés',x.nameEn??'Nem áll rendelkezésre']])}${sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})}`;

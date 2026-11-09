@@ -1,8 +1,19 @@
 # Stonestorm Atlas – adatforrások és megbízhatóság
 
-Integráció dátuma: **2026-11-06**. Kizárólag a felhasználó által helyben átadott fájlok feldolgozása történt. Nem hívtunk élő játék-API-t, nem használtunk fiókadatot, privát végpontot vagy játékbeli módosító műveletet.
+Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott fájlokból. A **2026-11-09-i bónuszkiegészítéshez** külön, hitelesítés nélküli olvasás történt a hivatalos nyilvános `/api/content` végponton. Fiókadatot, privát végpontot vagy játékbeli módosító műveletet nem használtunk. A korábbi teljes pillanatkép és hash-ei változatlanok.
 
 ## Forrásjegyzék
+
+### Bónuszrendszer és jutalomplafon (2026-11-09)
+
+- Egységes katalógus: a projektgazda húsz azonosítója egyezik a mentett kliens húszelemű tárgybónusz-listájával. A `maxHp`, `attack`, `defence` pontérték; a többi felsorolt tárgybónusz százalék. A `drop` nem új tárgybónusz, hanem külön jutalombónusz.
+- A [hivatalos nyilvános kliensadat](https://stonestorm.gg/api/content) olvasott verziója `658dc911d321`. A `reward.cap = 2` összhangban áll a modell +100%-os normál alapplafonjával, de önmagában nem bizonyítja minden forrás alkalmazási sorrendjét.
+- A `spine.lines.pools.weapon`, `.armor`, `.jewel` külön poolok. A nyers tuple-öket a `data/bonus-system-evidence.json` őrzi; a runtime csak a bennük felsorolt azonosítókat használja. A súlyokból nem számolunk igazolt szerveres esélyt. A további hat altípus pool-hozzárendelése ebben a kivonatban nem igazolt, ezért nem rendeljük hozzájuk automatikusan az összes bónuszt.
+- A menlevél +25 XP / +20 nyang / +10 zsákmány száma a helyi magyar `vip.bonuses` szövegben is szerepel. A plafon utáni hozzáadás és a 143→125 példa a projektgazda által közölt megfigyelés; nem önállóan megvizsgált képfájl. Képlet: `min(normál forrásösszeg, 100) + különleges forrásösszeg`; a teljes gyűjtött érték már tartalmazza a menlevelet.
+- A főzetek `capNyang` szövege normál plafonba számító hatást ír le; a `capCoins` plafon feletti hatást és legfeljebb +50%-ot említ. A kombinált főzetforrás és ennek a +50%-nak a pontos hatóköre nem igazolt, ezért a kalkulátor nem alkalmaz általánosított fizetős főzetképletet.
+- Kutatások, fejlődési út, kísérők, céh, kövek, szettek és egyéb ideiglenes hatások besorolása külön ellenőrizendő. A nem nulla, ismeretlen besorolás két feltételes modellágat ad: minden ismeretlen normál, illetve minden ismeretlen plafon utáni. Ez nem igazolt szerveres minimum/maximum. A saját kézi besorolás szintén feltételezésként jelölt.
+
+Az összegzett JSON csak a szükséges nyilvános bizonyítékot, verziót és forráshash-t tartalmazza; nem a teljes új játékadat-csomag. A korábbi felszerelés-/kép-/Planner-pillanatképet nem generáltuk újra.
 
 ### Stat limitek és közölt játékosértékek (2026-11-08)
 

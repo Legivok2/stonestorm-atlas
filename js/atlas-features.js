@@ -1,8 +1,9 @@
 /* A Képtár, összehasonlító és karaktertervező ugyanannak az Atlasnak a moduljai. */
 globalThis.AtlasExtensions={
-  categories:[['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield']],
+  categories:[['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield'],['bonuses','Bónuszrendszer',null,'spark']],
   init(ui){
-    const statLimits=globalThis.AtlasStatLimitsUI.init(ui);
+    const bonusSystem=globalThis.AtlasBonusUI.init(ui);
+    const statLimits=globalThis.AtlasStatLimitsUI.init({...ui,bonusSystem});
     const {db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render}=ui;
     const $=s=>document.querySelector(s);
     const catalog=media.catalog;
@@ -135,6 +136,7 @@ globalThis.AtlasExtensions={
       $('#planner-saved').addEventListener('change',e=>{planner.savedId=e.target.value;render();$('#planner-saved').focus({preventScroll:true});});
     }
     function afterRender(page){
+      if(page==='bonuses'&&!state.query)bonusSystem.afterRender();
       if(page==='stat-limits'&&!state.query)statLimits.afterRender();
       if(page==='gallery'&&!state.query){
         updateGallery();
@@ -179,6 +181,7 @@ globalThis.AtlasExtensions={
       if(e.target.closest('#planner-share-button')){planner.share=location.href.split('#')[0]+'#atlas/planner?build='+encodeURIComponent(JSON.stringify(model.normalize(activeBuild(),db).build));planner.message='A hivatkozás elkészült. Másold ki a mezőből.';render();$('#planner-share').focus();$('#planner-share').select();}
     });
     function onRoute(parts,params){
+      bonusSystem.onRoute(parts,params);
       if(parts[1]==='gallery'&&params.has('category')&&categoryNames[params.get('category')]){gallery.category=params.get('category');gallery.page=1;}
       if(parts[1]==='compare'&&params.has('item')){const x=db.items.find(x=>x.id===params.get('item'));if(x){viewer.classId=x.classes?.[0]??'warrior';viewer.mode=x.slot==='armor'?'armor':'weapon';viewer.level='all';viewer.family='all';viewer.tier='all';const im=media.forRecord('item',x.id);viewer.selected=im?[im.id]:[];viewer.itemOverrides=im?{[im.id]:x.id}:{};}}
       if(parts[1]==='planner'&&params.has('build')){const parsed=model.parse(params.get('build'),db);planner.drafts[planner.active]=parsed.build;planner.editing[planner.active]=null;planner.message=parsed.errors.join(' ')||'Megosztott build betöltve; nincs automatikusan elmentve.';}
@@ -191,6 +194,6 @@ globalThis.AtlasExtensions={
       }
     }
     function home(){return `<div class="feature-links"><a href="#atlas/gallery">${media.render(media.get('uikit','btn_help'),{thumbnail:true})}<span>Képtár<small>${num(catalog.stats.available)} eredeti grafika</small></span></a><a href="#atlas/compare">${media.render(media.get('uikit','btn_character'),{thumbnail:true})}<span>Felszerelés-összehasonlító<small>Két megjelenés egymás mellett</small></span></a><a href="#atlas/planner">${media.render(media.get('uikit','btn_arena'),{thumbnail:true})}<span>Karaktertervező<small>Építs, hasonlíts össze, ments</small></span></a></div>`;}
-    return {screens:{gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home};
+    return {screens:{gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page,bonuses:bonusSystem.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home,bonusInfo:bonusSystem.itemInfo};
   }
 };
