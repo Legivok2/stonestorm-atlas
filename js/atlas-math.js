@@ -53,12 +53,20 @@
     if(!valid(criticalHit)||!valid(averageDamage))return null;
     return {normalDamage,totalBonus,chance:effectiveChance,bonus:effectiveBonus,multiplier,criticalHit,averageDamage,negativeIgnored:Math.max(0,-totalBonus)};
   }
-  function rewardBonus(normal,special,unknown,cap) {
-    if(![normal,special,unknown].every(value=>valid(value))||!valid(normal+special+unknown))return null;
-    const base=cappedPercent(normal,cap),allNormal=cappedPercent(normal+unknown,cap);
-    if(!base||!allNormal)return null;
-    const total=normal+special+unknown,minEffective=allNormal.effective+special,maxEffective=base.effective+special+unknown;
-    return {normal,special,unknown,total,baseCap:cap,baseEffective:base.effective,minEffective,maxEffective,effective:unknown?null:minEffective,minLost:Math.max(0,total-maxEffective),maxLost:Math.max(0,total-minEffective),lost:unknown?null:Math.max(0,total-minEffective)};
+  function rewardBonus(normal,paid,unknown,cap,paidCap) {
+    if(![normal,paid,unknown].every(value=>valid(value))||!valid(normal+paid+unknown))return null;
+    // Százalékpontok, nem relatív szorzók. A tisztítás csak a bináris kerekítési maradékot kezeli.
+    const clean=value=>Number(value.toFixed(10));
+    normal=clean(normal);paid=clean(paid);unknown=clean(unknown);
+    const base=cappedPercent(normal,cap),premium=cappedPercent(paid,paidCap);
+    if(!base||!premium)return null;
+    const total=clean(normal+paid+unknown),baseEffective=base.effective,paidEffective=premium.effective;
+    const normalEndpoint=cappedPercent(normal+unknown,cap).effective+paidEffective;
+    const paidEndpoint=baseEffective+cappedPercent(paid+unknown,paidCap).effective;
+    const minEffective=clean(Math.min(normalEndpoint,paidEndpoint));
+    const maxEffective=clean(baseEffective+paidEffective+Math.min(unknown,Math.max(0,cap-normal)+Math.max(0,paidCap-paid)));
+    const minLost=clean(Math.max(0,total-maxEffective)),maxLost=clean(Math.max(0,total-minEffective));
+    return {normal,paid,unknown,total,baseCap:cap,paidCap,maximum:cap+paidCap,baseEffective,paidEffective,normalLost:clean(base.excess),paidLost:clean(premium.excess),minEffective,maxEffective,effective:unknown?null:minEffective,minLost,maxLost,lost:unknown?null:maxLost};
   }
   globalThis.StonestormMath=Object.freeze({speedup,guildPlan,travel,efficiency,parsePercent,parseSignedPercent,cappedPercent,sumBonuses,criticalDamage,rewardBonus});
 })();

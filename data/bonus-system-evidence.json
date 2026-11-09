@@ -157,5 +157,58 @@
     "nyang": 20,
     "drop": 10,
     "source": "Projektgazdai megfigyelés, 2026-11-09; a teljes gyűjtött érték már tartalmazza a menlevelet."
+  },
+  "statCaps": {
+    "sourceVersion": "658dc911d321",
+    "critCap": 0.5,
+    "reductionCap": 0.75,
+    "evadeCap": 0.12,
+    "monsterEvadeCap": 0.35,
+    "supportCaps": {
+      "vsBoss": 0.35,
+      "potionHeal": 0.25,
+      "skillDamage": 0.5,
+      "critDamage": 0.75,
+      "lifesteal": 0.08,
+      "damageTaken": 0.2
+    },
+    "combatEvadeMax": 0.35,
+    "skillCritCap": 0.7
+  },
+  "paidRewardRule": {
+    "baseCap": 100,
+    "paidCap": 50,
+    "source": "A projektgazda által idézett játékbeli leírás; capNyang/capCoins helyi magyar szöveg. A normál és a VÉ-erősítés plafonja külön értendő.",
+    "formula": "min(normal,100)+min(paid,50)",
+    "quote": "A bónuszok összeadódnak, de csak a plafonig; a Viharérméért vett erősítés (Császári menlevél, főzetek) a plafonon felül jár, a nyangért vett főzet a plafonba számít."
+  },
+  "rawStatChecks": {
+    "globalAttackCap": null,
+    "globalDefenceCap": null,
+    "globalHpCap": null,
+    "petBookCapPerKey": 0.012,
+    "polishOnly": {
+      "maxHp": 150,
+      "crit": 0.04,
+      "vsAnimal": 0.08,
+      "vsBandit": 0.08,
+      "defence": 18,
+      "attack": 15,
+      "nyang": 0.12,
+      "xp": 0.06,
+      "evade": 0.03,
+      "vsOrc": 0.08,
+      "vsUndead": 0.08,
+      "vsDesert": 0.08,
+      "vsIce": 0.08,
+      "vsFire": 0.08,
+      "vsBoss": 0.08,
+      "potionHeal": 0.06,
+      "skillDamage": 0.12,
+      "critDamage": 0.2,
+      "lifesteal": 0.025,
+      "damageTaken": 0.05
+    },
+    "explanation": "A polír cap mezői csak a polír komponensre vonatkoznak; nem teljes karakter- vagy jutalombónusz-plafonok."
   }
 }

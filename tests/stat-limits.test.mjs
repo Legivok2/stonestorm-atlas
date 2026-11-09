@@ -7,6 +7,7 @@ import '../js/stat-limits.js';
 const math=globalThis.StonestormMath,data=globalThis.StonestormStats;
 const rules=JSON.parse(fs.readFileSync(new URL('../source-data/05_kasztok_kepessegek_harcertek.json',import.meta.url),'utf8')).harcero.rules;
 const hero=JSON.parse(fs.readFileSync(new URL('../source-data/05_kasztok_kepessegek_harcertek.json',import.meta.url),'utf8')).harcero.combat.hero;
+const apiEvidence=JSON.parse(fs.readFileSync(new URL('../data/bonus-system-evidence.json',import.meta.url),'utf8'));
 test('A központi harci limitek egyeznek a mentett forrással; a normál kitérés külön súgóadat',()=>{
   for(const [id,key] of [['reduction','reductionCap'],['crit','critCap'],['evadeBoss','evadeCap']])assert.equal(data.byId[id].cap,rules[key]*100);
   assert.equal(data.byId.evadeNormal.cap,35);
@@ -36,8 +37,17 @@ test('A megfigyelt XP-/nyangértékek nem limitek, az összegző nem feltételez
   const sum=math.sumBonuses(31.1,53.6);assert.equal(sum.total,84.7);assert.equal(sum.effective,null);assert.equal(sum.cap,null);
   assert.equal(math.sumBonuses(116.4,13.6).total,130);
   assert.equal(math.sumBonuses(1000,2000).total,3000);
-  for(const id of ['attack','hp'])assert.equal(data.byId[id].cap,null);
-  for(const id of ['xp','nyang','drop']){assert.equal(data.byId[id].cap,100);assert.equal(data.byId[id].reliability,'observed');}
+  for(const id of ['attack','hp','defenceRaw'])assert.equal(data.byId[id].cap,null);
+  for(const id of ['xp','nyang','drop']){assert.equal(data.byId[id].cap,100);assert.equal(data.byId[id].reliability,'confirmed');}
+});
+test('Minden felsorolt harci limit a content API kivonatával egyezik; a polír nem globális statplafon',()=>{
+  const caps=apiEvidence.statCaps;
+  assert.equal(data.byId.crit.cap,caps.critCap*100);assert.equal(data.byId.evadeBoss.cap,caps.evadeCap*100);assert.equal(data.byId.evadeNormal.cap,caps.monsterEvadeCap*100);assert.equal(data.byId.reduction.cap,caps.reductionCap*100);
+  for(const id of ['critDamage','skillDamage','vsBoss','potionHeal','lifesteal','damageTaken'])assert.equal(data.byId[id].cap,caps.supportCaps[id]*100,id);
+  assert.equal(apiEvidence.rawStatChecks.polishOnly.maxHp,150);assert.equal(data.byId.hp.cap,null);
+  assert.equal(apiEvidence.rawStatChecks.polishOnly.defence,18);assert.equal(data.byId.defenceRaw.cap,null);
+  assert.equal(apiEvidence.rawStatChecks.polishOnly.attack,15);assert.equal(data.byId.attack.cap,null);
+  assert.equal(apiEvidence.rawStatChecks.petBookCapPerKey,0.012); // Könyvkomponens, nem teljes kísérőbónusz.
 });
 test('Kritikus alapszorzó és bónuszplafon: a helyi szabályok és a harci adatok is egyeznek',()=>{
   assert.equal(data.critical.baseMultiplier,hero.critMult);
