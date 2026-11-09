@@ -11,7 +11,8 @@
     result.gender=['male','female'].includes(input.gender)?input.gender:'male';
     result.look=integer(input.look,1,2,1);
     result.level=integer(input.level,1,db.economy.limits.maxLevel,1);
-    result.petLevel=integer(input.petLevel,1,db.petRules.maxLevel,1);
+    const petProgress=globalThis.StonestormPets.normalize(input.petLevel,input.petForm,result.level,db.petSystem);
+    result.petLevel=petProgress.level;result.petForm=petProgress.form;
     result.traitRank=integer(input.traitRank,1,5,1);
     result.skillRank=integer(input.skillRank,1,5,1);
     result.targetFamily=db.sets.some(s=>s.familyId===input.targetFamily)?input.targetFamily:null;
@@ -74,7 +75,7 @@
     }).filter(x=>x.count||x.set.familyId===build.targetFamily);
     const pet=db.pets.find(p=>p.id===build.petId)??null,mount=db.mounts.find(m=>m.id===build.mountId)??null;
     return {build,errors:normalized.errors,baseStats:db.classes.find(c=>c.id===build.classId).baseStats,equipment,equipped,sets,
-      pet:pet?{record:pet,level:build.petLevel,traitRank:build.traitRank,skillRank:build.skillRank,rawSpeciesBonus:Object.fromEntries(Object.entries(pet.perLevel).map(([k,v])=>[k,v*build.petLevel]))}:null,
+      pet:pet?{record:pet,level:build.petLevel,form:build.petForm,slots:db.petSystem.stages[build.petForm-1].slots,traitRank:build.traitRank,skillRank:build.skillRank,rawSpeciesBonus:Object.fromEntries(Object.entries(pet.perLevel).map(([k,v])=>[k,v*build.petLevel]))}:null,
       mount:mount?{record:mount,travelMult:mount.travelMult}:null,
       levelStats:null,finalCombatStats:null,
       limitations:['A karakter szintből származó tulajdonságainak elosztása és a teljes szerveroldali harci képlet nem igazolt.','A felszerelésösszeg számtani komponensösszeg, nem végső támadás, védelem vagy harcerő.','A százalékos szett- és kísérőhatások nem kerülnek bizonyítatlan módon az alapértékekre.','Véletlen tárgybónuszok és egyéb buffok nincsnek általánosítva.']};

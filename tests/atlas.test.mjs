@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import '../js/atlas-math.js';
+import '../js/pet-system.js';
 import '../js/planner-model.js';
 const db=JSON.parse(fs.readFileSync(new URL('../data/atlas.json',import.meta.url),'utf8'));
 const math=globalThis.StonestormMath,rates=db.economy.limits.guildSpeedup;

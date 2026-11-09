@@ -4,6 +4,18 @@ Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott f�
 
 ## Forrásjegyzék
 
+### Kísérők: v3 és jelenlegi megfigyelés (2026-11-09)
+
+- Kivonat: `data/pet-system-evidence.json`, API-verzió `658dc911d321`. Olvasott ágak: `pets.rules`, `pets.v3.forms/costs/xp/skills/reference/book`, `spine.hero.pets`, `features.petCombat/petsV3`. Az eredeti 14 forrásfájl és hash változatlan.
+- A régi `pets.rules.maxLevel = 10` nem a teljes v3 maximuma. A projektgazda jelenlegi játékleírása alapján a kiválasztott fejlődési modell 10/20/30/40/50, végső szint 50. Ez megfigyelési forrás, nem önállóan megvizsgált játékfiók.
+- A nyilvános [GameApp klienscsomag](https://stonestorm.gg/assets/GameApp-DcYn7Zv3.js) statikus olvasása 10/20/35/50/60 formaplafonokat mutat. Ez nyitott verziókonfliktus. Nem futtatunk játékkódot, és nem állítunk a megfigyeléstől független bizonyítást az 50-es maximumra.
+- A [magyar játékfordítás](https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js) v3 formanevei: Kölyök, Fiatal, Felnőtt, Hős, Legendás. A régi háromelemű `stages` szótár nem ugyanaz. A `slots[form - 1]` közvetlen klienshasználata alapján az 1–5. formához 0/1/2/3/3 tanulható hely tartozik; a veleszületett készség ettől különbözik.
+- A fejlődési alapár a jelenlegi forma indexén (`forms.cost[currentForm]`) szerepel. A `evolveCores/evolveThread/evolveNyang` karaktermezők felülírják. A kliens 1 magos fallbackje, a `costs.evolve` 2 mag / 2-es fonalszorzója és a `spine.hero.pets.evolveFormMult` külön konfiguráció: nem egyesítjük igazolatlan végleges árrá.
+- Etetésnél a kliens fallbackje: alapanyag `20 + 6 × szint`, nyang `200 × szint`, következő XP `50 + 25 × szint`, etetési XP `round(xpToNext × feedLevelShare)`. A `feedMaterials/feedNyang/feedThread/feedHeroXp/xpToNext` szervermezők elsőbbsége a kliensben látható. A tényleges hős-XP levonást nem következtetjük ki a `heroXpMult` névből.
+- Az XP-megosztásban a v3 default/dungeon/pet_room 40/100/50%, a spine 100/150/75% értéket ad. Mindkettőt kijelezzük; nem adjuk össze és nem állítunk bizonyítatlan szerveres alkalmazási sorrendet. A v3 reference 10/13/16/23/38/53 és a spine reference 13/29/37/47/57 számai hős-/mintabuild-küszöbök, nem kísérő-fejlődési határok.
+- Tíz képesség, mindegyik öt értékkel és magyar hatásleírással. A könyv azonosítója `pet_book_<skillId>`. A magyar súgó szerint a fő kísérő tanulhat, ugyanazt két helyen nem tarthatja, az ismert képesség 5-ig fejleszthető, cserekor a régi könyvek visszajárnak. A spine könyvpooljai, 30%-os ládaparamétere és 3-as pityparamétere klienskonfiguráció; nem igazolt szerveres tárgyeloszlás vagy pity-időzítés.
+- A build csak a kísérőrendszerre vonatkozó kiegészítést emeli be; a nem kapcsolódó rendszerek változatlanok. A teljes új API-válasz és a klienskód csak az ignorált kutatási mappában marad, a publikált bizonyíték metaadatokat és kiválasztott kísérőadatokat tartalmaz.
+
 ### Bónuszrendszer és jutalomplafon (2026-11-09)
 
 - Egységes katalógus: a projektgazda húsz azonosítója egyezik a mentett kliens húszelemű tárgybónusz-listájával. A `maxHp`, `attack`, `defence` pontérték; a többi felsorolt tárgybónusz százalék. A `drop` nem új tárgybónusz, hanem külön jutalombónusz.
@@ -95,7 +107,7 @@ A felhasználó által kitöltött XP/energia sorok **saját mérések**, nem a 
 | --- | --- |
 | `guildSpeedup` és `skip.guild_building` | A kézikönyv a tényleges céhes gombhoz 20/50/100 VÉ/megkezdett óra szabályt és két megfigyelést ír le. Ezt használja a kalkulátor; a másik konfiguráció eltérését feltüntetjük. |
 | `expedition.refill` 3 VÉ és `spine.energy.refill` 10-től növekvő árak | Mindkét adatot megtartjuk. Nem választunk belőlük általános aktuális árat. |
-| `petRules.traitLevelScale` és `petForms.traitLevelScale` | Verziófüggőként elkülönítve. Nincs bizonyítatlan összbónusz-számítás. |
+| Régi `petRules`, v3 és jelenlegi kísérőmegfigyelés | A régi 10-es maximum nem aktív végső plafon. Az Atlas a közölt 50-es, ötformás modellt követi; az elérhető kliens 60-as eltérése külön jelölt. A skálázások és a szerver által felülírt költségek nem válnak bizonyítatlan összképletté. |
 | `dataHome` elnevezés és házrendszer | A mező tartalma feloldási/kovácsbeállítás, nem ház-/bútoradat. A ház XP-bónusza és korlátja ismeretlen. |
 | Kézikönyv 47 kép, ZIP ténylegesen 48 WebP | A fájlok megszámolása és SHA-256 összevetése alapján **48**. A kézikönyvet történeti forrásként nem írtuk át; a javítás itt és a felületen szerepel. |
 | 2026-10-31-i kalauz és 2026-11-06-i kliensadat | A dátumokat elkülönítjük. A régi narratív útmutató megmarad, az új táblázatok a mentett kliensadatot tükrözik. Nem állítunk általános időbeli elsőbbséget minden eltérő szabályra. |

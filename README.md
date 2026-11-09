@@ -25,6 +25,7 @@ Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-f
 ## Mi található benne?
 
 - 182 felszerelés, 6 szettcsalád, 22 kísérő, 10 kísérőkészség és 8 hátas.
+- **Kísérőfejlődés:** az 50-es végső szintet követő, ötformás megfigyelési modell, négy átváltozás, 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek és látható klienskonfliktus: `#atlas/pets`. A Planner külön formát és kísérőszintet kezel.
 - 6 pálya, 64 ellenfél, 6 bosskapcsolat, 4 kazamata és 131 alapanyag/fogyóeszköz.
 - 4 kaszt, 3 királyság, 14 kutatási lépés és 5 céhes épület 15 szinttel.
 - 462 megnyitható adatlap, keresés, kategóriaszűrés, rendezés, lapozás és kapcsolódó tartalmak.
@@ -53,6 +54,14 @@ A kritikus kalkulátor külön kezeli az esélyt (legfeljebb 50%) és a kritikus
 A hat fegyverszintsáv harminc T1–T5 bónusza kattintással betölthető; szintváltáskor a kiválasztott fokozat követi a megfelelő sávot. A T-fokozatokat nem nevezzük hivatalos ritkaságnak. Ezek kliensalapértékek, nem igazolt szerveroldali kiosztási vagy generálási esélyek. A helyi kivonatban az alaptier ellenőrizhető; a teljes magasabb szintű sávlistát a projektgazdai klienskivonat alapján tároljuk.
 
 Az új egységtesztek az `npm test` részei. Az opcionális, valódi Chromiumteszt 1440, 390 és 320 px szélességen fut: `npm run test:stats:browser`. A Playwright és böngészője csak a helyi `.integration/browser-qa/` QA-mappába települt, nem az alkalmazás függősége; a felület és a Pages-build csomagtelepítés nélkül működik.
+
+### Kísérőrendszer és forráseltérések
+
+A `data/pet-system-evidence.json` külön őrzi a 2026-11-09-i `pets.v3`, `spine.hero.pets`, magyar fordítás és a nyilvános kliens ellenőrzését. A build a `db.petSystem` alá integrálja ezeket. A régi `petRules.maxLevel = 10` történeti adatként megmarad; sem a kísérőadatlap, sem a Planner nem használja végső maximumként. A projektgazda jelenlegi megfigyelése szerinti plafonok 10/20/30/40/50, a hivatalos magyar formanevek Kölyök / Fiatal / Felnőtt / Hős / Legendás. Az elérhető klienscsomag 10/20/35/50/60 értékei eltérnek: ez látható, nyitott konfliktus, nem állítjuk az 50-et API-ból függetlenül igazoltnak.
+
+A `js/pet-system.js` közös modellje kezeli a formákat, határszinteket, hősszintkorlátot és a képességleírásokat. A `js/pet-ui.js` ugyanazt a fejlődési táblát használja a főoldalon és a 22 faj adatlapján. A 10 készség mind az öt képességszintje látható. Az átváltozási és etetési API-alapköltségek felülírhatóak karakterenként; végleges szerveres árat nem találgatunk. A két XP-megosztási konfiguráció külön látható. A reference minták nem feloldási szintek. A képességkönyv és a fajgyűjtemény Kísérő-könyve külön rendszer.
+
+Ellenőrzés: `npm test`, `npm run test:pets:browser` (1440/390/320 px). Régi `version:1` build link formamező nélkül is betölthető; az új formamező és az 50-es szint menthető/megosztható.
 
 ## Szerkesztési helyek
 

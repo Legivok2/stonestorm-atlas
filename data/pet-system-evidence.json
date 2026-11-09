@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "checkedAt": "2026-11-09",
+    "source": "https://stonestorm.gg/api/content",
+    "version": "658dc911d321",
+    "sha256": "795913391aea4a6b611d0953cda6c5765e0dc8e074f5a744573fe279def53ccf",
+    "client": {
+      "url": "https://stonestorm.gg/assets/GameApp-DcYn7Zv3.js",
+      "sha256": "8fbea36a27d93aeb025d7c1d0c420fe72ffb184a2fd27c3eef0d720e3d879962"
+    },
+    "locale": {
+      "url": "https://stonestorm.gg/assets/texts.hu-BwrjjkAs.js",
+      "sha256": "a80161cc50da4bc1e12ad2845d455c5734b7a76853f49180f2d833b9ac8226f8"
+    }
+  },
+  "progression": {
+    "maxLevel": 50,
+    "formCaps": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "source": "project-owner-current-game-observation",
+    "status": "observed",
+    "checkpoints": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ]
+  },
+  "api": {
+    "legacyRules": {
+      "maxLevel": 10,
+      "minHeroLevel": 10,
+      "maxPets": 12,
+      "hatchHours": 8,
+      "feedMaterialsPerLevel": 5,
+      "feedNyangPerLevel": 200,
+      "unlockCoins": 30,
+      "farmEggChance": 0.0003,
+      "bossEggChance": 0.03,
+      "stageLevels": [
+        5,
+        9
+      ],
+      "bond": {
+        "max": 5,
+        "cost": [
+          null,
+          {
+            "thread": 10,
+            "nyang": 20000,
+            "minLevel": 3
+          },
+          {
+            "thread": 25,
+            "nyang": 60000,
+            "minLevel": 5
+          },
+          {
+            "thread": 50,
+            "nyang": 150000,
+            "minLevel": 7
+          },
+          {
+            "thread": 90,
+            "nyang": 350000,
+            "minLevel": 9
+          }
+        ],
+        "releaseThread": {
+          "perLevel": 2,
+          "perBond": 10
+        }
+      },
+      "traitLevelScale": {
+        "base": 0.5,
+        "perLevel": 0.05
+      },
+      "rankTraitBonus": 0.1
+    },
+    "v3": {
+      "forms": {
+        "cost": [
+          null,
+          {
+            "core": "pet_core_wild",
+            "thread": 10,
+            "nyang": 20000
+          },
+          {
+            "core": "pet_core_monkey",
+            "thread": 25,
+            "nyang": 60000
+          },
+          {
+            "core": "pet_core_spider",
+            "thread": 50,
+            "nyang": 150000
+          },
+          {
+            "core": "pet_core_dragon",
+            "thread": 90,
+            "nyang": 350000
+          }
+        ],
+        "slots": [
+          0,
+          1,
+          2,
+          3,
+          3
+        ],
+        "passive": [
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5
+        ],
+        "traitLevelScale": {
+          "base": 0.75,
+          "perLevel": 0.005
+        },
+        "catchUp": {
+          "formsBelow": 1,
+          "levelShare": 0.8
+        },
+        "power": [
+          0.03,
+          0.06,
+          0.09,
+          0.11,
+          0.14
+        ]
+      },
+      "costs": {
+        "feed": {
+          "thread": 3,
+          "freePerDay": 1,
+          "heroXpMult": 100
+        },
+        "evolve": {
+          "cores": 2,
+          "threadMult": 2
+        },
+        "hatch": {
+          "nyangShare": 0.02,
+          "materials": 100
+        }
+      },
+      "xp": {
+        "toNextBase": 50,
+        "toNextPerLevel": 25,
+        "feedLevelShare": 1,
+        "feedMaterials": {
+          "base": 20,
+          "perLevel": 6
+        },
+        "share": {
+          "dungeon": 1,
+          "pet_room": 0.5,
+          "default": 0.4
+        }
+      },
+      "farmEggChance": 0.00005,
+      "rarity": {
+        "byMap": [
+          null,
+          "common",
+          "common",
+          "rare",
+          "rare",
+          "heroic",
+          "heroic"
+        ],
+        "growth": {
+          "common": 1,
+          "rare": 1.05,
+          "heroic": 1.1,
+          "unique": 1.15
+        },
+        "release": {
+          "common": 1,
+          "rare": 1.5,
+          "heroic": 2,
+          "unique": 3
+        }
+      },
+      "release": {
+        "base": 6,
+        "perLevel": 1,
+        "perForm": 15
+      },
+      "book": {
+        "perSpecies": 0.003,
+        "capPerKey": 0.012
+      },
+      "rankMinPetLevel": 10,
+      "skills": {
+        "first_strike": {
+          "kind": "combat",
+          "values": [
+            0.6,
+            1,
+            1.4,
+            1.8,
+            2.2
+          ]
+        },
+        "shield_open": {
+          "kind": "combat",
+          "values": [
+            0.05,
+            0.08,
+            0.11,
+            0.14,
+            0.18
+          ]
+        },
+        "crit_dmg": {
+          "kind": "combat",
+          "values": [
+            0.08,
+            0.14,
+            0.2,
+            0.26,
+            0.32
+          ]
+        },
+        "regen": {
+          "kind": "combat",
+          "values": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06
+          ],
+          "every": 3,
+          "times": 3
+        },
+        "thorns": {
+          "kind": "combat",
+          "values": [
+            0.05,
+            0.08,
+            0.11,
+            0.14,
+            0.18
+          ]
+        },
+        "potion_boost": {
+          "kind": "combat",
+          "values": [
+            0.03,
+            0.05,
+            0.07,
+            0.09,
+            0.12
+          ]
+        },
+        "idle_xp": {
+          "kind": "idle",
+          "values": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06
+          ],
+          "mod": "xpMult"
+        },
+        "idle_nyang": {
+          "kind": "idle",
+          "values": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06
+          ],
+          "mod": "nyangMult"
+        },
+        "loot_luck": {
+          "kind": "economy",
+          "values": [
+            0.01,
+            0.02,
+            0.03,
+            0.04,
+            0.05
+          ],
+          "mod": "dropMult"
+        },
+        "keen_nose": {
+          "kind": "dungeon",
+          "values": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03
+          ]
+        }
+      },
+      "reference": {
+        "species": "pet_wolf",
+        "levelLag": 2,
+        "bands": [
+          {
+            "from": 10,
+            "form": 1,
+            "skills": []
+          },
+          {
+            "from": 13,
+            "form": 2,
+            "skills": []
+          },
+          {
+            "from": 16,
+            "form": 2,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 23,
+            "form": 3,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 38,
+            "form": 4,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 1
+              },
+              {
+                "skillId": "shield_open",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 53,
+            "form": 5,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 2
+              },
+              {
+                "skillId": "shield_open",
+                "level": 1
+              },
+              {
+                "skillId": "crit_dmg",
+                "level": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "spine": {
+      "traitLevelScale": {
+        "base": 0.8,
+        "perLevel": 0.015
+      },
+      "xpShare": {
+        "default": 1,
+        "dungeon": 1.5,
+        "pet_room": 0.75
+      },
+      "starter": {
+        "level10Gift": {
+          "item": "key_wild",
+          "count": 1
+        },
+        "firstWildClear": {
+          "egg": "egg_m1_pick",
+          "thread": 10,
+          "replacesRegionFirstClearEgg": true
+        }
+      },
+      "core": {
+        "chance": 0.35,
+        "pity": 3
+      },
+      "book": {
+        "chancePerBossChest": 0.3,
+        "pityBooklessClears": 3,
+        "pools": {
+          "wild": {
+            "first_strike": 3,
+            "shield_open": 3,
+            "crit_dmg": 2,
+            "idle_xp": 1
+          },
+          "monkey": {
+            "first_strike": 3,
+            "shield_open": 3,
+            "crit_dmg": 3,
+            "regen": 2,
+            "idle_nyang": 1
+          },
+          "spider": {
+            "first_strike": 3,
+            "shield_open": 3,
+            "crit_dmg": 3,
+            "thorns": 2,
+            "potion_boost": 2,
+            "keen_nose": 1
+          },
+          "dragon": {
+            "first_strike": 3,
+            "shield_open": 3,
+            "crit_dmg": 3,
+            "thorns": 2,
+            "regen": 2,
+            "loot_luck": 1
+          }
+        }
+      },
+      "evolveFormMult": [
+        null,
+        1,
+        1.5,
+        2,
+        2.5
+      ],
+      "uniqueEgg": {
+        "chance": 0.04,
+        "pity": 20
+      },
+      "reference": {
+        "species": "pet_wolf",
+        "lagBefore": 11,
+        "lagAfter": 2,
+        "switchLevel": 17,
+        "rampPerLevel": 1.5,
+        "bands": [
+          {
+            "from": 13,
+            "form": 1,
+            "skills": []
+          },
+          {
+            "from": 29,
+            "form": 2,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 37,
+            "form": 3,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 2
+              },
+              {
+                "skillId": "shield_open",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 47,
+            "form": 4,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 3
+              },
+              {
+                "skillId": "shield_open",
+                "level": 2
+              },
+              {
+                "skillId": "crit_dmg",
+                "level": 1
+              }
+            ]
+          },
+          {
+            "from": 57,
+            "form": 5,
+            "skills": [
+              {
+                "skillId": "first_strike",
+                "level": 4
+              },
+              {
+                "skillId": "shield_open",
+                "level": 3
+              },
+              {
+                "skillId": "crit_dmg",
+                "level": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "features": {
+      "petCombat": true,
+      "petsV3": true
+    }
+  },
+  "clientRules": {
+    "formCaps": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "slotIndexOffset": -1,
+    "evolutionCostIndex": "currentForm",
+    "evolutionOverrides": [
+      "evolveCores",
+      "evolveThread",
+      "evolveNyang"
+    ],
+    "feedOverrides": [
+      "feedMaterials",
+      "feedNyang",
+      "feedThread",
+      "feedHeroXp",
+      "xpToNext"
+    ],
+    "feedFallback": {
+      "materials": "base + perLevel * petLevel",
+      "nyang": "legacyRules.feedNyangPerLevel * petLevel",
+      "xp": "round(xpToNext * feedLevelShare)"
+    },
+    "heroLevelCap": true,
+    "skillLevelMax": 5
+  },
+  "locale": {
+    "forms": {
+      "1": "Kölyök",
+      "2": "Fiatal",
+      "3": "Felnőtt",
+      "4": "Hős",
+      "5": "Legendás"
+    },
+    "skills": {
+      "first_strike": {
+        "name": "Előcsapás",
+        "desc": "A harc elején, az első ütés előtt lecsap: egy átlagos ütésed {{value}}%-ával."
+      },
+      "shield_open": {
+        "name": "Nyitópajzs",
+        "desc": "A harc elején {{value}}% életerőnyi pajzs."
+      },
+      "crit_dmg": {
+        "name": "Éles karom",
+        "desc": "A kritikus ütéseid sebzése +{{value}}%."
+      },
+      "regen": {
+        "name": "Gyógyító nyalás",
+        "desc": "Minden {{every}}. ütésed után az életerőd {{value}}%-át gyógyítja, harconként legfeljebb {{times}} alkalommal."
+      },
+      "thorns": {
+        "name": "Tüskés bunda",
+        "desc": "Aki megüt, visszakapja a sebzés {{value}}%-át."
+      },
+      "potion_boost": {
+        "name": "Gyógyfűszimat",
+        "desc": "A gyógyitalok az életerőd további {{value}}%-át töltik vissza."
+      },
+      "idle_xp": {
+        "name": "Tanulékony",
+        "desc": "Háttér-vadászatban +{{value}}% XP."
+      },
+      "idle_nyang": {
+        "name": "Kincsszimat",
+        "desc": "Háttér-vadászatban +{{value}}% nyang."
+      },
+      "loot_luck": {
+        "name": "Szerencsemancs",
+        "desc": "Zsákmány +{{value}}%."
+      },
+      "keen_nose": {
+        "name": "Jó szimat",
+        "desc": "A kazamaták ritka vendége +{{value}}% eséllyel jön."
+      }
+    },
+    "v3": {
+      "level": "Szint {{level}}/{{cap}}",
+      "capHero": "Nem nőhet a hősöd szintje fölé.",
+      "capForm": "Elérte a(z) {{form}} forma plafonját: fejleszd tovább!",
+      "evolve": "Fejlődés",
+      "slotLocked": "{{form}} formától",
+      "book": "Kísérő-könyv",
+      "bookCount": "{{n}}/{{max}} faj",
+      "makeMain": "Fő kísérő legyen",
+      "skinTitle": "Kinézet",
+      "main": "Fő kísérő",
+      "xp": "{{xp}}/{{next}} XP",
+      "feedXp": "+{{xp}} XP",
+      "needCore": "Kell hozzá: {{core}}",
+      "formMax": "Elérte a legmagasabb formát.",
+      "innate": "veleszületett",
+      "skillsTitle": "Képességek",
+      "slotTitle": "{{n}}. képességhely",
+      "slotEmpty": "Üres hely",
+      "swapNote": "Cserénél a régi képesség könyvei visszakerülnek a táskádba.",
+      "noBooks": "Nincs képességkönyved. A kazamatákban találsz.",
+      "useLearn": "Megtanítja",
+      "useLevel": "Szintet lép",
+      "useSwap": "Csere",
+      "useMax": "Már 5. szintű",
+      "useHeld": "Másik helyen tudja",
+      "useInnate": "Veleszületett",
+      "learned": "{{name}} képessége: {{skill}} ({{level}}. szint).",
+      "booksBack": "A képességkönyvek visszakerültek a táskádba.",
+      "bookBonus": "Gyűjtemény-bónusz: {{bonus}}",
+      "bookNone": "Minden új faj kis, végleges bónuszt ad, és a fő kísérőd a kinézetét is felveheti.",
+      "unseen": "Még nem láttad",
+      "skinOwn": "Saját kinézete",
+      "skinHint": "A könyvben szereplő fajok kinézetét viselheti.",
+      "skinFree": "Az első választás ingyenes.",
+      "skinCost": "Minden további váltás:",
+      "skinDone": "{{name}} új kinézetet kapott.",
+      "fed": "{{name}} jóllakott: +{{xp}} XP.",
+      "evolved": "{{name}} új formája: {{form}}!",
+      "caughtUp": "{{name}} felzárkózott: {{form}}, {{level}}. szint.",
+      "details": "Részletek",
+      "powerNext": "Erő: +{{now}}% Harcerő, fejlődés után +{{next}}%",
+      "feedShortMap": "Kevés az alapanyagod ({{map}})",
+      "skinWorn": "Kinézet: {{name}}",
+      "hcShare": "Harcerő +{{value}} ({{pct}})",
+      "hcNext": "{{level}}. szintig +{{value}}"
+    },
+    "feedRule": {
+      "free": "Ingyenes etetés ma: {{used}}/{{max}} elhasználva",
+      "freeNext": "Ingyenes etetés ma: {{used}}/{{max}} elhasználva · a következő ingyenes 00:00-kor (CET)",
+      "extra": "Extra etetés ma: {{coins}} VÉ (naponta egyszer)",
+      "extraUsed": "Extra etetés ma: elhasználva (naponta egyszer)"
+    },
+    "errors": {
+      "name_taken": "Ezt a nevet ebben a világban már egy másik kísérő viseli. Válassz másikat.",
+      "name_blocked": "Ez a név nem használható. Válassz másikat.",
+      "no_egg": "Ez a tojás már nincs meg. Frissítettük a listát.",
+      "unknown_egg": "Ebből a tojásból most nem kel ki semmi.",
+      "pets_full": "Legfeljebb 12 kísérőd lehet.",
+      "pet_not_found": "Ez a kísérő már nincs meg. Frissítettük a listát.",
+      "already_hatched": "Közben kikelt. Frissítettük a listát.",
+      "not_hatched": "Még nem kelt ki, várj egy kicsit.",
+      "already_fed": "Mára jóllakott. Holnap ehet újra.",
+      "max_level": "Elérte a legmagasabb szintet.",
+      "not_enough_materials": "Kevés az alapanyagod az etetéshez.",
+      "insufficient_funds": "Nincs elég nyangod az etetéshez.",
+      "request_id_reused": "Ez a kérés összeakadt egy korábbival. Próbáld újra.",
+      "pet_active": "Az aktív kísérőt előbb pihentesd, utána engedheted el.",
+      "pick_required": "Válaszd ki, melyik kísérő keljen ki.",
+      "invalid_pick": "Ez a kísérő ebből a tojásból nem kelhet ki. Válassz a listából.",
+      "pick_not_allowed": "Ennél a tojásnál nem választhatsz kísérőt.",
+      "level_too_low": "Kísérőt a {{level}}. szinttől nevelhetsz.",
+      "pet_bond_max": "A Kötelék már a legerősebb.",
+      "pet_bond_level": "A kísérőnek legalább {{level}}. szintűnek kell lennie.",
+      "no_thread": "Nincs elég Kötelékfonalad.",
+      "not_enough_xp": "Kevés a hősöd XP-je az etetéshez: {{need}} XP kell, most {{have}} van.",
+      "pet_form_level": "A kísérőnek el kell érnie a(z) {{level}}. szintet.",
+      "no_core": "Ehhez fejlődési mag kell: {{core}}.",
+      "pet_form_max": "Ez a kísérő már legendás.",
+      "pet_level_cap": "A kísérő elérte a szintkorlátját. Fejleszd tovább, vagy szintezd a hősödet.",
+      "pet_not_main": "Képességet csak a fő kísérőd tanulhat.",
+      "unknown_book": "Ez nem kísérő-képességkönyv.",
+      "no_book": "Ez a képességkönyv már nincs meg. Frissítettük a listát.",
+      "pet_skill_innate": "Ezt a képességet a kísérő veleszületetten tudja.",
+      "pet_skill_slot": "Ez a képességhely még nem nyílt meg. Előbb a szabad helyet töltsd ki.",
+      "pet_skill_held": "Ezt a képességet a kísérő egy másik helyen már tudja.",
+      "pet_skill_max": "Ez a képesség már 5. szintű.",
+      "pet_skin_locked": "Ezt a kinézetet még nem gyűjtötted be: előbb keltess ki egy ilyen kísérőt."
+    }
+  },
+  "conflicts": {
+    "legacyMaxLevel": 10,
+    "clientFormCaps": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "selectedFormCaps": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "selectedSource": "project-owner-current-game-observation",
+    "costsAreServerOverridable": true,
+    "referenceBandsAreNotUnlockLevels": true
+  }
+}

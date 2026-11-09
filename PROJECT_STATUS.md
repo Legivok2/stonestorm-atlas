@@ -1,6 +1,14 @@
 ﻿# Stonestorm Atlas – projektállapot
 
-Frissítve: **2026. november 9. – külön normál és fizetős bónuszplafonok javítása.** A teljes tárgy-/kép-/Planner-pillanatkép továbbra is 2026-11-06-i (`ac0984e054de`). A külön bónuszpool- és statlimit-kiegészítés 2026-11-09-i nyilvános kliensadatból származik (`658dc911d321`).
+Frissítve: **2026. november 9. – v3 kísérőfejlődés javítása.** A teljes tárgy-/kép-/Planner-pillanatkép továbbra is 2026-11-06-i (`ac0984e054de`). A külön bónuszpool-, statlimit- és kísérőkiegészítés 2026-11-09-i nyilvános kliensadatból származik (`658dc911d321`).
+
+## Kísérőrendszer
+
+A `#atlas/pets` főoldal, mind a 22 kísérőadatlap, a 10 képességadatlap és a Character Planner javítva. A régi rules.maxLevel = 10 nem aktív végső maximum. A projektgazda jelenlegi játékmegfigyelése szerinti 10/20/30/40/50 plafonokat használjuk, hivatalos magyar v3 formanevekkel és 0/1/2/3/3 tanulható hellyel. Az elérhető klienscsomag 10/20/35/50/60 eltérése látható, nyitott konfliktus. A reference minták nem feloldási küszöbök.
+
+Négy átváltozás feltételei és API-alapköltségei, külön jelölt szerveres felülírások, tíz képesség mind az öt szintje magyar hatásleírással és könyvikonnal. Etetés, XP, két eltérő XP-megosztási konfiguráció, könyvpoolok és a fajgyűjtemény külön kezelve. A Planner külön formát választ, figyeli a hősszintet és a forma plafonját; az 50-es szint menthető/megosztható, a régi version:1 link is betölthető. A nem kapcsolódó rendszerek változatlanok.
+
+Ellenőrzés: 44 egység-/adat-/publikációs teszt, `test:pets:browser` és `test:stats:browser` 1440/390/320 px nézetben. A kísérőteszt az 50-es mentés/megosztás és a szakaszhatárok működését is vizsgálja; a 3764 futásidejű erőforrás Pages-alkönyvtáras tesztje sikeres.
 
 ## Bónuszrendszer
 

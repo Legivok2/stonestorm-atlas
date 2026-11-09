@@ -15,6 +15,8 @@ A szinttartomány az adatbázis `limits.maxLevel` értékéből ered: **1–60**
 
 A tárgyválasztó csak a választott kaszttal és szinten használható tárgyakat engedi. Szint- vagy kasztváltás után a korábban használható, most érvénytelen felszerelések eltávolításáról üzenet jelenik meg. A kísérő a mentett `rules.minHeroLevel = 10` fölött választható; a hátas saját minimumszintje is érvényesül. A +fokozat tartományát a `forge.plusMult` tömb hossza adja: **+0–+9**.
 
+A kísérő végső szintmaximuma a jelenlegi játékmegfigyelési modellben **50**, nem a régi `rules.maxLevel = 10`. A külön `petForm` választó öt formát kezel, 10/20/30/40/50 plafonnal; a kísérő a hős szintjét sem lépheti túl. Tanulható helyek: 0/1/2/3/3, a veleszületett készség ettől külön mező. Az elérhető klienscsomag 10/20/35/50/60 értékeivel fennálló konfliktus látható, részletei a Kísérők oldalon vannak. A régi version:1 build link formamező nélkül is betölthető; ilyenkor a szinthez elégséges első formát választjuk. Az új formamező ugyanebben a kompatibilis verzióban megmarad a mentésben és a megosztásban.
+
 A Wiki-adatlap „Hozzáadás a tervezőhöz” művelete a célbuild kasztját/szintjét a kiválasztás követelményéhez igazítja, majd ismét validál. Ez eltér az aktuális, változatlan szinthez szűrt tárgyválasztótól; a korábbi inkompatibilis tárgyak eltávolításáról tájékoztat.
 
 ## Fejlesztett felszerelésértékek

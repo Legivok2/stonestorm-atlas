@@ -7,6 +7,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files = fs.readdirSync(path.join(root, 'source-data')).filter(x => x.endsWith('.json')).sort();
 const raw = files.map(file => JSON.parse(fs.readFileSync(path.join(root, 'source-data', file), 'utf8')));
 const [registry, gear, forge, pets, mounts, classes, world, hunt, economy, home, achievements, guild, config, locale] = raw;
+const petEvidence=JSON.parse(fs.readFileSync(path.join(root,'data/pet-system-evidence.json'),'utf8'));
+const petSystem={...petEvidence.progression,checkedAt:petEvidence.metadata.checkedAt,version:petEvidence.metadata.version,
+  stages:petEvidence.progression.formCaps.map((maxLevel,index)=>({form:index+1,name:petEvidence.locale.forms[index+1],minLevel:index?petEvidence.progression.formCaps[index-1]:1,maxLevel,slots:petEvidence.api.v3.forms.slots[index]})),
+  v3:petEvidence.api.v3,spine:petEvidence.api.spine,clientRules:petEvidence.clientRules,conflicts:petEvidence.conflicts,locale:petEvidence.locale};
 const provenance = (n, status='verified') => ({source:files[n], checkedAt:'2026-11-06', status, scope:'Mentett kliensadat; nem élő szerverellenőrzés'});
 const records = (rows, n, map=x=>x) => rows.map(x => ({...map(x), provenance:provenance(n)}));
 const unique = (rows, key='id') => {
@@ -22,8 +26,8 @@ const db = {
   items:unique(records(gear.items,1,x=>({...x,name:x.nameHu,nameEn:null}))),
   sets:unique(records(gear.collectionFamilies.families,1,x=>({...x.set,familyId:x.id,mapIndex:x.mapIndex,itemLevel:x.itemLevel,bossId:x.bossId,unique:x.unique,loot:x.loot,name:`${world.maps.find(m=>m.index===x.mapIndex)?.nameHu ?? x.id} · szettcsalád`,nameIsEditorial:true}))),
   pets:unique(records(pets.types,3,x=>({...x,name:x.nameHu,nameEn:null}))),
-  petTraits:pets.traits, petSkills:pets.v3.skills, petSkillNames:pets.locale.skills,
-  petForms:pets.v3.forms, petRules:pets.rules,
+  petTraits:pets.traits, petSkills:petSystem.v3.skills, petSkillNames:petSystem.locale.skills,
+  petForms:petSystem.v3.forms, petRules:pets.rules, petSystem,
   mounts:unique(records(mounts.mounts,4,x=>({...x,name:x.nameHu,nameEn:null}))),
   classes:records(classes.classes,5,x=>({...x,name:classes.locale.classes[x.id]?.name ?? classes.locale.classes[x.id] ?? x.id})),
   kingdoms:classes.kingdoms, kingdomNames:classes.locale.kingdoms,
@@ -47,7 +51,7 @@ const db = {
     {id:'energy-refill',status:'observed',title:'Kétféle energiafeltöltési ár',sources:[files[7]],description:'expedition.refill: 25 energia / 3 VÉ; spine.energy.refill: 10 VÉ-től induló, növekvő ársor. A két konfiguráció alkalmazási köre nem igazolt. Egyiket sem tekintjük általános élő árnak.'},
     {id:'guild-skip',status:'derived',title:'A céhes gyorsítás két konfigurációja',sources:[files[8],files[11],'ATLAS_VSCODE_KEZIKONYV.md'],description:'A céhes gomb ellenőrzött képlete 20 / 50 / 100 VÉ megkezdett óránként. A skip.guild_building (120 perc / 1 VÉ) ettől eltérő beállítás; a kalkulátor a dokumentált gombképletet használja.'},
     {id:'home-name',status:'unknown',title:'A dataHome nem bizonyít házbónuszt',sources:[files[9]],description:'A dataHome technikai kulcs feloldási szinteket és kovácsbeállításokat tartalmaz. Házépítést, bútorokat vagy XP-bónuszt ebből nem vezetünk le.'},
-    {id:'pet-versions',status:'observed',title:'Eltérő kísérő-skálázások',sources:[files[3]],description:'A rules.traitLevelScale és a v3.forms.traitLevelScale külön verziójú értékeket ad. A felület a fajbónuszt, a közös trait-fokozatokat és a v3 formákat külön mutatja; nem számít belőlük nem igazolt összbónuszt.'}
+    {id:'pet-versions',status:'observed',title:'Kísérő: régi rules, v3 és jelenlegi megfigyelés',sources:[files[3],'data/pet-system-evidence.json'],description:'A régi rules.maxLevel = 10 nem globális v3 plafon. A közölt jelenlegi játékmegfigyelés alapján 5 forma, 10/20/30/40/50 plafon és 50-es végső szint érvényes az Atlasban. Az elérhető klienscsomag 10/20/35/50/60 értéke eltér: ezt konfliktusként jelöljük. A reference hősszinthez tartozó mintabuildjei nem feloldási szintek; a slots tömb legfeljebb 3 tanulható helyet ad. A szerver felülírhatja az alap etetési és fejlődési költségeket.'}
   ]
 };
 // A ZIP képei azonosak a meglévő mentéssel: egyetlen példányra hivatkozunk.
