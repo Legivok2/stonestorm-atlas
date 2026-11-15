@@ -1,10 +1,11 @@
 /* A Képtár, összehasonlító és karaktertervező ugyanannak az Atlasnak a moduljai. */
 globalThis.AtlasExtensions={
-  categories:[['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield'],['bonuses','Bónuszrendszer',null,'spark'],['updates','Atlas frissítések',null,'book']],
+  categories:[['arena','Aréna',null,'swords'],['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield'],['bonuses','Bónuszrendszer',null,'spark'],['updates','Atlas frissítések',null,'book']],
   init(ui){
     const bonusSystem=globalThis.AtlasBonusUI.init(ui);
     const statLimits=globalThis.AtlasStatLimitsUI.init({...ui,bonusSystem});
     const syncUI=globalThis.AtlasSyncUI.init(ui);
+    const homeArena=globalThis.AtlasHomeArenaUI.init(ui);
     const {db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render}=ui;
     const $=s=>document.querySelector(s);
     const catalog=media.catalog;
@@ -198,6 +199,6 @@ globalThis.AtlasExtensions={
       }
     }
     function home(){return `<div class="feature-links"><a href="#atlas/gallery">${media.render(media.get('uikit','btn_help'),{thumbnail:true})}<span>Képtár<small>${num(catalog.stats.available)} eredeti grafika</small></span></a><a href="#atlas/compare">${media.render(media.get('uikit','btn_character'),{thumbnail:true})}<span>Felszerelés-összehasonlító<small>Két megjelenés egymás mellett</small></span></a><a href="#atlas/planner">${media.render(media.get('uikit','btn_arena'),{thumbnail:true})}<span>Karaktertervező<small>Építs, hasonlíts össze, ments</small></span></a></div>`;}
-    return {screens:{gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page,bonuses:bonusSystem.page,updates:syncUI.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home,bonusInfo:bonusSystem.itemInfo};
+    return {screens:{arena:homeArena.arena,gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page,bonuses:bonusSystem.page,updates:syncUI.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home,bonusInfo:bonusSystem.itemInfo};
   }
 };

@@ -3,8 +3,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 import {API,sha256,diffJSON,validateContent,fullSetBonuses,planImport,applyOverlay,equal} from '../scripts/atlas-sync-model.mjs';
 import {runSync,fetchPublic,discover} from '../scripts/atlas-sync.mjs';
+import {dungeonRecord,dungeonStructure} from '../scripts/dungeon-sync.mjs';
+import {reconcileReview,reviewGroups,loadReviewAliases} from '../scripts/sync-review.mjs';
 
 const root=new URL('../',import.meta.url);
 const load=file=>JSON.parse(fs.readFileSync(new URL(file,root),'utf8'));
@@ -121,4 +124,121 @@ test('Auto-Sync: ismeretlen mechanika ellenőrzési tétele változatlan követk
   assert.equal(r.applied,false);assert(r.review.some(x=>x.path==='/unknownAstralSystem'));
   r=await runSync({root:dir,apply:true,inspect:false,fetcher:async()=>new Response(null,{status:304})});
   assert.equal(r.applied,false);assert(r.review.some(x=>x.path==='/unknownAstralSystem'));
+});
+
+function dungeonFixture(){
+  const db=base(),c=source(),raw=load('source-data/06_terkepek_szornyek_bossok_kazamatak.json').dungeons;
+  db.dungeons=raw.map(x=>({...structuredClone(x),name:x.id,provenance:{source:'06_terkepek_szornyek_bossok_kazamatak.json',status:'verified'}}));
+  c.dungeons=structuredClone(raw);
+  for(const d of c.dungeons)for(const room of d.heroic.rooms)for(const stat of ['maxHp','atkMin','atkMax','harcero'])room[stat]+=100;
+  return {c,db};
+}
+const dungeonPath='/dungeons/wild/heroic/rooms/0/maxHp';
+function reviewState({c,db,previous={},changes=[],aliases={},plan=planImport(c,db),now='2026-11-15T12:00:00Z'}){
+  return reconcileReview({previous,changes,plan,content:c,db,aliases,now,sourceHash:sha256(JSON.stringify(c)),sources:[]});
+}
+test('Kazamataimport: 40 hősi terem 160 statja frissül, a szabályok és a védett rendszerek nem',()=>{
+  const {c,db}=dungeonFixture(),before=structuredClone(db),plan=planImport(c,db);
+  assert.equal(plan.accepted.filter(x=>x.path.startsWith('/dungeons/')).length,4);
+  assert.equal(plan.accepted.flatMap(x=>x.fieldChanges??[]).length,160);
+  applyOverlay(db,plan.overlay);
+  for(const d of db.dungeons){assert.deepEqual(dungeonRecord(d),c.dungeons.find(x=>x.id===d.id));assert.deepEqual(dungeonStructure(d),dungeonStructure(before.dungeons.find(x=>x.id===d.id)));assert.equal(d.provenance.status,'derived');}
+  assert.deepEqual(db.sets,before.sets);assert.deepEqual(db.petSystem,before.petSystem);
+});
+test('Kazamataimport: hiányos, duplikált, új mechanikájú vagy hibás statú terem blokkolva',()=>{
+  const mutations=[
+    d=>delete d.heroic.rooms[0].maxHp,
+    d=>d.heroic.rooms[0].maxHp=-1,
+    d=>d.heroic.rooms[0].harcero=Infinity,
+    d=>d.heroic.rooms[0].maxHp=1.5,
+    d=>d.heroic.rooms[0].atkMin=d.heroic.rooms[0].atkMax+1,
+    d=>d.heroic.rooms[0].newMechanism=1,
+    d=>d.heroic.rooms[0].creatureId='unknown_creature',
+    d=>d.heroic.rooms[0].role='boss',
+    d=>d.heroic.minLevel++,
+    d=>d.heroic.rooms.push({...d.heroic.rooms[0]}),
+    d=>d.heroic.rooms.pop(),
+    d=>d.keyId='unknown_key',
+    d=>d.deeper.hp=99,
+    d=>delete d.runPay,
+  ];
+  for(const mutate of mutations){const {c,db}=dungeonFixture();mutate(c.dungeons[0]);const p=planImport(c,db);assert(!p.overlay.dungeons?.wild);assert(p.review.some(x=>x.path==='/dungeons/wild'));}
+});
+test('Kazamataimport: teremszám a stabil azonosító, nem a tömbsorrend',()=>{
+  const {c,db}=dungeonFixture();c.dungeons[0].heroic.rooms.reverse();
+  const p=planImport(c,db);applyOverlay(db,p.overlay);
+  assert.equal(db.dungeons[0].heroic.rooms.find(x=>x.room===1).maxHp,c.dungeons[0].heroic.rooms.find(x=>x.room===1).maxHp);
+  assert.equal(new Set(db.dungeons[0].heroic.rooms.map(x=>x.room)).size,10);
+});
+test('Kazamataimport: hiányzó/duplikált kazamata nem törli a korábbi importot; új család nem importálódik',()=>{
+  const {c,db}=dungeonFixture(),first=planImport(c,db);applyOverlay(db,first.overlay);
+  c.dungeons.push(structuredClone(c.dungeons[0]));c.dungeons.at(-1).heroic.rooms[0].maxHp++;
+  let p=planImport(c,db,first.overlay);assert.deepEqual(p.overlay.dungeons.wild,first.overlay.dungeons.wild);assert(!p.validatedDungeons.includes('wild'));
+  c.dungeons=undefined;p=planImport(c,db,first.overlay);assert.deepEqual(p.overlay.dungeons,first.overlay.dungeons);
+  const next=source();next.dungeons.push({...next.dungeons[0],id:'new_unknown_dungeon'});p=planImport(next,db,first.overlay);assert(!p.overlay.dungeons.new_unknown_dungeon);assert(p.review.some(x=>x.path==='/dungeons/new_unknown_dungeon'));
+});
+test('Kazamataimport: a build újraellenőrzi az import szerkezetét és kapcsolatait',()=>{
+  const {c,db}=dungeonFixture(),p=planImport(c,db);p.overlay.dungeons.wild.record.heroic.rooms[0].level++;
+  assert.throws(()=>applyOverlay(db,p.overlay),/kazamatamechanika|teremkapcsolat/);
+});
+test('Besorolás: öt külön osztály és rendszer szerinti név, nem a harcerő szó alapján',()=>{
+  const {c,db}=dungeonFixture(),aliases=loadReviewAliases(fileURLToPath(root));
+  const previous={review:[{path:dungeonPath},{path:'/features/oldFlag',changeKind:'removed'},{path:'/features/newFlag',changeKind:'added'},{path:'https://stonestorm.gg/assets/hu-capture.js'},{path:'/harcero/bossEvadeCaps'}]};
+  const r=reviewState({c,db,previous,aliases});
+  assert.deepEqual(r.ledger.map(x=>x.classification),['automatic','unsupported','mechanism','observation','conflict']);
+  assert.equal(r.ledger[0].system,'Kazamaták');assert.match(r.ledger[0].title,/hősi 1. terem.*életerő/);
+  assert.equal(r.summary.open,5);assert.equal(r.summary.activity.new,0);
+});
+test('Régi tételek: csak az Atlasba igazoltan átvezetett stat zárul le, a puszta terv nem',()=>{
+  const {c,db}=dungeonFixture(),previous={review:[{path:dungeonPath},{path:'/unknownSystem/rule'}]},plan=planImport(c,db);
+  let r=reviewState({c,db,previous,plan});assert.equal(r.open.length,2);assert.equal(r.closedNow.length,0);
+  applyOverlay(db,plan.overlay);r=reviewState({c,db,previous,plan});assert.equal(r.open.length,1);
+  const closed=r.ledger.find(x=>x.path===dungeonPath);assert.equal(closed.resolution.rule,'validated-dungeon-stats-v1');assert.equal(closed.resolution.identity.room,1);assert.equal(r.summary.activity.automatic,1);
+});
+test('Régi tételek: változatlan következő válasz megtartja a nyitottakat és a lezárási bizonyítékot',()=>{
+  const {c,db}=dungeonFixture(),plan=planImport(c,db);applyOverlay(db,plan.overlay);
+  const previous={review:[{path:dungeonPath},{path:'/unknownSystem/rule'}]},first=reviewState({c,db,previous,plan});
+  const next=reviewState({c,db,previous:{reviewLedger:first.ledger,reviewBaseline:first.baseline},now:'2026-11-16T12:00:00Z'});
+  assert.equal(next.open.length,1);assert.equal(next.summary.activity.automatic,0);assert.equal(next.summary.resolvedTotal,1);
+  assert.deepEqual(next.ledger.find(x=>x.status==='resolved').resolution,first.ledger.find(x=>x.status==='resolved').resolution);
+});
+test('Régi tételek: ugyanazon útvonal új értéke új esemény, a régi lezárás megmarad',()=>{
+  const {c,db}=dungeonFixture(),plan=planImport(c,db);applyOverlay(db,plan.overlay);
+  const first=reviewState({c,db,previous:{review:[{path:dungeonPath}]},plan});
+  c.dungeons[0].heroic.rooms[0].maxHp++;
+  const next=reviewState({c,db,previous:{reviewLedger:first.ledger,reviewBaseline:first.baseline},changes:[{path:dungeonPath,kind:'changed'}]});
+  assert.equal(next.ledger.length,2);assert.equal(next.summary.resolvedTotal,1);assert.equal(next.open.length,1);assert.equal(next.summary.activity.new,1);
+});
+test('Dokumentált felülvizsgálat: pontos forrásalias és számított hátasadat zárható, eltérés nem',()=>{
+  const {c,db}=dungeonFixture(),aliases=loadReviewAliases(fileURLToPath(root));c.lean.skills=structuredClone(aliases['/lean/skills'].value);
+  const previous={review:[{path:'/lean/skills'},{path:'/mounts/pony/timeReductionPctFromTravelMult'}]};
+  let r=reviewState({c,db,previous,aliases});assert.equal(r.summary.activity.documented,2);assert.equal(r.open.length,0);
+  c.lean.skills={unexpected:1};db.mounts.find(x=>x.id==='pony').timeReductionPctFromTravelMult=99;
+  r=reviewState({c,db,previous,aliases});assert.equal(r.open.length,2);
+});
+test('Nyitott tételek: az ezres darabszám sem törlési vagy lezárási ok',()=>{
+  const {c,db}=dungeonFixture(),previous={review:Array.from({length:1005},(_,i)=>({path:'/unknownSystem/rule'+i}))};
+  const r=reviewState({c,db,previous});assert.equal(r.open.length,1005);assert.equal(r.ledger.length,1005);
+});
+test('Csoportok: a témán belüli eltérő besorolások nem keverednek, a részletes útvonal megmarad',()=>{
+  const {c,db}=dungeonFixture(),r=reviewState({c,db,previous:{review:[{path:'/features/a',changeKind:'removed'},{path:'/features/b',changeKind:'added'}]}});
+  const groups=reviewGroups(r.open);assert.equal(groups.length,1);assert.equal(groups[0].topics.length,2);assert.equal(groups[0].count,2);
+  assert(groups[0].topics.every(x=>x.paths[0].path.startsWith('/features/')));
+});
+test('Régi lezárás: egy korábbi értékre visszaváltás új esemény marad',()=>{
+  const {c,db}=dungeonFixture(),plan=planImport(c,db);applyOverlay(db,plan.overlay);
+  const first=reviewState({c,db,previous:{review:[{path:dungeonPath}]},plan});
+  const original=c.dungeons[0].heroic.rooms[0].maxHp;
+  c.dungeons[0].heroic.rooms[0].maxHp++;
+  const secondPlan=planImport(c,db);applyOverlay(db,secondPlan.overlay);
+  const second=reviewState({c,db,previous:{reviewLedger:first.ledger,reviewBaseline:first.baseline},changes:[{path:dungeonPath,kind:'changed'}],now:'2026-11-16T12:00:00Z'});
+  c.dungeons[0].heroic.rooms[0].maxHp=original;
+  const third=reviewState({c,db,previous:{reviewLedger:second.ledger,reviewBaseline:second.baseline},changes:[{path:dungeonPath,kind:'changed'}],now:'2026-11-17T12:00:00Z'});
+  assert.equal(third.summary.activity.new,1);assert.equal(third.summary.resolvedTotal,2);assert.equal(third.open.length,1);
+});
+test('Nyilvános kliens: 403-as kezdőlapnál a már ismert modulhash és hivatkozások megmaradnak',async t=>{
+  const dir=workspace(t),file=path.join(dir,'snapshots/manifest.json'),manifest=JSON.parse(fs.readFileSync(file));
+  const url='https://stonestorm.gg/assets/known-module.js';manifest.resources={[url]:{url,sha256:'a'.repeat(64),references:[]}};fs.writeFileSync(file,JSON.stringify(manifest));
+  const r=await runSync({root:dir,apply:false,inspect:true,fetcher:async url=>url.endsWith('/api/content')?new Response(null,{status:304}):new Response('denied',{status:403})});
+  assert.equal(r.applied,false);assert.equal(JSON.parse(fs.readFileSync(file)).resources[url].sha256,'a'.repeat(64));assert(r.warnings.some(x=>x.reason.includes('403')));
 });

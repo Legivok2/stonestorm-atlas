@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Stonestorm Stat Cap Overlay",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "author": "Patrik",
   "description": "Készítette: Patrik. Stonestorm karakteradatok, felszerelés-bónuszok és statlimitek összehasonlítása.",
   "icons": {
@@ -10,19 +10,39 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-  "permissions": ["storage"],
-  "host_permissions": ["https://stonestorm.gg/*"],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://stonestorm.gg/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://stonestorm.gg/*"],
-      "js": ["capture.js"],
+      "matches": [
+        "https://stonestorm.gg/*"
+      ],
+      "js": [
+        "capture.js",
+        "research-sanitizer.js",
+        "research-capture.js"
+      ],
       "run_at": "document_start",
       "world": "MAIN"
     },
     {
-      "matches": ["https://stonestorm.gg/*"],
-      "js": ["content.js"],
+      "matches": [
+        "https://stonestorm.gg/*"
+      ],
+      "js": [
+        "content.js",
+        "research-sanitizer.js",
+        "research-bridge.js"
+      ],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "action": {
+    "default_title": "Atlas anonim export",
+    "default_popup": "research-popup.html"
+  }
 }

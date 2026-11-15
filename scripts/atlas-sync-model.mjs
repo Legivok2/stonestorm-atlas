@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import {planDungeons,applyDungeons} from './dungeon-sync.mjs';
+import {planHomeArena,applyHomeArena} from './home-arena-model.mjs';
 
 export const API='https://stonestorm.gg/api/content';
 export const canonical=value=>JSON.stringify(value,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b,'en'))):v);
@@ -126,10 +128,10 @@ export function planImport(content,db,previous={schema:1,records:{},sets:{}},che
         if(kind==='items'&&(!object(raw.values)||Object.keys(clean.values??{}).some(k=>!(k in raw.values))))missing.push('values');
         if(missing.length){review.push({path:`/${kind}/${raw.id}`,reason:'Hiányzó mezők; a rekord változatlan marad: '+missing.join(', ')});continue;}
         validateRecord(kind,merged,db);
-        resolved.push('/'+kind+'/'+raw.id);
-        if(equal(clean,merged))continue;
         if(kind==='bosses'&&(!content.mobs.some(x=>x.id===merged.mobId)||!content.maps.some(x=>x.index===merged.mapIndex)))throw Error('Hiányzó bosskapcsolat');
         if(kind==='mobs'&&merged.mapIndex!==undefined&&!content.maps.some(x=>x.index===merged.mapIndex))throw Error('Hiányzó pályakapcsolat');
+        resolved.push('/'+kind+'/'+raw.id);
+        if(equal(clean,merged))continue;
         overlay.records[kind]??={};overlay.records[kind][raw.id]={record:merged,provenance:provenance('/'+kind+'/'+raw.id)};
         accepted.push({path:`/${kind}/${raw.id}`,kind:old?'changed':'added'});
       }catch(e){review.push({path:`/${kind}/${raw.id}`,reason:e.message});}
@@ -148,8 +150,12 @@ export function planImport(content,db,previous={schema:1,records:{},sets:{}},che
     }catch(e){review.push({path:'/spine/sets/'+set.familyId,reason:e.message});}
   }
   for(const key of Object.keys(content.spine.sets))if(!db.sets.some(x=>x.familyId===key))review.push({path:'/spine/sets/'+key,reason:'Új szettcsalád; szerkezeti ellenőrzés szükséges'});
+  const dungeonPlan=planDungeons(content,db,overlay,provenance);
+  accepted.push(...dungeonPlan.accepted);review.push(...dungeonPlan.review);
+  const systems=planHomeArena(content,db,overlay,provenance);
+  accepted.push(...systems.accepted);review.push(...systems.review);resolved.push(...systems.resolved);
   if(accepted.length){overlay.gameVersion=content.version;overlay.checkedAt=checkedAt;overlay.sourceHash=sourceHash;}
-  return {overlay,accepted,review,resolved};
+  return {overlay,accepted,review,resolved,validatedDungeons:dungeonPlan.validated};
 }
 
 // A kézi forrásfájlok érintetlenek; kizárólag ellenőrzött, eredettel ellátott felülréteg.
@@ -175,6 +181,8 @@ export function applyOverlay(db,overlay){
     if(!equal(entry.bonuses.map(x=>[x.pieces,x.stats.map(y=>y.stat)]),set.bonuses.map(x=>[x.pieces,x.stats.map(y=>y.stat)]))||entry.bonuses.some(x=>x.stats.some(y=>!numeric(y.value))))throw Error('Ismeretlen szettimport');
     set.bonuses=entry.bonuses;set.provenance=entry.provenance;
   }
+  applyDungeons(db,overlay,validateProvenance);
+  applyHomeArena(db,overlay,validateProvenance);
   return db;
 }
 function validateProvenance(p){if(p?.source!==API||!/^\/[a-zA-Z0-9/_-]+$/.test(p.apiPath??'')||!/[a-f0-9]{64}/.test(p.sha256??'')||!id(p.gameVersion)||!Number.isFinite(Date.parse(p.checkedAt))||p.status!=='derived')throw Error('Hiányos importforrás');}

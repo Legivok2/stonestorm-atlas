@@ -34,6 +34,8 @@ Ez az `.publication/permissions.json` `publicationAuthorization` mezőjében sze
 A meglévő projektmappában:
 
 ```powershell
+npm ci
+npm run build:addon
 npm run check
 npm test
 npm run audit:publish
@@ -45,7 +47,7 @@ git commit -m "Atlas frissítés"
 git push origin main
 ```
 
-Adatforrás-változáskor előbb `npm run build:data` szükséges; ehhez helyben Python/Pillow is kellhet. Az éles workflow a már generált és verziózott adatokat használja, nincs szüksége npm-csomagtelepítésre, Pythonra vagy játékfiókra. A `stage:github` tételesen auditált fájllistát használ; a teljes munkamappában ne használd ellenőrizetlenül a `git add .` parancsot. A korábbi `stage:github:code` a teljes feltöltés után nem megfelelő frissítési parancs.
+Adatforrás-változáskor előbb `npm run build:data` szükséges; ehhez helyben Python/Pillow is kellhet. Az éles workflow a már generált és verziózott adatokat használja, az AST-feldolgozó zárolt buildfüggőségét `npm ci` telepíti; Pythonra vagy játékfiókra nincs szüksége. A `stage:github` tételesen auditált fájllistát használ; a teljes munkamappában ne használd ellenőrizetlenül a `git add .` parancsot. A korábbi `stage:github:code` a teljes feltöltés után nem megfelelő frissítési parancs.
 
 ## Helyi ellenőrzés
 

@@ -1,1 +1,8 @@
-{"private":true,"type":"commonjs","scripts":{"test":"node tests/capture-refresh.test.js"}}
+{
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tests/capture-refresh.test.js"
+  },
+  "version": "0.9.4"
+}

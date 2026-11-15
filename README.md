@@ -24,7 +24,7 @@ Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-f
 
 ## Ingyenes Chrome-addon · BÉTA
 
-**[Stonestorm Stat Cap Overlay v0.9.3 – ZIP letöltése](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. A manifest, a két futásidejű szkript és az ikonok bájtra változatlanok; a statisztikai számításokat az integráció nem módosítja.
+**[Stonestorm Stat Cap Overlay v0.9.4 – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. Az eredeti két statisztikai futásidejű szkript és az ikonok bájtra változatlanok. A 0.9.4 kutatási kiegészítés verzióemelt manifestet és külön fájlokat kapott; az aktuálisan telepített kiadást a Pages-verzióadat és a sikeres deploy igazolja.
 
 Asztali Chrome: csomagold ki a ZIP-et állandó mappába, nyisd meg a `chrome://extensions` oldalt, kapcsold be a Fejlesztői módot, és a **Kicsomagolt bővítmény betöltése** gombbal válaszd a manifestet tartalmazó mappát. Frissítéskor ugyanott cseréld le a fájlokat, majd töltsd újra a meglévő bővítményt és a játék lapját. Részletes [telepítési útmutató](addons/stonestorm-statcap-overlay/README.md) és [adatkezelési összefoglaló](addons/stonestorm-statcap-overlay/PRIVACY.md).
 
@@ -34,7 +34,7 @@ Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `download
 
 ## Mi található benne?
 
-- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.3-hoz, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
+- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.4-hez, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
 
 - 182 felszerelés, 6 szettcsalád, 22 kísérő, 10 kísérőkészség és 8 hátas.
 - **Kísérőfejlődés:** az 50-es végső szintet követő, ötformás megfigyelési modell, négy átváltozás, 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek és látható klienskonfliktus: `#atlas/pets`. A Planner külön formát és kísérőszintet kezel.
@@ -165,3 +165,13 @@ Az **Atlas frissítések** nézet megmutatja az utolsó sikeres nyilvános adate
 `npm run sync:check`: valódi lekérés és jelentés, Atlas-import nélkül. `npm run sync:apply`: ismert adatok importja automatikus tesztekkel és hibánál visszaállítással. `npm run test:sync`: az Auto-Sync regressziós tesztjei. A teljes `npm test` ezeket és a szettbónusz-teszteket is futtatja.
 
 A GitHub Actions 6 órás ellenőrzését, az éles import `ATLAS_SYNC_AUTO_PUBLISH` kapcsolóját, az adatforrásokat, korlátokat és a visszaállítást a [részletes használati útmutató](docs/AUTO_SYNC.md) írja le. A történeti alap 2026-11-06-i; az új API-adatok csak az ellenőrzött importkörökben frissülnek, nem minden rendszerben egyszerre.
+
+Az ismert kazamaták normál és hősi termeinek numerikus statjai is importálhatók, kizárólag változatlan, teljesen validált szerkezet mellett. A frissítési nézet rendszerenként és témánként csoportosít, külön kezeli a régi nyitott ügyeket, az új eseményeket, az importokat és a dokumentált lezárásokat. A `reviewLedger` megőrzi a lezárási bizonyítékokat; a változatlan API önmagában nem old meg régi tételt.
+
+## Otthon és Aréna V2
+
+`#atlas/arena`: a Tiszta aréna és a Bandita Liga külön adatlaprészekben. `#atlas/home`: házfokok, szobák, lapozható képes bútornév-katalógus, témák, trófeák, persely és Dongsu teaháza; a kutatások külön megmaradnak. A pontos árak és nem publikus limitek mintára váróként szerepelnek. [Részletes forrás- és hiányjelentés](docs/HOME_ARENA_V2.md).
+
+Az addon 0.9.4 BÉTA a Chrome bővítményikonjáról indítható, anonim kutatási exportot is tartalmaz. A régi statisztikai szkriptek változatlanok. A ZIP újragenerálható: `npm run build:addon`; a main-push után a Pages-workflow csomagolja és ellenőrzi a letöltést.
+
+A weboldal futtatása továbbra is build nélkül lehetséges. A buildhez, tesztekhez és Auto-Synchez egyszer `npm ci` szükséges az AST-alapú, kódot nem futtató kliensfeldolgozó miatt. `npm run test:home-arena` és `npm run test:home-arena:browser` ellenőrzi az új rendszereket.

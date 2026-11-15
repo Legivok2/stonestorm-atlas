@@ -3,6 +3,9 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {API,sha256,equal,diffJSON,category,validateContent,localBaseline,planImport} from './atlas-sync-model.mjs';
+import {reconcileReview,loadReviewAliases,reviewGroups,classifications} from './sync-review.mjs';
+import {collectPublicSystems} from './collect-home-arena.mjs';
+import {compatibleClientData} from './home-arena-model.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=(root,file,fallback=null)=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):fallback;
@@ -32,7 +35,8 @@ export function discover(text,base){
   return [...urls].sort();
 }
 async function inspectResources(previous={},fetcher=fetch){
-  const resources={},queue=['https://stonestorm.gg/'],seen=new Set(),warnings=[];
+  // Egy 403, átmeneti hiba vagy a kérési költségkeret nem törölheti a korábbi leltárt.
+  const resources=structuredClone(previous),queue=['https://stonestorm.gg/'],seen=new Set(),warnings=[];
   const priority=url=>/index-.*\.js/.test(url)?0:/art-manifest|texts\.hu|\/hu-|\.hu-/.test(url)?1:/\.json|webmanifest/.test(url)?2:3;
   let bytes=0,requests=0;
   while(queue.length&&requests<48&&bytes<12*1024*1024){
@@ -63,6 +67,10 @@ async function inspectResources(previous={},fetcher=fetch){
   return {resources,discovered,warnings,budget:{requests,downloadedBytes:bytes,unfetched:queue.length,maxRequests:48,maxBytes:12*1024*1024}};
 }
 function markdown(r){
+  if(r.reviewSummary){
+    const s=r.reviewSummary,a=s.activity;
+    return `# Atlas frissítési jelentés\n\nÁllapot: ${r.status}\n\nEllenőrzés: ${r.checkedAt}\n\nJátékverzió: ${r.gameVersion}\n\n## Áttekintés\n\n- Most észlelt új tételek: ${a.new}\n- Korábbról nyitva maradt: ${a.carried}\n- Automatikusan feldolgozott mezők: ${a.automatic}\n- Dokumentált felülvizsgálattal lezárt: ${a.documented}\n- Mechanikai / kézi ellenőrzés: ${a.manual}\n- Nyitott összesen: ${s.open}\n\n## A kiinduló ${s.baseline.total} tétel besorolása\n\n${Object.entries(classifications).map(([k,label])=>'- '+label+': '+s.baseline.classified[k]).join('\n')}\n\nLezárt: ${s.baseline.resolved}; nyitott: ${s.baseline.open}. A változatlan API-válasz önmagában nem lezárási ok.\n\n## Nyitott rendszerek\n\n${reviewGroups(r.review).map(g=>'### '+g.name+' ('+g.count+')\n\n'+g.topics.map(t=>'- '+t.title+': '+t.count+' tétel – '+classifications[t.classification]).join('\n')).join('\n\n')}\n\n## Források és részletek\n\nA teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: ${r.sourceHash}.\n\nKliensfeltérképezés ebben a futásban: ${r.clientInspected?'igen':'nem; a meglévő forrásleltár megmaradt'}.\n`;
+  }
   return `# Atlas Auto-Sync V1\n\nÁllapot: ${r.status}\n\nEllenőrzés: ${r.checkedAt}\n\nJátékverzió: ${r.gameVersion??'nem elérhető'}\n\nÖsszevetés: ${r.baseline??'nem történt'}\n\nÚj / módosult / hiányzó mezők: ${r.counts?.added??0} / ${r.counts?.changed??0} / ${r.counts?.removed??0}\n\nImportálható rekordok: ${r.accepted?.length??0}; ellenőrzésre váró tételek: ${r.review?.length??0}.\n\n${r.error??''}\n\n## Elért források\n\n${(r.sources??[]).map(s=>'- '+s.url+' ('+s.status+', SHA-256: '+s.sha256+')').join('\n')}\n\n## Ellenőrzésre vár\n\n${(r.review??[]).map(x=>'- `'+x.path+'`: '+x.reason).join('\n')}\n\n## Változások\n\n${(r.changes??[]).map(x=>'- '+x.kind+' `'+x.path+'` ['+x.category+']').join('\n')}\n\nA teljes előtte/utána értékeket a latest-sync.json tartalmazza. A jelentésben szereplő hiány nem törlési utasítás. A klienskódot nem futtatjuk, a magyar modulokat és grafikai hivatkozásokat csak feltérképezzük.\n`;
 }
 
@@ -82,34 +90,30 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const db=read(root,'data/atlas.json');
     const priorImport=read(root,'data/sync-import.json',{schema:1,records:{},sets:{}});
     const plan=planImport(content,db,priorImport,now);
-    const acceptedPaths=plan.accepted.map(x=>x.path);
-    const safePrefixes=['/items/','/mobs/','/bosses/','/stackables/'];
+    let publicSystems=null,publicSystemsCache=null,clientCandidate=null;
+    if(inspect&&db.homeArena){
+      try{
+        const result=await collectPublicSystems({root,content,fetcher});
+        publicSystemsCache=result.cache;
+        const compatibility=compatibleClientData(db.homeArena,result.candidate);
+        publicSystems={entrypointConfirmed:result.candidate.entrypointConfirmed,warnings:result.warnings,compatibility};
+        if(!compatibility.safe)plan.review.push({path:'/home-arena/client',reason:compatibility.reason});
+        else if(compatibility.changed&&result.candidate.entrypointConfirmed){clientCandidate=result.candidate;plan.accepted.push({path:'/home-arena/furniture-names',kind:'changed'});}
+        else if(compatibility.changed)plan.review.push({path:'/home-arena/client',reason:'Új katalógusszöveg, de a jelenlegi belépőmodul nem volt igazolható'});
+      }catch(e){publicSystems={error:e.message};plan.review.push({path:'/home-arena/client',reason:e.message});}
+    }
     const priorReport=read(root,'reports/latest-sync.json',{});
-    const review=[...(priorReport.review??[]).filter(x=>!plan.resolved.includes(x.path)),...plan.review];
-    for(const change of changes){
-      if(['/version','/tag'].includes(change.path))continue;
-      if(acceptedPaths.some(p=>change.path===p||change.path.startsWith(p+'/')))continue;
-      if(safePrefixes.some(p=>change.path.startsWith(p))&&change.kind!=='removed')continue;
-      review.push({path:change.path,category:change.category,reason:!old&&!(change.path.split('/')[1] in baseline)?'Első megfigyelés; nincs teljes korábbi snapshot':'Nem automatikus importág / megváltozott szabály; kézi ellenőrzés'});
-    }
-    const inventory=inspect?await inspectResources(previous.resources,fetcher):{resources:previous.resources??{},discovered:[],warnings:[],budget:{}};
-    const resourceChanges=Object.entries(inventory.resources).filter(([url,r])=>r.sha256&&previous.resources?.[url]?.sha256!==r.sha256).map(([url,r])=>({url,sha256:r.sha256,category:category(url)}));
-    if(resourceChanges.length)review.push(...resourceChanges.map(r=>({path:r.url,category:r.category,reason:'Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash'})));
-    // Az ismeretlen mechanikák nem tűnhetnek el csak azért, mert a következő lekérés változatlan.
-    const uniqueReview=[...new Map(review.map(x=>[x.path,x])).values()];review.length=0;review.push(...uniqueReview);
-    if(review.length>1000){
-      write(root,'reports/history/'+now.replaceAll(':','-')+'-pending.json',review);
-      // A teljes lista az artifactba kerül. Gitben legfeljebb 1000 nyitott tétel marad.
-      review.splice(0,review.length-1000);
-    }
-    report={...report,status:unchanged?'unchanged':'checked',baseline:old?'Teljes korábbi publikus snapshot':'Részleges helyi forrásadatok; első megfigyelés',gameVersion:content.version,atlasDataVersion:db.dataVersion,sourceHash:contentMeta.sha256,sources:[contentMeta,...Object.values(inventory.resources).filter(x=>x.sha256)],counts:Object.fromEntries(['added','changed','removed'].map(k=>[k,changes.filter(x=>x.kind===k).length])),changes,accepted:plan.accepted,review,resourceChanges,discovery:inventory.budget,warnings:inventory.warnings};
+    const inventory=inspect?await inspectResources(previous.resources,fetcher):{resources:previous.resources??{},discovered:previous.discovered??[],warnings:[],budget:{inspected:false}};
+    const resourceChanges=Object.entries(inventory.resources).filter(([url,r])=>r.sha256&&previous.resources?.[url]?.sha256!==r.sha256).map(([url,r])=>({url,sha256:r.sha256,beforeHash:previous.resources?.[url]?.sha256??null,category:category(url)}));
+    report={...report,status:unchanged?'unchanged':'checked',baseline:old?'Teljes korábbi publikus snapshot':'Részleges helyi forrásadatok; első megfigyelés',gameVersion:content.version,atlasDataVersion:db.dataVersion,sourceHash:contentMeta.sha256,sources:[contentMeta,...Object.values(inventory.resources).filter(x=>x.sha256)],counts:Object.fromEntries(['added','changed','removed'].map(k=>[k,changes.filter(x=>x.kind===k).length])),changes,accepted:plan.accepted,resourceChanges,publicSystems,clientInspected:inspect,discovery:inventory.budget,warnings:inventory.warnings};
     const statusBefore=read(root,'data/sync-status.json',{});
-    const newStatus={schema:1,lastSuccessfulCheck:now,gameVersion:content.version,atlasDataVersion:plan.accepted.length&&apply?content.version:db.dataVersion,lastAutomaticUpdate:statusBefore.lastAutomaticUpdate??null,lastImportCounts:statusBefore.lastImportCounts??{added:0,changed:0},mode:apply?'apply':'read-only',changeCounts:report.counts,importable:plan.accepted.length,pending:review.length,pendingItems:review.slice(0,60),reportUrl:'https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md'};
+    const newStatus={schema:1,lastSuccessfulCheck:now,gameVersion:content.version,atlasDataVersion:plan.accepted.length&&apply?content.version:db.dataVersion,lastAutomaticUpdate:statusBefore.lastAutomaticUpdate??null,lastImportCounts:statusBefore.lastImportCounts??{added:0,changed:0},mode:apply?'apply':'read-only',changeCounts:report.counts,importable:plan.accepted.length,reportUrl:'https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md'};
     if(apply&&plan.accepted.length){
-      const targets=['data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json'];
+      const targets=['data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json'];
       const backup=new Map(targets.map(f=>[f,fs.existsSync(path.join(root,f))?fs.readFileSync(path.join(root,f)):null]));
       try{
         write(root,'data/sync-import.json',plan.overlay);
+        if(clientCandidate){const previousSystem=read(root,'data/home-arena.json');write(root,'reports/history/home-arena/'+sha256(previousSystem)+'.json',previousSystem);write(root,'data/home-arena.json',clientCandidate);}
         if(verify)await verify();else{
           for(const [program,args] of [[process.execPath,['scripts/build-data.mjs']],...(process.platform==='win32'?[['cmd.exe',['/d','/s','/c','npm test']]]:[['npm',['test']]])]){
             const result=spawnSync(program,args,{cwd:root,stdio:'inherit'});if(result.status!==0)throw Error('Importellenőrzés sikertelen: '+args.join(' '));
@@ -118,16 +122,22 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
       }catch(e){for(const [file,bytes] of backup){if(bytes===null){if(fs.existsSync(path.join(root,file)))fs.unlinkSync(path.join(root,file));}else fs.writeFileSync(path.join(root,file),bytes);}throw e;}
       report.applied=true;report.status='applied';newStatus.lastAutomaticUpdate=now;newStatus.lastImportCounts={added:plan.accepted.filter(x=>x.kind==='added').length,changed:plan.accepted.filter(x=>x.kind==='changed').length};
     }
+    // Csak a ténylegesen újraépített, tesztelt Atlas-adat adhat importlezárási bizonyítékot.
+    const reconciled=reconcileReview({previous:priorReport,changes,resourceChanges,plan,content,db:report.applied?read(root,'data/atlas.json'):db,aliases:loadReviewAliases(root),initialReport:read(root,'reports/initial-sync.json',{}),sources:report.sources,sourceHash:contentMeta.sha256,now});
+    report.review=reconciled.open;report.reviewLedger=reconciled.ledger;report.reviewSummary=reconciled.summary;report.reviewBaseline=reconciled.baseline;
+    const closed=new Set(reconciled.closedNow);
+    Object.assign(newStatus,{reviewVersion:2,pending:report.review.length,pendingItems:report.review.slice(0,60),reviewSummary:reconciled.summary,groups:reviewGroups(report.review.filter(x=>x.carried)),manualGroups:reviewGroups(report.review.filter(x=>['mechanism','conflict'].includes(x.classification))),processedGroups:reviewGroups(reconciled.ledger.filter(x=>closed.has(x.id))),resolvedGroups:reviewGroups(reconciled.ledger.filter(x=>x.status==='resolved')),currentGroups:reviewGroups(reconciled.ledger.filter(x=>!x.carried))});
     // Csak teljes, érvényes válasz és sikeres tranzakció után váltható az aktuális snapshot.
     if(!unchanged){
       if(old)write(root,'snapshots/history/'+previous.content.sha256+'.json',old);
       write(root,'snapshots/current/content.json',contentBytes);
     }
     write(root,'snapshots/manifest.json',{schema:1,checkedAt:now,gameVersion:content.version,content:contentMeta,resources:inventory.resources,discovered:inventory.discovered});
+    if(publicSystemsCache){const previousClient=read(root,'snapshots/current/home-arena-client.json',null);if(previousClient&&sha256(previousClient.modules)!==sha256(publicSystemsCache.modules))write(root,'reports/history/home-arena-client/'+sha256(previousClient)+'.json',previousClient);write(root,'snapshots/current/home-arena-client.json',publicSystemsCache);}
     write(root,'data/sync-status.json',newStatus);
     write(root,'js/sync-status.js','/* Generált Auto-Sync állapot. */\nwindow.STONESTORM_SYNC_STATUS = '+JSON.stringify(newStatus).replaceAll('<','\\u003c')+';\n');
     write(root,'reports/latest-sync.json',report);write(root,'reports/latest-sync.md',markdown(report));
-    if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied}\nreview=${review.length>0}\n`);
+    if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied}\nreview=${report.review.length>0}\n`);
     return report;
   }catch(e){
     report={...report,status:'failed',error:e.message};
@@ -137,7 +147,7 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
   }
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  if(process.argv.slice(2).some(x=>!['--apply','--read-only'].includes(x)))throw Error('Használat: node scripts/atlas-sync.mjs [--read-only | --apply]');
-  const report=await runSync({apply:process.argv.includes('--apply'),outputFile:process.env.GITHUB_OUTPUT});
+  if(process.argv.slice(2).some(x=>!['--apply','--read-only','--content-only'].includes(x)))throw Error('Használat: node scripts/atlas-sync.mjs [--read-only | --apply] [--content-only]');
+  const report=await runSync({apply:process.argv.includes('--apply'),inspect:!process.argv.includes('--content-only'),outputFile:process.env.GITHUB_OUTPUT});
   console.log(JSON.stringify({status:report.status,gameVersion:report.gameVersion,counts:report.counts,accepted:report.accepted.length,pending:report.review.length,applied:report.applied}));
 }

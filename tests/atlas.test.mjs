@@ -8,7 +8,7 @@ import '../js/planner-model.js';
 const db=JSON.parse(fs.readFileSync(new URL('../data/atlas.json',import.meta.url),'utf8'));
 const setEvidence=JSON.parse(fs.readFileSync(new URL('../data/set-bonus-evidence.json',import.meta.url),'utf8'));
 const sync=JSON.parse(fs.readFileSync(new URL('../data/sync-import.json',import.meta.url),'utf8'));
-const synced=(kind,id)=>sync.records?.[kind]?.[id];
+const synced=(kind,id)=>kind==='dungeons'?sync.dungeons?.[id]:sync.records?.[kind]?.[id];
 const checkSync=entry=>{assert.equal(entry.provenance.source,'https://stonestorm.gg/api/content');assert.match(entry.provenance.sha256,/^[a-f0-9]{64}$/);assert(entry.provenance.apiPath);assert.equal(entry.provenance.status,'derived');};
 const math=globalThis.StonestormMath,rates=db.economy.limits.guildSpeedup;
 test('Céhes gyorsítás: megkezdett órák és ársávhatárok',()=>{

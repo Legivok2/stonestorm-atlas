@@ -16,15 +16,16 @@ test('A kiadási JSON nem adhat külső vagy könyvtárbejáró letöltési cím
   for(const patch of [{schema:2},{beta:false},{zip:'https://example.com/fake.zip'},{zip:'downloads/../secret.zip'},{version:'0.9.x'},{bytes:-1},{bytes:Infinity},{sha256:'invalid'},{name:'<script>'}])assert.equal(versions.release({...release,...patch}),null);
 });
 
-test('Az importált 0.9.3-as manifest, statisztikai szkriptek és ikonok bájtra egyeznek az eredeti lenyomatokkal',()=>{
+test('Az eredeti statisztikai szkriptek és ikonok változatlanok, az új manifest verziója emelt',()=>{
   const original=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'import.json')));
   assert.equal(original.version,'0.9.3');
   const manifest=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'manifest.json')));
+  for(const file of ['capture.js','content.js','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'])assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file+' · az eredeti számítás és grafika változatlan');
   if(manifest.version===original.version)for(const file of addonRuntime)assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file);
   else assert.equal(versions.compare(manifest.version,original.version),1,'Új forrás csak emelt verzióval adható ki; az eredeti importjegyzék megmarad.');
 });
 
-test('A letölthető ZIP determinisztikus, gyökérszintű manifestet és csak a kilenc kijelölt fájlt tartalmazza',()=>{
+test('A letölthető ZIP determinisztikus, gyökérszintű manifestet és csak a kijelölt fájlokat tartalmazza',()=>{
   const expected=expectedAddon(root),archive=fs.readFileSync(path.join(root,addonZip));assert(archive.equals(expected.zip));
   assert.equal(sha256(archive),expected.metadata.sha256);assert.equal(archive.length,expected.metadata.bytes);
   const names=[];let offset=0;
@@ -34,7 +35,7 @@ test('A letölthető ZIP determinisztikus, gyökérszintű manifestet és csak a
     assert.equal(crc32(bytes),archive.readUInt32LE(offset+14));assert(bytes.equals(fs.readFileSync(path.join(root,addonDirectory,name))),name);names.push(name);offset=start+length;
   }
   assert.deepEqual(names,[...addonRuntime,'README.md','PRIVACY.md'].sort());assert.equal(archive.readUInt32LE(offset),0x02014b50);
-  assert.equal(archive.readUInt32LE(archive.length-22),0x06054b50);assert.equal(archive.readUInt16LE(archive.length-12),9);
+  assert.equal(archive.readUInt32LE(archive.length-22),0x06054b50);assert.equal(archive.readUInt16LE(archive.length-12),addonRuntime.length+2);
   assert.equal(JSON.parse(fs.readFileSync(path.join(root,'downloads/stat-addon.json'))).version,expected.metadata.version);
 });
 

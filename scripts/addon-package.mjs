@@ -7,7 +7,7 @@ import '../js/addon-version.js';
 export const addonDirectory='addons/stonestorm-statcap-overlay';
 export const addonZip='downloads/stonestorm-statcap-overlay.zip';
 export const addonMetadata='downloads/stat-addon.json';
-export const addonRuntime=['manifest.json','capture.js','content.js','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'];
+export const addonRuntime=['manifest.json','capture.js','content.js','research-sanitizer.js','research-capture.js','research-bridge.js','research-popup.html','research-popup.js','research-popup.css','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'];
 export const addonSource=[...addonRuntime,'README.md','PRIVACY.md','PUBLISH.md','package.json','import.json','tests/capture-refresh.test.js'].map(file=>addonDirectory+'/'+file);
 export const addonArtifacts=[addonZip,addonMetadata,'js/addon-release.js'];
 export const sha256=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');

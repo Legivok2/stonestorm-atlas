@@ -25,3 +25,14 @@ Az Atlas panel mobilon is használható; ez a telepítési útmutató asztali Ch
 ## Ellenőrzés és adatkezelés
 
 A projekt gyökerében: `npm run test:addon:source`. A teszt az átadott `capture-refresh.test.js` fájlt futtatja változatlanul. Csomagkészítés: `npm run build:addon`. Kiadási leírás: [PUBLISH.md](PUBLISH.md), adatkezelési összefoglaló: [PRIVACY.md](PRIVACY.md).
+# Anonim kutatási export – 0.9.4 BÉTA
+
+A statisztikai számítások és az eredeti `capture.js` / `content.js` változatlanok. Az új kutatási export az extension ikonjára kattintva érhető el.
+
+1. A frissített bővítményt kicsomagolva töltsd be a `chrome://extensions` oldalon. Meglévő telepítésnél használd az Újratöltés gombot, majd frissítsd a játék lapját.
+2. A játék lapján kattints a bővítmény ikonjára, majd a **Mintagyűjtés indítása** gombra.
+3. A következő 60 másodpercben nyisd meg az Otthont, a Szobákat és az Aréna megfelelő módjait. A bővítmény nem indít kérést, csak a játék által indított, előre engedélyezett GET-válaszokat figyeli.
+4. Nyisd meg újra a popupot, majd válaszd az **Anonimizált JSON letöltése** gombot. Ismeretlen válaszséma vagy csak személyes állapot esetén nem készül minta.
+5. A letöltött fájlt helyben átnézheted. Megosztása külön, kézi döntés; automatikus feltöltés nincs.
+
+Csak engedélyezett katalógusazonosítók és numerikus szabály-/ármezők exportálhatók. Fiókazonosító, játékosnév, ellenféllista, egyenleg, aktuális karakter-/szobaszint, készlet, cookie, token, kérésfejléc és időbélyeg nem kerül a mintába. Egy következő szint ajánlata feltételes megfigyelés: nem bizonyít általános árképletet. Ismeretlen mező alapértelmezésben kimarad. A Leállítás és törlés gomb a memóriában tartott mintákat is törli; letöltés után szintén törlődnek.

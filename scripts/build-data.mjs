@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {applyOverlay} from './atlas-sync-model.mjs';
+import {validateHomeArena} from './home-arena-model.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files = fs.readdirSync(path.join(root, 'source-data')).filter(x => x.endsWith('.json')).sort();
@@ -63,6 +64,8 @@ const images = usedGame.map(id=>{
   return {id,file,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),source:`Felhasználói játékmentés; ZIP: dist/assets/game/${id}.webp`,permission:'unverified-public-reuse',usage:id.startsWith('bld_')?'Azonosított céhes épület':id==='m4_boss'?'Csak a 4. pálya bossához':'Kategóriaikon / azonosított rendszerillusztráció'};
 });
 db.images=images;
+const homeArenaFile=path.join(root,'data/home-arena.json');
+if(fs.existsSync(homeArenaFile))db.homeArena=validateHomeArena(JSON.parse(fs.readFileSync(homeArenaFile,'utf8')));
 const syncFile=path.join(root,'data/sync-import.json');
 if(fs.existsSync(syncFile)){
   const overlay=JSON.parse(fs.readFileSync(syncFile,'utf8'));

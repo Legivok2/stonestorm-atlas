@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-15T13:09:36.072Z",
+  "checkedAt": "2026-11-15T14:56:56.194Z",
   "gameVersion": "5231690b6864",
   "content": {
     "url": "https://stonestorm.gg/api/content",
@@ -1870,7 +1870,7 @@
     },
     "https://stonestorm.gg/site.webmanifest": {
       "url": "https://stonestorm.gg/site.webmanifest",
-      "status": "stale",
+      "status": 304,
       "etag": "\"dmue4lwfpgcg-di\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:51 GMT",
       "sha256": "fcf9d1b48a6307333b7d430d6cd2d60f1caf0e9db96ed124330b779427a93922",
@@ -2217,14 +2217,13 @@
     },
     "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css": {
       "url": "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
-      "status": 304,
-      "etag": "W/\"dmue44wiv1mo-lt\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "status": 200,
+      "etag": "W/\"dmglw39fu29s-lt\"",
+      "lastModified": "Wed, 28 Oct 2026 16:19:13 GMT",
       "sha256": "cf9af6289e475080e4c5178ab0d5f3d42d57de568c927d8c180e402be25d3cf4",
       "bytes": 785,
       "references": [],
-      "kind": "public-client",
-      "unchanged": true
+      "kind": "public-client"
     },
     "https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js": {
       "url": "https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js",
@@ -3065,14 +3064,13 @@
     },
     "https://stonestorm.gg/assets/consent-BM99f_pM.css": {
       "url": "https://stonestorm.gg/assets/consent-BM99f_pM.css",
-      "status": 304,
-      "etag": "\"dmue49hwlr0g-1c1\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "status": 200,
+      "etag": "\"dmjc9pjgguf4-1c1\"",
+      "lastModified": "Sat, 31 Oct 2026 21:24:40 GMT",
       "sha256": "0c083f6b53bbaa38a01a8684a115ed059d9cd5f6d1dd6b95ad2a693beaa2a0c3",
       "bytes": 7916,
       "references": [],
-      "kind": "public-client",
-      "unchanged": true
+      "kind": "public-client"
     },
     "https://stonestorm.gg/assets/ConsentDialog-DrigddrP.js": {
       "url": "https://stonestorm.gg/assets/ConsentDialog-DrigddrP.js",
@@ -3482,14 +3480,13 @@
     },
     "https://stonestorm.gg/assets/CreatorApplyInGame-Dim7-bGp.css": {
       "url": "https://stonestorm.gg/assets/CreatorApplyInGame-Dim7-bGp.css",
-      "status": 304,
-      "etag": "W/\"dmue44wiv1mo-ka\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "status": 200,
+      "etag": "W/\"dmkazdylzncw-ka\"",
+      "lastModified": "Mon, 02 Nov 2026 00:36:59 GMT",
       "sha256": "c20a9b354f350dfb5c2abcacbff903599c84539d6a1b62eb8bca7a8d608e5269",
       "bytes": 730,
       "references": [],
-      "kind": "public-client",
-      "unchanged": true
+      "kind": "public-client"
     },
     "https://stonestorm.gg/assets/CreatorSection-CTGPEw2z.js": {
       "url": "https://stonestorm.gg/assets/CreatorSection-CTGPEw2z.js",
@@ -4130,14 +4127,13 @@
     },
     "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css": {
       "url": "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
-      "status": 304,
-      "etag": "\"dmue46a4zgg0-30fs\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "status": 200,
+      "etag": "\"dmu8u5g824n4-30fs\"",
+      "lastModified": "Fri, 13 Nov 2026 17:02:43 GMT",
       "sha256": "7d4785f6827ed1f093d5a290f6712ceba5a0e1fb6474e20652749dbba45d91df",
       "bytes": 1106505,
       "references": [],
-      "kind": "public-client",
-      "unchanged": true
+      "kind": "public-client"
     },
     "https://stonestorm.gg/assets/GameApp-StvnmmXt.js": {
       "url": "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
@@ -5250,14 +5246,13 @@
     },
     "https://stonestorm.gg/assets/CharacterPage-C7pgUz-D.css": {
       "url": "https://stonestorm.gg/assets/CharacterPage-C7pgUz-D.css",
-      "status": 304,
-      "etag": "\"dmue45d28ikg-358\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "status": 200,
+      "etag": "\"dmqaqlk3yy2o-358\"",
+      "lastModified": "Mon, 09 Nov 2026 01:41:29 GMT",
       "sha256": "78237aa5b333b73c8eaae37ff9fc8d15f81328553814d243fb5e10bb0b281978",
       "bytes": 20594,
       "references": [],
-      "kind": "public-client",
-      "unchanged": true
+      "kind": "public-client"
     },
     "https://stonestorm.gg/assets/CharacterSelectPage-FdQhPOcH.js": {
       "url": "https://stonestorm.gg/assets/CharacterSelectPage-FdQhPOcH.js",
@@ -5290,9 +5285,34 @@
       "kind": "public-client",
       "unchanged": true
     },
+    "https://stonestorm.gg/icons/icon-192.png": {
+      "url": "https://stonestorm.gg/icons/icon-192.png",
+      "kind": "image-reference",
+      "downloaded": false
+    },
+    "https://stonestorm.gg/icons/icon-512.png": {
+      "url": "https://stonestorm.gg/icons/icon-512.png",
+      "kind": "image-reference",
+      "downloaded": false
+    },
+    "https://stonestorm.gg/icons/icon-maskable-512.png": {
+      "url": "https://stonestorm.gg/icons/icon-maskable-512.png",
+      "kind": "image-reference",
+      "downloaded": false
+    },
+    "https://stonestorm.gg/landing/shots/hu/city-1280.webp": {
+      "url": "https://stonestorm.gg/landing/shots/hu/city-1280.webp",
+      "kind": "image-reference",
+      "downloaded": false
+    },
+    "https://stonestorm.gg/landing/shots/hu/forge-1280.webp": {
+      "url": "https://stonestorm.gg/landing/shots/hu/forge-1280.webp",
+      "kind": "image-reference",
+      "downloaded": false
+    },
     "https://stonestorm.gg/assets/chase-model--ZRinXly.js": {
       "url": "https://stonestorm.gg/assets/chase-model--ZRinXly.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue491d8a2o-gj\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "5452ef6e0101abc0af3f0460d4062ac1a425e92cca6d8acb162100d77a110ffd",
@@ -5300,11 +5320,12 @@
       "references": [
         "https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/chat-C1ZltB_1.js": {
       "url": "https://stonestorm.gg/assets/chat-C1ZltB_1.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-dz\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "6db8c0cbb11e268cf43f558ccdd44b842408546cf0f1929cdaaacf68b2daeb0a",
@@ -5313,11 +5334,12 @@
         "https://stonestorm.gg/assets/friends-CulwlShS.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/ChestParts-D7TiW5QT.js": {
       "url": "https://stonestorm.gg/assets/ChestParts-D7TiW5QT.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45d28ikg-17p\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "758cfbcfa24588db448c66beec22caf37da485cf8d95f2693bb7d6a9c7701af7",
@@ -5326,11 +5348,12 @@
         "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CityAmbience-D7AqAk1X.js": {
       "url": "https://stonestorm.gg/assets/CityAmbience-D7AqAk1X.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45d28ikg-3gi\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "9d756378108aeee78f385bf3e2e72a2a5f3dab9996fc06ab9c51c606b7a523b7",
@@ -5365,21 +5388,23 @@
         "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/ambience.worker-COloZCDL.js": {
       "url": "https://stonestorm.gg/assets/ambience.worker-COloZCDL.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmruf6sfa1a8-2lx\"",
       "lastModified": "Tue, 10 Nov 2026 21:19:30 GMT",
       "sha256": "b5354afeefe93e2dd5f3784001d98b90b4078acda0efb9870a210e93f9e8fb05",
       "bytes": 9392,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/class-hint-Bm65mHeJ.js": {
       "url": "https://stonestorm.gg/assets/class-hint-Bm65mHeJ.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-2s\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "72baf71b65dba3ef0c1b7fad1c8e529b8b4082fe98150291093b13be8012c5ef",
@@ -5387,11 +5412,12 @@
       "references": [
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/clock-DIoKUKn7.js": {
       "url": "https://stonestorm.gg/assets/clock-DIoKUKn7.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-e6\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "efed3b7a09027fa6b997ffd60120d9bdbff21cb5ee203750da7883607e2b8ef4",
@@ -5400,11 +5426,12 @@
         "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CoinBuy-DFLt6M2h.js": {
       "url": "https://stonestorm.gg/assets/CoinBuy-DFLt6M2h.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45d28ikg-n1\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "c5b96e027de1658b1b177234d1cc6f2af455ec31a4f1378edbbc89c2e85db47a",
@@ -5414,11 +5441,12 @@
         "https://stonestorm.gg/assets/index-lDwa4khx.js",
         "https://stonestorm.gg/assets/shopdaily-BBJM5mOh.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CommunityRewards-CXjT2xXA.js": {
       "url": "https://stonestorm.gg/assets/CommunityRewards-CXjT2xXA.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-wy\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "b4ae9653013540b76f78dda979782317a8f0786e5abbe68f2a3ba8e03d48e977",
@@ -5445,13 +5473,14 @@
         "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/ContributionLine-DxLGpUUQ.css": {
       "url": "https://stonestorm.gg/assets/ContributionLine-DxLGpUUQ.css",
       "status": 200,
-      "etag": "W/\"dmue44wiv1mo-79\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "etag": "W/\"dmhcq576td6o-79\"",
+      "lastModified": "Thu, 29 Oct 2026 13:20:57 GMT",
       "sha256": "0c1fc8d357d1424febe34ed39521ae36c02776c227cd2f00c8e84311ee492a11",
       "bytes": 261,
       "references": [],
@@ -5459,7 +5488,7 @@
     },
     "https://stonestorm.gg/assets/ContributionLine-jkbXB3DX.js": {
       "url": "https://stonestorm.gg/assets/ContributionLine-jkbXB3DX.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-127\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "8859642e115a855d8fe94f11c375fc21c3c78d44e1034d14191a027c8a5ea9be",
@@ -5468,11 +5497,12 @@
         "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/cover-C70q7p4z.js": {
       "url": "https://stonestorm.gg/assets/cover-C70q7p4z.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-f0\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "11265feb431a5971d3cb5d949b73c15466bc026146a12647e70efa3e109b8c0a",
@@ -5480,11 +5510,12 @@
       "references": [
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CreateCharacterPage-B8zzJa_K.js": {
       "url": "https://stonestorm.gg/assets/CreateCharacterPage-B8zzJa_K.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-60j\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "5d5611422f963a5f4277a61a96050c1213e76acf3ac646d237a91c48f49461e3",
@@ -5517,11 +5548,12 @@
         "https://stonestorm.gg/assets/use-kingdom-balance-C6BOvWKe.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/creator-api-DoFzLUdL.js": {
       "url": "https://stonestorm.gg/assets/creator-api-DoFzLUdL.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-nl\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "ea9d2d4f5e73fa06c2e983afccfb923b487d28e19605236b04c93e8a1c0dbeff",
@@ -5530,21 +5562,23 @@
         "https://stonestorm.gg/assets/creator-apply--jgqt1YV.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/creator-apply--jgqt1YV.js": {
       "url": "https://stonestorm.gg/assets/creator-apply--jgqt1YV.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-gs\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "933412ce2343af0f5b124c93a8e70556c2afe7b7ffa4917d6c8af2c57a92055c",
       "bytes": 604,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CreatorPage-CIAcN7bi.js": {
       "url": "https://stonestorm.gg/assets/CreatorPage-CIAcN7bi.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-3jy\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "400e89c212337111354c2c29b82aa6d0322fb30d63f1a20cc7dfa4249cd0135b",
@@ -5582,31 +5616,34 @@
         "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CreatorPage-DIMgdWN7.css": {
       "url": "https://stonestorm.gg/assets/CreatorPage-DIMgdWN7.css",
-      "status": 200,
+      "status": 304,
       "etag": "\"dmue45tllzi8-ta\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "8e9df8145f973ee63406d12eb3191898a79877a2b7500165bc2099bc8dfcd875",
       "bytes": 4907,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/creators-DNGmelrF.js": {
       "url": "https://stonestorm.gg/assets/creators-DNGmelrF.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-2m\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "22b42d111a7c1a76bf026764b93b20e40a3cc6787d99016b0fd2cc2a421c2af5",
       "bytes": 94,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/CupTab-BJV6rplJ.js": {
       "url": "https://stonestorm.gg/assets/CupTab-BJV6rplJ.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-zf\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "0bb804420b5813cbe57af29e94fd3b17c5b5ea7816ef9e6f53b5a0c088387132",
@@ -5633,11 +5670,12 @@
         "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/DefenceCapNote-CwDulYAu.js": {
       "url": "https://stonestorm.gg/assets/DefenceCapNote-CwDulYAu.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-gd\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "75831807643182c7c87543eb0511754b8c89777b5c355fe2d4116b4a3eb85b3b",
@@ -5646,11 +5684,12 @@
         "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/discord-Be4XLNW2.js": {
       "url": "https://stonestorm.gg/assets/discord-Be4XLNW2.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-94\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "5bd763b998a271f94b0b2584b8f04172f3b2222e318ab0021b15ddee86071689",
@@ -5658,21 +5697,23 @@
       "references": [
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/discord-model-DEZoVJss.js": {
       "url": "https://stonestorm.gg/assets/discord-model-DEZoVJss.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue49hwlr0g-el\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "212435bab0f7ee68dc15cba7398aaa50993b7855a4b7ff3700bb42f0773c5d49",
       "bytes": 1335,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js": {
       "url": "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-1kl\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "935d2d14b27a712d2c5776f9846be9783401c17a604cbae0225a5084f1fd5637",
@@ -5681,21 +5722,23 @@
         "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/drops-DzG0xeO7.js": {
       "url": "https://stonestorm.gg/assets/drops-DzG0xeO7.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-n7\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "ab10c93e8eab585a76859cec11e5f6e316bbeb789ea801c43d391de833cc01d7",
       "bytes": 835,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/DungeonTips-B4qG3UNu.js": {
       "url": "https://stonestorm.gg/assets/DungeonTips-B4qG3UNu.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-3w6\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "4dc0d5b13ddd32e50c4554762ea753796862d2e72f3f93474f2e7d071fc97beb",
@@ -5711,11 +5754,12 @@
         "https://stonestorm.gg/assets/preload-Ce1ciFI0.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/endgame-COHKe5md.js": {
       "url": "https://stonestorm.gg/assets/endgame-COHKe5md.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue49hwlr0g-10l\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "2f37eee61cd87c6a7986904c1c9abf2ffb291644bf285061e976c2fe21eca17a",
@@ -5725,13 +5769,14 @@
         "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/endgame-fYCZQy5s.css": {
       "url": "https://stonestorm.gg/assets/endgame-fYCZQy5s.css",
       "status": 200,
-      "etag": "\"dmue49hwlr0g-3w9\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "etag": "\"dmtanerptk3k-3w9\"",
+      "lastModified": "Thu, 12 Nov 2026 14:15:10 GMT",
       "sha256": "798515995ac505da5a293de68c9a3a4c54021309cb7245305359fcf0a3370090",
       "bytes": 26610,
       "references": [],
@@ -5740,8 +5785,8 @@
     "https://stonestorm.gg/assets/engine-D2fZQzW4.css": {
       "url": "https://stonestorm.gg/assets/engine-D2fZQzW4.css",
       "status": 200,
-      "etag": "\"dmue49hwlr0g-g1\"",
-      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "etag": "\"dmglw7ea7aps-g1\"",
+      "lastModified": "Wed, 28 Oct 2026 16:19:13 GMT",
       "sha256": "505fc484da6abc4dc48348e8584079126512d1787e61436740cc823a0c26d760",
       "bytes": 1751,
       "references": [],
@@ -5749,7 +5794,7 @@
     },
     "https://stonestorm.gg/assets/engine-DgbN2TIz.js": {
       "url": "https://stonestorm.gg/assets/engine-DgbN2TIz.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue49hwlr0g-ecd\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "80389692b65306d8ef62485202813545a30ef896c945d291747251dec1786b16",
@@ -5764,11 +5809,12 @@
         "https://stonestorm.gg/assets/profiles-Dc-tdETD.js",
         "https://stonestorm.gg/assets/rarity-BA0JR_hw.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/index-DduKgzIT.js": {
       "url": "https://stonestorm.gg/assets/index-DduKgzIT.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue4aezcow0-7mw\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "5f7c5b357c6d49c721f5a2b5639366c8c6b04ec2b72cf8349c5b321a36401dec",
@@ -5782,11 +5828,12 @@
         "https://stonestorm.gg/assets/profiles-Dc-tdETD.js",
         "https://stonestorm.gg/assets/rarity-BA0JR_hw.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/EventsPanel-DKSOeLEA.js": {
       "url": "https://stonestorm.gg/assets/EventsPanel-DKSOeLEA.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-5ei\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "5f5aff22d90617aab55f0e82162cf815367057610626ae9fc18fcea619f0f56f",
@@ -5857,11 +5904,12 @@
         "https://stonestorm.gg/assets/use-reset-at-DhNbvG__.js",
         "https://stonestorm.gg/assets/use-stat-advice-7JZDbBM0.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/EvolutionMoment-BZQxLOaq.js": {
       "url": "https://stonestorm.gg/assets/EvolutionMoment-BZQxLOaq.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-1mu\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "9e37f984abe15b8facfdfd08b0b5a0214de6fa293a753aa7b251fa04d86b2fff",
@@ -5887,11 +5935,12 @@
         "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/expedition-BwPGJGM_.js": {
       "url": "https://stonestorm.gg/assets/expedition-BwPGJGM_.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-gv\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "e1687400675ab6c52fc3e78ece76d90022f9e6b0f70943d374fb863659821c8d",
@@ -5899,11 +5948,12 @@
       "references": [
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/expedition-time-HBPRbUOo.js": {
       "url": "https://stonestorm.gg/assets/expedition-time-HBPRbUOo.js",
-      "status": 200,
+      "status": "cached",
       "etag": "W/\"dmue44wiv1mo-ru\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "97e018e3e7194a2a96fa95570a77ad7518aaeecbb1cca0315d516bb7e173a59f",
@@ -5912,11 +5962,12 @@
         "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
         "https://stonestorm.gg/assets/index-lDwa4khx.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/fight-runner-COgon33y.js": {
       "url": "https://stonestorm.gg/assets/fight-runner-COgon33y.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue49yfz7y8-v2\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "3429f74a0814978b8fb6e473eaf0c70301a592b83bd622485e851fba53045b59",
@@ -5928,11 +5979,12 @@
         "https://stonestorm.gg/assets/preload-Ce1ciFI0.js",
         "https://stonestorm.gg/assets/server-unseen-DToVQJwS.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/FightScene-BMtSxJws.js": {
       "url": "https://stonestorm.gg/assets/FightScene-BMtSxJws.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue45tllzi8-kkn\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "ce8542e0e61af4cfa603b04c0145421576a9ba1763b056d8073f5678fc192ed4",
@@ -5980,21 +6032,23 @@
         "https://stonestorm.gg/assets/use-animation-end-BVYyEPHw.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/boss-live-kit-BtnhSLIH.css": {
       "url": "https://stonestorm.gg/assets/boss-live-kit-BtnhSLIH.css",
-      "status": 200,
+      "status": 304,
       "etag": "\"dmue491d8a2o-ty\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "f123e62b0d5683d5a2cbc8ac4548e713cfe605a9799e5c48e42060976c6678b5",
       "bytes": 3432,
       "references": [],
-      "kind": "public-client"
+      "kind": "public-client",
+      "unchanged": true
     },
     "https://stonestorm.gg/assets/boss-live-kit-C4uQEEx3.js": {
       "url": "https://stonestorm.gg/assets/boss-live-kit-C4uQEEx3.js",
-      "status": 200,
+      "status": "cached",
       "etag": "\"dmue491d8a2o-2y9\"",
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "0a9124a40c741db90febf729109ce4b83652db7f258b64bdae206965ddff661a",
@@ -6021,6 +6075,877 @@
         "https://stonestorm.gg/assets/types-DsG7hzID.js",
         "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
       ],
+      "kind": "public-client",
+      "unchanged": true
+    },
+    "https://stonestorm.gg/assets/FightScene-CknPK-MA.css": {
+      "url": "https://stonestorm.gg/assets/FightScene-CknPK-MA.css",
+      "status": 200,
+      "etag": "\"dmj6c99gjny8-2g5\"",
+      "lastModified": "Sat, 31 Oct 2026 16:46:01 GMT",
+      "sha256": "95976d9e623b87c055c315195c7e3026d641098cdcabd1025d97130481d55d50",
+      "bytes": 14682,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js": {
+      "url": "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-d3h\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "cdccc1e861a55d274b8807579579e6b2661ae1eff6c2411f4cd1fc2867c31c83",
+      "bytes": 60963,
+      "references": [
+        "https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js",
+        "https://stonestorm.gg/assets/CoinBuy-DFLt6M2h.js",
+        "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/ItemCard-Du32gJN4.js",
+        "https://stonestorm.gg/assets/ItemTipBody-DKQ5cbT1.js",
+        "https://stonestorm.gg/assets/Loot-DoTtG2fL.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/RodTab-DvHjepJA.js",
+        "https://stonestorm.gg/assets/SinkParts-BBCTr-a_.js",
+        "https://stonestorm.gg/assets/SystemPurpose-BuPPw-aF.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/depth-3LCLq7m8.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/endgame-COHKe5md.js",
+        "https://stonestorm.gg/assets/endgame-fYCZQy5s.css",
+        "https://stonestorm.gg/assets/fight-runner-COgon33y.js",
+        "https://stonestorm.gg/assets/hero-art-Cym1uo1g.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/kit-DFeTfgN5.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/luxe-model-bWeyBYWd.js",
+        "https://stonestorm.gg/assets/map-lock-C_pRLevW.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/preload-Ce1ciFI0.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/rarity-BA0JR_hw.js",
+        "https://stonestorm.gg/assets/server-unseen-DToVQJwS.js",
+        "https://stonestorm.gg/assets/shopdaily-BBJM5mOh.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/trade-log-model-BIZElgjl.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/use-menu-view-CACBzWeu.js",
+        "https://stonestorm.gg/assets/use-wear-cosmetic-cTZcPiVc.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js": {
+      "url": "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-o1\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "17d8e9670f680aa77f892603b7de4786747882b3d5ce15239c10dd8b3547823e",
+      "bytes": 2064,
+      "references": [
+        "https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/endgame-COHKe5md.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/use-menu-view-CACBzWeu.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/flag-DkAQ5IRe.js": {
+      "url": "https://stonestorm.gg/assets/flag-DkAQ5IRe.js",
+      "status": 200,
+      "etag": "W/\"dmhcq576td6o-1m\"",
+      "lastModified": "Thu, 29 Oct 2026 13:20:57 GMT",
+      "sha256": "f68c23e250d1d901b206756e10c808ce8f7574a5e94759df718bfcd1036c2e9a",
+      "bytes": 58,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/flags-Bh4CQmYm.js": {
+      "url": "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
+      "status": 200,
+      "etag": "W/\"dmue44wiv1mo-4c\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "7a94c7092f21d297370f3f8ad46d62e82346051df0a280ef2e06e7cb1207b3fb",
+      "bytes": 156,
+      "references": [
+        "https://stonestorm.gg/assets/index-lDwa4khx.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js": {
+      "url": "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-ge5\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "e6832681c6f4134845f714bded03148a0eb8b2455bcf13736b2d73ec9fdf53e8",
+      "bytes": 78765,
+      "references": [
+        "https://stonestorm.gg/art/city/blacksmith.webp?v=0795ab2d",
+        "https://stonestorm.gg/assets/AmbientFx-CRf1gO-O.js",
+        "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
+        "https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js",
+        "https://stonestorm.gg/assets/CoinBuy-DFLt6M2h.js",
+        "https://stonestorm.gg/assets/DefenceCapNote-CwDulYAu.js",
+        "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/ItemCard-Du32gJN4.js",
+        "https://stonestorm.gg/assets/ItemSheet-BxDZgtjI.js",
+        "https://stonestorm.gg/assets/ItemTipBody-DKQ5cbT1.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/NpcModal-ui3lr9-K.js",
+        "https://stonestorm.gg/assets/OddsParts-D7Yd0-X8.js",
+        "https://stonestorm.gg/assets/PhoneDock-C4T2kn_k.js",
+        "https://stonestorm.gg/assets/QtyInput-CrkblNBM.js",
+        "https://stonestorm.gg/assets/SfTexts-BzW0YHU-.css",
+        "https://stonestorm.gg/assets/SfTexts-DVfss6Gw.js",
+        "https://stonestorm.gg/assets/SystemPurpose-BuPPw-aF.js",
+        "https://stonestorm.gg/assets/TierUpTab-Cb8vg3-J.js",
+        "https://stonestorm.gg/assets/api-Br2Akyii.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js",
+        "https://stonestorm.gg/assets/bossdark-7i-l3wZF.js",
+        "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
+        "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/cover-C70q7p4z.js",
+        "https://stonestorm.gg/assets/depth-3LCLq7m8.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
+        "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/map-lock-C_pRLevW.js",
+        "https://stonestorm.gg/assets/market-util-DR7Npei1.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/shopdaily-BBJM5mOh.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/skill-utils-CjcWpZIg.js",
+        "https://stonestorm.gg/assets/skills-BMxFqK2U.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/stone-ui-CSwvSJIo.js",
+        "https://stonestorm.gg/assets/stone-ui-ZceZqSOR.css",
+        "https://stonestorm.gg/assets/store-CcjeR5Uh.js",
+        "https://stonestorm.gg/assets/use-cap-refresh-CyAQEZoK.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/use-menu-view-CACBzWeu.js",
+        "https://stonestorm.gg/assets/use-reset-at-DhNbvG__.js",
+        "https://stonestorm.gg/assets/use-spend-Dl52OKbL.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/art/city/blacksmith.webp?v=0795ab2d": {
+      "url": "https://stonestorm.gg/art/city/blacksmith.webp?v=0795ab2d",
+      "kind": "image-reference",
+      "downloaded": false
+    },
+    "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js": {
+      "url": "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
+      "status": 200,
+      "etag": "\"dmue45d28ikg-2x2\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "2b564c3120bc54450515300043ad3bec6976be16a57bfaa23c95c97514b952af",
+      "bytes": 12520,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/ItemTipBody-DKQ5cbT1.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js",
+        "https://stonestorm.gg/assets/bossdark-7i-l3wZF.js",
+        "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/map-lock-C_pRLevW.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css": {
+      "url": "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
+      "status": 200,
+      "etag": "\"dmq5ubycetq8-1s9\"",
+      "lastModified": "Sun, 08 Nov 2026 21:51:07 GMT",
+      "sha256": "da5bc8d239007000eada3de55f44ab733d151add51a8130e907ee8e5ef6960c1",
+      "bytes": 11946,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js": {
+      "url": "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
+      "status": 200,
+      "etag": "\"dmue491d8a2o-py\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "43a3a92a8f741be012a7011ebfb3b21d637f09375a77b7c8421cb27d8a3798fc",
+      "bytes": 2367,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js": {
+      "url": "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-185\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "fcebd877cdcb25eb0918caee2ed35c07a97e5d3823d89676540eba8c76f98a0f",
+      "bytes": 4826,
+      "references": [
+        "https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/PhoneDock-C4T2kn_k.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/use-menu-view-CACBzWeu.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/friends-CulwlShS.js": {
+      "url": "https://stonestorm.gg/assets/friends-CulwlShS.js",
+      "status": 200,
+      "etag": "\"dmue49yfz7y8-g0\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "bc4b2096e6351850f60cb2fa51a6adbc1a0895dc73ecf7f21d53d63d6fe87fdd",
+      "bytes": 1558,
+      "references": [
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js": {
+      "url": "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+      "status": 200,
+      "etag": "W/\"dmmxvmp3aozk-jn\"",
+      "lastModified": "Thu, 05 Nov 2026 02:58:50 GMT",
+      "sha256": "7890d6e85d06c8925842beeec11f00263da31f94c094032f0996868985bc2286",
+      "bytes": 707,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js": {
+      "url": "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
+      "status": 200,
+      "etag": "\"dmue49yfz7y8-jp\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "2d5bb73bc9c5c8319c1250973779654f49820ef7613d3fcbc48ee42045dff05d",
+      "bytes": 1501,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/friends-CulwlShS.js",
+        "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js": {
+      "url": "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-yp\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "2b7091dc221c5d6ec96a478c14c26a18bda083b08c23f4e7cbba3a97ab300c57",
+      "bytes": 3122,
+      "references": [
+        "https://stonestorm.gg/assets/CopyButton-COVUhkdh.js",
+        "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/copy-text--TWXtSYc.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/friends-CulwlShS.js",
+        "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+        "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/party-wF4uPAFj.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/rift-BP8zDSWt.js",
+        "https://stonestorm.gg/assets/share-link-DU4M2ZmG.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js": {
+      "url": "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-51r\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "d6d3d22ea50b8e3cef3fe601b9b605f9e16d23a79f47fee99f628f07007ea003",
+      "bytes": 22956,
+      "references": [
+        "https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js",
+        "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
+        "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
+        "https://stonestorm.gg/assets/CopyButton-COVUhkdh.js",
+        "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
+        "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
+        "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/PresetContent-Dq73adHy.css",
+        "https://stonestorm.gg/assets/PresetContent-DxBzGSgC.js",
+        "https://stonestorm.gg/assets/PresetPicker-BWEJ1SF8.js",
+        "https://stonestorm.gg/assets/SupportLine-h5VYyWru.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/chat-C1ZltB_1.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/copy-text--TWXtSYc.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/docs-DmaeUGH1.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/friends-CulwlShS.js",
+        "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+        "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/party-wF4uPAFj.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/rift-BP8zDSWt.js",
+        "https://stonestorm.gg/assets/share-link-DU4M2ZmG.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/community-model--YkSwIPT.js": {
+      "url": "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
+      "status": 200,
+      "etag": "\"dmue491d8a2o-ib\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "5da44c5eda99763bdc94af780075e8579de2538c3f8f9d82ad864884e730190a",
+      "bytes": 1361,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js": {
+      "url": "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
+      "status": 200,
+      "etag": "\"dmue45d28ikg-2md\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "42b03051c341ad4f6cacfdd1e1833a5743d212b696f0cf404241250ea1c776d3",
+      "bytes": 9514,
+      "references": [
+        "https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js",
+        "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/PresetContent-DxBzGSgC.js",
+        "https://stonestorm.gg/assets/PresetPicker-BWEJ1SF8.js",
+        "https://stonestorm.gg/assets/SupportLine-h5VYyWru.js",
+        "https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/chat-C1ZltB_1.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/docs-DmaeUGH1.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/friends-CulwlShS.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css": {
+      "url": "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-g0\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "3332dcf9f3b22aeb6e2c683eed7af9bbf4977b0cbfe6de22811379d2fa5b9c6e",
+      "bytes": 2151,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css": {
+      "url": "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-f5\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "579c2983d196cd844c3625cfb4eee75092d8dd76c3c449e1efea479ea2f2c3e7",
+      "bytes": 1508,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js": {
+      "url": "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-2d0\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "f93f4356610ec314c8c303334e395bc19e118a99df05cd762b779d72780b6615",
+      "bytes": 8311,
+      "references": [
+        "https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js",
+        "https://stonestorm.gg/assets/CopyButton-COVUhkdh.js",
+        "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
+        "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/PresetContent-DxBzGSgC.js",
+        "https://stonestorm.gg/assets/PresetPicker-BWEJ1SF8.js",
+        "https://stonestorm.gg/assets/SupportLine-h5VYyWru.js",
+        "https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/copy-text--TWXtSYc.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/docs-DmaeUGH1.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/friends-CulwlShS.js",
+        "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+        "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/party-wF4uPAFj.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/rift-BP8zDSWt.js",
+        "https://stonestorm.gg/assets/share-link-DU4M2ZmG.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js": {
+      "url": "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-15g\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "c319f90229e21e26439300eaccc42974123c05e4c49ac8551c14888a9b866e47",
+      "bytes": 4985,
+      "references": [
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/icons/icon-192.png?v=935f5e1d"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css": {
+      "url": "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css",
+      "status": 200,
+      "etag": "\"dmue45tllzi8-qm\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "39d8f26248d6a68d50f9d4127077c0b1e37dd29ed5c8ca94bf5e586e5d8447ea",
+      "bytes": 3662,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css": {
+      "url": "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css",
+      "status": 200,
+      "etag": "\"dmtdq9itbuv4-3v9\"",
+      "lastModified": "Thu, 12 Nov 2026 16:39:56 GMT",
+      "sha256": "f02759fcdb122e4de4295bc6d24c998361722772716a3af3262221a67c4f7863",
+      "bytes": 26891,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js": {
+      "url": "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-wt\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "4cd415ee612ae15b7ffbb4dd0143f0ccb9b11e8752d225e362ace671dba9b036",
+      "bytes": 2642,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/OfferParts-CgB_DsN1.js",
+        "https://stonestorm.gg/assets/QuestParts-D6mriSQP.js",
+        "https://stonestorm.gg/assets/SfTexts-DVfss6Gw.js",
+        "https://stonestorm.gg/assets/WeekendSale-BIUpOhVj.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/luxe-model-bWeyBYWd.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/mount-time-Bp-sAk_N.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-claim-C9lCG2bP.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js": {
+      "url": "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-vo\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "7fe21263a9081fa77314793d26a24b8be21d6b46df53e587847d91f67ae11573",
+      "bytes": 3459,
+      "references": [
+        "https://stonestorm.gg/assets/index-lDwa4khx.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css": {
+      "url": "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-aa\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "4dd43e9578b705d8aaf55a177ba1cf1d6505ee29b894ce7f20706ffff29aa2f6",
+      "bytes": 1232,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/Guide-BYAFplcF.css": {
+      "url": "https://stonestorm.gg/assets/Guide-BYAFplcF.css",
+      "status": 200,
+      "etag": "\"dmslejdijlkw-23h\"",
+      "lastModified": "Wed, 11 Nov 2026 18:28:14 GMT",
+      "sha256": "c2d1f921b895c7c77e2a76a0c0461e989e4476bcc7c702045a07c8bbe3b9a206",
+      "bytes": 12399,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js": {
+      "url": "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-mvs\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "7d8e86eec674c18e3fcacf616f12f2b65e36af8ac085c34add7f7f0c1e7e313e",
+      "bytes": 100865,
+      "references": [
+        "https://stonestorm.gg/assets/ChestParts-D7TiW5QT.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Journal-DwKhdbNH.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/better-spot-DG7pOd9t.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/expedition-time-HBPRbUOo.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/levelup-auto-DhssvrDe.js",
+        "https://stonestorm.gg/assets/map-levels-Cw8eCAi4.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/open-Bg1mfTMb.js",
+        "https://stonestorm.gg/assets/portal-CYRVximJ.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/react-hooks-CaS5hTgQ.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/skill-utils-CjcWpZIg.js",
+        "https://stonestorm.gg/assets/skills-BMxFqK2U.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/tutorial-URS1m21s.js",
+        "https://stonestorm.gg/assets/types-DsG7hzID.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/warm-up-CY-qyKL6.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js": {
+      "url": "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-ut\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "fc3e6c5b27891fe4f59299683009deb37d873a03f1eecaa428a06165651595fe",
+      "bytes": 2671,
+      "references": [
+        "https://stonestorm.gg/assets/ChestParts-D7TiW5QT.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/better-spot-DG7pOd9t.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/expedition-time-HBPRbUOo.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/levelup-auto-DhssvrDe.js",
+        "https://stonestorm.gg/assets/map-levels-Cw8eCAi4.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/open-Bg1mfTMb.js",
+        "https://stonestorm.gg/assets/portal-CYRVximJ.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/skill-utils-CjcWpZIg.js",
+        "https://stonestorm.gg/assets/skills-BMxFqK2U.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/tutorial-URS1m21s.js",
+        "https://stonestorm.gg/assets/types-DsG7hzID.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js",
+        "https://stonestorm.gg/assets/warm-up-CY-qyKL6.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js": {
+      "url": "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-25d\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "c8d7f9bdfb3fcefa947116fb2a2992875a12ec8ccd2cf7dd798b0e458b769a39",
+      "bytes": 7805,
+      "references": [
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/use-animation-end-BVYyEPHw.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/GuildPage-DVNwsQj9.js": {
+      "url": "https://stonestorm.gg/assets/GuildPage-DVNwsQj9.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-dbl\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "8e71997419401c64a002bf2beaf682291650c79be15bf2030268d0f21778a67e",
+      "bytes": 66993,
+      "references": [
+        "https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js",
+        "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
+        "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/ItemCard-Du32gJN4.js",
+        "https://stonestorm.gg/assets/ItemTipBody-DKQ5cbT1.js",
+        "https://stonestorm.gg/assets/Loot-DoTtG2fL.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/PresetContent-DxBzGSgC.js",
+        "https://stonestorm.gg/assets/PresetPicker-BWEJ1SF8.js",
+        "https://stonestorm.gg/assets/SinkParts-BBCTr-a_.js",
+        "https://stonestorm.gg/assets/SupportLine-h5VYyWru.js",
+        "https://stonestorm.gg/assets/WorkshopTab-BY-AXd5R.js",
+        "https://stonestorm.gg/assets/WorldBossReplay-DjoORFAK.js",
+        "https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css",
+        "https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js",
+        "https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/consent-BM99f_pM.css",
+        "https://stonestorm.gg/assets/constants-C1NNq7Ui.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/docs-DmaeUGH1.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/flag-DkAQ5IRe.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-CLPOblu_.css",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/landing-discord-K7jsdU37.css",
+        "https://stonestorm.gg/assets/map-lock-C_pRLevW.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/profiles-Dc-tdETD.js",
+        "https://stonestorm.gg/assets/rarity-BA0JR_hw.js",
+        "https://stonestorm.gg/assets/server-unseen-DToVQJwS.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/storepacks-BbHaS2tA.js",
+        "https://stonestorm.gg/assets/trade-log-model-BIZElgjl.js",
+        "https://stonestorm.gg/assets/use-animation-end-BVYyEPHw.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js": {
+      "url": "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js",
+      "status": 200,
+      "etag": "W/\"dmiby5b5nthc-ek\"",
+      "lastModified": "Fri, 30 Oct 2026 16:57:03 GMT",
+      "sha256": "5db3596082f0e3d6e776be09aa6ea775fafc494460c1e11e8a92e03c1fba3461",
+      "bytes": 524,
+      "references": [],
+      "kind": "public-client"
+    },
+    "https://stonestorm.gg/assets/HalloweenAmbience-DiFJSPIc.js": {
+      "url": "https://stonestorm.gg/assets/HalloweenAmbience-DiFJSPIc.js",
+      "status": 200,
+      "etag": "\"dmue46a4zgg0-1t5\"",
+      "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
+      "sha256": "f3cc11f174c2c8ecad61efc078993fb1fc1bb6c19afa16eb92c8b5733c392ade",
+      "bytes": 5584,
+      "references": [
+        "https://stonestorm.gg/assets/CityAmbience-D7AqAk1X.js",
+        "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+        "https://stonestorm.gg/assets/HeroSwitchMenu-D5h-PZN-.js",
+        "https://stonestorm.gg/assets/Ltr-B0YZH-Mu.js",
+        "https://stonestorm.gg/assets/Modal-DQxi-_xE.js",
+        "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
+        "https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js",
+        "https://stonestorm.gg/assets/codes-model-cO-frR7-.js",
+        "https://stonestorm.gg/assets/consent-B0q8d778.js",
+        "https://stonestorm.gg/assets/cover-C70q7p4z.js",
+        "https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js",
+        "https://stonestorm.gg/assets/drops-window-BOW2ncyd.js",
+        "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js",
+        "https://stonestorm.gg/assets/idempotent-runner-wVUva7Kr.js",
+        "https://stonestorm.gg/assets/index-lDwa4khx.js",
+        "https://stonestorm.gg/assets/motion-DNbpD337.js",
+        "https://stonestorm.gg/assets/notify-store-BWhPpRKR.js",
+        "https://stonestorm.gg/assets/power-DbH4yZjN.js",
+        "https://stonestorm.gg/assets/prices-DrMHTuKD.js",
+        "https://stonestorm.gg/assets/sinks-store-DJJuvguG.js",
+        "https://stonestorm.gg/assets/social-icons-CC4u1foV.js",
+        "https://stonestorm.gg/assets/use-media-gkPE_Lh5.js"
+      ],
       "kind": "public-client"
     }
   },
@@ -6028,6 +6953,7 @@
     "https://stonestorm.gg/",
     "https://stonestorm.gg/admin/assets/admin-DBV8_4d5.js",
     "https://stonestorm.gg/apple-touch-icon.png",
+    "https://stonestorm.gg/art/city/blacksmith.webp?v=0795ab2d",
     "https://stonestorm.gg/art/uikit/medallion_frame-128.webp?v=52280126",
     "https://stonestorm.gg/assets/AccessPage-Cp4MqeWS.js",
     "https://stonestorm.gg/assets/AccountPage-Dd-ITpl2.js",
@@ -6037,6 +6963,7 @@
     "https://stonestorm.gg/assets/ArenaPage-AvfFBGrE.js",
     "https://stonestorm.gg/assets/ArenaPetCard-CiZkb4pC.js",
     "https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js",
+    "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
     "https://stonestorm.gg/assets/BestiaryPanel-DHPGplTm.js",
     "https://stonestorm.gg/assets/BiologistPanel-DHV4EYeu.js",
     "https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js",
@@ -6052,6 +6979,8 @@
     "https://stonestorm.gg/assets/CityAmbience-D7AqAk1X.js",
     "https://stonestorm.gg/assets/CoinBuy-DFLt6M2h.js",
     "https://stonestorm.gg/assets/ComingSoonPage-Dq2x88s2.js",
+    "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
+    "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
     "https://stonestorm.gg/assets/CommunityRewards-CXjT2xXA.js",
     "https://stonestorm.gg/assets/ConsentDialog-DrigddrP.js",
     "https://stonestorm.gg/assets/ContributionLine-DxLGpUUQ.css",
@@ -6067,6 +6996,8 @@
     "https://stonestorm.gg/assets/CreatorsPage-SWPysE8P.js",
     "https://stonestorm.gg/assets/CupTab-BJV6rplJ.js",
     "https://stonestorm.gg/assets/DefenceCapNote-CwDulYAu.js",
+    "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
+    "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
     "https://stonestorm.gg/assets/DiscordPage-B0K9OqCS.css",
     "https://stonestorm.gg/assets/DiscordPage-CCbr67P8.js",
     "https://stonestorm.gg/assets/Dropdown-DZrXCL91.js",
@@ -6075,9 +7006,12 @@
     "https://stonestorm.gg/assets/EvolutionMoment-BZQxLOaq.js",
     "https://stonestorm.gg/assets/FightScene-BMtSxJws.js",
     "https://stonestorm.gg/assets/FightScene-CknPK-MA.css",
+    "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
     "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js",
     "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js",
+    "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
     "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js",
+    "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
     "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js",
     "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css",
     "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
@@ -6085,6 +7019,7 @@
     "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js",
     "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js",
     "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css",
+    "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
     "https://stonestorm.gg/assets/Guide-BYAFplcF.css",
     "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
     "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
@@ -6107,6 +7042,7 @@
     "https://stonestorm.gg/assets/ItemCard-Du32gJN4.js",
     "https://stonestorm.gg/assets/ItemSheet-BxDZgtjI.js",
     "https://stonestorm.gg/assets/ItemTipBody-DKQ5cbT1.js",
+    "https://stonestorm.gg/assets/Journal-DwKhdbNH.js",
     "https://stonestorm.gg/assets/KingdomSwitchPanel-ClCcezW4.js",
     "https://stonestorm.gg/assets/LadderPopup-BSMtOkog.css",
     "https://stonestorm.gg/assets/LadderPopup-Dtfcaopr.js",
@@ -6185,6 +7121,7 @@
     "https://stonestorm.gg/assets/RetentionHost-Da88KO9Y.js",
     "https://stonestorm.gg/assets/RiftPage-B_LjTn7A.js",
     "https://stonestorm.gg/assets/RiftPage-CHJkkq_i.css",
+    "https://stonestorm.gg/assets/RodTab-DvHjepJA.js",
     "https://stonestorm.gg/assets/RunasorPage-Cpom5-W2.js",
     "https://stonestorm.gg/assets/SaveAccount-DhnnNxP2.js",
     "https://stonestorm.gg/assets/SeasonPage-XgYwfTRq.js",
@@ -6211,6 +7148,7 @@
     "https://stonestorm.gg/assets/TeahouseModal-DgJVQUSa.js",
     "https://stonestorm.gg/assets/TermsCheck-DbuOGFfB.js",
     "https://stonestorm.gg/assets/TestPurchaseBanner-Ds3isIgf.js",
+    "https://stonestorm.gg/assets/TierUpTab-Cb8vg3-J.js",
     "https://stonestorm.gg/assets/TipCards-BxcJW7ln.js",
     "https://stonestorm.gg/assets/TodayPanel-D6ERyvhT.js",
     "https://stonestorm.gg/assets/TokenPages-BzBmEQLU.js",
@@ -6233,6 +7171,7 @@
     "https://stonestorm.gg/assets/WelcomePage-Du7zPrOG.css",
     "https://stonestorm.gg/assets/WheelModal-p_Qbuipc.js",
     "https://stonestorm.gg/assets/WinnerBanners-B1mjj_B0.js",
+    "https://stonestorm.gg/assets/WorkshopTab-BY-AXd5R.js",
     "https://stonestorm.gg/assets/WorldBossPage--qJ0IIeV.js",
     "https://stonestorm.gg/assets/WorldBossPage-CocBmXg4.css",
     "https://stonestorm.gg/assets/WorldBossReplay-DjoORFAK.js",
@@ -6321,6 +7260,8 @@
     "https://stonestorm.gg/assets/boss.tr-1rzuE5ST.js",
     "https://stonestorm.gg/assets/boss.uk-Rc8GXmXx.js",
     "https://stonestorm.gg/assets/bossdark-7i-l3wZF.js",
+    "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
+    "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
     "https://stonestorm.gg/assets/bossdrama.hu.json",
     "https://stonestorm.gg/assets/bridge-BY8XsJRT.js",
     "https://stonestorm.gg/assets/challenge-store-Kl3srms8.js",
@@ -6336,6 +7277,7 @@
     "https://stonestorm.gg/assets/codes.hu.json",
     "https://stonestorm.gg/assets/collect-CqOY1Fb5.js",
     "https://stonestorm.gg/assets/combatui.hu.json",
+    "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
     "https://stonestorm.gg/assets/community.ar-CwzVPdko.js",
     "https://stonestorm.gg/assets/community.bg-D5xAjAly.js",
     "https://stonestorm.gg/assets/community.cs-ej-FFKRd.js",

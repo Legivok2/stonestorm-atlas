@@ -35,6 +35,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Install locked build dependencies
+        run: npm ci
       - name: Collect public data and import only validated records
         id: sync
         env:
@@ -59,7 +61,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- snapshots/manifest.json snapshots/current/content.json reports/latest-sync.json reports/latest-sync.md data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
+          git add -- snapshots/manifest.json snapshots/current/content.json snapshots/current/home-arena-client.json reports/latest-sync.json reports/latest-sync.md data/home-arena.json data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync public Stonestorm data and inspection report'
             git push origin HEAD:main

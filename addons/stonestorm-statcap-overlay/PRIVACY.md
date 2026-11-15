@@ -10,3 +10,8 @@ Ez a leírás az átadott forráskód átnézésén alapul; nem Chrome Web Store
 - Az Atlas külön verziójelzője a saját GitHub Pages-oldal `downloads/stat-addon.json` fájlját olvassa. A legutóbb látott vagy kézzel megadott verziót az Atlas eredetéhez tartozó `localStorage` őrzi. A fájlkérés és a ZIP-letöltés a GitHub Pages szokásos hálózati kiszolgálásával jár.
 
 A BÉTA-felismerés és számítás pontossága nem garantált. A kód és az eredeti fájllenyomatok a repositoryban megvizsgálhatók.
+# Kutatási export kiegészítés – 0.9.4
+
+A felhasználó által, a bővítmény popupjában indított kutatás legfeljebb 60 másodpercig figyel hat, a nyilvános kliensben vagy az eredeti addonban igazolt GET-végpontot: `/api/sinks`, `/api/home/rooms`, `/api/arena/pure`, `/api/arena/pure/season`, `/api/arena/bandit`, `/api/character`. Az utóbbiból kizárólag a `patron.prices.refill` öt engedélyezett alapár-konfigurációs mezője tartható meg; karakteradat és egyéni állapot nem. Kérést nem indít, választ nem módosít.
+
+A nyers válasz kizárólag a sanitizáló függvény bemenete. Nem kerül tárolóba, naplóba vagy a bővítmény üzenethídjára. A kimenet szűk engedélylistából épül, nem utólagos név-/token-tiltólistából. A személyes ágak, nevek, azonosítók, fejlécek, sütik, egyenlegek, aktuális szintek és ismeretlen stringek nem exportálhatók. A tisztított minta csak memóriában marad; külön gombbal tölthető le. Hálózati feltöltés, telemetria és automatikus Atlas-import nincs.

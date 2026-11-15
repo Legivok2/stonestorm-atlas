@@ -1,0 +1,1282 @@
+{
+  "schema": 1,
+  "gameVersion": "5231690b6864",
+  "checkedAt": "2026-11-15T12:08:44.593Z",
+  "entrypointConfirmed": false,
+  "api": {
+    "homeLevel": 10,
+    "pureLevel": 20,
+    "banditLevel": 21,
+    "pvpNavLevel": 21,
+    "homeRooms": true,
+    "homeThemes": true,
+    "teahouse": true,
+    "banditArena": true,
+    "banditTrophy": true,
+    "teaEnergy": 25
+  },
+  "locale": {
+    "arena": {
+      "title": "Aréna",
+      "intro": "Itt nem szörnyekkel küzdesz, hanem olyanokkal, akik ugyanúgy gondolkodnak, mint te, csak szerintük jobban. A győzelem becsületet és nyangot hoz, a vereség tanulságot, és az legalább ingyen van.",
+      "preseason": {
+        "title": "Előszezon",
+        "text": "Mérd össze az erődet a többiekkel! Az Aréna megújul és bővül, a teljes változat hamarosan érkezik.",
+        "hide": "Elrejtés"
+      },
+      "tabs": {
+        "label": "Aréna",
+        "foes": "Ellenfelek",
+        "history": "Előzmények",
+        "pure": "Tiszta"
+      },
+      "me": {
+        "label": "Becsületed",
+        "rankTitle": "Becsületrangok",
+        "rankNote": "A rang a becsületedből jön: győzelemmel nő, vereséggel fogy. Erősebb ellenfél legyőzése többet ér.",
+        "from": "{{value}} becsülettől"
+      },
+      "bands": {
+        "1": "Fa",
+        "2": "Bronz",
+        "3": "Ezüst",
+        "4": "Arany",
+        "5": "Jáde",
+        "6": "Sárkány"
+      },
+      "band": "{{name}} rang",
+      "honor": "{{value}} becsület",
+      "foe": {
+        "fight": "Harc",
+        "fightLabel": "Harc: {{name}}",
+        "levelClass": "{{level}}. szintű {{className}}",
+        "kingdom": "{{kingdom}} királyság",
+        "honor": "Becsület",
+        "rank": "Rang",
+        "guild": "Céh",
+        "chance": "Győzelmi esélyed",
+        "odds": {
+          "lowHp": "Kevés az életed",
+          "easy": "Gyengébb",
+          "even": "Kiegyenlített",
+          "hard": "Erősebb",
+          "deadly": "Sokkal erősebb"
+        },
+        "loading": "Ellenfeleket keresünk…",
+        "empty": "Most nincs kihívható ellenfél. Nézz vissza kicsit később.",
+        "rerollFree": "Új ellenfelek (ingyen)",
+        "rerollPaid": "Új ellenfelek {{coins}} VÉ",
+        "rerollHint": "A felkínált ellenfelek a következő harcig vagy 10 percig maradnak. Óránként egyszer ingyen kérhetsz újakat, utána legfeljebb ötször, egyre drágábban."
+      },
+      "cooldown": {
+        "ready": "Indulhat a következő harc.",
+        "wait": "Következő harc",
+        "why": "Pihensz, a következő harcig {{time}} van hátra.",
+        "skip": "Ugrás",
+        "skipLabel": "Ugrás a várakozás végére {{cost}} Viharérméért",
+        "skipAt": "Ugrás {{time}}-kor"
+      },
+      "result": {
+        "win": [
+          "Tiszta győzelem! A becsületed nő, az ellenfeled önbizalma kevésbé.",
+          "Győztél! A tömeg ujjong, csak aki ellened fogadott, az nem.",
+          "Ezt még az unokáidnak is elmeséled, kicsit kiszínezve.",
+          "Győzelem! Az ellenfeled szerint ez csak bemelegítés volt. Még most is melegít.",
+          "A becsületed nő, és a tömegben valaki a nevedet kiabálja. Rosszul, de lelkesen."
+        ],
+        "lose": [
+          "Vereség. Csorba esett a becsületeden, de legalább a frizurád tart.",
+          "Ma ő volt a jobb, holnap majd te leszel. Vagy valaki más.",
+          "Nem vesztettél, csak nagyon alaposan tanultál.",
+          "Vereség. Valaki a tömegből azt kiabálta: „Legközelebb!” Remélhetőleg neked.",
+          "Kikaptál. A becsületed sajog, a büszkeséged még jobban, a nyangod viszont megvan."
+        ],
+        "honor": "Becsület",
+        "total": "Most {{value}} becsületed van.",
+        "promoted": "Új rang: {{band}}!",
+        "demoted": "Visszaestél: {{band}}."
+      },
+      "fight": {
+        "kicker": "Aréna"
+      },
+      "history": {
+        "label": "Az utolsó 20 harcod",
+        "empty": "Még nem harcoltál az arénában. Az első győzelem mindig a legédesebb.",
+        "attacker": "Te hívtad ki",
+        "defender": "Ő hívott ki",
+        "won": "Győzelem",
+        "lost": "Vereség",
+        "nyang": "+{{value}} nyang",
+        "stolenFrom": "Elvitt tőled: {{nyang}} nyang, {{xp}} XP",
+        "stolenBy": "Zsákmányod: {{nyang}} nyang, {{xp}} XP",
+        "pure": "Tiszta",
+        "new": "Új",
+        "attacked": "Megtámadott: {{name}}",
+        "revenge": "Visszavágok",
+        "revengeLabel": "Visszavágok: {{name}}"
+      },
+      "notify": {
+        "badge_one": "{{count}} új támadás",
+        "badge_other": "{{count}} új támadás"
+      },
+      "notOffered": "Ez az ellenfél már nem vár rád, hoztunk újakat.",
+      "errors": {
+        "cooldown": "Még pihensz a legutóbbi harc után.",
+        "no_cooldown": "Már nem kell várnod, indulhat a harc.",
+        "not_offered": "Ez az ellenfél már nincs a listán.",
+        "cannot_fight_self": "Saját magaddal nem harcolhatsz, bármennyire is izgalmas lenne.",
+        "opponent_not_found": "Ez az ellenfél időközben eltűnt.",
+        "challenge_off": "A kihívás most nem elérhető.",
+        "challenge_level": "Túl nagy köztetek a szintkülönbség a kihíváshoz.",
+        "challenge_pair": "Őt ma már kétszer kihívtad. Holnap újra.",
+        "challenge_linked": "Vele nem harcolhatsz az arénában.",
+        "pure_locked": "A Tiszta aréna még nem nyílt meg neked.",
+        "reroll_wait": "Itt óránként egyszer kérhetsz új ellenfeleket.",
+        "challenge_locked": "Ő még nem érte el a 12. szintet, ezért az arénában nem támadható.",
+        "bandit_arena": "A 21. szinttől a Bandita Ligában harcolsz.",
+        "bandit_hp": "Túl kevés az életed a támadáshoz. Várj, vagy igyál Aréna potit.",
+        "bandit_locked": "A Bandita Liga a 21. szinttől nyílik.",
+        "bandit_off": "A Bandita Liga most nem elérhető.",
+        "opponent_limit": "Őt nemrég már megtámadtad. Egy óra múlva újra.",
+        "stake_missing": "Nincs elég nyangod a trón díjára.",
+        "revenge_gone": "Ez a bosszú már nem él.",
+        "hp_full": "Az életed már tele van.",
+        "limit_reached": "Mára elfogyott.",
+        "price_changed": "Közben változott az ár. Nézd meg újra.",
+        "insufficient_coins": "Nincs elég Viharérméd.",
+        "insufficient_funds": "Nincs elég nyangod.",
+        "bandit_not_joined": "Előbb lépj be a Bandita Ligába.",
+        "opponent_left": "Ő már nincs a Bandita Ligában, ezért nem állhatsz rajta bosszút.",
+        "freeze_retired": "Az Aréna-fagyasztó megszűnt.",
+        "arena_commit_required": "A támadáshoz erősítsd meg az első támadásodat a Bandita Ligában.",
+        "leave_unavailable": "A Bandita Ligából már nem tudsz kilépni.",
+        "leave_blocked": "Amíg bosszút állhatnak rajtad, nem léphetsz ki.",
+        "not_joined": "Nem vagy a Bandita Ligában.",
+        "rejoin_locked": "Még nem léphetsz vissza a Bandita Ligába.",
+        "join_closed": "A belépés most zárva: a Bandita Ligába csak a szezon első 24 órájában lehet belépni."
+      },
+      "pure": {
+        "title": "Tiszta aréna",
+        "intro": "Itt csak a szinted, a statjaid és a felszerelésed számít: a Viharszív és a főzetek nem hatnak. Csak valódi hősök ellen harcolsz, saját becsületért és saját rangsorért. Yakdo teája addig az ajtóban vár.",
+        "honor": "Tiszta becsület",
+        "noSkip": "Itt nem lehet átugrani.",
+        "locked": "A Tiszta aréna a {{level}}. szinttől nyílik.",
+        "empty": "Most nincs valódi ellenfél a közeledben. Nézz vissza később, addig a rendes arénában is harcolhatsz.",
+        "rerollFree": "Új ellenfelek (ingyen)",
+        "rerollWait": "Új ellenfelek: {{time}} múlva",
+        "rerollHint": "Óránként egyszer ingyen kérhetsz új ellenfeleket. Itt Viharérméért sem lehet többet.",
+        "seasonTitle": "Tiszta rangsor, {{season}}. szezon",
+        "ownRank": "Helyezésed: {{rank}}.",
+        "ownUnranked": "Még nem rangsorolt: {{fights}}/{{min}} harc",
+        "claimTitle": "Átvehető cím",
+        "claimLine": "{{season}}. szezon: {{rank}}. hely",
+        "claimLineBand": "{{season}}. szezon: {{range}}",
+        "claim": "Cím átvétele",
+        "claimDone": "A tiéd: {{titles}}.",
+        "rewardsTitle": "Szezon végi jutalom",
+        "rewardsNote": "A jutalom kötött cím: a hősödé marad, nem adható tovább.",
+        "range": {
+          "champion": "1. hely",
+          "elite": "2-10. hely",
+          "top100": "11-100. hely",
+          "fighter": "101. helytől"
+        },
+        "noReward": "nincs cím",
+        "topTitle": "A szezon élmezőnye",
+        "topEmpty": "Ebben a szezonban még senki nem érte el a rangsort."
+      },
+      "paidCaps": {
+        "seasonRewards": "A szezon végén a helyezésért cím és keret jár, erősítés nem.",
+        "rerollLeft_one": "Ebben az órában még {{count}} fizetős csere",
+        "rerollLeft_other": "Ebben az órában még {{count}} fizetős csere",
+        "rerollCapped": "Ebben az órában elfogytak a fizetős cserék. Ingyen újra: {{time}}",
+        "skipLeft_one": "Ebben az órában még {{count}} ugrás",
+        "skipLeft_other": "Ebben az órában még {{count}} ugrás",
+        "skipCapped": "Ebben az órában elfogytak az ugrások. Újra ugorhatsz: {{time}}",
+        "rule": "Óránként legfeljebb {{max}} fizetős csere és {{max}} ugrás, és mindegyik kicsit drágább az előzőnél. Így a becsület nem a pénztárcán múlik.",
+        "rerollButton": "Új ellenfelek",
+        "rerollCappedPaid": "Ebben az órában elfogytak a fizetős cserék. Fizetős csere újra: {{paid}}, ingyenes: {{free}}"
+      },
+      "bandit": {
+        "title": "Bandita Liga",
+        "tab": "Liga",
+        "warn_one": "Még 1 szint, és belépsz a Bandita Ligába. Ott már ellophatják a be nem gyűjtött farmodat!",
+        "warn_other": "Még {{count}} szint, és belépsz a Bandita Ligába. Ott már ellophatják a be nem gyűjtött farmodat!",
+        "throne": {
+          "title": "Bajnok",
+          "empty": "A trón üres: az első győzelem a tiéd lehet.",
+          "until": "A bajnok ennyi idő múlva viszi a kasszát:",
+          "pot": "Kassza",
+          "streak": "A bajnok zsinórban {{n}}. körét tartja: ha kitart, a kassza {{pct}}%-át kapja. Aki elveszi tőle a trónt, a teljes kasszát viszi.",
+          "fatigue": "A bajnok kifáradt: −{{pct}}% élet a trónharcban.",
+          "stake": "A trón megtámadása most {{nyang}} nyang (a mai {{n}}. támadásod), győzelemnél is. Aznap minden újabb támadás másfélszer drágább, vereségnél a díj fele a kasszába kerül.",
+          "defended_one": "{{count}} támadást védett ki",
+          "defended_other": "{{count}} támadást védett ki",
+          "base": "Aki 24 órán át megtartja a trónt, még +{{nyang}} nyangot és {{xp}} XP-t kap.",
+          "guildmate": "A bajnok a céhtársad: ha tőle veszed el a trónt, nem jár a kassza."
+        },
+        "top": "A liga első 5 helyezettje",
+        "targets": "Előtted: őket támadhatod",
+        "targetsHint": "Győzelemkor helyet cseréltek. Minél hátrébb vagy, annál nagyobbat ugorhatsz.",
+        "climbing": "Még nem vagy a liga legjobb 10 helyezettje között. Győzd le az előtted állókat, és feljebb lépsz!",
+        "noTargets": "Te vagy a bajnok: most csak védekezel.",
+        "attack": "Támadás",
+        "attackThrone": "Trón-támadás",
+        "protected": "Védett: még {{time}} nem rabolható ki",
+        "me": {
+          "label": "A te sávod",
+          "hp": "Életed",
+          "regen": "10 percenként +10% (teli: {{time}})",
+          "full": "Teli élettel indulsz."
+        },
+        "potion": {
+          "coins": "Aréna poti · {{cost}}",
+          "nyang": "Aréna poti · {{cost}} nyang",
+          "none": "Mára elfogyott",
+          "left": "Ma még {{coins}} potit vehetsz VÉ-ért és {{nyang}} potit nyangért.",
+          "tip": "Aznap minden újabb poti drágább az előzőnél."
+        },
+        "revenge": {
+          "title": "Bosszú",
+          "line": "{{name}} meglopott: {{nyang}} nyang, {{xp}} XP, {{energy}} energia.",
+          "button": "Bosszú",
+          "left": "Még {{time}} időd van bosszút állni.",
+          "none": "Szerencséd van, egyelőre senkit nem kell megbosszulnod.",
+          "loot": "A trónzsákmányodból is vitt: {{item}} ×{{qty}}.",
+          "thiefLeft": "Kilépett az Arénából: rajta nincs bosszú"
+        },
+        "feed": {
+          "title": "Hírfolyam",
+          "empty": "Még nincs hír a ligában.",
+          "throne_taken": "{{actor}} letaszította {{target}} játékost a trónról.",
+          "throne_failed": "{{actor}} megtámadta a bajnokot ({{target}}), és elbukott. A kassza most {{nyang}} nyang.",
+          "throne_held": "{{actor}} kitartott a trónon, és felvette a kasszát: {{nyang}} nyang, {{xp}} XP.",
+          "throne_half": "{{actor}} 12 órája tartja a trónt, nála van: {{item}} ×{{qty}}. Aki legyőzi, elviheti!"
+        },
+        "notice": {
+          "dethroned": "{{name}} letaszított a trónról.",
+          "throne_taken": "Megszerezted a trónt és a kasszát: {{nyang}} nyang, {{xp}} XP.",
+          "throne_held": "Kitartottál a trónon: felvetted a kasszát ({{nyang}} nyang, {{xp}} XP).",
+          "throne_half": "12 órája tartod a trónt!",
+          "loot": "A trónért kaptál: {{item}} ×{{qty}}. Vigyázz rá: aki legyőz, elviheti!",
+          "title": "A liga bajnoki címe a tiéd: {{title}}."
+        },
+        "result": {
+          "stolen": "Zsákmány: {{nyang}} nyang, {{xp}} XP, {{energy}} energia.",
+          "protected": "Őt nemrég már meglopták: most nem vihettél tőle semmit.",
+          "recovered": "Visszaszerezted a tolvajtól: {{nyang}} nyang, {{xp}} XP.",
+          "throneTook": "Tiéd a trón és a kassza: {{nyang}} nyang, {{xp}} XP!",
+          "throneFee": "A trón díja: {{stake}} nyang.",
+          "throneLost": "Odaveszett a trón díja: {{stake}} nyang.",
+          "rank": "Új helyezésed: {{rank}}.",
+          "climbed": "Feljebb léptél a létrán!",
+          "loot": "A trónzsákmányból is vittél: {{item}} ×{{qty}}."
+        },
+        "errorGeneric": "Ez most nem sikerült. Próbáld újra.",
+        "welcome": {
+          "title": "Üdv a Bandita Ligában!",
+          "text": "A ligád: {{from}}-{{to}}. szint, a helyed a létrán: {{rank}}. Itt minden győzelem lopás: a vesztes be nem gyűjtött farmjának 10%-át és 1 energiáját viszed. Téged is meglophatnak, ezért gyűjtsd be gyakran a farmodat!",
+          "textClimb": "A ligád: {{from}}-{{to}}. szint. Győzd le az előtted állókat, és feljebb kerülsz a létrán. Itt minden győzelem lopás: a vesztes be nem gyűjtött farmjának 10%-át és 1 energiáját viszed. Téged is meglophatnak, ezért gyűjtsd be gyakran a farmodat!",
+          "ok": "Értem",
+          "rules": "A trón megtámadásának díja van (most {{nyang}} nyang), akkor is, ha nyersz. Támadni legalább {{hp}}% élettel lehet, harc után pedig 10 percenként 10%-kal töltődik vissza."
+        },
+        "band": "{{from}}-{{to}}. szint",
+        "pureNote": "Az itt legyőzött hősök nem számítanak bele a ligába: a helyezésed nem változik, és lopás sincs.",
+        "unlockAt": "{{level}}-es szinttől megnyílik a Bandita Liga",
+        "info": {
+          "button": "Több infó",
+          "title": "A Bandita Liga szabályai",
+          "league": {
+            "title": "Ligák",
+            "text": "21. szinttől, 5 szintes ligákban (21-25, 26-30 …). Új liga 15 aktív játékostól nyílik."
+          },
+          "attack": {
+            "title": "Támadás",
+            "text": "Csak az előtted álló 5 játékost. Ha nyersz, helyet cseréltek. Ugyanazt óránként egyszer."
+          },
+          "theft": {
+            "title": "Lopás",
+            "text": "Győzelemkor a vesztes be nem gyűjtött farmjának 10%-a és 1 energia a tiéd. Gyűjts be gyakran!"
+          },
+          "revenge": {
+            "title": "Bosszú",
+            "text": "24 óráig a tolvajon, akkor is, ha mögötted áll. Ha nyersz, az ellopott rész fele is visszajár."
+          },
+          "throne": {
+            "title": "Trón és kassza",
+            "text": "Az 1. hely a bajnok, a kasszája óránként nő. Aki legyőzi, viszi; 24 óra kitartás után a bajnoké. A támadás díjas, aznap minden újabb másfélszer drágább. 12 és 24 óra tartás után a bajnok olyan tárgyat is kap, amit mások ellophatnak, 24 óránál pedig a liga bajnoki címét. Aki zsinórban több kört tart, körről körre kisebb részét kapja a kasszának; aki elveszi tőle a trónt, a teljes kasszát viszi. A zsinórban tartó bajnok el is fárad: a trónharcot kevesebb élettel kezdi."
+          },
+          "prize": {
+            "title": "Szezonvégi ligadíj",
+            "text": "A szezon végén a ligád végső helyezése szerint díj jár; a felső 10% és 25% határa a liga létszámától függ. Feltétel: legalább {{min}} Bandita-harc a szezonban (a védekezés is számít). A pet-pont csak kikelt petnél jár."
+          },
+          "hp": {
+            "title": "Élet és poti",
+            "text": "Harc után 10 percenként +10%. 10% alatt nincs támadás. Az Aréna poti azonnal feltölt."
+          },
+          "join": {
+            "title": "Belépés",
+            "text": "A belépés ingyenes és végleges. A ligád létrájának aljáról indulsz.",
+            "textSeason": "A belépés ingyenes. Belépés után a szezon végéig bent maradsz. A ligád létrájának aljáról indulsz.",
+            "textWindow": "A belépés ingyenes, és a ligád létrájának aljáról indulsz."
+          },
+          "honor": {
+            "title": "Becsület",
+            "text": "A becsület és a szezon marad. 7 nap távollét után kiesel a létráról."
+          }
+        },
+        "tabsHelp": {
+          "title": "A fülek",
+          "league": "A létra: itt támadsz, itt lopsz, és itt szerezheted meg a trónt.",
+          "foes": "Harcok a ligán kívül: nincs lopás, és a helyed sem változik.",
+          "season": "A becsületed, a rangod és a szezon jutalmai."
+        },
+        "feeMissing": "Nincs elég nyangod a trón díjára ({{nyang}} nyang).",
+        "looks": "Bandita-kinézetek",
+        "join": {
+          "title": "Lépj be a Bandita Ligába",
+          "intro": "Mássz feljebb a ligád létráján, rabold ki az előtted állókat, és szerezd meg a trónt a kasszájával. Lépj be, hogy részt vehess, és különleges jutalmakat szerezz.",
+          "rewardsTitle": "Amit nyerhetsz",
+          "reward": {
+            "pet": {
+              "title": "Aréna-pet",
+              "text": "Teljesítsd a szezon Aréna küldetéssorát, és a szezon végén kikel neked. Csak az Arénában vívott harcokkal fejlődik.",
+              "bonus": "Akár +{{pct}}% AFK XP és nyang, amíg a Bandita Ligában vagy.",
+              "unique": "Ezt a bónuszt csak az Aréna-pet adja."
+            },
+            "pot": {
+              "title": "A trón kasszája",
+              "text": "Tartsd az 1. helyet, és a kassza óránként nő. Ha 24 óráig kitartasz, a nyang és az XP a tiéd."
+            },
+            "ore": {
+              "text": "Ha 12 és 24 óráig tartod a trónt, Szerencse-ércet kapsz, 24 óránál pedig a ligád bajnoki címét."
+            },
+            "trophy": {
+              "title": "Bandita-trófea",
+              "text": "Trófea az Otthonodba. A színe a legjobb szezonbeli eredményedet mutatja."
+            }
+          },
+          "rules": {
+            "attack": "Az előtted álló 5 játékost támadhatod. Ha nyersz, helyet cseréltek, és viszel a be nem gyűjtött farmjukból.",
+            "robbed": "Téged is megtámadhatnak és meglophatnak, a tolvajon pedig 24 óráig bosszút állhatsz.",
+            "permanent": "A belépés végleges: a Bandita Ligából utána nem lehet kilépni.",
+            "season": "A belépés a szezon végéig köt: addig nem léphetsz ki a Bandita Ligából ({{date}})."
+          },
+          "button": "Belépek a Bandita Ligába",
+          "locked": "Kiléptél a Bandita Ligából. Újra beléphetsz ekkortól: {{date}}.",
+          "confirm": {
+            "title": "Belépsz a Bandita Ligába?",
+            "permanent": "A belépés után nem tudsz kilépni a Bandita Ligából.",
+            "bottom": "A ligád létrájának aljáról indulsz.",
+            "robbed": "Mostantól megtámadhatnak, és lophatnak a be nem gyűjtött farmodból.",
+            "yes": "Belépek",
+            "season": "A szezon végéig ({{date}}) nem léphetsz ki a Bandita Ligából.",
+            "sure": "Ha belépsz, nem léphetsz ki a Bandita Ligából.",
+            "sureSeason": "Ha belépsz, a szezon végéig ({{date}}) nem léphetsz ki a Bandita Ligából.",
+            "window": "A belépési időszak végéig ({{date}}) még kiléphetsz, utána a szezon végéig ({{end}}) bent maradsz.",
+            "sureWindow": "Ha belépsz, {{date}} után a szezon végéig nem léphetsz ki a Bandita Ligából."
+          },
+          "windowRule": "Belépni minden szezon első 24 órájában lehet ({{from}} és {{to}} között). Aki bent van, automatikusan marad; kilépni is csak ebben a 24 órában lehet.",
+          "windowOpen": "A mostani belépési időszak vége: {{date}}.",
+          "closed": "A belépés most zárva. Legközelebb ekkortól léphetsz be: {{date}}.",
+          "windowSoon": "{{date}}-tól új szabály: belépni és kilépni csak a szezon első 24 órájában lehet ({{from}} és {{to}} között). Aki bent van, automatikusan marad."
+        },
+        "leave": {
+          "hint": "Az első támadásoddal végleg az Arénában maradsz. Ha ki akarsz szállni, ne támadj, hanem nyomd meg a Kilépés gombot.",
+          "button": "Kilépés",
+          "label": "Kilépés a Bandita Ligából",
+          "blocked": "Még bosszút állhatnak rajtad, ezért most nem léphetsz ki. Ennyi idő múlva: {{time}}.",
+          "confirmTitle": "Kilépsz a Bandita Ligából?",
+          "lockWeek": "Hétfőig, a következő Aréna-hét kezdetéig nem léphetsz vissza a Bandita Ligába ({{date}}).",
+          "lockSeason": "A következő szezon kezdetéig ({{date}}) nem léphetsz vissza a Bandita Ligába.",
+          "lockDays_one": "{{count}} napig nem léphetsz vissza a Bandita Ligába ({{date}}).",
+          "lockDays_other": "{{count}} napig nem léphetsz vissza a Bandita Ligába ({{date}}).",
+          "champion": "Te vagy a bajnok: most megkapod a trón kasszáját, a trón pedig továbbszáll.",
+          "yes": "Igen, kilépek",
+          "hintSeason": "Az első támadásoddal a szezon végéig ({{date}}) az Arénában maradsz. Ha ki akarsz szállni, ne támadj, hanem nyomd meg a Kilépés gombot.",
+          "stay": "Maradok",
+          "sure": "Ekkortól léphetsz vissza: {{date}}.",
+          "sureSeason": "A következő szezon kezdetéig ({{date}}) nem léphetsz vissza.",
+          "stayTitle": "Maradsz a Bandita Ligában",
+          "stayPet": "Tiéd lehet az Aréna-pet: akár +{{pct}}% AFK XP és nyang.",
+          "stayTrophy": "Tiéd lehet a Bandita-trófea az Otthonodba.",
+          "stayPot": "Tiéd lehet a trón kasszája és a {{item}}.",
+          "staySeason": "Részt veszel a becsület-szezonban.",
+          "stayRobbed": "Megtámadhatnak és meglophatnak: a be nem gyűjtött AFK-zsákmányodból visznek, de legalább a fele mindig megmarad.",
+          "leaveTitle": "Kilépsz",
+          "leaveSafe": "Senki nem támadhat meg és nem lophat meg.",
+          "leavePure": "A klasszikus Arénában továbbra is harcolhatsz a becsületért.",
+          "leaveNoPet": "Nincs Aréna-pet, így az AFK-bónusza sem jár.",
+          "leaveNoRewards": "Nincs trónkassza és nincs {{item}}.",
+          "leaveNoRewardsTrophy": "Nincs Bandita-trófea, nincs trónkassza és nincs {{item}}.",
+          "hintWindow": "A belépési időszak végéig ({{date}}) kiléphetsz. Utána a szezon végéig ({{end}}) bent maradsz.",
+          "closedNote": "A szezon végéig bent maradsz a Bandita Ligában. Kilépni legközelebb a következő belépési időszakban lehet ({{from}} és {{to}} között)."
+        },
+        "commit": {
+          "title": "Az első támadásod",
+          "text": "Ezzel a támadással végleg a Bandita Ligában maradsz, és versenyezhetsz az értékes jutalmaiért: {{rewards}}. Többé nem léphetsz ki.",
+          "yes": "Igen, támadok",
+          "textSeason": "Ezzel a támadással a szezon végéig ({{date}}) a Bandita Ligában maradsz, és versenyezhetsz az értékes jutalmaiért: {{rewards}}. Addig nem léphetsz ki.",
+          "optOut": "Ha nem akarsz részt venni, harcolj inkább a klasszikus Arénában, de akkor nincs Aréna-pet.",
+          "optOutNoPet": "Ha nem akarsz részt venni, harcolj inkább a klasszikus Arénában, de akkor ezekből a jutalmakból semmit nem kapsz.",
+          "choice": "Te döntesz:",
+          "stay": "Támadok és maradok",
+          "textWindow": "Ezzel a támadással a Bandita Liga jutalmaiért versenyzel: {{rewards}}. A belépési időszak végéig ({{date}}) még kiléphetsz, utána a szezon végéig bent maradsz."
+        },
+        "confirm2": {
+          "next": "Tovább",
+          "no": "Mégse",
+          "sureTitle": "Biztos vagy benne?",
+          "sure": "Ezt nem lehet visszavonni."
+        },
+        "rewardNames": {
+          "pet": "az Aréna-pet akár +{{pct}}% AFK XP- és nyangbónusszal",
+          "trophy": "a Bandita-trófea",
+          "pot": "a trón kasszája"
+        },
+        "invite": {
+          "title": "Itt minden hős harcolhat",
+          "pure": "Itt mindig harcolhatsz a Tiszta becsületért és a Tiszta szezon címeiért, akár bent vagy a Bandita Ligában, akár nem.",
+          "only": "Csak a Bandita Ligában (Liga fül): {{rewards}}.",
+          "button": "Kipróbálom a Bandita Ligát"
+        },
+        "prize": {
+          "heading": "Szezonvégi ligadíj",
+          "place": "{{rank}}.",
+          "places": "{{from}}-{{to}}.",
+          "top": "felső {{pct}}%",
+          "title": "{{title}} cím",
+          "loot": "{{n}} {{item}}",
+          "lootShort": "{{n}} érc",
+          "pet": "+{{n}} pet-pont",
+          "petShort": "+{{n}}",
+          "petNote": "(kikelt petnél)",
+          "tier": "{{place}}: {{rewards}}",
+          "current": "Most a(z) {{tier}} sávban vagy.",
+          "none": "Most még nem vagy díjas helyen.",
+          "tierNames": {
+            "champion": "1. hely",
+            "podium": "2-3. hely",
+            "top10": "felső 10%",
+            "top25": "felső 25%"
+          },
+          "fights": "Feltétel: legalább {{min}} Bandita-harc a szezonban (eddig {{have}}, a védekezés is számít).",
+          "won": "A(z) {{league}} liga {{rank}}. helyén zártad a Bandita-szezont: {{rewards}}.",
+          "claim": "Átveszem"
+        }
+      },
+      "hub": {
+        "title": "PvP",
+        "back": "Vissza a PvP-választóhoz",
+        "league": {
+          "title": "Liga",
+          "page": "Bandita Liga",
+          "sub": "A banditák ligája: küzdj fel magad a létrán, és foglald el a trónt!",
+          "tag": "Rangsoros",
+          "p1": "Győzelemmel előrébb ugrasz a ligád létráján",
+          "p2": "A trón kasszáját a bajnok viszi haza",
+          "p3": "Rabolj a többiektől, és állj bosszút",
+          "p4": "Szezon végén ligadíj és Aréna-pet",
+          "cta": "Irány a Liga",
+          "statusIn": "Bent vagy a ligában · életed {{hp}}%",
+          "statusJoin": "Még nem vagy tag: most csatlakozhatsz",
+          "statusNext": "Következő belépés: {{date}}"
+        },
+        "arena": {
+          "title": "Aréna",
+          "sub": "Becsületbeli párbajok, rablás nélkül.",
+          "tag": "Mindenkinek",
+          "p1": "Bárkivel megküzdhetsz",
+          "p2": "Saját szezon és rangsor",
+          "p3": "Győzelemért XP és nyang jár",
+          "p4": "Szezon végén cím a legjobbaknak",
+          "cta": "Irány az Aréna",
+          "status": "Szezonbecsületed: {{honor}}"
+        }
+      }
+    },
+    "home": {
+      "title": "Otthon",
+      "open": "Otthon",
+      "line": "Na, milyen a házad? A kecske szerint egész lakályos.",
+      "lineNone": "Fiam, egy hős nem alhat örökké a kocsma padlásán. Van egy düledező kunyhó a falu szélén, a {{level}}. szinttől ingyen a tiéd. Igaz, a tetején lakik egy kecske.",
+      "tabs": {
+        "house": "Ház",
+        "furnish": "Berendezés",
+        "trophies": "Trófeák",
+        "jar": "Persely"
+      },
+      "noHome": "Még nincs otthonod",
+      "pitch": "Az első otthonod, egy düledező kunyhó, a {{level}}. szinttől ingyen jár. Utána bővítsd, rendezd be, akassz trófeákat a falra, és mutasd meg mindenkinek a profilodon.",
+      "tierOf": "{{tier}}. fok / {{max}}",
+      "building": "Épül: {{name}}, még {{time}}.",
+      "nextTitle": "Következő fok",
+      "nextLead": "{{name}}: {{level}}. szinttől építhető, az építés {{hours}} óra.",
+      "build": "Építsd: {{name}}",
+      "built": "Elkezdődött az építés: {{name}}. A kőművesek már fütyörésznek.",
+      "oneADay": "Naponta egy fok épül nyangért. Viharérmével az épülő fok azonnal kész, és ma még egy fok indítható.",
+      "ladder": "Az otthon fokai",
+      "gate": "{{level}}. szinttől",
+      "noSkip": "Az ár a szinteddel nő, de legfeljebb a fok szintkapuja fölötti 10. szint áráig.",
+      "tiers": {
+        "1": {
+          "name": "Düledező kunyhó",
+          "desc": "Négy fal, egy tető és egy kecske a tetőn. A kecske nem tartozék, de elmenni sem akar.",
+          "unlock": "4 bútorhely"
+        },
+        "2": {
+          "name": "Foltozott ház",
+          "desc": "Már csak ott ázik be, ahol a vödör áll.",
+          "unlock": "+4 bútorhely"
+        },
+        "3": {
+          "name": "Kőalapos ház",
+          "desc": "Kőalap, zárható ajtó és végre egy fal a trófeáidnak.",
+          "unlock": "+4 bútorhely, trófeafal"
+        },
+        "4": {
+          "name": "Udvarház",
+          "desc": "Saját udvar, saját kút és egy persely, amit csak te nyithatsz ki.",
+          "unlock": "+4 bútorhely, persely"
+        },
+        "5": {
+          "name": "Kertes kúria",
+          "desc": "Fűszerkert a ház mögött. Yakdo már kérdezte, kölcsönadod-e a borsmentát.",
+          "unlock": "+4 bútorhely, fűszerkert (a receptekhez fele annyi hal kell)"
+        },
+        "6": {
+          "name": "Tornyos kúria",
+          "desc": "Torony, ahonnan az egész falut látod. A falu is látja, hogy tornyod van.",
+          "unlock": "+4 bútorhely, vendégszoba (a profilodon bárki benézhet)"
+        },
+        "7": {
+          "name": "Sárkánycserepes palota",
+          "desc": "A tetőcserepek pikkelyesek, a szomszédok irigyek, a kecske büszke.",
+          "unlock": "+4 bútorhely, a királyságod zászlaja az otthonod képén"
+        },
+        "8": {
+          "name": "Hegyi rezidencia",
+          "desc": "Kilátás a hegyekre, arany névtábla a kapun. A kecske is felköltözött veled.",
+          "unlock": "+4 bútorhely, aranyozott otthon a profilodon"
+        }
+      },
+      "needsTier": "Otthon {{tier}}. fokától helyezhető el",
+      "removeWarn": "Ha leveszed, csak az Otthon {{tier}}. fokától teheted vissza.",
+      "finish": "Kész most: {{coins}}",
+      "finishLabel": "{{name}} építésének befejezése most, {{coins}} Viharérméért",
+      "finishTip": "A kőművesek rákapcsolnak, a fok azonnal elkészül. Az ár a hátralévő időből számol.",
+      "finished": "Kész: {{name}}. A kőművesek már a sarki kifőzdében ünnepelnek.",
+      "extra": "Még egy fok ma: {{coins}}",
+      "extraLabel": "{{name}} építésének indítása még ma, {{nyang}} nyang és {{coins}} Viharérme",
+      "extraLead": "Ma már épült egy fok. Viharérmével még egy indítható: {{nyang}} nyang és {{coins}} Viharérme.",
+      "extraTip": "A fok nyangára és a szintkapu ugyanaz, mellé Viharérme jár. Az építés ugyanannyi ideig tart.",
+      "gives": {
+        "title": "Mit ad az otthonod?",
+        "lead": "Az otthon foka és a kényelem együtt erősít, minden értéknek van plafonja.",
+        "capOf": "legfeljebb {{cap}}",
+        "hours_one": "{{count}} óra",
+        "hours_other": "{{count}} óra",
+        "fromTier": "{{tier}}. fok",
+        "fromComfort": "Kényelem {{n}}",
+        "capped": "plafon",
+        "next": "Következő: {{name}} ({{level}}. szinttől): {{gains}}",
+        "nextNone": "A további fokok új helyeket és jobb bútort adnak, a vadászzsák és a napi energia jutalma már a plafonon van.",
+        "reward": "Jutalom: {{gains}}",
+        "comfortTip": "Tipp: a kedvenc helyén álló bútor +{{preferred}} kényelmet ad, és ha minden hely foglalt, a Teltház további +{{full}} kényelmet.",
+        "none": "Építsd meg az első fokot, és az otthonod már a következő belépéskor ad valamit."
+      }
+    },
+    "furniture": {
+      "comfort": "Kényelem",
+      "capped": "A kényelem bónusza elérte a plafont.",
+      "slots": "Bútorhely: {{used}} / {{max}}",
+      "noHome": "Előbb kell egy ház, aztán jöhetnek a bútorok.",
+      "shopTitle": "Jamul heti bútorai",
+      "shopLead": "Hetente nyolc darab, hétfőn cserélődik. Naponta egy bútort vihetsz haza, a ház foka szabja meg, milyen minőség fér el.",
+      "needTier": "{{tier}}. foktól",
+      "bought": "Hazavitted: {{name}}. Jamul kétszer is megszámolta.",
+      "storeTabs": {
+        "goods": "Áruk",
+        "furniture": "Bútor"
+      },
+      "names": {
+        "furrug": "Összetekert bundaszőnyeg",
+        "ropecoil": "Kötélkarika",
+        "paperlamp": "Papírlámpás",
+        "porridgepot": "Kásásfazék",
+        "baittin": "Csalisbödön",
+        "woodchest": "Faláda",
+        "calligraphy": "Kalligráfia-tekercs",
+        "potionshelf": "Gyógyitalos polc",
+        "hornhook": "Agyarfogas",
+        "floursack": "Lisztes zsák",
+        "cranescreen": "Darus paraván",
+        "fanwall": "Falilegyező",
+        "lotusbowl": "Lótuszos tál",
+        "mountainscroll": "Hegyes tekercskép",
+        "tigerrug": "Tigriscsíkos takaró",
+        "jadecloth": "Jádezöld terítő",
+        "wallaxe": "Fali bárd",
+        "totemmask": "Totemmaszk",
+        "shrimpjar": "Garnélás befőttesüveg",
+        "anvilstand": "Díszüllő",
+        "phoenixpanel": "Főnixes falikép",
+        "wavescreen": "Hullámos paraván",
+        "stormpanel": "Viharos falikép",
+        "crystalheart": "Kristályszív",
+        "icecluster": "Jégkristály-csokor",
+        "goldegg": "Aranytojás",
+        "ashmask": "Hamumaszk",
+        "redbanner": "Vörös zászló",
+        "lootchest": "Kincsesláda",
+        "goldcup": "Aranykupa a polcon",
+        "dragoncrest": "Sárkányos címer",
+        "tigercrest": "Tigrises címer",
+        "wolfcrest": "Farkasos címer",
+        "swordcrest": "Kardos címer",
+        "embercore": "Parázsló kő",
+        "dragoneye": "Sárkányszem",
+        "diamond": "Gyémánt vitrinben",
+        "dragonkey": "Sárkánykulcs a falon",
+        "jadelion": "Jádeoroszlán",
+        "pagoda": "Pagodamakett",
+        "moonlantern": "Holdkapu-lámpás",
+        "goatteapot": "Jádekecske-teáskanna",
+        "goatportrait": "A kecske ősének arcképe",
+        "incensedragon": "Sárkányos bronzfüstölő",
+        "stormpine": "Viharfenyő",
+        "goatthrone": "Ő Kecskesége trónja",
+        "dragonrug": "Sárkányos selyemszőnyeg",
+        "dragontapestry": "Sárkányos falikárpit",
+        "dragonpearl": "Sárkánygyöngy-asztaldísz",
+        "dragonpillar": "Sárkányos oszloplámpa",
+        "homehearth": "Otthonteremtő tűzhely"
+      },
+      "comfortPts": "Kényelem +{{n}}",
+      "buyCoinsLabel": "{{name}} megvétele {{coins}} Viharérméért",
+      "buyCoinsTip": "Viharérméért is hazaviheted. A napi egy bútorba ez is beleszámít.",
+      "luxuryTitle": "Jamul féltett darabjai",
+      "luxuryLead": "Ezeket Jamul csak Viharérméért adja, és mindegyikből csak egyet. Bármikor megveheted őket, a napi egy bútorba nem számítanak bele.",
+      "luxuryTip": "Csak Viharérméért, darabonként egyszer. A kényelem a minősége szerint számít, az XP-plafon ettől nem nő.",
+      "coinsShort": "Viharérme",
+      "bonus": "+{{xp}} XP, +{{nyang}} nyang",
+      "capAt": "A plafon {{n}} kényelemnél van: legfeljebb {{xp}} XP és {{nyang}} nyang.",
+      "harmony": "Összhang +{{n}}",
+      "fullHouse": "Teltház +{{n}}",
+      "luxury": "Luxus: {{counted}} / {{cap}} számít"
+    },
+    "room": {
+      "label": "{{name}} belülről",
+      "types": {
+        "wall": "fal",
+        "floor": "padló",
+        "table": "asztal",
+        "corner": "sarok",
+        "window": "ablak",
+        "trophy-wall": "trófeafal"
+      },
+      "empty": "Üres hely: {{type}}",
+      "piece": "{{name}} ({{type}})",
+      "pick": "Mi kerüljön ide?",
+      "pickSwap": "Mire cseréled?",
+      "none": "Nincs ide illő bútorod. Nézz be Jamul heti kínálatába!",
+      "stored": "kamrában",
+      "moves": "áthelyezés",
+      "swap": "Csere",
+      "remove": "Leveszem",
+      "done": "{{name}} a helyére került.",
+      "swapped": "{{name}} került a helyére, {{old}} a kamrába vándorolt.",
+      "removed": "{{name}} a kamrába került. Bármikor visszateheted.",
+      "hint": "Koppints egy üres helyre a szobában, és válaszd ki, mi kerüljön oda. Kényelmet csak a kiállított bútor ad.",
+      "storage": "Kamra",
+      "storageLead": "Ezek a bútorok a tieid, de a kamrában nem adnak kényelmet. Tedd ki őket a szobába!",
+      "storageEmpty": "A kamra üres, minden bútorod a helyén van.",
+      "boughtStored": "Hazavitted: {{name}}. Most nem fért ki, a kamrában vár.",
+      "favourite": "kedvenc hely +{{n}}",
+      "onFavourite": "A kedvenc helyén áll: +{{n}} kényelem"
+    },
+    "trophy": {
+      "wall": "Trófeafal",
+      "lead": "Amit megszereztél, azt ki is lehet tömetni. A trófea csak dísz, de milyen dísz!",
+      "locked": "Trófeafalat a Kőalapos háztól (3. fok) kapsz.",
+      "empty": "A fal még üres. Egy rekordhal jól mutatna rajta.",
+      "options": "Kitömethető",
+      "stuff": "Kitömetem",
+      "done": "Felkerült a falra: {{name}}.",
+      "fish": "Rekord {{name}}",
+      "boss": "{{name}} trófeája",
+      "tower": "Torony, {{floor}}. emelet"
+    },
+    "jar": {
+      "title": "Persely",
+      "lead": "Ide te teszel félre egy nagyobb célra. A perselyhez a kovács, a Pecsét és a statpont nem nyúl, a nagy célok (ház, bot, kísérő, mesterkönyv, hátas) viszont először innen fizetnek.",
+      "locked": "Perselyt az Udvarháztól (4. fok) kapsz.",
+      "capOf": "Legfeljebb {{cap}} nyang fér bele",
+      "goal": "Mire gyűjtesz?",
+      "goals": {
+        "none": "Csak úgy, félreteszek",
+        "home": "A ház következő foka",
+        "rod": "Új horgászbot",
+        "pet": "Kísérő-mesterfok",
+        "master": "Mesterkönyv",
+        "mount": "Saját hátas",
+        "furniture": "Bútor",
+        "wardrobe": "Selyemszabó"
+      },
+      "ready": "Megvan a cél ára, mehetsz vásárolni!",
+      "amount": "Összeg",
+      "putBtn": "Beteszem",
+      "takeBtn": "Kiveszem",
+      "put": "Beraktál {{amount}} nyangot a perselybe.",
+      "took": "Kivettél {{amount}} nyangot a perselyből.",
+      "paysSplit": "{{jar}} a perselyből + {{wallet}} a nyangodból",
+      "paysAll": "A teljes {{price}} nyang a perselyből megy rá",
+      "foot": "Kivenni bármikor ingyen lehet.",
+      "noSinks": "A persely nem nyelő: amit beteszel, az a tiéd marad, csak nem költöd el véletlenül.",
+      "days": "Még kb. {{n}} nap a célig ({{price}} nyang)."
+    },
+    "banditTrophy": {
+      "names": {
+        "copper": "Réz banditatrófea",
+        "silver": "Ezüst banditatrófea",
+        "gold": "Arany banditatrófea",
+        "throne": "Trónörző banditatrófea"
+      },
+      "why": {
+        "copper": "Egy szezonban legalább 10-szer harcolt a Bandita Ligában.",
+        "silver": "A Bandita Ligában egy napot a liga első 10 helyén zárt.",
+        "gold": "A Bandita Ligában egy napot a liga első 3 helyén zárt.",
+        "throne": "Teljes 24 órán át tartotta a Bandita Liga trónját."
+      },
+      "rule": "A mostani vagy az előző szezon legjobb eredményedet mutatja. Réz: 10 harc egy szezonban. Ezüst: egy napot a ligád első 10 helyén zársz. Arany: az első 3 helyen. Trónőrző: 24 órán át tartod a trónt. Csak dísz, és aki meglátogatja az Otthonodat, az is látja.",
+      "none": "Még nincs banditatrófeád. Harcolj egy szezonban 10-szer a Bandita Ligában, és a réz a tiéd. Banditatrófeát csak a Bandita Liga harcosai kapnak."
+    },
+    "home2": {
+      "tabs": {
+        "ranking": "Rangsor"
+      },
+      "level": {
+        "title": "Otthon-szint",
+        "value": "{{level}}. Otthon-szint",
+        "none": "Még nincs Otthon-szinted",
+        "noneLead": "Minden fok, bútor, szett és trófea Otthon-pontot ad. Az 1. szinthez 5 pont kell.",
+        "points": "{{into}} / {{span}} pont a következő szintig",
+        "barLabel": "Otthon-pont: {{points}}, a {{level}}. szinthez {{next}} pont kell",
+        "max": "Elérted a legmagasabb Otthon-szintet.",
+        "next": "{{level}}. szinten:",
+        "toast": "Otthonod szintje: {{level}}",
+        "perks": "Amit most ad",
+        "perkAfk": "+{{hours}} óra AFK",
+        "perkEnergy": "+{{n}} energia naponta",
+        "perkBoss": "+{{n}} napi boss-próba",
+        "perksNone": "Még semmi, de az 5. szinttől már jár bónusz."
+      },
+      "badges": {
+        "bronze": "Bronz Otthon-jelvény",
+        "silver": "Ezüst Otthon-jelvény",
+        "gold": "Arany Otthon-jelvény",
+        "jade": "Jáde Otthon-jelvény"
+      },
+      "milestones": {
+        "title": "Mérföldkövek",
+        "count": "{{reached}} / {{total}}",
+        "reached": "Megvan",
+        "level": "{{level}}. szint",
+        "chest": "Napi otthoni láda, {{tier}}. osztály",
+        "afk": "+{{hours}} óra AFK",
+        "energy": "+{{n}} energia naponta",
+        "boss": "+{{n}} napi boss-próba",
+        "shards": "{{n}} Lakk-szilánk"
+      },
+      "today": {
+        "title": "Mai teendők"
+      },
+      "chest": {
+        "title": "Otthoni láda",
+        "tier": "{{tier}}. osztály",
+        "locked": "A {{level}}. Otthon-szinttől minden nap vár rád egy láda.",
+        "waiting_one": "1 láda vár",
+        "waiting_other": "{{count}} láda vár",
+        "next": "Új láda {{time}} múlva",
+        "claim": "Kinyitom",
+        "claimLabel": "Otthoni láda kinyitása ({{n}})",
+        "got": "A ládában: {{list}}",
+        "builder": "Építőmesterrel +{{n}} Lakk-szilánk",
+        "keep": "Legfeljebb 2 napnyi láda gyűlik össze."
+      },
+      "request": {
+        "title": "A Házmester kérése",
+        "none": "Ma nincs kérés. Holnap új jön.",
+        "items": {
+          "full_set": "Tegyél ki egy teljes szettet.",
+          "swap": "Cserélj ki egy bútort a szobában.",
+          "wall3": "Legyen kint 3 fali dísz.",
+          "likes3": "Kedvelj 3 másik otthont.",
+          "star": "Újíts fel egy bútort egy csillaggal.",
+          "boss_trophy": "Tegyél ki egy boss-trófeát."
+        },
+        "reward": "Jutalom: {{n}} Lakk-szilánk",
+        "claim": "Átveszem",
+        "claimed": "Kész, holnap új kérés jön.",
+        "open": "Még nincs kész",
+        "done": "A Házmester elégedett: +{{n}} Lakk-szilánk."
+      },
+      "builder": {
+        "name": "Építőmester",
+        "daysLeft_one": "még 1 nap",
+        "daysLeft_other": "még {{count}} nap",
+        "lead": "30 napig naponta +1 felújítás és +1 bútor, eggyel jobb osztályú láda és jelvény a profilodon.",
+        "buy": "30 nap: {{coins}}",
+        "extend": "+30 nap: {{coins}}",
+        "buyLabel": "Építőmester 30 napra {{coins}} Viharérméért",
+        "tip": "Gyorsabban haladsz vele, de a bónuszok plafonja ugyanaz marad.",
+        "full": "Legfeljebb {{days}} napra előre veheted meg.",
+        "done": "Az Építőmester munkába állt."
+      },
+      "fashion": {
+        "title": "A hét divatja",
+        "lead": "Dupla szépségpont a rangsorban a szett kitett darabjaiért."
+      },
+      "reroll": {
+        "btn": "Kínálatcsere: {{coins}}",
+        "label": "Új heti bútorkínálat {{coins}} Viharérméért",
+        "tip": "Hetente egyszer sorsolhatsz új heti kínálatot. A már meglévő darab nem jön újra, a napi bútorkorlát nem változik.",
+        "used": "Ezen a héten már cseréltél kínálatot.",
+        "done": "Megjött az új heti kínálat."
+      },
+      "shards": {
+        "count": "{{n}} Lakk-szilánk",
+        "lead": "A 4. és az 5. csillaghoz kell. Ládából, a Házmestertől, lebontásból és a rangsorból kapsz.",
+        "packs": {
+          "small": "Kis szilánkcsomag",
+          "large": "Nagy szilánkcsomag"
+        },
+        "packBtn": "+{{n}}: {{coins}}",
+        "packLabel": "{{n}} Lakk-szilánk {{coins}} Viharérméért",
+        "packTip": "Hetente {{per}} alkalommal vehető. A napi felújítási korlát nem változik.",
+        "packLeft": "E héten még {{n}}",
+        "packDone": "+{{n}} Lakk-szilánk"
+      },
+      "album": {
+        "title": "Szettalbum",
+        "lead": "Egy szett 4 darabból áll. Ha mind a 4 kint van a szobában, a szett aktív: +10 kényelem, +20 Otthon-pont és egy kis hatás.",
+        "pages": {
+          "sets": "Szettek",
+          "premium": "Luxus és prémium"
+        },
+        "active": "Aktív",
+        "placed": "{{n}} / 4 kint",
+        "state": {
+          "placed": "kint van",
+          "stored": "a kamrában",
+          "missing": "hiányzik"
+        },
+        "inOffer": "Most kapható",
+        "inOfferCount_one": "1 darab most kapható",
+        "inOfferCount_other": "{{count}} darab most kapható",
+        "fashion": "A hét divatja",
+        "frame": "A teljes szettért: {{name}}",
+        "month": "{{month}} prémium szettje",
+        "empty": "Itt még nincs szett."
+      },
+      "effects": {
+        "drop": "{{pct}} zsákmány",
+        "potion": "{{pct}} gyógyital-hatás",
+        "travel": "{{pct}} utazási idő",
+        "none": "Hatás nincs, csak a keret és a gyűjtés öröme."
+      },
+      "sets": {
+        "hunter": "Vadászház",
+        "fisher": "Halászkunyhó",
+        "scribe": "Írnokszoba",
+        "alchemist": "Alkimistakonyha",
+        "storm": "Viharszoba",
+        "ash": "Hamuszentély",
+        "crest": "Címerterem",
+        "dragonvault": "Sárkánykincstár",
+        "jadegarden": "Jádekert",
+        "miner": "Bányászház",
+        "goatlord": "Kecskeúr",
+        "dragonhall": "Sárkánycsarnok"
+      },
+      "pieces": {
+        "title": "Bútoraid",
+        "lead": "Felújítva minden csillag +20% kényelmet ad, 5 csillagnál dupla. A kamrában álló bútort lebonthatod Lakk-szilánkért.",
+        "empty": "Még nincs bútorod. Jamul heti kínálatából vihetsz haza.",
+        "placed": "kint",
+        "stored": "kamra",
+        "stars": "{{n}} / 5 csillag",
+        "needsTier": "A {{tier}}. foktól tehető ki"
+      },
+      "refurbish": {
+        "title": "Felújítás",
+        "btn": "Felújítás",
+        "label": "{{name}} felújítása {{star}} csillagra, {{price}} nyang",
+        "coinsBtn": "Felújítás: {{coins}}",
+        "coinsLabel": "{{name}} felújítása {{star}} csillagra, {{price}} nyang és {{coins}} Viharérme",
+        "coinsTip": "A mai nyangos felújításaid elfogytak. Ez a nyangár mellé {{coins}} Viharérmébe kerül.",
+        "shards": "+{{n}} szilánk",
+        "pips": "Mai felújítások: {{used}} / {{max}}",
+        "daily": "Mára elfogytak a felújítások.",
+        "level": "A {{level}}. szinttől újíthatsz fel.",
+        "max": "Teljesen felújítva.",
+        "shortShards": "Még {{n}} Lakk-szilánk kell.",
+        "done": "{{name}}: {{star}}. csillag!"
+      },
+      "scrap": {
+        "btn": "Lebontás",
+        "ask": "Lebontod? +{{n}} szilánk, a nyangot nem adja vissza.",
+        "yes": "Lebontom",
+        "no": "Mégse",
+        "label": "{{name}} lebontása {{n}} Lakk-szilánkért",
+        "done": "{{name}} lebontva: +{{n}} Lakk-szilánk."
+      },
+      "premium": {
+        "title": "A hónap prémium szettje",
+        "lead": "Négy témás bútor, csak ebben a hónapban. A teljes szettért saját profilkeret jár.",
+        "ends": "Kapható eddig: {{date}}",
+        "minTier": "A {{tier}}. foktól vehető meg.",
+        "pieceLabel": "{{name}} {{coins}} Viharérméért",
+        "pieceTip": "Darabonként egyszer vehető. A kényelme a luxusplafon alá számít.",
+        "set": "Mind a 4: {{coins}}",
+        "setLabel": "A teljes {{name}} szett {{coins}} Viharérméért",
+        "setTip": "A 4 darab egyben olcsóbb. Csak akkor vehető, ha még egy darabod sincs belőle.",
+        "owned": "Megvan",
+        "done": "{{name}} a tiéd.",
+        "setDone": "A teljes {{name}} szett a tiéd!",
+        "complete": "Megvan a teljes szett, a keret a tiéd.",
+        "frame": "A teljes szettért: {{name}}"
+      },
+      "ranking": {
+        "title": "A hét legszebb otthona",
+        "lead": "A szépségpont a kényelemből, az aktív szettekből, a falon lévő trófeákból, a hét divatjából és a kapott kedvelésekből jön.",
+        "band": "{{band}} szintű sáv",
+        "bandLabel": "Sávod",
+        "ends": "A hét vége",
+        "endsIn": "{{time}} múlva",
+        "fashion": "A hét divatja",
+        "me": "Helyezésed",
+        "meNone": "Még nem vagy a legjobb {{top}} között",
+        "score": "Szépségpont",
+        "scoreN": "{{n}} pont",
+        "likesLeft": "Mai kedvelés",
+        "likesLeftN": "{{n}} maradt",
+        "likeLocked": "A {{level}}. szinttől kedvelhetsz.",
+        "locked": "A rangsor a {{level}}. szinttől nyílik.",
+        "place": "Hely",
+        "name": "Hős",
+        "homeLevel": "Otthon",
+        "like": "Tetszik",
+        "liked": "Tetszett",
+        "likeLabel": "Tetszik {{name}} otthona",
+        "likeDone": "Kedvelted {{name}} otthonát.",
+        "you": "Te",
+        "empty": "Ezen a héten még senki sincs a sávodban.",
+        "rewards": "Hétfőn jön a jutalom: az 1. hely „A hét legszebb otthona” címet kap, a legjobb tíz Lakk-szilánkot és nyangot.",
+        "open": "{{name}} otthona",
+        "retry": "Újra"
+      },
+      "profile": {
+        "level": "Otthon-szint",
+        "sets": "Aktív szettek",
+        "likes": "Kedvelés a héten",
+        "like": "Tetszik",
+        "liked": "Tetszett",
+        "likeLabel": "Tetszik ez az otthon",
+        "builder": "Építőmester",
+        "likeDone": "Kedvelted ezt az otthont."
+      },
+      "stars": {
+        "label_one": "1 csillag",
+        "label_other": "{{count}} csillag"
+      },
+      "toast": {
+        "close": "Bezárás"
+      },
+      "spend": {
+        "refurbish": "Bútorfelújítás",
+        "reroll": "Kínálatcsere",
+        "premium": "Prémium bútor",
+        "builder": "Építőmester",
+        "shards": "Lakk-szilánk csomag"
+      },
+      "errors": {
+        "home_off": "Ez a rész most nem érhető el.",
+        "chest_empty": "Most nincs kinyitható láda.",
+        "max_stars": "Ez a bútor már 5 csillagos.",
+        "refurbish_daily": "Mára elfogytak a felújítások.",
+        "not_enough_shards": "Nincs elég Lakk-szilánkod.",
+        "placed_piece": "Kint álló bútort nem lehet lebontani. Előbb vedd le a szobából.",
+        "paid_piece": "Viharérméért vett bútort nem lehet lebontani.",
+        "request_not_done": "A Házmester kérése még nincs teljesítve.",
+        "request_claimed": "Ezt a kérést már teljesítetted.",
+        "no_request": "Ma nincs kérés.",
+        "reroll_used": "Ezen a héten már cseréltél kínálatot.",
+        "reroll_empty": "Már minden bútor a tiéd, ezért nincs új kínálat, amit sorsolni lehetne.",
+        "premium_tier": "Ehhez magasabb fokú ház kell.",
+        "set_partly_owned": "Egy darab már megvan, ezért a szett egyben nem vehető. A többit darabonként veheted meg.",
+        "builder_full": "Ennél több napra előre nem veheted meg az Építőmestert.",
+        "pack_week": "Ezen a héten ezt a csomagot már nem veheted meg.",
+        "like_level": "A 15. szinttől kedvelhetsz.",
+        "like_self": "A saját otthonodat nem kedvelheted.",
+        "like_linked": "A saját fiókod hőseinek otthonát nem kedvelheted.",
+        "like_daily": "Mára elfogytak a kedveléseid.",
+        "like_twice": "Ezt az otthont a héten már kedvelted.",
+        "like_target": "Ezt az otthont most nem lehet kedvelni."
+      }
+    },
+    "rooms": {
+      "tab": "Szobák",
+      "readyDot": "Van mit begyűjteni",
+      "title": "Szobák",
+      "lead": "Minden szoba magától dolgozik. A termés naponta gyűlik, legfeljebb {{days}} napnyi vár rád.",
+      "collectAll": "Mindet begyűjtöm",
+      "collected": "Begyűjtve: {{items}}",
+      "levelOf": "{{level}}. szint / {{max}}",
+      "viewRoom": "{{name}} megtekintése",
+      "lockedTier": "A ház {{tier}}. fokán nyílik.",
+      "nothingReady": "Ma már mindent begyűjtöttél.",
+      "collect": "Begyűjtés",
+      "building": "Épül: {{level}}. szint, még {{time}}.",
+      "finish": "Kész most: {{coins}}",
+      "finishLabel": "{{name}}, {{level}}. szint: befejezés most",
+      "finishTip": "A mesterek rákapcsolnak, a szint azonnal elkészül. Az ár a hátralévő időből számol.",
+      "finished": "{{name}}: kész a fejlesztés ({{level}}. szint).",
+      "upgrade": "Fejlesztés: {{level}}. szint ({{hours}} óra)",
+      "upgradeStarted": "{{name}}: elkezdődött a fejlesztés ({{level}}. szint).",
+      "notBuilt": "Még nem építetted meg. Az első szint után kezd dolgozni.",
+      "days_one": "{{count}} napnyi",
+      "days_other": "{{count}} napnyi",
+      "boostUsed": "A mai gyorsítást már felhasználtad.",
+      "why": {
+        "levelCap": "A következő szinthez {{level}}. szintű hős kell.",
+        "otherBuilding": "Egyszerre egy szoba épülhet.",
+        "max": "Elérte a legmagasabb szintet."
+      },
+      "rooms": {
+        "rest": {
+          "name": "Pihenő",
+          "desc": "Puha párnák, csendes sarok. Kipihenten többet tanulsz a vadászatból."
+        },
+        "workshop": {
+          "name": "Műhely",
+          "desc": "Naponta alapanyagot farag a mostani térképed anyagaiból. Te választod, melyiket."
+        },
+        "hall": {
+          "name": "Trófeaterem",
+          "desc": "A legyőzött bossok emléke erőt ad: nagyobbat ütsz azokra, akiket már mind legyőztél."
+        },
+        "garden": {
+          "name": "Kert",
+          "desc": "Halastó és fűszeres ágyások. Halat és fűszert terem a receptjeidhez."
+        }
+      },
+      "rest": {
+        "effect": "+{{pct}}% XP a nap első AFK-begyűjtésére, ha előtte legalább {{hours}} óra eltelt.",
+        "used": "Ma már pihentél, holnap újra jár.",
+        "now": "Most +{{pct}}% jár (az Otthon XP-plafonján belül).",
+        "capped": "A kényelmed már kitölti az Otthon XP-plafonját, így most nem ad többet."
+      },
+      "workshop": {
+        "effect_one": "Napi {{count}} alapanyag a választott fajtából.",
+        "effect_other": "Napi {{count}} alapanyag a választott fajtából.",
+        "stoneReady": "Ezen a héten jár egy Viharkő-por.",
+        "stoneTaken": "Az e heti Viharkő-port már begyűjtötted.",
+        "stoneFrom": "Az {{level}}. szinttől hetente egy Viharkő-port is ad.",
+        "pick": "Mit faragjon?",
+        "picked": "A Műhely mostantól ezt faragja: {{name}}.",
+        "pickFirst": "Előbb válaszd ki, mit faragjon.",
+        "boost": "+1 alapanyag: {{coins}}",
+        "boostLabel": "Még egy alapanyag ma a választott fajtából, {{coins}} Viharérméért",
+        "boostTip": "Naponta egyszer még egy darab a kiválasztott alapanyagból, azonnal.",
+        "boostFrom": "A {{level}}. szinttől naponta egy plusz alapanyag is kérhető Viharérméért."
+      },
+      "hall": {
+        "effect": "+{{pct}}% sebzés annak a boss-családnak a bossai ellen, amelynek minden bossát legyőzted.",
+        "families": "Boss-családok",
+        "complete": "teljes",
+        "incomplete": "még hiányzik",
+        "wall": "A fal: {{used}} / {{slots}} trófea",
+        "emptySlot": "Üres hely: tegyél ide trófeát",
+        "choose": "Válassz trófeát",
+        "takeDown": "Leveszem a falról",
+        "saved": "A trófeák a helyükön.",
+        "noTrophies": "Még nincs kitömött trófeád. A Trófeák fülön készíttethetsz."
+      },
+      "garden": {
+        "effect": "Naponta {{fish}} hal és {{spice}} fűszer. A fűszer a receptben egy alapanyagot pótol.",
+        "brew": "Az elemózsia {{pct}}%-kal tovább tart.",
+        "halfFish": "A receptek fele annyi halat kérnek.",
+        "ripen": "Érlelés most: {{coins}}",
+        "ripenLabel": "Fél napi termés azonnal, {{coins}} Viharérméért",
+        "ripenTip": "Naponta egyszer azonnal leszedheted a fél napi termést: {{fish}} hal és {{spice}} fűszer.",
+        "ripenFrom": "Az {{level}}. szinttől naponta egyszer azonnal érlelhetsz Viharérméért."
+      },
+      "themes": {
+        "title": "Otthontémák",
+        "lead": "Új díszbe öltözteti az otthonodat. Csak a látvány változik, a látogatóid is így látják.",
+        "locked": "A témák a ház {{tier}}. fokától vehetők.",
+        "names": {
+          "blossom": "Tavaszi virágzás",
+          "moonnight": "Holdfényes éj",
+          "winter": "Havas tél",
+          "dragongold": "Aranysárkány-palota"
+        },
+        "on": "Új díszben az otthonod: {{name}}.",
+        "off": "Az otthonod visszakapta a régi arcát.",
+        "use": "Felteszem",
+        "takeOff": "Leveszem",
+        "buy": "Megveszem: {{coins}}",
+        "buyLabel": "{{name}} téma, {{coins}} Viharérméért",
+        "buyTip": "Örökre a tiéd, bármikor fel- és levehető."
+      },
+      "errors": {
+        "room_locked": "Ez a szoba még zárva van.",
+        "room_building": "Egyszerre csak egy szoba épülhet.",
+        "room_not_building": "Ez a szint már elkészült.",
+        "room_level_cap": "A következő szinthez magasabb szintű hős kell.",
+        "max_level": "Ez a szoba elérte a legmagasabb szintet.",
+        "nothing_to_collect": "Ma már nincs mit begyűjteni.",
+        "pick_required": "Előbb válaszd ki, mit faragjon a Műhely.",
+        "unknown_material": "Ez az alapanyag nem a mostani térképedről való.",
+        "room_daily": "Ezt ma már megtetted.",
+        "room_level": "Ehhez magasabb szintű szoba kell.",
+        "wall_full": "Nincs több hely a falon.",
+        "wall_duplicate": "Egy trófea csak egyszer lóghat a falon.",
+        "unknown_trophy": "Ez a trófea nem a tiéd.",
+        "theme_tier": "A témák a kúriától vehetők.",
+        "pass_required": "Ehhez Építőmester kell.",
+        "room_no_output": "Ez a szoba nem termel."
+      },
+      "spend": {
+        "finish": "Szobafejlesztés befejezése",
+        "workshopPick": "Műhely: +1 alapanyag",
+        "ripen": "Kert: azonnali érlelés",
+        "theme": "Otthontéma"
+      },
+      "merge": {
+        "translation": {
+          "stackables": {
+            "garden_spice": "Kerti fűszer"
+          },
+          "stackHints": {
+            "garden_spice": "A Kertből. Főzéskor egy alapanyagot pótol a receptben."
+          }
+        }
+      }
+    },
+    "tea": {
+      "open": "Viharszél-tea",
+      "title": "Dongsu teaháza",
+      "lead": "Egy csésze Viharszél-tea +{{amount}} energiát ad.",
+      "cups": "Ma {{used}}/{{total}} csésze",
+      "out": "Mára elfogyott a tea. Napváltáskor ({{at}}) újra főzök.",
+      "tip": "+{{amount}} energia azonnal. A napi csészék száma korlátozott.",
+      "ladder": "A mai csészék ára",
+      "step": "{{n}}. csésze: {{coins}} VÉ",
+      "reset": "A csészék száma napváltáskor ({{at}}) újraindul."
+    },
+    "cityNames": {
+      "gamemaster": "Játékmester",
+      "blacksmith": "Kovács",
+      "shop": "Bolt",
+      "noticeboard": "Hirdetőtábla",
+      "biologist": "Szörnytudós",
+      "stable": "Istálló",
+      "alchemist": "Alkimista",
+      "captain": "Kapitány",
+      "old_lady": "Útmutató",
+      "fisherman": "Halász",
+      "storekeeper": "Raktáros",
+      "weapon_dealer": "Fegyverkovács",
+      "armor_dealer": "Páncélkovács",
+      "house": "Hármas Pecsét"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/assets/index-lDwa4khx.js",
+      "role": "entry",
+      "sha256": "183dbb9e94a1fde86e34b6693f2cd5716b5474d7f6e4d3dbc55ef4dc371bd11e"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/monetsf.hu-nYgok2K3.js",
+      "role": "teaLocale",
+      "sha256": "41af91118dd0e0c462bfada9b01b959f1546485947a6d13691af5a04ebf3f5c2"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/texts.hu-DmnFspSb.js",
+      "role": "texts",
+      "sha256": "fe0290cbed4241a3aeded13a0fb69efa8a614cd59fde780a91fb113b92dfe20f"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+      "role": "game",
+      "sha256": "3a22e9fedd66a52e31eea9adb1abce56172d97e7f66d7ef598129e66047b5b2c"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/index-BEbMsSxF.js",
+      "role": "entry",
+      "sha256": "bc9ffeb181c80fe15658ef74d4c619fe4a6fc3e8fb22cafe9df47e4d5696dbdc"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/arena-oXX4J5m6.js",
+      "role": "arenaNet",
+      "sha256": "d4ecfb073cc9641848f87bc1c9c9c5b6db7cd48299f6608f1d4eda5170be63c3"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/ArenaPage-AvfFBGrE.js",
+      "role": "arenaPage",
+      "sha256": "84afc7d13cb12ef34176f39661e03475e9058c2527981bc9f1aa6635255a4ffd"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/Home2Parts-D7-VxNic.js",
+      "role": "homeParts",
+      "sha256": "e8487ecee47d6ccf8be37a0eb00f62fa4e137dc46866546f7b416a401dff2081"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/HomeModal-hJZoEX3j.js",
+      "role": "home",
+      "sha256": "0edacf197e4eb0fe0ba49b2c8a8483547997cbbb5758aa954e7fe43536a93d1c"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/TeahouseModal-DgJVQUSa.js",
+      "role": "tea",
+      "sha256": "59b9bad02d75f9f6035c2bc68819d12570aa43651ccdbe542f56dab02cc416d6"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/sink-art-BjpsDQe3.js",
+      "role": "sinkArt",
+      "sha256": "58736ccf9774006f928d488b84c0f42f475fc624045113646a1a3a4d5b6ac070"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/hu-kMACWXMy.js",
+      "role": "baseLocale",
+      "sha256": "79cb682d4bc4110199f2a667d057da5b8f8e3a8357f36edf23a2ab91242074a0"
+    }
+  ],
+  "endpoints": [
+    "/api/arena/pure",
+    "/api/arena/pure/season",
+    "/api/arena/bandit",
+    "/api/home/rooms"
+  ],
+  "limitations": [
+    "A magyar klienssúgó nem helyettesít élő szerveres igazolást.",
+    "Az árak, szobaszintek, szezonhatárok és több limit bejelentkezett nézetből érkezik.",
+    "A belépés/kilépés több szabályváltozatát tartalmazza a kliens; az aktív változat külön mintát igényel."
+  ],
+  "warnings": [
+    {
+      "url": "https://stonestorm.gg/",
+      "reason": "HTTP 403; nincs hozzáférés-megkerülés, a korábbi nyilvános hivatkozásjegyzéket használjuk"
+    }
+  ],
+  "apiProvenance": {
+    "source": "https://stonestorm.gg/api/content",
+    "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+    "gameVersion": "5231690b6864",
+    "checkedAt": "2026-11-15T12:08:44.593Z",
+    "status": "derived"
+  }
+}

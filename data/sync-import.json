@@ -355,6 +355,1658 @@
   },
   "sets": {},
   "gameVersion": "5231690b6864",
-  "checkedAt": "2026-11-15T11:13:14.924Z",
-  "sourceHash": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d"
+  "checkedAt": "2026-11-15T11:46:29.594Z",
+  "sourceHash": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+  "dungeons": {
+    "wild": {
+      "record": {
+        "id": "wild",
+        "keyId": "key_wild",
+        "minLevel": 10,
+        "maxLevel": 18,
+        "keyCoins": 20,
+        "keysPerDay": 3,
+        "firstClearCoins": 5,
+        "minFreeSlots": 2,
+        "heroic": {
+          "minLevel": 55,
+          "keyCost": 2,
+          "firstClearCoins": 10,
+          "rooms": [
+            {
+              "room": 1,
+              "creatureId": "d_wild_cub",
+              "role": "regular",
+              "level": 55,
+              "maxHp": 28684,
+              "atkMin": 3456,
+              "atkMax": 4730,
+              "def": 90,
+              "harcero": 12007,
+              "xp": 967,
+              "nyang": 2475,
+              "item": false
+            },
+            {
+              "room": 2,
+              "creatureId": "d_wild_cub",
+              "role": "regular",
+              "level": 55,
+              "maxHp": 30405,
+              "atkMin": 3664,
+              "atkMax": 5014,
+              "def": 90,
+              "harcero": 12728,
+              "xp": 967,
+              "nyang": 2475,
+              "item": false
+            },
+            {
+              "room": 3,
+              "creatureId": "d_wild_boar",
+              "role": "regular",
+              "level": 56,
+              "maxHp": 35098,
+              "atkMin": 4230,
+              "atkMax": 5788,
+              "def": 92,
+              "harcero": 14672,
+              "xp": 1024,
+              "nyang": 2520,
+              "item": false
+            },
+            {
+              "room": 4,
+              "creatureId": "d_wild_boar",
+              "role": "regular",
+              "level": 56,
+              "maxHp": 36979,
+              "atkMin": 4456,
+              "atkMax": 6098,
+              "def": 92,
+              "harcero": 15457,
+              "xp": 1024,
+              "nyang": 2520,
+              "item": false
+            },
+            {
+              "room": 5,
+              "creatureId": "d_wild_alpha",
+              "role": "miniboss",
+              "level": 57,
+              "maxHp": 118741,
+              "atkMin": 9322,
+              "atkMax": 24575,
+              "def": 121,
+              "harcero": 73181,
+              "xp": 27075,
+              "nyang": 10260,
+              "item": true
+            },
+            {
+              "room": 6,
+              "creatureId": "d_wild_poacher",
+              "role": "regular",
+              "level": 57,
+              "maxHp": 44104,
+              "atkMin": 5316,
+              "atkMax": 7275,
+              "def": 93,
+              "harcero": 18431,
+              "xp": 1083,
+              "nyang": 2565,
+              "item": false
+            },
+            {
+              "room": 7,
+              "creatureId": "d_wild_poacher",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 50551,
+              "atkMin": 6094,
+              "atkMax": 8339,
+              "def": 95,
+              "harcero": 21133,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 8,
+              "creatureId": "d_wild_trapper",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 52781,
+              "atkMin": 6363,
+              "atkMax": 8707,
+              "def": 95,
+              "harcero": 22065,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 9,
+              "creatureId": "d_wild_trapper",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 56988,
+              "atkMin": 6872,
+              "atkMax": 9402,
+              "def": 96,
+              "harcero": 23817,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 10,
+              "creatureId": "d_wild_bearlord",
+              "role": "boss",
+              "level": 59,
+              "maxHp": 154020,
+              "atkMin": 12097,
+              "atkMax": 31887,
+              "def": 125,
+              "harcero": 88626,
+              "xp": 30175,
+              "nyang": 26550,
+              "item": true
+            }
+          ]
+        },
+        "trophies": {
+          "minLevel": 30,
+          "clear": 1,
+          "heroic": 2
+        },
+        "potionCap": 3,
+        "runPay": [
+          {
+            "xp": 6433,
+            "nyang": 22554
+          },
+          {
+            "xp": 7031,
+            "nyang": 24809
+          },
+          {
+            "xp": 9125,
+            "nyang": 27065
+          },
+          {
+            "xp": 12963,
+            "nyang": 29320
+          },
+          {
+            "xp": 16988,
+            "nyang": 31576
+          },
+          {
+            "xp": 22044,
+            "nyang": 33831
+          },
+          {
+            "xp": 28138,
+            "nyang": 36086
+          },
+          {
+            "xp": 32806,
+            "nyang": 38342
+          },
+          {
+            "xp": 36359,
+            "nyang": 40597
+          }
+        ],
+        "deeper": {
+          "hp": 2,
+          "atk": 2,
+          "rewardMult": 1.5
+        },
+        "recommendedLevel": 13,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_wild_cub",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 10,
+            "maxHp": 345,
+            "atkMin": 41,
+            "atkMax": 58,
+            "def": 18,
+            "harcero": 151,
+            "xp": 72,
+            "nyang": 300,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 2,
+            "creatureId": "d_wild_cub",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 10,
+            "maxHp": 366,
+            "atkMin": 44,
+            "atkMax": 61,
+            "def": 18,
+            "harcero": 161,
+            "xp": 72,
+            "nyang": 300,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 3,
+            "creatureId": "d_wild_boar",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 11,
+            "maxHp": 442,
+            "atkMin": 53,
+            "atkMax": 74,
+            "def": 20,
+            "harcero": 194,
+            "xp": 78,
+            "nyang": 330,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 4,
+            "creatureId": "d_wild_boar",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 11,
+            "maxHp": 465,
+            "atkMin": 56,
+            "atkMax": 78,
+            "def": 20,
+            "harcero": 204,
+            "xp": 78,
+            "nyang": 330,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 5,
+            "creatureId": "d_wild_alpha",
+            "role": "miniboss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 11,
+            "maxHp": 1379,
+            "atkMin": 110,
+            "atkMax": 289,
+            "def": 25,
+            "harcero": 744,
+            "xp": 1950,
+            "nyang": 1320,
+            "item": true,
+            "share": 0.1
+          },
+          {
+            "room": 6,
+            "creatureId": "d_wild_poacher",
+            "role": "regular",
+            "tags": [
+              "bandit"
+            ],
+            "level": 12,
+            "maxHp": 594,
+            "atkMin": 72,
+            "atkMax": 100,
+            "def": 21,
+            "harcero": 260,
+            "xp": 84,
+            "nyang": 360,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 7,
+            "creatureId": "d_wild_poacher",
+            "role": "regular",
+            "tags": [
+              "bandit"
+            ],
+            "level": 12,
+            "maxHp": 622,
+            "atkMin": 75,
+            "atkMax": 104,
+            "def": 21,
+            "harcero": 271,
+            "xp": 84,
+            "nyang": 360,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 8,
+            "creatureId": "d_wild_trapper",
+            "role": "regular",
+            "tags": [
+              "bandit"
+            ],
+            "level": 13,
+            "maxHp": 739,
+            "atkMin": 90,
+            "atkMax": 124,
+            "def": 23,
+            "harcero": 323,
+            "xp": 90,
+            "nyang": 390,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 9,
+            "creatureId": "d_wild_trapper",
+            "role": "regular",
+            "tags": [
+              "bandit"
+            ],
+            "level": 13,
+            "maxHp": 770,
+            "atkMin": 93,
+            "atkMax": 129,
+            "def": 23,
+            "harcero": 336,
+            "xp": 90,
+            "nyang": 390,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 10,
+            "creatureId": "d_wild_bearlord",
+            "role": "boss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 12,
+            "maxHp": 1828,
+            "atkMin": 145,
+            "atkMax": 383,
+            "def": 28,
+            "harcero": 1020,
+            "xp": 2100,
+            "nyang": 3600,
+            "item": true,
+            "share": 0.13
+          }
+        ]
+      },
+      "structureHash": "24100a152bd6d532e7762c81d9005dd38bbfeca7a69f27d6413254fbc7c7ad0b",
+      "provenance": {
+        "source": "https://stonestorm.gg/api/content",
+        "apiPath": "/dungeons/wild",
+        "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+        "gameVersion": "5231690b6864",
+        "checkedAt": "2026-11-15T11:46:29.594Z",
+        "status": "derived",
+        "scope": "Ismert normál/hősi teremstatisztikák nyilvános API-ból; a szerkezet és a kapcsolatok a kézi alappal egyeznek",
+        "baseSource": "06_terkepek_szornyek_bossok_kazamatak.json"
+      }
+    },
+    "monkey": {
+      "record": {
+        "id": "monkey",
+        "keyId": "key_monkey",
+        "minLevel": 19,
+        "maxLevel": 26,
+        "keyCoins": 20,
+        "keysPerDay": 3,
+        "firstClearCoins": 10,
+        "minFreeSlots": 2,
+        "heroic": {
+          "minLevel": 55,
+          "keyCost": 2,
+          "firstClearCoins": 10,
+          "rooms": [
+            {
+              "room": 1,
+              "creatureId": "d_monkey_scout",
+              "role": "regular",
+              "level": 56,
+              "maxHp": 28682,
+              "atkMin": 3428,
+              "atkMax": 4691,
+              "def": 92,
+              "harcero": 11940,
+              "xp": 1024,
+              "nyang": 2520,
+              "item": false
+            },
+            {
+              "room": 2,
+              "creatureId": "d_monkey_scout",
+              "role": "regular",
+              "level": 56,
+              "maxHp": 30403,
+              "atkMin": 3634,
+              "atkMax": 4973,
+              "def": 92,
+              "harcero": 12657,
+              "xp": 1024,
+              "nyang": 2520,
+              "item": false
+            },
+            {
+              "room": 3,
+              "creatureId": "d_monkey_brawler",
+              "role": "regular",
+              "level": 57,
+              "maxHp": 34777,
+              "atkMin": 4158,
+              "atkMax": 5689,
+              "def": 93,
+              "harcero": 14474,
+              "xp": 1083,
+              "nyang": 2565,
+              "item": false
+            },
+            {
+              "room": 4,
+              "creatureId": "d_monkey_brawler",
+              "role": "regular",
+              "level": 57,
+              "maxHp": 36640,
+              "atkMin": 4380,
+              "atkMax": 5994,
+              "def": 93,
+              "harcero": 15249,
+              "xp": 1083,
+              "nyang": 2565,
+              "item": false
+            },
+            {
+              "room": 5,
+              "creatureId": "d_monkey_captain",
+              "role": "miniboss",
+              "level": 58,
+              "maxHp": 119070,
+              "atkMin": 9273,
+              "atkMax": 24446,
+              "def": 123,
+              "harcero": 73089,
+              "xp": 28600,
+              "nyang": 10440,
+              "item": true
+            },
+            {
+              "room": 6,
+              "creatureId": "d_monkey_archer",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 44226,
+              "atkMin": 5288,
+              "atkMax": 7236,
+              "def": 95,
+              "harcero": 18413,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 7,
+              "creatureId": "d_monkey_archer",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 47930,
+              "atkMin": 5732,
+              "atkMax": 7843,
+              "def": 96,
+              "harcero": 19949,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 8,
+              "creatureId": "d_monkey_shaman",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 50045,
+              "atkMin": 5985,
+              "atkMax": 8189,
+              "def": 96,
+              "harcero": 20830,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 9,
+              "creatureId": "d_monkey_shaman",
+              "role": "regular",
+              "level": 60,
+              "maxHp": 55601,
+              "atkMin": 6651,
+              "atkMax": 9099,
+              "def": 98,
+              "harcero": 23151,
+              "xp": 1272,
+              "nyang": 2700,
+              "item": false
+            },
+            {
+              "room": 10,
+              "creatureId": "d_monkey_king",
+              "role": "boss",
+              "level": 60,
+              "maxHp": 150272,
+              "atkMin": 11705,
+              "atkMax": 30863,
+              "def": 127,
+              "harcero": 86271,
+              "xp": 31800,
+              "nyang": 27000,
+              "item": true
+            }
+          ]
+        },
+        "trophies": {
+          "minLevel": 30,
+          "clear": 1,
+          "heroic": 2
+        },
+        "potionCap": 3,
+        "runPay": [
+          {
+            "xp": 39052,
+            "nyang": 42853
+          },
+          {
+            "xp": 41733,
+            "nyang": 45108
+          },
+          {
+            "xp": 44389,
+            "nyang": 47363
+          },
+          {
+            "xp": 47032,
+            "nyang": 49619
+          },
+          {
+            "xp": 49123,
+            "nyang": 51874
+          },
+          {
+            "xp": 51137,
+            "nyang": 54130
+          },
+          {
+            "xp": 53636,
+            "nyang": 56385
+          },
+          {
+            "xp": 56093,
+            "nyang": 58640
+          }
+        ],
+        "deeper": {
+          "hp": 2,
+          "atk": 2,
+          "rewardMult": 1.5
+        },
+        "recommendedLevel": 26,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_monkey_scout",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 19,
+            "maxHp": 926,
+            "atkMin": 114,
+            "atkMax": 157,
+            "def": 32,
+            "harcero": 405,
+            "xp": 126,
+            "nyang": 570,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 2,
+            "creatureId": "d_monkey_scout",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 19,
+            "maxHp": 981,
+            "atkMin": 121,
+            "atkMax": 166,
+            "def": 32,
+            "harcero": 429,
+            "xp": 126,
+            "nyang": 570,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 3,
+            "creatureId": "d_monkey_brawler",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 20,
+            "maxHp": 1160,
+            "atkMin": 143,
+            "atkMax": 197,
+            "def": 34,
+            "harcero": 506,
+            "xp": 132,
+            "nyang": 600,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 4,
+            "creatureId": "d_monkey_brawler",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 21,
+            "maxHp": 1324,
+            "atkMin": 163,
+            "atkMax": 225,
+            "def": 36,
+            "harcero": 580,
+            "xp": 138,
+            "nyang": 630,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 5,
+            "creatureId": "d_monkey_captain",
+            "role": "miniboss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 22,
+            "maxHp": 4340,
+            "atkMin": 351,
+            "atkMax": 923,
+            "def": 48,
+            "harcero": 2462,
+            "xp": 3600,
+            "nyang": 2640,
+            "item": true,
+            "share": 0.1
+          },
+          {
+            "room": 6,
+            "creatureId": "d_monkey_archer",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 23,
+            "maxHp": 1785,
+            "atkMin": 221,
+            "atkMax": 304,
+            "def": 39,
+            "harcero": 781,
+            "xp": 150,
+            "nyang": 690,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 7,
+            "creatureId": "d_monkey_archer",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 24,
+            "maxHp": 2040,
+            "atkMin": 253,
+            "atkMax": 347,
+            "def": 40,
+            "harcero": 887,
+            "xp": 156,
+            "nyang": 720,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 8,
+            "creatureId": "d_monkey_shaman",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 25,
+            "maxHp": 2260,
+            "atkMin": 280,
+            "atkMax": 385,
+            "def": 42,
+            "harcero": 987,
+            "xp": 162,
+            "nyang": 750,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 9,
+            "creatureId": "d_monkey_shaman",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 25,
+            "maxHp": 2355,
+            "atkMin": 292,
+            "atkMax": 401,
+            "def": 42,
+            "harcero": 1028,
+            "xp": 162,
+            "nyang": 750,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 10,
+            "creatureId": "d_monkey_king",
+            "role": "boss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 26,
+            "maxHp": 6968,
+            "atkMin": 563,
+            "atkMax": 1489,
+            "def": 57,
+            "harcero": 3978,
+            "xp": 4200,
+            "nyang": 7800,
+            "item": true,
+            "share": 0.13
+          }
+        ]
+      },
+      "structureHash": "da9a1c5244674fd66ca6e04937b9f648efa6446cbeb7924b0b51731263260965",
+      "provenance": {
+        "source": "https://stonestorm.gg/api/content",
+        "apiPath": "/dungeons/monkey",
+        "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+        "gameVersion": "5231690b6864",
+        "checkedAt": "2026-11-15T11:46:29.594Z",
+        "status": "derived",
+        "scope": "Ismert normál/hősi teremstatisztikák nyilvános API-ból; a szerkezet és a kapcsolatok a kézi alappal egyeznek",
+        "baseSource": "06_terkepek_szornyek_bossok_kazamatak.json"
+      }
+    },
+    "spider": {
+      "record": {
+        "id": "spider",
+        "keyId": "key_spider",
+        "minLevel": 32,
+        "maxLevel": 43,
+        "keyCoins": 20,
+        "keysPerDay": 3,
+        "firstClearCoins": 15,
+        "minFreeSlots": 2,
+        "heroic": {
+          "minLevel": 55,
+          "keyCost": 2,
+          "firstClearCoins": 10,
+          "rooms": [
+            {
+              "room": 1,
+              "creatureId": "d_spider_hatchling",
+              "role": "regular",
+              "level": 57,
+              "maxHp": 30108,
+              "atkMin": 3635,
+              "atkMax": 4974,
+              "def": 93,
+              "harcero": 12592,
+              "xp": 1083,
+              "nyang": 2565,
+              "item": false
+            },
+            {
+              "room": 2,
+              "creatureId": "d_spider_hatchling",
+              "role": "regular",
+              "level": 57,
+              "maxHp": 31915,
+              "atkMin": 3853,
+              "atkMax": 5272,
+              "def": 93,
+              "harcero": 13347,
+              "xp": 1083,
+              "nyang": 2565,
+              "item": false
+            },
+            {
+              "room": 3,
+              "creatureId": "d_spider_weaver",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 36945,
+              "atkMin": 4461,
+              "atkMax": 6104,
+              "def": 95,
+              "harcero": 15457,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 4,
+              "creatureId": "d_spider_weaver",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 38924,
+              "atkMin": 4700,
+              "atkMax": 6431,
+              "def": 95,
+              "harcero": 16285,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 5,
+              "creatureId": "d_spider_matron",
+              "role": "miniboss",
+              "level": 59,
+              "maxHp": 119602,
+              "atkMin": 9408,
+              "atkMax": 24801,
+              "def": 125,
+              "harcero": 73783,
+              "xp": 30175,
+              "nyang": 10620,
+              "item": true
+            },
+            {
+              "room": 6,
+              "creatureId": "d_spider_spitter",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 44424,
+              "atkMin": 5365,
+              "atkMax": 7341,
+              "def": 96,
+              "harcero": 18581,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 7,
+              "creatureId": "d_spider_spitter",
+              "role": "regular",
+              "level": 60,
+              "maxHp": 49541,
+              "atkMin": 5984,
+              "atkMax": 8187,
+              "def": 98,
+              "harcero": 20729,
+              "xp": 1272,
+              "nyang": 2700,
+              "item": false
+            },
+            {
+              "room": 8,
+              "creatureId": "d_spider_guard",
+              "role": "regular",
+              "level": 60,
+              "maxHp": 51727,
+              "atkMin": 6248,
+              "atkMax": 8549,
+              "def": 98,
+              "harcero": 21644,
+              "xp": 1272,
+              "nyang": 2700,
+              "item": false
+            },
+            {
+              "room": 9,
+              "creatureId": "d_spider_guard",
+              "role": "regular",
+              "level": 61,
+              "maxHp": 53770,
+              "atkMin": 6496,
+              "atkMax": 8887,
+              "def": 100,
+              "harcero": 22558,
+              "xp": 1339,
+              "nyang": 2745,
+              "item": false
+            },
+            {
+              "room": 10,
+              "creatureId": "d_spider_queen",
+              "role": "boss",
+              "level": 61,
+              "maxHp": 145324,
+              "atkMin": 11435,
+              "atkMax": 30141,
+              "def": 129,
+              "harcero": 84204,
+              "xp": 33475,
+              "nyang": 27450,
+              "item": true
+            }
+          ]
+        },
+        "trophies": {
+          "minLevel": 30,
+          "clear": 1,
+          "heroic": 2
+        },
+        "potionCap": 3,
+        "runPay": [
+          {
+            "xp": 59333,
+            "nyang": 72173
+          },
+          {
+            "xp": 59620,
+            "nyang": 74428
+          },
+          {
+            "xp": 59768,
+            "nyang": 76684
+          },
+          {
+            "xp": 59776,
+            "nyang": 78939
+          },
+          {
+            "xp": 60314,
+            "nyang": 81194
+          },
+          {
+            "xp": 61310,
+            "nyang": 83450
+          },
+          {
+            "xp": 62224,
+            "nyang": 85705
+          },
+          {
+            "xp": 67250,
+            "nyang": 87961
+          },
+          {
+            "xp": 72540,
+            "nyang": 90216
+          },
+          {
+            "xp": 82006,
+            "nyang": 92471
+          },
+          {
+            "xp": 92333,
+            "nyang": 94727
+          },
+          {
+            "xp": 103572,
+            "nyang": 96982
+          }
+        ],
+        "deeper": {
+          "hp": 2,
+          "atk": 2,
+          "rewardMult": 1.5
+        },
+        "recommendedLevel": 43,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_spider_hatchling",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 32,
+            "maxHp": 2825,
+            "atkMin": 352,
+            "atkMax": 483,
+            "def": 53,
+            "harcero": 1233,
+            "xp": 208,
+            "nyang": 960,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 2,
+            "creatureId": "d_spider_hatchling",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 33,
+            "maxHp": 3156,
+            "atkMin": 393,
+            "atkMax": 539,
+            "def": 55,
+            "harcero": 1373,
+            "xp": 219,
+            "nyang": 990,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 3,
+            "creatureId": "d_spider_weaver",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 34,
+            "maxHp": 3573,
+            "atkMin": 445,
+            "atkMax": 611,
+            "def": 56,
+            "harcero": 1548,
+            "xp": 232,
+            "nyang": 1020,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 4,
+            "creatureId": "d_spider_weaver",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 35,
+            "maxHp": 3979,
+            "atkMin": 496,
+            "atkMax": 681,
+            "def": 58,
+            "harcero": 1726,
+            "xp": 247,
+            "nyang": 1050,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 5,
+            "creatureId": "d_spider_matron",
+            "role": "miniboss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 36,
+            "maxHp": 12488,
+            "atkMin": 1015,
+            "atkMax": 2681,
+            "def": 77,
+            "harcero": 7591,
+            "xp": 6600,
+            "nyang": 4320,
+            "item": true,
+            "share": 0.1
+          },
+          {
+            "room": 6,
+            "creatureId": "d_spider_spitter",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 38,
+            "maxHp": 5543,
+            "atkMin": 692,
+            "atkMax": 949,
+            "def": 63,
+            "harcero": 2396,
+            "xp": 304,
+            "nyang": 1140,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 7,
+            "creatureId": "d_spider_spitter",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 39,
+            "maxHp": 6240,
+            "atkMin": 780,
+            "atkMax": 1069,
+            "def": 64,
+            "harcero": 2697,
+            "xp": 327,
+            "nyang": 1170,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 8,
+            "creatureId": "d_spider_guard",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 40,
+            "maxHp": 7089,
+            "atkMin": 886,
+            "atkMax": 1214,
+            "def": 66,
+            "harcero": 3065,
+            "xp": 352,
+            "nyang": 1200,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 9,
+            "creatureId": "d_spider_guard",
+            "role": "regular",
+            "tags": [
+              "animal"
+            ],
+            "level": 42,
+            "maxHp": 8611,
+            "atkMin": 1077,
+            "atkMax": 1476,
+            "def": 69,
+            "harcero": 3712,
+            "xp": 408,
+            "nyang": 1260,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 10,
+            "creatureId": "d_spider_queen",
+            "role": "boss",
+            "tags": [
+              "animal",
+              "boss"
+            ],
+            "level": 43,
+            "maxHp": 23992,
+            "atkMin": 1957,
+            "atkMax": 5159,
+            "def": 92,
+            "harcero": 13972,
+            "xp": 10975,
+            "nyang": 12900,
+            "item": true,
+            "share": 0.13
+          }
+        ]
+      },
+      "structureHash": "e8b18c495af482038cf704d9ece632afdb782b0f2aeefc82256789f7bfb0c37e",
+      "provenance": {
+        "source": "https://stonestorm.gg/api/content",
+        "apiPath": "/dungeons/spider",
+        "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+        "gameVersion": "5231690b6864",
+        "checkedAt": "2026-11-15T11:46:29.594Z",
+        "status": "derived",
+        "scope": "Ismert normál/hősi teremstatisztikák nyilvános API-ból; a szerkezet és a kapcsolatok a kézi alappal egyeznek",
+        "baseSource": "06_terkepek_szornyek_bossok_kazamatak.json"
+      }
+    },
+    "dragon": {
+      "record": {
+        "id": "dragon",
+        "keyId": "key_dragon",
+        "minLevel": 48,
+        "maxLevel": 60,
+        "keyCoins": 20,
+        "keysPerDay": 3,
+        "firstClearCoins": 20,
+        "minFreeSlots": 2,
+        "heroic": {
+          "minLevel": 55,
+          "keyCost": 2,
+          "firstClearCoins": 10,
+          "rooms": [
+            {
+              "room": 1,
+              "creatureId": "d_dragon_whelp",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 32149,
+              "atkMin": 3860,
+              "atkMax": 5281,
+              "def": 95,
+              "harcero": 13412,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 2,
+              "creatureId": "d_dragon_whelp",
+              "role": "regular",
+              "level": 58,
+              "maxHp": 34078,
+              "atkMin": 4091,
+              "atkMax": 5598,
+              "def": 95,
+              "harcero": 14217,
+              "xp": 1144,
+              "nyang": 2610,
+              "item": false
+            },
+            {
+              "room": 3,
+              "creatureId": "d_dragon_cultist",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 37301,
+              "atkMin": 4479,
+              "atkMax": 6129,
+              "def": 96,
+              "harcero": 15557,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 4,
+              "creatureId": "d_dragon_cultist",
+              "role": "regular",
+              "level": 59,
+              "maxHp": 39299,
+              "atkMin": 4719,
+              "atkMax": 6457,
+              "def": 96,
+              "harcero": 16390,
+              "xp": 1207,
+              "nyang": 2655,
+              "item": false
+            },
+            {
+              "room": 5,
+              "creatureId": "d_dragon_elder",
+              "role": "miniboss",
+              "level": 60,
+              "maxHp": 124257,
+              "atkMin": 9719,
+              "atkMax": 25624,
+              "def": 127,
+              "harcero": 76441,
+              "xp": 31800,
+              "nyang": 10800,
+              "item": true
+            },
+            {
+              "room": 6,
+              "creatureId": "d_dragon_drake",
+              "role": "regular",
+              "level": 60,
+              "maxHp": 46153,
+              "atkMin": 5543,
+              "atkMax": 7584,
+              "def": 98,
+              "harcero": 19256,
+              "xp": 1272,
+              "nyang": 2700,
+              "item": false
+            },
+            {
+              "room": 7,
+              "creatureId": "d_dragon_drake",
+              "role": "regular",
+              "level": 61,
+              "maxHp": 48155,
+              "atkMin": 5785,
+              "atkMax": 7914,
+              "def": 100,
+              "harcero": 20145,
+              "xp": 1339,
+              "nyang": 2745,
+              "item": false
+            },
+            {
+              "room": 8,
+              "creatureId": "d_dragon_guard",
+              "role": "regular",
+              "level": 61,
+              "maxHp": 50280,
+              "atkMin": 6040,
+              "atkMax": 8263,
+              "def": 100,
+              "harcero": 21034,
+              "xp": 1339,
+              "nyang": 2745,
+              "item": false
+            },
+            {
+              "room": 9,
+              "creatureId": "d_dragon_guard",
+              "role": "regular",
+              "level": 62,
+              "maxHp": 52212,
+              "atkMin": 6273,
+              "atkMax": 8581,
+              "def": 101,
+              "harcero": 21922,
+              "xp": 1408,
+              "nyang": 2790,
+              "item": false
+            },
+            {
+              "room": 10,
+              "creatureId": "d_dragon_young",
+              "role": "boss",
+              "level": 62,
+              "maxHp": 141116,
+              "atkMin": 11040,
+              "atkMax": 29104,
+              "def": 132,
+              "harcero": 81934,
+              "xp": 35200,
+              "nyang": 27900,
+              "item": true
+            }
+          ]
+        },
+        "trophies": {
+          "minLevel": 30,
+          "clear": 1,
+          "heroic": 2
+        },
+        "potionCap": 3,
+        "runPay": [
+          {
+            "xp": 175250,
+            "nyang": 108259
+          },
+          {
+            "xp": 193068,
+            "nyang": 110515
+          },
+          {
+            "xp": 212180,
+            "nyang": 112770
+          },
+          {
+            "xp": 225142,
+            "nyang": 115025
+          },
+          {
+            "xp": 238622,
+            "nyang": 117281
+          },
+          {
+            "xp": 252630,
+            "nyang": 119536
+          },
+          {
+            "xp": 267176,
+            "nyang": 121792
+          },
+          {
+            "xp": 282271,
+            "nyang": 124047
+          },
+          {
+            "xp": 291197,
+            "nyang": 126302
+          },
+          {
+            "xp": 297122,
+            "nyang": 128558
+          },
+          {
+            "xp": 302764,
+            "nyang": 130813
+          },
+          {
+            "xp": 308335,
+            "nyang": 133069
+          },
+          {
+            "xp": 313860,
+            "nyang": 135324
+          }
+        ],
+        "deeper": {
+          "hp": 2,
+          "atk": 2,
+          "rewardMult": 1.5
+        },
+        "recommendedLevel": 60,
+        "rooms": [
+          {
+            "room": 1,
+            "creatureId": "d_dragon_whelp",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "animal"
+            ],
+            "level": 48,
+            "maxHp": 8376,
+            "atkMin": 1050,
+            "atkMax": 1437,
+            "def": 79,
+            "harcero": 3603,
+            "xp": 624,
+            "nyang": 1440,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 2,
+            "creatureId": "d_dragon_whelp",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "animal"
+            ],
+            "level": 49,
+            "maxHp": 9640,
+            "atkMin": 1208,
+            "atkMax": 1654,
+            "def": 80,
+            "harcero": 4128,
+            "xp": 667,
+            "nyang": 1470,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 3,
+            "creatureId": "d_dragon_cultist",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "bandit"
+            ],
+            "level": 51,
+            "maxHp": 11815,
+            "atkMin": 1482,
+            "atkMax": 2028,
+            "def": 84,
+            "harcero": 5065,
+            "xp": 759,
+            "nyang": 1530,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 4,
+            "creatureId": "d_dragon_cultist",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "bandit"
+            ],
+            "level": 52,
+            "maxHp": 13025,
+            "atkMin": 1634,
+            "atkMax": 2236,
+            "def": 85,
+            "harcero": 5571,
+            "xp": 808,
+            "nyang": 1560,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 5,
+            "creatureId": "d_dragon_elder",
+            "role": "miniboss",
+            "tags": [
+              "fire",
+              "animal",
+              "boss"
+            ],
+            "level": 53,
+            "maxHp": 40677,
+            "atkMin": 3325,
+            "atkMax": 8764,
+            "def": 113,
+            "harcero": 25579,
+            "xp": 21475,
+            "nyang": 6360,
+            "item": true,
+            "share": 0.1
+          },
+          {
+            "room": 6,
+            "creatureId": "d_dragon_drake",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "animal"
+            ],
+            "level": 55,
+            "maxHp": 17721,
+            "atkMin": 2224,
+            "atkMax": 3044,
+            "def": 90,
+            "harcero": 7571,
+            "xp": 967,
+            "nyang": 1650,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 7,
+            "creatureId": "d_dragon_drake",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "animal"
+            ],
+            "level": 56,
+            "maxHp": 20254,
+            "atkMin": 2543,
+            "atkMax": 3479,
+            "def": 92,
+            "harcero": 8641,
+            "xp": 1024,
+            "nyang": 1680,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 8,
+            "creatureId": "d_dragon_guard",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "orc"
+            ],
+            "level": 58,
+            "maxHp": 25083,
+            "atkMin": 3150,
+            "atkMax": 4310,
+            "def": 95,
+            "harcero": 10702,
+            "xp": 1144,
+            "nyang": 1740,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 9,
+            "creatureId": "d_dragon_guard",
+            "role": "regular",
+            "tags": [
+              "fire",
+              "orc"
+            ],
+            "level": 59,
+            "maxHp": 27083,
+            "atkMin": 3402,
+            "atkMax": 4654,
+            "def": 96,
+            "harcero": 11552,
+            "xp": 1207,
+            "nyang": 1770,
+            "item": false,
+            "share": 0.04
+          },
+          {
+            "room": 10,
+            "creatureId": "d_dragon_young",
+            "role": "boss",
+            "tags": [
+              "fire",
+              "animal",
+              "boss"
+            ],
+            "level": 60,
+            "maxHp": 78028,
+            "atkMin": 6385,
+            "atkMax": 16831,
+            "def": 127,
+            "harcero": 45910,
+            "xp": 31800,
+            "nyang": 18000,
+            "item": true,
+            "share": 0.13
+          }
+        ]
+      },
+      "structureHash": "cae7a5482123ca5f1bd38d830fb6661009b0144e4307d6d2f46ccbff98bbc6d1",
+      "provenance": {
+        "source": "https://stonestorm.gg/api/content",
+        "apiPath": "/dungeons/dragon",
+        "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+        "gameVersion": "5231690b6864",
+        "checkedAt": "2026-11-15T11:46:29.594Z",
+        "status": "derived",
+        "scope": "Ismert normál/hősi teremstatisztikák nyilvános API-ból; a szerkezet és a kapcsolatok a kézi alappal egyeznek",
+        "baseSource": "06_terkepek_szornyek_bossok_kazamatak.json"
+      }
+    }
+  }
 }
