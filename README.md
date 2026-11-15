@@ -157,3 +157,11 @@ A Pages-artifact csak a szükséges futásidejű fájlokat tartalmazza: `index.h
 Részletes eredmények: [PROJECT_STATUS.md](PROJECT_STATUS.md). Források és hiányok: [DATA_SOURCES.md](DATA_SOURCES.md).
 
 Új modulok: [Képintegráció és Képtár](docs/IMAGE_INTEGRATION.md), [Character Planner és képletek](docs/CHARACTER_PLANNER.md).
+
+## Auto-Sync V1
+
+Az **Atlas frissítések** nézet megmutatja az utolsó sikeres nyilvános adatellenőrzést, a megfigyelt játék- és Atlas-verziót, az importált rekordokat és az ellenőrzésre váró újdonságokat. A kézi forráscsomagot megőrző import a `data/sync-import.json` fájlban különül el; a kísérők, statlimitek és a játékban igazolt M4 szett védettek. Az addon számításai változatlanok.
+
+`npm run sync:check`: valódi lekérés és jelentés, Atlas-import nélkül. `npm run sync:apply`: ismert adatok importja automatikus tesztekkel és hibánál visszaállítással. `npm run test:sync`: az Auto-Sync regressziós tesztjei. A teljes `npm test` ezeket és a szettbónusz-teszteket is futtatja.
+
+A GitHub Actions 6 órás ellenőrzését, az éles import `ATLAS_SYNC_AUTO_PUBLISH` kapcsolóját, az adatforrásokat, korlátokat és a visszaállítást a [részletes használati útmutató](docs/AUTO_SYNC.md) írja le. A történeti alap 2026-11-06-i; az új API-adatok csak az ellenőrzött importkörökben frissülnek, nem minden rendszerben egyszerre.

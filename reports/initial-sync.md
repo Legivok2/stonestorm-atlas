@@ -1,0 +1,638 @@
+# Atlas Auto-Sync V1
+
+Állapot: checked
+
+Ellenőrzés: 2026-11-15T11:02:58.756Z
+
+Játékverzió: 5231690b6864
+
+Összevetés: Részleges helyi forrásadatok; első megfigyelés
+
+Új / módosult / hiányzó mezők: 30 / 201 / 70
+
+Importálható rekordok: 14; ellenőrzésre váró tételek: 284.
+
+
+
+## Elért források
+
+- https://stonestorm.gg/api/content (200, SHA-256: 227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d)
+- https://stonestorm.gg/ (200, SHA-256: 534e314f32936ffa40c9c494e1e637b6cd26005f8a694990e60b1c5882c17d23)
+- https://stonestorm.gg/assets/index-lDwa4khx.js (200, SHA-256: 183dbb9e94a1fde86e34b6693f2cd5716b5474d7f6e4d3dbc55ef4dc371bd11e)
+- https://stonestorm.gg/assets/account.hu-BSHLmc8h.js (200, SHA-256: 69cb4bcbb57d34fbf1851a6f35d2fcdc2bdb96dc848fbd726e7deb5eb89d9808)
+- https://stonestorm.gg/assets/art-manifest-CRoeA9m9.js (200, SHA-256: c42a1246924b12f8bd3e447759ce4f1ec27fbfd32951b21d5f3bbb0749be9894)
+- https://stonestorm.gg/assets/boss.hu-B4r5uuHo.js (200, SHA-256: ee13b5885f1333125c31024c88169515135c1219b6fbe1a5f71417915f9d0b8c)
+- https://stonestorm.gg/assets/community.hu-_W3m9mDR.js (200, SHA-256: c979e6021be6572768075c92ab2f6d6518a1747e3a7eea278234e6f57a54080c)
+- https://stonestorm.gg/assets/creator.hu-BGaPiBMP.js (200, SHA-256: e8b18358c6cf8367084ac6af94047d976e63519d00d278fec50b48bc8a712eef)
+- https://stonestorm.gg/assets/forge.hu-DQ8JGPLH.js (200, SHA-256: 127768e8827f21933a36ed61aa9ed621b239cc954ff4eb1cc8b3932f9516bdd5)
+- https://stonestorm.gg/assets/hu-kMACWXMy.js (200, SHA-256: 79cb682d4bc4110199f2a667d057da5b8f8e3a8357f36edf23a2ab91242074a0)
+- https://stonestorm.gg/assets/landing.hu-Btlk4qUr.js (200, SHA-256: a1fc127f1958961347d43b31cbb2291f32561dc882911b673d2928345d5106b0)
+- https://stonestorm.gg/assets/leads2.hu-CTaHZNMc.js (200, SHA-256: eb0073f20dd0b3d7c81ae79ab301e31c891f51a8230188fa44c9896cc4fd87eb)
+- https://stonestorm.gg/assets/league.hu-CUE-SUEv.js (200, SHA-256: f70db2626bc3f4dd4682fd1994074dbe477ea98ab0f849c24f03ef3df70bb49a)
+- https://stonestorm.gg/assets/monetsf.hu-nYgok2K3.js (200, SHA-256: 41af91118dd0e0c462bfada9b01b959f1546485947a6d13691af5a04ebf3f5c2)
+- https://stonestorm.gg/assets/p7dark.hu-DkjZl52p.js (200, SHA-256: b94ead5b40b65cc92cdbe05a0915d0d9f622ea09e14160d9f00a204ced636640)
+- https://stonestorm.gg/assets/play_aranyeso.hu-DtaG5VQd.js (200, SHA-256: eecf4683cac91485d8862c469baf729b1e5dac2e77e019c8dbb5eab65dffe1c7)
+- https://stonestorm.gg/assets/play_cracks.hu-BT7Q-WrH.js (200, SHA-256: af7eba95eb695c23fc612717153a20fdbff7325c8652760382dece6b5e341e64)
+- https://stonestorm.gg/assets/play_fishing.hu-BD1mPWZh.js (200, SHA-256: f412ff9ae740a59665ed4636c8e3433e7cab318c312ede4707eff4a5f6d5b6d7)
+- https://stonestorm.gg/assets/play_lock.hu-CRlFR90O.js (200, SHA-256: 432bdff8f53f20137bb9058e1a8758a586d4631d48a19cbaea278c7d8566c3fd)
+- https://stonestorm.gg/assets/play_tanaka.hu-DKyeF9qW.js (200, SHA-256: ccef914fe401b3e166af39779b417e71f04f140b248a6b2b5d05d2d0ed90d85f)
+- https://stonestorm.gg/assets/play_tracks.hu-DfqO2p-5.js (200, SHA-256: f432273209b3025771891e57b0eace755a7a005b599a8cf4fd1c58bef10aa3b0)
+- https://stonestorm.gg/assets/play_viharzapor.hu-DSEJxk94.js (200, SHA-256: abadb88b3f48e0a3b629aa7bc6be39a5388e5b1f74690d56b1fdb4cde196b6f3)
+- https://stonestorm.gg/assets/play.hu-CFlHMPE8.js (200, SHA-256: 7a3b664fd38a4276d38303dc015b58461c07447c2a4019ee866ac72bafa76339)
+- https://stonestorm.gg/assets/portalview.hu-Dio3plf5.js (200, SHA-256: ea1be640f74675ebf6c7c514940d0dd68b40cb637642c85f3a589fcf6ea2fca5)
+- https://stonestorm.gg/assets/support.hu-np5dfo24.js (200, SHA-256: d3b3742608311e3f88cd739cce9d458413bbf37b80f243c99b7cc3744c217dd9)
+- https://stonestorm.gg/assets/texts.hu-DmnFspSb.js (200, SHA-256: fe0290cbed4241a3aeded13a0fb69efa8a614cd59fde780a91fb113b92dfe20f)
+- https://stonestorm.gg/assets/tutorial59.hu-wToidrcK.js (200, SHA-256: f9b5deab8cd84315bb629b1d4d835feb2bbdf96f0978165af9d22e6fc5399cac)
+
+## Ellenőrzésre vár
+
+- `/achievementSets/bandit`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/beasts/achievements/4`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/6`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/7`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/8`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/faithful`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/fishing/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/forge/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/hunt/achievements/13`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/hunt/achievements/14`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/stones/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/families`: Első megfigyelés; nincs teljes korábbi snapshot
+- `/features/accrualCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/achievementsPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/banditArena`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/banditTrophy`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/blackFriday`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/comebackTierBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/comebackTiers`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/creatorProgram`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/curveRamp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/firstSession`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/fishingReel`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/founderPacks`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/freePathRepick`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/friendGift`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/guildRaidNights`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homeRooms`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homeThemes`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homecoming`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/imperialCard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomPioneer`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomSoftCap`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomSwitch`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/launchStormChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/leads`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/legendChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/levelPrices`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/lootLadder`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/nyangPouch`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/offerTargeting`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/packPopup`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/paidCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/perCapitaWar`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/petNames`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/playExtraRuns`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/playRunGuard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/portals`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/progressionLabels`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/promoMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/pushRecall`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/serverUnlockGates`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/spendGuard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/starterUntilLevel`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stoneLadder`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormAscension`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormPassPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormhunterChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/storyChapters`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/towerResetPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/treasureBundle`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/underdogBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/waitingRoom`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/webPush`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/webShopBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/whalePack`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/harcero/bossEvadeCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/achievements`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/alchemist`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/bossAttempts`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/endgame`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/fishing`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/itemRules`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/patron`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/sidequests`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/skills`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/soulShop`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/worldBoss`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_1/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_2/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_3/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_4/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/charger/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/kilencfarku_roka/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/lidercparipa/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/miststeed/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/mule/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/pony/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/stormtiger/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/warhorse/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/onboarding/unlocks/arena.bandit`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/onboarding/unlocks/nav.arena/level`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/spine/gate`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/luck_ore/8`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/safe_stone/5`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/scroll_bless/12`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/shard/6`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `https://stonestorm.gg/`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/index-lDwa4khx.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.hu-BSHLmc8h.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/art-manifest-CRoeA9m9.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.hu-B4r5uuHo.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.hu-_W3m9mDR.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.hu-BGaPiBMP.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.hu-DQ8JGPLH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/hu-kMACWXMy.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/landing.hu-Btlk4qUr.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/leads2.hu-CTaHZNMc.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/league.hu-CUE-SUEv.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/monetsf.hu-nYgok2K3.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/p7dark.hu-DkjZl52p.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_aranyeso.hu-DtaG5VQd.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_cracks.hu-BT7Q-WrH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_fishing.hu-BD1mPWZh.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_lock.hu-CRlFR90O.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_tanaka.hu-DKyeF9qW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_tracks.hu-DfqO2p-5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_viharzapor.hu-DSEJxk94.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play.hu-CFlHMPE8.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/portalview.hu-Dio3plf5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/support.hu-np5dfo24.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/texts.hu-DmnFspSb.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/tutorial59.hu-wToidrcK.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+
+## Változások
+
+- added `/achievementSets/bandit` [Események]
+- removed `/achievementSets/beasts/achievements/4` [Események]
+- removed `/achievementSets/dungeons/achievements/6` [Kazamaták és vadászat]
+- removed `/achievementSets/dungeons/achievements/7` [Kazamaták és vadászat]
+- removed `/achievementSets/dungeons/achievements/8` [Kazamaták és vadászat]
+- removed `/achievementSets/faithful` [Események]
+- removed `/achievementSets/fishing/achievements/2` [Események]
+- removed `/achievementSets/forge/achievements/2` [Kovácsolás és bónuszok]
+- removed `/achievementSets/hunt/achievements/13` [Kazamaták és vadászat]
+- removed `/achievementSets/hunt/achievements/14` [Kazamaták és vadászat]
+- removed `/achievementSets/stones/achievements/2` [Kovácsolás és bónuszok]
+- changed `/dungeons/dragon/heroic/rooms/0/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/0/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/0/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/0/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/1/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/1/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/1/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/1/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/2/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/2/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/2/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/2/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/3/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/3/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/3/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/3/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/4/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/4/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/4/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/4/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/5/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/5/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/5/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/5/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/6/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/6/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/6/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/6/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/7/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/7/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/7/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/7/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/8/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/8/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/8/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/8/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/9/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/9/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/dragon/heroic/rooms/9/harcero` [Statok és fejlődés]
+- changed `/dungeons/dragon/heroic/rooms/9/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/0/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/0/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/0/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/0/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/1/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/1/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/1/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/1/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/2/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/2/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/2/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/2/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/3/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/3/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/3/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/3/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/4/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/4/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/4/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/4/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/5/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/5/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/5/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/5/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/6/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/6/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/6/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/6/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/7/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/7/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/7/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/7/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/8/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/8/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/8/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/8/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/9/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/9/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/monkey/heroic/rooms/9/harcero` [Statok és fejlődés]
+- changed `/dungeons/monkey/heroic/rooms/9/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/0/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/0/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/0/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/0/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/1/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/1/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/1/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/1/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/2/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/2/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/2/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/2/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/3/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/3/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/3/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/3/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/4/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/4/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/4/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/4/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/5/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/5/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/5/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/5/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/6/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/6/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/6/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/6/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/7/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/7/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/7/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/7/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/8/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/8/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/8/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/8/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/9/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/9/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/spider/heroic/rooms/9/harcero` [Statok és fejlődés]
+- changed `/dungeons/spider/heroic/rooms/9/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/0/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/0/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/0/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/0/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/1/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/1/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/1/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/1/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/2/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/2/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/2/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/2/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/3/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/3/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/3/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/3/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/4/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/4/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/4/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/4/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/5/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/5/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/5/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/5/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/6/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/6/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/6/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/6/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/7/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/7/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/7/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/7/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/8/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/8/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/8/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/8/maxHp` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/9/atkMax` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/9/atkMin` [Kazamaták és vadászat]
+- changed `/dungeons/wild/heroic/rooms/9/harcero` [Statok és fejlődés]
+- changed `/dungeons/wild/heroic/rooms/9/maxHp` [Kazamaták és vadászat]
+- added `/families` [Szettek]
+- removed `/features/accrualCaps` [Események]
+- removed `/features/achievementsPlus` [Események]
+- added `/features/banditArena` [Események]
+- added `/features/banditTrophy` [Események]
+- removed `/features/blackFriday` [Események]
+- removed `/features/comebackTierBonus` [Események]
+- removed `/features/comebackTiers` [Események]
+- removed `/features/creatorProgram` [Események]
+- removed `/features/curveRamp` [Események]
+- added `/features/firstSession` [Események]
+- removed `/features/fishingReel` [Események]
+- removed `/features/founderPacks` [Események]
+- removed `/features/freePathRepick` [Események]
+- removed `/features/friendGift` [Események]
+- removed `/features/guildRaidNights` [Céhek]
+- added `/features/homeRooms` [Otthon és épületek]
+- added `/features/homeThemes` [Otthon és épületek]
+- removed `/features/homecoming` [Otthon és épületek]
+- removed `/features/imperialCard` [Események]
+- removed `/features/kingdomPioneer` [Események]
+- removed `/features/kingdomSoftCap` [Események]
+- removed `/features/kingdomSwitch` [Események]
+- removed `/features/launchStormChest` [Események]
+- removed `/features/leads` [Események]
+- removed `/features/legendChest` [Események]
+- removed `/features/levelPrices` [Események]
+- removed `/features/lootLadder` [Események]
+- removed `/features/nyangPouch` [Események]
+- removed `/features/offerTargeting` [Események]
+- removed `/features/packPopup` [Események]
+- removed `/features/paidCaps` [Események]
+- removed `/features/perCapitaWar` [Események]
+- removed `/features/petNames` [Események]
+- removed `/features/playExtraRuns` [Kazamaták és vadászat]
+- removed `/features/playRunGuard` [Kazamaták és vadászat]
+- removed `/features/portals` [Események]
+- removed `/features/progressionLabels` [Események]
+- removed `/features/promoMax` [Események]
+- changed `/features/pushRecall` [Események]
+- removed `/features/serverUnlockGates` [Események]
+- removed `/features/spendGuard` [Események]
+- removed `/features/starterUntilLevel` [Események]
+- removed `/features/stoneLadder` [Események]
+- removed `/features/stormAscension` [Események]
+- removed `/features/stormPassPlus` [Események]
+- removed `/features/stormhunterChest` [Kazamaták és vadászat]
+- removed `/features/storyChapters` [Események]
+- removed `/features/towerResetPlus` [Események]
+- removed `/features/treasureBundle` [Események]
+- removed `/features/underdogBonus` [Események]
+- removed `/features/waitingRoom` [Események]
+- changed `/features/webPush` [Események]
+- removed `/features/webShopBonus` [Események]
+- removed `/features/whalePack` [Események]
+- added `/harcero/bossEvadeCaps` [Statok és fejlődés]
+- added `/lean/achievements` [Események]
+- added `/lean/alchemist` [Egyéb / ismeretlen rendszer]
+- added `/lean/bossAttempts` [Egyéb / ismeretlen rendszer]
+- added `/lean/endgame` [Egyéb / ismeretlen rendszer]
+- added `/lean/fishing` [Egyéb / ismeretlen rendszer]
+- added `/lean/itemRules` [Egyéb / ismeretlen rendszer]
+- added `/lean/patron` [Egyéb / ismeretlen rendszer]
+- added `/lean/sidequests` [Egyéb / ismeretlen rendszer]
+- added `/lean/skills` [Egyéb / ismeretlen rendszer]
+- added `/lean/soulShop` [Egyéb / ismeretlen rendszer]
+- added `/lean/worldBoss` [Világ és bossok]
+- added `/maps/m6/stones/stone_m6_1/strength` [Kovácsolás és bónuszok]
+- added `/maps/m6/stones/stone_m6_2/strength` [Kovácsolás és bónuszok]
+- added `/maps/m6/stones/stone_m6_3/strength` [Kovácsolás és bónuszok]
+- added `/maps/m6/stones/stone_m6_4/strength` [Kovácsolás és bónuszok]
+- added `/maps/m6/strength` [Világ és bossok]
+- changed `/mobs/m6_ash_cultist/atkMax` [Világ és bossok]
+- changed `/mobs/m6_ash_cultist/atkMin` [Világ és bossok]
+- changed `/mobs/m6_ash_cultist/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_ash_cultist/maxHp` [Világ és bossok]
+- changed `/mobs/m6_boss/atkMax` [Világ és bossok]
+- changed `/mobs/m6_boss/atkMin` [Világ és bossok]
+- changed `/mobs/m6_boss/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_boss/maxHp` [Világ és bossok]
+- changed `/mobs/m6_fire_imp/atkMax` [Világ és bossok]
+- changed `/mobs/m6_fire_imp/atkMin` [Világ és bossok]
+- changed `/mobs/m6_fire_imp/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_fire_imp/maxHp` [Világ és bossok]
+- changed `/mobs/m6_fire_tiger/atkMax` [Világ és bossok]
+- changed `/mobs/m6_fire_tiger/atkMin` [Világ és bossok]
+- changed `/mobs/m6_fire_tiger/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_fire_tiger/maxHp` [Világ és bossok]
+- changed `/mobs/m6_flame_hound/atkMax` [Világ és bossok]
+- changed `/mobs/m6_flame_hound/atkMin` [Világ és bossok]
+- changed `/mobs/m6_flame_hound/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_flame_hound/maxHp` [Világ és bossok]
+- changed `/mobs/m6_flame_knight/atkMax` [Világ és bossok]
+- changed `/mobs/m6_flame_knight/atkMin` [Világ és bossok]
+- changed `/mobs/m6_flame_knight/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_flame_knight/maxHp` [Világ és bossok]
+- changed `/mobs/m6_lava_lizard/atkMax` [Világ és bossok]
+- changed `/mobs/m6_lava_lizard/atkMin` [Világ és bossok]
+- changed `/mobs/m6_lava_lizard/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_lava_lizard/maxHp` [Világ és bossok]
+- changed `/mobs/m6_magma_beetle/atkMax` [Világ és bossok]
+- changed `/mobs/m6_magma_beetle/atkMin` [Világ és bossok]
+- changed `/mobs/m6_magma_beetle/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_magma_beetle/maxHp` [Világ és bossok]
+- changed `/mobs/m6_magma_giant/atkMax` [Világ és bossok]
+- changed `/mobs/m6_magma_giant/atkMin` [Világ és bossok]
+- changed `/mobs/m6_magma_giant/harcero` [Statok és fejlődés]
+- changed `/mobs/m6_magma_giant/maxHp` [Világ és bossok]
+- removed `/mounts/charger/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/kilencfarku_roka/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/lidercparipa/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/miststeed/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/mule/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/pony/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/stormtiger/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- removed `/mounts/warhorse/timeReductionPctFromTravelMult` [Kísérők és hátasok]
+- added `/onboarding/unlocks/arena.bandit` [Aréna és szezonok]
+- changed `/onboarding/unlocks/nav.arena/level` [Aréna és szezonok]
+- removed `/spine/gate` [Egyéb / ismeretlen rendszer]
+- added `/stackables/garden_spice` [Tárgyak és boltok]
+- added `/stackables/lacquer_shard` [Tárgyak és boltok]
+- added `/stackables/twitch_boss_ticket` [Tárgyak és boltok]
+- added `/stackables/twitch_hourglass` [Tárgyak és boltok]
+- added `/stackables/twitch_luck_ore` [Tárgyak és boltok]
+- removed `/stones/sources/luck_ore/8` [Kovácsolás és bónuszok]
+- removed `/stones/sources/safe_stone/5` [Kovácsolás és bónuszok]
+- removed `/stones/sources/scroll_bless/12` [Kovácsolás és bónuszok]
+- removed `/stones/sources/shard/6` [Kovácsolás és bónuszok]
+- changed `/tag` [Egyéb / ismeretlen rendszer]
+- changed `/version` [Egyéb / ismeretlen rendszer]
+
+A teljes előtte/utána értékeket a latest-sync.json tartalmazza. A jelentésben szereplő hiány nem törlési utasítás. A klienskódot nem futtatjuk, a magyar modulokat és grafikai hivatkozásokat csak feltérképezzük.

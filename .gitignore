@@ -1,6 +1,9 @@
 .integration/
 node_modules/
 test-results/
+snapshots/history/
+reports/failed-sync.*
+reports/history/
 dist/
 .release/
 .publication/audit.json

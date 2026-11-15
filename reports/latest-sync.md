@@ -1,0 +1,612 @@
+# Atlas Auto-Sync V1
+
+Állapot: applied
+
+Ellenőrzés: 2026-11-15T11:13:14.924Z
+
+Játékverzió: 5231690b6864
+
+Összevetés: Teljes korábbi publikus snapshot
+
+Új / módosult / hiányzó mezők: 0 / 0 / 0
+
+Importálható rekordok: 1; ellenőrzésre váró tételek: 421.
+
+
+
+## Elért források
+
+- https://stonestorm.gg/api/content (304, SHA-256: 227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d)
+- https://stonestorm.gg/ (304, SHA-256: 534e314f32936ffa40c9c494e1e637b6cd26005f8a694990e60b1c5882c17d23)
+- https://stonestorm.gg/assets/index-lDwa4khx.js (cached, SHA-256: 183dbb9e94a1fde86e34b6693f2cd5716b5474d7f6e4d3dbc55ef4dc371bd11e)
+- https://stonestorm.gg/assets/account.hu-BSHLmc8h.js (cached, SHA-256: 69cb4bcbb57d34fbf1851a6f35d2fcdc2bdb96dc848fbd726e7deb5eb89d9808)
+- https://stonestorm.gg/assets/art-manifest-CRoeA9m9.js (cached, SHA-256: c42a1246924b12f8bd3e447759ce4f1ec27fbfd32951b21d5f3bbb0749be9894)
+- https://stonestorm.gg/assets/boss.hu-B4r5uuHo.js (cached, SHA-256: ee13b5885f1333125c31024c88169515135c1219b6fbe1a5f71417915f9d0b8c)
+- https://stonestorm.gg/assets/community.hu-_W3m9mDR.js (cached, SHA-256: c979e6021be6572768075c92ab2f6d6518a1747e3a7eea278234e6f57a54080c)
+- https://stonestorm.gg/assets/creator.hu-BGaPiBMP.js (cached, SHA-256: e8b18358c6cf8367084ac6af94047d976e63519d00d278fec50b48bc8a712eef)
+- https://stonestorm.gg/assets/forge.hu-DQ8JGPLH.js (cached, SHA-256: 127768e8827f21933a36ed61aa9ed621b239cc954ff4eb1cc8b3932f9516bdd5)
+- https://stonestorm.gg/assets/hu-kMACWXMy.js (cached, SHA-256: 79cb682d4bc4110199f2a667d057da5b8f8e3a8357f36edf23a2ab91242074a0)
+- https://stonestorm.gg/assets/landing.hu-Btlk4qUr.js (cached, SHA-256: a1fc127f1958961347d43b31cbb2291f32561dc882911b673d2928345d5106b0)
+- https://stonestorm.gg/assets/leads2.hu-CTaHZNMc.js (cached, SHA-256: eb0073f20dd0b3d7c81ae79ab301e31c891f51a8230188fa44c9896cc4fd87eb)
+- https://stonestorm.gg/assets/league.hu-CUE-SUEv.js (cached, SHA-256: f70db2626bc3f4dd4682fd1994074dbe477ea98ab0f849c24f03ef3df70bb49a)
+- https://stonestorm.gg/assets/monetsf.hu-nYgok2K3.js (cached, SHA-256: 41af91118dd0e0c462bfada9b01b959f1546485947a6d13691af5a04ebf3f5c2)
+- https://stonestorm.gg/assets/p7dark.hu-DkjZl52p.js (cached, SHA-256: b94ead5b40b65cc92cdbe05a0915d0d9f622ea09e14160d9f00a204ced636640)
+- https://stonestorm.gg/assets/play_aranyeso.hu-DtaG5VQd.js (cached, SHA-256: eecf4683cac91485d8862c469baf729b1e5dac2e77e019c8dbb5eab65dffe1c7)
+- https://stonestorm.gg/assets/play_cracks.hu-BT7Q-WrH.js (cached, SHA-256: af7eba95eb695c23fc612717153a20fdbff7325c8652760382dece6b5e341e64)
+- https://stonestorm.gg/assets/play_fishing.hu-BD1mPWZh.js (cached, SHA-256: f412ff9ae740a59665ed4636c8e3433e7cab318c312ede4707eff4a5f6d5b6d7)
+- https://stonestorm.gg/assets/play_lock.hu-CRlFR90O.js (cached, SHA-256: 432bdff8f53f20137bb9058e1a8758a586d4631d48a19cbaea278c7d8566c3fd)
+- https://stonestorm.gg/assets/play_tanaka.hu-DKyeF9qW.js (cached, SHA-256: ccef914fe401b3e166af39779b417e71f04f140b248a6b2b5d05d2d0ed90d85f)
+- https://stonestorm.gg/assets/play_tracks.hu-DfqO2p-5.js (cached, SHA-256: f432273209b3025771891e57b0eace755a7a005b599a8cf4fd1c58bef10aa3b0)
+- https://stonestorm.gg/assets/play_viharzapor.hu-DSEJxk94.js (cached, SHA-256: abadb88b3f48e0a3b629aa7bc6be39a5388e5b1f74690d56b1fdb4cde196b6f3)
+- https://stonestorm.gg/assets/play.hu-CFlHMPE8.js (cached, SHA-256: 7a3b664fd38a4276d38303dc015b58461c07447c2a4019ee866ac72bafa76339)
+- https://stonestorm.gg/assets/portalview.hu-Dio3plf5.js (cached, SHA-256: ea1be640f74675ebf6c7c514940d0dd68b40cb637642c85f3a589fcf6ea2fca5)
+- https://stonestorm.gg/assets/support.hu-np5dfo24.js (cached, SHA-256: d3b3742608311e3f88cd739cce9d458413bbf37b80f243c99b7cc3744c217dd9)
+- https://stonestorm.gg/assets/texts.hu-DmnFspSb.js (cached, SHA-256: fe0290cbed4241a3aeded13a0fb69efa8a614cd59fde780a91fb113b92dfe20f)
+- https://stonestorm.gg/assets/tutorial59.hu-wToidrcK.js (cached, SHA-256: f9b5deab8cd84315bb629b1d4d835feb2bbdf96f0978165af9d22e6fc5399cac)
+- https://stonestorm.gg/site.webmanifest (304, SHA-256: fcf9d1b48a6307333b7d430d6cd2d60f1caf0e9db96ed124330b779427a93922)
+- https://stonestorm.gg/assets/account.ar-DkSKS2qU.js (cached, SHA-256: d3bb579f4ce920965b6c3c92354f6ba0982fd962bad5ab5f91c062e181549c9d)
+- https://stonestorm.gg/assets/account.bg-qMbMUUc_.js (cached, SHA-256: 92b303f97d9f12f31faa8439844a513f58634923ab856247ab8aa904544ce84c)
+- https://stonestorm.gg/assets/account.cs-HB1M1RjI.js (cached, SHA-256: 3a2c4646ae3e0bce0dea7d7758f02f87224f7557f1e5d11e96bd2031eb4c92cd)
+- https://stonestorm.gg/assets/account.da-CaBwhy6v.js (cached, SHA-256: 2a2fb91875db33a27464f4defde322c6d7712f40f41148721da0e520d8f7e9b2)
+- https://stonestorm.gg/assets/account.de-Bko31hBE.js (cached, SHA-256: e2123af63c25e3bff730b455e179d6357c911dc07711ab4495a02b2731523f9b)
+- https://stonestorm.gg/assets/account.el-DIizl0Bo.js (cached, SHA-256: b079ddb6f5acbf847d899f5fa48f6ac965bf99c26c4ee51a3c517252e9c79066)
+- https://stonestorm.gg/assets/account.en-DK7-Yoxp.js (cached, SHA-256: 5e6f0b64bd1169af456768172ce6b70bc6b9ab454fbf865fab6017e9e2ad4128)
+- https://stonestorm.gg/assets/account.es-kBcQ6PmQ.js (cached, SHA-256: 96ae214c973ff63a66bc34cee5d4f4cc3d044b91ebc38a248ca4e1b402820230)
+- https://stonestorm.gg/assets/account.et-CgCTwS1b.js (cached, SHA-256: 01648ccba6118e29febd78b30a99aed2e2bef8736bdd91414523a4f80e3637ed)
+- https://stonestorm.gg/assets/account.fi-B3S2ySqT.js (cached, SHA-256: 8a8ff62ae3fe041a566f34e3e72316d246be3c200b3af6ff4d537f9b219b9c24)
+- https://stonestorm.gg/assets/account.fr-C31S4s0W.js (cached, SHA-256: 024e8def4bc764d97dfc8c491985c20b6dbc4d3e90e86801e0c73bbacc751d37)
+- https://stonestorm.gg/assets/account.hr-kV1Hma9S.js (cached, SHA-256: 820e7de9346f78376b9747e6d7683f0aef66bd7efd94f8c0eb4c43ceb681e191)
+- https://stonestorm.gg/assets/account.it-BbOP4SJW.js (cached, SHA-256: 864514496967c5f0eed3555eb1e73e581df5d3076e4499927d14d65d918f935b)
+- https://stonestorm.gg/assets/account.lt-B3iNP25I.js (cached, SHA-256: ba2c87c5fcc412c780384617e63d8ad37e38a9fff8278deee83ae3be21085ba6)
+- https://stonestorm.gg/assets/account.mk-BrWmc2RY.js (cached, SHA-256: 13cd8b7191cf4f8c532357830b3a304efb36da8b9ccea69b0aabd4c31010abb0)
+- https://stonestorm.gg/assets/account.nb-DrjdFtLL.js (cached, SHA-256: a2fc428c19ed196bf1bcb73d03dec439e7b8dbfa4f6e13f00d979eb2c5dcae60)
+- https://stonestorm.gg/assets/account.nl-DDDCvzwf.js (cached, SHA-256: 20c13d7b87f9e6786e3d4e2e7aa7ab4f9b2304801e985c9977402d2d1c8f3e8a)
+- https://stonestorm.gg/assets/account.pl-_D_ws-GQ.js (cached, SHA-256: eff8f8811fa96ef510f0a4c7cf8b972168383aa063da9a9ffecdc69eb62d08e0)
+- https://stonestorm.gg/assets/account.pt-BR-ax8C7ZGl.js (cached, SHA-256: cb598345b9eef13ad7d4116446ac45496402fc6ba9763faeb7d26bff0fdb216c)
+- https://stonestorm.gg/assets/account.pt-Db7ouvNP.js (cached, SHA-256: b1cf6479d142c5ec600c17f25207b5453e7ff873e79d51902b4cef9d4346e0b2)
+- https://stonestorm.gg/assets/account.ro-ai_85qhD.js (cached, SHA-256: a11ef3375cbc3c2e05c46bc100e9d3dcefa49e37524ee5c6110c25de7edd07e5)
+- https://stonestorm.gg/assets/account.ru-DU0ooTNM.js (cached, SHA-256: 930cadd951f7230742c38a46105137459de46621cec425143f01d5c3446ff50b)
+- https://stonestorm.gg/assets/account.sk-DoXaTCcR.js (cached, SHA-256: 2deb9de1693ad99f864a204abb4d79ca5857526d18831f40b9b4b0d94e4b9b7c)
+- https://stonestorm.gg/assets/account.sl-CrPTT352.js (cached, SHA-256: 7eb21548dcbb08b4d87600ac87080b31613e72ff6f43a7673137d2808acd0be2)
+- https://stonestorm.gg/assets/account.sq-Bq6CBQkv.js (cached, SHA-256: 14200d59ca1761c0c0df88c1c85987fadbe103060a0369f1e0b415b64fd94890)
+- https://stonestorm.gg/assets/account.sr-ChR_bqb7.js (cached, SHA-256: deba86cd1e40e1000e63bf23626a0a3f9c8611d43ddb8571f55a03ad90aae894)
+- https://stonestorm.gg/assets/account.sv-BPmtBncr.js (cached, SHA-256: 8e4445ece77727fd0a671b82b36021d737b9a9b51c45fe5cbd299596f4d85d7e)
+- https://stonestorm.gg/assets/account.tr-D4AGZcj-.js (cached, SHA-256: d36dd042c6336e0751fc5a0f0dd8c00cd2103de4078d079ed3ecf098e2ba389b)
+- https://stonestorm.gg/assets/account.uk-BiZ_xn28.js (cached, SHA-256: 726c841efd7543f94b9810120f32a71a1d92224f5588bf5a66cc96fd3cbe15bb)
+- https://stonestorm.gg/assets/ar-DlwVM3W_.js (cached, SHA-256: d1ad1778a4937f78ec9a88b9d573bb4331d6d188f14583d55cf52bfd14b32a0a)
+- https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css (304, SHA-256: cf9af6289e475080e4c5178ab0d5f3d42d57de568c927d8c180e402be25d3cf4)
+- https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js (cached, SHA-256: 3096bc96d97021145272465ce4e986556d121b4cee91ac3075d33bf5f1e25c2d)
+- https://stonestorm.gg/assets/backdrops-BHyjkBOA.js (cached, SHA-256: d2e200328aea54d9395cd51c4e9ddf8d276fa02873b85b9859dee01baf3f2a01)
+- https://stonestorm.gg/assets/bg-DiTe9gfa.js (cached, SHA-256: 8024536182fbafe34a7aa8b19cd3841dd843640df94809d149baf2cf68c615b0)
+- https://stonestorm.gg/assets/boot-Bs49Szx9.js (cached, SHA-256: 274f017f6c49c6fe23a75d27b6294e6cbe73120ba8b10a715cfb91819b297a1a)
+- https://stonestorm.gg/assets/boss.ar-DnDLZNp9.js (cached, SHA-256: 97e35608c458233faa5e423b1bd8be601a2120db1275e5cba901478a0b2814e6)
+- https://stonestorm.gg/assets/boss.bg-n25mo7x3.js (cached, SHA-256: 4cd7922512d9c88f5b6ea538e3804560b2578a88942d0a85e3fc1f73d3dd5f48)
+- https://stonestorm.gg/assets/boss.cs-BkeJ_0ge.js (cached, SHA-256: 5c2faf0fd627b3c7905bf26956947e3def5ebac61e48e59414f508d7209f9705)
+- https://stonestorm.gg/assets/boss.da-eHdqiDtR.js (cached, SHA-256: 2e3a4332b1fe8eb979c57ad0c6cdeb03e9762fdf12913299b9fa5317d6c237eb)
+- https://stonestorm.gg/assets/boss.de-C1ujt7rf.js (cached, SHA-256: a9dc7133acf2ff5d2841cf88fe2415d0ce3167f0ba653aa66932df356b02977f)
+- https://stonestorm.gg/assets/boss.el-CTcoTHAS.js (cached, SHA-256: 8195799172e4381567bb5cffec195e15fcb6e440a294cc8ae5fa6d24af0c9f2d)
+- https://stonestorm.gg/assets/boss.en-DZfJlfol.js (cached, SHA-256: 7ffc53563143a4c86396dc3e1667fa7157de7a6c9df1643fcd768441e395b863)
+- https://stonestorm.gg/assets/boss.es-BEuZra2G.js (cached, SHA-256: 5ea2451e37e55f8f615760a59e682251a761fd2e7f4d32c038ea3e873d5f915b)
+- https://stonestorm.gg/assets/boss.et-CwpI-mpt.js (cached, SHA-256: 5ea252a3508836c03bf0d7c269b07709e3973a8521a84c50a10ed51f79a1bbcb)
+- https://stonestorm.gg/assets/boss.fi-oJOoDd__.js (cached, SHA-256: a1771a3e73aefba3f3b7f7482cc03397872b21db918fb2511c4895e2775c6215)
+- https://stonestorm.gg/assets/boss.fr-x5EMkD2w.js (cached, SHA-256: b9a75b05f6b03cf1e18ce901518a9f15dff135a1bf5de010c2c28516b4dea350)
+- https://stonestorm.gg/assets/boss.hr-DA8RGemn.js (cached, SHA-256: a50423722393d42b852d9cdca411ef2076cb07fd1f7670ae0013904dff136c71)
+- https://stonestorm.gg/assets/boss.it-D75UYSgk.js (cached, SHA-256: 785608af7e6b7391118eb0bdea54921bdbbea6456517591332d30f3922071d2e)
+- https://stonestorm.gg/assets/boss.lt-BOBmwqiB.js (cached, SHA-256: 6efc6b140ddd75bc679de2ce8650cbdf1f884bdb4a1a383fc0aa7231d6d2d6e4)
+- https://stonestorm.gg/assets/boss.mk-I97KQyok.js (cached, SHA-256: 675ea0e1b498aea327c017a8a71f7c623e0f2a40ca4f42a75ae228d65c796349)
+- https://stonestorm.gg/assets/boss.nb-DF-mtZ5w.js (cached, SHA-256: e5c20a1decdd442a35d55b68fd0df0db828f638c364525809cd21b04ee71ba9e)
+- https://stonestorm.gg/assets/boss.nl-BuaL1rNn.js (cached, SHA-256: 2fc4f0c4e33b0406dad63fe776c35756c1e2190dd38a2bf9b98a0406a8396ada)
+- https://stonestorm.gg/assets/boss.pl-DZ_qZsUo.js (cached, SHA-256: 1b3231d4a691c2dcd8ba2f1b488f3262a94f2213a0b8194a6c4ecd53312df6a4)
+- https://stonestorm.gg/assets/boss.pt-BR-DLVi2SGq.js (cached, SHA-256: f42c956a789b48a85982be933e4fd0f3c5de75f7ce661a8db66c940186e596bc)
+- https://stonestorm.gg/assets/boss.pt-D4ZLqOru.js (cached, SHA-256: 9fe626c08aea6766ec5d581f54a9ae6bd461efccb45057f84c514231fe828367)
+- https://stonestorm.gg/assets/boss.ro-SiFpaPvf.js (cached, SHA-256: 2bab80824042da24fedd3e0cb5189cdaeb2d36ea8bcefab15363b59c2190e0dd)
+- https://stonestorm.gg/assets/boss.ru-Dii3vXxT.js (cached, SHA-256: fdcc310da73952c84456a0b2352d57362d24a0e89407fdfdd02b3ee7f708ba79)
+- https://stonestorm.gg/assets/boss.sk-DE5xBsLl.js (cached, SHA-256: 7e8a2db2615ab20bb7d853ccd1470af8ad78ce448482096907827addc7f0f6ab)
+- https://stonestorm.gg/assets/boss.sl-0mHpxkcY.js (cached, SHA-256: 10543209228ffd7926e1088064824dce1321a42780836d9af50a61fb5b594d31)
+- https://stonestorm.gg/assets/boss.sq-nYZ_NG8x.js (cached, SHA-256: 403153bc3ba9f8d2b8184a5d54537f7216bec16c5e2d513ff2a138cc0c1abf11)
+- https://stonestorm.gg/assets/boss.sr-C6DZvaun.js (cached, SHA-256: 0f8b410bc560cb2e8fcc8ecaf2bbb06c3f9ff3967c6a766922f7bcf4b4121ad8)
+- https://stonestorm.gg/assets/boss.sv-DywqjQf9.js (cached, SHA-256: 9fc23a43c892257d6483b79ea08d889fa9fe4ae94c24a1df734b8d9d077a460b)
+- https://stonestorm.gg/assets/boss.tr-1rzuE5ST.js (cached, SHA-256: e84f0635959e4e72e075e9d88aba4fd437f6998bcad876299d732742001f7c32)
+- https://stonestorm.gg/assets/boss.uk-Rc8GXmXx.js (cached, SHA-256: 7f9ae71baa34bbf591d8195e2fbbc018f8550d9227039e2f64e9cd9fa0065603)
+- https://stonestorm.gg/assets/BrandMark-D8pK4pWi.js (cached, SHA-256: 95e4186e74bcae5ae55c7eb42b460005d789a755de7c59d3728057c94251e039)
+- https://stonestorm.gg/assets/bridge-BY8XsJRT.js (cached, SHA-256: 602a61bf9ea8e05335c881091dbc37202f4165a4de8dbd9b0e52761482d6b46a)
+- https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js (cached, SHA-256: 0d3e494e998989982d57b5ffb5a7a5c97c571c40b0888826e91bfac922d112b8)
+- https://stonestorm.gg/assets/codes-model-cO-frR7-.js (cached, SHA-256: 920ceb8a3add7aaa5fe45507ca2b673baa6514fce206e784d03dc57155c3e5fc)
+- https://stonestorm.gg/assets/collect-CqOY1Fb5.js (cached, SHA-256: 5367d030204962b49e486a005a9d7cafdb475a0273f18c2e65143dce8380c42c)
+- https://stonestorm.gg/assets/ComingSoonPage-Dq2x88s2.js (cached, SHA-256: b30f70f91113e9c05292fece18f860db5a839dab6d3cb936d1a959f3b0bf9732)
+- https://stonestorm.gg/assets/community.ar-CwzVPdko.js (cached, SHA-256: 08ef27b3473c01c3e8a0a43c0fe81ee7502b5153c63e46da8b7df5fc4368cbef)
+- https://stonestorm.gg/assets/community.bg-D5xAjAly.js (cached, SHA-256: 54969cee5df4fed077cb5dbb5d57e47ee6586e5610c9bc24231e6c7defdc2104)
+- https://stonestorm.gg/assets/community.cs-ej-FFKRd.js (cached, SHA-256: 04a79a394c7151e9134353a517c7940c9a015d07249cb8c73a1d5fab09d0c997)
+- https://stonestorm.gg/assets/community.da-DQ0ZmGAg.js (cached, SHA-256: 326a9ed7e0691cb3eceb62bcb33dc1852fffb8807524f86f9ef2d6de0fcde9bd)
+- https://stonestorm.gg/assets/community.de-DA5zo0YU.js (cached, SHA-256: d8ed3da9d07fec3e0c7bdb2295285ed05ae9e5dc7d86e819e0da39b08ff3e6dc)
+- https://stonestorm.gg/assets/community.el-BnXnx3-f.js (cached, SHA-256: 83c4aeb0b8fa42776ee49edbc6543c4bdd3786b7e4a182deb92ebec8a2ec7fe5)
+- https://stonestorm.gg/assets/community.en-B5ws_EQQ.js (cached, SHA-256: ce2c6e4658de43288c53c07f1d4e112ae518417334fb7bec1d6e4abe478728af)
+- https://stonestorm.gg/assets/community.es-Dq43Gm9z.js (cached, SHA-256: 09ac22c095b46183f0bc061eae9fc70e95252ace619abceb9b913961d8419390)
+- https://stonestorm.gg/assets/community.et-CCX8YuFw.js (cached, SHA-256: ce303fc5f3ba5bf9bc52c091426668fa55d55decfa4d9cdfae080794ac472842)
+- https://stonestorm.gg/assets/community.fi-m1O-_SVO.js (cached, SHA-256: 68f20e29168614d769e465358496b0f781ff579877fbcb5216113786cd51caa3)
+- https://stonestorm.gg/assets/community.fr-BIZdzlbW.js (cached, SHA-256: 5855975fd2c10fc66dbbf912a88f54d9ef6885abc4b2e094f7af4c496373c0a7)
+- https://stonestorm.gg/assets/community.hr-CSPe07LJ.js (cached, SHA-256: f41cdf9cb4ac52f9b2ac8904950c5a6d76f5bdb9206f3050cb550a5804c57bd8)
+- https://stonestorm.gg/assets/community.it-BxB6ZDGG.js (cached, SHA-256: 85b1aea2e4c330d1a0ab84177870caea4967965174a74a884e41972e10893bf7)
+- https://stonestorm.gg/assets/community.lt-OgAt4GuR.js (cached, SHA-256: 455131bafc5c344d290b1975984559aa7133970570675b8f2824a69ee537e11f)
+- https://stonestorm.gg/assets/community.mk-Cy1OLDfY.js (cached, SHA-256: 4f193ae85838e20e0c6598efda9c263f17dd50852bea6326a2d512d6a368a796)
+- https://stonestorm.gg/assets/community.nb-2lyFgJFn.js (cached, SHA-256: 03ad65bf488aab109c245e0c1ea027a17b87e745d22fa85b6ecf32e8e7e10e24)
+- https://stonestorm.gg/assets/community.nl-Cu7kzjwW.js (cached, SHA-256: 78d38d8f1592c282a572407eabd8f030627bf9f9716301cde7cb6258b3391dc5)
+- https://stonestorm.gg/assets/community.pl-CCyfdwZf.js (cached, SHA-256: f6c603436cc9877612b75878806cfeff8df6730a6a5a74305750955f2290c63b)
+- https://stonestorm.gg/assets/community.pt-BR-Cc3qxOgB.js (cached, SHA-256: e33f0f0f17d8352074ee6fd0c6ac6ac89629fce01654fcf036913e65a8c720df)
+- https://stonestorm.gg/assets/community.pt-DODbhOOJ.js (cached, SHA-256: e08b230a08cc4b1473962c4fa0083d018d70b213d9267e3cc3bc627e1972264b)
+- https://stonestorm.gg/assets/community.ro-CsEceKM0.js (cached, SHA-256: 66e7d098b4fb57b149afa0d13c92e18e3774c34b2c9255412b64879d0ba6c4f8)
+- https://stonestorm.gg/assets/community.ru-C_Mpaza1.js (200, SHA-256: 4d1fb091924dee6dcd3cfbdbbaa9f094deb9cd448d18d654681eb5f66c477251)
+- https://stonestorm.gg/assets/community.sk-JAtRNV4W.js (200, SHA-256: 9fda3c3723a5aff3a82e7c7c42425186a0e64894d74af59e97b156d57eb0f38f)
+- https://stonestorm.gg/assets/community.sl-thjysCOt.js (200, SHA-256: 066ab25c9294305db28ae3635791460bb6e04528118b4ff8bbba6763fd8c1915)
+- https://stonestorm.gg/assets/community.sq-DlggMDQu.js (200, SHA-256: 1383609f18d6d1d02df3170b0bff8148f4dfc4d5b73d736f54b4d5969ce4f8c6)
+- https://stonestorm.gg/assets/community.sr-xHRiIzEl.js (200, SHA-256: 347fda2a90b0ced55ec9ad9898791c4f7fa2287c2e0335cc665c7741d4e4a2bc)
+- https://stonestorm.gg/assets/community.sv-BYi2ZSsK.js (200, SHA-256: 0f60e3378482eee36ea75a2e050eaee0d024d881ccc59ed0995f19711f902308)
+- https://stonestorm.gg/assets/community.tr-BL4WZWDX.js (200, SHA-256: 6da083c3c49b0c45c0a9427b27f6c722823cec904ce4dd2cca0dc32517dfc827)
+- https://stonestorm.gg/assets/community.uk-BEZK6olT.js (200, SHA-256: 456cc30f9361e4c17e85fb567aa30f85e1c5c39059e169d80077ba4bf2baad45)
+- https://stonestorm.gg/assets/consent-B0q8d778.js (200, SHA-256: 35f347aa7990d3c1a468f3641ef5c17d6dbbfeb8817ee93c8ab8adb5979afdb3)
+- https://stonestorm.gg/assets/consent-BM99f_pM.css (200, SHA-256: 0c083f6b53bbaa38a01a8684a115ed059d9cd5f6d1dd6b95ad2a693beaa2a0c3)
+- https://stonestorm.gg/assets/ConsentDialog-DrigddrP.js (200, SHA-256: 60992c56534dcdee6a2788d521b5099f0be40d13ceed7653b44243a304c37912)
+- https://stonestorm.gg/assets/constants-C1NNq7Ui.js (200, SHA-256: 0a09ee3a9fd447c6606b9d8137bd0769d7a7f38bdaf7253af83a438a291ef2b2)
+- https://stonestorm.gg/assets/copy-text--TWXtSYc.js (200, SHA-256: 066ff7ebeccbf6a44d93274ed96c168fd9bd0986a182c34dfa8fa1b66540fde4)
+- https://stonestorm.gg/assets/CopyButton-COVUhkdh.js (200, SHA-256: 22268a907da971140edbaf3e9a53d209c0ec12c92a5ef7da7e1d6595a4e30efd)
+- https://stonestorm.gg/assets/creator-hub-Cj3isMZq.js (200, SHA-256: dbae219ae6f9abe328f29c86e71eac059c6bcacc82b59563782d44108733ae14)
+- https://stonestorm.gg/assets/creator-program-B1seFdtW.js (200, SHA-256: 8b114833827c5e864127b8c3232e11b5becc5b66643879baa51f49b9bd981b21)
+- https://stonestorm.gg/assets/creator.ar-DhQNvz_w.js (200, SHA-256: d573dfc31fdd1a54d43cf5e5233f8f90d1e1af8072caa6e3ff6aa349e54107a5)
+- https://stonestorm.gg/assets/creator.bg-BVaNyzO0.js (200, SHA-256: 2a6190def6903ebfb18bb71e0190bf30dfe1e692a61d66ebfe5b99fa8b2429d6)
+- https://stonestorm.gg/assets/creator.cs-BopFPm1h.js (200, SHA-256: fd3bb6705e9a69c98863c141634758a5f9de652dfab1905205a7844d7a9e93f3)
+- https://stonestorm.gg/assets/creator.da-bgqRIHwQ.js (200, SHA-256: 3035dfca60098f3d08492ecf8508d4d6ed86a3a43fda68a695900197bbc04cde)
+- https://stonestorm.gg/assets/creator.de-DSVJ8oIi.js (200, SHA-256: 9f864d10c18aba69bfb62efaa51362e135f1199ad410027692d3871aa573845b)
+- https://stonestorm.gg/assets/creator.el-CCoHW97V.js (200, SHA-256: ff71a4f9b133859617fb04d7e38a6df779ec685f5cce16939e881015da6c26ce)
+- https://stonestorm.gg/assets/creator.en-DhLGev30.js (200, SHA-256: 4080ac7a904d7b752a28fc91bd3260232066f5a1eaf8648172332c0a9df70675)
+- https://stonestorm.gg/assets/creator.es-vBxbEahC.js (200, SHA-256: 9f2d48d28eda946f36c2e775378e5dc5673c50c61bb8d61e5396387df445e6ad)
+- https://stonestorm.gg/assets/creator.et-A8snHn9R.js (200, SHA-256: 234fcd1d2ccaa14d9e4f28a30bcb35d6b5dcf2c4c30ef5da1211e9de0e6f8081)
+- https://stonestorm.gg/assets/creator.fi-deneU173.js (200, SHA-256: f69852f3244ccf26e239183eb7a1bfb1d1b49426cc05f47ff8522e70581d547a)
+- https://stonestorm.gg/assets/creator.fr-BGeR609K.js (200, SHA-256: 74e107884948b97b9294b48af3057d024188ba1d6b24ca148b90edd80849e310)
+- https://stonestorm.gg/assets/creator.hr-C5jEn-dL.js (200, SHA-256: c987025cf04e1735194cddd78e204dc6f01b7ce7d211c360ff3192b7f1ba5819)
+- https://stonestorm.gg/assets/creator.it-CiYucshs.js (200, SHA-256: a0bfb9ff2b7a0616bd7ebce66f2a1ad9efc12c78a160c8bf41e50277ccc0e807)
+- https://stonestorm.gg/assets/creator.lt-D4k1AuSG.js (200, SHA-256: a43c9c9060cbd639b28f2352ebb9bfbe7b0034e86b7a84b5e7317198af9e5fac)
+- https://stonestorm.gg/assets/creator.mk-Cmb1vn0r.js (200, SHA-256: 112b94cfec2b28df43e7117a924f021664e07238d993e09fad6a48f6b6c51dd8)
+- https://stonestorm.gg/assets/creator.nb-Bi2BOKF6.js (200, SHA-256: 709993286127ccaabb2c42a34a945eac40497a8d252dd3c857cf2cd2c82d117c)
+- https://stonestorm.gg/assets/creator.nl-B3eLgbr5.js (200, SHA-256: a3435ea2c121961df9ce4192315633617fc5d7c2ae22b32f506723b8e0ab15f3)
+- https://stonestorm.gg/assets/creator.pl-BnyJK_XJ.js (200, SHA-256: 9607e6d9f50def6b8c8e7c2ed210ff7c357de1b959ebaf1d5179a765ae4c980a)
+- https://stonestorm.gg/assets/creator.pt-BR-B9B417WA.js (200, SHA-256: 4cbfb29ddd757be93e872507d430170bace61319aed66a35802cce7d8bf01c32)
+- https://stonestorm.gg/assets/creator.pt-Bt29bnt7.js (200, SHA-256: bc1971d355ce1334c93c2c80e6c5a5e570ca57669e58d33ed06cf11f5054fe84)
+- https://stonestorm.gg/assets/creator.ro-3Kvad_uI.js (200, SHA-256: 8905d3c9668b3528e4ae2574aca9e15f66be3d3f99657b70f5d2d125e9ed0b5e)
+- https://stonestorm.gg/assets/creator.ru-BSPY0Obz.js (200, SHA-256: 63294e3eccd766845ba4bd8957d181a6d1087cdf6e2d9dae75b2cb3e1f55946a)
+- https://stonestorm.gg/assets/creator.sk-C45VwiZa.js (200, SHA-256: 9ae93e53a3918e024ae583042fa3d9ba5d35469710ccec58a4231ea732d23bef)
+- https://stonestorm.gg/assets/creator.sl-Czet21rk.js (200, SHA-256: 50286d620362f4a1fdcfe1b5055a0777e1ba5c916def98fe6bd0d6d4f2d15a57)
+- https://stonestorm.gg/assets/creator.sq-DSS0JjSH.js (200, SHA-256: b685375be2fa1e2a67ce6458fa713b59f054dbbc8968f5d6f6e5bf4de1433e57)
+- https://stonestorm.gg/assets/creator.sr-DNm7h7Ah.js (200, SHA-256: 60a5cc8d80e447e6124268957c2b31ce4f617f07e8627c889f677484b3eec74f)
+- https://stonestorm.gg/assets/creator.sv-j20Qjn22.js (200, SHA-256: a65a7519e1d1f35d024a26e3b5146313cf6c4c3bc86386889951a15bfe2674a1)
+- https://stonestorm.gg/assets/creator.tr-COVzxQ2t.js (200, SHA-256: f6f04cdcae9b438f32b849ad898880e84a018733638f86573aa5db00ae5e58db)
+- https://stonestorm.gg/assets/creator.uk-jqJ_pPmj.js (200, SHA-256: ea7e7d3acb94d0a1bea4b85df9c5c19899fc2a2d47c565e34d571e01d704724f)
+
+## Ellenőrzésre vár
+
+- `/achievementSets/bandit`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/beasts/achievements/4`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/6`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/7`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/dungeons/achievements/8`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/faithful`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/fishing/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/forge/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/hunt/achievements/13`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/hunt/achievements/14`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/achievementSets/stones/achievements/2`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/dragon/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/monkey/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/spider/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/0/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/1/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/2/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/3/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/4/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/5/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/6/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/7/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/8/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/atkMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/atkMin`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/harcero`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/dungeons/wild/heroic/rooms/9/maxHp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/families`: Első megfigyelés; nincs teljes korábbi snapshot
+- `/features/accrualCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/achievementsPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/banditArena`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/banditTrophy`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/blackFriday`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/comebackTierBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/comebackTiers`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/creatorProgram`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/curveRamp`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/firstSession`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/fishingReel`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/founderPacks`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/freePathRepick`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/friendGift`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/guildRaidNights`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homeRooms`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homeThemes`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/homecoming`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/imperialCard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomPioneer`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomSoftCap`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/kingdomSwitch`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/launchStormChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/leads`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/legendChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/levelPrices`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/lootLadder`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/nyangPouch`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/offerTargeting`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/packPopup`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/paidCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/perCapitaWar`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/petNames`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/playExtraRuns`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/playRunGuard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/portals`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/progressionLabels`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/promoMax`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/pushRecall`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/serverUnlockGates`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/spendGuard`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/starterUntilLevel`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stoneLadder`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormAscension`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormPassPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/stormhunterChest`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/storyChapters`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/towerResetPlus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/treasureBundle`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/underdogBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/waitingRoom`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/webPush`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/webShopBonus`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/features/whalePack`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/harcero/bossEvadeCaps`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/achievements`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/alchemist`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/bossAttempts`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/endgame`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/fishing`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/itemRules`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/patron`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/sidequests`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/skills`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/soulShop`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/lean/worldBoss`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_1/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_2/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_3/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/stones/stone_m6_4/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/maps/m6/strength`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/charger/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/kilencfarku_roka/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/lidercparipa/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/miststeed/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/mule/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/pony/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/stormtiger/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/mounts/warhorse/timeReductionPctFromTravelMult`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/onboarding/unlocks/arena.bandit`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/onboarding/unlocks/nav.arena/level`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/spine/gate`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/luck_ore/8`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/safe_stone/5`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/scroll_bless/12`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `/stones/sources/shard/6`: Nem automatikus importág / megváltozott szabály; kézi ellenőrzés
+- `https://stonestorm.gg/`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/index-lDwa4khx.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.hu-BSHLmc8h.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/art-manifest-CRoeA9m9.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.hu-B4r5uuHo.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.hu-_W3m9mDR.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.hu-BGaPiBMP.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.hu-DQ8JGPLH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/hu-kMACWXMy.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/landing.hu-Btlk4qUr.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/leads2.hu-CTaHZNMc.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/league.hu-CUE-SUEv.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/monetsf.hu-nYgok2K3.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/p7dark.hu-DkjZl52p.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_aranyeso.hu-DtaG5VQd.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_cracks.hu-BT7Q-WrH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_fishing.hu-BD1mPWZh.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_lock.hu-CRlFR90O.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_tanaka.hu-DKyeF9qW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_tracks.hu-DfqO2p-5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play_viharzapor.hu-DSEJxk94.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/play.hu-CFlHMPE8.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/portalview.hu-Dio3plf5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/support.hu-np5dfo24.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/texts.hu-DmnFspSb.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/tutorial59.hu-wToidrcK.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/site.webmanifest`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.ar-DkSKS2qU.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.bg-qMbMUUc_.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.cs-HB1M1RjI.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.da-CaBwhy6v.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.de-Bko31hBE.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.el-DIizl0Bo.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.en-DK7-Yoxp.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.es-kBcQ6PmQ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.et-CgCTwS1b.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.fi-B3S2ySqT.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.fr-C31S4s0W.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.hr-kV1Hma9S.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.it-BbOP4SJW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.lt-B3iNP25I.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.mk-BrWmc2RY.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.nb-DrjdFtLL.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.nl-DDDCvzwf.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.pl-_D_ws-GQ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.pt-BR-ax8C7ZGl.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.pt-Db7ouvNP.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.ro-ai_85qhD.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.ru-DU0ooTNM.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.sk-DoXaTCcR.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.sl-CrPTT352.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.sq-Bq6CBQkv.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.sr-ChR_bqb7.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.sv-BPmtBncr.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.tr-D4AGZcj-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/account.uk-BiZ_xn28.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/ar-DlwVM3W_.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/backdrops-BHyjkBOA.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/bg-DiTe9gfa.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boot-Bs49Szx9.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.ar-DnDLZNp9.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.bg-n25mo7x3.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.cs-BkeJ_0ge.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.da-eHdqiDtR.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.de-C1ujt7rf.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.el-CTcoTHAS.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.en-DZfJlfol.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.es-BEuZra2G.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.et-CwpI-mpt.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.fi-oJOoDd__.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.fr-x5EMkD2w.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.hr-DA8RGemn.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.it-D75UYSgk.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.lt-BOBmwqiB.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.mk-I97KQyok.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.nb-DF-mtZ5w.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.nl-BuaL1rNn.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.pl-DZ_qZsUo.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.pt-BR-DLVi2SGq.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.pt-D4ZLqOru.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.ro-SiFpaPvf.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.ru-Dii3vXxT.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.sk-DE5xBsLl.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.sl-0mHpxkcY.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.sq-nYZ_NG8x.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.sr-C6DZvaun.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.sv-DywqjQf9.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.tr-1rzuE5ST.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss.uk-Rc8GXmXx.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BrandMark-D8pK4pWi.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/bridge-BY8XsJRT.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/city-hotspots-DCnARpd3.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/codes-model-cO-frR7-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/collect-CqOY1Fb5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/ComingSoonPage-Dq2x88s2.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.ar-CwzVPdko.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.bg-D5xAjAly.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.cs-ej-FFKRd.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.da-DQ0ZmGAg.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.de-DA5zo0YU.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.el-BnXnx3-f.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.en-B5ws_EQQ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.es-Dq43Gm9z.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.et-CCX8YuFw.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.fi-m1O-_SVO.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.fr-BIZdzlbW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.hr-CSPe07LJ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.it-BxB6ZDGG.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.lt-OgAt4GuR.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.mk-Cy1OLDfY.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.nb-2lyFgJFn.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.nl-Cu7kzjwW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.pl-CCyfdwZf.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.pt-BR-Cc3qxOgB.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.pt-DODbhOOJ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.ro-CsEceKM0.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.ru-C_Mpaza1.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.sk-JAtRNV4W.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.sl-thjysCOt.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.sq-DlggMDQu.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.sr-xHRiIzEl.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.sv-BYi2ZSsK.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.tr-BL4WZWDX.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/community.uk-BEZK6olT.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/consent-B0q8d778.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/consent-BM99f_pM.css`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/ConsentDialog-DrigddrP.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/constants-C1NNq7Ui.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/copy-text--TWXtSYc.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/CopyButton-COVUhkdh.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator-hub-Cj3isMZq.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator-program-B1seFdtW.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.ar-DhQNvz_w.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.bg-BVaNyzO0.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.cs-BopFPm1h.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.da-bgqRIHwQ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.de-DSVJ8oIi.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.el-CCoHW97V.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.en-DhLGev30.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.es-vBxbEahC.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.et-A8snHn9R.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.fi-deneU173.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.fr-BGeR609K.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.hr-C5jEn-dL.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.it-CiYucshs.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.lt-D4k1AuSG.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.mk-Cmb1vn0r.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.nb-Bi2BOKF6.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.nl-B3eLgbr5.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.pl-BnyJK_XJ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.pt-BR-B9B417WA.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.pt-Bt29bnt7.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.ro-3Kvad_uI.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.ru-BSPY0Obz.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.sk-C45VwiZa.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.sl-Czet21rk.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.sq-DSS0JjSH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.sr-DNm7h7Ah.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.sv-j20Qjn22.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.tr-COVzxQ2t.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/creator.uk-jqJ_pPmj.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+
+## Változások
+
+
+
+A teljes előtte/utána értékeket a latest-sync.json tartalmazza. A jelentésben szereplő hiány nem törlési utasítás. A klienskódot nem futtatjuk, a magyar modulokat és grafikai hivatkozásokat csak feltérképezzük.

@@ -7,6 +7,9 @@ import '../js/pet-system.js';
 import '../js/planner-model.js';
 const db=JSON.parse(fs.readFileSync(new URL('../data/atlas.json',import.meta.url),'utf8'));
 const setEvidence=JSON.parse(fs.readFileSync(new URL('../data/set-bonus-evidence.json',import.meta.url),'utf8'));
+const sync=JSON.parse(fs.readFileSync(new URL('../data/sync-import.json',import.meta.url),'utf8'));
+const synced=(kind,id)=>sync.records?.[kind]?.[id];
+const checkSync=entry=>{assert.equal(entry.provenance.source,'https://stonestorm.gg/api/content');assert.match(entry.provenance.sha256,/^[a-f0-9]{64}$/);assert(entry.provenance.apiPath);assert.equal(entry.provenance.status,'derived');};
 const math=globalThis.StonestormMath,rates=db.economy.limits.guildSpeedup;
 test('Céhes gyorsítás: megkezdett órák és ársávhatárok',()=>{
   assert.equal(math.speedup(22,11,rates),2200);
@@ -32,7 +35,10 @@ test('Képkatalógus: létező fájlok, források, állapotok és teljes adatkap
     assert(image.sourceUrl.startsWith('https://stonestorm.gg/art/'));
     if(image.status==='identified')assert(image.relations.some(r=>r.status==='identified'));
   }
-  for(const [kind,key] of [['item','items'],['pet','pets'],['mount','mounts'],['mob','mobs'],['map','maps']])for(const record of db[key])assert(catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id)),record.id);
+  for(const [kind,key] of [['item','items'],['pet','pets'],['mount','mounts'],['mob','mobs'],['map','maps']])for(const record of db[key]){
+    if(synced(key,record.id)&&!catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id))){checkSync(synced(key,record.id));continue;}
+    assert(catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id)),record.id);
+  }
   const image=catalog.entries.find(x=>x.id==='weapons/w_ninja_l10');
   assert(image.relations.some(r=>r.id==='w_ninja_l10'&&r.status==='identified'));
   assert(image.relations.some(r=>r.id==='w_ninja_set_m1'&&r.status==='identified'));
@@ -65,7 +71,7 @@ test('Planner: family alapján aktív szettküszöbök, külön kezelt százalé
   const model=globalThis.StonestormPlanner,b=model.empty(db,'ninja');b.level=60;b.targetFamily='m1';b.petId='pet_wolf';b.petLevel=10;b.mountId='pony';
   b.gear={weapon:{id:'w_ninja_set_m1',plus:0},armor:{id:'a_ninja_set_m1',plus:0}};
   const result=model.calculate(b,db);assert.equal(result.sets[0].count,2);assert.equal(result.sets[0].active.length,1);assert.equal(result.sets[0].inactive.length,2);
-  assert.equal(result.equipment.maxHp,0);assert.deepEqual(result.sets[0].active[0],{pieces:2,stats:[{stat:'maxHp',value:100}]});
+  assert.equal(result.equipment.maxHp,0);assert.deepEqual(result.sets[0].active[0],db.sets.find(set=>set.familyId==='m1').bonuses[0]);
   assert.deepEqual(result.sets[0].inactive.map(bonus=>bonus.pieces),[4,6]);
   assert.deepEqual([...result.sets[0].active,...result.sets[0].inactive],db.sets.find(set=>set.familyId==='m1').bonuses);
   assert.equal(result.pet.rawSpeciesBonus.xpMult,.1);assert.equal(result.mount.travelMult,.9);
@@ -89,13 +95,15 @@ test('A hátas időszorzója és a mért XP-hatékonyság külön számítás',(
 });
 test('Forráslefedettség, egyedi azonosítók és visszakövethető rekordok',()=>{
   for(const [key,count] of Object.entries({items:182,sets:6,pets:22,mounts:8,maps:6,mobs:64,bosses:6,dungeons:4,research:14})){
-    assert.equal(db[key].length,count,key);
-    assert.equal(new Set(db[key].map(x=>x.id)).size,count,key+' duplikátum');
+    const added=Object.values(sync.records?.[key]??{}).filter(entry=>!JSON.parse(fs.readFileSync(new URL('../source-data/'+({items:'01_felszerelesek_es_szettek.json',mobs:'06_terkepek_szornyek_bossok_kazamatak.json',bosses:'06_terkepek_szornyek_bossok_kazamatak.json'}[key]),import.meta.url),'utf8'))[key].some(x=>x.id===entry.record.id)).length;
+    assert.equal(db[key].length,count+added,key);
+    assert.equal(new Set(db[key].map(x=>x.id)).size,db[key].length,key+' duplikátum');
     if(key==='sets'){
       assert.match(setEvidence.source,/spine\.sets\.full/);
       assert.match(setEvidence.source,/spine\.lines\.scaled\/percent/);
       assert.equal(setEvidence.results.length,count);
       for(const set of db.sets){
+        if(sync.sets?.[set.familyId]){checkSync(sync.sets[set.familyId]);assert.deepEqual(set.bonuses,sync.sets[set.familyId].bonuses);continue;}
         const evidence=setEvidence.results.find(record=>record.familyId===set.familyId);
         assert(evidence,set.familyId+' visszakövethető bizonyíték');
         assert.match(set.provenance?.source??'',/spine\.sets\.full/);
@@ -108,10 +116,13 @@ test('Forráslefedettség, egyedi azonosítók és visszakövethető rekordok',(
         assert.deepEqual(set.bonuses,evidence.bonuses,set.familyId+' bizonyítékhoz kapcsolt bónuszok');
       }
     }else{
-      assert(db[key].every(x=>x.provenance?.source&&x.provenance.checkedAt==='2026-11-06'),key+' forrás');
+      for(const row of db[key]){if(synced(key,row.id)){checkSync(synced(key,row.id));assert.deepEqual(row.provenance,synced(key,row.id).provenance);}else assert(row.provenance?.source&&row.provenance.checkedAt==='2026-11-06',key+' forrás');}
     }
   }
-  assert.equal(db.economy.stackables.length,131);
+  const originalStackables=JSON.parse(fs.readFileSync(new URL('../source-data/08_anyagok_penzugyek_boltok.json',import.meta.url),'utf8')).stackables;
+  const addedStackables=Object.keys(sync.records?.stackables??{}).filter(id=>!originalStackables.some(x=>x.id===id));
+  assert.equal(db.economy.stackables.length,131+addedStackables.length);
+  for(const id of addedStackables){checkSync(synced('stackables',id));assert(db.economy.stackables.some(x=>x.id===id));}
   assert.equal(db.sources.length,14);
   for(const src of db.sources){const bytes=fs.readFileSync(new URL('../source-data/'+src.file,import.meta.url));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),src.sha256);}
 });

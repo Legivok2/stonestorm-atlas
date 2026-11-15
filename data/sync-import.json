@@ -1,0 +1,360 @@
+{
+  "schema": 1,
+  "records": {
+    "mobs": {
+      "m6_flame_hound": {
+        "record": {
+          "id": "m6_flame_hound",
+          "level": 54,
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "materialId": "mat_m6_hound_tooth",
+          "mapIndex": 6,
+          "statLevel": 54,
+          "harcero": 43129,
+          "maxHp": 77100,
+          "atkMin": 17014,
+          "atkMax": 23287,
+          "def": 88,
+          "xp": 912,
+          "nyangMin": 166,
+          "nyangMax": 278
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_flame_hound",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_magma_beetle": {
+        "record": {
+          "id": "m6_magma_beetle",
+          "level": 54,
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "materialId": "mat_m6_obsidian_shard",
+          "mapIndex": 6,
+          "statLevel": 54,
+          "harcero": 43129,
+          "maxHp": 77100,
+          "atkMin": 17014,
+          "atkMax": 23287,
+          "def": 88,
+          "xp": 912,
+          "nyangMin": 166,
+          "nyangMax": 278
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_magma_beetle",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_fire_imp": {
+        "record": {
+          "id": "m6_fire_imp",
+          "level": 55,
+          "tags": [
+            "fire"
+          ],
+          "materialId": "mat_m6_obsidian_shard",
+          "mapIndex": 6,
+          "statLevel": 55,
+          "harcero": 46357,
+          "maxHp": 82983,
+          "atkMin": 18316,
+          "atkMax": 25067,
+          "def": 90,
+          "xp": 967,
+          "nyangMin": 169,
+          "nyangMax": 283
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_fire_imp",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_lava_lizard": {
+        "record": {
+          "id": "m6_lava_lizard",
+          "level": 56,
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "materialId": "mat_m6_lava_scale",
+          "mapIndex": 6,
+          "statLevel": 56,
+          "harcero": 50578,
+          "maxHp": 90664,
+          "atkMin": 20016,
+          "atkMax": 27391,
+          "def": 92,
+          "xp": 1024,
+          "nyangMin": 172,
+          "nyangMax": 288
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_lava_lizard",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_ash_cultist": {
+        "record": {
+          "id": "m6_ash_cultist",
+          "level": 56,
+          "tags": [
+            "fire",
+            "bandit"
+          ],
+          "materialId": "mat_m6_ash_mask",
+          "mapIndex": 6,
+          "statLevel": 56,
+          "harcero": 50578,
+          "maxHp": 90664,
+          "atkMin": 20016,
+          "atkMax": 27391,
+          "def": 92,
+          "xp": 1024,
+          "nyangMin": 172,
+          "nyangMax": 288
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_ash_cultist",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_fire_tiger": {
+        "record": {
+          "id": "m6_fire_tiger",
+          "level": 58,
+          "tags": [
+            "fire",
+            "animal"
+          ],
+          "materialId": "mat_m6_ash_mask",
+          "mapIndex": 6,
+          "statLevel": 58,
+          "harcero": 59995,
+          "maxHp": 107730,
+          "atkMin": 23792,
+          "atkMax": 32555,
+          "def": 95,
+          "xp": 1144,
+          "nyangMin": 178,
+          "nyangMax": 298
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_fire_tiger",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_flame_knight": {
+        "record": {
+          "id": "m6_flame_knight",
+          "level": 59,
+          "tags": [
+            "fire"
+          ],
+          "materialId": "mat_m6_ember_core",
+          "mapIndex": 6,
+          "statLevel": 59,
+          "harcero": 62132,
+          "maxHp": 111601,
+          "atkMin": 24651,
+          "atkMax": 33729,
+          "def": 96,
+          "xp": 1207,
+          "nyangMin": 181,
+          "nyangMax": 303
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_flame_knight",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_magma_giant": {
+        "record": {
+          "id": "m6_magma_giant",
+          "level": 59,
+          "tags": [
+            "fire"
+          ],
+          "materialId": "mat_m6_ember_core",
+          "mapIndex": 6,
+          "statLevel": 59,
+          "harcero": 62132,
+          "maxHp": 111601,
+          "atkMin": 24651,
+          "atkMax": 33729,
+          "def": 96,
+          "xp": 1207,
+          "nyangMin": 181,
+          "nyangMax": 303
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_magma_giant",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m6_boss": {
+        "record": {
+          "id": "m6_boss",
+          "level": 60,
+          "tags": [
+            "fire",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 6,
+          "statLevel": 60,
+          "harcero": 105062,
+          "maxHp": 118655,
+          "atkMin": 21525,
+          "atkMax": 56748,
+          "def": 127,
+          "xp": 31800,
+          "nyangMin": 7360,
+          "nyangMax": 12320
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m6_boss",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:13:14.924Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      }
+    },
+    "stackables": {
+      "lacquer_shard": {
+        "record": {
+          "id": "lacquer_shard",
+          "kind": "shard",
+          "sellPrice": 0
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/stackables/lacquer_shard",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "garden_spice": {
+        "record": {
+          "id": "garden_spice",
+          "kind": "material",
+          "sellPrice": 0
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/stackables/garden_spice",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "twitch_luck_ore": {
+        "record": {
+          "id": "twitch_luck_ore",
+          "kind": "scroll",
+          "sellPrice": 0
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/stackables/twitch_luck_ore",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "twitch_boss_ticket": {
+        "record": {
+          "id": "twitch_boss_ticket",
+          "kind": "key",
+          "sellPrice": 0
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/stackables/twitch_boss_ticket",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "twitch_hourglass": {
+        "record": {
+          "id": "twitch_hourglass",
+          "kind": "scroll",
+          "sellPrice": 0
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/stackables/twitch_hourglass",
+          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+          "gameVersion": "5231690b6864",
+          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      }
+    }
+  },
+  "sets": {},
+  "gameVersion": "5231690b6864",
+  "checkedAt": "2026-11-15T11:13:14.924Z",
+  "sourceHash": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d"
+}

@@ -35,7 +35,7 @@ export function runtimeFiles(){
   const db=JSON.parse(fs.readFileSync(path.join(root,'data/atlas.json'),'utf8'));
   const catalog=JSON.parse(fs.readFileSync(path.join(root,'data/image-catalog.json'),'utf8'));
   return [...new Set([
-    'index.html','.nojekyll',
+    'index.html','.nojekyll','data/sync-status.json',
     ...addonArtifacts,
     ...walk(path.join(root,'css')).filter(p=>p.endsWith('.css')).map(relative),
     ...walk(path.join(root,'js')).filter(p=>p.endsWith('.js')).map(relative),
@@ -54,6 +54,7 @@ export function sourceFiles(){
     ...(fs.existsSync(path.join(root,'Pages-retry.txt'))?['Pages-retry.txt']:[]),
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',
     ...['scripts','tests','source-data','data','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|json|ya?ml)$/.test(p)).map(relative)),
+    'snapshots/manifest.json','snapshots/current/content.json','reports/latest-sync.json','reports/latest-sync.md',
     ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md'].map(file=>'docs/'+file)
   ];
   return [...new Set(files)].sort();
@@ -67,7 +68,7 @@ export function scopeFor(file){
   if(file.startsWith('stonestorm_image_tools/downloaded/')||file.startsWith('assets/catalog-thumbs/'))return 'game-art-catalog';
   if(file.startsWith('Stonestorm_files/'))return 'saved-game-art';
   if(file.startsWith('assets/images/'))return 'creator-kit';
-  if(file.startsWith('source-data/')||file==='js/atlas-data.js')return 'game-data-and-localization';
+  if(file.startsWith('source-data/')||file.startsWith('snapshots/')||file==='js/atlas-data.js')return 'game-data-and-localization';
   return null;
 }
 export function rightsIssues(files,policy){

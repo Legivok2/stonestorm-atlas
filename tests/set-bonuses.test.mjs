@@ -5,6 +5,8 @@ const root=new URL('../',import.meta.url);
 const src=JSON.parse(fs.readFileSync(new URL('source-data/01_felszerelesek_es_szettek.json',root),'utf8'));
 const atlas=JSON.parse(fs.readFileSync(new URL('data/atlas.json',root),'utf8'));
 const evidence=JSON.parse(fs.readFileSync(new URL('data/set-bonus-evidence.json',root),'utf8'));
+const sync=JSON.parse(fs.readFileSync(new URL('data/sync-import.json',root),'utf8'));
+import {fullSetBonuses} from '../scripts/atlas-sync-model.mjs';
 const expected={
   "m1": [
     {
@@ -211,7 +213,9 @@ test('Mind a hat szett teljes 2/4/6 bónuszsora egyezik a visszafejtett FULL sza
     assert.deepEqual(src.collectionFamilies.families.find(x=>x.id===family).set.bonuses,bonuses);
     const s=atlas.sets.find(x=>x.familyId===family);
     assert(s,'missing '+family);
-    assert.deepEqual(s.bonuses,bonuses,family);
+    const imported=sync.sets?.[family];
+    if(imported)assert.deepEqual(imported.bonuses,fullSetBonuses({spine:{sets:{[family]:imported.evidence.set},lines:imported.evidence.lines}},family));
+    assert.deepEqual(s.bonuses,imported?.bonuses??bonuses,family);
     assert.equal(s.provenance.status,family==='m4'?'verified':'derived');
   }
 });
@@ -226,5 +230,5 @@ test('A böngészős atlas-data.js is ugyanazokat a szettbónuszokat tartalmazza
   assert(start>=0);
   const end=code.lastIndexOf(';');
   const data=JSON.parse(code.slice(start+prefix.length,end));
-  for(const s of data.sets)assert.deepEqual(s.bonuses,expected[s.familyId]);
+  for(const s of data.sets)assert.deepEqual(s.bonuses,sync.sets?.[s.familyId]?.bonuses??expected[s.familyId]);
 });

@@ -1,0 +1,103 @@
+name: Atlas Auto-Sync V1
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'read-only = jelentés; apply = ismert adatok tesztelt importja'
+        type: choice
+        options: [read-only, apply]
+        default: read-only
+
+permissions:
+  contents: read
+
+# Ugyanaz a kiadási sor, mint a pages.yml-ben: régebbi build nem előzheti meg az újat.
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
+    outputs:
+      publish: ${{ steps.sync.outputs.publish }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Collect public data and import only validated records
+        id: sync
+        env:
+          AUTO_PUBLISH: ${{ vars.ATLAS_SYNC_AUTO_PUBLISH }}
+          REQUESTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$AUTO_PUBLISH" = "true" ] && [ "$REQUESTED_MODE" != "read-only" ]; then
+            node scripts/atlas-sync.mjs --apply
+          else
+            node scripts/atlas-sync.mjs --read-only
+          fi
+      - name: Check source and regression tests
+        run: |
+          npm run check
+          npm test
+      - name: Build and verify changed Atlas before committing
+        if: steps.sync.outputs.publish == 'true'
+        run: |
+          npm run build:pages
+          npm run test:pages
+      - name: Keep only the current snapshot and bounded reports in Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- snapshots/manifest.json snapshots/current/content.json reports/latest-sync.json reports/latest-sync.md data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Sync public Stonestorm data and inspection report'
+            git push origin HEAD:main
+          fi
+      - name: Configure Pages for a tested data change
+        if: steps.sync.outputs.publish == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload the approved site directly from this workflow
+        if: steps.sync.outputs.publish == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Save full change evidence and historical snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-sync-evidence-${{ github.run_id }}
+          path: |
+            reports/
+            snapshots/
+          retention-days: 14
+      - name: Add inspection summary
+        if: always()
+        run: |
+          if [ -f reports/failed-sync.md ]; then cat reports/failed-sync.md >> "$GITHUB_STEP_SUMMARY"; elif [ -f reports/latest-sync.md ]; then cat reports/latest-sync.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+  # A GITHUB_TOKEN commit nem vált ki push-workflow-t: a telepítés itt, közvetlenül történik.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy tested Auto-Sync build
+        id: deployment
+        uses: actions/deploy-pages@v4
