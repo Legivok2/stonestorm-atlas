@@ -66,7 +66,7 @@ function markdown(r){
   return `# Atlas Auto-Sync V1\n\nÁllapot: ${r.status}\n\nEllenőrzés: ${r.checkedAt}\n\nJátékverzió: ${r.gameVersion??'nem elérhető'}\n\nÖsszevetés: ${r.baseline??'nem történt'}\n\nÚj / módosult / hiányzó mezők: ${r.counts?.added??0} / ${r.counts?.changed??0} / ${r.counts?.removed??0}\n\nImportálható rekordok: ${r.accepted?.length??0}; ellenőrzésre váró tételek: ${r.review?.length??0}.\n\n${r.error??''}\n\n## Elért források\n\n${(r.sources??[]).map(s=>'- '+s.url+' ('+s.status+', SHA-256: '+s.sha256+')').join('\n')}\n\n## Ellenőrzésre vár\n\n${(r.review??[]).map(x=>'- `'+x.path+'`: '+x.reason).join('\n')}\n\n## Változások\n\n${(r.changes??[]).map(x=>'- '+x.kind+' `'+x.path+'` ['+x.category+']').join('\n')}\n\nA teljes előtte/utána értékeket a latest-sync.json tartalmazza. A jelentésben szereplő hiány nem törlési utasítás. A klienskódot nem futtatjuk, a magyar modulokat és grafikai hivatkozásokat csak feltérképezzük.\n`;
 }
 
-export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date().toISOString(),inspect=true,verify}={}){
+export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date().toISOString(),inspect=true,verify,outputFile}={}){
   const previous=read(root,'snapshots/manifest.json',{schema:1,resources:{}}),old=read(root,'snapshots/current/content.json');
   let report={schema:1,checkedAt:now,status:'failed',applied:false};
   try{
@@ -127,17 +127,17 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     write(root,'data/sync-status.json',newStatus);
     write(root,'js/sync-status.js','/* Generált Auto-Sync állapot. */\nwindow.STONESTORM_SYNC_STATUS = '+JSON.stringify(newStatus).replaceAll('<','\\u003c')+';\n');
     write(root,'reports/latest-sync.json',report);write(root,'reports/latest-sync.md',markdown(report));
-    if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,`publish=${report.applied}\nreview=${review.length>0}\n`);
+    if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied}\nreview=${review.length>0}\n`);
     return report;
   }catch(e){
     report={...report,status:'failed',error:e.message};
     write(root,'reports/failed-sync.json',report);write(root,'reports/failed-sync.md',markdown(report));
-    if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,'publish=false\n');
+    if(outputFile)fs.appendFileSync(outputFile,'publish=false\n');
     throw e;
   }
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   if(process.argv.slice(2).some(x=>!['--apply','--read-only'].includes(x)))throw Error('Használat: node scripts/atlas-sync.mjs [--read-only | --apply]');
-  const report=await runSync({apply:process.argv.includes('--apply')});
+  const report=await runSync({apply:process.argv.includes('--apply'),outputFile:process.env.GITHUB_OUTPUT});
   console.log(JSON.stringify({status:report.status,gameVersion:report.gameVersion,counts:report.counts,accepted:report.accepted.length,pending:report.review.length,applied:report.applied}));
 }

@@ -87,8 +87,12 @@ function workspace(t){
 }
 test('Auto-Sync: változatlan 304 nem módosít Atlas-adatot és nem kér publikálást',async t=>{
   const dir=workspace(t),file=path.join(dir,'data/atlas.json'),before=fs.readFileSync(file),mtime=fs.statSync(path.join(dir,'snapshots/current/content.json')).mtimeMs;
+  const priorOutput=process.env.GITHUB_OUTPUT,output=path.join(dir,'step-output');
+  fs.writeFileSync(output,'publish=sentinel\n');process.env.GITHUB_OUTPUT=output;
+  t.after(()=>{if(priorOutput===undefined)delete process.env.GITHUB_OUTPUT;else process.env.GITHUB_OUTPUT=priorOutput;});
   const r=await runSync({root:dir,apply:true,inspect:false,fetcher:async()=>new Response(null,{status:304}),verify:()=>{}});
   assert.equal(r.accepted.length,0);assert.equal(r.applied,false);
+  assert.equal(fs.readFileSync(output,'utf8'),'publish=sentinel\n','A belső tesztek nem írhatják felül az éles workflow publikálási kimenetét');
   assert(fs.readFileSync(file).equals(before));assert.equal(fs.statSync(path.join(dir,'snapshots/current/content.json')).mtimeMs,mtime);
 });
 test('Auto-Sync: hibás JSON, hiányos válasz és HTTP-hiba megőrzi az utolsó snapshotot',async t=>{
