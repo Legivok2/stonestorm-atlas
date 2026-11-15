@@ -2,7 +2,7 @@
 
 Állapot: unchanged
 
-Ellenőrzés: 2026-11-15T11:16:04.990Z
+Ellenőrzés: 2026-11-15T11:18:58.535Z
 
 Játékverzió: 5231690b6864
 
@@ -10,7 +10,7 @@ Játékverzió: 5231690b6864
 
 Új / módosult / hiányzó mezők: 0 / 0 / 0
 
-Importálható rekordok: 0; ellenőrzésre váró tételek: 465.
+Importálható rekordok: 0; ellenőrzésre váró tételek: 505.
 
 
 
@@ -74,7 +74,7 @@ Importálható rekordok: 0; ellenőrzésre váró tételek: 465.
 - https://stonestorm.gg/assets/account.tr-D4AGZcj-.js (cached, SHA-256: d36dd042c6336e0751fc5a0f0dd8c00cd2103de4078d079ed3ecf098e2ba389b)
 - https://stonestorm.gg/assets/account.uk-BiZ_xn28.js (cached, SHA-256: 726c841efd7543f94b9810120f32a71a1d92224f5588bf5a66cc96fd3cbe15bb)
 - https://stonestorm.gg/assets/ar-DlwVM3W_.js (cached, SHA-256: d1ad1778a4937f78ec9a88b9d573bb4331d6d188f14583d55cf52bfd14b32a0a)
-- https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css (200, SHA-256: cf9af6289e475080e4c5178ab0d5f3d42d57de568c927d8c180e402be25d3cf4)
+- https://stonestorm.gg/assets/audio-switch-xXzuJB_b.css (304, SHA-256: cf9af6289e475080e4c5178ab0d5f3d42d57de568c927d8c180e402be25d3cf4)
 - https://stonestorm.gg/assets/AudioPanel-Wm0TS6Fp.js (cached, SHA-256: 3096bc96d97021145272465ce4e986556d121b4cee91ac3075d33bf5f1e25c2d)
 - https://stonestorm.gg/assets/backdrops-BHyjkBOA.js (cached, SHA-256: d2e200328aea54d9395cd51c4e9ddf8d276fa02873b85b9859dee01baf3f2a01)
 - https://stonestorm.gg/assets/bg-DiTe9gfa.js (cached, SHA-256: 8024536182fbafe34a7aa8b19cd3841dd843640df94809d149baf2cf68c615b0)
@@ -180,50 +180,90 @@ Importálható rekordok: 0; ellenőrzésre váró tételek: 465.
 - https://stonestorm.gg/assets/creator.sv-j20Qjn22.js (cached, SHA-256: a65a7519e1d1f35d024a26e3b5146313cf6c4c3bc86386889951a15bfe2674a1)
 - https://stonestorm.gg/assets/creator.tr-COVzxQ2t.js (cached, SHA-256: f6f04cdcae9b438f32b849ad898880e84a018733638f86573aa5db00ae5e58db)
 - https://stonestorm.gg/assets/creator.uk-jqJ_pPmj.js (cached, SHA-256: ea7e7d3acb94d0a1bea4b85df9c5c19899fc2a2d47c565e34d571e01d704724f)
-- https://stonestorm.gg/assets/CreatorApplyInGame-BYsrY9jh.js (200, SHA-256: 5b5baf63068083f927e185be0b7b00a0d743033e585196df783f7ec5dcd64898)
-- https://stonestorm.gg/assets/CreatorApplyInGame-Dim7-bGp.css (200, SHA-256: c20a9b354f350dfb5c2abcacbff903599c84539d6a1b62eb8bca7a8d608e5269)
-- https://stonestorm.gg/assets/CreatorSection-CTGPEw2z.js (200, SHA-256: 71e183e43fc025143c9d1819b2548ac4ae867f6b730eff52070361f01e26872d)
-- https://stonestorm.gg/assets/CreatorsPage-CO8XcDp7.css (200, SHA-256: 97b2ee40e27024f9cc26beb90d2a104cf4118ea91f5516abc3220a434d63a315)
-- https://stonestorm.gg/assets/CreatorsPage-SWPysE8P.js (200, SHA-256: a6645dc2b2868215bd9d050fcffdb678400b2d4a34c8992acf408a9a7d2c66c8)
-- https://stonestorm.gg/assets/cs-BGsmLFWM.js (200, SHA-256: 8070a4fcaaed441df314efc7654c0694d872b3d6f379029de0a9443d1b0a8d1c)
-- https://stonestorm.gg/assets/da-Bb5Qkf9N.js (200, SHA-256: f94dcaee9a5e48521321a3d1d9a3e463256b3d185907ad6a6ec31fc26cebaeba)
-- https://stonestorm.gg/assets/de-DUmYiA_4.js (200, SHA-256: e7b8483ddaa1ef671ddf200777b2a9a906fec1153475d928969ced05a1f575bc)
-- https://stonestorm.gg/assets/depth-3LCLq7m8.js (200, SHA-256: 0a750339ee7c79825cfe6400d6ec180dbd7288a24d65df957f12886c6460baba)
-- https://stonestorm.gg/assets/discord-6JQkfSLJ.js (200, SHA-256: 93ea1a405737e832d251f2cbd0bdbadd0c8410335f548351cfedd78f6174cc29)
-- https://stonestorm.gg/assets/discord-DCoVKkhV.js (200, SHA-256: efa6da637316e8eaa99bee1433e5926b2ae5d49211956bc648ad4563210c971d)
-- https://stonestorm.gg/assets/discord-join-CYDYVj5Z.js (200, SHA-256: 18f92ff945c2b74a04f8fec3b08ab8333c98f9e223763096a635e61a8c09950f)
-- https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js (200, SHA-256: 813462004a3683deb0e951eb1ae684789c57864598792a5e5d481ed622bd0474)
-- https://stonestorm.gg/assets/DiscordPage-B0K9OqCS.css (200, SHA-256: c4ec7b943ff3661544b2acbd9b68df840eff26038cdc2642db7094679c03aaf7)
-- https://stonestorm.gg/assets/DiscordPage-CCbr67P8.js (200, SHA-256: 454991805d1e96ddfe46c0036fb8ab7cfc43efb082ef7480c2f84cd503a4c543)
-- https://stonestorm.gg/assets/docs-DmaeUGH1.js (200, SHA-256: 89161042969114cf539467987368007c3899f3ee87307da130468ce0be00e9ec)
-- https://stonestorm.gg/assets/drops-window-BOW2ncyd.js (200, SHA-256: f9ea147632bb6a0fc495d8719ff59c63d6965849cc648cab452e45d86da79e1c)
-- https://stonestorm.gg/assets/el-CAEFca44.js (200, SHA-256: 362379c25be4b7cac3d03b8bbccd15f8da886f731a4db36ef58b8f503f36c09b)
-- https://stonestorm.gg/assets/en-DuOkAWfc.js (200, SHA-256: 571da0941f2b86d4fa4acf12fa4f7a2dad1d7f9ac5122d28b7e43c77f8cacffa)
-- https://stonestorm.gg/assets/es-DkPy-FyH.js (200, SHA-256: b50bd7ae144079b899f72234f8f51a81b4932a5a1bef5fc3c57de4bab1d67ec0)
-- https://stonestorm.gg/assets/et-BZ2faL_q.js (200, SHA-256: 2776cf0b95c2e17757fe11045256078b71b990fe60e1ea27963f70cfb83cf185)
-- https://stonestorm.gg/assets/fi-r5stQUhc.js (200, SHA-256: 9edc7f116d4132aac7fc1c2e32db77c1816156b18e8348ecad960fe358d40961)
-- https://stonestorm.gg/assets/forge.ar-Bfmp4TU0.js (200, SHA-256: 09f990ca570c93139baaa2652a0c7bab42934c7343922dc8d31bc09421a91b58)
-- https://stonestorm.gg/assets/forge.bg-w_yI3av7.js (200, SHA-256: a9dcdc181547bce63390a26a1de7fa67744cc34ae6afd646510d15d8a119179d)
-- https://stonestorm.gg/assets/forge.cs-CmU0Nmrl.js (200, SHA-256: 3b51ae3bc97b7c882efd99747cbf2809a542f281ba22d53a35d65ab379aa3297)
-- https://stonestorm.gg/assets/forge.da-CpFKeWgo.js (200, SHA-256: e5d5726ec311c0d9891ce6f61644a33dda6a8ac0de633bfd6de1a384e8a33494)
-- https://stonestorm.gg/assets/forge.de-Cfp9HJSe.js (200, SHA-256: 08acbad182b6e30fd00d71fdee8c597af310d08e4aa15f8ba4dfe5f9111412d4)
-- https://stonestorm.gg/assets/forge.el-A6ivXGuj.js (200, SHA-256: 78033563b5bc6c7f54a95681441616b4ca713f7d805f16b449ab4171a2fa8148)
-- https://stonestorm.gg/assets/forge.en-DcGpCt5J.js (200, SHA-256: 00d03bf96b0989e7ec2562651880b03e96fbea71f62d803796bc966b209033e3)
-- https://stonestorm.gg/assets/forge.es-4p4Rgko_.js (200, SHA-256: 08b689fa9c6d3e74df43c204d7ab6c970b37336331076afcf31c01be1ad9328d)
-- https://stonestorm.gg/assets/forge.et-CfZh5sD-.js (200, SHA-256: 99d5274c738e12e7b270060cf00d270d5b71fad81cdad39666476c32723cc474)
-- https://stonestorm.gg/assets/forge.fi-CCj0PgnE.js (200, SHA-256: e7c4bbbdc1b6cd49f4e33f1be238b55a69c885cbc563b6c0a1ca0c37ce1e565f)
-- https://stonestorm.gg/assets/forge.fr-CU59vAPC.js (200, SHA-256: 83ba06e7eea81131b32ef3943fdd375aadf493d1728b68c85f999f184385a50c)
-- https://stonestorm.gg/assets/forge.hr-gCQiDoTh.js (200, SHA-256: c79fc23b91f0ad953fd69c0ef8ec988c8964d7bb0831f8e8517a6ae31364dc54)
-- https://stonestorm.gg/assets/forge.it-B9XEQJW6.js (200, SHA-256: a3a8e57a2997d3ae236cd3ada05d087060cfad78c6fb67644f987de9d7f1817a)
-- https://stonestorm.gg/assets/forge.lt-DQCUte69.js (200, SHA-256: 3a807d7e16150a5447539ebf712f246576d5ededb2a36bec873964d08c1a6e5b)
-- https://stonestorm.gg/assets/forge.mk-Cqvu-4Kw.js (200, SHA-256: 9bfef2fed8f7f5ca4770d24aeeebdde98f1d497638289d3026fbb1168ff08dd3)
-- https://stonestorm.gg/assets/forge.nb-CD1EoSkX.js (200, SHA-256: 8df06390906b21395dbbbbe85c8d02d2a8c16a669f40b2302d3e71b5ef36b29d)
-- https://stonestorm.gg/assets/forge.nl-COHL4qyQ.js (200, SHA-256: da4a7d5e19b9d2af79ef2b465fcde79b5ec5697b39e432c9e30757abffcb6f26)
-- https://stonestorm.gg/assets/forge.pl-DuJyloU_.js (200, SHA-256: 3d6696fdfbea949f01fe99fd373bb414b120b3f6ee726e8af5581e5b1fa647d3)
-- https://stonestorm.gg/assets/forge.pt-BR-D8_OtLcx.js (200, SHA-256: d558f9b6637b989085c776c93157758773f47fec08b80f58feb9b83bcfcbf9f5)
-- https://stonestorm.gg/assets/forge.pt-onT9jz5e.js (200, SHA-256: a2064da5d4b08ab1fe5aed9bdcaf98982d7656053ab0457e2143992d89dda66c)
-- https://stonestorm.gg/assets/forge.ro-DHyeZLcn.js (200, SHA-256: b150ac252e20479522887587beea8e8a27c5aecead8f38f30871ffa9067bf796)
-- https://stonestorm.gg/assets/forge.ru-Dj_JQBTh.js (200, SHA-256: 9c30588141a3cb52016deefb24c506d3ca4971cd865927d18058ea30afc2c9d5)
+- https://stonestorm.gg/assets/CreatorApplyInGame-BYsrY9jh.js (cached, SHA-256: 5b5baf63068083f927e185be0b7b00a0d743033e585196df783f7ec5dcd64898)
+- https://stonestorm.gg/assets/CreatorApplyInGame-Dim7-bGp.css (304, SHA-256: c20a9b354f350dfb5c2abcacbff903599c84539d6a1b62eb8bca7a8d608e5269)
+- https://stonestorm.gg/assets/CreatorSection-CTGPEw2z.js (cached, SHA-256: 71e183e43fc025143c9d1819b2548ac4ae867f6b730eff52070361f01e26872d)
+- https://stonestorm.gg/assets/CreatorsPage-CO8XcDp7.css (304, SHA-256: 97b2ee40e27024f9cc26beb90d2a104cf4118ea91f5516abc3220a434d63a315)
+- https://stonestorm.gg/assets/CreatorsPage-SWPysE8P.js (cached, SHA-256: a6645dc2b2868215bd9d050fcffdb678400b2d4a34c8992acf408a9a7d2c66c8)
+- https://stonestorm.gg/assets/cs-BGsmLFWM.js (cached, SHA-256: 8070a4fcaaed441df314efc7654c0694d872b3d6f379029de0a9443d1b0a8d1c)
+- https://stonestorm.gg/assets/da-Bb5Qkf9N.js (cached, SHA-256: f94dcaee9a5e48521321a3d1d9a3e463256b3d185907ad6a6ec31fc26cebaeba)
+- https://stonestorm.gg/assets/de-DUmYiA_4.js (cached, SHA-256: e7b8483ddaa1ef671ddf200777b2a9a906fec1153475d928969ced05a1f575bc)
+- https://stonestorm.gg/assets/depth-3LCLq7m8.js (cached, SHA-256: 0a750339ee7c79825cfe6400d6ec180dbd7288a24d65df957f12886c6460baba)
+- https://stonestorm.gg/assets/discord-6JQkfSLJ.js (cached, SHA-256: 93ea1a405737e832d251f2cbd0bdbadd0c8410335f548351cfedd78f6174cc29)
+- https://stonestorm.gg/assets/discord-DCoVKkhV.js (cached, SHA-256: efa6da637316e8eaa99bee1433e5926b2ae5d49211956bc648ad4563210c971d)
+- https://stonestorm.gg/assets/discord-join-CYDYVj5Z.js (cached, SHA-256: 18f92ff945c2b74a04f8fec3b08ab8333c98f9e223763096a635e61a8c09950f)
+- https://stonestorm.gg/assets/discord-sources-Wqs1eF9F.js (cached, SHA-256: 813462004a3683deb0e951eb1ae684789c57864598792a5e5d481ed622bd0474)
+- https://stonestorm.gg/assets/DiscordPage-B0K9OqCS.css (304, SHA-256: c4ec7b943ff3661544b2acbd9b68df840eff26038cdc2642db7094679c03aaf7)
+- https://stonestorm.gg/assets/DiscordPage-CCbr67P8.js (cached, SHA-256: 454991805d1e96ddfe46c0036fb8ab7cfc43efb082ef7480c2f84cd503a4c543)
+- https://stonestorm.gg/assets/docs-DmaeUGH1.js (cached, SHA-256: 89161042969114cf539467987368007c3899f3ee87307da130468ce0be00e9ec)
+- https://stonestorm.gg/assets/drops-window-BOW2ncyd.js (cached, SHA-256: f9ea147632bb6a0fc495d8719ff59c63d6965849cc648cab452e45d86da79e1c)
+- https://stonestorm.gg/assets/el-CAEFca44.js (cached, SHA-256: 362379c25be4b7cac3d03b8bbccd15f8da886f731a4db36ef58b8f503f36c09b)
+- https://stonestorm.gg/assets/en-DuOkAWfc.js (cached, SHA-256: 571da0941f2b86d4fa4acf12fa4f7a2dad1d7f9ac5122d28b7e43c77f8cacffa)
+- https://stonestorm.gg/assets/es-DkPy-FyH.js (cached, SHA-256: b50bd7ae144079b899f72234f8f51a81b4932a5a1bef5fc3c57de4bab1d67ec0)
+- https://stonestorm.gg/assets/et-BZ2faL_q.js (cached, SHA-256: 2776cf0b95c2e17757fe11045256078b71b990fe60e1ea27963f70cfb83cf185)
+- https://stonestorm.gg/assets/fi-r5stQUhc.js (cached, SHA-256: 9edc7f116d4132aac7fc1c2e32db77c1816156b18e8348ecad960fe358d40961)
+- https://stonestorm.gg/assets/forge.ar-Bfmp4TU0.js (cached, SHA-256: 09f990ca570c93139baaa2652a0c7bab42934c7343922dc8d31bc09421a91b58)
+- https://stonestorm.gg/assets/forge.bg-w_yI3av7.js (cached, SHA-256: a9dcdc181547bce63390a26a1de7fa67744cc34ae6afd646510d15d8a119179d)
+- https://stonestorm.gg/assets/forge.cs-CmU0Nmrl.js (cached, SHA-256: 3b51ae3bc97b7c882efd99747cbf2809a542f281ba22d53a35d65ab379aa3297)
+- https://stonestorm.gg/assets/forge.da-CpFKeWgo.js (cached, SHA-256: e5d5726ec311c0d9891ce6f61644a33dda6a8ac0de633bfd6de1a384e8a33494)
+- https://stonestorm.gg/assets/forge.de-Cfp9HJSe.js (cached, SHA-256: 08acbad182b6e30fd00d71fdee8c597af310d08e4aa15f8ba4dfe5f9111412d4)
+- https://stonestorm.gg/assets/forge.el-A6ivXGuj.js (cached, SHA-256: 78033563b5bc6c7f54a95681441616b4ca713f7d805f16b449ab4171a2fa8148)
+- https://stonestorm.gg/assets/forge.en-DcGpCt5J.js (cached, SHA-256: 00d03bf96b0989e7ec2562651880b03e96fbea71f62d803796bc966b209033e3)
+- https://stonestorm.gg/assets/forge.es-4p4Rgko_.js (cached, SHA-256: 08b689fa9c6d3e74df43c204d7ab6c970b37336331076afcf31c01be1ad9328d)
+- https://stonestorm.gg/assets/forge.et-CfZh5sD-.js (cached, SHA-256: 99d5274c738e12e7b270060cf00d270d5b71fad81cdad39666476c32723cc474)
+- https://stonestorm.gg/assets/forge.fi-CCj0PgnE.js (cached, SHA-256: e7c4bbbdc1b6cd49f4e33f1be238b55a69c885cbc563b6c0a1ca0c37ce1e565f)
+- https://stonestorm.gg/assets/forge.fr-CU59vAPC.js (cached, SHA-256: 83ba06e7eea81131b32ef3943fdd375aadf493d1728b68c85f999f184385a50c)
+- https://stonestorm.gg/assets/forge.hr-gCQiDoTh.js (cached, SHA-256: c79fc23b91f0ad953fd69c0ef8ec988c8964d7bb0831f8e8517a6ae31364dc54)
+- https://stonestorm.gg/assets/forge.it-B9XEQJW6.js (cached, SHA-256: a3a8e57a2997d3ae236cd3ada05d087060cfad78c6fb67644f987de9d7f1817a)
+- https://stonestorm.gg/assets/forge.lt-DQCUte69.js (cached, SHA-256: 3a807d7e16150a5447539ebf712f246576d5ededb2a36bec873964d08c1a6e5b)
+- https://stonestorm.gg/assets/forge.mk-Cqvu-4Kw.js (cached, SHA-256: 9bfef2fed8f7f5ca4770d24aeeebdde98f1d497638289d3026fbb1168ff08dd3)
+- https://stonestorm.gg/assets/forge.nb-CD1EoSkX.js (cached, SHA-256: 8df06390906b21395dbbbbe85c8d02d2a8c16a669f40b2302d3e71b5ef36b29d)
+- https://stonestorm.gg/assets/forge.nl-COHL4qyQ.js (cached, SHA-256: da4a7d5e19b9d2af79ef2b465fcde79b5ec5697b39e432c9e30757abffcb6f26)
+- https://stonestorm.gg/assets/forge.pl-DuJyloU_.js (cached, SHA-256: 3d6696fdfbea949f01fe99fd373bb414b120b3f6ee726e8af5581e5b1fa647d3)
+- https://stonestorm.gg/assets/forge.pt-BR-D8_OtLcx.js (cached, SHA-256: d558f9b6637b989085c776c93157758773f47fec08b80f58feb9b83bcfcbf9f5)
+- https://stonestorm.gg/assets/forge.pt-onT9jz5e.js (cached, SHA-256: a2064da5d4b08ab1fe5aed9bdcaf98982d7656053ab0457e2143992d89dda66c)
+- https://stonestorm.gg/assets/forge.ro-DHyeZLcn.js (cached, SHA-256: b150ac252e20479522887587beea8e8a27c5aecead8f38f30871ffa9067bf796)
+- https://stonestorm.gg/assets/forge.ru-Dj_JQBTh.js (cached, SHA-256: 9c30588141a3cb52016deefb24c506d3ca4971cd865927d18058ea30afc2c9d5)
+- https://stonestorm.gg/assets/forge.sk-Bkkh96WE.js (200, SHA-256: bb727dfde5abd58a0d350970460a1e39412e4c63eff5f5d98cff1ebd009d0b00)
+- https://stonestorm.gg/assets/forge.sl-BP8rCDHP.js (200, SHA-256: 6b305d8fc5102e52eef6abea257a1897999cc119535fe7726275cc0f01d6d2c4)
+- https://stonestorm.gg/assets/forge.sq-BK2NGYOm.js (200, SHA-256: c606a960fa0497a62c7ff50a5c3da067b32e6611b43ae1d26fad0004e00d3891)
+- https://stonestorm.gg/assets/forge.sr-CFqHVmoy.js (200, SHA-256: d83c6d24fcb62c7a2872f7820d39f18a32760684256a1a84f8f5f1d3b60516e9)
+- https://stonestorm.gg/assets/forge.sv-t1ZYg-j-.js (200, SHA-256: 81099cb01ed75f23ced09fc4a66695154696598293db3e3f644636f0eed99811)
+- https://stonestorm.gg/assets/forge.tr-CkhpeeLg.js (200, SHA-256: d5d3d132c0c0b032498df6f461ad25fb3d7c24f048cbd3d0a1813c61caf3e539)
+- https://stonestorm.gg/assets/forge.uk-1lOLEXIZ.js (200, SHA-256: 4eb3d8577cae262b6a5b8a91041d546ac63082dce988e4333d611bfd8f0002fc)
+- https://stonestorm.gg/assets/fr-BSEAYTf0.js (200, SHA-256: fd2ea3cc84e1e6681e4cd4d9ed63ff27d6dabb15b28f85bdf83c9396cc7db030)
+- https://stonestorm.gg/assets/game-center-BW5-1v4R.js (200, SHA-256: b6660c1660b95ed939733e2c1cb579350aa8b682d0873c4803e435a3fbabef3f)
+- https://stonestorm.gg/assets/GameApp-Du2HaLsq.css (200, SHA-256: 7d4785f6827ed1f093d5a290f6712ceba5a0e1fb6474e20652749dbba45d91df)
+- https://stonestorm.gg/assets/GameApp-StvnmmXt.js (200, SHA-256: 3a22e9fedd66a52e31eea9adb1abce56172d97e7f66d7ef598129e66047b5b2c)
+- https://stonestorm.gg/assets/index-BEbMsSxF.js (200, SHA-256: bc9ffeb181c80fe15658ef74d4c619fe4a6fc3e8fb22cafe9df47e4d5696dbdc)
+- https://stonestorm.gg/assets/AccessPage-Cp4MqeWS.js (200, SHA-256: 8997d04fe52394a187fbff4648671453dd8edf86a0ab8701969dfac0564a5b62)
+- https://stonestorm.gg/assets/AccountPage-Dd-ITpl2.js (200, SHA-256: 48a38cc4f9c4aad3ba2a1cd6420864a3ba7563d6a472d0873a64a509701be452)
+- https://stonestorm.gg/assets/AccountPanel-D2aQqCr4.js (200, SHA-256: c42789b8ac6d8478eb91a98308ea6c7f4ba85c8815a50aadbadb9e260909a7fb)
+- https://stonestorm.gg/assets/achievements-DwFz1kro.js (200, SHA-256: f8d38ead00718b3c6c164336005c3e9b833c13a610f6248a80d1a59286092082)
+- https://stonestorm.gg/assets/AlchemistPanel-ChFJtir-.js (200, SHA-256: f8d42e5e5c72e7a6d0dcdb415548bb10a64440d1f886cdb0c9fab391bc8437e0)
+- https://stonestorm.gg/assets/AmbientFx-CRf1gO-O.js (200, SHA-256: fe823915fe9a97be0dd96bfb2fed7a83ecbc5e955028aa0b29033b93b070d9b2)
+- https://stonestorm.gg/assets/api-Br2Akyii.js (200, SHA-256: a1522a93e4659c7f2481cff2e388bf1b7708722a5e51b6a0b0c524e6f38aab98)
+- https://stonestorm.gg/assets/appstore-DbbtM_Sg.js (200, SHA-256: 6ec625e23e9cca393b446dad1483d49b6b456c977635c99c05cc75bcf75ccc32)
+- https://stonestorm.gg/assets/arena-oXX4J5m6.js (200, SHA-256: d4ecfb073cc9641848f87bc1c9c9c5b6db7cd48299f6608f1d4eda5170be63c3)
+- https://stonestorm.gg/assets/ArenaPage-AvfFBGrE.js (200, SHA-256: 84afc7d13cb12ef34176f39661e03475e9058c2527981bc9f1aa6635255a4ffd)
+- https://stonestorm.gg/assets/ArenaPetCard-CiZkb4pC.js (200, SHA-256: 3439a5e4087390b97fdb7551d57837f2c1068b2fe969afd9c37a297810a19bf7)
+- https://stonestorm.gg/assets/better-spot-DG7pOd9t.js (200, SHA-256: 8dbd87a00d825d974ec0798999fe163c695ad3c48aef2d251b364d31770f808d)
+- https://stonestorm.gg/assets/BiologistPanel-DHV4EYeu.js (200, SHA-256: 6aafa571d11f589a7c3d807e7eceb60ef25dab7c81f3ef9ae17a7cafcd9bcfd3)
+- https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js (200, SHA-256: 4cf9009e5da125eb2cab0da21022cf9a08ec8b43338408e5ad54dab703051156)
+- https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js (200, SHA-256: 899e5d12efe1b2101456806272b56b6805ad84f4fe585dabc7736aec41344c10)
+- https://stonestorm.gg/assets/BoardPanel-DtAOEz9-.js (200, SHA-256: 29a7e3b41fec7e61630e43b650e841b357960f44cc3988c25c24273ca6079877)
+- https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js (200, SHA-256: fd588ec9c88d0430a162e271358ebb503a1d6b72c6af1a446e112f9627153b76)
+- https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js (200, SHA-256: c431828682d13bd5ce513592ef9d59239c4988338d2b92c09ecd25fbe55c8c75)
+- https://stonestorm.gg/assets/bossdark-7i-l3wZF.js (200, SHA-256: 2f010a42b337a53956c7ec33184758a5abf1d970318dee5a569074a19837fc69)
+- https://stonestorm.gg/assets/BulkSell-Dy4cQ_pN.js (200, SHA-256: dc17a9959934cebab7c58c7972f58f3c9618ab43512d61e63689c5c4793f93ff)
+- https://stonestorm.gg/assets/CaptainPanel-BJZjoEX3.js (200, SHA-256: 16f809b884f319b3c9307b025412f8f0e0c88350b4ad08c3c45a4ac84fee0cae)
+- https://stonestorm.gg/assets/challenge-store-Kl3srms8.js (200, SHA-256: d2b7e403bfad5e85b010002f006263dc899f5065dc284789485ec8672672eb66)
+- https://stonestorm.gg/assets/char-mods-BRU8F7Xa.js (200, SHA-256: 6c3e4f571a09fe3e627647b8f99d225128e2e5435e08f30cd023a18b53871594)
+- https://stonestorm.gg/assets/char-view-mj03IgLp.js (200, SHA-256: fdc89c335c260e470f14b1e4e07cdc812d3abbd2427715746ecacf0c7737ca01)
+- https://stonestorm.gg/assets/CharacterPage-Bs0nnomn.js (200, SHA-256: 33b71e3f40707d19e9958b95c9d19228d8584857505cd646a5e441f5c9b0ad36)
+- https://stonestorm.gg/assets/BestiaryPanel-DHPGplTm.js (200, SHA-256: 8531ed70fa39d5756b4bba6501c60af096e3f785db6a721c90e0c05e4764435f)
+- https://stonestorm.gg/assets/CharacterPage-C7pgUz-D.css (200, SHA-256: 78237aa5b333b73c8eaae37ff9fc8d15f81328553814d243fb5e10bb0b281978)
+- https://stonestorm.gg/assets/CharacterSelectPage-FdQhPOcH.js (200, SHA-256: 2ecc51a04fba9ab596614abfcefa3c367c5929d3dcb452224659a7243dbc4e09)
 
 ## Ellenőrzésre vár
 
@@ -692,6 +732,46 @@ Importálható rekordok: 0; ellenőrzésre váró tételek: 465.
 - `https://stonestorm.gg/assets/forge.pt-onT9jz5e.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
 - `https://stonestorm.gg/assets/forge.ro-DHyeZLcn.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
 - `https://stonestorm.gg/assets/forge.ru-Dj_JQBTh.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.sk-Bkkh96WE.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.sl-BP8rCDHP.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.sq-BK2NGYOm.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.sr-CFqHVmoy.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.sv-t1ZYg-j-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.tr-CkhpeeLg.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/forge.uk-1lOLEXIZ.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/fr-BSEAYTf0.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/game-center-BW5-1v4R.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/GameApp-Du2HaLsq.css`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/GameApp-StvnmmXt.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/index-BEbMsSxF.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AccessPage-Cp4MqeWS.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AccountPage-Dd-ITpl2.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AccountPanel-D2aQqCr4.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/achievements-DwFz1kro.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AlchemistPanel-ChFJtir-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/AmbientFx-CRf1gO-O.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/api-Br2Akyii.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/appstore-DbbtM_Sg.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/arena-oXX4J5m6.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/ArenaPage-AvfFBGrE.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/ArenaPetCard-CiZkb4pC.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/better-spot-DG7pOd9t.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BiologistPanel-DHV4EYeu.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BlockConfirm-C21KGUu-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/blocks-store-YKbrUmq7.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BoardPanel-DtAOEz9-.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BoardTable-CBKw0Ga2.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/boss-brave-DgX_VdXG.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/bossdark-7i-l3wZF.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BulkSell-Dy4cQ_pN.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/CaptainPanel-BJZjoEX3.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/challenge-store-Kl3srms8.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/char-mods-BRU8F7Xa.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/char-view-mj03IgLp.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/CharacterPage-Bs0nnomn.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/BestiaryPanel-DHPGplTm.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/CharacterPage-C7pgUz-D.css`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
+- `https://stonestorm.gg/assets/CharacterSelectPage-FdQhPOcH.js`: Új vagy módosult publikus kliens / fordítás; importálás nélkül megőrzött hash
 
 ## Változások
 
