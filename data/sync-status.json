@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-15T11:13:14.924Z",
+  "lastSuccessfulCheck": "2026-11-15T11:16:04.990Z",
   "gameVersion": "5231690b6864",
   "atlasDataVersion": "5231690b6864",
   "lastAutomaticUpdate": "2026-11-15T11:13:14.924Z",
@@ -8,14 +8,14 @@
     "added": 0,
     "changed": 1
   },
-  "mode": "apply",
+  "mode": "read-only",
   "changeCounts": {
     "added": 0,
     "changed": 0,
     "removed": 0
   },
-  "importable": 1,
-  "pending": 421,
+  "importable": 0,
+  "pending": 465,
   "pendingItems": [
     {
       "path": "/achievementSets/bandit",
