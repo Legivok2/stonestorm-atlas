@@ -6,6 +6,7 @@ import '../js/atlas-math.js';
 import '../js/pet-system.js';
 import '../js/planner-model.js';
 const db=JSON.parse(fs.readFileSync(new URL('../data/atlas.json',import.meta.url),'utf8'));
+const setEvidence=JSON.parse(fs.readFileSync(new URL('../data/set-bonus-evidence.json',import.meta.url),'utf8'));
 const math=globalThis.StonestormMath,rates=db.economy.limits.guildSpeedup;
 test('Céhes gyorsítás: megkezdett órák és ársávhatárok',()=>{
   assert.equal(math.speedup(22,11,rates),2200);
@@ -64,7 +65,9 @@ test('Planner: family alapján aktív szettküszöbök, külön kezelt százalé
   const model=globalThis.StonestormPlanner,b=model.empty(db,'ninja');b.level=60;b.targetFamily='m1';b.petId='pet_wolf';b.petLevel=10;b.mountId='pony';
   b.gear={weapon:{id:'w_ninja_set_m1',plus:0},armor:{id:'a_ninja_set_m1',plus:0}};
   const result=model.calculate(b,db);assert.equal(result.sets[0].count,2);assert.equal(result.sets[0].active.length,1);assert.equal(result.sets[0].inactive.length,2);
-  assert.equal(result.equipment.maxHp,0);assert.equal(result.sets[0].active[0].stats[0].value,65);
+  assert.equal(result.equipment.maxHp,0);assert.deepEqual(result.sets[0].active[0],{pieces:2,stats:[{stat:'maxHp',value:100}]});
+  assert.deepEqual(result.sets[0].inactive.map(bonus=>bonus.pieces),[4,6]);
+  assert.deepEqual([...result.sets[0].active,...result.sets[0].inactive],db.sets.find(set=>set.familyId==='m1').bonuses);
   assert.equal(result.pet.rawSpeciesBonus.xpMult,.1);assert.equal(result.mount.travelMult,.9);
   assert.equal(result.levelStats,null);assert.equal(result.finalCombatStats,null);
   const roundtrip=model.parse(JSON.stringify(result.build),db);assert.deepEqual(roundtrip.build,result.build);
@@ -88,7 +91,25 @@ test('Forráslefedettség, egyedi azonosítók és visszakövethető rekordok',(
   for(const [key,count] of Object.entries({items:182,sets:6,pets:22,mounts:8,maps:6,mobs:64,bosses:6,dungeons:4,research:14})){
     assert.equal(db[key].length,count,key);
     assert.equal(new Set(db[key].map(x=>x.id)).size,count,key+' duplikátum');
-    assert(db[key].every(x=>x.provenance?.source&&x.provenance.checkedAt==='2026-11-06'),key+' forrás');
+    if(key==='sets'){
+      assert.match(setEvidence.source,/spine\.sets\.full/);
+      assert.match(setEvidence.source,/spine\.lines\.scaled\/percent/);
+      assert.equal(setEvidence.results.length,count);
+      for(const set of db.sets){
+        const evidence=setEvidence.results.find(record=>record.familyId===set.familyId);
+        assert(evidence,set.familyId+' visszakövethető bizonyíték');
+        assert.match(set.provenance?.source??'',/spine\.sets\.full/);
+        assert.match(set.provenance.source,/spine\.lines\.scaled\/percent/);
+        assert(set.provenance.source.includes(setEvidence.gameContentVersion),set.familyId+' forrásverzió');
+        assert.equal(set.provenance.checkedAt,setEvidence.verifiedAt,set.familyId+' ellenőrzési dátum');
+        assert.equal(set.provenance.status,setEvidence.directlyConfirmedInGame.includes(set.familyId)?'verified':'derived',set.familyId+' megbízhatóság');
+        assert(set.provenance.scope?.trim(),set.familyId+' forráshatókör');
+        assert.equal(set.itemLevel,evidence.level);
+        assert.deepEqual(set.bonuses,evidence.bonuses,set.familyId+' bizonyítékhoz kapcsolt bónuszok');
+      }
+    }else{
+      assert(db[key].every(x=>x.provenance?.source&&x.provenance.checkedAt==='2026-11-06'),key+' forrás');
+    }
   }
   assert.equal(db.economy.stackables.length,131);
   assert.equal(db.sources.length,14);

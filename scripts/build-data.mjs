@@ -24,7 +24,7 @@ const unique = (rows, key='id') => {
 const db = {
   version:2, updated:'2026-11-06', dataVersion:config.version,
   items:unique(records(gear.items,1,x=>({...x,name:x.nameHu,nameEn:null}))),
-  sets:unique(records(gear.collectionFamilies.families,1,x=>({...x.set,familyId:x.id,mapIndex:x.mapIndex,itemLevel:x.itemLevel,bossId:x.bossId,unique:x.unique,loot:x.loot,name:`${world.maps.find(m=>m.index===x.mapIndex)?.nameHu ?? x.id} · szettcsalád`,nameIsEditorial:true}))),
+  sets:unique(records(gear.collectionFamilies.families,1,x=>({...x.set,familyId:x.id,mapIndex:x.mapIndex,itemLevel:x.itemLevel,bossId:x.bossId,unique:x.unique,loot:x.loot,name:`${world.maps.find(m=>m.index===x.mapIndex)?.nameHu ?? x.id} · szettcsalád`,nameIsEditorial:true})).map(set=>({...set,provenance:{source:'spine.sets.full + spine.lines.scaled/percent (api/content 658dc911d321)',checkedAt:'2026-11-12',status:set.familyId==='m4'?'verified':'derived',scope:set.familyId==='m4'?'A Romőr szett 2/4/6 bónusza játékbeli képernyőképpel igazolt':'A mentett játékadat képletéből számolva; élő játékbeli ellenőrzés nem történt'}}))),
   pets:unique(records(pets.types,3,x=>({...x,name:x.nameHu,nameEn:null}))),
   petTraits:pets.traits, petSkills:petSystem.v3.skills, petSkillNames:petSystem.locale.skills,
   petForms:petSystem.v3.forms, petRules:pets.rules, petSystem,

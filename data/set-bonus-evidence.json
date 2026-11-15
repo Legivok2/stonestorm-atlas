@@ -1,0 +1,235 @@
+{
+  "verifiedAt": "2026-11-12",
+  "gameContentVersion": "658dc911d321",
+  "source": "Saved Stonestorm /api/content; spine.sets.full and spine.lines.scaled/percent",
+  "rules": "2 / 4 / 6 items, FULL set scheme; T3 for 2 and 4 pieces, T4 for 6 pieces (M6 T5)",
+  "directlyConfirmedInGame": [
+    "m4"
+  ],
+  "otherFamilies": "Calculated from saved game rules, NOT independently checked against the live game",
+  "specialNote": "The in-game Szett-bónusz +2% modifier is separate from these displayed base values.",
+  "results": [
+    {
+      "familyId": "m1",
+      "level": 11,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 100
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 10
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.08
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "potionHeal",
+              "value": 0.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "m2",
+      "level": 26,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 27
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 288
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.082
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "skillDamage",
+              "value": 0.179
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "m3",
+      "level": 37,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 467
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 42
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.082
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "critDamage",
+              "value": 0.297
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "m4",
+      "level": 46,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 56
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 638
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.083
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "lifesteal",
+              "value": 0.035
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "m5",
+      "level": 54,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 805
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 70
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.084
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "damageTaken",
+              "value": 0.084
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "m6",
+      "level": 60,
+      "bonuses": [
+        {
+          "pieces": 2,
+          "stats": [
+            {
+              "stat": "attack",
+              "value": 81
+            }
+          ]
+        },
+        {
+          "pieces": 4,
+          "stats": [
+            {
+              "stat": "maxHp",
+              "value": 940
+            },
+            {
+              "stat": "vsBoss",
+              "value": 0.084
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "stats": [
+            {
+              "stat": "critDamage",
+              "value": 0.448
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

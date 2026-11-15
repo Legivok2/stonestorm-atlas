@@ -3827,7 +3827,7 @@
               "stats": [
                 {
                   "stat": "maxHp",
-                  "value": 65
+                  "value": 100
                 }
               ]
             },
@@ -3835,8 +3835,8 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsBandit",
-                  "value": 0.08
+                  "stat": "attack",
+                  "value": 10
                 },
                 {
                   "stat": "vsBoss",
@@ -3849,7 +3849,7 @@
               "stats": [
                 {
                   "stat": "potionHeal",
-                  "value": 0.075
+                  "value": 0.08
                 }
               ]
             }
@@ -3932,7 +3932,7 @@
               "stats": [
                 {
                   "stat": "attack",
-                  "value": 14
+                  "value": 27
                 }
               ]
             },
@@ -3940,12 +3940,12 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsOrc",
-                  "value": 0.08
+                  "stat": "maxHp",
+                  "value": 288
                 },
                 {
                   "stat": "vsBoss",
-                  "value": 0.08
+                  "value": 0.082
                 }
               ]
             },
@@ -3954,7 +3954,7 @@
               "stats": [
                 {
                   "stat": "skillDamage",
-                  "value": 0.12
+                  "value": 0.179
                 }
               ]
             }
@@ -4037,7 +4037,7 @@
               "stats": [
                 {
                   "stat": "maxHp",
-                  "value": 145
+                  "value": 467
                 }
               ]
             },
@@ -4045,12 +4045,12 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsDesert",
-                  "value": 0.08
+                  "stat": "attack",
+                  "value": 42
                 },
                 {
                   "stat": "vsBoss",
-                  "value": 0.08
+                  "value": 0.082
                 }
               ]
             },
@@ -4059,7 +4059,7 @@
               "stats": [
                 {
                   "stat": "critDamage",
-                  "value": 0.3
+                  "value": 0.297
                 }
               ]
             }
@@ -4142,7 +4142,7 @@
               "stats": [
                 {
                   "stat": "attack",
-                  "value": 21
+                  "value": 56
                 }
               ]
             },
@@ -4150,12 +4150,12 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsIce",
-                  "value": 0.08
+                  "stat": "maxHp",
+                  "value": 638
                 },
                 {
                   "stat": "vsBoss",
-                  "value": 0.08
+                  "value": 0.083
                 }
               ]
             },
@@ -4164,7 +4164,7 @@
               "stats": [
                 {
                   "stat": "lifesteal",
-                  "value": 0.03
+                  "value": 0.035
                 }
               ]
             }
@@ -4248,7 +4248,7 @@
               "stats": [
                 {
                   "stat": "maxHp",
-                  "value": 190
+                  "value": 805
                 }
               ]
             },
@@ -4256,12 +4256,12 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsFire",
-                  "value": 0.08
+                  "stat": "attack",
+                  "value": 70
                 },
                 {
                   "stat": "vsBoss",
-                  "value": 0.08
+                  "value": 0.084
                 }
               ]
             },
@@ -4270,7 +4270,7 @@
               "stats": [
                 {
                   "stat": "damageTaken",
-                  "value": 0.045
+                  "value": 0.084
                 }
               ]
             }
@@ -4354,7 +4354,7 @@
               "stats": [
                 {
                   "stat": "attack",
-                  "value": 26
+                  "value": 81
                 }
               ]
             },
@@ -4362,12 +4362,12 @@
               "pieces": 4,
               "stats": [
                 {
-                  "stat": "vsUndead",
-                  "value": 0.08
+                  "stat": "maxHp",
+                  "value": 940
                 },
                 {
                   "stat": "vsBoss",
-                  "value": 0.08
+                  "value": 0.084
                 }
               ]
             },
@@ -4376,7 +4376,7 @@
               "stats": [
                 {
                   "stat": "critDamage",
-                  "value": 0.525
+                  "value": 0.448
                 }
               ]
             }
