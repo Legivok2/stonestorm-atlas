@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-16T18:20:44.001Z",
+  "checkedAt": "2026-11-16T18:23:35.800Z",
   "status": "unchanged",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
@@ -6882,12 +6882,33 @@
   "changes": [],
   "accepted": [],
   "resourceChanges": [],
-  "publicSystems": null,
-  "clientInspected": false,
-  "discovery": {
-    "inspected": false
+  "publicSystems": {
+    "entrypointConfirmed": false,
+    "warnings": [
+      {
+        "url": "https://stonestorm.gg/",
+        "reason": "HTTP 403; nincs hozzáférés-megkerülés, a korábbi nyilvános hivatkozásjegyzéket használjuk"
+      }
+    ],
+    "compatibility": {
+      "safe": true,
+      "changed": false
+    }
   },
-  "warnings": [],
+  "clientInspected": true,
+  "discovery": {
+    "requests": 1,
+    "downloadedBytes": 0,
+    "unfetched": 0,
+    "maxRequests": 48,
+    "maxBytes": 12582912
+  },
+  "warnings": [
+    {
+      "url": "https://stonestorm.gg/",
+      "reason": "HTTP 403 – https://stonestorm.gg/"
+    }
+  ],
   "review": [
     {
       "path": "/achievementSets/bandit",
@@ -27151,7 +27172,7 @@
     "activity": {
       "new": 0,
       "carried": 393,
-      "automatic": 1,
+      "automatic": 0,
       "documented": 0,
       "manual": 10
     }
