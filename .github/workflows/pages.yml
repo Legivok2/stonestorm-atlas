@@ -20,6 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Set up Node for readiness checks
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Install locked readiness dependencies
+        run: npm ci
       - name: Require full Atlas data and publication authorization
         id: inputs
         run: node scripts/check-pages-inputs.mjs --require-full
