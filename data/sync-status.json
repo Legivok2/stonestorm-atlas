@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-16T11:23:31.338Z",
+  "lastSuccessfulCheck": "2026-11-16T15:21:34.714Z",
   "gameVersion": "c530ea20d7ec",
   "atlasDataVersion": "c530ea20d7ec",
   "lastAutomaticUpdate": "2026-11-16T11:23:31.338Z",
@@ -10,11 +10,11 @@
   },
   "mode": "apply",
   "changeCounts": {
-    "added": 2,
-    "changed": 2,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
-  "importable": 1,
+  "importable": 0,
   "reportUrl": "https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md",
   "reviewVersion": 2,
   "pending": 394,
@@ -1063,9 +1063,9 @@
     },
     "resolvedTotal": 184,
     "activity": {
-      "new": 2,
-      "carried": 393,
-      "automatic": 1,
+      "new": 0,
+      "carried": 394,
+      "automatic": 0,
       "documented": 0,
       "manual": 10
     }
@@ -1174,6 +1174,26 @@
               "title": "Fejlődési és egyensúlyozási szabályok",
               "status": "open",
               "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hátasok",
+      "count": 1,
+      "topics": [
+        {
+          "title": "Hátas · számított utazási idő",
+          "classification": "unsupported",
+          "count": 1,
+          "paths": [
+            {
+              "path": "/mounts/kalmarteve",
+              "title": "Hátas · számított utazási idő",
+              "status": "open",
+              "reason": "Ismert rendszer – importáló támogatás hiányzik",
               "proof": null
             }
           ]
@@ -4193,37 +4213,7 @@
       ]
     }
   ],
-  "processedGroups": [
-    {
-      "name": "Világ és bossok",
-      "count": 1,
-      "topics": [
-        {
-          "title": "Világ és bossok · ellenőrzendő adat",
-          "classification": "automatic",
-          "count": 1,
-          "paths": [
-            {
-              "path": "/mobs/ev_rablovezer",
-              "title": "Világ és bossok · ellenőrzendő adat",
-              "status": "resolved",
-              "reason": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
-              "proof": {
-                "kind": "automatic-import",
-                "rule": "validated-record-match-v1",
-                "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
-                "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
-                "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
-                "resolvedAt": "2026-11-16T11:23:31.338Z",
-                "gameVersion": "c530ea20d7ec",
-                "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "processedGroups": [],
   "resolvedGroups": [
     {
       "name": "Aréna",
@@ -8535,55 +8525,5 @@
       ]
     }
   ],
-  "currentGroups": [
-    {
-      "name": "Hátasok",
-      "count": 1,
-      "topics": [
-        {
-          "title": "Hátas · számított utazási idő",
-          "classification": "unsupported",
-          "count": 1,
-          "paths": [
-            {
-              "path": "/mounts/kalmarteve",
-              "title": "Hátas · számított utazási idő",
-              "status": "open",
-              "reason": "Ismert rendszer – importáló támogatás hiányzik",
-              "proof": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Világ és bossok",
-      "count": 1,
-      "topics": [
-        {
-          "title": "Világ és bossok · ellenőrzendő adat",
-          "classification": "automatic",
-          "count": 1,
-          "paths": [
-            {
-              "path": "/mobs/ev_rablovezer",
-              "title": "Világ és bossok · ellenőrzendő adat",
-              "status": "resolved",
-              "reason": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
-              "proof": {
-                "kind": "automatic-import",
-                "rule": "validated-record-match-v1",
-                "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
-                "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
-                "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
-                "resolvedAt": "2026-11-16T11:23:31.338Z",
-                "gameVersion": "c530ea20d7ec",
-                "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "currentGroups": []
 }

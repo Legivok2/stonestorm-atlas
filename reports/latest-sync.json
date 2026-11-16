@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-16T11:23:31.338Z",
-  "status": "applied",
-  "applied": true,
+  "checkedAt": "2026-11-16T15:21:34.714Z",
+  "status": "unchanged",
+  "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
   "gameVersion": "c530ea20d7ec",
-  "atlasDataVersion": "5231690b6864",
+  "atlasDataVersion": "c530ea20d7ec",
   "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
   "sources": [
     {
@@ -14,7 +14,7 @@
       "etag": "\"pwJT3z8ae5T6YV-jl2HM7QS92Ai.PpXwjONVH9-gzip\"",
       "lastModified": null,
       "bytes": 194404,
-      "status": 200
+      "status": 304
     },
     {
       "url": "https://stonestorm.gg/",
@@ -6875,86 +6875,12 @@
     }
   ],
   "counts": {
-    "added": 2,
-    "changed": 2,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
-  "changes": [
-    {
-      "kind": "added",
-      "path": "/mobs/ev_rablovezer",
-      "after": {
-        "id": "ev_rablovezer",
-        "level": 1,
-        "tags": [
-          "bandit",
-          "boss"
-        ],
-        "materialId": null,
-        "statLevel": 1,
-        "harcero": 146,
-        "maxHp": 200,
-        "atkMin": 29,
-        "atkMax": 78,
-        "def": 5,
-        "xp": 450,
-        "nyangMin": 280,
-        "nyangMax": 520
-      },
-      "category": "Világ és bossok"
-    },
-    {
-      "kind": "added",
-      "path": "/mounts/kalmarteve",
-      "after": {
-        "id": "kalmarteve",
-        "level": 1,
-        "travelMult": 0.5,
-        "currency": "event",
-        "price": 0,
-        "days": 14,
-        "ramp": [
-          {
-            "level": 1,
-            "travelMult": 0.8
-          },
-          {
-            "level": 15,
-            "travelMult": 0.7
-          },
-          {
-            "level": 20,
-            "travelMult": 0.6
-          },
-          {
-            "level": 25,
-            "travelMult": 0.5
-          }
-        ]
-      },
-      "category": "Kísérők és hátasok"
-    },
-    {
-      "kind": "changed",
-      "path": "/tag",
-      "before": "QPjbLmRZoXGgANGxyUD_1L3TO2Q",
-      "after": "pwJT3z8ae5T6YV-jl2HM7QS92Ai",
-      "category": "Egyéb / ismeretlen rendszer"
-    },
-    {
-      "kind": "changed",
-      "path": "/version",
-      "before": "5231690b6864",
-      "after": "c530ea20d7ec",
-      "category": "Egyéb / ismeretlen rendszer"
-    }
-  ],
-  "accepted": [
-    {
-      "path": "/mobs/ev_rablovezer",
-      "kind": "added"
-    }
-  ],
+  "changes": [],
+  "accepted": [],
   "resourceChanges": [],
   "publicSystems": {
     "entrypointConfirmed": false,
@@ -13571,7 +13497,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-16T11:23:31.338Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Hátasok",
       "classification": "unsupported",
       "title": "Hátas · számított utazási idő"
@@ -27195,7 +27121,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-16T11:23:31.338Z",
       "status": "resolved",
-      "carried": false,
+      "carried": true,
       "system": "Világ és bossok",
       "classification": "automatic",
       "title": "Világ és bossok · ellenőrzendő adat",
@@ -27221,7 +27147,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-16T11:23:31.338Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Hátasok",
       "classification": "unsupported",
       "title": "Hátas · számított utazási idő"
@@ -27250,9 +27176,9 @@
     },
     "resolvedTotal": 184,
     "activity": {
-      "new": 2,
-      "carried": 393,
-      "automatic": 1,
+      "new": 0,
+      "carried": 394,
+      "automatic": 0,
       "documented": 0,
       "manual": 10
     }

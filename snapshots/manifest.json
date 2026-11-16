@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-16T11:23:31.338Z",
+  "checkedAt": "2026-11-16T15:21:34.714Z",
   "gameVersion": "c530ea20d7ec",
   "content": {
     "url": "https://stonestorm.gg/api/content",
@@ -8,7 +8,7 @@
     "etag": "\"pwJT3z8ae5T6YV-jl2HM7QS92Ai.PpXwjONVH9-gzip\"",
     "lastModified": null,
     "bytes": 194404,
-    "status": 200
+    "status": 304
   },
   "resources": {
     "https://stonestorm.gg/": {
