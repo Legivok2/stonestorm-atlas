@@ -116,7 +116,8 @@ function processingProof(entry,{plan,content,db,aliases,sourceHash}){
   if(db.homeArena){
     for(const [key,p] of Object.entries(systemPaths)){
       const parent=entry.path===p.slice(0,-6)&&p.endsWith('/level')&&Object.keys(atPath(content,entry.path)??{}).length===1;
-      if((entry.path===p||parent)&&atPath(content,p)===db.homeArena.api[key])return {kind:'automatic-import',rule:'validated-home-arena-api-v1',sourceHash,valueHash:witness(atPath(content,entry.path)),explanation:'Az Otthon/Aréna ismert API-mezője egyezik a forrással; a kapcsoló nem bizonyít további játékszabályt.'};
+      const expected=atPath(content,p);
+      if((entry.path===p||parent)&&plan.resolved.includes(p)&&expected!==undefined&&expected===db.homeArena.api[key])return {kind:'automatic-import',rule:'validated-home-arena-api-v1',sourceHash,valueHash:witness(atPath(content,entry.path)),explanation:'Az Otthon/Aréna ismert API-mezője egyezik a forrással; a kapcsoló nem bizonyít további játékszabályt.'};
     }
   }
   const setMatch=entry.path.match(/^\/spine\/sets\/([^/]+)\/full(?:\/|$)/);

@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {collectPublicSystems} from '../scripts/collect-home-arena.mjs';
 import {staticModule,clientReferences} from '../scripts/public-client-data.mjs';
-import {apiSystemValues,validateHomeArena,compatibleClientData,systemPaths} from '../scripts/home-arena-model.mjs';
+import {apiSystemValues,validateHomeArena,compatibleClientData,systemPaths,planHomeArena} from '../scripts/home-arena-model.mjs';
 import {planImport,applyOverlay,sha256} from '../scripts/atlas-sync-model.mjs';
 import {reconcileReview} from '../scripts/sync-review.mjs';
 import '../addons/stonestorm-statcap-overlay/research-sanitizer.js';
@@ -46,8 +46,18 @@ test('Kliensfelderítés: hash-elt importokból dolgozik, nem fix fájlnevekből
   assert.deepEqual(refs,['https://stonestorm.gg/assets/HomeModal-NEW12345.js','https://stonestorm.gg/assets/ArenaPage-OTHER456.js']);
 });
 test('Régi ellenőrzési tétel: csak a ténylegesen beépített API-mező zárul le, nem a teljes kliensfájl',()=>{
-  const c=content(),d=db(),plan=planImport(c,d),r=reconcileReview({previous:{review:[{path:'/features/homeRooms',changeKind:'added'},{path:'/onboarding/unlocks/arena.bandit',changeKind:'added'},{path:'https://stonestorm.gg/assets/ArenaPage-old.js'}]},plan,content:c,db:d,sources:[],sourceHash:sha256(JSON.stringify(c)),now:new Date().toISOString()});
+  // Rögzített, egyetlen verziójú adapteradatok; a változó éles snapshot nem tesztfixture.
+  const c={version:'review_fixture_v1',features:{homeRooms:true,homeThemes:true,teahouse:true,banditArena:true,banditTrophy:true},onboarding:{unlocks:{'city.home':{level:10},'arena.pure':{level:20},'arena.bandit':{level:21},'nav.arena':{level:21}}},expedition:{refill:{amount:25}}};
+  const d={homeArena:{api:apiSystemValues(c)}},plan={resolved:[],validatedDungeons:[],...planHomeArena(c,d,{},()=>{})};
+  const previous={review:[{path:'/features/homeRooms',changeKind:'added'},{path:'/onboarding/unlocks/arena.bandit',changeKind:'added'},{path:'https://stonestorm.gg/assets/ArenaPage-old.js'}]};
+  const review=(content,db,plan)=>reconcileReview({previous,plan,content,db,sources:[],sourceHash:sha256(JSON.stringify(content)),now:'2026-11-15T12:00:00Z'});
+  const r=review(c,d,plan);
   assert.equal(r.closedNow.length,2);assert.equal(r.open.length,1);assert.equal(r.open[0].classification,'observation');
+  const pending=structuredClone(d);pending.homeArena.api.banditLevel=20;
+  assert.equal(review(c,pending,plan).closedNow.length,1,'A puszta importterv nem bizonyít tényleges beépítést');
+  const missing=structuredClone(c);delete missing.features.homeRooms;
+  const invalid={resolved:[],validatedDungeons:[],...planHomeArena(missing,d,{},()=>{})};
+  assert.equal(review(missing,d,invalid).closedNow.length,0,'Hiányos rendszerkonfigurációból nincs lezárási bizonyíték');
 });
 test('Anonim export: fiókadat, ellenféllista, egyenleg, név és token soha nem kerül ki',()=>{
   const raw={name:'PRIVATE_NAME',characterId:'PRIVATE_ID',access_token:'PRIVATE_'+'TOKEN',wallet:123456789,opponents:[{name:'PRIVATE_ENEMY',id:'PRIVATE_OTHER'}],home:{owned:['PRIVATE_OWNERSHIP'],tier:5,rules:{maxTier:8,playerName:'PRIVATE_NAME'},tiers:[{tier:1,minLevel:10,price:0,owner:'PRIVATE_ID'}],offers:[{id:'furrug',price:42,name:'PRIVATE_NAME',owned:true},{id:'PRIVATE_ID',price:999}]}};

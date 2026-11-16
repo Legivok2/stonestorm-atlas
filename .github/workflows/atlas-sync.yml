@@ -52,6 +52,7 @@ jobs:
         run: |
           npm run check
           npm test
+          npm run test:sync:apply
       - name: Build and verify changed Atlas before committing
         if: steps.sync.outputs.publish == 'true'
         run: |

@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {API,sha256,diffJSON,validateContent,fullSetBonuses,planImport,applyOverlay,equal} from '../scripts/atlas-sync-model.mjs';
-import {runSync,fetchPublic,discover} from '../scripts/atlas-sync.mjs';
+import {runSync,fetchPublic,discover,syncStateFiles} from '../scripts/atlas-sync.mjs';
 import {dungeonRecord,dungeonStructure} from '../scripts/dungeon-sync.mjs';
 import {reconcileReview,reviewGroups,loadReviewAliases} from '../scripts/sync-review.mjs';
 
@@ -107,10 +107,30 @@ test('Auto-Sync: hibás JSON, hiányos válasz és HTTP-hiba megőrzi az utolsó
   }
 });
 test('Auto-Sync: sikertelen importteszt minden generált adatot visszaállít',async t=>{
-  const dir=workspace(t),before=fs.readFileSync(path.join(dir,'data/sync-import.json')),atlas=fs.readFileSync(path.join(dir,'data/atlas.json'));
-  const c=source();c.items.push({...c.items[0],id:'test_rollback'});
-  await assert.rejects(runSync({root:dir,apply:true,inspect:false,fetcher:async()=>Response.json(c),verify:()=>{fs.writeFileSync(path.join(dir,'data/atlas.json'),'broken');throw Error('test failure');}}),/test failure/);
-  assert(fs.readFileSync(path.join(dir,'data/sync-import.json')).equals(before));assert(fs.readFileSync(path.join(dir,'data/atlas.json')).equals(atlas));
+  const dir=workspace(t),before=new Map(syncStateFiles.map(file=>[file,fs.existsSync(path.join(dir,file))?fs.readFileSync(path.join(dir,file)):null]));
+  const c=source();c.version='rollback_candidate';c.items.push({...c.items[0],id:'test_rollback'});
+  const output=path.join(dir,'step-output');
+  await assert.rejects(runSync({root:dir,apply:true,inspect:false,outputFile:output,fetcher:async()=>Response.json(c),verify:()=>{
+    assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'snapshots/current/content.json'))).version,c.version);
+    assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'snapshots/manifest.json'))).content.sha256,sha256(JSON.stringify(c)));
+    for(const file of syncStateFiles){fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});fs.writeFileSync(path.join(dir,file),'broken test output');}
+    throw Error('test failure');
+  }}),/test failure/);
+  for(const [file,bytes] of before)if(bytes===null)assert(!fs.existsSync(path.join(dir,file)),file);else assert(fs.readFileSync(path.join(dir,file)).equals(bytes),file);
+  assert.equal(fs.readFileSync(output,'utf8'),'publish=false\n');
+  const failure=JSON.parse(fs.readFileSync(path.join(dir,'reports/failed-sync.json')));assert.equal(failure.applied,false);assert.deepEqual(failure.rollbackErrors,[]);
+});
+
+test('Auto-Sync: késői állapotírási hiba az importot, snapshotot és új történeti fájlt is visszavonja',async t=>{
+  const dir=workspace(t),before=new Map(syncStateFiles.map(file=>[file,fs.existsSync(path.join(dir,file))?fs.readFileSync(path.join(dir,file)):null]));
+  const c=source();c.version='late_failure_candidate';c.items.push({...c.items[0],id:'late_rollback'});
+  await assert.rejects(runSync({root:dir,apply:true,inspect:false,outputFile:dir,fetcher:async()=>Response.json(c),verify:()=>{
+    const d=JSON.parse(fs.readFileSync(path.join(dir,'data/atlas.json'))),overlay=JSON.parse(fs.readFileSync(path.join(dir,'data/sync-import.json')));
+    applyOverlay(d,overlay);fs.writeFileSync(path.join(dir,'data/atlas.json'),JSON.stringify(d));
+  }}));
+  for(const [file,bytes] of before)if(bytes===null)assert(!fs.existsSync(path.join(dir,file)),file);else assert(fs.readFileSync(path.join(dir,file)).equals(bytes),file);
+  assert(!fs.existsSync(path.join(dir,'snapshots/history',sha256(before.get('snapshots/current/content.json'))+'.json')));
+  assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'reports/failed-sync.json'))).applied,false);
 });
 test('Auto-Sync: snapshot-hash eltérése blokkolja az importot',async t=>{
   const dir=workspace(t),file=path.join(dir,'snapshots/current/content.json'),before=fs.readFileSync(file);

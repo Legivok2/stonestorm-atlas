@@ -9,7 +9,8 @@ import {compatibleClientData} from './home-arena-model.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=(root,file,fallback=null)=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):fallback;
-function write(root,file,value){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});const temp=target+'.tmp';fs.writeFileSync(temp,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(temp,target);}
+function write(root,file,value){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});const temp=target+'.tmp';try{fs.writeFileSync(temp,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(temp,target);}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
+export const syncStateFiles=['data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
 export async function fetchPublic(url,previous,fetcher=fetch){
   const u=new URL(url);
   if(u.origin!=='https://stonestorm.gg'||u.username||u.password)throw Error('Nem engedélyezett adatforrás');
@@ -76,6 +77,11 @@ function markdown(r){
 
 export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date().toISOString(),inspect=true,verify,outputFile}={}){
   const previous=read(root,'snapshots/manifest.json',{schema:1,resources:{}}),old=read(root,'snapshots/current/content.json');
+  // A külső build kimenetei és az összes állapotfájl közös tranzakcióban vannak.
+  const backup=new Map();
+  const remember=file=>{if(!backup.has(file)){const target=path.join(root,file);backup.set(file,fs.existsSync(target)?fs.readFileSync(target):null);}};
+  for(const file of syncStateFiles)remember(file);
+  const save=(file,value)=>{remember(file);write(root,file,value);};
   let report={schema:1,checkedAt:now,status:'failed',applied:false};
   try{
     const fetched=await fetchPublic(API,old?previous.content:null,fetcher);
@@ -109,17 +115,19 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const statusBefore=read(root,'data/sync-status.json',{});
     const newStatus={schema:1,lastSuccessfulCheck:now,gameVersion:content.version,atlasDataVersion:plan.accepted.length&&apply?content.version:db.dataVersion,lastAutomaticUpdate:statusBefore.lastAutomaticUpdate??null,lastImportCounts:statusBefore.lastImportCounts??{added:0,changed:0},mode:apply?'apply':'read-only',changeCounts:report.counts,importable:plan.accepted.length,reportUrl:'https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md'};
     if(apply&&plan.accepted.length){
-      const targets=['data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json'];
-      const backup=new Map(targets.map(f=>[f,fs.existsSync(path.join(root,f))?fs.readFileSync(path.join(root,f)):null]));
-      try{
-        write(root,'data/sync-import.json',plan.overlay);
-        if(clientCandidate){const previousSystem=read(root,'data/home-arena.json');write(root,'reports/history/home-arena/'+sha256(previousSystem)+'.json',previousSystem);write(root,'data/home-arena.json',clientCandidate);}
-        if(verify)await verify();else{
-          for(const [program,args] of [[process.execPath,['scripts/build-data.mjs']],...(process.platform==='win32'?[['cmd.exe',['/d','/s','/c','npm test']]]:[['npm',['test']]])]){
-            const result=spawnSync(program,args,{cwd:root,stdio:'inherit'});if(result.status!==0)throw Error('Importellenőrzés sikertelen: '+args.join(' '));
-          }
+      save('data/sync-import.json',plan.overlay);
+      if(clientCandidate){const previousSystem=read(root,'data/home-arena.json');save('reports/history/home-arena/'+sha256(previousSystem)+'.json',previousSystem);save('data/home-arena.json',clientCandidate);}
+      // A build és az npm test ugyanazt a jelölt verziót olvassa. Ez még nem
+      // publikálás: a snapshot és manifest is visszaáll bármely későbbi hibánál.
+      if(!unchanged)save('snapshots/current/content.json',contentBytes);
+      save('snapshots/manifest.json',{schema:1,checkedAt:now,gameVersion:content.version,content:contentMeta,resources:inventory.resources,discovered:inventory.discovered});
+      if(verify)await verify();else{
+        // A gyermek tesztfuttató saját eredményt ad, és nem írhat a szülő Actions-kimenetébe.
+        const env={...process.env};delete env.NODE_TEST_CONTEXT;delete env.GITHUB_OUTPUT;delete env.GITHUB_STATE;
+        for(const [program,args] of [[process.execPath,['scripts/build-data.mjs']],...(process.platform==='win32'?[['cmd.exe',['/d','/s','/c','npm test']]]:[['npm',['test']]])]){
+          const result=spawnSync(program,args,{cwd:root,stdio:'inherit',env});if(result.status!==0)throw Error('Importellenőrzés sikertelen: '+args.join(' '));
         }
-      }catch(e){for(const [file,bytes] of backup){if(bytes===null){if(fs.existsSync(path.join(root,file)))fs.unlinkSync(path.join(root,file));}else fs.writeFileSync(path.join(root,file),bytes);}throw e;}
+      }
       report.applied=true;report.status='applied';newStatus.lastAutomaticUpdate=now;newStatus.lastImportCounts={added:plan.accepted.filter(x=>x.kind==='added').length,changed:plan.accepted.filter(x=>x.kind==='changed').length};
     }
     // Csak a ténylegesen újraépített, tesztelt Atlas-adat adhat importlezárási bizonyítékot.
@@ -127,20 +135,22 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     report.review=reconciled.open;report.reviewLedger=reconciled.ledger;report.reviewSummary=reconciled.summary;report.reviewBaseline=reconciled.baseline;
     const closed=new Set(reconciled.closedNow);
     Object.assign(newStatus,{reviewVersion:2,pending:report.review.length,pendingItems:report.review.slice(0,60),reviewSummary:reconciled.summary,groups:reviewGroups(report.review.filter(x=>x.carried)),manualGroups:reviewGroups(report.review.filter(x=>['mechanism','conflict'].includes(x.classification))),processedGroups:reviewGroups(reconciled.ledger.filter(x=>closed.has(x.id))),resolvedGroups:reviewGroups(reconciled.ledger.filter(x=>x.status==='resolved')),currentGroups:reviewGroups(reconciled.ledger.filter(x=>!x.carried))});
-    // Csak teljes, érvényes válasz és sikeres tranzakció után váltható az aktuális snapshot.
+    // Történeti archiválás és állapotmentés; a tranzakció még visszavonható.
     if(!unchanged){
-      if(old)write(root,'snapshots/history/'+previous.content.sha256+'.json',old);
-      write(root,'snapshots/current/content.json',contentBytes);
+      if(old)save('snapshots/history/'+previous.content.sha256+'.json',old);
+      save('snapshots/current/content.json',contentBytes);
     }
-    write(root,'snapshots/manifest.json',{schema:1,checkedAt:now,gameVersion:content.version,content:contentMeta,resources:inventory.resources,discovered:inventory.discovered});
-    if(publicSystemsCache){const previousClient=read(root,'snapshots/current/home-arena-client.json',null);if(previousClient&&sha256(previousClient.modules)!==sha256(publicSystemsCache.modules))write(root,'reports/history/home-arena-client/'+sha256(previousClient)+'.json',previousClient);write(root,'snapshots/current/home-arena-client.json',publicSystemsCache);}
-    write(root,'data/sync-status.json',newStatus);
-    write(root,'js/sync-status.js','/* Generált Auto-Sync állapot. */\nwindow.STONESTORM_SYNC_STATUS = '+JSON.stringify(newStatus).replaceAll('<','\\u003c')+';\n');
-    write(root,'reports/latest-sync.json',report);write(root,'reports/latest-sync.md',markdown(report));
+    save('snapshots/manifest.json',{schema:1,checkedAt:now,gameVersion:content.version,content:contentMeta,resources:inventory.resources,discovered:inventory.discovered});
+    if(publicSystemsCache){const previousClient=read(root,'snapshots/current/home-arena-client.json',null);if(previousClient&&sha256(previousClient.modules)!==sha256(publicSystemsCache.modules))save('reports/history/home-arena-client/'+sha256(previousClient)+'.json',previousClient);save('snapshots/current/home-arena-client.json',publicSystemsCache);}
+    save('data/sync-status.json',newStatus);
+    save('js/sync-status.js','/* Generált Auto-Sync állapot. */\nwindow.STONESTORM_SYNC_STATUS = '+JSON.stringify(newStatus).replaceAll('<','\\u003c')+';\n');
+    save('reports/latest-sync.json',report);save('reports/latest-sync.md',markdown(report));
     if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied}\nreview=${report.review.length>0}\n`);
     return report;
   }catch(e){
-    report={...report,status:'failed',error:e.message};
+    const rollbackErrors=[];
+    for(const [file,bytes] of [...backup].reverse())try{const target=path.join(root,file);if(bytes===null){if(fs.existsSync(target))fs.unlinkSync(target);}else fs.writeFileSync(target,bytes);}catch(restoreError){rollbackErrors.push({file,error:restoreError.message});}
+    report={...report,status:'failed',applied:false,error:e.message,rollbackErrors};
     write(root,'reports/failed-sync.json',report);write(root,'reports/failed-sync.md',markdown(report));
     if(outputFile)fs.appendFileSync(outputFile,'publish=false\n');
     throw e;

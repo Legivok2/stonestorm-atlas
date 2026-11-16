@@ -34,7 +34,8 @@
     "check:pages:ready": "node scripts/check-pages-inputs.mjs",
     "sync:check": "node scripts/atlas-sync.mjs --read-only",
     "sync:apply": "node scripts/atlas-sync.mjs --apply",
-    "test:sync": "node --test tests/atlas-sync.test.mjs",
+    "test:sync": "node --test tests/atlas-sync.test.mjs tests/sync-apply.test.mjs",
+    "test:sync:apply": "node --test tests/sync-apply.test.mjs",
     "test:sync:browser": "node tests/atlas-sync-browser.mjs",
     "test:home-arena": "node --test tests/home-arena.test.mjs",
     "test:home-arena:browser": "node tests/home-arena-browser.mjs"
