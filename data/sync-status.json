@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-16T18:23:35.800Z",
+  "lastSuccessfulCheck": "2026-11-16T19:13:04.985Z",
   "gameVersion": "c530ea20d7ec",
   "atlasDataVersion": "c530ea20d7ec",
   "lastAutomaticUpdate": "2026-11-16T11:23:31.338Z",
@@ -8,7 +8,7 @@
     "added": 1,
     "changed": 0
   },
-  "mode": "read-only",
+  "mode": "apply",
   "changeCounts": {
     "added": 0,
     "changed": 0,
