@@ -268,6 +268,35 @@
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
+      },
+      "ev_rablovezer": {
+        "record": {
+          "id": "ev_rablovezer",
+          "level": 1,
+          "tags": [
+            "bandit",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 146,
+          "maxHp": 200,
+          "atkMin": 29,
+          "atkMax": 78,
+          "def": 5,
+          "xp": 450,
+          "nyangMin": 280,
+          "nyangMax": 520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_rablovezer",
+          "sha256": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+          "gameVersion": "c530ea20d7ec",
+          "checkedAt": "2026-11-16T11:23:31.338Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
       }
     },
     "stackables": {
@@ -354,9 +383,9 @@
     }
   },
   "sets": {},
-  "gameVersion": "5231690b6864",
-  "checkedAt": "2026-11-15T11:46:29.594Z",
-  "sourceHash": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+  "gameVersion": "c530ea20d7ec",
+  "checkedAt": "2026-11-16T11:23:31.338Z",
+  "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
   "dungeons": {
     "wild": {
       "record": {

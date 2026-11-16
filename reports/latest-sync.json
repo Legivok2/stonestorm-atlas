@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-15T14:56:56.194Z",
-  "status": "unchanged",
-  "applied": false,
+  "checkedAt": "2026-11-16T11:23:31.338Z",
+  "status": "applied",
+  "applied": true,
   "baseline": "Teljes korábbi publikus snapshot",
-  "gameVersion": "5231690b6864",
+  "gameVersion": "c530ea20d7ec",
   "atlasDataVersion": "5231690b6864",
-  "sourceHash": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
+  "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
   "sources": [
     {
       "url": "https://stonestorm.gg/api/content",
-      "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-      "etag": "\"QPjbLmRZoXGgANGxyUD_1L3TO2Q.PpXwjONVH9-gzip\"",
+      "sha256": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+      "etag": "\"pwJT3z8ae5T6YV-jl2HM7QS92Ai.PpXwjONVH9-gzip\"",
       "lastModified": null,
-      "bytes": 194003,
-      "status": 304
+      "bytes": 194404,
+      "status": 200
     },
     {
       "url": "https://stonestorm.gg/",
-      "status": 304,
+      "status": "stale",
       "etag": null,
       "lastModified": "Fri, 13 Nov 2026 21:10:54 GMT",
       "sha256": "534e314f32936ffa40c9c494e1e637b6cd26005f8a694990e60b1c5882c17d23",
@@ -6875,212 +6875,87 @@
     }
   ],
   "counts": {
-    "added": 0,
-    "changed": 0,
+    "added": 2,
+    "changed": 2,
     "removed": 0
   },
-  "changes": [],
-  "accepted": [],
-  "resourceChanges": [
+  "changes": [
     {
-      "url": "https://stonestorm.gg/assets/FightScene-CknPK-MA.css",
-      "sha256": "95976d9e623b87c055c315195c7e3026d641098cdcabd1025d97130481d55d50",
-      "beforeHash": null,
-      "category": "Szettek"
+      "kind": "added",
+      "path": "/mobs/ev_rablovezer",
+      "after": {
+        "id": "ev_rablovezer",
+        "level": 1,
+        "tags": [
+          "bandit",
+          "boss"
+        ],
+        "materialId": null,
+        "statLevel": 1,
+        "harcero": 146,
+        "maxHp": 200,
+        "atkMin": 29,
+        "atkMax": 78,
+        "def": 5,
+        "xp": 450,
+        "nyangMin": 280,
+        "nyangMax": 520
+      },
+      "category": "Világ és bossok"
     },
     {
-      "url": "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js",
-      "sha256": "cdccc1e861a55d274b8807579579e6b2661ae1eff6c2411f4cd1fc2867c31c83",
-      "beforeHash": null,
-      "category": "Szettek"
+      "kind": "added",
+      "path": "/mounts/kalmarteve",
+      "after": {
+        "id": "kalmarteve",
+        "level": 1,
+        "travelMult": 0.5,
+        "currency": "event",
+        "price": 0,
+        "days": 14,
+        "ramp": [
+          {
+            "level": 1,
+            "travelMult": 0.8
+          },
+          {
+            "level": 15,
+            "travelMult": 0.7
+          },
+          {
+            "level": 20,
+            "travelMult": 0.6
+          },
+          {
+            "level": 25,
+            "travelMult": 0.5
+          }
+        ]
+      },
+      "category": "Kísérők és hátasok"
     },
     {
-      "url": "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
-      "sha256": "17d8e9670f680aa77f892603b7de4786747882b3d5ce15239c10dd8b3547823e",
-      "beforeHash": null,
-      "category": "Szettek"
+      "kind": "changed",
+      "path": "/tag",
+      "before": "QPjbLmRZoXGgANGxyUD_1L3TO2Q",
+      "after": "pwJT3z8ae5T6YV-jl2HM7QS92Ai",
+      "category": "Egyéb / ismeretlen rendszer"
     },
     {
-      "url": "https://stonestorm.gg/assets/flag-DkAQ5IRe.js",
-      "sha256": "f68c23e250d1d901b206756e10c808ce8f7574a5e94759df718bfcd1036c2e9a",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
-      "sha256": "7a94c7092f21d297370f3f8ad46d62e82346051df0a280ef2e06e7cb1207b3fb",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js",
-      "sha256": "e6832681c6f4134845f714bded03148a0eb8b2455bcf13736b2d73ec9fdf53e8",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
-      "sha256": "2b564c3120bc54450515300043ad3bec6976be16a57bfaa23c95c97514b952af",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
-      "sha256": "da5bc8d239007000eada3de55f44ab733d151add51a8130e907ee8e5ef6960c1",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
-      "sha256": "43a3a92a8f741be012a7011ebfb3b21d637f09375a77b7c8421cb27d8a3798fc",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
-      "sha256": "fcebd877cdcb25eb0918caee2ed35c07a97e5d3823d89676540eba8c76f98a0f",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/friends-CulwlShS.js",
-      "sha256": "bc4b2096e6351850f60cb2fa51a6adbc1a0895dc73ecf7f21d53d63d6fe87fdd",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
-      "sha256": "7890d6e85d06c8925842beeec11f00263da31f94c094032f0996868985bc2286",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
-      "sha256": "2d5bb73bc9c5c8319c1250973779654f49820ef7613d3fcbc48ee42045dff05d",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js",
-      "sha256": "2b7091dc221c5d6ec96a478c14c26a18bda083b08c23f4e7cbba3a97ab300c57",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
-      "sha256": "d6d3d22ea50b8e3cef3fe601b9b605f9e16d23a79f47fee99f628f07007ea003",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
-      "sha256": "5da44c5eda99763bdc94af780075e8579de2538c3f8f9d82ad864884e730190a",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
-      "sha256": "42b03051c341ad4f6cacfdd1e1833a5743d212b696f0cf404241250ea1c776d3",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
-      "sha256": "3332dcf9f3b22aeb6e2c683eed7af9bbf4977b0cbfe6de22811379d2fa5b9c6e",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
-      "sha256": "579c2983d196cd844c3625cfb4eee75092d8dd76c3c449e1efea479ea2f2c3e7",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
-      "sha256": "f93f4356610ec314c8c303334e395bc19e118a99df05cd762b779d72780b6615",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js",
-      "sha256": "c319f90229e21e26439300eaccc42974123c05e4c49ac8551c14888a9b866e47",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css",
-      "sha256": "39d8f26248d6a68d50f9d4127077c0b1e37dd29ed5c8ca94bf5e586e5d8447ea",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css",
-      "sha256": "f02759fcdb122e4de4295bc6d24c998361722772716a3af3262221a67c4f7863",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js",
-      "sha256": "4cd415ee612ae15b7ffbb4dd0143f0ccb9b11e8752d225e362ace671dba9b036",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js",
-      "sha256": "7fe21263a9081fa77314793d26a24b8be21d6b46df53e587847d91f67ae11573",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css",
-      "sha256": "4dd43e9578b705d8aaf55a177ba1cf1d6505ee29b894ce7f20706ffff29aa2f6",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/Guide-BYAFplcF.css",
-      "sha256": "c2d1f921b895c7c77e2a76a0c0461e989e4476bcc7c702045a07c8bbe3b9a206",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
-      "sha256": "7d8e86eec674c18e3fcacf616f12f2b65e36af8ac085c34add7f7f0c1e7e313e",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
-      "sha256": "fc3e6c5b27891fe4f59299683009deb37d873a03f1eecaa428a06165651595fe",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
-      "sha256": "c8d7f9bdfb3fcefa947116fb2a2992875a12ec8ccd2cf7dd798b0e458b769a39",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/GuildPage-DVNwsQj9.js",
-      "sha256": "8e71997419401c64a002bf2beaf682291650c79be15bf2030268d0f21778a67e",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js",
-      "sha256": "5db3596082f0e3d6e776be09aa6ea775fafc494460c1e11e8a92e03c1fba3461",
-      "beforeHash": null,
-      "category": "Szettek"
-    },
-    {
-      "url": "https://stonestorm.gg/assets/HalloweenAmbience-DiFJSPIc.js",
-      "sha256": "f3cc11f174c2c8ecad61efc078993fb1fc1bb6c19afa16eb92c8b5733c392ade",
-      "beforeHash": null,
-      "category": "Szettek"
+      "kind": "changed",
+      "path": "/version",
+      "before": "5231690b6864",
+      "after": "c530ea20d7ec",
+      "category": "Egyéb / ismeretlen rendszer"
     }
   ],
+  "accepted": [
+    {
+      "path": "/mobs/ev_rablovezer",
+      "kind": "added"
+    }
+  ],
+  "resourceChanges": [],
   "publicSystems": {
     "entrypointConfirmed": false,
     "warnings": [
@@ -7096,16 +6971,16 @@
   },
   "clientInspected": true,
   "discovery": {
-    "requests": 48,
-    "downloadedBytes": 1645900,
-    "unfetched": 770,
+    "requests": 1,
+    "downloadedBytes": 0,
+    "unfetched": 0,
     "maxRequests": 48,
     "maxBytes": 12582912
   },
   "warnings": [
     {
-      "url": "https://stonestorm.gg/admin/assets/admin-DBV8_4d5.js",
-      "reason": "HTTP 403 – https://stonestorm.gg/admin/assets/admin-DBV8_4d5.js"
+      "url": "https://stonestorm.gg/",
+      "reason": "HTTP 403 – https://stonestorm.gg/"
     }
   ],
   "review": [
@@ -13072,7 +12947,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13091,7 +12966,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13110,7 +12985,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13129,7 +13004,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13148,7 +13023,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13167,7 +13042,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13186,7 +13061,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13205,7 +13080,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13224,7 +13099,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13243,7 +13118,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13262,7 +13137,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13281,7 +13156,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13300,7 +13175,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13319,7 +13194,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13338,7 +13213,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13357,7 +13232,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13376,7 +13251,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13395,7 +13270,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13414,7 +13289,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13433,7 +13308,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13452,7 +13327,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13471,7 +13346,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13490,7 +13365,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13509,7 +13384,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13528,7 +13403,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13547,7 +13422,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13566,7 +13441,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13585,7 +13460,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13604,7 +13479,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13623,7 +13498,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Céh",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13642,7 +13517,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Céh",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13661,7 +13536,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -13680,10 +13555,26 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
+    },
+    {
+      "path": "/mounts/kalmarteve",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "d4a6d0f1506f9bd32052b6d3d820401428422a289b8aa8e80dada94f2a1ab4e6",
+      "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
+      "firstSeenAt": "2026-11-16T11:23:31.338Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-16T11:23:31.338Z",
+      "status": "open",
+      "carried": false,
+      "system": "Hátasok",
+      "classification": "unsupported",
+      "title": "Hátas · számított utazási idő"
     }
   ],
   "reviewLedger": [
@@ -26680,7 +26571,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26699,7 +26590,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26718,7 +26609,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26737,7 +26628,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26756,7 +26647,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26775,7 +26666,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26794,7 +26685,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26813,7 +26704,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26832,7 +26723,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26851,7 +26742,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26870,7 +26761,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26889,7 +26780,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26908,7 +26799,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26927,7 +26818,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26946,7 +26837,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26965,7 +26856,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -26984,7 +26875,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27003,7 +26894,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27022,7 +26913,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27041,7 +26932,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27060,7 +26951,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27079,7 +26970,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27098,7 +26989,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27117,7 +27008,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27136,7 +27027,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27155,7 +27046,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27174,7 +27065,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27193,7 +27084,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27212,7 +27103,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27231,7 +27122,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Céh",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27250,7 +27141,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Céh",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27269,7 +27160,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
@@ -27288,10 +27179,52 @@
       "identity": null,
       "lastSeenAt": "2026-11-15T14:56:56.194Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
+    },
+    {
+      "path": "/mobs/ev_rablovezer",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "cabf4c390b7098b9cf5d6fa990b012f33583a123a42515ed4890f91d2d299946",
+      "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
+      "firstSeenAt": "2026-11-16T11:23:31.338Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-16T11:23:31.338Z",
+      "status": "resolved",
+      "carried": false,
+      "system": "Világ és bossok",
+      "classification": "automatic",
+      "title": "Világ és bossok · ellenőrzendő adat",
+      "resolution": {
+        "kind": "automatic-import",
+        "rule": "validated-record-match-v1",
+        "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+        "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
+        "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+        "resolvedAt": "2026-11-16T11:23:31.338Z",
+        "gameVersion": "c530ea20d7ec",
+        "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
+      }
+    },
+    {
+      "path": "/mounts/kalmarteve",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "d4a6d0f1506f9bd32052b6d3d820401428422a289b8aa8e80dada94f2a1ab4e6",
+      "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
+      "firstSeenAt": "2026-11-16T11:23:31.338Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-16T11:23:31.338Z",
+      "status": "open",
+      "carried": false,
+      "system": "Hátasok",
+      "classification": "unsupported",
+      "title": "Hátas · számított utazási idő"
     }
   ],
   "reviewSummary": {
@@ -27307,19 +27240,19 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 393,
+    "open": 394,
     "classified": {
       "automatic": 0,
-      "unsupported": 65,
+      "unsupported": 66,
       "mechanism": 8,
       "observation": 318,
       "conflict": 2
     },
-    "resolvedTotal": 183,
+    "resolvedTotal": 184,
     "activity": {
-      "new": 33,
-      "carried": 360,
-      "automatic": 0,
+      "new": 2,
+      "carried": 393,
+      "automatic": 1,
       "documented": 0,
       "manual": 10
     }

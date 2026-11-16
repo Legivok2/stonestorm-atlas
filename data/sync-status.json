@@ -1,23 +1,23 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-15T14:56:56.194Z",
-  "gameVersion": "5231690b6864",
-  "atlasDataVersion": "5231690b6864",
-  "lastAutomaticUpdate": "2026-11-15T11:46:29.594Z",
+  "lastSuccessfulCheck": "2026-11-16T11:23:31.338Z",
+  "gameVersion": "c530ea20d7ec",
+  "atlasDataVersion": "c530ea20d7ec",
+  "lastAutomaticUpdate": "2026-11-16T11:23:31.338Z",
   "lastImportCounts": {
-    "added": 0,
-    "changed": 4
+    "added": 1,
+    "changed": 0
   },
-  "mode": "read-only",
+  "mode": "apply",
   "changeCounts": {
-    "added": 0,
-    "changed": 0,
+    "added": 2,
+    "changed": 2,
     "removed": 0
   },
-  "importable": 0,
+  "importable": 1,
   "reportUrl": "https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md",
   "reviewVersion": 2,
-  "pending": 393,
+  "pending": 394,
   "pendingItems": [
     {
       "path": "/achievementSets/bandit",
@@ -1053,19 +1053,19 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 393,
+    "open": 394,
     "classified": {
       "automatic": 0,
-      "unsupported": 65,
+      "unsupported": 66,
       "mechanism": 8,
       "observation": 318,
       "conflict": 2
     },
-    "resolvedTotal": 183,
+    "resolvedTotal": 184,
     "activity": {
-      "new": 33,
-      "carried": 360,
-      "automatic": 0,
+      "new": 2,
+      "carried": 393,
+      "automatic": 1,
       "documented": 0,
       "manual": 10
     }
@@ -1107,7 +1107,7 @@
     },
     {
       "name": "Céh",
-      "count": 1,
+      "count": 3,
       "topics": [
         {
           "title": "Játékrendszerek elérhetőségi kapcsolói",
@@ -1119,6 +1119,27 @@
               "title": "Játékrendszerek elérhetőségi kapcsolói",
               "status": "open",
               "reason": "Ismert rendszer – importáló támogatás hiányzik",
+              "proof": null
+            }
+          ]
+        },
+        {
+          "title": "Kliensfájlok és fordítások forrásleltára",
+          "classification": "observation",
+          "count": 2,
+          "paths": [
+            {
+              "path": "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/GuildPage-DVNwsQj9.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
               "proof": null
             }
           ]
@@ -1626,7 +1647,7 @@
     },
     {
       "name": "Kovácsolás és anyagok",
-      "count": 281,
+      "count": 312,
       "topics": [
         {
           "title": "Kövek és alapanyagok beszerzési forrásai",
@@ -1666,7 +1687,7 @@
         {
           "title": "Kliensfájlok és fordítások forrásleltára",
           "classification": "observation",
-          "count": 277,
+          "count": 308,
           "paths": [
             {
               "path": "https://stonestorm.gg/",
@@ -3606,6 +3627,223 @@
               "status": "open",
               "reason": "Korábbi első megfigyelés / forrásleltár",
               "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FightScene-CknPK-MA.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/flag-DkAQ5IRe.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/friends-CulwlShS.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/Guide-BYAFplcF.css",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            },
+            {
+              "path": "https://stonestorm.gg/assets/HalloweenAmbience-DiFJSPIc.js",
+              "title": "Kliensfájlok és fordítások forrásleltára",
+              "status": "open",
+              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
             }
           ]
         }
@@ -3955,7 +4193,37 @@
       ]
     }
   ],
-  "processedGroups": [],
+  "processedGroups": [
+    {
+      "name": "Világ és bossok",
+      "count": 1,
+      "topics": [
+        {
+          "title": "Világ és bossok · ellenőrzendő adat",
+          "classification": "automatic",
+          "count": 1,
+          "paths": [
+            {
+              "path": "/mobs/ev_rablovezer",
+              "title": "Világ és bossok · ellenőrzendő adat",
+              "status": "resolved",
+              "reason": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+              "proof": {
+                "kind": "automatic-import",
+                "rule": "validated-record-match-v1",
+                "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+                "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
+                "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+                "resolvedAt": "2026-11-16T11:23:31.338Z",
+                "gameVersion": "c530ea20d7ec",
+                "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "resolvedGroups": [
     {
       "name": "Aréna",
@@ -8215,7 +8483,7 @@
     },
     {
       "name": "Világ és bossok",
-      "count": 1,
+      "count": 2,
       "topics": [
         {
           "title": "Világboss feltételei",
@@ -8240,32 +8508,48 @@
               }
             }
           ]
+        },
+        {
+          "title": "Világ és bossok · ellenőrzendő adat",
+          "classification": "automatic",
+          "count": 1,
+          "paths": [
+            {
+              "path": "/mobs/ev_rablovezer",
+              "title": "Világ és bossok · ellenőrzendő adat",
+              "status": "resolved",
+              "reason": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+              "proof": {
+                "kind": "automatic-import",
+                "rule": "validated-record-match-v1",
+                "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+                "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
+                "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+                "resolvedAt": "2026-11-16T11:23:31.338Z",
+                "gameVersion": "c530ea20d7ec",
+                "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
+              }
+            }
+          ]
         }
       ]
     }
   ],
   "currentGroups": [
     {
-      "name": "Céh",
-      "count": 2,
+      "name": "Hátasok",
+      "count": 1,
       "topics": [
         {
-          "title": "Kliensfájlok és fordítások forrásleltára",
-          "classification": "observation",
-          "count": 2,
+          "title": "Hátas · számított utazási idő",
+          "classification": "unsupported",
+          "count": 1,
           "paths": [
             {
-              "path": "https://stonestorm.gg/assets/GuildInvites-DnSWhiyX.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
+              "path": "/mounts/kalmarteve",
+              "title": "Hátas · számított utazási idő",
               "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/GuildPage-DVNwsQj9.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
+              "reason": "Ismert rendszer – importáló támogatás hiányzik",
               "proof": null
             }
           ]
@@ -8273,230 +8557,29 @@
       ]
     },
     {
-      "name": "Kovácsolás és anyagok",
-      "count": 31,
+      "name": "Világ és bossok",
+      "count": 1,
       "topics": [
         {
-          "title": "Kliensfájlok és fordítások forrásleltára",
-          "classification": "observation",
-          "count": 31,
+          "title": "Világ és bossok · ellenőrzendő adat",
+          "classification": "automatic",
+          "count": 1,
           "paths": [
             {
-              "path": "https://stonestorm.gg/assets/FightScene-CknPK-MA.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FishingPage-BAiDy0c-.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FishingCupCard-DgioDYW1.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/flag-DkAQ5IRe.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/flags-Bh4CQmYm.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/ForgeModal-B9S_EjSb.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/AwakenTab-BW9iVqd0.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/bossdark-BLqpMcr5.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/bossdark-CUdh8GX7.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/ForgePuzzleTab-Do1kJoAi.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/friends-CulwlShS.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/friends-model-Bi6-GVgk.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/friends-store-B-vnXZLY.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FriendsButton-CTKvwAAM.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FriendsWindow-Cm1aXmxp.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/community-model--YkSwIPT.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/CommunityChat-C2fy5vcH.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/CommunityChat-HvPU5v6b.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/DirectThread-CwbzUzMc.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/DirectThread-ecdGv-Ep.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FullscreenHelp-BJBcouCn.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/FullscreenHelp-Di0VRBLt.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/gear-sheets-CdasZ70g.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/GiftReveal-Ct4YIvnw.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/GiveawayPage-CzhVeZLV.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/GiveawayPage-DT7ctPbL.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/Guide-BYAFplcF.css",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/Guide-Cz0TSPjo.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/GlossaryModal-Bi5uR3fU.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/halloween-audio-C6W4f5Se.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
-            },
-            {
-              "path": "https://stonestorm.gg/assets/HalloweenAmbience-DiFJSPIc.js",
-              "title": "Kliensfájlok és fordítások forrásleltára",
-              "status": "open",
-              "reason": "Korábbi első megfigyelés / forrásleltár",
-              "proof": null
+              "path": "/mobs/ev_rablovezer",
+              "title": "Világ és bossok · ellenőrzendő adat",
+              "status": "resolved",
+              "reason": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+              "proof": {
+                "kind": "automatic-import",
+                "rule": "validated-record-match-v1",
+                "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+                "valueHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d",
+                "explanation": "Az ismert séma valid és az Atlas értéke igazoltan megegyezik a nyilvános API-val.",
+                "resolvedAt": "2026-11-16T11:23:31.338Z",
+                "gameVersion": "c530ea20d7ec",
+                "targetHash": "284cce2cf85b19293cd7bf55112943437312288ef72cfc9dc8f0860a018ca57d"
+              }
             }
           ]
         }
