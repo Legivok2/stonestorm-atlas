@@ -49,3 +49,22 @@ npm run test:pages
 ```
 
 A GitHub-workflow-k a zárolt buildfüggőséget `npm ci` paranccsal telepítik. A hatórás ütemezés, a közvetlen Pages-deploy és a tesztkapuk megmaradnak. A felülvizsgált integráció main-push után a meglévő Pages-workflow-val adható ki; az éles állapotot a sikeres deploy és az élő fájlok ellenőrzése igazolja.
+## Új anonim Otthon-minta – 2026. november 16-i feldolgozás
+
+A kapott export az addon **0.9.5** verziójából származik, két mintával: `/api/home/rooms` és `/api/sinks`. Az export nem adja meg a megfigyelés időpontját vagy a játékverziót. A nyilvános, szigorúan validált adatok a `data/home-observations.json` fájlban vannak, az eredeti fájl SHA-256 lenyomatával. Helyi fájlútvonal, fiókadat és saját kísérőadat nem került bele.
+
+- 8 házfok ár-, építési idő-, AFK-óra- és napi energiamezője.
+- 8 normál és 6 luxusbútor ára/kényelme. A normál bolt külön nyangos és VÉ-s vételi útját a rögzített HomeModal kliensmodul mutatja; az árakat nem adjuk össze.
+- 4 téma: a mintában egyenként 250 VÉ, 3. házfoktól.
+- 4 szoba: a mintában 10-es fejlesztési maximum; ez nem a kísérők szintkorlátja.
+- 3 feltételes szobafejlesztési ajánlat:
+
+| Szobaazonosító | Célszint | Megfigyelt nyangár | Építési idő |
+| --- | ---: | ---: | ---: |
+| rest | 5 | 2 259 600 | 15 óra |
+| workshop | 3 | 1 232 500 | 9 óra |
+| hall | 2 | 821 700 | 6 óra |
+
+A `garden` szobához nincs árajánlat az exportban. A `days: 0` mezőt nem értelmeztük korlátlan felhalmozásként. Egyetlen nézetből nem vezettünk le általános árképletet vagy minden játékosra érvényes bónuszt. Az adatok külön megfigyelési csatornán maradnak; az Auto-Sync nyilvános szabályadatait nem írják felül.
+
+Ebben az exportban nincs kísérőkonfiguráció vagy `petArt` képjegyzék, így a jelenlegi kísérőképek forrásbizonyítottsága változatlan.

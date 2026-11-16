@@ -8,7 +8,7 @@
     "build:data": "node scripts/build-data.mjs && python scripts/build-images.py",
     "build:images": "python scripts/build-images.py",
     "check": "node scripts/check.mjs",
-    "test": "node --test tests/data-engine.test.mjs tests/atlas.test.mjs tests/publication.test.mjs tests/stat-limits.test.mjs tests/bonus-system.test.mjs tests/pet-system.test.mjs tests/addon.test.mjs tests/set-bonuses.test.mjs tests/atlas-sync.test.mjs tests/home-arena.test.mjs tests/addon-095.test.mjs tests/addon-pet-source.test.mjs && npm run test:addon:source",
+    "test": "node --test tests/home-observations.test.mjs tests/data-engine.test.mjs tests/atlas.test.mjs tests/publication.test.mjs tests/stat-limits.test.mjs tests/bonus-system.test.mjs tests/pet-system.test.mjs tests/addon.test.mjs tests/set-bonuses.test.mjs tests/atlas-sync.test.mjs tests/home-arena.test.mjs tests/addon-095.test.mjs tests/addon-pet-source.test.mjs && npm run test:addon:source",
     "build:addon": "node scripts/addon-package.mjs",
     "build:addon:pets": "node scripts/build-addon-pets.mjs",
     "refresh:addon:pets": "node scripts/build-addon-pets.mjs --refresh",

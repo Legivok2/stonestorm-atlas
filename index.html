@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0b111b" />
+    <meta name="theme-color" content="#0c1215" />
     <meta
       name="description"
       content="Magyar Stonestorm Wiki és Atlas: felszerelések, szettek, kísérők, hátasok, bossok, céhes kalkulátorok és kereshető kezdőkalauz."
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/stat-addon.css" />
     <link rel="stylesheet" href="css/sync.css" />
     <link rel="stylesheet" href="css/home-arena.css" />
+    <link rel="stylesheet" href="css/atlas-theme.css" />
     <script src="js/content.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/atlas-data.js" defer></script>
@@ -227,7 +228,7 @@
 
       <section id="atlas" class="atlas-section" aria-labelledby="atlas-heading">
         <div class="container">
-          <div class="atlas-masthead"><div><p class="eyebrow">TUDÁS A KÖVETKEZŐ KALANDHOZ</p><h2 id="atlas-heading">A Stonestorm Atlas</h2></div><span class="atlas-version">ADATVERZIÓ · 2026.11.06.</span></div>
+          <div class="atlas-masthead"><div><p class="eyebrow">TUDÁS A KÖVETKEZŐ KALANDHOZ</p><h2 id="atlas-heading">A Stonestorm Atlas</h2></div><span class="atlas-version" id="atlas-data-version">ADATVERZIÓ</span></div>
           <div id="atlas-stats" class="atlas-stats"></div>
           <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keress tárgyat, kísérőt, bosst vagy útmutatót…" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" hidden>×</button><kbd>/</kbd></div>
           <div class="atlas-layout"><aside class="atlas-sidebar"><p class="eyebrow">A KÓDEX FEJEZETEI</p><nav id="atlas-nav" aria-label="Atlas kategóriák"></nav><div class="atlas-sidebar-note"><span class="atlas-dot"></span> Helyi adatbázis<p>Magyar nevek. Visszakövethető források. Jelölt hiányok.</p><a href="#atlas/sources">Az adatokról →</a></div></aside><div class="atlas-main"><div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div></div></div>

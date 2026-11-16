@@ -1,0 +1,229 @@
+{
+  "schema": 1,
+  "provenance": {
+    "source": "user-provided-anonymized-export",
+    "sourceHash": "98c52e75eadca52c4a0c03170d81bdbedd73276c5d3f4d557220fe1e4927dc83",
+    "addonVersion": "0.9.5",
+    "observedAt": null,
+    "status": "observed",
+    "scope": "One anonymous server view. Prices and next-upgrade quotes may depend on player state; no global formula or currency inferred."
+  },
+  "samples": [
+    {
+      "schema": 1,
+      "endpoint": "/api/home/rooms",
+      "observedOnly": true,
+      "scope": "Anonymous catalog/rule fields and conditional quotes; not global server rules",
+      "data": {
+        "rooms": [
+          {
+            "id": "rest",
+            "maxLevel": 10,
+            "days": 0,
+            "observedNextQuote": {
+              "price": 2259600,
+              "hours": 15,
+              "targetLevel": 5
+            }
+          },
+          {
+            "id": "workshop",
+            "maxLevel": 10,
+            "days": 0,
+            "observedNextQuote": {
+              "price": 1232500,
+              "hours": 9,
+              "targetLevel": 3
+            }
+          },
+          {
+            "id": "hall",
+            "maxLevel": 10,
+            "days": 0,
+            "observedNextQuote": {
+              "price": 821700,
+              "hours": 6,
+              "targetLevel": 2
+            }
+          },
+          {
+            "id": "garden",
+            "maxLevel": 10,
+            "days": 0
+          }
+        ],
+        "themes": {
+          "minTier": 3,
+          "list": [
+            {
+              "id": "blossom",
+              "coins": 250
+            },
+            {
+              "id": "moonnight",
+              "coins": 250
+            },
+            {
+              "id": "winter",
+              "coins": 250
+            },
+            {
+              "id": "dragongold",
+              "coins": 250
+            }
+          ]
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "endpoint": "/api/sinks",
+      "observedOnly": true,
+      "scope": "Anonymous catalog/rule fields and conditional quotes; not global server rules",
+      "data": {
+        "home": {
+          "tiers": [
+            {
+              "tier": 1,
+              "price": 0,
+              "hours": 4,
+              "afkHours": 0.5,
+              "energyPerDay": 2
+            },
+            {
+              "tier": 2,
+              "price": 556800,
+              "hours": 8,
+              "afkHours": 0.5,
+              "energyPerDay": 4
+            },
+            {
+              "tier": 3,
+              "price": 1360600,
+              "hours": 12,
+              "afkHours": 1,
+              "energyPerDay": 4
+            },
+            {
+              "tier": 4,
+              "price": 5167000,
+              "hours": 16,
+              "afkHours": 1,
+              "energyPerDay": 6
+            },
+            {
+              "tier": 5,
+              "price": 13479400,
+              "hours": 20,
+              "afkHours": 1.5,
+              "energyPerDay": 6
+            },
+            {
+              "tier": 6,
+              "price": 16433300,
+              "hours": 24,
+              "afkHours": 1.5,
+              "energyPerDay": 8
+            },
+            {
+              "tier": 7,
+              "price": 26600000,
+              "hours": 28,
+              "afkHours": 1.5,
+              "energyPerDay": 8
+            },
+            {
+              "tier": 8,
+              "price": 45930500,
+              "hours": 32,
+              "afkHours": 1.5,
+              "energyPerDay": 8
+            }
+          ],
+          "offers": [
+            {
+              "id": "jadelion",
+              "price": 2567700,
+              "coins": 320,
+              "comfort": 8
+            },
+            {
+              "id": "stormpanel",
+              "price": 1643300,
+              "coins": 160,
+              "comfort": 4
+            },
+            {
+              "id": "shrimpjar",
+              "price": 1027100,
+              "coins": 80,
+              "comfort": 2
+            },
+            {
+              "id": "floursack",
+              "price": 616200,
+              "coins": 40,
+              "comfort": 1
+            },
+            {
+              "id": "cranescreen",
+              "price": 1027100,
+              "coins": 80,
+              "comfort": 2
+            },
+            {
+              "id": "tigerrug",
+              "price": 1027100,
+              "coins": 80,
+              "comfort": 2
+            },
+            {
+              "id": "dragoneye",
+              "price": 2567700,
+              "coins": 320,
+              "comfort": 8
+            },
+            {
+              "id": "paperlamp",
+              "price": 616200,
+              "coins": 40,
+              "comfort": 1
+            }
+          ],
+          "luxury": [
+            {
+              "id": "moonlantern",
+              "coins": 500,
+              "comfort": 4
+            },
+            {
+              "id": "goatteapot",
+              "coins": 500,
+              "comfort": 4
+            },
+            {
+              "id": "goatportrait",
+              "coins": 750,
+              "comfort": 8
+            },
+            {
+              "id": "incensedragon",
+              "coins": 750,
+              "comfort": 8
+            },
+            {
+              "id": "stormpine",
+              "coins": 1000,
+              "comfort": 8
+            },
+            {
+              "id": "goatthrone",
+              "coins": 1000,
+              "comfort": 8
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -6,6 +6,7 @@
   let extension={};
   const $=s=>document.querySelector(s);
   if(!db||!math){$('#atlas-screen').textContent='Az Atlas adatai nem töltődtek be. Ellenőrizd a js/atlas-data.js fájlt.';return;}
+  $('#atlas-data-version').textContent='ADATVERZIÓ · '+db.dataVersion;
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('hu');
   const num=v=>v===null||v===undefined||!Number.isFinite(Number(v))?'Nem ismert':Number(v).toLocaleString('hu-HU',{maximumFractionDigits:2});
@@ -221,6 +222,7 @@
     const chosen=media?.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id);
     if(kind==='item')body+=extension.bonusInfo?.(x.slot)??'';
     if(chosen)image=media.render(chosen,{className:'atlas-detail-art',alt:x.name});
+    if(kind==='pet')image=petUI.portrait(x);
     const pictures=media?.related(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id)??[];
     return `<p class="eyebrow">STONESTORM ATLAS / ADATLAP</p>${image}<div class="atlas-detail-glyph">${glyph(kind==='item'?x.slot:kind)}</div><h2 id="atlas-detail-title">${esc(x.name??x.id)}</h2><p class="atlas-detail-id">${esc(id)}</p>${extension.actions?.(kind,x)??''}${body}${pictures.length?related('Kapcsolódó grafikák',`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">Teljes Képtár →</a>`):''}${rows([['Angol megnevezés',x.nameEn??'Nem áll rendelkezésre']])}${sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})}`;
   }

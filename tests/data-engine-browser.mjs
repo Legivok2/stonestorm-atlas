@@ -20,10 +20,18 @@ try{
     for(const pet of all){const text=await page.locator(`.atlas-card[href="#atlas/pets/pet/${pet.id}"] .atlas-card-desc`).textContent();assert(text.includes(new Intl.NumberFormat('hu-HU',{maximumFractionDigits:2}).format(pet.value*100)+'%'),pet.id);}
     await card.scrollIntoViewIfNeeded();await card.screenshot({path:path.join(root,'.integration/browser-qa/engine-card-'+name+'.png')});await card.click();
     await page.locator('[data-pet-calculator]').waitFor();assert.equal(await page.locator('[data-pet-bonus]').getAttribute('data-pet-bonus'),'0.04');
+    assert.equal(await page.locator('[data-pet-hero-image] img').getAttribute('data-catalog-image'),'pets/pet_vulture_1');
+    await page.locator('[data-pet-calc-form]').focus();
     await page.locator('[data-pet-calc-form]').selectOption('2');assert.equal(await page.locator('[data-pet-bonus]').getAttribute('data-pet-bonus'),'0.06');
+    assert.equal(await page.locator('[data-pet-hero-image] img').getAttribute('data-catalog-image'),'pets/pet_vulture_2');
+    assert.equal(await page.locator('[data-pet-hero-form]').textContent(),'Fiatal');
+    assert(await page.locator('[data-pet-calc-form]').evaluate(el=>el===document.activeElement));
     assert.equal(await page.locator('[data-pet-calc-result] img').getAttribute('data-catalog-image'),'pets/pet_vulture_2');
     await page.locator('[data-pet-calc-level]').fill('15');await page.locator('[data-pet-calc-level]').dispatchEvent('input');assert.equal(await page.locator('[data-pet-bonus]').getAttribute('data-pet-bonus'),'0.06');
     await page.locator('[data-pet-calc-rank]').fill('2');assert.equal(await page.locator('[data-pet-bonus]').getAttribute('data-pet-bonus'),'0.068');
+    for(const form of [3,4,5,1,2]){await page.locator('[data-pet-calc-form]').selectOption(String(form));assert.equal(await page.locator('[data-pet-hero-image] img').getAttribute('data-catalog-image'),'pets/pet_vulture_'+form);assert.equal(await page.locator('[data-pet-calc-result] img').getAttribute('data-catalog-image'),'pets/pet_vulture_'+form);}
+    await page.locator('#atlas-detail').evaluate(el=>el.scrollTop=0);
+    await page.locator('#atlas-detail').screenshot({path:path.join(root,'.integration/browser-qa/pet-portrait-theme-'+name+'.png')});
     await page.locator('[data-pet-calculator]').screenshot({path:path.join(root,'.integration/browser-qa/engine-detail-'+name+'.png')});
     assert(await page.evaluate(()=>document.querySelector('#atlas-detail').scrollWidth<=document.querySelector('#atlas-detail').clientWidth+1),name+' detail overflow');
     await page.locator('#atlas-detail-close').click();await page.evaluate(()=>location.hash='#atlas/planner');await page.locator('#planner-level').fill('60');await page.locator('#planner-level').dispatchEvent('change');

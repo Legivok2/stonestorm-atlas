@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {applyOverlay} from './atlas-sync-model.mjs';
 import {validateHomeArena} from './home-arena-model.mjs';
 import {applyEngine,validateContract,validateRelations,coverage} from './data-engine.mjs';
+import {validateHomeObservations} from './home-observations.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files = fs.readdirSync(path.join(root, 'source-data')).filter(x => x.endsWith('.json')).sort();
@@ -67,6 +68,7 @@ const images = usedGame.map(id=>{
 db.images=images;
 const homeArenaFile=path.join(root,'data/home-arena.json');
 if(fs.existsSync(homeArenaFile))db.homeArena=validateHomeArena(JSON.parse(fs.readFileSync(homeArenaFile,'utf8')));
+db.homeObservations=validateHomeObservations(JSON.parse(fs.readFileSync(path.join(root,'data/home-observations.json'),'utf8')));
 const syncFile=path.join(root,'data/sync-import.json');
 if(fs.existsSync(syncFile)){
   const overlay=JSON.parse(fs.readFileSync(syncFile,'utf8'));
