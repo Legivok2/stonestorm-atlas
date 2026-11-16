@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "scope": "User-reported game observation, kept separately from computed client fixtures. No account or owned pet identifier.",
+  "observations": [
+    {
+      "speciesId": "pet_vulture",
+      "rarity": "rare",
+      "form": 1,
+      "level": 1,
+      "bonusKey": "dropMult",
+      "displayedPercent": 4,
+      "rawCoefficient": 0.008,
+      "source": "project-owner game UI report in task",
+      "status": "observed",
+      "gameVersion": "not supplied with observation",
+      "rank": "not supplied; verified client calculation agrees at rank 0"
+    }
+  ]
+}

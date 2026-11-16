@@ -28,7 +28,7 @@ export function codeFiles(){
     ...walk(path.join(root,'js')).filter(p=>p.endsWith('.js')&&!['atlas-data.js','image-data.js'].includes(path.basename(p))).map(relative),
     ...['scripts','tests','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|ya?ml)$/.test(p)).map(relative)),
     'stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md',
-    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md'].map(file=>'docs/'+file)
+    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md'].map(file=>'docs/'+file)
   ])].sort();
 }
 export function runtimeFiles(){
@@ -55,7 +55,7 @@ export function sourceFiles(){
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',
     ...['scripts','tests','source-data','data','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|json|ya?ml)$/.test(p)).map(relative)),
     'snapshots/manifest.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','reports/latest-sync.json','reports/latest-sync.md',
-    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md'].map(file=>'docs/'+file)
+    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md'].map(file=>'docs/'+file)
   ];
   return [...new Set(files)].sort();
 }

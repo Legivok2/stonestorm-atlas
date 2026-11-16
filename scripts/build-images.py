@@ -89,6 +89,9 @@ for category,names in manifest.items():
                     relate('dungeon',dungeon['id'],'identified','Pontos rooms[].creatureId; a kapcsolódó kazamata adatlapja')
         if category=='pets':
             for pet in db['pets']:
+                if any(b.get('imageId')==key and b.get('sha256')==digest for b in pet.get('art',{}).get('forms',[])):
+                    relate('pet',pet['id'],'partial','Client Ro/cT logical form key + explicit Tl fallback; historical file hash. Current petArt registry and hash-addressed file mapping not available; data/pet-art-evidence.json')
+            for pet in db['pets']:
                 if name==pet['id'] or re.fullmatch(re.escape(pet['id'])+r'(?:_[1-5])?(?:_sprite)?',name):
                     relate('pet',pet['id'],'partial','Faj-ID + grafikai változat; a sorszám és fejlődési fok kapcsolata nincs igazolva')
         character=None

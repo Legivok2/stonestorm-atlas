@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-16T15:21:34.714Z",
+  "lastSuccessfulCheck": "2026-11-16T18:20:44.001Z",
   "gameVersion": "c530ea20d7ec",
   "atlasDataVersion": "c530ea20d7ec",
   "lastAutomaticUpdate": "2026-11-16T11:23:31.338Z",
@@ -8,7 +8,7 @@
     "added": 1,
     "changed": 0
   },
-  "mode": "apply",
+  "mode": "read-only",
   "changeCounts": {
     "added": 0,
     "changed": 0,
@@ -17,7 +17,7 @@
   "importable": 0,
   "reportUrl": "https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md",
   "reviewVersion": 2,
-  "pending": 394,
+  "pending": 393,
   "pendingItems": [
     {
       "path": "/achievementSets/bandit",
@@ -1053,19 +1053,19 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 394,
+    "open": 393,
     "classified": {
       "automatic": 0,
-      "unsupported": 66,
+      "unsupported": 65,
       "mechanism": 8,
       "observation": 318,
       "conflict": 2
     },
-    "resolvedTotal": 184,
+    "resolvedTotal": 185,
     "activity": {
       "new": 0,
-      "carried": 394,
-      "automatic": 0,
+      "carried": 393,
+      "automatic": 1,
       "documented": 0,
       "manual": 10
     }
@@ -1174,26 +1174,6 @@
               "title": "Fejlődési és egyensúlyozási szabályok",
               "status": "open",
               "reason": "Új vagy megváltozott játékmechanika",
-              "proof": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Hátasok",
-      "count": 1,
-      "topics": [
-        {
-          "title": "Hátas · számított utazási idő",
-          "classification": "unsupported",
-          "count": 1,
-          "paths": [
-            {
-              "path": "/mounts/kalmarteve",
-              "title": "Hátas · számított utazási idő",
-              "status": "open",
-              "reason": "Ismert rendszer – importáló támogatás hiányzik",
               "proof": null
             }
           ]
@@ -4213,7 +4193,37 @@
       ]
     }
   ],
-  "processedGroups": [],
+  "processedGroups": [
+    {
+      "name": "Hátasok",
+      "count": 1,
+      "topics": [
+        {
+          "title": "kalmarteve · számított utazási idő",
+          "classification": "automatic",
+          "count": 1,
+          "paths": [
+            {
+              "path": "/mounts/kalmarteve",
+              "title": "kalmarteve · számított utazási idő",
+              "status": "resolved",
+              "reason": "Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.",
+              "proof": {
+                "kind": "automatic-import",
+                "rule": "data-engine-v2-value-match",
+                "sourceHash": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
+                "valueHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
+                "explanation": "Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.",
+                "resolvedAt": "2026-11-16T18:20:44.001Z",
+                "gameVersion": "c530ea20d7ec",
+                "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "resolvedGroups": [
     {
       "name": "Aréna",
@@ -4285,7 +4295,7 @@
     },
     {
       "name": "Hátasok",
-      "count": 8,
+      "count": 9,
       "topics": [
         {
           "title": "Vértes paripa · számított utazási idő",
@@ -4467,6 +4477,29 @@
                 "resolvedAt": "2026-11-15T11:46:29.594Z",
                 "gameVersion": "5231690b6864",
                 "targetHash": "f35a0cf0ef896a2236d8419cac8a2d85bfb33d12859af555f9cf7825dc785109"
+              }
+            }
+          ]
+        },
+        {
+          "title": "kalmarteve · számított utazási idő",
+          "classification": "automatic",
+          "count": 1,
+          "paths": [
+            {
+              "path": "/mounts/kalmarteve",
+              "title": "kalmarteve · számított utazási idő",
+              "status": "resolved",
+              "reason": "Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.",
+              "proof": {
+                "kind": "automatic-import",
+                "rule": "data-engine-v2-value-match",
+                "sourceHash": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
+                "valueHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
+                "explanation": "Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.",
+                "resolvedAt": "2026-11-16T18:20:44.001Z",
+                "gameVersion": "c530ea20d7ec",
+                "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7"
               }
             }
           ]

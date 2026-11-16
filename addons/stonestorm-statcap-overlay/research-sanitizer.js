@@ -1,7 +1,7 @@
 /* Allowlist-only research export. No names, account IDs, headers, cookies or arbitrary strings. */
 (() => {
   'use strict';
-  const paths=['/api/sinks','/api/home/rooms','/api/arena/pure','/api/arena/pure/season','/api/arena/bandit','/api/character'];
+  const paths=['/api/sinks','/api/home/rooms','/api/arena/pure','/api/arena/pure/season','/api/arena/bandit','/api/character','/api/content'];
   const roomIds=new Set(['rest','workshop','hall','garden']);
   const publicIds=new Set(['blossom','moonnight','winter','dragongold','champion','elite','top100','fighter','podium','top10','top25','copper','silver','gold','throne']);
   const furnitureIds=new Set(['furrug','ropecoil','paperlamp','porridgepot','baittin','woodchest','calligraphy','potionshelf','hornhook','floursack','cranescreen','fanwall','lotusbowl','mountainscroll','tigerrug','jadecloth','wallaxe','totemmask','shrimpjar','anvilstand','phoenixpanel','wavescreen','stormpanel','crystalheart','icecluster','goldegg','ashmask','redbanner','lootchest','goldcup','dragoncrest','tigercrest','wolfcrest','swordcrest','embercore','dragoneye','diamond','dragonkey','jadelion','pagoda','moonlantern','goatteapot','goatportrait','incensedragon','stormpine','goatthrone','dragonrug','dragontapestry','dragonpearl','dragonpillar','homehearth']);
@@ -29,11 +29,33 @@
     let input=endpoint==='/api/character'?(json.state??json):json.view??json.data??json;
     if(!input||typeof input!=='object'||Array.isArray(input))return null;
     const out={};
-    if(endpoint==='/api/character'){
+    if(endpoint==='/api/content'){
+      // Only the versioned public species/rule schema. Never copy roster, IDs,
+      // learned skills, arbitrary text or additional character fields.
+      const known=globalThis.STONESTORM_PET_MODEL?.config;
+      const candidate=globalThis.StonestormPetDetails?.publicConfig(input)??globalThis.StonestormPetDetails?.validateConfig(input.pets);
+      if(!known||!candidate)return null;
+      const copy=(template,value)=>{
+        if(typeof template==='number'){if(!number(value))throw Error('Invalid rule');return value;}
+        if(Array.isArray(template)){if(!Array.isArray(value)||value.length!==template.length)throw Error('Unknown structure');return template.map((v,i)=>copy(v,value[i]));}
+        if(template&&typeof template==='object'){if(!value||typeof value!=='object')throw Error('Missing rules');return Object.fromEntries(Object.entries(template).map(([k,v])=>[k,copy(v,value[k])]));}
+        if(value!==template)throw Error('Unknown identifier');return template;
+      };
+      try{out.pets=copy(known,candidate);}catch{return null;}
+    }else if(endpoint==='/api/character'){
       // A TeahouseModal által használt alapár-konfiguráció; a karakter többi része kimarad.
       const refill=input.patron?.prices?.refill??input.refill,allowed=['baseCoins','extraCoins','vipExtra','energyCapBase','energyCapPerRefill'];
       const clean=fields(refill);for(const key of ['vipExtra','energyCapBase','energyCapPerRefill'])if(number(refill?.[key]))clean[key]=refill[key];
       out.refill=Object.fromEntries(Object.entries(clean).filter(([key])=>allowed.includes(key)));
+      // The client uses state.petArt as a public, hash-addressed image registry.
+      // Only known species/form keys and hexadecimal asset keys are exportable.
+      const art=input.petArt??input.publicPetArt,types=globalThis.STONESTORM_PET_MODEL?.config?.types??[];
+      if(art&&typeof art==='object'&&!Array.isArray(art)){
+        const names=new Set(types.flatMap(t=>[1,2,3,4,5].map(form=>t.id+'_'+form)));
+        // An owned-only subset could reveal which species a player possesses.
+        // Export only a complete fixed public catalog, never that subset.
+        if(names.size&&[...names].every(key=>typeof art[key]==='string'&&/^[a-f0-9]{32,64}$/i.test(art[key])))out.publicPetArt=Object.fromEntries([...names].map(key=>[key,art[key]]));
+      }
     }else if(endpoint==='/api/sinks'){
       const home=input.home;if(home&&typeof home==='object'){
         out.home={};if(home.rules)out.home.rules=fields(home.rules);

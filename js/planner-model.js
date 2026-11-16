@@ -15,6 +15,7 @@
     result.petLevel=petProgress.level;result.petForm=petProgress.form;
     result.traitRank=integer(input.traitRank,1,5,1);
     result.skillRank=integer(input.skillRank,1,5,1);
+    result.petRank=integer(input.petRank,0,10000,0);
     result.targetFamily=db.sets.some(s=>s.familyId===input.targetFamily)?input.targetFamily:null;
     for(const slot of Object.keys(db.labels.slots)){
       if(!own(input.gear,slot))continue;
@@ -26,7 +27,7 @@
     if(pet&&result.level>=db.petRules.minHeroLevel)result.petId=pet.id;
     else if(input.petId)errors.push('A kísérő minimumszintje nem teljesül, vagy azonosítója ismeretlen.');
     const mount=db.mounts.find(m=>m.id===input.mountId);
-    if(mount&&mount.level<=result.level)result.mountId=mount.id;
+    if(mount&&mount.level<=result.level&&!mount.ramp)result.mountId=mount.id;
     else if(input.mountId)errors.push('A hátas minimumszintje nem teljesül, vagy azonosítója ismeretlen.');
     return {build:result,errors};
   }
@@ -75,7 +76,7 @@
     }).filter(x=>x.count||x.set.familyId===build.targetFamily);
     const pet=db.pets.find(p=>p.id===build.petId)??null,mount=db.mounts.find(m=>m.id===build.mountId)??null;
     return {build,errors:normalized.errors,baseStats:db.classes.find(c=>c.id===build.classId).baseStats,equipment,equipped,sets,
-      pet:pet?{record:pet,level:build.petLevel,form:build.petForm,slots:db.petSystem.stages[build.petForm-1].slots,traitRank:build.traitRank,skillRank:build.skillRank,rawSpeciesBonus:Object.fromEntries(Object.entries(pet.perLevel).map(([k,v])=>[k,v*build.petLevel]))}:null,
+      pet:pet?{record:pet,level:build.petLevel,form:build.petForm,slots:db.petSystem.stages[build.petForm-1].slots,traitRank:build.traitRank,skillRank:build.petForm,details:globalThis.StonestormPetDetails.describe({petId:pet.id,level:build.petLevel,form:build.petForm,rank:build.petRank,active:true},db.petModel),rawSpeciesBonus:{...pet.perLevel}}:null,
       mount:mount?{record:mount,travelMult:mount.travelMult}:null,
       levelStats:null,finalCombatStats:null,
       limitations:['A karakter szintből származó tulajdonságainak elosztása és a teljes szerveroldali harci képlet nem igazolt.','A felszerelésösszeg számtani komponensösszeg, nem végső támadás, védelem vagy harcerő.','A százalékos szett- és kísérőhatások nem kerülnek bizonyítatlan módon az alapértékekre.','Véletlen tárgybónuszok és egyéb buffok nincsnek általánosítva.']};

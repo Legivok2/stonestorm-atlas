@@ -43,7 +43,7 @@ try{
   input('#planner-class','ninja');input('#planner-level',60);
   input('#planner-family','m1');d.querySelector('#planner-apply-set').click();check();
   assert.match(d.querySelector('.planner-bonus-panel').textContent,/Aktív · 2 db/);
-  input('#planner-pet','pet_wolf');input('#planner-pet-level',10);input('#planner-trait-rank',5);input('#planner-mount','pony');
+  input('#planner-pet','pet_wolf');input('#planner-pet-level',10);input('#planner-pet-rank',5);input('#planner-mount','pony');
   input('[data-planner-plus="weapon"]',9);
   assert(d.querySelector('.planner-character-image img').src.includes('downloaded/body')||d.querySelector('.planner-character-image img').src.includes('Stonestorm_files'));
   input('#planner-name','Nindzsa teszt <b>','input');d.querySelector('#planner-save').click();check();

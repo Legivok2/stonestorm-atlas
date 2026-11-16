@@ -1,0 +1,2866 @@
+{
+  "schema": 2,
+  "gameVersion": "c530ea20d7ec",
+  "branches": {
+    "pets": {
+      "data": {
+        "rules": {
+          "maxLevel": 10,
+          "minHeroLevel": 10,
+          "maxPets": 12,
+          "hatchHours": 8,
+          "feedMaterialsPerLevel": 5,
+          "feedNyangPerLevel": 200,
+          "unlockCoins": 30,
+          "farmEggChance": 0.0003,
+          "bossEggChance": 0.03,
+          "stageLevels": [
+            5,
+            9
+          ],
+          "bond": {
+            "max": 5,
+            "cost": [
+              null,
+              {
+                "thread": 10,
+                "nyang": 20000,
+                "minLevel": 3
+              },
+              {
+                "thread": 25,
+                "nyang": 60000,
+                "minLevel": 5
+              },
+              {
+                "thread": 50,
+                "nyang": 150000,
+                "minLevel": 7
+              },
+              {
+                "thread": 90,
+                "nyang": 350000,
+                "minLevel": 9
+              }
+            ],
+            "releaseThread": {
+              "perLevel": 2,
+              "perBond": 10
+            }
+          },
+          "traitLevelScale": {
+            "base": 0.5,
+            "perLevel": 0.05
+          },
+          "rankTraitBonus": 0.1
+        },
+        "traits": {
+          "strike": {
+            "every": [
+              4,
+              4,
+              3,
+              3,
+              3
+            ],
+            "mult": [
+              0.3,
+              0.4,
+              0.4,
+              0.5,
+              0.6
+            ]
+          },
+          "mend": {
+            "belowHp": 0.4,
+            "pct": [
+              0.08,
+              0.1,
+              0.12,
+              0.15,
+              0.18
+            ]
+          },
+          "guard": {
+            "hits": 3,
+            "pct": [
+              0.3,
+              0.35,
+              0.4,
+              0.5,
+              0.6
+            ]
+          }
+        },
+        "dungeon": {
+          "eggs": {
+            "monkey": [
+              "egg_m2",
+              "egg_m3"
+            ],
+            "spider": [
+              "egg_m3",
+              "egg_m4"
+            ],
+            "dragon": [
+              "egg_m5",
+              "egg_m6"
+            ],
+            "wild": [
+              "egg_m1",
+              "egg_m2"
+            ]
+          },
+          "miniThread": [
+            1,
+            2
+          ],
+          "bossThread": [
+            3,
+            5
+          ],
+          "heroicMult": 2,
+          "firstClearThread": 10,
+          "bossEggChance": 0.08,
+          "heroicEggChance": 0.15,
+          "firstClearEgg": true,
+          "miniEggChance": 0.04
+        },
+        "types": [
+          {
+            "id": "pet_wolf",
+            "map": 1,
+            "perLevel": {
+              "xpMult": 0.01
+            },
+            "trait": "strike",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_boar",
+            "map": 1,
+            "perLevel": {
+              "nyangMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_bear",
+            "map": 1,
+            "perLevel": {
+              "hpMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_monkey",
+            "map": 2,
+            "perLevel": {
+              "dropMult": 0.008
+            },
+            "trait": "mend",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_falcon",
+            "map": 2,
+            "perLevel": {
+              "evadeBonus": 0.002
+            },
+            "trait": "strike",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_dog",
+            "map": 2,
+            "perLevel": {
+              "atkMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "common"
+          },
+          {
+            "id": "pet_goblin_pup",
+            "map": 3,
+            "perLevel": {
+              "nyangMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_ram",
+            "map": 3,
+            "perLevel": {
+              "hpMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_vulture",
+            "map": 3,
+            "perLevel": {
+              "dropMult": 0.008
+            },
+            "trait": "strike",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_camel",
+            "map": 4,
+            "perLevel": {
+              "xpMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_fennec",
+            "map": 4,
+            "perLevel": {
+              "evadeBonus": 0.002
+            },
+            "trait": "strike",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_scarab",
+            "map": 4,
+            "perLevel": {
+              "defMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "rare"
+          },
+          {
+            "id": "pet_penguin",
+            "map": 5,
+            "perLevel": {
+              "nyangMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_snow_leopard",
+            "map": 5,
+            "perLevel": {
+              "atkMult": 0.005
+            },
+            "trait": "strike",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_yeti_cub",
+            "map": 5,
+            "perLevel": {
+              "hpMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_ember_imp",
+            "map": 6,
+            "perLevel": {
+              "critBonus": 0.002
+            },
+            "trait": "strike",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_lava_turtle",
+            "map": 6,
+            "perLevel": {
+              "defMult": 0.005
+            },
+            "trait": "guard",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_salamander",
+            "map": 6,
+            "perLevel": {
+              "xpMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "heroic"
+          },
+          {
+            "id": "pet_u_wild",
+            "map": 1,
+            "perLevel": {
+              "xpMult": 0.012
+            },
+            "trait": "strike",
+            "rarity": "unique",
+            "egg": "egg_u_wild",
+            "signature": "first_strike",
+            "dungeon": "wild"
+          },
+          {
+            "id": "pet_u_monkey",
+            "map": 2,
+            "perLevel": {
+              "dropMult": 0.01
+            },
+            "trait": "mend",
+            "rarity": "unique",
+            "egg": "egg_u_monkey",
+            "signature": "regen",
+            "dungeon": "monkey"
+          },
+          {
+            "id": "pet_u_spider",
+            "map": 3,
+            "perLevel": {
+              "defMult": 0.006
+            },
+            "trait": "guard",
+            "rarity": "unique",
+            "egg": "egg_u_spider",
+            "signature": "thorns",
+            "dungeon": "spider"
+          },
+          {
+            "id": "pet_u_dragon",
+            "map": 5,
+            "perLevel": {
+              "atkMult": 0.006
+            },
+            "trait": "strike",
+            "rarity": "unique",
+            "egg": "egg_u_dragon",
+            "signature": "crit_dmg",
+            "dungeon": "dragon"
+          }
+        ],
+        "rankBonusShare": 0.5,
+        "v3": {
+          "forms": {
+            "cost": [
+              null,
+              {
+                "core": "pet_core_wild",
+                "thread": 10,
+                "nyang": 20000
+              },
+              {
+                "core": "pet_core_monkey",
+                "thread": 25,
+                "nyang": 60000
+              },
+              {
+                "core": "pet_core_spider",
+                "thread": 50,
+                "nyang": 150000
+              },
+              {
+                "core": "pet_core_dragon",
+                "thread": 90,
+                "nyang": 350000
+              }
+            ],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              3
+            ],
+            "passive": [
+              0.5,
+              0.75,
+              1,
+              1.25,
+              1.5
+            ],
+            "traitLevelScale": {
+              "base": 0.75,
+              "perLevel": 0.005
+            },
+            "catchUp": {
+              "formsBelow": 1,
+              "levelShare": 0.8
+            },
+            "power": [
+              0.03,
+              0.06,
+              0.09,
+              0.11,
+              0.14
+            ]
+          },
+          "costs": {
+            "feed": {
+              "thread": 3,
+              "freePerDay": 1,
+              "heroXpMult": 100
+            },
+            "evolve": {
+              "cores": 2,
+              "threadMult": 2
+            },
+            "hatch": {
+              "nyangShare": 0.02,
+              "materials": 100
+            }
+          },
+          "xp": {
+            "toNextBase": 50,
+            "toNextPerLevel": 25,
+            "feedLevelShare": 1,
+            "feedMaterials": {
+              "base": 20,
+              "perLevel": 6
+            },
+            "share": {
+              "dungeon": 1,
+              "pet_room": 0.5,
+              "default": 0.4
+            }
+          },
+          "farmEggChance": 0.00005,
+          "rarity": {
+            "byMap": [
+              null,
+              "common",
+              "common",
+              "rare",
+              "rare",
+              "heroic",
+              "heroic"
+            ],
+            "growth": {
+              "common": 1,
+              "rare": 1.05,
+              "heroic": 1.1,
+              "unique": 1.15
+            },
+            "release": {
+              "common": 1,
+              "rare": 1.5,
+              "heroic": 2,
+              "unique": 3
+            }
+          },
+          "release": {
+            "base": 6,
+            "perLevel": 1,
+            "perForm": 15
+          },
+          "book": {
+            "perSpecies": 0.003,
+            "capPerKey": 0.012
+          },
+          "rankMinPetLevel": 10,
+          "skills": {
+            "first_strike": {
+              "kind": "combat",
+              "values": [
+                0.6,
+                1,
+                1.4,
+                1.8,
+                2.2
+              ]
+            },
+            "shield_open": {
+              "kind": "combat",
+              "values": [
+                0.05,
+                0.08,
+                0.11,
+                0.14,
+                0.18
+              ]
+            },
+            "crit_dmg": {
+              "kind": "combat",
+              "values": [
+                0.08,
+                0.14,
+                0.2,
+                0.26,
+                0.32
+              ]
+            },
+            "regen": {
+              "kind": "combat",
+              "values": [
+                0.02,
+                0.03,
+                0.04,
+                0.05,
+                0.06
+              ],
+              "every": 3,
+              "times": 3
+            },
+            "thorns": {
+              "kind": "combat",
+              "values": [
+                0.05,
+                0.08,
+                0.11,
+                0.14,
+                0.18
+              ]
+            },
+            "potion_boost": {
+              "kind": "combat",
+              "values": [
+                0.03,
+                0.05,
+                0.07,
+                0.09,
+                0.12
+              ]
+            },
+            "idle_xp": {
+              "kind": "idle",
+              "values": [
+                0.02,
+                0.03,
+                0.04,
+                0.05,
+                0.06
+              ],
+              "mod": "xpMult"
+            },
+            "idle_nyang": {
+              "kind": "idle",
+              "values": [
+                0.02,
+                0.03,
+                0.04,
+                0.05,
+                0.06
+              ],
+              "mod": "nyangMult"
+            },
+            "loot_luck": {
+              "kind": "economy",
+              "values": [
+                0.01,
+                0.02,
+                0.03,
+                0.04,
+                0.05
+              ],
+              "mod": "dropMult"
+            },
+            "keen_nose": {
+              "kind": "dungeon",
+              "values": [
+                0.01,
+                0.015,
+                0.02,
+                0.025,
+                0.03
+              ]
+            }
+          },
+          "reference": {
+            "species": "pet_wolf",
+            "levelLag": 2,
+            "bands": [
+              {
+                "from": 10,
+                "form": 1,
+                "skills": []
+              },
+              {
+                "from": 13,
+                "form": 2,
+                "skills": []
+              },
+              {
+                "from": 16,
+                "form": 2,
+                "skills": [
+                  {
+                    "skillId": "first_strike",
+                    "level": 1
+                  }
+                ]
+              },
+              {
+                "from": 23,
+                "form": 3,
+                "skills": [
+                  {
+                    "skillId": "first_strike",
+                    "level": 1
+                  }
+                ]
+              },
+              {
+                "from": 38,
+                "form": 4,
+                "skills": [
+                  {
+                    "skillId": "first_strike",
+                    "level": 1
+                  },
+                  {
+                    "skillId": "shield_open",
+                    "level": 1
+                  }
+                ]
+              },
+              {
+                "from": 53,
+                "form": 5,
+                "skills": [
+                  {
+                    "skillId": "first_strike",
+                    "level": 2
+                  },
+                  {
+                    "skillId": "shield_open",
+                    "level": 1
+                  },
+                  {
+                    "skillId": "crit_dmg",
+                    "level": 1
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "pets",
+      "sha256": "6057fe284c73c756f4e8b396eb70a876c97c6ee414f0724cbf7c199ff33ae7c6",
+      "status": "public-config"
+    },
+    "petSpine": {
+      "data": {
+        "traitLevelScale": {
+          "base": 0.8,
+          "perLevel": 0.015
+        },
+        "xpShare": {
+          "default": 1,
+          "dungeon": 1.5,
+          "pet_room": 0.75
+        },
+        "starter": {
+          "level10Gift": {
+            "item": "key_wild",
+            "count": 1
+          },
+          "firstWildClear": {
+            "egg": "egg_m1_pick",
+            "thread": 10,
+            "replacesRegionFirstClearEgg": true
+          }
+        },
+        "core": {
+          "chance": 0.35,
+          "pity": 3
+        },
+        "book": {
+          "chancePerBossChest": 0.3,
+          "pityBooklessClears": 3,
+          "pools": {
+            "wild": {
+              "first_strike": 3,
+              "shield_open": 3,
+              "crit_dmg": 2,
+              "idle_xp": 1
+            },
+            "monkey": {
+              "first_strike": 3,
+              "shield_open": 3,
+              "crit_dmg": 3,
+              "regen": 2,
+              "idle_nyang": 1
+            },
+            "spider": {
+              "first_strike": 3,
+              "shield_open": 3,
+              "crit_dmg": 3,
+              "thorns": 2,
+              "potion_boost": 2,
+              "keen_nose": 1
+            },
+            "dragon": {
+              "first_strike": 3,
+              "shield_open": 3,
+              "crit_dmg": 3,
+              "thorns": 2,
+              "regen": 2,
+              "loot_luck": 1
+            }
+          }
+        },
+        "evolveFormMult": [
+          null,
+          1,
+          1.5,
+          2,
+          2.5
+        ],
+        "uniqueEgg": {
+          "chance": 0.04,
+          "pity": 20
+        },
+        "reference": {
+          "species": "pet_wolf",
+          "lagBefore": 11,
+          "lagAfter": 2,
+          "switchLevel": 17,
+          "rampPerLevel": 1.5,
+          "bands": [
+            {
+              "from": 13,
+              "form": 1,
+              "skills": []
+            },
+            {
+              "from": 29,
+              "form": 2,
+              "skills": [
+                {
+                  "skillId": "first_strike",
+                  "level": 1
+                }
+              ]
+            },
+            {
+              "from": 37,
+              "form": 3,
+              "skills": [
+                {
+                  "skillId": "first_strike",
+                  "level": 2
+                },
+                {
+                  "skillId": "shield_open",
+                  "level": 1
+                }
+              ]
+            },
+            {
+              "from": 47,
+              "form": 4,
+              "skills": [
+                {
+                  "skillId": "first_strike",
+                  "level": 3
+                },
+                {
+                  "skillId": "shield_open",
+                  "level": 2
+                },
+                {
+                  "skillId": "crit_dmg",
+                  "level": 1
+                }
+              ]
+            },
+            {
+              "from": 57,
+              "form": 5,
+              "skills": [
+                {
+                  "skillId": "first_strike",
+                  "level": 4
+                },
+                {
+                  "skillId": "shield_open",
+                  "level": 3
+                },
+                {
+                  "skillId": "crit_dmg",
+                  "level": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "spine.hero.pets",
+      "sha256": "6149e4ebd9450deed1031d570f48959316abc94ebcd61d803e8d551743f6a05c",
+      "status": "public-config"
+    },
+    "mounts": {
+      "data": [
+        {
+          "id": "pony",
+          "level": 1,
+          "travelMult": 0.9,
+          "currency": "nyang",
+          "price": 2000,
+          "days": 14
+        },
+        {
+          "id": "mule",
+          "level": 8,
+          "travelMult": 0.85,
+          "currency": "nyang",
+          "price": 3500,
+          "days": 14
+        },
+        {
+          "id": "warhorse",
+          "level": 15,
+          "travelMult": 0.8,
+          "currency": "nyang",
+          "price": 15000,
+          "days": 14
+        },
+        {
+          "id": "miststeed",
+          "level": 20,
+          "travelMult": 0.75,
+          "currency": "nyang",
+          "price": 30000,
+          "days": 14
+        },
+        {
+          "id": "charger",
+          "level": 25,
+          "travelMult": 0.7,
+          "currency": "nyang",
+          "price": 60000,
+          "days": 14
+        },
+        {
+          "id": "stormtiger",
+          "level": 1,
+          "travelMult": 0.5,
+          "currency": "coins",
+          "price": 125,
+          "days": 14,
+          "ramp": [
+            {
+              "level": 1,
+              "travelMult": 0.8
+            },
+            {
+              "level": 15,
+              "travelMult": 0.7
+            },
+            {
+              "level": 20,
+              "travelMult": 0.6
+            },
+            {
+              "level": 25,
+              "travelMult": 0.5
+            }
+          ]
+        },
+        {
+          "id": "lidercparipa",
+          "level": 1,
+          "travelMult": 0.8,
+          "currency": "event",
+          "price": 0,
+          "days": 14
+        },
+        {
+          "id": "kilencfarku_roka",
+          "level": 1,
+          "travelMult": 0.5,
+          "currency": "event",
+          "price": 0,
+          "days": 30,
+          "ramp": [
+            {
+              "level": 1,
+              "travelMult": 0.8
+            },
+            {
+              "level": 15,
+              "travelMult": 0.7
+            },
+            {
+              "level": 20,
+              "travelMult": 0.6
+            },
+            {
+              "level": 25,
+              "travelMult": 0.5
+            }
+          ]
+        },
+        {
+          "id": "kalmarteve",
+          "level": 1,
+          "travelMult": 0.5,
+          "currency": "event",
+          "price": 0,
+          "days": 14,
+          "ramp": [
+            {
+              "level": 1,
+              "travelMult": 0.8
+            },
+            {
+              "level": 15,
+              "travelMult": 0.7
+            },
+            {
+              "level": 20,
+              "travelMult": 0.6
+            },
+            {
+              "level": 25,
+              "travelMult": 0.5
+            }
+          ]
+        }
+      ],
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "mounts",
+      "sha256": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
+      "status": "public-config"
+    },
+    "research": {
+      "data": {
+        "wolf": {
+          "minLevel": 10,
+          "sampleId": "sample_wolf",
+          "sampleMobId": "m1_wolf",
+          "samplesNeeded": 10,
+          "reward": {
+            "atkMult": 0.02
+          }
+        },
+        "boar": {
+          "minLevel": 14,
+          "sampleId": "sample_boar",
+          "sampleMobId": "m1_boar",
+          "samplesNeeded": 10,
+          "reward": {
+            "hpMult": 0.03
+          }
+        },
+        "bear": {
+          "minLevel": 18,
+          "sampleId": "sample_bear",
+          "sampleMobId": "m1_bear",
+          "samplesNeeded": 10,
+          "reward": {
+            "defMult": 0.02
+          }
+        },
+        "tiger": {
+          "minLevel": 22,
+          "sampleId": "sample_tiger",
+          "sampleMobId": "m1_tiger",
+          "samplesNeeded": 10,
+          "reward": {
+            "critBonus": 0.01
+          }
+        },
+        "archer": {
+          "minLevel": 26,
+          "sampleId": "sample_archer",
+          "sampleMobId": "m2_archer",
+          "samplesNeeded": 10,
+          "reward": {
+            "evadeBonus": 0.01
+          }
+        },
+        "mercenary": {
+          "minLevel": 30,
+          "sampleId": "sample_mercenary",
+          "sampleMobId": "m2_merc",
+          "samplesNeeded": 10,
+          "reward": {
+            "atkMult": 0.03
+          }
+        },
+        "orc": {
+          "minLevel": 34,
+          "sampleId": "sample_orc",
+          "sampleMobId": "m3_clubber",
+          "samplesNeeded": 10,
+          "reward": {
+            "hpMult": 0.04
+          }
+        },
+        "shaman": {
+          "minLevel": 38,
+          "sampleId": "sample_shaman",
+          "sampleMobId": "m3_shaman",
+          "samplesNeeded": 10,
+          "reward": {
+            "defMult": 0.03
+          }
+        },
+        "scorpion": {
+          "minLevel": 42,
+          "sampleId": "sample_scorpion",
+          "sampleMobId": "m4_scorpion",
+          "samplesNeeded": 10,
+          "reward": {
+            "atkMult": 0.02
+          }
+        },
+        "mummy": {
+          "minLevel": 45,
+          "sampleId": "sample_mummy",
+          "sampleMobId": "m4_mummy",
+          "samplesNeeded": 10,
+          "reward": {
+            "hpMult": 0.03
+          }
+        },
+        "snow_wolf": {
+          "minLevel": 48,
+          "sampleId": "sample_snow_wolf",
+          "sampleMobId": "m5_snow_wolf",
+          "samplesNeeded": 10,
+          "reward": {
+            "defMult": 0.02
+          }
+        },
+        "yeti": {
+          "minLevel": 51,
+          "sampleId": "sample_yeti",
+          "sampleMobId": "m5_yeti",
+          "samplesNeeded": 10,
+          "reward": {
+            "critBonus": 0.01
+          }
+        },
+        "fire_imp": {
+          "minLevel": 55,
+          "sampleId": "sample_fire_imp",
+          "sampleMobId": "m6_fire_imp",
+          "samplesNeeded": 10,
+          "reward": {
+            "evadeBonus": 0.01
+          }
+        },
+        "magma_giant": {
+          "minLevel": 58,
+          "sampleId": "sample_magma_giant",
+          "sampleMobId": "m6_magma_giant",
+          "samplesNeeded": 10,
+          "reward": {
+            "atkMult": 0.03
+          }
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "lean.researchSteps",
+      "sha256": "199154d56a15a68fb44d9b164b84b9b6b2f5f3dccf17efe5f7e12e29e6b15b33",
+      "status": "public-config"
+    },
+    "forge": {
+      "data": {
+        "chances": [
+          1,
+          1,
+          0.95,
+          0.9,
+          0.8,
+          0.7,
+          0.55,
+          0.45,
+          0.35
+        ],
+        "chancesByTier": [
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ],
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ],
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ],
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ],
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ],
+          [
+            1,
+            1,
+            0.95,
+            0.9,
+            0.8,
+            0.7,
+            0.55,
+            0.45,
+            0.35
+          ]
+        ],
+        "plusMult": [
+          1,
+          1.1,
+          1.2,
+          1.31,
+          1.43,
+          1.56,
+          1.7,
+          1.86,
+          2.03,
+          2.22
+        ]
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "forge",
+      "sha256": "4b6a77e675b38ab29554970676b65ce750191d69277f7276b08a985075f3644a",
+      "status": "public-config"
+    },
+    "stats": {
+      "data": {
+        "rules": {
+          "scale": 1.15,
+          "critCap": 0.5,
+          "refTurns": 10,
+          "evadeCap": 0.12,
+          "spRegenPerTurn": 4,
+          "reductionBase": 50,
+          "reductionPerLevel": 10,
+          "reductionCap": 0.75,
+          "evadeBase": 0.05,
+          "ref": {
+            "def": [
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              28,
+              30,
+              32,
+              34,
+              36,
+              38,
+              40,
+              42,
+              44,
+              46,
+              48,
+              50,
+              53,
+              55,
+              57,
+              59,
+              61,
+              63,
+              65,
+              67,
+              69,
+              71,
+              73,
+              75,
+              77,
+              80,
+              82,
+              84,
+              86,
+              88,
+              90,
+              92,
+              94,
+              96,
+              98,
+              100,
+              102,
+              105,
+              107,
+              109,
+              111,
+              113,
+              115,
+              117,
+              119,
+              121,
+              123,
+              125,
+              127
+            ],
+            "atkLevel": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60
+            ],
+            "dex": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ],
+            "heroDex": [
+              5,
+              5,
+              6,
+              6,
+              6,
+              7,
+              7,
+              8,
+              8,
+              9,
+              9,
+              10,
+              10,
+              11,
+              11,
+              12,
+              13,
+              13,
+              14,
+              14,
+              15,
+              15,
+              16,
+              16,
+              17,
+              17,
+              18,
+              18,
+              19,
+              19,
+              19,
+              20,
+              20,
+              21,
+              22,
+              22,
+              23,
+              23,
+              24,
+              24,
+              25,
+              25,
+              26,
+              26,
+              27,
+              27,
+              28,
+              29,
+              29,
+              30,
+              31,
+              31,
+              32,
+              33,
+              33,
+              34,
+              35,
+              35,
+              36,
+              36,
+              36
+            ]
+          },
+          "supportCaps": {
+            "vsBoss": 0.35,
+            "potionHeal": 0.25,
+            "skillDamage": 0.5,
+            "critDamage": 0.75,
+            "lifesteal": 0.08,
+            "damageTaken": 0.2
+          },
+          "skillCritCap": 0.7,
+          "monsterEvadeCap": 0.35,
+          "spine": {
+            "evadePerDex": 0.0031,
+            "accuracy": {
+              "base": 0.05,
+              "min": 0.02,
+              "max": 0.35
+            },
+            "turnFirstD": 0.05,
+            "vsBossWeight": 0.5,
+            "vsBossCap": 0.35,
+            "potionWeight": 0.6,
+            "bossPotions": 2,
+            "petWeight": 0.35
+          }
+        },
+        "combat": {
+          "hero": {
+            "unarmedMin": 2,
+            "unarmedMax": 4,
+            "hpBase": 120,
+            "hpPerLevel": 22,
+            "hpPerVit": 14,
+            "spBase": 20,
+            "spPerInt": 5,
+            "atkMinPerPrimary": 1.2,
+            "atkMaxPerPrimary": 1.6,
+            "critBase": 0.05,
+            "critPerDex": 0.0019,
+            "critCap": 0.5,
+            "critMult": 1.5,
+            "supportCaps": {
+              "vsBoss": 0.35,
+              "potionHeal": 0.25,
+              "skillDamage": 0.5,
+              "critDamage": 0.75,
+              "lifesteal": 0.08,
+              "damageTaken": 0.2
+            }
+          },
+          "rules": {
+            "maxTurns": 60,
+            "evadeBase": 0.05,
+            "evadePerDex": 0.0031,
+            "evadeMin": 0.02,
+            "evadeMax": 0.35,
+            "skillCritCap": 0.7,
+            "reductionBase": 50,
+            "reductionPerLevel": 10,
+            "reductionCap": 0.75,
+            "spRegenPerTurn": 4,
+            "potionThreshold": 0.35,
+            "potionHeal": 0.4,
+            "gapEvade": 0.1
+          }
+        },
+        "bossEvadeCaps": {
+          "mapBoss": 0.12,
+          "guardian": 0.14,
+          "towerBoss": 0.16
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "harcero",
+      "sha256": "f806f10fa3eb430cc70a6bc874ccb5f1ffc5613308979099175c59917f71f7af",
+      "status": "public-config"
+    },
+    "bonus": {
+      "data": {
+        "tiers": {
+          "common": {
+            "range": [
+              1,
+              3
+            ],
+            "weights": [
+              75,
+              22,
+              3,
+              0,
+              0
+            ]
+          },
+          "rare": {
+            "range": [
+              1,
+              4
+            ],
+            "weights": [
+              60,
+              28,
+              10,
+              2,
+              0
+            ]
+          },
+          "heroic": {
+            "range": [
+              2,
+              5
+            ],
+            "weights": [
+              0,
+              55,
+              32,
+              11,
+              2
+            ]
+          },
+          "unique": {
+            "range": [
+              3,
+              5
+            ],
+            "weights": [
+              0,
+              0,
+              34,
+              33,
+              33
+            ]
+          }
+        },
+        "tierLevel": {
+          "from1": 40,
+          "mult1": 0.7,
+          "from2": 50,
+          "mult2": 0.5
+        },
+        "reroll": {
+          "base": 300,
+          "exp": 1.45,
+          "mult": 1.5,
+          "plusStep": 0.1,
+          "from": 40,
+          "expAbove": 2.45,
+          "plusStepAbove": 0.15,
+          "rarity": {
+            "rare": 1.25,
+            "heroic": 1.5,
+            "unique": 2
+          }
+        },
+        "lockCoins": 10,
+        "lockFrom": 40,
+        "lockGrowth": 0,
+        "flatValues": {
+          "xp": [
+            0.02,
+            0.04,
+            0.06,
+            0.08,
+            0.1
+          ],
+          "nyang": [
+            0.05,
+            0.08,
+            0.12,
+            0.16,
+            0.2
+          ]
+        },
+        "lineMult": 1,
+        "lineMultBands": {
+          "low": 1.25,
+          "mid": 1.75,
+          "high": 1.9
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "bonus",
+      "sha256": "c2bfa8d49aa89ebc502a3579b9b7a19d57699677797ae01a6cf68fd94fdea8a7",
+      "status": "public-config"
+    },
+    "limits": {
+      "data": {
+        "maxLevel": 60,
+        "inventorySize": 40,
+        "energyMax": 100,
+        "stoneCost": 20,
+        "bossAttemptsPerDay": 3,
+        "farmCapSeconds": 28800,
+        "looks": 2,
+        "forge": {
+          "luckOreBonus": 0.1
+        },
+        "skip": {
+          "expedition": {
+            "stepMinutes": 5,
+            "coinsPerStep": 1
+          },
+          "arena": {
+            "stepMinutes": 10,
+            "coinsPerStep": 1
+          },
+          "tower": {
+            "stepMinutes": 60,
+            "coinsPerStep": 10
+          },
+          "research": {
+            "stepMinutes": 120,
+            "coinsPerStep": 2
+          },
+          "book": {
+            "stepMinutes": 720,
+            "coinsPerStep": 2
+          },
+          "hatch": {
+            "stepMinutes": 180,
+            "coinsPerStep": 4,
+            "minCoins": 50
+          },
+          "guild_building": {
+            "stepMinutes": 120,
+            "coinsPerStep": 1
+          }
+        },
+        "guildSpeedup": [
+          {
+            "upTo": 5,
+            "coinsPerHour": 20
+          },
+          {
+            "upTo": 10,
+            "coinsPerHour": 50
+          },
+          {
+            "upTo": 15,
+            "coinsPerHour": 100
+          }
+        ],
+        "warp": {
+          "hours": [
+            1,
+            2,
+            4
+          ],
+          "coinsPerHour": 5,
+          "hoursPerDay": 8
+        },
+        "bagMaxTotal": 6
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "limits",
+      "sha256": "bcee79ec107cb312585baeaace9c963001565db897ad1fa8c57977c82dc5dc80",
+      "status": "public-config"
+    },
+    "rewards": {
+      "data": {
+        "cap": 2,
+        "levelFactor": {
+          "grace": 2,
+          "step": 0.11,
+          "floor": 0.1
+        },
+        "grade": {
+          "mode": "hpLeft",
+          "S": 0.45,
+          "A": 0.2,
+          "olderFamilyAbove": 3
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "reward",
+      "sha256": "292252dd9e9a4772a7bf14e99e06d97028d981155e11c9edd012a22fee14689d",
+      "status": "public-config"
+    },
+    "polish": {
+      "data": {
+        "steps": 3,
+        "pctPerStep": 0.035,
+        "cap": {
+          "maxHp": 150,
+          "crit": 0.04,
+          "vsAnimal": 0.08,
+          "vsBandit": 0.08,
+          "defence": 18,
+          "attack": 15,
+          "nyang": 0.12,
+          "xp": 0.06,
+          "evade": 0.03,
+          "vsOrc": 0.08,
+          "vsUndead": 0.08,
+          "vsDesert": 0.08,
+          "vsIce": 0.08,
+          "vsFire": 0.08,
+          "vsBoss": 0.08,
+          "potionHeal": 0.06,
+          "skillDamage": 0.12,
+          "critDamage": 0.2,
+          "lifesteal": 0.025,
+          "damageTaken": 0.05
+        },
+        "capTier": 3,
+        "minLevel": 15
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "polish",
+      "sha256": "3dfe6519c7ab01e9dceb7188a7fe5f774667e67fad34be7c0cb50e07538538a3",
+      "status": "public-config"
+    },
+    "stones": {
+      "data": {
+        "types": [
+          "attack",
+          "vsAnimal",
+          "vsBandit",
+          "vsOrc",
+          "vsDesert",
+          "vsIce",
+          "vsFire",
+          "vsUndead",
+          "vsBoss",
+          "maxHp",
+          "defence",
+          "evade"
+        ],
+        "rules": {
+          "share": 0.5,
+          "fits": {
+            "weapon": [
+              "attack",
+              "vsBoss",
+              "vsAnimal",
+              "vsBandit",
+              "vsOrc",
+              "vsDesert",
+              "vsIce",
+              "vsFire",
+              "vsUndead"
+            ],
+            "armor": [
+              "maxHp",
+              "defence",
+              "evade"
+            ],
+            "helmet": [
+              "maxHp",
+              "defence",
+              "evade"
+            ],
+            "shield": [
+              "maxHp",
+              "defence",
+              "evade"
+            ],
+            "boots": [
+              "maxHp",
+              "defence",
+              "evade"
+            ],
+            "bracelet": [
+              "maxHp",
+              "defence",
+              "evade",
+              "vsBoss",
+              "vsAnimal",
+              "vsBandit",
+              "vsOrc",
+              "vsDesert",
+              "vsIce",
+              "vsFire",
+              "vsUndead"
+            ],
+            "necklace": [
+              "maxHp",
+              "defence",
+              "evade",
+              "vsBoss",
+              "vsAnimal",
+              "vsBandit",
+              "vsOrc",
+              "vsDesert",
+              "vsIce",
+              "vsFire",
+              "vsUndead"
+            ],
+            "earrings": [
+              "maxHp",
+              "defence",
+              "evade",
+              "vsBoss",
+              "vsAnimal",
+              "vsBandit",
+              "vsOrc",
+              "vsDesert",
+              "vsIce",
+              "vsFire",
+              "vsUndead"
+            ]
+          }
+        },
+        "fees": {
+          "chisel": {
+            "nyang": [
+              20000,
+              45000,
+              90000,
+              180000,
+              360000
+            ],
+            "shards": 5
+          },
+          "merge": {
+            "nyang": [
+              45000,
+              130000,
+              390000,
+              1150000
+            ],
+            "shardsPerGrade": 4
+          },
+          "attune": {
+            "materialsPerGrade": 15,
+            "nyangPerGrade": 8000,
+            "materials": {
+              "vsAnimal": "mat_m1_wolves",
+              "vsBandit": "mat_m2_guards",
+              "vsOrc": "mat_m3_warcamp",
+              "vsDesert": "mat_m4_golems",
+              "vsIce": "mat_m5_golems",
+              "vsFire": "mat_m6_ember_core",
+              "vsUndead": "mat_m6_ash_mask"
+            }
+          }
+        },
+        "directions": [
+          {
+            "kind": "boss",
+            "source": "m1",
+            "stones": [
+              "vsAnimal",
+              "maxHp"
+            ]
+          },
+          {
+            "kind": "boss",
+            "source": "m2",
+            "stones": [
+              "vsBandit",
+              "attack"
+            ]
+          },
+          {
+            "kind": "boss",
+            "source": "m3",
+            "stones": [
+              "vsOrc",
+              "defence"
+            ]
+          },
+          {
+            "kind": "boss",
+            "source": "m4",
+            "stones": [
+              "vsDesert",
+              "evade"
+            ]
+          },
+          {
+            "kind": "boss",
+            "source": "m5",
+            "stones": [
+              "vsIce",
+              "maxHp"
+            ]
+          },
+          {
+            "kind": "boss",
+            "source": "m6",
+            "stones": [
+              "vsFire",
+              "vsBoss"
+            ]
+          },
+          {
+            "kind": "tower",
+            "source": "tower_boss_3",
+            "stones": [
+              "vsUndead"
+            ]
+          }
+        ],
+        "sources": {
+          "scroll_bless": [
+            {
+              "kind": "stonerain",
+              "ref": "stonerain.json#reward",
+              "main": true
+            },
+            {
+              "kind": "storm_stone"
+            },
+            {
+              "kind": "map_boss",
+              "ref": "bosses.json#bossReward.scrollChance"
+            },
+            {
+              "kind": "storekeeper",
+              "ref": "market.json#merchants.storekeeper.scroll.perDay"
+            },
+            {
+              "kind": "portya_chest",
+              "ref": "runs.json#chests",
+              "match": "bless"
+            },
+            {
+              "kind": "fishing_trade",
+              "ref": "fishing.json#trade.epic"
+            },
+            {
+              "kind": "fishing_set",
+              "ref": "fishing.json#sets"
+            },
+            {
+              "kind": "heroic_dungeon",
+              "ref": "endgame.json#heroic.drops"
+            },
+            {
+              "kind": "world_boss",
+              "ref": "endgame.json#worldBoss.bands"
+            },
+            {
+              "kind": "wheel",
+              "ref": "wheel.json#slices"
+            },
+            {
+              "kind": "sidequest",
+              "ref": "sidequests.json"
+            },
+            {
+              "kind": "event_shop",
+              "ref": "calendar.json#themes"
+            }
+          ],
+          "safe_stone": [
+            {
+              "kind": "fishing_trade",
+              "ref": "fishing.json#trade.legendary"
+            },
+            {
+              "kind": "heroic_dungeon",
+              "ref": "endgame.json#heroic.drops.boss"
+            },
+            {
+              "kind": "sidequest",
+              "ref": "sidequests.json"
+            },
+            {
+              "kind": "event_shop",
+              "ref": "calendar.json#themes"
+            },
+            {
+              "kind": "black_market",
+              "ref": "market.json#merchants.black_market.stacks"
+            }
+          ],
+          "luck_ore": [
+            {
+              "kind": "mining_luck",
+              "ref": "mining.json#luck.item",
+              "main": true
+            },
+            {
+              "kind": "fishing_trade",
+              "ref": "fishing.json#trade.legendary"
+            },
+            {
+              "kind": "heroic_dungeon",
+              "ref": "endgame.json#heroic.drops.boss"
+            },
+            {
+              "kind": "wheel",
+              "ref": "wheel.json#slices"
+            },
+            {
+              "kind": "sidequest",
+              "ref": "sidequests.json"
+            },
+            {
+              "kind": "event_shop",
+              "ref": "calendar.json#themes"
+            },
+            {
+              "kind": "black_market",
+              "ref": "market.json#merchants.black_market.stacks"
+            },
+            {
+              "kind": "stonerain",
+              "ref": "stonerain.json#reward.materials"
+            }
+          ],
+          "shard": [
+            {
+              "kind": "storm_stone"
+            },
+            {
+              "kind": "map_boss",
+              "ref": "bosses.json#bossReward.shardMax"
+            },
+            {
+              "kind": "storekeeper",
+              "ref": "market.json#merchants.storekeeper.shardPerDay"
+            },
+            {
+              "kind": "portya_chest",
+              "ref": "runs.json#chests",
+              "match": "shards"
+            },
+            {
+              "kind": "fishing_trade",
+              "ref": "fishing.json#trade.rare"
+            },
+            {
+              "kind": "heroic_dungeon",
+              "ref": "endgame.json#heroic.drops"
+            }
+          ],
+          "spirit": [
+            {
+              "kind": "map_boss",
+              "ref": "stones.json#drops.boss.count"
+            },
+            {
+              "kind": "golden_vezer",
+              "pending": "bosses"
+            },
+            {
+              "kind": "lead",
+              "ref": "crumpled_map",
+              "pending": "leads"
+            },
+            {
+              "kind": "lead",
+              "ref": "golden_trail",
+              "pending": "leads"
+            }
+          ],
+          "bonuszolo_1": [
+            {
+              "kind": "runasor",
+              "ref": "runasor.json#chest",
+              "match": "bonuszolo",
+              "main": true
+            }
+          ],
+          "bonuszolo_2": [
+            {
+              "kind": "runasor",
+              "ref": "runasor.json#chest",
+              "match": "bonuszolo",
+              "main": true
+            }
+          ],
+          "bonuszolo_3": [
+            {
+              "kind": "runasor",
+              "ref": "runasor.json#chest",
+              "match": "bonuszolo",
+              "main": true
+            }
+          ],
+          "bonuszolo_4": [
+            {
+              "kind": "runasor",
+              "ref": "runasor.json#chest",
+              "match": "bonuszolo",
+              "main": true
+            }
+          ],
+          "skill_book": [
+            {
+              "kind": "storm_stone"
+            },
+            {
+              "kind": "map_boss"
+            },
+            {
+              "kind": "event_shop",
+              "ref": "calendar.json#themes"
+            },
+            {
+              "kind": "rift_shelf",
+              "ref": "rift.json#shelf"
+            }
+          ],
+          "pet_thread": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.bossThread.1",
+              "main": true
+            }
+          ],
+          "egg_m1": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.wild",
+              "main": true
+            }
+          ],
+          "egg_m2": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.wild",
+              "main": true
+            },
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.monkey"
+            }
+          ],
+          "egg_m3": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.monkey",
+              "main": true
+            },
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.spider"
+            }
+          ],
+          "egg_m4": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.spider",
+              "main": true
+            }
+          ],
+          "egg_m5": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.dragon",
+              "main": true
+            }
+          ],
+          "egg_m6": [
+            {
+              "kind": "dungeon",
+              "ref": "pets.json#dungeon.dragon",
+              "main": true
+            }
+          ],
+          "pet_core_wild": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#wild",
+              "match": "pet_core_wild",
+              "main": true
+            }
+          ],
+          "pet_core_monkey": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#monkey",
+              "match": "pet_core_monkey",
+              "main": true
+            }
+          ],
+          "pet_core_spider": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#spider",
+              "match": "pet_core_spider",
+              "main": true
+            }
+          ],
+          "pet_core_dragon": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#dragon",
+              "match": "pet_core_dragon",
+              "main": true
+            }
+          ],
+          "egg_u_wild": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#wild",
+              "match": "egg_u_wild",
+              "main": true
+            }
+          ],
+          "egg_u_monkey": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#monkey",
+              "match": "egg_u_monkey",
+              "main": true
+            }
+          ],
+          "egg_u_spider": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#spider",
+              "match": "egg_u_spider",
+              "main": true
+            }
+          ],
+          "egg_u_dragon": [
+            {
+              "kind": "dungeon",
+              "ref": "dungeons.json#dragon",
+              "match": "egg_u_dragon",
+              "main": true
+            }
+          ],
+          "pet_book_shield_open": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.wild.shield_open",
+              "main": true
+            }
+          ],
+          "pet_book_first_strike": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.wild.first_strike",
+              "main": true
+            }
+          ],
+          "pet_book_idle_xp": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.wild.idle_xp",
+              "main": true
+            }
+          ],
+          "pet_book_crit_dmg": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.monkey.crit_dmg",
+              "main": true
+            },
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.dragon.crit_dmg"
+            }
+          ],
+          "pet_book_regen": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.monkey.regen",
+              "main": true
+            }
+          ],
+          "pet_book_idle_nyang": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.monkey.idle_nyang",
+              "main": true
+            }
+          ],
+          "pet_book_thorns": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.spider.thorns",
+              "main": true
+            },
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.dragon.thorns"
+            }
+          ],
+          "pet_book_potion_boost": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.spider.potion_boost",
+              "main": true
+            }
+          ],
+          "pet_book_keen_nose": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.spider.keen_nose",
+              "main": true
+            }
+          ],
+          "pet_book_loot_luck": [
+            {
+              "kind": "dungeon",
+              "ref": "spine.json#hero.pets.book.pools.dragon.loot_luck",
+              "main": true
+            }
+          ]
+        },
+        "forge": {
+          "noBurnUpTo": 4,
+          "maxChance": 0.95,
+          "luckOreBonus": 0.1,
+          "failure": {
+            "unprotected": "destroy",
+            "blessScroll": "minusOne",
+            "safeStone": "keep"
+          },
+          "safeStonesPerDay": 3,
+          "safeStonesPerTry": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "ui": {
+          "defaultProtection": "last",
+          "firstProtection": [
+            "scroll",
+            "none"
+          ],
+          "autoSafe": false,
+          "confirmUnprotected": [
+            "stones",
+            "heroic",
+            "unique",
+            "worn"
+          ],
+          "confirmOncePerVisit": true
+        },
+        "trade": {
+          "marketKeepsStones": true,
+          "npcSellConfirm": true
+        },
+        "items": {
+          "line": {
+            "tiers": {
+              "maxHp": [
+                40,
+                80,
+                150,
+                250,
+                400
+              ],
+              "crit": [
+                0.01,
+                0.02,
+                0.04,
+                0.07,
+                0.1
+              ],
+              "vsAnimal": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsBandit": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "defence": [
+                5,
+                10,
+                18,
+                28,
+                40
+              ],
+              "attack": [
+                5,
+                10,
+                15,
+                22,
+                30
+              ],
+              "nyang": [
+                0.05,
+                0.08,
+                0.12,
+                0.16,
+                0.2
+              ],
+              "xp": [
+                0.02,
+                0.04,
+                0.06,
+                0.08,
+                0.1
+              ],
+              "evade": [
+                0.01,
+                0.02,
+                0.03,
+                0.04,
+                0.05
+              ],
+              "vsOrc": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsUndead": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsDesert": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsIce": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsFire": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "vsBoss": [
+                0.02,
+                0.05,
+                0.08,
+                0.12,
+                0.2
+              ],
+              "potionHeal": [
+                0.02,
+                0.04,
+                0.06,
+                0.08,
+                0.1
+              ],
+              "skillDamage": [
+                0.03,
+                0.07,
+                0.12,
+                0.17,
+                0.24
+              ],
+              "critDamage": [
+                0.06,
+                0.12,
+                0.2,
+                0.28,
+                0.4
+              ],
+              "lifesteal": [
+                0.01,
+                0.015,
+                0.025,
+                0.035,
+                0.05
+              ],
+              "damageTaken": [
+                0.02,
+                0.03,
+                0.05,
+                0.07,
+                0.1
+              ]
+            },
+            "mode": "itemLevel",
+            "scaled": [
+              "attack",
+              "maxHp",
+              "defence"
+            ],
+            "levelOffset": 5,
+            "levelDivisor": 25,
+            "percent": [
+              "crit",
+              "evade",
+              "xp",
+              "nyang",
+              "vsAnimal",
+              "vsBandit",
+              "vsOrc",
+              "vsUndead",
+              "vsDesert",
+              "vsIce",
+              "vsFire",
+              "vsBoss",
+              "potionHeal",
+              "skillDamage",
+              "critDamage",
+              "lifesteal",
+              "damageTaken"
+            ]
+          },
+          "sockets": {
+            "byRarity": {
+              "common": 0,
+              "rare": 1,
+              "heroic": 2,
+              "unique": 2
+            },
+            "extraAtPlus": 7,
+            "extraFor": [
+              "heroic",
+              "unique"
+            ]
+          },
+          "prices": {
+            "1": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "3": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "4": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "5": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "6": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "7": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "8": [
+              2700,
+              5400,
+              9900,
+              18000,
+              27000,
+              40500,
+              58500,
+              81000,
+              112500
+            ],
+            "11": [
+              2970,
+              5940,
+              10890,
+              19800,
+              29700,
+              44550,
+              64350,
+              89100,
+              123750
+            ],
+            "14": [
+              3780,
+              7560,
+              13860,
+              25200,
+              37800,
+              56700,
+              81900,
+              113400,
+              157500
+            ],
+            "16": [
+              4320,
+              8640,
+              15840,
+              28800,
+              43200,
+              64800,
+              93600,
+              129600,
+              180000
+            ],
+            "18": [
+              4860,
+              9720,
+              17820,
+              32400,
+              48600,
+              72900,
+              105300,
+              145800,
+              202500
+            ],
+            "19": [
+              5130,
+              10260,
+              18810,
+              34200,
+              51300,
+              76950,
+              111150,
+              153900,
+              213750
+            ],
+            "21": [
+              5670,
+              11340,
+              20790,
+              37800,
+              56700,
+              85050,
+              122850,
+              170100,
+              236250
+            ],
+            "22": [
+              5940,
+              11880,
+              21780,
+              39600,
+              59400,
+              89100,
+              128700,
+              178200,
+              247500
+            ],
+            "26": [
+              7020,
+              14040,
+              25740,
+              46800,
+              70200,
+              105300,
+              152100,
+              210600,
+              292500
+            ],
+            "30": [
+              8100,
+              16200,
+              29700,
+              54000,
+              81000,
+              121500,
+              175500,
+              243000,
+              337500
+            ],
+            "31": [
+              8370,
+              16740,
+              30690,
+              55800,
+              83700,
+              125550,
+              181350,
+              251100,
+              348750
+            ],
+            "32": [
+              8640,
+              17280,
+              31680,
+              57600,
+              86400,
+              129600,
+              187200,
+              259200,
+              360000
+            ],
+            "33": [
+              8910,
+              17820,
+              32670,
+              59400,
+              89100,
+              133650,
+              193050,
+              267300,
+              371250
+            ],
+            "34": [
+              9180,
+              18360,
+              33660,
+              61200,
+              91800,
+              137700,
+              198900,
+              275400,
+              382500
+            ],
+            "37": [
+              9990,
+              19980,
+              36630,
+              66600,
+              99900,
+              149850,
+              216450,
+              299700,
+              416250
+            ],
+            "41": [
+              11070,
+              22140,
+              40590,
+              73800,
+              110700,
+              166050,
+              245846,
+              340402,
+              472781
+            ],
+            "42": [
+              11340,
+              22680,
+              41580,
+              75600,
+              113400,
+              170100,
+              257985,
+              357210,
+              496125
+            ],
+            "46": [
+              12420,
+              24840,
+              45540,
+              82800,
+              124200,
+              186300,
+              309465,
+              428490,
+              595125
+            ],
+            "50": [
+              13500,
+              27000,
+              49500,
+              90000,
+              135000,
+              202500,
+              365625,
+              506250,
+              703125
+            ],
+            "54": [
+              14580,
+              29160,
+              53460,
+              97200,
+              145800,
+              218700,
+              426465,
+              590490,
+              820125
+            ],
+            "57": [
+              15390,
+              30780,
+              56430,
+              102600,
+              153900,
+              230850,
+              475166,
+              657923,
+              913781
+            ],
+            "60": [
+              16200,
+              32400,
+              59400,
+              108000,
+              162000,
+              243000,
+              526500,
+              729000,
+              1012500
+            ]
+          }
+        }
+      },
+      "gameVersion": "c530ea20d7ec",
+      "sourcePath": "stones",
+      "sha256": "d362a0493e7fff406995932d4739f294022d7450b70ec5555a291ed62a26d82b",
+      "status": "public-config"
+    }
+  }
+}

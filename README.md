@@ -24,6 +24,8 @@ Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-f
 
 ## Ingyenes Chrome-addon · BÉTA
 
+Helyben elkészült a **0.9.6 BÉTA**: közös popup–overlay adatgyűjtés és saját kísérőadatokat használó, aktiválás nélküli tooltip. A változat még nincs publikálva; a helyi ZIP a `downloads/` mappában van. Kipróbálás, adatkorlátok és modellfrissítés: [addon útmutató](addons/stonestorm-statcap-overlay/README.md).
+
 **[Stonestorm Stat Cap Overlay v0.9.4 – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. Az eredeti két statisztikai futásidejű szkript és az ikonok bájtra változatlanok. A 0.9.4 kutatási kiegészítés verzióemelt manifestet és külön fájlokat kapott; az aktuálisan telepített kiadást a Pages-verzióadat és a sikeres deploy igazolja.
 
 Asztali Chrome: csomagold ki a ZIP-et állandó mappába, nyisd meg a `chrome://extensions` oldalt, kapcsold be a Fejlesztői módot, és a **Kicsomagolt bővítmény betöltése** gombbal válaszd a manifestet tartalmazó mappát. Frissítéskor ugyanott cseréld le a fájlokat, majd töltsd újra a meglévő bővítményt és a játék lapját. Részletes [telepítési útmutató](addons/stonestorm-statcap-overlay/README.md) és [adatkezelési összefoglaló](addons/stonestorm-statcap-overlay/PRIVACY.md).
@@ -175,3 +177,6 @@ Az ismert kazamaták normál és hősi termeinek numerikus statjai is importálh
 Az addon 0.9.4 BÉTA a Chrome bővítményikonjáról indítható, anonim kutatási exportot is tartalmaz. A régi statisztikai szkriptek változatlanok. A ZIP újragenerálható: `npm run build:addon`; a main-push után a Pages-workflow csomagolja és ellenőrzi a letöltést.
 
 A weboldal futtatása továbbra is build nélkül lehetséges. A buildhez, tesztekhez és Auto-Synchez egyszer `npm ci` szükséges az AST-alapú, kódot nem futtató kliensfeldolgozó miatt. `npm run test:home-arena` és `npm run test:home-arena:browser` ellenőrzi az új rendszereket.
+# Data Engine V2
+
+A kísérőkártyák, az adatlap, a Planner és az addon közös V3-modellt használ. A nyilvános kísérőparaméterek az anonim exportba is bekerülhetnek, saját kísérőadatok nélkül. Részletes lefedettség, képletek, frissítési feltételek és helyi tesztek: [DATA_ENGINE_V2.md](docs/DATA_ENGINE_V2.md).

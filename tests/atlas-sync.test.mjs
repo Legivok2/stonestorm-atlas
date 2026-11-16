@@ -80,7 +80,7 @@ function workspace(t){
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-sync-test-'));
   // Csak az általunk létrehozott, ellenőrzött temp mappát takarítjuk.
   t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
-  for(const file of ['data/atlas.json','data/sync-import.json','js/atlas-data.js','data/image-manifest.json','snapshots/current/content.json']){
+  for(const file of ['data/data-engine.json','data/data-engine-contract.json','data/addon-pet-model.json','data/atlas.json','data/sync-import.json','js/atlas-data.js','data/image-manifest.json','snapshots/current/content.json']){
     const target=path.join(dir,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(new URL(file,root),target);
   }
   const c=source(),db=base(),plan=planImport(c,db);applyOverlay(db,plan.overlay);

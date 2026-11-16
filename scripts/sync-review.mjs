@@ -3,6 +3,7 @@ import path from 'node:path';
 import {equal,sha256,fullSetBonuses} from './atlas-sync-model.mjs';
 import {roomStats} from './dungeon-sync.mjs';
 import {systemPaths} from './home-arena-model.mjs';
+import {engineBranches} from './data-engine.mjs';
 
 export const classifications={
   automatic:'Ismert, validálható adat',
@@ -18,6 +19,18 @@ export function atPath(root,pointer){
 const observed=(content,p,sources)=>p.startsWith('https:')?sources.find(x=>x.url===p)?.sha256:atPath(content,p);
 const witness=(v)=>sha256({present:v!==undefined,value:v??null});
 const contains=(root,p)=>p===root||p.startsWith(root+'/');
+function engineProof(entry,content,db){
+  const routes=[['/pets/types','/pets'],['/pets/traits','/petTraits'],['/pets/v3/skills','/petSkills'],['/pets/v3/forms','/petForms'],['/pets/v3','/petSystem/v3'],['/spine/hero/pets','/petSystem/spine'],['/mounts','/mounts'],['/lean/researchSteps','/research'],['/forge','/forge']];
+  const match=routes.find(([p])=>contains(p,entry.path));if(!match||!db.dataEngine)return null;
+  const key=Object.entries(engineBranches).find(([,p])=>contains('/'+p.replaceAll('.','/'),entry.path))?.[0];
+  const branch=db.dataEngine.branches[key],input=atPath(content,'/'+engineBranches[key]?.replaceAll('.','/'));
+  const value=atPath(content,entry.path),actual=atPath(db,entry.path.replace(match[0],match[1]));
+  // Normalized records add editorial names and provenance. Every API field must
+  // still match; extra Atlas metadata is not a missing import or a source field.
+  const matches=(source,target)=>Array.isArray(source)?Array.isArray(target)&&source.length===target.length&&source.every((v,i)=>matches(v,target[i])):source&&typeof source==='object'?target&&typeof target==='object'&&!Array.isArray(target)&&Object.keys(source).every(k=>Object.hasOwn(target,k)&&matches(source[k],target[k])):equal(source,target);
+  if(branch&&input!==undefined&&branch.sha256===sha256(JSON.stringify(input))&&value!==undefined&&matches(value,actual))return {kind:'automatic-import',rule:'data-engine-v2-value-match',sourceHash:branch.sha256,valueHash:witness(value),explanation:'Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.'};
+  return null;
+}
 export function reviewSystem(p){
   if(p.startsWith('/home-arena/'))return 'Otthon és Aréna';
   // Először a tulajdonos rendszer, csak utána a stat neve: terem-harcerő is Kazamaták.
@@ -95,6 +108,7 @@ function editorialProof(entry,content,db,aliases){
   return null;
 }
 export function classifyReview(entry,{plan,content,db,aliases={}}){
+  if(engineProof(entry,content,db))return 'automatic';
   if(entry.path.startsWith('https:'))return entry.beforeHash?'mechanism':'observation';
   if(editorialProof(entry,content,db,aliases))return entry.path.startsWith('/mounts/')?'automatic':'observation';
   if(db.homeArena&&Object.values(systemPaths).some(p=>entry.path===p||p.endsWith('/level')&&entry.path===p.slice(0,-6)&&Object.keys(atPath(content,entry.path)??{}).length===1))return 'automatic';
@@ -111,6 +125,7 @@ export function classifyReview(entry,{plan,content,db,aliases={}}){
   return 'mechanism';
 }
 function processingProof(entry,{plan,content,db,aliases,sourceHash}){
+  const engine=engineProof(entry,content,db);if(engine)return engine;
   const doc=editorialProof(entry,content,db,aliases);if(doc)return {kind:'documented-review',...doc};
   if(entry.classification!=='automatic')return null;
   if(db.homeArena){

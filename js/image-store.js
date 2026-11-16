@@ -7,7 +7,9 @@
   for(const image of catalog.entries)for(const r of image.relations){const key=r.kind+':'+r.id;if(!relations.has(key))relations.set(key,[]);relations.get(key).push(image);}
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const related=(kind,id)=>relations.get(kind+':'+id)??[];
+  function pet(id,form=1){const binding=globalThis.STONESTORM_ATLAS?.pets.find(p=>p.id===id)?.art?.forms?.find(b=>b.form===form);return binding?.imageId&&entries.get(binding.imageId)?.sha256===binding.sha256?entries.get(binding.imageId):null;}
   function forRecord(kind,id){
+    if(kind==='pet'&&pet(id))return pet(id);
     const expected={item:['icons','weapons'],pet:['pets'],mount:['mounts'],map:['scenes','spots','portals'],mob:['mobs','scenes'],building:['guild'],material:['icons'],research:['research'],class:['body','portraits']}[kind]??[];
     return [...related(kind,id)].filter(x=>expected.includes(x.category)&&!x.isSprite).sort((a,b)=>{
       const rank=x=>(x.relations.some(r=>r.kind===kind&&r.id===id&&r.status==='identified')?0:100)+expected.indexOf(x.category)*10+(x.category==='pets'&&!x.name.endsWith('_1')?5:0);
@@ -29,6 +31,6 @@
     for(const p of [prefix,base])for(let tier=Math.min(armor?.portraitTier??0,5);tier>=0;tier--){const im=entries.get('body/'+p+'_t'+tier);if(im)return im;}
     return null;
   }
-  globalThis.AtlasImages=Object.freeze({catalog,entries,related,forRecord,render,character,get:(category,name)=>entries.get(category+'/'+name)??null});
+  globalThis.AtlasImages=Object.freeze({catalog,entries,related,forRecord,render,character,pet,get:(category,name)=>entries.get(category+'/'+name)??null});
   document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement&&e.target.dataset.catalogImage){const p=document.createElement('span');p.className='atlas-image-missing';p.setAttribute('role','img');p.setAttribute('aria-label','A kép nem tölthető be');p.textContent='A kép nem érhető el';e.target.replaceWith(p);}},true);
 })();

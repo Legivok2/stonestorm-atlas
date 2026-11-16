@@ -8,8 +8,10 @@
     "build:data": "node scripts/build-data.mjs && python scripts/build-images.py",
     "build:images": "python scripts/build-images.py",
     "check": "node scripts/check.mjs",
-    "test": "node --test tests/atlas.test.mjs tests/publication.test.mjs tests/stat-limits.test.mjs tests/bonus-system.test.mjs tests/pet-system.test.mjs tests/addon.test.mjs tests/set-bonuses.test.mjs tests/atlas-sync.test.mjs tests/home-arena.test.mjs && npm run test:addon:source",
+    "test": "node --test tests/data-engine.test.mjs tests/atlas.test.mjs tests/publication.test.mjs tests/stat-limits.test.mjs tests/bonus-system.test.mjs tests/pet-system.test.mjs tests/addon.test.mjs tests/set-bonuses.test.mjs tests/atlas-sync.test.mjs tests/home-arena.test.mjs tests/addon-095.test.mjs tests/addon-pet-source.test.mjs && npm run test:addon:source",
     "build:addon": "node scripts/addon-package.mjs",
+    "build:addon:pets": "node scripts/build-addon-pets.mjs",
+    "refresh:addon:pets": "node scripts/build-addon-pets.mjs --refresh",
     "check:addon": "node scripts/addon-package.mjs --check",
     "test:addon:source": "node addons/stonestorm-statcap-overlay/tests/capture-refresh.test.js",
     "test:addon:browser": "node tests/addon-browser.mjs",
@@ -38,7 +40,12 @@
     "test:sync:apply": "node --test tests/sync-apply.test.mjs",
     "test:sync:browser": "node tests/atlas-sync-browser.mjs",
     "test:home-arena": "node --test tests/home-arena.test.mjs",
-    "test:home-arena:browser": "node tests/home-arena-browser.mjs"
+    "test:home-arena:browser": "node tests/home-arena-browser.mjs",
+    "test:addon:095:browser": "node tests/addon-095-browser.mjs",
+    "test:addon:095:native": "node tests/addon-095-native.mjs",
+    "test:addon:pets:browser": "node tests/addon-pet-source-browser.mjs",
+    "test:engine": "node --test tests/data-engine.test.mjs",
+    "test:engine:browser": "node tests/data-engine-browser.mjs"
   },
   "devDependencies": {
     "acorn": "8.15.0"

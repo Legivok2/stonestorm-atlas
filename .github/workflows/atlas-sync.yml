@@ -62,7 +62,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- snapshots/manifest.json snapshots/current/content.json snapshots/current/home-arena-client.json reports/latest-sync.json reports/latest-sync.md data/home-arena.json data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
+          git add -- data/data-engine.json data/addon-pet-model.json reports/data-engine-coverage.json addons/stonestorm-statcap-overlay/pet-data.js addons/stonestorm-statcap-overlay/pet-model.js downloads/stonestorm-statcap-overlay.zip downloads/stat-addon.json js/addon-release.js snapshots/manifest.json snapshots/current/content.json snapshots/current/home-arena-client.json reports/latest-sync.json reports/latest-sync.md data/home-arena.json data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync public Stonestorm data and inspection report'
             git push origin HEAD:main

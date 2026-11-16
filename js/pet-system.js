@@ -10,9 +10,7 @@
     return {form:selected,level:Math.max(current.minLevel,Math.min(current.maxLevel,heroLevel,Math.max(1,requested)))};
   }
   function skillDescription(id,rank,system,format){
-    const skill=system.v3.skills[id],text=system.locale.skills[id]?.desc;
-    if(!skill||!text||!Number.isInteger(rank)||rank<1||rank>skill.values.length)return null;
-    return text.replaceAll('{{value}}',format(skill.values[rank-1]*100)).replaceAll('{{every}}',String(skill.every??'')).replaceAll('{{times}}',String(skill.times??''));
+    return globalThis.StonestormPetDetails.skillDescription(id,rank,system.v3,system.locale,format);
   }
   // Kliensbeli tartalékérték, nem szerveres árajánlat. A karakterből érkező mezők elsőbbségét külön jelöljük.
   function feedPreview(level,heroLevel,form,system,legacy){

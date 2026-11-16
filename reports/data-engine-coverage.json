@@ -1,0 +1,1358 @@
+{
+  "schema": 2,
+  "gameVersion": "c530ea20d7ec",
+  "pets": {
+    "species": 22,
+    "publicModelComplete": 22,
+    "serverFinalResultsVerified": 0,
+    "calculable": 22,
+    "skills": 10,
+    "forms": 5,
+    "observedReferences": 1,
+    "identifiedImages": 0,
+    "logicalFormBindings": 110,
+    "missingArtProof": "Current state.petArt logical-key to hash-addressed public file registry; local historical files alone are insufficient",
+    "formula": "coefficient × (10 × forms.passive[form−1] + rankBonusShare × effectiveRank); independent of level",
+    "skillSources": [
+      {
+        "id": "first_strike",
+        "name": "Előcsapás",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.first_strike",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.first_strike",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "shield_open",
+        "name": "Nyitópajzs",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.shield_open",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.shield_open",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "crit_dmg",
+        "name": "Éles karom",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.crit_dmg",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.crit_dmg",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "regen",
+        "name": "Gyógyító nyalás",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.regen",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.regen",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "thorns",
+        "name": "Tüskés bunda",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.thorns",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.thorns",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "potion_boost",
+        "name": "Gyógyfűszimat",
+        "kind": "combat",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.potion_boost",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.potion_boost",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "idle_xp",
+        "name": "Tanulékony",
+        "kind": "idle",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.idle_xp",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.idle_xp",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "idle_nyang",
+        "name": "Kincsszimat",
+        "kind": "idle",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.idle_nyang",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.idle_nyang",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "loot_luck",
+        "name": "Szerencsemancs",
+        "kind": "economy",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.loot_luck",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.loot_luck",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      },
+      {
+        "id": "keen_nose",
+        "name": "Jó szimat",
+        "kind": "dungeon",
+        "levels": 5,
+        "valuesSource": "pets.v3.skills.keen_nose",
+        "descriptionSource": "public hashed texts.hu module; pets.skills.keen_nose",
+        "formulaSource": "verified public GameApp Kr/fy/Gd functions; data/addon-pet-model.json",
+        "status": "client-derived; individual learned skills unknown"
+      }
+    ],
+    "speciesCoverage": [
+      {
+        "id": "pet_wolf",
+        "name": "Farkaskölyök",
+        "coefficient": {
+          "xpMult": 0.01
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_boar",
+        "name": "Kismalac",
+        "coefficient": {
+          "nyangMult": 0.01
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_bear",
+        "name": "Medvebocs",
+        "coefficient": {
+          "hpMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_monkey",
+        "name": "Kis majom",
+        "coefficient": {
+          "dropMult": 0.008
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.04
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.06
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.08
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.12
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_falcon",
+        "name": "Sólyom",
+        "coefficient": {
+          "evadeBonus": 0.002
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.01
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.015
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.02
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.03
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_dog",
+        "name": "Kutya",
+        "coefficient": {
+          "atkMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_goblin_pup",
+        "name": "Koboldkölyök",
+        "coefficient": {
+          "nyangMult": 0.01
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_ram",
+        "name": "Kiskos",
+        "coefficient": {
+          "hpMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_vulture",
+        "name": "Keselyűfióka",
+        "coefficient": {
+          "dropMult": 0.008
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.04
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.06
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.08
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.12
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_camel",
+        "name": "Tevecsikó",
+        "coefficient": {
+          "xpMult": 0.01
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_fennec",
+        "name": "Fennek",
+        "coefficient": {
+          "evadeBonus": 0.002
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.01
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.015
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.02
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.03
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_scarab",
+        "name": "Szkarabeusz",
+        "coefficient": {
+          "defMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_penguin",
+        "name": "Pingvin",
+        "coefficient": {
+          "nyangMult": 0.01
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_snow_leopard",
+        "name": "Hópárduckölyök",
+        "coefficient": {
+          "atkMult": 0.005
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_yeti_cub",
+        "name": "Jetibocs",
+        "coefficient": {
+          "hpMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_ember_imp",
+        "name": "Parázsmanó",
+        "coefficient": {
+          "critBonus": 0.002
+        },
+        "trait": "strike",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.01
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.015
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.02
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.03
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_lava_turtle",
+        "name": "Lávateknős",
+        "coefficient": {
+          "defMult": 0.005
+        },
+        "trait": "guard",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.025
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0375
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.0625
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_salamander",
+        "name": "Szalamandra",
+        "coefficient": {
+          "xpMult": 0.01
+        },
+        "trait": "mend",
+        "signature": null,
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_u_wild",
+        "name": "Mohaagancs",
+        "coefficient": {
+          "xpMult": 0.012
+        },
+        "trait": "strike",
+        "signature": "first_strike",
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.06
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.09
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.12
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.18
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_u_monkey",
+        "name": "Aranymajom",
+        "coefficient": {
+          "dropMult": 0.01
+        },
+        "trait": "mend",
+        "signature": "regen",
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.05
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.1
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.125
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.15
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_u_spider",
+        "name": "Holdfonó",
+        "coefficient": {
+          "defMult": 0.006
+        },
+        "trait": "guard",
+        "signature": "thorns",
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.03
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.045
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.06
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.09
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      },
+      {
+        "id": "pet_u_dragon",
+        "name": "Viharfióka",
+        "coefficient": {
+          "atkMult": 0.006
+        },
+        "trait": "strike",
+        "signature": "crit_dmg",
+        "learnableSkills": [
+          "first_strike",
+          "shield_open",
+          "crit_dmg",
+          "idle_xp",
+          "regen",
+          "idle_nyang",
+          "thorns",
+          "potion_boost",
+          "keen_nose",
+          "loot_luck"
+        ],
+        "bonusByForm": [
+          {
+            "form": 1,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.03
+          },
+          {
+            "form": 2,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.045
+          },
+          {
+            "form": 3,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.06
+          },
+          {
+            "form": 4,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.075
+          },
+          {
+            "form": 5,
+            "rank": 0,
+            "levelIndependent": true,
+            "value": 0.09
+          }
+        ],
+        "status": "public species model complete; owned state private"
+      }
+    ]
+  },
+  "automatic": {
+    "engineBranches": [
+      "pets",
+      "petSpine",
+      "mounts",
+      "research",
+      "forge",
+      "stats",
+      "bonus",
+      "limits",
+      "rewards",
+      "polish",
+      "stones"
+    ],
+    "petGate": "Fresh public entrypoint + approved function hashes + unchanged reviewed schema; HTTP 403 blocks pet import",
+    "existingAdapters": [
+      "items",
+      "sets (spine.sets.full)",
+      "mobs",
+      "bosses",
+      "stackables",
+      "dungeon numeric rooms",
+      "validated Home/Arena fields"
+    ],
+    "configOnly": [
+      "bonus",
+      "rewards",
+      "polish",
+      "stones"
+    ],
+    "rule": "Known numeric leaves only; changed strings, identifiers, object keys or array sizes require review"
+  },
+  "unknown": [
+    "Server final prices and reward rolls",
+    "Individual pet learned skills and private state",
+    "Unrecognized mechanics, new identifiers or changed array structures require review",
+    "Current entrypoint may return 403; no access-control bypass",
+    "Observed form caps 10/20/30/40/50 versus client 10/20/35/50/60 retained as conflict",
+    "New kalmarteve mount ramp is recorded as public configuration; not applied in Planner without client proof"
+  ],
+  "counts": {
+    "items": 182,
+    "sets": 6,
+    "mounts": 9,
+    "research": 14,
+    "mobs": 65,
+    "bosses": 6,
+    "dungeons": 4
+  }
+}

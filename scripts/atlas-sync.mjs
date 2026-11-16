@@ -6,11 +6,14 @@ import {API,sha256,equal,diffJSON,category,validateContent,localBaseline,planImp
 import {reconcileReview,loadReviewAliases,reviewGroups,classifications} from './sync-review.mjs';
 import {collectPublicSystems} from './collect-home-arena.mjs';
 import {compatibleClientData} from './home-arena-model.mjs';
+import {planEngine} from './data-engine.mjs';
+import {makePetModel} from './build-addon-pets.mjs';
+import {staticModule,clientReferences} from './public-client-data.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=(root,file,fallback=null)=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):fallback;
 function write(root,file,value){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});const temp=target+'.tmp';try{fs.writeFileSync(temp,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(temp,target);}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
-export const syncStateFiles=['data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
+export const syncStateFiles=['data/data-engine.json','data/addon-pet-model.json','reports/data-engine-coverage.json','addons/stonestorm-statcap-overlay/pet-data.js','addons/stonestorm-statcap-overlay/pet-model.js','downloads/stonestorm-statcap-overlay.zip','downloads/stat-addon.json','js/addon-release.js','data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
 export async function fetchPublic(url,previous,fetcher=fetch){
   const u=new URL(url);
   if(u.origin!=='https://stonestorm.gg'||u.username||u.password)throw Error('Nem engedélyezett adatforrás');
@@ -96,6 +99,29 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const db=read(root,'data/atlas.json');
     const priorImport=read(root,'data/sync-import.json',{schema:1,records:{},sets:{}});
     const plan=planImport(content,db,priorImport,now);
+    const engineState=read(root,'data/data-engine.json'),contracts=read(root,'data/data-engine-contract.json');
+    if(!engineState||!contracts)throw Error('Missing Data Engine V2 contract/state');
+    let petCandidate=null;
+    const petChanged=!equal(engineState.branches.pets.data,content.pets)||!equal(engineState.branches.petSpine.data,content.spine?.hero?.pets);
+    if(petChanged&&inspect){
+      try{
+        const currentModel=read(root,'data/addon-pet-model.json');
+        // URLs are recorded public import references, never guessed endpoints.
+        const html=await fetchPublic('https://stonestorm.gg/',null,fetcher);
+        const entry=[...html.text.matchAll(/<script[^>]+src=["']([^"']+)["']/g)].map(m=>new URL(m[1],'https://stonestorm.gg/').href).find(u=>/^https:\/\/stonestorm\.gg\/assets\/index-[\w-]+\.js$/.test(u));
+        if(!entry)throw Error('Current public entrypoint not confirmed');
+        const entryResource=await fetchPublic(entry,null,fetcher);
+        const refs=clientReferences(entryResource.text,entry);
+        const game=refs.find(u=>/^https:\/\/stonestorm\.gg\/assets\/GameApp-[\w-]+\.js$/.test(u));
+        const hu=refs.find(u=>/^https:\/\/stonestorm\.gg\/assets\/texts\.hu-[\w-]+\.js$/.test(u));
+        if(!game||!hu)throw Error('Missing public client references');
+        const client=await fetchPublic(game,null,fetcher),locale=await fetchPublic(hu,null,fetcher);
+        petCandidate=makePetModel(content,staticModule(locale.text).namespaces.pets,client.text,[contentMeta,{url:game,sha256:client.sha256},{url:hu,sha256:locale.sha256}],true);
+        if(!equal(petCandidate.locale,currentModel.locale))throw Error('Changed pet localization requires review');
+      }catch(e){petCandidate=null;plan.review.push({path:'/pets/client',reason:e.message});}
+    }
+    const enginePlan=planEngine(content,engineState,contracts,{petProof:!!petCandidate});
+    plan.accepted.push(...enginePlan.accepted);plan.review.push(...enginePlan.review);
     let publicSystems=null,publicSystemsCache=null,clientCandidate=null;
     if(inspect&&db.homeArena){
       try{
@@ -115,6 +141,10 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const statusBefore=read(root,'data/sync-status.json',{});
     const newStatus={schema:1,lastSuccessfulCheck:now,gameVersion:content.version,atlasDataVersion:plan.accepted.length&&apply?content.version:db.dataVersion,lastAutomaticUpdate:statusBefore.lastAutomaticUpdate??null,lastImportCounts:statusBefore.lastImportCounts??{added:0,changed:0},mode:apply?'apply':'read-only',changeCounts:report.counts,importable:plan.accepted.length,reportUrl:'https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md'};
     if(apply&&plan.accepted.length){
+      plan.overlay.gameVersion=content.version;plan.overlay.checkedAt=now;plan.overlay.sourceHash=contentMeta.sha256;
+      if(enginePlan.accepted.length){save('reports/history/data-engine/'+sha256(engineState)+'.json',engineState);save('data/data-engine.json',enginePlan.state);}
+      const petApplied=enginePlan.accepted.some(x=>x.path==='/pets');
+      if(petApplied&&petCandidate)save('data/addon-pet-model.json',petCandidate);
       save('data/sync-import.json',plan.overlay);
       if(clientCandidate){const previousSystem=read(root,'data/home-arena.json');save('reports/history/home-arena/'+sha256(previousSystem)+'.json',previousSystem);save('data/home-arena.json',clientCandidate);}
       // A build és az npm test ugyanazt a jelölt verziót olvassa. Ez még nem
@@ -124,7 +154,7 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
       if(verify)await verify();else{
         // A gyermek tesztfuttató saját eredményt ad, és nem írhat a szülő Actions-kimenetébe.
         const env={...process.env};delete env.NODE_TEST_CONTEXT;delete env.GITHUB_OUTPUT;delete env.GITHUB_STATE;
-        for(const [program,args] of [[process.execPath,['scripts/build-data.mjs']],...(process.platform==='win32'?[['cmd.exe',['/d','/s','/c','npm test']]]:[['npm',['test']]])]){
+        for(const [program,args] of [[process.execPath,['scripts/build-data.mjs']],...(petApplied?[[process.execPath,['scripts/addon-package.mjs']]]:[]),...(process.platform==='win32'?[['cmd.exe',['/d','/s','/c','npm test']]]:[['npm',['test']]])]){
           const result=spawnSync(program,args,{cwd:root,stdio:'inherit',env});if(result.status!==0)throw Error('Importellenőrzés sikertelen: '+args.join(' '));
         }
       }

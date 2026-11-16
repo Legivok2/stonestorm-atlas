@@ -3,11 +3,13 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import '../js/atlas-math.js';
+import '../js/pet-detail-model.js';
 import '../js/pet-system.js';
 import '../js/planner-model.js';
 const db=JSON.parse(fs.readFileSync(new URL('../data/atlas.json',import.meta.url),'utf8'));
 const setEvidence=JSON.parse(fs.readFileSync(new URL('../data/set-bonus-evidence.json',import.meta.url),'utf8'));
 const sync=JSON.parse(fs.readFileSync(new URL('../data/sync-import.json',import.meta.url),'utf8'));
+const engine=JSON.parse(fs.readFileSync(new URL('../data/data-engine.json',import.meta.url),'utf8'));
 const synced=(kind,id)=>kind==='dungeons'?sync.dungeons?.[id]:sync.records?.[kind]?.[id];
 const checkSync=entry=>{assert.equal(entry.provenance.source,'https://stonestorm.gg/api/content');assert.match(entry.provenance.sha256,/^[a-f0-9]{64}$/);assert(entry.provenance.apiPath);assert.equal(entry.provenance.status,'derived');};
 const math=globalThis.StonestormMath,rates=db.economy.limits.guildSpeedup;
@@ -36,6 +38,7 @@ test('Képkatalógus: létező fájlok, források, állapotok és teljes adatkap
     if(image.status==='identified')assert(image.relations.some(r=>r.status==='identified'));
   }
   for(const [kind,key] of [['item','items'],['pet','pets'],['mount','mounts'],['mob','mobs'],['map','maps']])for(const record of db[key]){
+    if(kind==='mount'&&!catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id))){assert(engine.branches.mounts.data.some(m=>m.id===record.id));assert.equal(record.provenance.sha256,engine.branches.mounts.sha256);continue;}
     if(synced(key,record.id)&&!catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id))){checkSync(synced(key,record.id));continue;}
     assert(catalog.entries.some(im=>im.relations.some(r=>r.kind===kind&&r.id===record.id)),record.id);
   }
@@ -74,7 +77,7 @@ test('Planner: family alapján aktív szettküszöbök, külön kezelt százalé
   assert.equal(result.equipment.maxHp,0);assert.deepEqual(result.sets[0].active[0],db.sets.find(set=>set.familyId==='m1').bonuses[0]);
   assert.deepEqual(result.sets[0].inactive.map(bonus=>bonus.pieces),[4,6]);
   assert.deepEqual([...result.sets[0].active,...result.sets[0].inactive],db.sets.find(set=>set.familyId==='m1').bonuses);
-  assert.equal(result.pet.rawSpeciesBonus.xpMult,.1);assert.equal(result.mount.travelMult,.9);
+  assert.equal(result.pet.rawSpeciesBonus.xpMult,db.pets.find(p=>p.id==='pet_wolf').perLevel.xpMult);assert.equal(result.pet.details.bonusValue,result.pet.rawSpeciesBonus.xpMult*10*db.petModel.config.forms.passive[result.pet.form-1]);assert.equal(result.mount.travelMult,.9);
   assert.equal(result.levelStats,null);assert.equal(result.finalCombatStats,null);
   const roundtrip=model.parse(JSON.stringify(result.build),db);assert.deepEqual(roundtrip.build,result.build);
 });
@@ -96,7 +99,7 @@ test('A hátas időszorzója és a mért XP-hatékonyság külön számítás',(
 test('Forráslefedettség, egyedi azonosítók és visszakövethető rekordok',()=>{
   for(const [key,count] of Object.entries({items:182,sets:6,pets:22,mounts:8,maps:6,mobs:64,bosses:6,dungeons:4,research:14})){
     const added=Object.values(sync.records?.[key]??{}).filter(entry=>!JSON.parse(fs.readFileSync(new URL('../source-data/'+({items:'01_felszerelesek_es_szettek.json',mobs:'06_terkepek_szornyek_bossok_kazamatak.json',bosses:'06_terkepek_szornyek_bossok_kazamatak.json'}[key]),import.meta.url),'utf8'))[key].some(x=>x.id===entry.record.id)).length;
-    assert.equal(db[key].length,count+added,key);
+    assert.equal(db[key].length,key==='mounts'?engine.branches.mounts.data.length:count+added,key);
     assert.equal(new Set(db[key].map(x=>x.id)).size,db[key].length,key+' duplikátum');
     if(key==='sets'){
       assert.match(setEvidence.source,/spine\.sets\.full/);
@@ -115,6 +118,9 @@ test('Forráslefedettség, egyedi azonosítók és visszakövethető rekordok',(
         assert.equal(set.itemLevel,evidence.level);
         assert.deepEqual(set.bonuses,evidence.bonuses,set.familyId+' bizonyítékhoz kapcsolt bónuszok');
       }
+    }else if(['pets','mounts','research'].includes(key)){
+      const b=engine.branches[key];assert.equal(crypto.createHash('sha256').update(JSON.stringify(b.data)).digest('hex'),b.sha256);
+      for(const row of db[key]){assert.equal(row.provenance.source,'https://stonestorm.gg/api/content');assert.equal(row.provenance.sha256,b.sha256);assert.equal(row.provenance.status,'derived');assert.equal(row.provenance.gameVersion,b.gameVersion);}
     }else{
       for(const row of db[key]){if(synced(key,row.id)){checkSync(synced(key,row.id));assert.deepEqual(row.provenance,synced(key,row.id).provenance);}else assert(row.provenance?.source&&row.provenance.checkedAt==='2026-11-06',key+' forrás');}
     }

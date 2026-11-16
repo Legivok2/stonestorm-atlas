@@ -35,6 +35,7 @@
   root.id = "ss-statcap-root";
   root.style.cssText = "position:fixed;bottom:16px;right:16px;z-index:2147483647;pointer-events:none";
   const shadow = root.attachShadow({ mode: "closed" });
+  globalThis.StonestormAddonPanels?.attach(shadow);
   document.documentElement.append(root);
 
   const style = document.createElement("style");

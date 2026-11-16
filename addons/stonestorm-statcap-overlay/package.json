@@ -4,5 +4,5 @@
   "scripts": {
     "test": "node tests/capture-refresh.test.js"
   },
-  "version": "0.9.4"
+  "version": "0.9.6"
 }

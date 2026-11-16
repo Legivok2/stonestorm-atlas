@@ -2,18 +2,18 @@
 
 Állapot: unchanged
 
-Ellenőrzés: 2026-11-16T15:21:34.714Z
+Ellenőrzés: 2026-11-16T18:20:44.001Z
 
 Játékverzió: c530ea20d7ec
 
 ## Áttekintés
 
 - Most észlelt új tételek: 0
-- Korábbról nyitva maradt: 394
-- Automatikusan feldolgozott mezők: 0
+- Korábbról nyitva maradt: 393
+- Automatikusan feldolgozott mezők: 1
 - Dokumentált felülvizsgálattal lezárt: 0
 - Mechanikai / kézi ellenőrzés: 10
-- Nyitott összesen: 394
+- Nyitott összesen: 393
 
 ## A kiinduló 505 tétel besorolása
 
@@ -40,10 +40,6 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 
 - Kitérési korlát a különböző bossok ellen: 1 tétel – Kézi ellenőrzést igénylő eltérés
 - Fejlődési és egyensúlyozási szabályok: 1 tétel – Új vagy megváltozott játékmechanika
-
-### Hátasok (1)
-
-- Hátas · számított utazási idő: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
 
 ### Ház (2)
 
@@ -93,4 +89,4 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 
 A teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34.
 
-Kliensfeltérképezés ebben a futásban: igen.
+Kliensfeltérképezés ebben a futásban: nem; a meglévő forrásleltár megmaradt.

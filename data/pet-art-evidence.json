@@ -1,0 +1,870 @@
+{
+  "schema": 1,
+  "source": {
+    "url": "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+    "sha256": "3a22e9fedd66a52e31eea9adb1abce56172d97e7f66d7ef598129e66047b5b2c"
+  },
+  "functions": {
+    "Tl": {
+      "sha256": "9cea00be0ebdb4d7e6f0d3b65c5e77d43927894075e3e25760c9bb322c084aa7",
+      "source": "Tl={pet_u_wild:\"pet_fennec\",pet_u_monkey:\"pet_monkey\",pet_u_spider:\"pet_scarab\",pet_u_dragon:\"pet_salamander\"}"
+    },
+    "Ro": {
+      "sha256": "3bf58011c1bb2646bc578cd027a3aadb60a1a98fd842397eb8bc5c8ae6ee975f",
+      "source": "function Ro(e,t,n){if(n(`${e}_${t}`))return{name:`${e}_${t}`,framed:!1,any:!0};for(let o=t-1;o>=1;o--)if(n(`${e}_${o}`))return{name:`${e}_${o}`,framed:!0,any:!0};const s=[1,2,3,4,5].some(o=>n(`${e}_${o}`));return{name:`${e}_${Math.min(t,3)}`,framed:t>3,any:s}}"
+    },
+    "cT": {
+      "sha256": "baa8040e687e4db7180f0b79302e6c4285ac30e52df709c26e2a2003d3101006",
+      "source": "function cT(e,t,n){const s=Ro(e,t,n),o=Tl[e];return!s.any&&o?{name:Ro(o,t,n).name,framed:!0}:{name:s.name,framed:s.framed}}"
+    }
+  },
+  "scope": "Conditional logical form-key candidates from client selector. Current registry availability is unknown, so actual selected file/fallback is unproven.",
+  "bindings": {
+    "pet_wolf": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_wolf_1",
+        "framed": false,
+        "sha256": "d129e0873a7b4e4e64c0f01bc4303d8336b2ba97364a5db38eea741c6336644f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_wolf_2",
+        "framed": false,
+        "sha256": "e413193a26683093776055f819f2fcb7a2414bf275ea6c80ce9e3fe78be5a99f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_wolf_3",
+        "framed": false,
+        "sha256": "c8ae4a917da309a00c39954128732e428c63cc07c7f0d6088389f7420fdcba35",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_wolf_4",
+        "framed": false,
+        "sha256": "a976a9f6015b6aa86bc85479af93a6c8402d9d2db1074dc3ab969ce78a2211b9",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_wolf_5",
+        "framed": false,
+        "sha256": "999ddd0b0b712ba542912881c8f8f5f2f611c5baa2f9e231be7d79cab744e338",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_boar": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_boar_1",
+        "framed": false,
+        "sha256": "07a733e3a6f8bde973e5204b9fac3a1902f84259ea746798384720a26bef0ddf",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_boar_2",
+        "framed": false,
+        "sha256": "08b5977bff529a091ed653f66f84ebdba90f12e5034fbd4a9bff9c21ed51dee4",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_boar_3",
+        "framed": false,
+        "sha256": "66b58982fba6eafafe1f67553565efa7f1cfe120bbaa67ebed17f5ab396365a9",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_boar_4",
+        "framed": false,
+        "sha256": "389509ab917dce6f0a3a9b6c8ad8eb1724f3cc55295dbbbc555579c3700a7947",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_boar_5",
+        "framed": false,
+        "sha256": "ac0ce1ed3d87d41931349d628551f914da0dcedefdaff6027b305d86a9c522f7",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_bear": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_bear_1",
+        "framed": false,
+        "sha256": "571eabf38cc0e8c30c0bbfe89de4a3e11d13ab8a86cd8bd5e506dc3097b406ef",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_bear_2",
+        "framed": false,
+        "sha256": "c59154d67e292893b5273bbdc36b7e5697a1652517a364f9a2c272e342be9a38",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_bear_3",
+        "framed": false,
+        "sha256": "0744eb9113f3c2ed95a1aa74f5d416d3e7f4e89232fb783c006394a86972e202",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_bear_4",
+        "framed": false,
+        "sha256": "8fdf892867ee8c50b2df70e3630ce800f362baed4e3918e4f92e4d47132988cd",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_bear_5",
+        "framed": false,
+        "sha256": "015f1516af851f6c4fb4f3b540e2226a85a99eb5d30cdca918b088e32e25a10e",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_monkey": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_monkey_1",
+        "framed": false,
+        "sha256": "ff37720438f2220d4701ed98574a026f6a3eff372ca99758526b913e3d23d9ac",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_monkey_2",
+        "framed": false,
+        "sha256": "823ac3d4e8c23c8ae580b8f258830fa6ce21f9dbcb13c8b5b1bbcc457e2cbb8e",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_monkey_3",
+        "framed": false,
+        "sha256": "14a84ab54943441328939bd718af49323f2d95be7c76a774d138cd5500de403f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_monkey_4",
+        "framed": false,
+        "sha256": "a3a665d322a2ce4aca010eccceb8b46fe13d462eacfca65a6f4472054bad56f5",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_monkey_5",
+        "framed": false,
+        "sha256": "c0ee12954d8e23c5406586f59cd0cb3964eb8b50cd7942679a8a3c704538bed5",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_falcon": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_falcon_1",
+        "framed": false,
+        "sha256": "caa8558910452964bddf1839b3b5d4f1f3a81d66a5ef12f7542e4081c6b195ff",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_falcon_2",
+        "framed": false,
+        "sha256": "6c76a1c95d7683156260dec50948da258d504c8abb8f863b6397017f44508a6b",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_falcon_3",
+        "framed": false,
+        "sha256": "b39a0b3eda0856015278c404f6b9199f758204d56ef9ddfd74d1f6d34ec3e506",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_falcon_4",
+        "framed": false,
+        "sha256": "03a7a1a524896be99880b1bd84c85de3fdda8ce2bae31bf7323d334c7967a562",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_falcon_5",
+        "framed": false,
+        "sha256": "95efd82cfa32e46cfa9e95940f73f80174b8fc03e2e025cdfb83fc2754e2a99e",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_dog": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_dog_1",
+        "framed": false,
+        "sha256": "e79a21032d5ab5bc40578e994a8c7c418e1020838d13277e804c7fd386b9596a",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_dog_2",
+        "framed": false,
+        "sha256": "ca4816956587ccaa2bdb14df0d5088003c7869ecfa77d3bfead285578e7dcfcb",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_dog_3",
+        "framed": false,
+        "sha256": "b5f59341e8f21dece24b653027bf384acdc391e173f7911ad7c1b952e451cb38",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_dog_4",
+        "framed": false,
+        "sha256": "eda99e2c19c9348bce5a378781b4458fb121cebd2f9638bcc91993167d998a05",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_dog_5",
+        "framed": false,
+        "sha256": "87d0b2bd902ea7c01bfc9823dd9996f61f38ea805046646a547bb46ba1afc1ea",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_goblin_pup": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_goblin_pup_1",
+        "framed": false,
+        "sha256": "ff5546b1424ead3ed995590eeb1818db67b818fbee458c16fccb9281e538c783",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_goblin_pup_2",
+        "framed": false,
+        "sha256": "2f21000f8a4ce3836041320ec681cfd6ce4692b9be9df6f0af6d7bf0a8a98fba",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_goblin_pup_3",
+        "framed": false,
+        "sha256": "237ed4f9f231530f27b0efdad1d8b0aa3bcbd5014057b83d3f0fc5a4db2762b7",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_goblin_pup_4",
+        "framed": false,
+        "sha256": "99bc27b099ee3f05626c7cac9447b68910441f57b690572d6660ec1ed3294cef",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_goblin_pup_5",
+        "framed": false,
+        "sha256": "6cbf9124fba757c637cbe218d26053ad2e47cf15807086b991b706d08b0e6878",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_ram": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_ram_1",
+        "framed": false,
+        "sha256": "a8584cad6fb52a7aaab874ba45d0c5b8289adf86b1fc3db99ee270984d14d5c2",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_ram_2",
+        "framed": false,
+        "sha256": "6f4631712fa37672ad1a303d87b2912119de78325bcdd488e2933396f6a36518",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_ram_3",
+        "framed": false,
+        "sha256": "f7507ce52a05dfd1df1a3429fdb154c5421be0cfe17da590d68ee29a9270afaf",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_ram_4",
+        "framed": false,
+        "sha256": "35c871836c136f10c6340d94c2a13acb82a1a5e3314d306a6794e6a0b30621b9",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_ram_5",
+        "framed": false,
+        "sha256": "06a4600c92e395301ae27e50052dc217a3c4b00117fb37bb41f5cc4c70d07948",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_vulture": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_vulture_1",
+        "framed": false,
+        "sha256": "995e291d002ee084fef31ae04ae51d1adba317e51eb827f300de3d9e98765226",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_vulture_2",
+        "framed": false,
+        "sha256": "45b6054dbdf198271b296ac4dc5bf12d124a4cddc179def830485bba99374d57",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_vulture_3",
+        "framed": false,
+        "sha256": "fd26ecb15c14a4f986779c61510b3a38d9feda0c6b2af6ae556bdaf958d66c70",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_vulture_4",
+        "framed": false,
+        "sha256": "62547a2952b8ac830fa47572accba09cd0228cff5400f2e7cf69591668ad5be1",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_vulture_5",
+        "framed": false,
+        "sha256": "97a792964a6ab0810ab23a534d28d458b91eaf404fa0222714a67f92f31382bb",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_camel": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_camel_1",
+        "framed": false,
+        "sha256": "4267b59d6156be59dbe2a8ad0d0b9bae183fc0f01896685bc9525dd98e35dde7",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_camel_2",
+        "framed": false,
+        "sha256": "7116de83fbeed00c8a437a397b7c38d4c8d396abd502b3419668ab7cc5506125",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_camel_3",
+        "framed": false,
+        "sha256": "abb56092cb821b96062d53ec6cb128f4cd11f7f597190311a2c8ea4d7db100c9",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_camel_4",
+        "framed": false,
+        "sha256": "7cc34de67884fa6f9d33e3b83be4ec5c7ec253793f2fd159c11f8ff0f9a14f0b",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_camel_5",
+        "framed": false,
+        "sha256": "c2175b80d856a076e5b82555464297403adc875427b00bb48ce5c895afce6ccf",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_fennec": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_fennec_1",
+        "framed": false,
+        "sha256": "6f8bd233d62802a7417a9865f39a7d4bf3ead824ee886abc8d99547d19135665",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_fennec_2",
+        "framed": false,
+        "sha256": "fab279935e2f61d28619effbc8e4afa6bad31ddc015f08236e58e008e72bf18e",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_fennec_3",
+        "framed": false,
+        "sha256": "2a0f38685acdb8d7048970226c1672e4abaa8894e36a6982b64546c748e5eb82",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_fennec_4",
+        "framed": false,
+        "sha256": "6e95d6120e714ec3b7f957da5954f6505c3d92cef35ac1b600fa9bb5f98bd766",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_fennec_5",
+        "framed": false,
+        "sha256": "ffde1437288a473e934a0040c9f56e7c19db6d18cf7c16fcae53334c7c8d2b52",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_scarab": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_scarab_1",
+        "framed": false,
+        "sha256": "9ebb6e3eead24fe4c6dae1a110549341eee1aca631e391bf0ec53e4d05960b7e",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_scarab_2",
+        "framed": false,
+        "sha256": "231dfc729c876c6f51f56be40bc4c422008ea34d3ea2b2968aa04d06719969d8",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_scarab_3",
+        "framed": false,
+        "sha256": "ab985c8d664c251156092c509f08e4c950b31107647ba2c2d1e1b3ac2383fc6a",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_scarab_4",
+        "framed": false,
+        "sha256": "f63cb767347d81f41a05bc85278707e1ced1fb24adb3cd6731b7536e646061a7",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_scarab_5",
+        "framed": false,
+        "sha256": "3116d07ad3721489e274707a7e62b1ec08fb555e5586ac7e2a1d89115607f78e",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_penguin": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_penguin_1",
+        "framed": false,
+        "sha256": "f1718fe4ebb70e2b68976151afffab85e55eff668c08d7d6a71a19a9036e9ed3",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_penguin_2",
+        "framed": false,
+        "sha256": "6417ea9a8cdc8539584dcf06cd7c28fa508f572aaf2b0ab5a290e24d5ec2a126",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_penguin_3",
+        "framed": false,
+        "sha256": "431ad4707fec6a6b1e66edafa8360b6838fef4328caf7d25c1b5d532b0a3ea7c",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_penguin_4",
+        "framed": false,
+        "sha256": "cc7ef8c62e135bcef3e995b0f702c15e16497fa09d94783db9f7de707558fdb6",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_penguin_5",
+        "framed": false,
+        "sha256": "2be1ea43e7990c1dcdaaf1eed1a4a6a5a143b3e3f350cc85b5d7ea30347b309e",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_snow_leopard": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_snow_leopard_1",
+        "framed": false,
+        "sha256": "0d85467de5ff339c67fab3a3687bffb24902bf6c67e7788253e548b96c4f8d31",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_snow_leopard_2",
+        "framed": false,
+        "sha256": "c4ef997bb29f6b78404abccde687aed274d651675752cf0cc794c59221be98ed",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_snow_leopard_3",
+        "framed": false,
+        "sha256": "dc0029bfbdd40cd10af0f0e564bbc2690e89613cf55793faf7f612ee53b4554f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_snow_leopard_4",
+        "framed": false,
+        "sha256": "95f6583a569d482c7b28530dd1d49ba5a5631189102fdd199518d2716a6846a1",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_snow_leopard_5",
+        "framed": false,
+        "sha256": "c9db01b390f08e35ae940c8fbc0b0a75283d6813dae37b5dc6cd0c09e0a03cb3",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_yeti_cub": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_yeti_cub_1",
+        "framed": false,
+        "sha256": "efd8d5dbccb698df4095df06bdefb07ac632243b54528898acc8c46519ce4611",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_yeti_cub_2",
+        "framed": false,
+        "sha256": "d04119b93412f8a9e71a3c1329db1b8cfc74df164370570a701418702c9668e7",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_yeti_cub_3",
+        "framed": false,
+        "sha256": "953768b7115a89753dcb4bf8aa6b02405c84eb2a74206accd4db2639a465dadd",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_yeti_cub_4",
+        "framed": false,
+        "sha256": "c8d41dcf0228b607720a7f7ecced87c2f42a9ab33888c0b667e3cf7873e98871",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_yeti_cub_5",
+        "framed": false,
+        "sha256": "60453eb200de23c3fb346351283f78c20622ba5169ad1d15139912dc4974d273",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_ember_imp": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_ember_imp_1",
+        "framed": false,
+        "sha256": "b17ebb375a300e023858fb46e248125f0505443928f128011ff79172f56353c0",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_ember_imp_2",
+        "framed": false,
+        "sha256": "707b4d6566fcb41aba35df73c46a14786dc591705ce28a8449a97e21ee9215f0",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_ember_imp_3",
+        "framed": false,
+        "sha256": "d591f9a8e9fd7a344c0f9376db330ff2aa877d2aea0fd4623c9c91867c85d19c",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_ember_imp_4",
+        "framed": false,
+        "sha256": "14d8b7bc475d0839835a9dcd63bf49e539f9cb4f082d41cbd559ea09ed6edf88",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_ember_imp_5",
+        "framed": false,
+        "sha256": "ca8b64c1599a51b2b886e81f4b41384b7a5a6206b97691346a801f9710d9050c",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_lava_turtle": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_lava_turtle_1",
+        "framed": false,
+        "sha256": "c0a4c6350b69e1f44231d960cf4ae7da1d516253688eeaa6ac62f1073055334f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_lava_turtle_2",
+        "framed": false,
+        "sha256": "c3322ea4f6b0a9bb5736bdde43c2c4f9575dc9a118ada9aa08d8d2babb9116f5",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_lava_turtle_3",
+        "framed": false,
+        "sha256": "8869e9779560b1c028e47e471a454d09f63cc242c75dc489201376bb74b35baa",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_lava_turtle_4",
+        "framed": false,
+        "sha256": "76557e8800a5b19c9fceaa2695d0216bec37613a305b3c4c1f2804a0b8ac258a",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_lava_turtle_5",
+        "framed": false,
+        "sha256": "772c9b0297d6074e3047ad4f5a3f072058f1040c98e81e83d04c813da8606022",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_salamander": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_salamander_1",
+        "framed": false,
+        "sha256": "5016f0bc85e15b2b9e905f0915ba0e1844f7c6b168eaaf92102500ff31976d85",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_salamander_2",
+        "framed": false,
+        "sha256": "6d7c71a5d9be37e2d0adf172c7c781bb7b94afd78ae2dc5be28e73e036a9d3dd",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_salamander_3",
+        "framed": false,
+        "sha256": "a66907a5f6137ac66cde9a8dda5ba96b2ca238b2d3a15890bb7c5d25150a6604",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_salamander_4",
+        "framed": false,
+        "sha256": "392fb6033c6a1ab9d26c634024bdb2e896532c30103fe6d40200514c6d31787c",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_salamander_5",
+        "framed": false,
+        "sha256": "107054c85e1eb3398a7684043c301319a78cff5a2ba9ac8d457cc3174cef8d65",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_u_wild": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_u_wild_1",
+        "framed": false,
+        "sha256": "bc8db807784e71cb1c703cdc744056c79d32f26761a88df3f0e94f4f413e3d18",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_u_wild_2",
+        "framed": false,
+        "sha256": "e8761ef4a9ec036d4023d134f85e7e69e69cb770a5f6608b6416f4ec55a80f36",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_u_wild_3",
+        "framed": false,
+        "sha256": "460fa6f1702e1803da3fff19ce31a61c5c91eaede615c46eea6b860db4d8e480",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_u_wild_4",
+        "framed": false,
+        "sha256": "900da92314f3db8b4722d2e77d8204c01c0cf62a7b94896016a3e068c0ffadd0",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_u_wild_5",
+        "framed": false,
+        "sha256": "d817ec21e6f99adfce50ac0a24e0b59b79cac0fc93d8b56c2b9623ba85c15a26",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_u_monkey": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_u_monkey_1",
+        "framed": false,
+        "sha256": "d27aa24d10364cf13ec8b2d2d1d6e1398cb393ca55bd16ca079a6a0b0ae47aed",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_u_monkey_2",
+        "framed": false,
+        "sha256": "4eebbd0702900b31cfeac39d9a3b351182503571b15e148cac36e720cc9cac44",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_u_monkey_3",
+        "framed": false,
+        "sha256": "58bccaf9b241fc07f7fe3cc6a241ab752d256f918147cd1ea5c4d8b87a06d7e1",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_u_monkey_4",
+        "framed": false,
+        "sha256": "993cca179191d75aa8acab8075c0c521d888251099cbd922ef57cf4da8263208",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_u_monkey_5",
+        "framed": false,
+        "sha256": "0c371626bdd6a4f02bef282f02228080c883f327ac34240b8de598037c7a3423",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_u_spider": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_u_spider_1",
+        "framed": false,
+        "sha256": "68ad06eebdd8584a504626261cab935b0641b5fe5feaf044dc4612e63125e4b1",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_u_spider_2",
+        "framed": false,
+        "sha256": "6744bea1d3ea1a22292df7878d3df992d7e05abe13035934ae508d40f8dff8ad",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_u_spider_3",
+        "framed": false,
+        "sha256": "96aaf3a1c125a25c5a49ebf0a51d679b77cf0b235ae10ff48c8b149af526fbfa",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_u_spider_4",
+        "framed": false,
+        "sha256": "2fefe5c300d5f676cad61999e576f6df5ba94ff335d34481f3f48414735b7c25",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_u_spider_5",
+        "framed": false,
+        "sha256": "91dbccf64837e2dba00785942cc8ed5ab4a40a080e1e1a4d80b3b59b23b012c0",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ],
+    "pet_u_dragon": [
+      {
+        "form": 1,
+        "imageId": "pets/pet_u_dragon_1",
+        "framed": false,
+        "sha256": "1a6828aa3ab198ef71226d287e755c6a445f5b643991317c8caf87c20f6a7e49",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 2,
+        "imageId": "pets/pet_u_dragon_2",
+        "framed": false,
+        "sha256": "bf03dc481f5332f765f8750cc258a2f19f3b08db3abc48a81c9a4c13cf415754",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 3,
+        "imageId": "pets/pet_u_dragon_3",
+        "framed": false,
+        "sha256": "31cd104cae3002e8558bb732c6e4c290694f4e3e86ae09198d2a63c50e8d421c",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 4,
+        "imageId": "pets/pet_u_dragon_4",
+        "framed": false,
+        "sha256": "994496a58bbdd3efe576f1acf29a738fd9fdec4b04aaebbdfc3a5963d602498f",
+        "status": "logical-key-only; current file registry missing"
+      },
+      {
+        "form": 5,
+        "imageId": "pets/pet_u_dragon_5",
+        "framed": false,
+        "sha256": "0abeacc132a3a63dbe9447aad3026ac0f832e59202ab61fd6872c276db17b81b",
+        "status": "logical-key-only; current file registry missing"
+      }
+    ]
+  },
+  "consumer": {
+    "url": "https://stonestorm.gg/assets/PetParts-CxUdadNm.js",
+    "sha256": "8bd6cf60459e5ccad67017305adb09b2cd50f813d83cc9ea719a95ec81923494",
+    "functions": {
+      "T": {
+        "source": "function T({pet:s,className:t}){const a=s.form===void 0?{name:`${s.petId}_${s.stage}`,framed:!1}:A(s.skin??s.petId,v(s.form),j);return e.jsx(x,{folder:\"pets\",name:a.name,alt:\"\",className:i(\"pet-portrait\",a.framed&&\"pet-portrait--framed\",t),fallback:e.jsx(z,{className:i(\"pet-portrait\",\"pet-portrait--glyph\",t)})})}",
+        "sha256": "c3a49a5b3f7e3cd9573048270a3ce8b99870aceb3950c6ac1676b4e5794cce07"
+      }
+    },
+    "existsBinding": "j = s => y(\"pets\", s); imported index.af"
+  },
+  "fileRegistry": {
+    "url": "https://stonestorm.gg/assets/index-lDwa4khx.js",
+    "sha256": "183dbb9e94a1fde86e34b6693f2cd5716b5474d7f6e4d3dbc55ef4dc371bd11e",
+    "functions": {
+      "eE": {
+        "source": "function eE(e){if(e)for(const[l,i]of Object.entries(e))ih.set(l,i)}",
+        "sha256": "847544b0208fbec633b4585dbaa7fb6d0db5d3d00c0a18ce01e2f9a32549870f"
+      },
+      "dn": {
+        "source": "function dn(e,l){var i;return e===\"pets\"?ih.has(l):((i=lh.get(e))==null?void 0:i.has(l))??!1}",
+        "sha256": "d11723513f8876a177e9310496591eccea461234726699b434aeefb6403c3cfe"
+      },
+      "go": {
+        "source": "function go(e,l){return jn(e===\"pets\"?`/art/pet-art/${ih.get(l)??\"none\"}.webp`:`/art/${e}/${l}.webp`)}",
+        "sha256": "ff2110214829cf5a47bb0b5622cc5f7bb26ba13001af95e3a48b6b7c1de3c805"
+      }
+    },
+    "source": "state.petArt from character response",
+    "available": false,
+    "scope": "Current registry missing. Logical form selection is proven; historical local file bytes are not proven to match current hash-addressed assets."
+  }
+}

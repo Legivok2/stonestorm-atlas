@@ -16,11 +16,16 @@ test('A kiadási JSON nem adhat külső vagy könyvtárbejáró letöltési cím
   for(const patch of [{schema:2},{beta:false},{zip:'https://example.com/fake.zip'},{zip:'downloads/../secret.zip'},{version:'0.9.x'},{bytes:-1},{bytes:Infinity},{sha256:'invalid'},{name:'<script>'}])assert.equal(versions.release({...release,...patch}),null);
 });
 
-test('Az eredeti statisztikai szkriptek és ikonok változatlanok, az új manifest verziója emelt',()=>{
+test('Az eredeti statisztikai számítások változatlanok, csak a panelhook és kísérőadat-átadás bővült',()=>{
   const original=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'import.json')));
   assert.equal(original.version,'0.9.3');
   const manifest=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'manifest.json')));
-  for(const file of ['capture.js','content.js','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'])assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file+' · az eredeti számítás és grafika változatlan');
+  for(const file of ['icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'])assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file+' · eredeti grafika');
+  const read=file=>fs.readFileSync(path.join(root,addonDirectory,file),'utf8').replaceAll('\r\n','\n');
+  const content=read('content.js').replace('  globalThis.StonestormAddonPanels?.attach(shadow);\n','');
+  assert.equal(sha256(content),'7e1549708913e21c6c79a508c01753f479c6f6dd59dbf77bd7c34138e9e4a1cd');
+  const capture=read('capture.js').replace('["content", "character", "pet-roster", "pet-config"]','["content", "character"]').replace('      if (globalThis.StonestormPetDetails) emit("pet-roster", globalThis.StonestormPetDetails.roster(data));\n','').replace('      if (globalThis.StonestormPetDetails) { const config = globalThis.StonestormPetDetails.publicConfig(data,globalThis.STONESTORM_PET_MODEL?.publicContract); emit("pet-config", { version: data.version, config }); }\n','');
+  assert.equal(sha256(capture),'7a5c77512c759ec9af098f87c5e48097ab862b6bd4351b5eb93f627e8e0682d9');
   if(manifest.version===original.version)for(const file of addonRuntime)assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file);
   else assert.equal(versions.compare(manifest.version,original.version),1,'Új forrás csak emelt verzióval adható ki; az eredeti importjegyzék megmarad.');
 });

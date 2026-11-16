@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Stonestorm Stat Cap Overlay",
-  "version": "0.9.4",
+  "version": "0.9.6",
   "author": "Patrik",
   "description": "Készítette: Patrik. Stonestorm karakteradatok, felszerelés-bónuszok és statlimitek összehasonlítása.",
   "icons": {
@@ -22,6 +22,8 @@
         "https://stonestorm.gg/*"
       ],
       "js": [
+        "pet-data.js",
+        "pet-model.js",
         "capture.js",
         "research-sanitizer.js",
         "research-capture.js"
@@ -34,9 +36,15 @@
         "https://stonestorm.gg/*"
       ],
       "js": [
-        "content.js",
+        "pet-data.js",
+        "pet-model.js",
         "research-sanitizer.js",
-        "research-bridge.js"
+        "research-bridge.js",
+        "research-ui.js",
+        "research-overlay.js",
+        "pet-source.js",
+        "pet-tooltip.js",
+        "content.js"
       ],
       "run_at": "document_idle"
     }

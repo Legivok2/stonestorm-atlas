@@ -41,13 +41,14 @@
   };
   window.addEventListener("message", event => {
     if (event.source !== window || event.origin !== location.origin || event.data?.source !== "ss-statcap-ready-v2") return;
-    for (const kind of ["content", "character"]) if (latest[kind]) window.postMessage(latest[kind], location.origin);
+    for (const kind of ["content", "character", "pet-roster", "pet-config"]) if (latest[kind]) window.postMessage(latest[kind], location.origin);
   });
 
   function publish(kind, json) {
     if (!json || typeof json !== "object") return;
     const data = json.state && typeof json.state === "object" ? json.state : json;
     if (kind === "character") {
+      if (globalThis.StonestormPetDetails) emit("pet-roster", globalThis.StonestormPetDetails.roster(data));
       if (!Array.isArray(data.items) || !data.stats || !data.derived) return;
       const items = data.items.slice(0, 250).filter(item => item && typeof item === "object").map(item => ({
         equippedSlot: typeof item.equippedSlot === "string" ? item.equippedSlot : null,
@@ -72,6 +73,7 @@
       })) : [];
       emit(kind, { items, stats, derived, harcero, modSources, mods, vipActive, buffs, classId: typeof data.classId === "string" ? data.classId : null });
     } else if (kind === "content") {
+      if (globalThis.StonestormPetDetails) { const config = globalThis.StonestormPetDetails.publicConfig(data,globalThis.STONESTORM_PET_MODEL?.publicContract); emit("pet-config", { version: data.version, config }); }
       const rules = data.harcero?.rules;
       if (!rules || !rules.supportCaps) return;
       const templates = {};

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-16T15:21:34.714Z",
+  "checkedAt": "2026-11-16T18:20:44.001Z",
   "status": "unchanged",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
@@ -6882,33 +6882,12 @@
   "changes": [],
   "accepted": [],
   "resourceChanges": [],
-  "publicSystems": {
-    "entrypointConfirmed": false,
-    "warnings": [
-      {
-        "url": "https://stonestorm.gg/",
-        "reason": "HTTP 403; nincs hozzáférés-megkerülés, a korábbi nyilvános hivatkozásjegyzéket használjuk"
-      }
-    ],
-    "compatibility": {
-      "safe": true,
-      "changed": false
-    }
-  },
-  "clientInspected": true,
+  "publicSystems": null,
+  "clientInspected": false,
   "discovery": {
-    "requests": 1,
-    "downloadedBytes": 0,
-    "unfetched": 0,
-    "maxRequests": 48,
-    "maxBytes": 12582912
+    "inspected": false
   },
-  "warnings": [
-    {
-      "url": "https://stonestorm.gg/",
-      "reason": "HTTP 403 – https://stonestorm.gg/"
-    }
-  ],
+  "warnings": [],
   "review": [
     {
       "path": "/achievementSets/bandit",
@@ -13485,22 +13464,6 @@
       "system": "Kovácsolás és anyagok",
       "classification": "observation",
       "title": "Kliensfájlok és fordítások forrásleltára"
-    },
-    {
-      "path": "/mounts/kalmarteve",
-      "changeKind": "added",
-      "reason": "Az aktuális API-összevetés változása",
-      "origin": "current-change",
-      "id": "d4a6d0f1506f9bd32052b6d3d820401428422a289b8aa8e80dada94f2a1ab4e6",
-      "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
-      "firstSeenAt": "2026-11-16T11:23:31.338Z",
-      "identity": null,
-      "lastSeenAt": "2026-11-16T11:23:31.338Z",
-      "status": "open",
-      "carried": true,
-      "system": "Hátasok",
-      "classification": "unsupported",
-      "title": "Hátas · számított utazási idő"
     }
   ],
   "reviewLedger": [
@@ -27146,11 +27109,21 @@
       "firstSeenAt": "2026-11-16T11:23:31.338Z",
       "identity": null,
       "lastSeenAt": "2026-11-16T11:23:31.338Z",
-      "status": "open",
+      "status": "resolved",
       "carried": true,
       "system": "Hátasok",
-      "classification": "unsupported",
-      "title": "Hátas · számított utazási idő"
+      "classification": "automatic",
+      "title": "kalmarteve · számított utazási idő",
+      "resolution": {
+        "kind": "automatic-import",
+        "rule": "data-engine-v2-value-match",
+        "sourceHash": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
+        "valueHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7",
+        "explanation": "Az engedélyezett séma teljes forráság-hashe és minden érintett API-mező beépített értéke egyezik. Az Atlas hozzáadott szerkesztői metaadata külön mező; az import nem szerveres végszabály-igazolás.",
+        "resolvedAt": "2026-11-16T18:20:44.001Z",
+        "gameVersion": "c530ea20d7ec",
+        "targetHash": "d105dd910014331f0337152a859a40f9b285f2954de52c3c3822de6f673c49b7"
+      }
     }
   ],
   "reviewSummary": {
@@ -27166,19 +27139,19 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 394,
+    "open": 393,
     "classified": {
       "automatic": 0,
-      "unsupported": 66,
+      "unsupported": 65,
       "mechanism": 8,
       "observation": 318,
       "conflict": 2
     },
-    "resolvedTotal": 184,
+    "resolvedTotal": 185,
     "activity": {
       "new": 0,
-      "carried": 394,
-      "automatic": 0,
+      "carried": 393,
+      "automatic": 1,
       "documented": 0,
       "manual": 10
     }

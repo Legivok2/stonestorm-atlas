@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {applyOverlay} from './atlas-sync-model.mjs';
 import {validateHomeArena} from './home-arena-model.mjs';
+import {applyEngine,validateContract,validateRelations,coverage} from './data-engine.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const files = fs.readdirSync(path.join(root, 'source-data')).filter(x => x.endsWith('.json')).sort();
@@ -72,6 +73,16 @@ if(fs.existsSync(syncFile)){
   applyOverlay(db,overlay);
   if(overlay.gameVersion){db.dataVersion=overlay.gameVersion;db.updated=overlay.checkedAt.slice(0,10);}
 }
+const engine=JSON.parse(fs.readFileSync(path.join(root,'data/data-engine.json'),'utf8'));
+const contracts=JSON.parse(fs.readFileSync(path.join(root,'data/data-engine-contract.json'),'utf8'));
+for(const [key,b] of Object.entries(engine.branches))validateContract(b.data,contracts.branches[key],key);
+validateRelations(Object.fromEntries(Object.entries(engine.branches).map(([key,b])=>[key,b.data])),{maps:db.maps,mobs:db.mobs,stackables:db.economy.stackables});
+applyEngine(db,engine,JSON.parse(fs.readFileSync(path.join(root,'data/addon-pet-model.json'),'utf8')));
+db.dataEngine.observations=JSON.parse(fs.readFileSync(path.join(root,'data/pet-observations.json'),'utf8'));
+const petArt=JSON.parse(fs.readFileSync(path.join(root,'data/pet-art-evidence.json'),'utf8'));
+for(const pet of db.pets)pet.art={forms:petArt.bindings[pet.id]??[],source:petArt.source,status:'logical-client-binding; current petArt file registry missing'};
+fs.mkdirSync(path.join(root,'reports'),{recursive:true});
+fs.writeFileSync(path.join(root,'reports/data-engine-coverage.json'),JSON.stringify(coverage(db,fs.existsSync(path.join(root,'data/image-catalog.json'))?JSON.parse(fs.readFileSync(path.join(root,'data/image-catalog.json'),'utf8')):null),null,2)+'\n');
 fs.mkdirSync(path.join(root,'data'),{recursive:true});
 fs.writeFileSync(path.join(root,'data/atlas.json'),JSON.stringify(db));
 fs.writeFileSync(path.join(root,'js/atlas-data.js'),`/* Generált fájl; npm run build:data. */\nwindow.STONESTORM_ATLAS = ${JSON.stringify(db).replaceAll('<','\\u003c')};\n`);
