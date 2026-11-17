@@ -14,10 +14,13 @@ try{
   for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844],['small-mobile',320,760]]){
     const context=await browser.newContext({viewport:{width,height},isMobile:width<680,hasTouch:width<680});
     const page=await context.newPage(),errors=[];
+    const showNav=async()=>{const toggle=page.locator('#atlas-nav-toggle');if(await toggle.isVisible()&&await toggle.getAttribute('aria-expanded')!=='true'){await toggle.click();await page.locator('#atlas-sidebar').waitFor({state:'visible'});}};
     page.on('pageerror',error=>errors.push(error.message));
     page.on('response',response=>{if(response.url().startsWith(base)&&response.status()>=400)errors.push(response.status()+' '+response.url());});
     await page.goto(base+'#atlas/stat-limits',{waitUntil:'networkidle'});
+    await showNav();
     assert(await page.locator('#atlas-nav [data-atlas-page="stat-limits"]').isVisible());
+    if(await page.locator('#atlas-nav-close').isVisible())await page.locator('#atlas-nav-close').click();
     assert.equal(await page.locator('.stat-limit-table tbody tr').count(),16);
     assert.equal(await page.locator('[data-effective="evadeNormal"]').textContent(),'18,2%');
     assert.equal(await page.locator('[data-effective="evadeBoss"]').textContent(),'12%');
@@ -62,18 +65,18 @@ try{
     for(const level of ['0','61','2.5','']){await page.locator('#critical-weapon-level').fill(level);assert.equal(await page.locator('#critical-weapon-level').getAttribute('aria-invalid'),'true');assert.equal(await page.locator('.critical-tier:disabled').count(),30);}
     await page.locator('#critical-example').click();
     await page.locator('#stat-reset').click();await page.locator('#stat-crit').fill('42');
-    await page.locator('#atlas-nav [data-atlas-page="bonuses"]').click();await page.locator('#bonus-catalog-title').waitFor();assert.equal(await page.locator('.bonus-catalog tbody tr').count(),20);
+    await showNav();await page.locator('#atlas-nav [data-atlas-page="bonuses"]').click();await page.locator('#bonus-catalog-title').waitFor();assert.equal(await page.locator('.bonus-catalog tbody tr').count(),20);
     for(const [pool,count] of [['weapon',5],['armor',5],['jewel',10]]){await page.locator('#bonus-pool').selectOption(pool);assert.equal(await page.locator('.bonus-pool-chips .atlas-chip').count(),count);}
     assert.equal(await page.locator('.bonus-source-documentation tbody tr').count(),11);assert.equal(await reward('effective'),'96,4%');
     const weaponId=await page.evaluate(()=>window.STONESTORM_ATLAS.items.find(item=>item.slot==='weapon').id);
-    await page.evaluate(id=>location.hash='#atlas/equipment/item/'+id,weaponId);await page.locator('.bonus-item-info').waitFor();assert((await page.locator('.bonus-item-info').textContent()).includes('Kritikus sebzés'));
+    await page.evaluate(id=>location.hash='#atlas/equipment/item/'+id,weaponId);await page.locator('[data-detail-tab="bonuses"]').click();await page.locator('.bonus-item-info').waitFor();assert((await page.locator('.bonus-item-info').textContent()).includes('Kritikus sebzés'));
     await page.locator('.bonus-item-info a').click();await page.locator('#bonus-pool').waitFor();assert.equal(await page.locator('#bonus-pool').inputValue(),'weapon');
     const helmetId=await page.evaluate(()=>window.STONESTORM_ATLAS.items.find(item=>item.slot==='helmet').id);
-    await page.evaluate(id=>location.hash='#atlas/equipment/item/'+id,helmetId);await page.locator('.bonus-item-info').waitFor();assert((await page.locator('.bonus-item-info').textContent()).includes('nincs igazolt'));
+    await page.evaluate(id=>location.hash='#atlas/equipment/item/'+id,helmetId);await page.locator('[data-detail-tab="bonuses"]').click();await page.locator('.bonus-item-info').waitFor();assert((await page.locator('.bonus-item-info').textContent()).includes('nincs igazolt'));
     await page.locator('.bonus-item-info a').click();await page.locator('[data-bonus-slot-context]').waitFor();assert((await page.locator('[data-bonus-slot-context]').textContent()).includes('nincs igazolt altípus'));
     await page.evaluate(()=>location.hash='#atlas/bonuses?slot=__proto__');await page.waitForTimeout(20);assert(await page.locator('#bonus-pool').isVisible());
-    await page.locator('#atlas-nav [data-atlas-page="gallery"]').click();await page.locator('.catalog-card').first().waitFor();
-    await page.locator('#atlas-nav [data-atlas-page="stat-limits"]').click();await page.locator('#stat-crit').waitFor();assert.equal(await page.locator('#stat-crit').inputValue(),'42');
+    await showNav();await page.locator('#atlas-nav [data-atlas-page="gallery"]').click();await page.locator('.catalog-card').first().waitFor();
+    await showNav();await page.locator('#atlas-nav [data-atlas-page="stat-limits"]').click();await page.locator('#stat-crit').waitFor();assert.equal(await page.locator('#stat-crit').inputValue(),'42');
     await page.locator('#stat-reset').click();
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' vízszintes túlcsordulás');
     assert(await page.locator('.stat-limit-track').evaluateAll(elements=>elements.every(element=>element.firstElementChild.getBoundingClientRect().width<=element.getBoundingClientRect().width+1)));

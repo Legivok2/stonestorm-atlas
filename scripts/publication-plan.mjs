@@ -13,6 +13,12 @@ export function walk(directory){
   });
 }
 const relative=file=>path.relative(root,file).split(path.sep).join('/');
+// Only the collector's source is distributable. Downloaded art and local reviews
+// stay outside every publication manifest until a separate reviewed import.
+const imageCollectorSource=[
+  'stonestorm_image_tools/IMAGE_COLLECTOR_V2.md',
+  ...walk(path.join(root,'stonestorm_image_tools/image-manager')).filter(p=>/\.(?:html|css|js)$/.test(p)).map(relative)
+];
 export function codeFiles(){
   const creator=JSON.parse(fs.readFileSync(path.join(root,'assets/images/sources.json'),'utf8'));
   const creatorFiles=creator.items.flatMap(item=>item.outputs.map(output=>{
@@ -27,8 +33,8 @@ export function codeFiles(){
     ...walk(path.join(root,'css')).filter(p=>p.endsWith('.css')).map(relative),
     ...walk(path.join(root,'js')).filter(p=>p.endsWith('.js')&&!['atlas-data.js','image-data.js'].includes(path.basename(p))).map(relative),
     ...['scripts','tests','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|ya?ml)$/.test(p)).map(relative)),
-    'stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md',
-    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md'].map(file=>'docs/'+file)
+    'stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md',...imageCollectorSource,
+    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md','VISUAL_DESIGN.md'].map(file=>'docs/'+file)
   ])].sort();
 }
 export function runtimeFiles(){
@@ -50,16 +56,17 @@ export function guideFiles(){
 }
 export function sourceFiles(){
   const files=[...runtimeFiles(),'package.json','package-lock.json','serve.mjs','README.md','PROJECT_STATUS.md','DATA_SOURCES.md','IMAGE_SOURCES.md','.gitignore','.gitattributes','.publication/permissions.json',
-    ...addonSource,
+    ...addonSource,...imageCollectorSource,
     ...(fs.existsSync(path.join(root,'Pages-retry.txt'))?['Pages-retry.txt']:[]),
     'stonestorm_image_tools/manifest.json','stonestorm_image_tools/results.csv','stonestorm_image_tools/download_images.py','stonestorm_image_tools/README.md','assets/images/sources.json',
     ...['scripts','tests','source-data','data','.github'].flatMap(dir=>walk(path.join(root,dir)).filter(p=>/\.(?:mjs|js|py|json|ya?ml)$/.test(p)).map(relative)),
     'snapshots/manifest.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','reports/latest-sync.json','reports/latest-sync.md',
-    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md'].map(file=>'docs/'+file)
+    ...['DEPLOYMENT.md','IMAGE_INTEGRATION.md','CHARACTER_PLANNER.md','AUTO_SYNC.md','HOME_ARENA_V2.md','DATA_ENGINE_V2.md','VISUAL_DESIGN.md'].map(file=>'docs/'+file)
   ];
   return [...new Set(files)].sort();
 }
 export function assertSafeRelative(file){
+  if(file.startsWith('stonestorm_image_tools/staging/'))throw Error('Helyi képgyűjtés nem kerülhet a publikációs csomagba.');
   if(path.posix.isAbsolute(file)||path.win32.isAbsolute(file)||/^[a-z]:/i.test(file)||file.includes('\\')||file.split('/').some(p=>p==='..'||p===''))throw Error('Nem biztonságos csomagútvonal: '+file);
   if(file.split('/').some(p=>p==='.env'||p.startsWith('.env.')||['.aws','.ssh','.codex'].includes(p)))throw Error('Titkos konfiguráció nem kerülhet a csomagba.');
   if(file==='Stonestorm.html'||file.startsWith('.integration/')||file.startsWith('.git/')||/\.(?:har|pem|pfx|key)$/.test(file)||(file.endsWith('.zip')&&file!==addonZip))throw Error('Tiltott publikációs fájl: '+file);

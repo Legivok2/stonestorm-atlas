@@ -20,13 +20,19 @@ npm start
 
 **http://localhost:4173** · Leállítás: Ctrl+C. Nem szükséges `npm install`.
 
-Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-fájlból töltődnek be. A fájlként megnyitás és a mobilos tördelés új Atlas-verzióját valódi böngészőben még ellenőrizni kell. Futó XAMPP Apache mellett az alternatív cím `http://localhost/StoneStorm/`.
+Az `index.html` közvetlenül is megnyitható, mert az adatok helyi JavaScript-fájlból töltődnek be. A megújult felület HTTP-s előnézete és Pages-kiadása 375, 768, 1440 és 1920 pixelen valódi böngészővel ellenőrzött. Futó XAMPP Apache mellett az alternatív cím `http://localhost/StoneStorm/`.
+
+## Helyi képpárosító
+
+A vizuálisan megújult Atlas a [GitHub Pages oldalon](https://legivok2.github.io/stonestorm-atlas/#atlas/overview) érhető el. Helyi előnézet: **http://127.0.0.1:4173/#atlas/overview** (`npm start`). A szerkezeti változások, komponensek és vizuális ellenőrzés leírása: [Vizuális megújulás](docs/VISUAL_DESIGN.md).
+
+Helyi képgyűjtés és vizuális jóváhagyás: [Atlas Image Manager / Image Collector V2](stonestorm_image_tools/IMAGE_COLLECTOR_V2.md). Indítás: `npm run images:manager`, cím: **http://127.0.0.1:4174/**. A gyűjtő az aktív Atlast nem módosítja; az új képek és döntések Gitből kizárt staging mappába kerülnek.
 
 ## Ingyenes Chrome-addon · BÉTA
 
-Helyben elkészült a **0.9.6 BÉTA**: közös popup–overlay adatgyűjtés és saját kísérőadatokat használó, aktiválás nélküli tooltip. A változat még nincs publikálva; a helyi ZIP a `downloads/` mappában van. Kipróbálás, adatkorlátok és modellfrissítés: [addon útmutató](addons/stonestorm-statcap-overlay/README.md).
+Az aktuális kiadás **0.9.6 BÉTA**: közös popup–overlay adatgyűjtés és saját kísérőadatokat használó, aktiválás nélküli tooltip. A ZIP a `downloads/` mappából és a Pages-oldalról is elérhető. Kipróbálás, adatkorlátok és modellfrissítés: [addon útmutató](addons/stonestorm-statcap-overlay/README.md).
 
-**[Stonestorm Stat Cap Overlay v0.9.4 – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. Az eredeti két statisztikai futásidejű szkript és az ikonok bájtra változatlanok. A 0.9.4 kutatási kiegészítés verzióemelt manifestet és külön fájlokat kapott; az aktuálisan telepített kiadást a Pages-verzióadat és a sikeres deploy igazolja.
+**[Stonestorm Stat Cap Overlay v0.9.6 – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. Az aktuális letölthető kiadást a Pages-verzióadat és a sikeres deploy igazolja; a telepített böngészőbővítmény frissítése kézi.
 
 Asztali Chrome: csomagold ki a ZIP-et állandó mappába, nyisd meg a `chrome://extensions` oldalt, kapcsold be a Fejlesztői módot, és a **Kicsomagolt bővítmény betöltése** gombbal válaszd a manifestet tartalmazó mappát. Frissítéskor ugyanott cseréld le a fájlokat, majd töltsd újra a meglévő bővítményt és a játék lapját. Részletes [telepítési útmutató](addons/stonestorm-statcap-overlay/README.md) és [adatkezelési összefoglaló](addons/stonestorm-statcap-overlay/PRIVACY.md).
 
@@ -36,7 +42,7 @@ Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `download
 
 ## Mi található benne?
 
-- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.4-hez, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
+- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.6-hez, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
 
 - 182 felszerelés, 6 szettcsalád, 22 kísérő, 10 kísérőkészség és 8 hátas.
 - **Kísérőfejlődés:** az 50-es végső szintet követő, ötformás megfigyelési modell, négy átváltozás, 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek és látható klienskonfliktus: `#atlas/pets`. A Planner külön formát és kísérőszintet kezel.

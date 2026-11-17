@@ -23,10 +23,12 @@ try{
     assert.match(await page.locator('.pet-progression-table tbody tr').last().textContent(),/Legendás.*40–50.*3/);
     assert(!await page.locator('.pet-skills').textContent().then(s=>/undefined|NaN|\{\{/.test(s)));
     const screenshotDir=path.join(root,'.integration/browser-qa');fs.mkdirSync(screenshotDir,{recursive:true});
+    // The guide now follows the catalogue in an explicit disclosure.
+    await page.locator('#pet-guide > summary').click();
     await page.locator('.pet-overview-head').screenshot({path:path.join(screenshotDir,'pets-'+name+'.png')});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' overflow');
     for(const id of ['pet_wolf','pet_u_dragon']){
-      await page.evaluate(id=>location.hash='#atlas/pets/pet/'+id,id);await page.locator('.pet-development-detail').waitFor();
+      await page.evaluate(id=>location.hash='#atlas/pets/pet/'+id,id);await page.locator('[data-detail-tab="development"]').click();await page.locator('.pet-development-detail').waitFor();
       assert.match(await page.locator('.pet-development-detail h4').first().textContent(),/50/);assert(!await page.locator('#atlas-detail-body').textContent().then(s=>/Kísérő maximumszint \(rules\)/.test(s)));
       await page.locator('#atlas-detail-close').click();
     }

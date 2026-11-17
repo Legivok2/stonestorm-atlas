@@ -45,7 +45,15 @@
     "test:addon:095:native": "node tests/addon-095-native.mjs",
     "test:addon:pets:browser": "node tests/addon-pet-source-browser.mjs",
     "test:engine": "node --test tests/data-engine.test.mjs",
-    "test:engine:browser": "node tests/data-engine-browser.mjs"
+    "test:engine:browser": "node tests/data-engine-browser.mjs",
+    "images:discover": "node scripts/image-collector.mjs discover",
+    "images:download-new": "node scripts/image-collector.mjs download-new",
+    "images:report": "node scripts/image-collector.mjs report",
+    "images:import-approved": "node scripts/image-collector.mjs import-approved",
+    "images:manager": "node scripts/image-manager.mjs",
+    "test:images": "node --test tests/image-collector.test.mjs tests/image-manager.test.mjs",
+    "test:images:browser": "node tests/image-manager-browser.mjs",
+    "test:design:browser": "node tests/atlas-design-browser.mjs"
   },
   "devDependencies": {
     "acorn": "8.15.0"

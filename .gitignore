@@ -1,4 +1,5 @@
 .integration/
+stonestorm_image_tools/staging/
 node_modules/
 test-results/
 snapshots/history/

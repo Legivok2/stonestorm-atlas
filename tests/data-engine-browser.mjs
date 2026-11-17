@@ -14,7 +14,8 @@ try{
     const page=await browser.newPage({viewport:{width,height}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
     await page.goto(base+'#atlas/pets',{waitUntil:'networkidle'});
     const card=page.locator('.atlas-card[href="#atlas/pets/pet/pet_vulture"]');
-    assert.match(await card.textContent(),/Zsákmány \+4%.*1\. szint, Kölyök, 0\. rang/);
+    assert.match(await card.locator('.atlas-card-desc').textContent(),/Zsákmány \+4%/);
+    assert.match(await card.locator('.card-form-label').textContent(),/1\. SZINT.*KÖLYÖK.*0\. RANG/);
     assert(!/0,8%|nyers fajadat|Részben azonosított kép/.test(await card.textContent()));
     const all=await page.evaluate(()=>window.STONESTORM_ATLAS.pets.map(p=>({id:p.id,value:p.bonusByForm[0].value})));
     for(const pet of all){const text=await page.locator(`.atlas-card[href="#atlas/pets/pet/${pet.id}"] .atlas-card-desc`).textContent();assert(text.includes(new Intl.NumberFormat('hu-HU',{maximumFractionDigits:2}).format(pet.value*100)+'%'),pet.id);}

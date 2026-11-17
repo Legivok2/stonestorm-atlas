@@ -21,12 +21,12 @@
     <title>Stonestorm Atlas – Magyar Wiki és Kalauz</title>
     <link rel="icon" type="image/webp" href="assets/images/icon-stone.webp" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/atlas-theme.css" />
     <link rel="stylesheet" href="css/atlas.css" />
     <link rel="stylesheet" href="css/atlas-tools.css" />
     <link rel="stylesheet" href="css/stat-addon.css" />
     <link rel="stylesheet" href="css/sync.css" />
     <link rel="stylesheet" href="css/home-arena.css" />
-    <link rel="stylesheet" href="css/atlas-theme.css" />
     <script src="js/content.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/atlas-data.js" defer></script>
@@ -45,6 +45,7 @@
     <script src="js/sync-ui.js" defer></script>
     <script src="js/home-arena-ui.js" defer></script>
     <script src="js/atlas-features.js" defer></script>
+    <script src="js/atlas-design.js" defer></script>
     <script src="js/atlas.js" defer></script>
     <script src="js/addon-version.js" defer></script>
     <script src="js/addon-release.js" defer></script>
@@ -165,73 +166,21 @@
     </header>
 
     <main id="tartalom">
-      <section class="hero" id="kezdolap" aria-labelledby="hero-title">
-        <img
-          class="hero-art"
-          src="assets/images/key-art-1280.webp"
-          srcset="
-            assets/images/key-art-640.webp   640w,
-            assets/images/key-art-1280.webp 1280w,
-            assets/images/key-art-1920.webp 1920w
-          "
-          sizes="(max-width: 680px) 100vw, 78vw"
-          width="1920"
-          height="1080"
-          alt=""
-          fetchpriority="high"
-        />
-        <div class="hero-shade"></div>
-        <div class="container hero-inner">
-          <p class="eyebrow">
-            <span class="little-rule"></span> A VIHAR VILÁGA, EGYETLEN KÓDEXBEN.
-          </p>
-          <h1 id="hero-title">
-            Ismerd a világot.<br /><em>Írd a legendád.</em>
-          </h1>
-          <p class="hero-description">
-            Felszerelések, hűséges társak és elfeledett vidékek.<br />
-            Fedezd fel a Stonestorm magyar tudástárát,<br class="desktop-break" />
-            és tervezd meg a következő kalandod.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-gold" href="#atlas/equipment"
-              >Fedezd fel az Atlast <span aria-hidden="true">→</span></a
-            ><a class="hero-secondary" href="#atlas/guild"
-              ><svg class="icon" aria-hidden="true"><use href="#book" /></svg>
-              Céhes kalkulátor</a
-            >
-          </div>
-          <div class="hero-facts">
-            <span><i></i> 2026. november 6-i adatpillanatkép</span
-            ><span
-              ><svg class="icon" aria-hidden="true"><use href="#shield" /></svg>
-              Független rajongói wiki</span
-            ><span
-              ><svg class="icon" aria-hidden="true">
-                <use href="#compass" />
-              </svg>
-              Magyar nyelven</span
-            >
-          </div>
-        </div>
-        <div class="landscape-caption">
-          <span>A VIHAR CSAK A KEZDET</span
-          ><small>A következő fejezet a tiéd.</small>
-        </div>
-        <a
-          class="scroll-hint"
-          href="#atlas"
-          aria-label="Tovább az Atlashoz"
-          >↓</a
-        >
-      </section>
-
+      <span id="kezdolap" class="atlas-anchor" aria-hidden="true"></span>
       <section id="atlas" class="atlas-section" aria-labelledby="atlas-heading">
-        <div class="container">
-          <div class="atlas-masthead"><div><p class="eyebrow">TUDÁS A KÖVETKEZŐ KALANDHOZ</p><h2 id="atlas-heading">A Stonestorm Atlas</h2></div><span class="atlas-version" id="atlas-data-version">ADATVERZIÓ</span></div>
-          <div id="atlas-stats" class="atlas-stats"></div>
-          <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keress tárgyat, kísérőt, bosst vagy útmutatót…" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" hidden>×</button><kbd>/</kbd></div>
-          <div class="atlas-layout"><aside class="atlas-sidebar"><p class="eyebrow">A KÓDEX FEJEZETEI</p><nav id="atlas-nav" aria-label="Atlas kategóriák"></nav><div class="atlas-sidebar-note"><span class="atlas-dot"></span> Helyi adatbázis<p>Magyar nevek. Visszakövethető források. Jelölt hiányok.</p><a href="#atlas/sources">Az adatokról →</a></div></aside><div class="atlas-main"><div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div></div></div>
+        <div class="container atlas-layout">
+          <button type="button" id="atlas-nav-backdrop" class="atlas-nav-backdrop" aria-label="Kategóriamenü bezárása" hidden></button>
+          <aside class="atlas-sidebar" id="atlas-sidebar">
+            <div class="atlas-sidebar-heading"><a href="#atlas/overview"><svg class="atlas-icon" aria-hidden="true"><use href="#compass" /></svg><span>ATLAS<small>A VIHAR KÓDEXE</small></span></a><button type="button" id="atlas-nav-close" aria-label="Kategóriamenü bezárása">×</button></div>
+            <nav id="atlas-nav" aria-label="Atlas kategóriák"></nav>
+            <div class="atlas-sidebar-note"><p class="eyebrow">A KÓDEX SZÁMOKBAN</p><div id="atlas-stats" class="atlas-stats"></div><a href="#atlas/sources">Források és ismert hiányok ↗</a></div>
+          </aside>
+          <div class="atlas-main">
+            <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span>Fejezetek</span></button><div><p class="eyebrow">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
+            <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" hidden>×</button><kbd>/</kbd></div></header>
+            <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span>Független rajongói enciklopédia</span></div>
+            <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div>
+          </div>
         </div>
       </section>
 

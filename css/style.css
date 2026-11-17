@@ -1,19 +1,5 @@
 @charset "UTF-8";
-:root {
-  color-scheme: dark;
-  --bg: #0b111b;
-  --panel: #121c29;
-  --panel-light: #172231;
-  --text: #edece7;
-  --muted: #a0a9b6;
-  --gold: #c6a269;
-  --gold-light: #e0c28f;
-  --line: #ffffff12;
-  --green: #94baa4;
-  --red: #d28d87;
-  --serif: Georgia, "Times New Roman", serif;
-  --sans: "Segoe UI", Arial, sans-serif;
-}
+:root { color-scheme: dark; }
 * {
   box-sizing: border-box;
 }
@@ -143,13 +129,13 @@ p + p {
   position: sticky;
   top: 0;
   z-index: 30;
-  height: 88px;
+  height: 72px;
   border-bottom: 1px solid var(--line);
   background: #0b111bf5;
   backdrop-filter: blur(16px);
 }
 .header-inner {
-  max-width: 1440px;
+  max-width: 1792px;
   width: calc(100% - 80px);
   height: 100%;
   margin: auto;
