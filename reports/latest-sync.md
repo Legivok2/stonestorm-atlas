@@ -2,7 +2,7 @@
 
 Állapot: unchanged
 
-Ellenőrzés: 2026-11-17T07:35:51.532Z
+Ellenőrzés: 2026-11-17T13:28:08.454Z
 
 Játékverzió: c530ea20d7ec
 
