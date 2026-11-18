@@ -1,19 +1,19 @@
 # Atlas frissítési jelentés
 
-Állapot: unchanged
+Állapot: checked
 
-Ellenőrzés: 2026-11-18T13:30:00.380Z
+Ellenőrzés: 2026-11-18T19:12:41.017Z
 
 Játékverzió: fbc93606674a
 
 ## Áttekintés
 
-- Most észlelt új tételek: 0
+- Most észlelt új tételek: 2
 - Korábbról nyitva maradt: 2392
 - Automatikusan feldolgozott mezők: 0
 - Dokumentált felülvizsgálattal lezárt: 0
-- Mechanikai / kézi ellenőrzés: 1995
-- Nyitott összesen: 2392
+- Mechanikai / kézi ellenőrzés: 1997
+- Nyitott összesen: 2394
 
 ## A kiinduló 505 tétel besorolása
 
@@ -84,10 +84,11 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Kovácsolás és anyagok (312)
+### Kovácsolás és anyagok (314)
 
 - Kövek és alapanyagok beszerzési forrásai: 4 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Kliensfájlok és fordítások forrásleltára: 308 tétel – Korábbi első megfigyelés / forrásleltár
+- Kovácsolás és anyagok · ellenőrzendő adat: 2 tétel – Új vagy megváltozott játékmechanika
 
 ### Melléktevékenységek (1)
 
@@ -110,6 +111,6 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 
 ## Források és részletek
 
-A teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: 7d5a0028ac83cb6607fbdb326d28d363ba4b5d31035a6ff7384f8bf7aeff90b5.
+A teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c.
 
 Kliensfeltérképezés ebben a futásban: igen.

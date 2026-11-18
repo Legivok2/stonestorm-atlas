@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-18T13:30:00.380Z",
+  "checkedAt": "2026-11-18T19:12:41.017Z",
   "gameVersion": "fbc93606674a",
   "content": {
     "url": "https://stonestorm.gg/api/content",
-    "sha256": "7d5a0028ac83cb6607fbdb326d28d363ba4b5d31035a6ff7384f8bf7aeff90b5",
-    "etag": "\"1QDO-tZ5pna1IPq78CaAqkvOlic.PpXwjONVH9-gzip\"",
+    "sha256": "faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c",
+    "etag": "\"ei_cx7a4cyMgZ4R6TfANPjlBgt7.y1OgDGfe1L-gzip\"",
     "lastModified": null,
-    "bytes": 202740,
-    "status": 304
+    "bytes": 202752,
+    "status": 200
   },
   "resources": {
     "https://stonestorm.gg/": {

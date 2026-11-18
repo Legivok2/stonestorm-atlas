@@ -1,20 +1,20 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-18T13:30:00.380Z",
-  "status": "unchanged",
+  "checkedAt": "2026-11-18T19:12:41.017Z",
+  "status": "checked",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
-  "sourceHash": "7d5a0028ac83cb6607fbdb326d28d363ba4b5d31035a6ff7384f8bf7aeff90b5",
+  "sourceHash": "faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c",
   "sources": [
     {
       "url": "https://stonestorm.gg/api/content",
-      "sha256": "7d5a0028ac83cb6607fbdb326d28d363ba4b5d31035a6ff7384f8bf7aeff90b5",
-      "etag": "\"1QDO-tZ5pna1IPq78CaAqkvOlic.PpXwjONVH9-gzip\"",
+      "sha256": "faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c",
+      "etag": "\"ei_cx7a4cyMgZ4R6TfANPjlBgt7.y1OgDGfe1L-gzip\"",
       "lastModified": null,
-      "bytes": 202740,
-      "status": 304
+      "bytes": 202752,
+      "status": 200
     },
     {
       "url": "https://stonestorm.gg/",
@@ -6875,11 +6875,25 @@
     }
   ],
   "counts": {
-    "added": 0,
-    "changed": 0,
+    "added": 1,
+    "changed": 1,
     "removed": 0
   },
-  "changes": [],
+  "changes": [
+    {
+      "kind": "added",
+      "path": "/bonus/tierLevel/lowT5",
+      "after": 0.1,
+      "category": "Kovácsolás és bónuszok"
+    },
+    {
+      "kind": "changed",
+      "path": "/tag",
+      "before": "1QDO-tZ5pna1IPq78CaAqkvOlic",
+      "after": "ei_cx7a4cyMgZ4R6TfANPjlBgt7",
+      "category": "Egyéb / ismeretlen rendszer"
+    }
+  ],
   "accepted": [],
   "resourceChanges": [],
   "publicSystems": {
@@ -27686,7 +27700,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -49453,7 +49467,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49468,7 +49482,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49483,7 +49497,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49498,12 +49512,43 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
       "classification": "mechanism",
       "title": "Sárkányfészek · szerkezet és teremkapcsolatok"
+    },
+    {
+      "path": "/bonus/tierLevel/lowT5",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "23c2aa03e91fe31cdb99def89b74def5e2e3c157d799d742e2e652659aa46ad6",
+      "targetHash": "3b624f984d4118cc8971c72e3f1d7e1272578431aa5b0d21fe845c5c6be31cda",
+      "firstSeenAt": "2026-11-18T19:12:41.017Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "status": "open",
+      "carried": false,
+      "system": "Kovácsolás és anyagok",
+      "classification": "mechanism",
+      "title": "Kovácsolás és anyagok · ellenőrzendő adat"
+    },
+    {
+      "path": "/bonus",
+      "reason": "Data Engine V2: /bonus/tierLevel: changed object structure",
+      "id": "6c7f9f341b807ae92f8e1ce1dc16b7df98473aeb48278c61ea14aca9adfbc112",
+      "targetHash": "23c9116d52fcd643c64531c48e853a1e70ef1bc9b774a5a65ff6b4e84820593a",
+      "firstSeenAt": "2026-11-18T19:12:41.017Z",
+      "origin": "current-change",
+      "identity": null,
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "status": "open",
+      "carried": false,
+      "system": "Kovácsolás és anyagok",
+      "classification": "mechanism",
+      "title": "Kovácsolás és anyagok · ellenőrzendő adat"
     }
   ],
   "reviewLedger": [
@@ -85243,7 +85288,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -112808,7 +112853,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112823,7 +112868,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112838,7 +112883,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112853,12 +112898,43 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T13:30:00.380Z",
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
       "classification": "mechanism",
       "title": "Sárkányfészek · szerkezet és teremkapcsolatok"
+    },
+    {
+      "path": "/bonus/tierLevel/lowT5",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "23c2aa03e91fe31cdb99def89b74def5e2e3c157d799d742e2e652659aa46ad6",
+      "targetHash": "3b624f984d4118cc8971c72e3f1d7e1272578431aa5b0d21fe845c5c6be31cda",
+      "firstSeenAt": "2026-11-18T19:12:41.017Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "status": "open",
+      "carried": false,
+      "system": "Kovácsolás és anyagok",
+      "classification": "mechanism",
+      "title": "Kovácsolás és anyagok · ellenőrzendő adat"
+    },
+    {
+      "path": "/bonus",
+      "reason": "Data Engine V2: /bonus/tierLevel: changed object structure",
+      "id": "6c7f9f341b807ae92f8e1ce1dc16b7df98473aeb48278c61ea14aca9adfbc112",
+      "targetHash": "23c9116d52fcd643c64531c48e853a1e70ef1bc9b774a5a65ff6b4e84820593a",
+      "firstSeenAt": "2026-11-18T19:12:41.017Z",
+      "origin": "current-change",
+      "identity": null,
+      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "status": "open",
+      "carried": false,
+      "system": "Kovácsolás és anyagok",
+      "classification": "mechanism",
+      "title": "Kovácsolás és anyagok · ellenőrzendő adat"
     }
   ],
   "reviewSummary": {
@@ -112874,21 +112950,21 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 2392,
+    "open": 2394,
     "classified": {
       "automatic": 0,
       "unsupported": 79,
-      "mechanism": 1993,
+      "mechanism": 1995,
       "observation": 318,
       "conflict": 2
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 0,
+      "new": 2,
       "carried": 2392,
       "automatic": 0,
       "documented": 0,
-      "manual": 1995
+      "manual": 1997
     }
   },
   "reviewBaseline": {

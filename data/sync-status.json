@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-18T13:30:00.380Z",
+  "lastSuccessfulCheck": "2026-11-18T19:12:41.017Z",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
   "lastAutomaticUpdate": "2026-11-18T07:33:07.893Z",
@@ -10,14 +10,14 @@
   },
   "mode": "apply",
   "changeCounts": {
-    "added": 0,
-    "changed": 0,
+    "added": 1,
+    "changed": 1,
     "removed": 0
   },
   "importable": 0,
   "reportUrl": "https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md",
   "reviewVersion": 2,
-  "pending": 2392,
+  "pending": 2394,
   "pendingItems": [
     {
       "path": "/achievementSets/bandit",
@@ -1053,21 +1053,21 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 2392,
+    "open": 2394,
     "classified": {
       "automatic": 0,
       "unsupported": 79,
-      "mechanism": 1993,
+      "mechanism": 1995,
       "observation": 318,
       "conflict": 2
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 0,
+      "new": 2,
       "carried": 2392,
       "automatic": 0,
       "documented": 0,
-      "manual": 1995
+      "manual": 1997
     }
   },
   "groups": [
@@ -32050,6 +32050,33 @@
       ]
     },
     {
+      "name": "Kovácsolás és anyagok",
+      "count": 2,
+      "topics": [
+        {
+          "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+          "classification": "mechanism",
+          "count": 2,
+          "paths": [
+            {
+              "path": "/bonus/tierLevel/lowT5",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/bonus",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Szettek",
       "count": 1,
       "topics": [
@@ -45099,5 +45126,33 @@
       ]
     }
   ],
-  "currentGroups": []
+  "currentGroups": [
+    {
+      "name": "Kovácsolás és anyagok",
+      "count": 2,
+      "topics": [
+        {
+          "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+          "classification": "mechanism",
+          "count": 2,
+          "paths": [
+            {
+              "path": "/bonus/tierLevel/lowT5",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/bonus",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
