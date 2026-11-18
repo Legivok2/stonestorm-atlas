@@ -13,11 +13,11 @@
           "materialId": "mat_m6_hound_tooth",
           "mapIndex": 6,
           "statLevel": 54,
-          "harcero": 43129,
-          "maxHp": 77100,
-          "atkMin": 17014,
-          "atkMax": 23287,
-          "def": 88,
+          "harcero": 22313,
+          "maxHp": 39214,
+          "atkMin": 8654,
+          "atkMax": 11844,
+          "def": 338,
           "xp": 912,
           "nyangMin": 166,
           "nyangMax": 278
@@ -25,9 +25,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_flame_hound",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -43,11 +43,11 @@
           "materialId": "mat_m6_obsidian_shard",
           "mapIndex": 6,
           "statLevel": 54,
-          "harcero": 43129,
-          "maxHp": 77100,
-          "atkMin": 17014,
-          "atkMax": 23287,
-          "def": 88,
+          "harcero": 22313,
+          "maxHp": 39214,
+          "atkMin": 8654,
+          "atkMax": 11844,
+          "def": 338,
           "xp": 912,
           "nyangMin": 166,
           "nyangMax": 278
@@ -55,9 +55,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_magma_beetle",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -72,11 +72,11 @@
           "materialId": "mat_m6_obsidian_shard",
           "mapIndex": 6,
           "statLevel": 55,
-          "harcero": 46357,
-          "maxHp": 82983,
-          "atkMin": 18316,
-          "atkMax": 25067,
-          "def": 90,
+          "harcero": 24284,
+          "maxHp": 42683,
+          "atkMin": 9421,
+          "atkMax": 12893,
+          "def": 354,
           "xp": 967,
           "nyangMin": 169,
           "nyangMax": 283
@@ -84,9 +84,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_fire_imp",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -102,11 +102,11 @@
           "materialId": "mat_m6_lava_scale",
           "mapIndex": 6,
           "statLevel": 56,
-          "harcero": 50578,
-          "maxHp": 90664,
-          "atkMin": 20016,
-          "atkMax": 27391,
-          "def": 92,
+          "harcero": 26645,
+          "maxHp": 46831,
+          "atkMin": 10339,
+          "atkMax": 14148,
+          "def": 369,
           "xp": 1024,
           "nyangMin": 172,
           "nyangMax": 288
@@ -114,9 +114,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_lava_lizard",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -132,11 +132,11 @@
           "materialId": "mat_m6_ash_mask",
           "mapIndex": 6,
           "statLevel": 56,
-          "harcero": 50578,
-          "maxHp": 90664,
-          "atkMin": 20016,
-          "atkMax": 27391,
-          "def": 92,
+          "harcero": 26645,
+          "maxHp": 46831,
+          "atkMin": 10339,
+          "atkMax": 14148,
+          "def": 369,
           "xp": 1024,
           "nyangMin": 172,
           "nyangMax": 288
@@ -144,9 +144,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_ash_cultist",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -162,11 +162,11 @@
           "materialId": "mat_m6_ash_mask",
           "mapIndex": 6,
           "statLevel": 58,
-          "harcero": 59995,
-          "maxHp": 107730,
-          "atkMin": 23792,
-          "atkMax": 32555,
-          "def": 95,
+          "harcero": 32239,
+          "maxHp": 56671,
+          "atkMin": 12516,
+          "atkMax": 17126,
+          "def": 397,
           "xp": 1144,
           "nyangMin": 178,
           "nyangMax": 298
@@ -174,9 +174,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_fire_tiger",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -191,11 +191,11 @@
           "materialId": "mat_m6_ember_core",
           "mapIndex": 6,
           "statLevel": 59,
-          "harcero": 62132,
-          "maxHp": 111601,
-          "atkMin": 24651,
-          "atkMax": 33729,
-          "def": 96,
+          "harcero": 33353,
+          "maxHp": 58639,
+          "atkMin": 12953,
+          "atkMax": 17722,
+          "def": 409,
           "xp": 1207,
           "nyangMin": 181,
           "nyangMax": 303
@@ -203,9 +203,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_flame_knight",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -220,11 +220,11 @@
           "materialId": "mat_m6_ember_core",
           "mapIndex": 6,
           "statLevel": 59,
-          "harcero": 62132,
-          "maxHp": 111601,
-          "atkMin": 24651,
-          "atkMax": 33729,
-          "def": 96,
+          "harcero": 33353,
+          "maxHp": 58639,
+          "atkMin": 12953,
+          "atkMax": 17722,
+          "def": 409,
           "xp": 1207,
           "nyangMin": 181,
           "nyangMax": 303
@@ -232,9 +232,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_magma_giant",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:03:09.295Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -250,11 +250,11 @@
           "materialId": null,
           "mapIndex": 6,
           "statLevel": 60,
-          "harcero": 105062,
-          "maxHp": 118655,
-          "atkMin": 21525,
-          "atkMax": 56748,
-          "def": 127,
+          "harcero": 57804,
+          "maxHp": 67626,
+          "atkMin": 12268,
+          "atkMax": 32343,
+          "def": 552,
           "xp": 31800,
           "nyangMin": 7360,
           "nyangMax": 12320
@@ -262,9 +262,9 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/m6_boss",
-          "sha256": "227100e7588a58d3f2d994a36cc1a1a1c2ebf5dc78d45d674eda41a706d8796d",
-          "gameVersion": "5231690b6864",
-          "checkedAt": "2026-11-15T11:13:14.924Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -279,10 +279,10 @@
           ],
           "materialId": null,
           "statLevel": 1,
-          "harcero": 146,
-          "maxHp": 200,
-          "atkMin": 29,
-          "atkMax": 78,
+          "harcero": 150,
+          "maxHp": 208,
+          "atkMin": 31,
+          "atkMax": 81,
           "def": 5,
           "xp": 450,
           "nyangMin": 280,
@@ -291,9 +291,1617 @@
         "provenance": {
           "source": "https://stonestorm.gg/api/content",
           "apiPath": "/mobs/ev_rablovezer",
-          "sha256": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
-          "gameVersion": "c530ea20d7ec",
-          "checkedAt": "2026-11-16T11:23:31.338Z",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_dog": {
+        "record": {
+          "id": "m1_dog",
+          "level": 2,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_dogs",
+          "mapIndex": 1,
+          "statLevel": 2,
+          "harcero": 153,
+          "maxHp": 366,
+          "atkMin": 38,
+          "atkMax": 56,
+          "def": 5,
+          "xp": 24,
+          "nyangMin": 10,
+          "nyangMax": 18
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_dog",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_wolf": {
+        "record": {
+          "id": "m1_wolf",
+          "level": 4,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_wolves",
+          "mapIndex": 1,
+          "statLevel": 4,
+          "harcero": 215,
+          "maxHp": 490,
+          "atkMin": 55,
+          "atkMax": 78,
+          "def": 8,
+          "xp": 36,
+          "nyangMin": 16,
+          "nyangMax": 28
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_wolf",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_alpha_wolf": {
+        "record": {
+          "id": "m1_alpha_wolf",
+          "level": 5,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_wolves",
+          "mapIndex": 1,
+          "statLevel": 5,
+          "harcero": 246,
+          "maxHp": 557,
+          "atkMin": 64,
+          "atkMax": 90,
+          "def": 10,
+          "xp": 42,
+          "nyangMin": 19,
+          "nyangMax": 33
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_alpha_wolf",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_blue_wolf": {
+        "record": {
+          "id": "m1_blue_wolf",
+          "level": 7,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_wolves",
+          "mapIndex": 1,
+          "statLevel": 7,
+          "harcero": 332,
+          "maxHp": 745,
+          "atkMin": 88,
+          "atkMax": 123,
+          "def": 13,
+          "xp": 54,
+          "nyangMin": 25,
+          "nyangMax": 43
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_blue_wolf",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_boar": {
+        "record": {
+          "id": "m1_boar",
+          "level": 8,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_boars",
+          "mapIndex": 1,
+          "statLevel": 8,
+          "harcero": 378,
+          "maxHp": 839,
+          "atkMin": 100,
+          "atkMax": 139,
+          "def": 15,
+          "xp": 60,
+          "nyangMin": 28,
+          "nyangMax": 48
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_boar",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_red_boar": {
+        "record": {
+          "id": "m1_red_boar",
+          "level": 10,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_boars",
+          "mapIndex": 1,
+          "statLevel": 10,
+          "harcero": 490,
+          "maxHp": 1077,
+          "atkMin": 129,
+          "atkMax": 180,
+          "def": 18,
+          "xp": 72,
+          "nyangMin": 34,
+          "nyangMax": 58
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_red_boar",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_bear": {
+        "record": {
+          "id": "m1_bear",
+          "level": 12,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_bears",
+          "mapIndex": 1,
+          "statLevel": 12,
+          "harcero": 640,
+          "maxHp": 1402,
+          "atkMin": 170,
+          "atkMax": 235,
+          "def": 21,
+          "xp": 84,
+          "nyangMin": 40,
+          "nyangMax": 68
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_bear",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_tiger": {
+        "record": {
+          "id": "m1_tiger",
+          "level": 14,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m1_tigers",
+          "mapIndex": 1,
+          "statLevel": 14,
+          "harcero": 813,
+          "maxHp": 1774,
+          "atkMin": 216,
+          "atkMax": 299,
+          "def": 24,
+          "xp": 96,
+          "nyangMin": 46,
+          "nyangMax": 78
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_tiger",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m1_boss": {
+        "record": {
+          "id": "m1_boss",
+          "level": 11,
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 1,
+          "statLevel": 11,
+          "harcero": 542,
+          "maxHp": 663,
+          "atkMin": 116,
+          "atkMax": 307,
+          "def": 25,
+          "xp": 1950,
+          "nyangMin": 1480,
+          "nyangMax": 2520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m1_boss",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_pickpocket": {
+        "record": {
+          "id": "m2_pickpocket",
+          "level": 16,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_pickpockets",
+          "mapIndex": 2,
+          "statLevel": 16,
+          "harcero": 1006,
+          "maxHp": 2196,
+          "atkMin": 298,
+          "atkMax": 412,
+          "def": 28,
+          "xp": 108,
+          "nyangMin": 52,
+          "nyangMax": 88
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_pickpocket",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_cleaver": {
+        "record": {
+          "id": "m2_cleaver",
+          "level": 17,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_axemen",
+          "mapIndex": 2,
+          "statLevel": 17,
+          "harcero": 1097,
+          "maxHp": 2392,
+          "atkMin": 326,
+          "atkMax": 449,
+          "def": 29,
+          "xp": 114,
+          "nyangMin": 55,
+          "nyangMax": 93
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_cleaver",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_archer": {
+        "record": {
+          "id": "m2_archer",
+          "level": 18,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_archers",
+          "mapIndex": 2,
+          "statLevel": 18,
+          "harcero": 1193,
+          "maxHp": 2596,
+          "atkMin": 354,
+          "atkMax": 488,
+          "def": 31,
+          "xp": 120,
+          "nyangMin": 58,
+          "nyangMax": 98
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_archer",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_axeman": {
+        "record": {
+          "id": "m2_axeman",
+          "level": 20,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_axemen",
+          "mapIndex": 2,
+          "statLevel": 20,
+          "harcero": 1405,
+          "maxHp": 3061,
+          "atkMin": 419,
+          "atkMax": 577,
+          "def": 39,
+          "xp": 132,
+          "nyangMin": 64,
+          "nyangMax": 108
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_axeman",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_wildman": {
+        "record": {
+          "id": "m2_wildman",
+          "level": 21,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_mercs",
+          "mapIndex": 2,
+          "statLevel": 21,
+          "harcero": 1510,
+          "maxHp": 3271,
+          "atkMin": 448,
+          "atkMax": 617,
+          "def": 44,
+          "xp": 138,
+          "nyangMin": 67,
+          "nyangMax": 113
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_wildman",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_merc": {
+        "record": {
+          "id": "m2_merc",
+          "level": 22,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_mercs",
+          "mapIndex": 2,
+          "statLevel": 22,
+          "harcero": 1647,
+          "maxHp": 3579,
+          "atkMin": 491,
+          "atkMax": 675,
+          "def": 48,
+          "xp": 144,
+          "nyangMin": 70,
+          "nyangMax": 118
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_merc",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_wild_archer": {
+        "record": {
+          "id": "m2_wild_archer",
+          "level": 23,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_archers",
+          "mapIndex": 2,
+          "statLevel": 23,
+          "harcero": 1802,
+          "maxHp": 3904,
+          "atkMin": 536,
+          "atkMax": 737,
+          "def": 54,
+          "xp": 150,
+          "nyangMin": 73,
+          "nyangMax": 123
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_wild_archer",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_guard": {
+        "record": {
+          "id": "m2_guard",
+          "level": 25,
+          "tags": [
+            "bandit"
+          ],
+          "materialId": "mat_m2_guards",
+          "mapIndex": 2,
+          "statLevel": 25,
+          "harcero": 2031,
+          "maxHp": 4397,
+          "atkMin": 605,
+          "atkMax": 832,
+          "def": 64,
+          "xp": 162,
+          "nyangMin": 79,
+          "nyangMax": 133
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_guard",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m2_boss": {
+        "record": {
+          "id": "m2_boss",
+          "level": 26,
+          "tags": [
+            "bandit",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 2,
+          "statLevel": 26,
+          "harcero": 2566,
+          "maxHp": 3074,
+          "atkMin": 552,
+          "atkMax": 1455,
+          "def": 92,
+          "xp": 4200,
+          "nyangMin": 3280,
+          "nyangMax": 5520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m2_boss",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_lookout": {
+        "record": {
+          "id": "m3_lookout",
+          "level": 26,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_watchrocks",
+          "mapIndex": 3,
+          "statLevel": 26,
+          "harcero": 2189,
+          "maxHp": 3995,
+          "atkMin": 786,
+          "atkMax": 1079,
+          "def": 71,
+          "xp": 168,
+          "nyangMin": 82,
+          "nyangMax": 138
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_lookout",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_slinger": {
+        "record": {
+          "id": "m3_slinger",
+          "level": 27,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_watchrocks",
+          "mapIndex": 3,
+          "statLevel": 27,
+          "harcero": 2327,
+          "maxHp": 4249,
+          "atkMin": 836,
+          "atkMax": 1149,
+          "def": 76,
+          "xp": 174,
+          "nyangMin": 85,
+          "nyangMax": 143
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_slinger",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_clubber": {
+        "record": {
+          "id": "m3_clubber",
+          "level": 28,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_bridges",
+          "mapIndex": 3,
+          "statLevel": 28,
+          "harcero": 2517,
+          "maxHp": 4595,
+          "atkMin": 905,
+          "atkMax": 1243,
+          "def": 83,
+          "xp": 180,
+          "nyangMin": 88,
+          "nyangMax": 148
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_clubber",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_shaman": {
+        "record": {
+          "id": "m3_shaman",
+          "level": 29,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_totems",
+          "mapIndex": 3,
+          "statLevel": 29,
+          "harcero": 2658,
+          "maxHp": 4850,
+          "atkMin": 956,
+          "atkMax": 1312,
+          "def": 88,
+          "xp": 186,
+          "nyangMin": 91,
+          "nyangMax": 153
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_shaman",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_berserker": {
+        "record": {
+          "id": "m3_berserker",
+          "level": 32,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_totems",
+          "mapIndex": 3,
+          "statLevel": 32,
+          "harcero": 3152,
+          "maxHp": 5753,
+          "atkMin": 1136,
+          "atkMax": 1559,
+          "def": 110,
+          "xp": 208,
+          "nyangMin": 100,
+          "nyangMax": 168
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_berserker",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_ram": {
+        "record": {
+          "id": "m3_ram",
+          "level": 33,
+          "tags": [
+            "animal"
+          ],
+          "materialId": "mat_m3_pens",
+          "mapIndex": 3,
+          "statLevel": 33,
+          "harcero": 3255,
+          "maxHp": 5940,
+          "atkMin": 1174,
+          "atkMax": 1610,
+          "def": 118,
+          "xp": 219,
+          "nyangMin": 103,
+          "nyangMax": 173
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_ram",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_lieutenant": {
+        "record": {
+          "id": "m3_lieutenant",
+          "level": 34,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_warcamp",
+          "mapIndex": 3,
+          "statLevel": 34,
+          "harcero": 3439,
+          "maxHp": 6271,
+          "atkMin": 1240,
+          "atkMax": 1700,
+          "def": 125,
+          "xp": 232,
+          "nyangMin": 106,
+          "nyangMax": 178
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_lieutenant",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_irontusk": {
+        "record": {
+          "id": "m3_irontusk",
+          "level": 36,
+          "tags": [
+            "orc"
+          ],
+          "materialId": "mat_m3_warcamp",
+          "mapIndex": 3,
+          "statLevel": 36,
+          "harcero": 3696,
+          "maxHp": 6743,
+          "atkMin": 1334,
+          "atkMax": 1829,
+          "def": 143,
+          "xp": 264,
+          "nyangMin": 112,
+          "nyangMax": 188
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_irontusk",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m3_boss": {
+        "record": {
+          "id": "m3_boss",
+          "level": 37,
+          "tags": [
+            "orc",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 3,
+          "statLevel": 37,
+          "harcero": 4463,
+          "maxHp": 5291,
+          "atkMin": 955,
+          "atkMax": 2518,
+          "def": 197,
+          "xp": 7075,
+          "nyangMin": 4600,
+          "nyangMax": 7720
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m3_boss",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_scorpion": {
+        "record": {
+          "id": "m4_scorpion",
+          "level": 37,
+          "tags": [
+            "desert",
+            "animal"
+          ],
+          "materialId": "mat_m4_scorpions",
+          "mapIndex": 4,
+          "statLevel": 37,
+          "harcero": 3911,
+          "maxHp": 6933,
+          "atkMin": 1460,
+          "atkMax": 2002,
+          "def": 150,
+          "xp": 283,
+          "nyangMin": 115,
+          "nyangMax": 193
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_scorpion",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_giant_scorpion": {
+        "record": {
+          "id": "m4_giant_scorpion",
+          "level": 38,
+          "tags": [
+            "desert",
+            "animal"
+          ],
+          "materialId": "mat_m4_scorpions",
+          "mapIndex": 4,
+          "statLevel": 38,
+          "harcero": 4023,
+          "maxHp": 7131,
+          "atkMin": 1503,
+          "atkMax": 2060,
+          "def": 160,
+          "xp": 304,
+          "nyangMin": 118,
+          "nyangMax": 198
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_giant_scorpion",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_sand_viper": {
+        "record": {
+          "id": "m4_sand_viper",
+          "level": 39,
+          "tags": [
+            "desert",
+            "animal"
+          ],
+          "materialId": "mat_m4_snakes",
+          "mapIndex": 4,
+          "statLevel": 39,
+          "harcero": 4173,
+          "maxHp": 7392,
+          "atkMin": 1558,
+          "atkMax": 2135,
+          "def": 168,
+          "xp": 327,
+          "nyangMin": 121,
+          "nyangMax": 203
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_sand_viper",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_cobra": {
+        "record": {
+          "id": "m4_cobra",
+          "level": 40,
+          "tags": [
+            "desert",
+            "animal"
+          ],
+          "materialId": "mat_m4_snakes",
+          "mapIndex": 4,
+          "statLevel": 40,
+          "harcero": 4445,
+          "maxHp": 7881,
+          "atkMin": 1662,
+          "atkMax": 2277,
+          "def": 179,
+          "xp": 352,
+          "nyangMin": 124,
+          "nyangMax": 208
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_cobra",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_bandit": {
+        "record": {
+          "id": "m4_bandit",
+          "level": 42,
+          "tags": [
+            "desert",
+            "bandit"
+          ],
+          "materialId": "mat_m4_bandits",
+          "mapIndex": 4,
+          "statLevel": 42,
+          "harcero": 5017,
+          "maxHp": 8899,
+          "atkMin": 1878,
+          "atkMax": 2573,
+          "def": 198,
+          "xp": 408,
+          "nyangMin": 130,
+          "nyangMax": 218
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_bandit",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_bandit_archer": {
+        "record": {
+          "id": "m4_bandit_archer",
+          "level": 43,
+          "tags": [
+            "desert",
+            "bandit"
+          ],
+          "materialId": "mat_m4_bandits",
+          "mapIndex": 4,
+          "statLevel": 43,
+          "harcero": 5133,
+          "maxHp": 9099,
+          "atkMin": 1921,
+          "atkMax": 2631,
+          "def": 209,
+          "xp": 439,
+          "nyangMin": 133,
+          "nyangMax": 223
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_bandit_archer",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_mummy": {
+        "record": {
+          "id": "m4_mummy",
+          "level": 44,
+          "tags": [
+            "desert",
+            "undead"
+          ],
+          "materialId": "mat_m4_ruins",
+          "mapIndex": 4,
+          "statLevel": 44,
+          "harcero": 5382,
+          "maxHp": 9537,
+          "atkMin": 2014,
+          "atkMax": 2759,
+          "def": 218,
+          "xp": 472,
+          "nyangMin": 136,
+          "nyangMax": 228
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_mummy",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_golem": {
+        "record": {
+          "id": "m4_golem",
+          "level": 45,
+          "tags": [
+            "desert"
+          ],
+          "materialId": "mat_m4_golems",
+          "mapIndex": 4,
+          "statLevel": 45,
+          "harcero": 5554,
+          "maxHp": 9840,
+          "atkMin": 2078,
+          "atkMax": 2847,
+          "def": 230,
+          "xp": 507,
+          "nyangMin": 139,
+          "nyangMax": 233
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_golem",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m4_boss": {
+        "record": {
+          "id": "m4_boss",
+          "level": 46,
+          "tags": [
+            "desert",
+            "animal",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 4,
+          "statLevel": 46,
+          "harcero": 7089,
+          "maxHp": 8365,
+          "atkMin": 1514,
+          "atkMax": 3991,
+          "def": 313,
+          "xp": 13600,
+          "nyangMin": 5680,
+          "nyangMax": 9520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m4_boss",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_snow_wolf": {
+        "record": {
+          "id": "m5_snow_wolf",
+          "level": 46,
+          "tags": [
+            "ice",
+            "animal"
+          ],
+          "materialId": "mat_m5_wolves",
+          "mapIndex": 5,
+          "statLevel": 46,
+          "harcero": 5936,
+          "maxHp": 10373,
+          "atkMin": 2274,
+          "atkMax": 3114,
+          "def": 242,
+          "xp": 544,
+          "nyangMin": 142,
+          "nyangMax": 238
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_snow_wolf",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_snow_wraith": {
+        "record": {
+          "id": "m5_snow_wraith",
+          "level": 47,
+          "tags": [
+            "ice",
+            "undead"
+          ],
+          "materialId": "mat_m5_warriors",
+          "mapIndex": 5,
+          "statLevel": 47,
+          "harcero": 6423,
+          "maxHp": 11252,
+          "atkMin": 2467,
+          "atkMax": 3378,
+          "def": 252,
+          "xp": 583,
+          "nyangMin": 145,
+          "nyangMax": 243
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_snow_wraith",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_frozen_warrior": {
+        "record": {
+          "id": "m5_frozen_warrior",
+          "level": 48,
+          "tags": [
+            "ice",
+            "undead"
+          ],
+          "materialId": "mat_m5_warriors",
+          "mapIndex": 5,
+          "statLevel": 48,
+          "harcero": 6906,
+          "maxHp": 12116,
+          "atkMin": 2657,
+          "atkMax": 3638,
+          "def": 265,
+          "xp": 624,
+          "nyangMin": 148,
+          "nyangMax": 248
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_frozen_warrior",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_frost_spirit": {
+        "record": {
+          "id": "m5_frost_spirit",
+          "level": 49,
+          "tags": [
+            "ice"
+          ],
+          "materialId": "mat_m5_spirits",
+          "mapIndex": 5,
+          "statLevel": 49,
+          "harcero": 7339,
+          "maxHp": 12913,
+          "atkMin": 2832,
+          "atkMax": 3878,
+          "def": 275,
+          "xp": 667,
+          "nyangMin": 151,
+          "nyangMax": 253
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_frost_spirit",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_witch_apprentice": {
+        "record": {
+          "id": "m5_witch_apprentice",
+          "level": 51,
+          "tags": [
+            "ice"
+          ],
+          "materialId": "mat_m5_spirits",
+          "mapIndex": 5,
+          "statLevel": 51,
+          "harcero": 8395,
+          "maxHp": 14785,
+          "atkMin": 3245,
+          "atkMax": 4442,
+          "def": 302,
+          "xp": 759,
+          "nyangMin": 157,
+          "nyangMax": 263
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_witch_apprentice",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_yeti": {
+        "record": {
+          "id": "m5_yeti",
+          "level": 52,
+          "tags": [
+            "ice",
+            "animal"
+          ],
+          "materialId": "mat_m5_yetis",
+          "mapIndex": 5,
+          "statLevel": 52,
+          "harcero": 8619,
+          "maxHp": 15195,
+          "atkMin": 3335,
+          "atkMax": 4566,
+          "def": 313,
+          "xp": 808,
+          "nyangMin": 160,
+          "nyangMax": 268
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_yeti",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_elder_yeti": {
+        "record": {
+          "id": "m5_elder_yeti",
+          "level": 53,
+          "tags": [
+            "ice",
+            "animal"
+          ],
+          "materialId": "mat_m5_yetis",
+          "mapIndex": 5,
+          "statLevel": 53,
+          "harcero": 8868,
+          "maxHp": 15619,
+          "atkMin": 3429,
+          "atkMax": 4694,
+          "def": 327,
+          "xp": 859,
+          "nyangMin": 163,
+          "nyangMax": 273
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_elder_yeti",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_ice_golem": {
+        "record": {
+          "id": "m5_ice_golem",
+          "level": 53,
+          "tags": [
+            "ice"
+          ],
+          "materialId": "mat_m5_golems",
+          "mapIndex": 5,
+          "statLevel": 53,
+          "harcero": 8868,
+          "maxHp": 15619,
+          "atkMin": 3429,
+          "atkMax": 4694,
+          "def": 327,
+          "xp": 859,
+          "nyangMin": 163,
+          "nyangMax": 273
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_ice_golem",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "m5_boss": {
+        "record": {
+          "id": "m5_boss",
+          "level": 54,
+          "tags": [
+            "ice",
+            "boss"
+          ],
+          "materialId": null,
+          "mapIndex": 5,
+          "statLevel": 54,
+          "harcero": 11799,
+          "maxHp": 13826,
+          "atkMin": 2506,
+          "atkMax": 6606,
+          "def": 442,
+          "xp": 22800,
+          "nyangMin": 6640,
+          "nyangMax": 11120
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/m5_boss",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "tower_boss_1": {
+        "record": {
+          "id": "tower_boss_1",
+          "level": 16,
+          "tags": [
+            "bandit",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 16,
+          "harcero": 1179,
+          "maxHp": 1433,
+          "atkMin": 257,
+          "atkMax": 678,
+          "def": 36,
+          "xp": 2700,
+          "nyangMin": 2080,
+          "nyangMax": 3520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/tower_boss_1",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "tower_boss_2": {
+        "record": {
+          "id": "tower_boss_2",
+          "level": 27,
+          "tags": [
+            "animal",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 27,
+          "harcero": 2730,
+          "maxHp": 3269,
+          "atkMin": 593,
+          "atkMax": 1565,
+          "def": 99,
+          "xp": 4350,
+          "nyangMin": 3400,
+          "nyangMax": 5720
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/tower_boss_2",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "tower_boss_3": {
+        "record": {
+          "id": "tower_boss_3",
+          "level": 43,
+          "tags": [
+            "undead",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 43,
+          "harcero": 6099,
+          "maxHp": 7205,
+          "atkMin": 1317,
+          "atkMax": 3471,
+          "def": 271,
+          "xp": 10975,
+          "nyangMin": 5320,
+          "nyangMax": 8920
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/tower_boss_3",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "tower_boss_4": {
+        "record": {
+          "id": "tower_boss_4",
+          "level": 59,
+          "tags": [
+            "fire",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 59,
+          "harcero": 17126,
+          "maxHp": 20120,
+          "atkMin": 3688,
+          "atkMax": 9723,
+          "def": 533,
+          "xp": 30175,
+          "nyangMin": 7240,
+          "nyangMax": 12120
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/tower_boss_4",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_dokkebi": {
+        "record": {
+          "id": "ev_dokkebi",
+          "level": 1,
+          "tags": [
+            "undead"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 129,
+          "maxHp": 329,
+          "atkMin": 31,
+          "atkMax": 47,
+          "def": 4,
+          "xp": 18,
+          "nyangMin": 7,
+          "nyangMax": 13
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_dokkebi",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_lider": {
+        "record": {
+          "id": "ev_lider",
+          "level": 1,
+          "tags": [
+            "undead"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 129,
+          "maxHp": 329,
+          "atkMin": 31,
+          "atkMax": 47,
+          "def": 4,
+          "xp": 18,
+          "nyangMin": 7,
+          "nyangMax": 13
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_lider",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_silkghost": {
+        "record": {
+          "id": "ev_silkghost",
+          "level": 1,
+          "tags": [
+            "undead"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 129,
+          "maxHp": 329,
+          "atkMin": 31,
+          "atkMax": 47,
+          "def": 4,
+          "xp": 18,
+          "nyangMin": 7,
+          "nyangMax": 13
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_silkghost",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_stonedead": {
+        "record": {
+          "id": "ev_stonedead",
+          "level": 1,
+          "tags": [
+            "undead"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 129,
+          "maxHp": 329,
+          "atkMin": 31,
+          "atkMax": 47,
+          "def": 4,
+          "xp": 18,
+          "nyangMin": 7,
+          "nyangMax": 13
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_stonedead",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_whiteghost": {
+        "record": {
+          "id": "ev_whiteghost",
+          "level": 1,
+          "tags": [
+            "undead"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 129,
+          "maxHp": 329,
+          "atkMin": 31,
+          "atkMax": 47,
+          "def": 4,
+          "xp": 18,
+          "nyangMin": 7,
+          "nyangMax": 13
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_whiteghost",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
+          "status": "derived",
+          "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
+        }
+      },
+      "ev_ninetails": {
+        "record": {
+          "id": "ev_ninetails",
+          "level": 1,
+          "tags": [
+            "undead",
+            "boss"
+          ],
+          "materialId": null,
+          "statLevel": 1,
+          "harcero": 150,
+          "maxHp": 208,
+          "atkMin": 31,
+          "atkMax": 81,
+          "def": 5,
+          "xp": 450,
+          "nyangMin": 280,
+          "nyangMax": 520
+        },
+        "provenance": {
+          "source": "https://stonestorm.gg/api/content",
+          "apiPath": "/mobs/ev_ninetails",
+          "sha256": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
+          "gameVersion": "e326d6cab204",
+          "checkedAt": "2026-11-18T01:32:04.991Z",
           "status": "derived",
           "scope": "Nyilvános API-ból sémával ellenőrzött adat; nem játékbeli megfigyelés"
         }
@@ -383,9 +1991,9 @@
     }
   },
   "sets": {},
-  "gameVersion": "c530ea20d7ec",
-  "checkedAt": "2026-11-16T11:23:31.338Z",
-  "sourceHash": "dcd97476dfd84b13d0b2a3c882eef89be9e51ad92e33734816f2b42044b29d34",
+  "gameVersion": "e326d6cab204",
+  "checkedAt": "2026-11-18T01:32:04.991Z",
+  "sourceHash": "6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843",
   "dungeons": {
     "wild": {
       "record": {
