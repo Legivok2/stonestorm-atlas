@@ -2,18 +2,18 @@
 
 Állapot: applied
 
-Ellenőrzés: 2026-11-18T01:32:04.991Z
+Ellenőrzés: 2026-11-18T07:33:07.893Z
 
-Játékverzió: e326d6cab204
+Játékverzió: fbc93606674a
 
 ## Áttekintés
 
-- Most észlelt új tételek: 1048
-- Korábbról nyitva maradt: 393
-- Automatikusan feldolgozott mezők: 303
+- Most észlelt új tételek: 1477
+- Korábbról nyitva maradt: 1138
+- Automatikusan feldolgozott mezők: 223
 - Dokumentált felülvizsgálattal lezárt: 0
-- Mechanikai / kézi ellenőrzés: 741
-- Nyitott összesen: 1138
+- Mechanikai / kézi ellenőrzés: 1995
+- Nyitott összesen: 2392
 
 ## A kiinduló 505 tétel besorolása
 
@@ -37,9 +37,9 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Kliensfájlok és fordítások forrásleltára: 2 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Egyéb rendszerek (298)
+### Egyéb rendszerek (1080)
 
-- Egyéb rendszerek · ellenőrzendő adat: 298 tétel – Új vagy megváltozott játékmechanika
+- Egyéb rendszerek · ellenőrzendő adat: 1080 tétel – Új vagy megváltozott játékmechanika
 
 ### Harci szabályok és fejlődés (21)
 
@@ -47,9 +47,10 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 - Fejlődési és egyensúlyozási szabályok: 1 tétel – Új vagy megváltozott játékmechanika
 - Harci szabályok és fejlődés · ellenőrzendő adat: 19 tétel – Új vagy megváltozott játékmechanika
 
-### Ház (2)
+### Ház (173)
 
 - Játékrendszerek elérhetőségi kapcsolói: 2 tétel – Ismert rendszer – importáló támogatás hiányzik
+- Ház · ellenőrzendő adat: 171 tétel – Új vagy megváltozott játékmechanika
 
 ### Játékrendszerek és események (46)
 
@@ -57,22 +58,22 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Új vagy megváltozott játékmechanika
 - Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Kazamaták (393)
+### Kazamaták (689)
 
 - Teljesítmények és jutalomcsoportok: 3 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Kliensfájlok és fordítások forrásleltára: 2 tétel – Korábbi első megfigyelés / forrásleltár
-- Sárkányfészek · hősi termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Sárkányfészek · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
-- Sárkányfészek · normál termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · hősi termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · normál termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · hősi termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · normál termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · hősi termek: 50 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · normál termek: 32 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · szerkezet és teremkapcsolatok: 1 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · szerkezet és teremkapcsolatok: 1 tétel – Új vagy megváltozott játékmechanika
+- Sárkányfészek · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Sárkányfészek · szerkezet és teremkapcsolatok: 3 tétel – Új vagy megváltozott játékmechanika
+- Sárkányfészek · normál termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Majomcsapda · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Majomcsapda · normál termek: 83 tétel – Új vagy megváltozott játékmechanika
+- Pókfészek · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Pókfészek · szerkezet és teremkapcsolatok: 3 tétel – Új vagy megváltozott játékmechanika
+- Pókfészek · normál termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Vadonodú · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
+- Vadonodú · normál termek: 51 tétel – Új vagy megváltozott játékmechanika
+- Vadonodú · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
+- Majomcsapda · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
 
 ### Képességek és fejlődés (14)
 
@@ -103,12 +104,12 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Világ és bossok (30)
+### Világ és bossok (35)
 
-- Hatodik tájegység · erősségi módosítók: 30 tétel – Új vagy megváltozott játékmechanika
+- Hatodik tájegység · erősségi módosítók: 35 tétel – Új vagy megváltozott játékmechanika
 
 ## Források és részletek
 
-A teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: 6f0b14439c939dc256e91be39156a93c9fed65276e2b222eb4e28d370dfa0843.
+A teljes URL-ek, technikai útvonalak, besorolások és lezárási bizonyítékok a latest-sync.json reviewLedger mezőjében szerepelnek. A teljes API-konfiguráció SHA-256 lenyomata: 7d5a0028ac83cb6607fbdb326d28d363ba4b5d31035a6ff7384f8bf7aeff90b5.
 
 Kliensfeltérképezés ebben a futásban: igen.
