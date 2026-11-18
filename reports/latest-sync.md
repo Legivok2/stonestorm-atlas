@@ -1,16 +1,16 @@
 # Atlas frissítési jelentés
 
-Állapot: applied
+Állapot: unchanged
 
-Ellenőrzés: 2026-11-18T07:33:07.893Z
+Ellenőrzés: 2026-11-18T13:30:00.380Z
 
 Játékverzió: fbc93606674a
 
 ## Áttekintés
 
-- Most észlelt új tételek: 1477
-- Korábbról nyitva maradt: 1138
-- Automatikusan feldolgozott mezők: 223
+- Most észlelt új tételek: 0
+- Korábbról nyitva maradt: 2392
+- Automatikusan feldolgozott mezők: 0
 - Dokumentált felülvizsgálattal lezárt: 0
 - Mechanikai / kézi ellenőrzés: 1995
 - Nyitott összesen: 2392
