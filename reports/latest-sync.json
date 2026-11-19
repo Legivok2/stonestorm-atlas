@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-18T19:12:41.017Z",
-  "status": "checked",
+  "checkedAt": "2026-11-19T01:29:02.153Z",
+  "status": "unchanged",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
   "gameVersion": "fbc93606674a",
@@ -14,7 +14,7 @@
       "etag": "\"ei_cx7a4cyMgZ4R6TfANPjlBgt7.y1OgDGfe1L-gzip\"",
       "lastModified": null,
       "bytes": 202752,
-      "status": 200
+      "status": 304
     },
     {
       "url": "https://stonestorm.gg/",
@@ -6875,25 +6875,11 @@
     }
   ],
   "counts": {
-    "added": 1,
-    "changed": 1,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
-  "changes": [
-    {
-      "kind": "added",
-      "path": "/bonus/tierLevel/lowT5",
-      "after": 0.1,
-      "category": "Kovácsolás és bónuszok"
-    },
-    {
-      "kind": "changed",
-      "path": "/tag",
-      "before": "1QDO-tZ5pna1IPq78CaAqkvOlic",
-      "after": "ei_cx7a4cyMgZ4R6TfANPjlBgt7",
-      "category": "Egyéb / ismeretlen rendszer"
-    }
-  ],
+  "changes": [],
   "accepted": [],
   "resourceChanges": [],
   "publicSystems": {
@@ -27700,7 +27686,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -49467,7 +49453,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49482,7 +49468,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49497,7 +49483,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49512,7 +49498,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49530,7 +49516,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
@@ -49543,9 +49529,9 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
@@ -85288,7 +85274,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -112853,7 +112839,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112868,7 +112854,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112883,7 +112869,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112898,7 +112884,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112916,7 +112902,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-18T19:12:41.017Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
@@ -112929,9 +112915,9 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-18T19:12:41.017Z",
+      "lastSeenAt": "2026-11-19T01:29:02.153Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
@@ -112960,8 +112946,8 @@
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 2,
-      "carried": 2392,
+      "new": 0,
+      "carried": 2394,
       "automatic": 0,
       "documented": 0,
       "manual": 1997

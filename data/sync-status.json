@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-18T19:12:41.017Z",
+  "lastSuccessfulCheck": "2026-11-19T01:29:02.153Z",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
   "lastAutomaticUpdate": "2026-11-18T07:33:07.893Z",
@@ -10,8 +10,8 @@
   },
   "mode": "apply",
   "changeCounts": {
-    "added": 1,
-    "changed": 1,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
   "importable": 0,
@@ -1063,8 +1063,8 @@
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 2,
-      "carried": 2392,
+      "new": 0,
+      "carried": 2394,
       "automatic": 0,
       "documented": 0,
       "manual": 1997
@@ -15561,7 +15561,7 @@
     },
     {
       "name": "Kovácsolás és anyagok",
-      "count": 312,
+      "count": 314,
       "topics": [
         {
           "title": "Kövek és alapanyagok beszerzési forrásai",
@@ -17757,6 +17757,27 @@
               "title": "Kliensfájlok és fordítások forrásleltára",
               "status": "open",
               "reason": "Korábbi első megfigyelés / forrásleltár",
+              "proof": null
+            }
+          ]
+        },
+        {
+          "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+          "classification": "mechanism",
+          "count": 2,
+          "paths": [
+            {
+              "path": "/bonus/tierLevel/lowT5",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/bonus",
+              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
               "proof": null
             }
           ]
@@ -45126,33 +45147,5 @@
       ]
     }
   ],
-  "currentGroups": [
-    {
-      "name": "Kovácsolás és anyagok",
-      "count": 2,
-      "topics": [
-        {
-          "title": "Kovácsolás és anyagok · ellenőrzendő adat",
-          "classification": "mechanism",
-          "count": 2,
-          "paths": [
-            {
-              "path": "/bonus/tierLevel/lowT5",
-              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
-              "status": "open",
-              "reason": "Új vagy megváltozott játékmechanika",
-              "proof": null
-            },
-            {
-              "path": "/bonus",
-              "title": "Kovácsolás és anyagok · ellenőrzendő adat",
-              "status": "open",
-              "reason": "Új vagy megváltozott játékmechanika",
-              "proof": null
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "currentGroups": []
 }
