@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-20T13:28:55.475Z",
-  "status": "checked",
+  "checkedAt": "2026-11-20T19:16:42.973Z",
+  "status": "unchanged",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
   "gameVersion": "fbc93606674a",
@@ -14,7 +14,7 @@
       "etag": "\"oJcsEnoToAIHYLZdATV6VNUq96F.KKK_GgoH-Q-gzip\"",
       "lastModified": null,
       "bytes": 202792,
-      "status": 200
+      "status": 304
     },
     {
       "url": "https://stonestorm.gg/",
@@ -6875,31 +6875,11 @@
     }
   ],
   "counts": {
-    "added": 2,
-    "changed": 1,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
-  "changes": [
-    {
-      "kind": "added",
-      "path": "/features/fishCoinRewards",
-      "after": true,
-      "category": "Események"
-    },
-    {
-      "kind": "added",
-      "path": "/features/runasorV2",
-      "after": true,
-      "category": "Események"
-    },
-    {
-      "kind": "changed",
-      "path": "/tag",
-      "before": "ei_cx7a4cyMgZ4R6TfANPjlBgt7",
-      "after": "oJcsEnoToAIHYLZdATV6VNUq96F",
-      "category": "Egyéb / ismeretlen rendszer"
-    }
-  ],
+  "changes": [],
   "accepted": [],
   "resourceChanges": [],
   "publicSystems": {
@@ -27706,7 +27686,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -49473,7 +49453,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49488,7 +49468,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49503,7 +49483,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49518,7 +49498,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49549,7 +49529,7 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kovácsolás és anyagok",
@@ -49567,7 +49547,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Játékrendszerek és események",
       "classification": "mechanism",
       "title": "Játékrendszerek elérhetőségi kapcsolói"
@@ -49583,7 +49563,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Játékrendszerek és események",
       "classification": "mechanism",
       "title": "Játékrendszerek elérhetőségi kapcsolói"
@@ -85326,7 +85306,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -112891,7 +112871,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112906,7 +112886,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112921,7 +112901,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112936,7 +112916,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112967,7 +112947,7 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "lastSeenAt": "2026-11-20T19:16:42.973Z",
       "status": "open",
       "carried": true,
       "system": "Kovácsolás és anyagok",
@@ -112985,7 +112965,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Játékrendszerek és események",
       "classification": "mechanism",
       "title": "Játékrendszerek elérhetőségi kapcsolói"
@@ -113001,7 +112981,7 @@
       "identity": null,
       "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
-      "carried": false,
+      "carried": true,
       "system": "Játékrendszerek és események",
       "classification": "mechanism",
       "title": "Játékrendszerek elérhetőségi kapcsolói"
@@ -113030,8 +113010,8 @@
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 2,
-      "carried": 2394,
+      "new": 0,
+      "carried": 2396,
       "automatic": 0,
       "documented": 0,
       "manual": 1999

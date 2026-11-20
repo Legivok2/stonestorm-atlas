@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-20T13:28:55.475Z",
+  "lastSuccessfulCheck": "2026-11-20T19:16:42.973Z",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
   "lastAutomaticUpdate": "2026-11-18T07:33:07.893Z",
@@ -10,8 +10,8 @@
   },
   "mode": "apply",
   "changeCounts": {
-    "added": 2,
-    "changed": 1,
+    "added": 0,
+    "changed": 0,
     "removed": 0
   },
   "importable": 0,
@@ -1063,8 +1063,8 @@
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 2,
-      "carried": 2394,
+      "new": 0,
+      "carried": 2396,
       "automatic": 0,
       "documented": 0,
       "manual": 1999
@@ -10140,7 +10140,7 @@
     },
     {
       "name": "Játékrendszerek és események",
-      "count": 46,
+      "count": 48,
       "topics": [
         {
           "title": "Játékrendszerek elérhetőségi kapcsolói",
@@ -10460,10 +10460,24 @@
         {
           "title": "Játékrendszerek elérhetőségi kapcsolói",
           "classification": "mechanism",
-          "count": 1,
+          "count": 3,
           "paths": [
             {
               "path": "/features/firstSession",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/features/fishCoinRewards",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/features/runasorV2",
               "title": "Játékrendszerek elérhetőségi kapcsolói",
               "status": "open",
               "reason": "Új vagy megváltozott játékmechanika",
@@ -45161,33 +45175,5 @@
       ]
     }
   ],
-  "currentGroups": [
-    {
-      "name": "Játékrendszerek és események",
-      "count": 2,
-      "topics": [
-        {
-          "title": "Játékrendszerek elérhetőségi kapcsolói",
-          "classification": "mechanism",
-          "count": 2,
-          "paths": [
-            {
-              "path": "/features/fishCoinRewards",
-              "title": "Játékrendszerek elérhetőségi kapcsolói",
-              "status": "open",
-              "reason": "Új vagy megváltozott játékmechanika",
-              "proof": null
-            },
-            {
-              "path": "/features/runasorV2",
-              "title": "Játékrendszerek elérhetőségi kapcsolói",
-              "status": "open",
-              "reason": "Új vagy megváltozott játékmechanika",
-              "proof": null
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "currentGroups": []
 }
