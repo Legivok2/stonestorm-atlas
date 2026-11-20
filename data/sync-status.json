@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastSuccessfulCheck": "2026-11-20T07:33:47.393Z",
+  "lastSuccessfulCheck": "2026-11-20T13:28:55.475Z",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
   "lastAutomaticUpdate": "2026-11-18T07:33:07.893Z",
@@ -10,14 +10,14 @@
   },
   "mode": "apply",
   "changeCounts": {
-    "added": 0,
-    "changed": 0,
+    "added": 2,
+    "changed": 1,
     "removed": 0
   },
   "importable": 0,
   "reportUrl": "https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md",
   "reviewVersion": 2,
-  "pending": 2394,
+  "pending": 2396,
   "pendingItems": [
     {
       "path": "/achievementSets/bandit",
@@ -1053,21 +1053,21 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 2394,
+    "open": 2396,
     "classified": {
       "automatic": 0,
       "unsupported": 79,
-      "mechanism": 1995,
+      "mechanism": 1997,
       "observation": 318,
       "conflict": 2
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 0,
+      "new": 2,
       "carried": 2394,
       "automatic": 0,
       "documented": 0,
-      "manual": 1997
+      "manual": 1999
     }
   },
   "groups": [
@@ -27174,15 +27174,29 @@
     },
     {
       "name": "Játékrendszerek és események",
-      "count": 1,
+      "count": 3,
       "topics": [
         {
           "title": "Játékrendszerek elérhetőségi kapcsolói",
           "classification": "mechanism",
-          "count": 1,
+          "count": 3,
           "paths": [
             {
               "path": "/features/firstSession",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/features/fishCoinRewards",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/features/runasorV2",
               "title": "Játékrendszerek elérhetőségi kapcsolói",
               "status": "open",
               "reason": "Új vagy megváltozott játékmechanika",
@@ -45147,5 +45161,33 @@
       ]
     }
   ],
-  "currentGroups": []
+  "currentGroups": [
+    {
+      "name": "Játékrendszerek és események",
+      "count": 2,
+      "topics": [
+        {
+          "title": "Játékrendszerek elérhetőségi kapcsolói",
+          "classification": "mechanism",
+          "count": 2,
+          "paths": [
+            {
+              "path": "/features/fishCoinRewards",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            },
+            {
+              "path": "/features/runasorV2",
+              "title": "Játékrendszerek elérhetőségi kapcsolói",
+              "status": "open",
+              "reason": "Új vagy megváltozott játékmechanika",
+              "proof": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,20 +1,20 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-20T07:33:47.393Z",
-  "status": "unchanged",
+  "checkedAt": "2026-11-20T13:28:55.475Z",
+  "status": "checked",
   "applied": false,
   "baseline": "Teljes korábbi publikus snapshot",
   "gameVersion": "fbc93606674a",
   "atlasDataVersion": "fbc93606674a",
-  "sourceHash": "faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c",
+  "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
   "sources": [
     {
       "url": "https://stonestorm.gg/api/content",
-      "sha256": "faecc520060fa9e6c45168e02bff1fca4c42d1c6e5f890cf6891d15528c6df2c",
-      "etag": "\"ei_cx7a4cyMgZ4R6TfANPjlBgt7.y1OgDGfe1L-gzip\"",
+      "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "etag": "\"oJcsEnoToAIHYLZdATV6VNUq96F.KKK_GgoH-Q-gzip\"",
       "lastModified": null,
-      "bytes": 202752,
-      "status": 304
+      "bytes": 202792,
+      "status": 200
     },
     {
       "url": "https://stonestorm.gg/",
@@ -6875,11 +6875,31 @@
     }
   ],
   "counts": {
-    "added": 0,
-    "changed": 0,
+    "added": 2,
+    "changed": 1,
     "removed": 0
   },
-  "changes": [],
+  "changes": [
+    {
+      "kind": "added",
+      "path": "/features/fishCoinRewards",
+      "after": true,
+      "category": "Események"
+    },
+    {
+      "kind": "added",
+      "path": "/features/runasorV2",
+      "after": true,
+      "category": "Események"
+    },
+    {
+      "kind": "changed",
+      "path": "/tag",
+      "before": "ei_cx7a4cyMgZ4R6TfANPjlBgt7",
+      "after": "oJcsEnoToAIHYLZdATV6VNUq96F",
+      "category": "Egyéb / ismeretlen rendszer"
+    }
+  ],
   "accepted": [],
   "resourceChanges": [],
   "publicSystems": {
@@ -27686,7 +27706,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -49453,7 +49473,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49468,7 +49488,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49483,7 +49503,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49498,7 +49518,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -49529,12 +49549,44 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
+    },
+    {
+      "path": "/features/fishCoinRewards",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "3b61aaf8e1edb0182f1c5c3e70a723dbb1db9b38ad8957ba271ff59e21bbbe2e",
+      "targetHash": "a56ab70691a68282d1c92ad09d3cfc1eb7a1b1ad3ad4f8fc9520cbac7af63d8f",
+      "firstSeenAt": "2026-11-20T13:28:55.475Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "status": "open",
+      "carried": false,
+      "system": "Játékrendszerek és események",
+      "classification": "mechanism",
+      "title": "Játékrendszerek elérhetőségi kapcsolói"
+    },
+    {
+      "path": "/features/runasorV2",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "ae7dcaa8f2ed7b03c2cdbe0d6e259f307614dac064cefa3ad7b915263c59b7d0",
+      "targetHash": "a56ab70691a68282d1c92ad09d3cfc1eb7a1b1ad3ad4f8fc9520cbac7af63d8f",
+      "firstSeenAt": "2026-11-20T13:28:55.475Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "status": "open",
+      "carried": false,
+      "system": "Játékrendszerek és események",
+      "classification": "mechanism",
+      "title": "Játékrendszerek elérhetőségi kapcsolói"
     }
   ],
   "reviewLedger": [
@@ -85274,7 +85326,7 @@
       "firstSeenAt": "2026-11-18T01:32:04.991Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Harci szabályok és fejlődés",
@@ -112839,7 +112891,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112854,7 +112906,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112869,7 +112921,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112884,7 +112936,7 @@
       "firstSeenAt": "2026-11-18T07:33:07.893Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kazamaták",
@@ -112915,12 +112967,44 @@
       "firstSeenAt": "2026-11-18T19:12:41.017Z",
       "origin": "current-change",
       "identity": null,
-      "lastSeenAt": "2026-11-20T07:33:47.393Z",
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
       "status": "open",
       "carried": true,
       "system": "Kovácsolás és anyagok",
       "classification": "mechanism",
       "title": "Kovácsolás és anyagok · ellenőrzendő adat"
+    },
+    {
+      "path": "/features/fishCoinRewards",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "3b61aaf8e1edb0182f1c5c3e70a723dbb1db9b38ad8957ba271ff59e21bbbe2e",
+      "targetHash": "a56ab70691a68282d1c92ad09d3cfc1eb7a1b1ad3ad4f8fc9520cbac7af63d8f",
+      "firstSeenAt": "2026-11-20T13:28:55.475Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "status": "open",
+      "carried": false,
+      "system": "Játékrendszerek és események",
+      "classification": "mechanism",
+      "title": "Játékrendszerek elérhetőségi kapcsolói"
+    },
+    {
+      "path": "/features/runasorV2",
+      "changeKind": "added",
+      "reason": "Az aktuális API-összevetés változása",
+      "origin": "current-change",
+      "id": "ae7dcaa8f2ed7b03c2cdbe0d6e259f307614dac064cefa3ad7b915263c59b7d0",
+      "targetHash": "a56ab70691a68282d1c92ad09d3cfc1eb7a1b1ad3ad4f8fc9520cbac7af63d8f",
+      "firstSeenAt": "2026-11-20T13:28:55.475Z",
+      "identity": null,
+      "lastSeenAt": "2026-11-20T13:28:55.475Z",
+      "status": "open",
+      "carried": false,
+      "system": "Játékrendszerek és események",
+      "classification": "mechanism",
+      "title": "Játékrendszerek elérhetőségi kapcsolói"
     }
   ],
   "reviewSummary": {
@@ -112936,21 +113020,21 @@
       "resolved": 183,
       "open": 322
     },
-    "open": 2394,
+    "open": 2396,
     "classified": {
       "automatic": 0,
       "unsupported": 79,
-      "mechanism": 1995,
+      "mechanism": 1997,
       "observation": 318,
       "conflict": 2
     },
     "resolvedTotal": 711,
     "activity": {
-      "new": 0,
+      "new": 2,
       "carried": 2394,
       "automatic": 0,
       "documented": 0,
-      "manual": 1997
+      "manual": 1999
     }
   },
   "reviewBaseline": {
