@@ -2,7 +2,7 @@
 
 Állapot: unchanged
 
-Ellenőrzés: 2026-11-23T23:56:55.186Z
+Ellenőrzés: 2026-11-24T09:57:48.995Z
 
 Játékverzió: fbc93606674a
 
