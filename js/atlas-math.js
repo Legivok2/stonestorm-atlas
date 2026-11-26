@@ -42,6 +42,7 @@
     return parsePercent(input);
   }
   function criticalDamage(normalDamage,chance,bonus,gearBonus,rules) {
+    if(rules?.softCapUnverified)return null;
     if(!valid(normalDamage)||!valid(chance)||!valid(bonus,-Infinity)||!valid(gearBonus,-Infinity)||!valid(rules?.baseMultiplier,Number.MIN_VALUE))return null;
     const totalBonus=(bonus+gearBonus)||0;
     if(!valid(totalBonus,-Infinity))return null;

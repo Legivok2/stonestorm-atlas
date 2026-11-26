@@ -205,15 +205,25 @@ test('Besorolás: öt külön osztály és rendszer szerinti név, nem a harcer�
   const {c,db}=dungeonFixture(),aliases=loadReviewAliases(fileURLToPath(root));
   const previous={review:[{path:dungeonPath},{path:'/features/oldFlag',changeKind:'removed'},{path:'/features/newFlag',changeKind:'added'},{path:'https://stonestorm.gg/assets/hu-capture.js'},{path:'/harcero/bossEvadeCaps'}]};
   const r=reviewState({c,db,previous,aliases});
-  assert.deepEqual(r.ledger.map(x=>x.classification),['automatic','unsupported','mechanism','observation','conflict']);
+  assert.deepEqual(r.ledger.map(x=>x.classification),['automatic','unsupported','mechanism','observation','automatic']);
   assert.equal(r.ledger[0].system,'Kazamaták');assert.match(r.ledger[0].title,/hősi 1. terem.*életerő/);
-  assert.equal(r.summary.open,5);assert.equal(r.summary.activity.new,0);
+  assert.equal(r.summary.open,4);assert.equal(r.summary.activity.new,0);
 });
 test('Régi tételek: csak az Atlasba igazoltan átvezetett stat zárul le, a puszta terv nem',()=>{
   const {c,db}=dungeonFixture(),previous={review:[{path:dungeonPath},{path:'/unknownSystem/rule'}]},plan=planImport(c,db);
   let r=reviewState({c,db,previous,plan});assert.equal(r.open.length,2);assert.equal(r.closedNow.length,0);
   applyOverlay(db,plan.overlay);r=reviewState({c,db,previous,plan});assert.equal(r.open.length,1);
   const closed=r.ledger.find(x=>x.path===dungeonPath);assert.equal(closed.resolution.rule,'validated-dungeon-stats-v1');assert.equal(closed.resolution.identity.room,1);assert.equal(r.summary.activity.automatic,1);
+});
+test('Kazamata-blokkoló: a teljes rekord egyezése zárja le a régi validációs hibát',()=>{
+  const {c,db}=dungeonFixture(),previous={review:[{path:'/dungeons/wild',reason:'Érvénytelen teremstatisztika'}]},plan=planImport(c,db);
+  assert.equal(reviewState({c,db,previous,plan}).open.length,1);
+  applyOverlay(db,plan.overlay);const r=reviewState({c,db,previous,plan});assert.equal(r.open.length,0);assert.equal(r.ledger[0].resolution.rule,'validated-whole-dungeon-v3');
+});
+test('Történeti érték: az új import bizonyítéka nem állítja a régi érték importját',()=>{
+  const {c,db}=dungeonFixture(),plan=planImport(c,db);applyOverlay(db,plan.overlay);
+  const r=reviewState({c,db,plan,previous:{review:[{path:dungeonPath,targetHash:sha256({present:true,value:123})}]}});
+  assert.equal(r.open.length,0);assert.equal(r.ledger[0].historyState,'historical-superseded');assert.equal(r.ledger[0].resolution.kind,'documented-review');assert.equal(r.ledger[0].resolution.supersedingProof.rule,'validated-dungeon-stats-v1');
 });
 test('Régi tételek: változatlan következő válasz megtartja a nyitottakat és a lezárási bizonyítékot',()=>{
   const {c,db}=dungeonFixture(),plan=planImport(c,db);applyOverlay(db,plan.overlay);

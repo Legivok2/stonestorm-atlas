@@ -29,7 +29,7 @@ try{
     const dungeonGroup=archive.locator('[data-sync-group="resolved"]').filter({has:page.locator('summary strong', {hasText:'Kazamaták'})});
     assert.equal(await dungeonGroup.count(),1);
     await dungeonGroup.locator(':scope > summary').click();
-    assert.equal(await dungeonGroup.locator('.sync-topic').count(),4);
+    assert.equal(await dungeonGroup.locator('.sync-topic').count(),snapshot.resolvedGroups.find(g=>g.name==='Kazamaták').topics.length);
     assert.equal(await page.locator('#atlas-sync-state code:visible').count(),0,'A rendszer kinyitása még nem mutathat technikai útvonalat');
     await dungeonGroup.locator('.sync-technical > summary').first().click();
     assert(await dungeonGroup.locator('code:visible').count()>0);
@@ -51,7 +51,7 @@ try{
       await page.locator('#atlas-detail[open]').waitFor();
       const rows=page.locator('#atlas-detail-body .atlas-related').filter({hasText:'Hősi termek'}).first().locator('tbody tr');
       assert.equal(await rows.count(),10);
-      for(const [index,room] of dungeon.heroic.rooms.entries())assert.deepEqual((await rows.nth(index).locator('td').allTextContents()).map(s=>s.replace(/\s/g,'')),[room.room,room.level,num(room.maxHp),num(room.atkMin)+'–'+num(room.atkMax),num(room.def),num(room.harcero),num(room.xp),num(room.nyang)].map(x=>String(x).replace(/\s/g,'')));
+      for(const [index,room] of dungeon.heroic.rooms.entries())assert.deepEqual((await rows.nth(index).locator('td').allTextContents()).map(s=>s.replace(/\s/g,'')),[room.room,room.level,num(room.maxHp),num(room.atkMin)+'–'+num(room.atkMax),String(room.def),num(room.harcero),num(room.xp),num(room.nyang)].map(x=>String(x).replace(/\s/g,'')));
       await page.locator('#atlas-detail-close').click();
     }
     await page.evaluate(()=>location.hash='#atlas/updates');

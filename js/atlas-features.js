@@ -1,10 +1,11 @@
 /* A Képtár, összehasonlító és karaktertervező ugyanannak az Atlasnak a moduljai. */
 globalThis.AtlasExtensions={
-  categories:[['arena','Aréna',null,'swords'],['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield'],['bonuses','Bónuszrendszer',null,'spark'],['updates','Atlas frissítések',null,'book']],
+  categories:[['arena','Aréna',null,'swords'],['gallery','Képtár',null,'book'],['compare','Felszerelés-összehasonlító',null,'swords'],['planner','Karaktertervező',null,'shield'],['stat-limits','📊 Stat limitek',null,'shield'],['bonuses','Bónuszrendszer',null,'spark'],['updates','Atlas frissítések',null,'book'],['upcoming','Közelgő tartalmak',null,'book']],
   init(ui){
     const bonusSystem=globalThis.AtlasBonusUI.init(ui);
     const statLimits=globalThis.AtlasStatLimitsUI.init({...ui,bonusSystem});
     const syncUI=globalThis.AtlasSyncUI.init(ui);
+    const futureUI=globalThis.AtlasFutureContentUI.init(ui);
     const homeArena=globalThis.AtlasHomeArenaUI.init(ui);
     const {db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render}=ui;
     const $=s=>document.querySelector(s);
@@ -78,7 +79,7 @@ globalThis.AtlasExtensions={
     const planner={active:'A',drafts:{A:model.empty(db),B:model.empty(db)},editing:{A:null,B:null},saved:[],savedId:'',slot:'weapon',query:'',pickerPage:1,comparing:false,message:'',share:''};
     try{
       const stored=JSON.parse(localStorage.getItem(storageKey));
-      if(stored?.version===1&&Array.isArray(stored.builds))planner.saved=stored.builds.slice(0,20).filter(r=>typeof r.id==='string'&&r.id.length<=100&&r.build?.version===1).map(r=>({id:r.id,build:model.normalize(r.build,db).build}));
+      if([1,2,3].includes(stored?.version)&&Array.isArray(stored.builds))planner.saved=stored.builds.slice(0,20).filter(r=>typeof r.id==='string'&&r.id.length<=100&&[1,2,3,undefined].includes(r.build?.version)).map(r=>({id:r.id,build:model.normalize(r.build,db).build}));
     }catch{planner.message='A korábbi buildmentés nem olvasható. A tervező memóriában és megosztási hivatkozással használható.';}
     const activeBuild=()=>planner.drafts[planner.active];
     function setDraft(input){const result=model.normalize(input,db);planner.drafts[planner.active]=result.build;planner.message=result.errors.join(' ');planner.share='';return result.build;}
@@ -95,20 +96,45 @@ globalThis.AtlasExtensions={
       const pets=Object.fromEntries(db.pets.filter(p=>b.level>=db.petRules.minHeroLevel).map(p=>[p.id,p.name]));
       const mounts=Object.fromEntries(db.mounts.filter(m=>m.level<=b.level&&!m.ramp).map(m=>[m.id,m.name]));
       const stage=db.petSystem.stages[b.petForm-1];
-      const forms=Object.fromEntries(db.petSystem.stages.filter(s=>s.minLevel<=b.level).map(s=>[s.form,s.form+'. '+s.name+' · plafon '+s.maxLevel]));
-      return `<div class="planner-companions"><section class="planner-panel"><h4>Kísérő</h4>${select('planner-pet','Aktív kísérő',{'': 'Nincs kiválasztva',...pets},b.petId??'')}${select('planner-pet-form','Fejlődési forma',forms,b.petForm)}${field('planner-pet-level','Kísérőszint · az aktuális forma és a hős korlátjával',b.petLevel,stage.minLevel,Math.min(stage.maxLevel,b.level))}<p data-planner-pet-progression>Végső szintmaximum: ${db.petSystem.maxLevel}. Aktuális forma: ${esc(stage.name)} (${stage.maxLevel}. szintig); ${stage.slots} tanulható képességhely.</p>${chip('50-es modell: játékmegfigyelés · klienseltérés jelölve','unknown')}${field('planner-pet-rank','Kísérő rangja · a forma és a szint külön érték',b.petRank,0,10000)}${calc.pet?`<div class="planner-companion-image">${media.render(media.pet(calc.pet.record.id,b.petForm),{thumbnail:true})}</div><div data-planner-pet-bonus="${calc.pet.details.bonusValue}"><h5>${esc(calc.pet.details.sections[0].items[0])}</h5><p>V3-kliensképlet · választott forma és rang · fő kísérőként. Nem végső karakterösszeg.</p><p>${esc(traitSummary(calc.pet))}</p><p>${calc.pet.details.sections[2].items.map(esc).join(' · ')}</p></div>${link('pets','pet',calc.pet.record)}`:`<p>A kísérők a ${db.petRules.minHeroLevel}. hősszinttől választhatók.</p>`}<a class="atlas-inline-link" href="#atlas/pets">Formák, etetés, XP és képességkönyvek →</a></section><section class="planner-panel"><h4>Hátas</h4>${select('planner-mount','Aktív hátas',{'':'Nincs kiválasztva',...mounts},b.mountId??'')}${calc.mount?`<div class="planner-companion-image">${media.render(media.forRecord('mount',calc.mount.record.id),{thumbnail:true})}</div>${rows([['Utazási időszorzó',num(calc.mount.travelMult)],['Időcsökkenés',pct(1-calc.mount.travelMult)]])}<p>Nincs igazolt támadás-, HP- vagy energiabónusz; ilyen hatást nem számolunk hozzá.</p>${link('mounts','mount',calc.mount.record)}`:'<p>A listában a kiválasztott szinten használható hátasok jelennek meg.</p>'}</section></div>`;
+      const forms=Object.fromEntries(db.petSystem.stages.map(s=>[s.form,s.form+'. '+s.name+' · plafon '+s.maxLevel+(s.minLevel>b.level?' · hős '+s.minLevel+' szükséges':'' )]));
+      const petRecord=calc.pet?.record,signature=petRecord?.signature;
+      const observedReference=globalThis.StonestormPets.observedReferencePreset();
+      const observed=b.petObservedPreset===observedReference.presetId&&b.petId===observedReference.petId&&b.petLevel===observedReference.level&&b.petForm===observedReference.form;
+      const skillEntries=Object.entries(db.petSkills).filter(([id])=>id!==signature);
+      const skillDescription=(id,level)=>esc(globalThis.StonestormPets.skillDescription(id,level,db.petSystem,num));
+      const skillSlots=Array.from({length:3},(_,i)=>{
+        const slot=i+1;
+        if(slot>stage.slots)return `<article class="planner-pet-skill-slot is-locked" aria-disabled="true"><span class="planner-pet-slot-lock" aria-hidden="true">ZÁR</span><div><strong>${slot}. képességhely · lezárva</strong><p>A ${esc(stage.name)} formában ${stage.slots} tanulható hely érhető el.</p></div></article>`;
+        const selected=b.petSkills.find(s=>s.slot===slot);
+        const selectedName=selected?db.petSkillNames[selected.skillId]?.name??selected.skillId:'';
+        const datalistId='pet-skill-options-'+slot;
+        const candidates=skillEntries.filter(([id])=>!b.petSkills.some(s=>s.skillId===id&&s.slot!==slot));
+        const icon=selected?media.render(media.get('icons','pet_book_'+selected.skillId),{thumbnail:true,className:'pet-rule-icon',alt:selectedName}):'';
+        const options=candidates.map(([id])=>{
+          const name=db.petSkillNames[id]?.name??id;
+          const optionIcon=media.render(media.get('icons','pet_book_'+id),{thumbnail:true,className:'pet-rule-icon',alt:name});
+          return `<button type="button" class="planner-pet-skill-option" data-pet-skill-pick="${slot}" data-pet-skill-id="${esc(id)}">${optionIcon}<span><strong>${esc(name)}</strong><small>${skillDescription(id,1)}</small></span></button>`;
+        }).join('');
+        return `<div class="planner-pet-skill-slot">${icon}<label>${slot}. aktív képességhely<input type="search" list="${datalistId}" data-planner-pet-skill-search="${slot}" value="${esc(selectedName)}" placeholder="Keresés név vagy azonosító szerint" /></label><datalist id="${datalistId}">${candidates.map(([id])=>`<option value="${esc(db.petSkillNames[id]?.name??id)}" data-skill-id="${esc(id)}"></option>`).join('')}</datalist><details class="planner-pet-skill-picker"><summary>Képességválasztó · ikonokkal és leírással</summary><div class="planner-pet-skill-options" data-pet-skill-options="${slot}">${options||'<p>Nincs választható, duplikációmentes képesség.</p>'}</div></details>${selected?`<label>Képességszint<select data-planner-pet-skill-level="${slot}">${[1,2,3,4,5].map(level=>`<option value="${level}" ${selected.level===level?'selected':''}>${level}. szint</option>`).join('')}</select></label><p class="pet-skill-description">${skillDescription(selected.skillId,selected.level)}</p>`:'<p class="pet-skill-description">Válassz képességet a keresőből vagy a részletes listából. A veleszületett képesség nem választható tanult helyre.</p>'}</div>`;
+      }).join('');
+      const referenceMarkup=observed?`<section class="pet-observed-reference" data-pet-observed-details><h5>Mohaagancs · megadott játékmegfigyelés</h5><p>Mitikus · ${observedReference.formName}, ${observedReference.level}/${observedReference.formCap}. Ezek az értékek a feladatban megadott megfigyelést rögzítik, nem élő kliensből felfedezett állapotot.</p><ul><li>Faji XP-bónusz: +${num(observedReference.promptReferenceXpBonusPct)}% (megfigyelt promptérték); a megfigyelt Atlas-modal érték +${num(observedReference.atlasModalDisplayedXpBonusPct)}%. A V3 modell 0 nyers API-ranggal külön +${num(observedReference.verifiedCalculationXpBonusPct)}%-ot számol; a három értéket nem vonjuk össze.</li><li>Faji harci adottság: ${esc(observedReference.trait.name)}, minden ${observedReference.trait.every}. ütés után ${num(observedReference.trait.percent)}%.</li><li>Veleszületett képesség: ${esc(observedReference.signature.name)}, ${num(observedReference.signature.percent)}%.</li><li>Tanult képességek: ${observedReference.skills.map(skill=>`${esc(skill.name)} ${skill.level}. szint${skill.percent?` · ${num(skill.percent)}%`:''}`).join('; ')}.</li><li>Mesterfok: ${observedReference.mastery.rank}/${observedReference.mastery.max} (megfigyelt). A nyers API-ranghoz való megfeleltetés és bónuszhatás nem igazolt, ezért nincs a számításba bevonva.</li></ul></section>`:'';
+      const petPortrait=calc.pet?media.render(media.pet(calc.pet.record.id,b.petForm),{thumbnail:true,alt:calc.pet.record.name}):'';
+      const rarity=observed?observedReference.rarity:calc.pet?.record.rarity??'Ritkaság nincs igazolva';
+      const petSummary=calc.pet?`<div class="planner-pet-summary"><h5>${observed?'Megfigyelt XP-bónusz: +'+num(observedReference.promptReferenceXpBonusPct)+'%':esc(calc.pet.details.sections[0]?.items?.[0]??'Faji passzív bónusz: nincs igazolt adat')}</h5><p>${observed?'V3-kliensképlet, 0 nyers API-ranggal: +'+num(observedReference.verifiedCalculationXpBonusPct)+'% (külön számított érték).':'V3-kliensmodell · választott forma és nyers API-rang. Nem végső karakterösszeg.'}</p>${observed?'':calc.pet.details.sections.map(section=>`<div><strong>${esc(section.title)}</strong><ul>${section.items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul></div>`).join('')}${referenceMarkup}</div>${link('pets','pet',calc.pet.record)}`:`<p>A kísérők a ${db.petRules.minHeroLevel}. hősszinttől választhatók.</p>`;
+      return `<div class="planner-companions"><section class="planner-panel planner-pet-builder"><h4>Pet Builder V2 · Kísérő</h4><div class="planner-pet-builder-grid"><section class="planner-pet-area planner-pet-identity"><div class="planner-pet-portrait">${petPortrait||'<span>Nincs kiválasztott kísérő</span>'}</div><strong class="planner-pet-rarity">${esc(rarity)}</strong>${select('planner-pet','Kísérőfaj',{'': 'Nincs kiválasztva',...pets},b.petId??'')}${select('planner-pet-form','Fejlődési forma',forms,b.petForm)}${field('planner-pet-level','Kísérőszint · forma- és hősszintkorláttal',b.petLevel,stage.minLevel,Math.min(stage.maxLevel,b.level))}<p data-planner-pet-progression>Végső szintmaximum: ${db.petSystem.maxLevel}. ${esc(stage.name)} forma · ${b.petLevel}/${stage.maxLevel}. szint · ${stage.slots} tanulható képességhely.</p>${chip('Kliensformaplafonok: 10 / 20 / 35 / 50 / 60 · régi megfigyelés külön kezelve','unknown')}<button type="button" class="atlas-action" data-pet-observed-reference="${esc(observedReference.presetId)}">${esc(observedReference.label)} betöltése</button><p data-pet-observed-reference-label>${esc(observedReference.caveat)}<br />A Mesterfok és a nyers API-rang külön adat; megfeleltetésük ismeretlen.</p><p class="pet-mastery-note"><strong>Mesterfok:</strong> ${observed?`${observedReference.mastery.rank}/${observedReference.mastery.max} · csak a megadott Mohaagancs-megfigyelésből`:'nincs igazolt érték ennél az összeállításnál'}. <strong>Nyers API-rang:</strong> ${b.petRankVerified?`${b.petRank} · importált adat, képlet szerint`:'nem állítható itt, nincs igazolt adat'}. Nem azonosítjuk a két mezőt.</p>${petRecord?.signature?`<p class="pet-signature"><strong>Veleszületett képesség:</strong> ${esc(db.petSkillNames[petRecord.signature]?.name??petRecord.signature)} · külön kezelve, a tanult helyekről kizárva.</p>`:''}</section><section class="planner-pet-area planner-pet-effects"><h5>Faji bónuszok, adottság és képességek</h5>${petSummary}</section><section class="planner-pet-area planner-pet-skills-area"><h5>Tanulható képességek · ${stage.slots}/3 aktív hely</h5><div class="planner-pet-skills">${skillSlots}</div></section></div><a class="atlas-inline-link" href="#atlas/pets">Formák, etetés, XP és képességkönyvek →</a></section><section class="planner-panel"><h4>Hátas</h4>${select('planner-mount','Aktív hátas',{'':'Nincs kiválasztva',...mounts},b.mountId??'')}${calc.mount?`<div class="planner-companion-image">${media.render(media.forRecord('mount',calc.mount.record.id),{thumbnail:true})}</div>${rows([['Utazási időszorzó',num(calc.mount.travelMult)],['Időcsökkenés',pct(1-calc.mount.travelMult)]])}<p>Nincs igazolt támadás-, HP- vagy energiabónusz; ilyen hatást nem számolunk hozzá.</p>${link('mounts','mount',calc.mount.record)}`:'<p>A listában a kiválasztott szinten használható hátasok jelennek meg.</p>'}</section></div>`;
     }
     function buildComparison(){
       if(!planner.comparing)return '';
       const a=model.calculate(planner.drafts.A,db),b=model.calculate(planner.drafts.B,db);
       const keys=[...new Set([...Object.keys(a.equipment),...Object.keys(b.equipment)])];
-      return `<section class="planner-panel"><h4>Build A és B összehasonlítása</h4>${table(['Felszerelési hely','A','B'],Object.keys(slots).map(slot=>[slots[slot],esc(a.equipped.find(x=>x.slot===slot)?.item.name??'Üres'),esc(b.equipped.find(x=>x.slot===slot)?.item.name??'Üres')]))}${table(['Nyers felszereléskomponens','A','B','B − A'],keys.map(k=>{const av=a.equipment[k]??0,bv=b.equipment[k]??0,delta=bv-av;return [esc(label(k)),value(k,av),value(k,bv),`<span class="${delta>0?'stat-better':delta<0?'stat-worse':''}">${delta>0?'+':''}${value(k,delta)}</span>`];}))}${table(['Külön kezelt hatás','A','B'],[['Kaszt',esc(classNames[a.build.classId]),esc(classNames[b.build.classId])],['Szint',a.build.level,b.build.level],['Kísérő',esc(a.pet?.record.name??'Nincs'),esc(b.pet?.record.name??'Nincs')],['Kísérő-fajbónusz · V3',a.pet?esc(a.pet.details.sections[0].items[0]):'—',b.pet?esc(b.pet.details.sections[0].items[0]):'—'],['Hátas időszorzó',a.mount?num(a.mount.travelMult):'—',b.mount?num(b.mount.travelMult):'—'],['Aktív szettküszöbök',esc(a.sets.flatMap(s=>s.active.map(x=>s.set.familyId+': '+x.pieces+' db')).join(', ')||'Nincs'),esc(b.sets.flatMap(s=>s.active.map(x=>s.set.familyId+': '+x.pieces+' db')).join(', ')||'Nincs')]])}${notice('A zöld/piros a felszereléskomponens növekedését/csökkenését jelzi, nem bizonyítja, hogy az egész build jobb vagy rosszabb a harcban.')}</section>`;
+      const observedMastery=build=>model.normalize(build,db).build.petObservedPreset==='mohaagancs-adult-22'?'11/15 · megadott megfigyelés':'Nincs igazolt adat';
+      return `<section class="planner-panel"><h4>Build A és B összehasonlítása</h4>${table(['Felszerelési hely','A','B'],Object.keys(slots).map(slot=>[slots[slot],esc(a.equipped.find(x=>x.slot===slot)?.item.name??'Üres'),esc(b.equipped.find(x=>x.slot===slot)?.item.name??'Üres')]))}${table(['Nyers felszereléskomponens','A','B','B − A'],keys.map(k=>{const av=a.equipment[k]??0,bv=b.equipment[k]??0,delta=bv-av;return [esc(label(k)),value(k,av),value(k,bv),`<span class="${delta>0?'stat-better':delta<0?'stat-worse':''}">${delta>0?'+':''}${value(k,delta)}</span>`];}))}${table(['Külön kezelt hatás','A','B'],[['Kaszt',esc(classNames[a.build.classId]),esc(classNames[b.build.classId])],['Szint',a.build.level,b.build.level],['Kísérő',esc(a.pet?.record.name??'Nincs'),esc(b.pet?.record.name??'Nincs')],['Kísérőforma',a.pet?esc(a.pet.details.formName):'—',b.pet?esc(b.pet.details.formName):'—'],['Kísérőszint',a.pet?a.pet.level:'—',b.pet?b.pet.level:'—'],['Nyers API-rang · nem Mesterfok',a.build.petRank,b.build.petRank],['Mesterfok',observedMastery(a.build),observedMastery(b.build)],['Tanulható hely',a.pet?a.pet.slots:'—',b.pet?b.pet.slots:'—'],['Kísérő-fajbónusz · V3',a.pet?esc(a.pet.details.sections[0].items[0]):'—',b.pet?esc(b.pet.details.sections[0].items[0]):'—'],['Hátas időszorzó',a.mount?num(a.mount.travelMult):'—',b.mount?num(b.mount.travelMult):'—'],['Aktív szettküszöbök',esc(a.sets.flatMap(s=>s.active.map(x=>s.set.familyId+': '+x.pieces+' db')).join(', ')||'Nincs'),esc(b.sets.flatMap(s=>s.active.map(x=>s.set.familyId+': '+x.pieces+' db')).join(', ')||'Nincs')]])}${notice('A zöld/piros a felszereléskomponens növekedését/csökkenését jelzi, nem bizonyítja, hogy az egész build jobb vagy rosszabb a harcban.')}</section>`;
     }
     function plannerPage(){
       const calc=model.calculate(activeBuild(),db),b=calc.build,armor=calc.equipped.find(x=>x.slot==='armor')?.item;
       const character=media.character(b.classId,b.gender,armor,b.look);
       const availableGenders=Object.fromEntries([...new Set(catalog.entries.filter(im=>im.category==='body'&&im.character?.classId===b.classId).map(im=>im.character.gender))].map(g=>[g,g==='male'?'Férfi':'Nő']));
-      return heading('Tervezd meg a következő legendád','Két összeállítás, valódi tárgyadatok, automatikus követelményellenőrzés és helyi buildmentés. A nem igazolt végső harci értékeket külön jelöljük.')+
+      return heading('Tervezd meg a következő legendád','Pet Builder V2: öt kliensforma, képességhelyek, 1–5. képességszintek, helyi buildmentés és megosztás. A Mohaagancs 22-es állapota külön megadott megfigyelés, nem fejlődési küszöb.')+
         `<div class="planner-topbar"><div class="atlas-tabs"><button type="button" data-planner-tab="A" aria-pressed="${planner.active==='A'}">Build A</button><button type="button" data-planner-tab="B" aria-pressed="${planner.active==='B'}">Build B</button></div><button type="button" id="planner-copy" class="atlas-action">Másolat a másik buildbe</button><button type="button" id="planner-compare" class="atlas-action" aria-pressed="${planner.comparing}">${planner.comparing?'Összehasonlítás bezárása':'A / B összehasonlítás'}</button><button type="button" id="planner-new" class="atlas-action">Új build</button></div>
         <div id="planner-message" class="planner-message" role="status" aria-live="polite">${esc(planner.message)}</div><div class="atlas-filters tool-settings">${select('planner-class','Kaszt',classNames,b.classId)}${select('planner-gender','Karakterváltozat',availableGenders,b.gender)}${select('planner-look','Grafikai változat',{1:'Eredeti',2:'Második'},b.look)}${field('planner-level','Célszint',b.level,1,db.economy.limits.maxLevel)}</div>
         <div class="planner-layout"><section class="planner-panel planner-equipment"><p class="eyebrow">BUILD ${planner.active}</p><h4>Felszerelési helyek</h4>${Object.entries(slots).map(([slot,title])=>{const equipped=calc.equipped.find(x=>x.slot===slot);return `<div class="planner-slot ${slot===planner.slot?'active':''}"><button type="button" data-planner-slot="${slot}" aria-pressed="${slot===planner.slot}">${equipped?media.render(media.forRecord('item',equipped.item.id),{thumbnail:true}):icon(({weapon:'swords',armor:'shield',helmet:'shield',shield:'shield',boots:'compass',bracelet:'sun',necklace:'spark',earrings:'moon'})[slot])}<span>${esc(title)}<small>${esc(equipped?.item.name??'Nincs kiválasztva')}</small></span></button>${equipped?`<label>+<select data-planner-plus="${slot}" aria-label="${esc(title)} fejlesztése">${db.forge.plusMult.map((_,i)=>`<option value="${i}" ${i===equipped.plus?'selected':''}>${i}</option>`).join('')}</select></label><button type="button" class="planner-remove" data-planner-remove="${slot}" aria-label="${esc(title)} eltávolítása">×</button>`:''}</div>`;}).join('')}</section>
@@ -125,17 +151,18 @@ globalThis.AtlasExtensions={
       $('#planner-picker-status').textContent=`${list.length} használható tárgy · ${planner.pickerPage} / ${pages}. oldal`;
       $('#planner-item-results').innerHTML=`<div class="planner-item-grid">${list.slice((planner.pickerPage-1)*12,planner.pickerPage*12).map(x=>`<article>${media.render(media.forRecord('item',x.id),{thumbnail:true})}<div><h4>${esc(x.name)}</h4><p>${x.level}. szint · T${x.tier}${x.family?' · '+esc(x.family):''}</p>${statRows(Object.fromEntries(Object.entries(x.values).filter(([,v])=>v!==0)))}<button type="button" class="atlas-action" data-planner-equip="${x.id}">Felszerelem</button>${link('equipment','item',x)}</div></article>`).join('')}</div>${list.length?'':notice('Ezen a szinten nincs használható tárgy ebben a kategóriában.')}<div class="atlas-pagination"><button type="button" data-planner-page="-1" ${planner.pickerPage===1?'disabled':''}>← Előző</button><span>${planner.pickerPage} / ${pages}</span><button type="button" data-planner-page="1" ${planner.pickerPage===pages?'disabled':''}>Következő →</button></div>`;
     }
-    function persistBuilds(){try{localStorage.setItem(storageKey,JSON.stringify({version:1,builds:planner.saved}));return true;}catch{planner.message='A böngésző tárhelye nem írható. A build most csak memóriában él; használd a megosztható hivatkozást.';return false;}}
+    function persistBuilds(){try{localStorage.setItem(storageKey,JSON.stringify({version:3,builds:planner.saved}));return true;}catch{planner.message='A böngésző tárhelye nem írható. A build most csak memóriában él; használd a megosztható hivatkozást.';return false;}}
     function plannerAfterRender(){
       updatePicker();
-      const bindings=[['planner-class','classId'],['planner-gender','gender'],['planner-look','look'],['planner-level','level'],['planner-pet','petId'],['planner-pet-form','petForm'],['planner-pet-level','petLevel'],['planner-pet-rank','petRank'],['planner-mount','mountId'],['planner-family','targetFamily']];
-      for(const [id,key] of bindings)$('#'+id).addEventListener('change',e=>{const b=activeBuild();b[key]=e.target.type==='number'||key==='look'||key==='petForm'?Number(e.target.value):e.target.value||null;setDraft(b);planner.pickerPage=1;render();$('#'+id)?.focus({preventScroll:true});});
+      const bindings=[['planner-class','classId'],['planner-gender','gender'],['planner-look','look'],['planner-level','level'],['planner-pet','petId'],['planner-pet-form','petForm'],['planner-pet-level','petLevel'],['planner-mount','mountId'],['planner-family','targetFamily']];
+      for(const [id,key] of bindings)$('#'+id).addEventListener('change',e=>{const b=activeBuild(),previous=b[key];b[key]=e.target.type==='number'||key==='look'||key==='petForm'?Number(e.target.value):e.target.value||null;if(previous!==b[key]&&['level','petId','petForm','petLevel'].includes(key))b.petObservedPreset=null;setDraft(b);planner.pickerPage=1;render();$('#'+id)?.focus({preventScroll:true});});
       $('#planner-item-query').addEventListener('input',e=>{planner.query=e.target.value;planner.pickerPage=1;updatePicker();});
       $('#planner-name').addEventListener('input',e=>{activeBuild().name=e.target.value;planner.share='';});
       $('#planner-saved').addEventListener('change',e=>{planner.savedId=e.target.value;render();$('#planner-saved').focus({preventScroll:true});});
     }
     function afterRender(page){
       syncUI.afterRender(page);
+      futureUI.afterRender(page);
       if(page==='bonuses'&&!state.query)bonusSystem.afterRender();
       if(page==='stat-limits'&&!state.query)statLimits.afterRender();
       if(page==='gallery'&&!state.query){
@@ -154,13 +181,58 @@ globalThis.AtlasExtensions={
       const pick=e.target.closest('[data-viewer-pick]');if(pick){const id=pick.dataset.viewerPick;if(viewer.selected.includes(id)){viewer.selected=viewer.selected.filter(x=>x!==id);delete viewer.itemOverrides[id];}else if(viewer.selected.length<2)viewer.selected.push(id);else{$('#viewer-status').textContent='Egyszerre két grafika hasonlítható össze. Előbb vedd ki az egyik kijelölt képet.';return;}updateViewer();}
       const page=e.target.closest('[data-viewer-page]');if(page){viewer.page+=Number(page.dataset.viewerPage);updateViewer();}
     });
-    document.addEventListener('change',e=>{if(e.target.matches('[data-planner-plus]')){const slot=e.target.dataset.plannerPlus;const b=activeBuild();if(b.gear[slot]){b.gear[slot].plus=Number(e.target.value);setDraft(b);render();}}});
+    document.addEventListener('change',e=>{
+      if(e.target.matches('[data-planner-plus]')){const slot=e.target.dataset.plannerPlus;const b=activeBuild();if(b.gear[slot]){b.gear[slot].plus=Number(e.target.value);setDraft(b);render();}}
+      if(e.target.matches('[data-planner-pet-skill-search]')){
+        const slot=Number(e.target.dataset.plannerPetSkillSearch),query=e.target.value.trim(),b=activeBuild();
+        const signature=db.pets.find(p=>p.id===b.petId)?.signature;
+        const match=Object.entries(db.petSkills).find(([id])=>id!==signature&&!b.petSkills?.some(s=>s.skillId===id&&s.slot!==slot)&&((db.petSkillNames[id]?.name===query)||id===query));
+        const skillId=match?.[0]??null;
+        const prior=b.petSkills.find(s=>s.slot===slot);
+        b.petSkills=b.petSkills.filter(s=>s.slot!==slot);
+        if(skillId)b.petSkills.push({slot,skillId,level:prior?.level??1});
+        b.petObservedPreset=null;
+        setDraft(b);render();
+      }
+      if(e.target.matches('[data-planner-pet-skill-level]')){
+        const slot=Number(e.target.dataset.plannerPetSkillLevel),level=Number(e.target.value),b=activeBuild();
+        const selected=b.petSkills.find(s=>s.slot===slot);if(selected){selected.level=level;b.petObservedPreset=null;setDraft(b);render();}
+      }
+    });
+    document.addEventListener('input',e=>{
+      if(!e.target.matches('[data-planner-pet-skill-search]'))return;
+      const slot=e.target.dataset.plannerPetSkillSearch,query=norm(e.target.value);
+      const picker=e.target.closest('.planner-pet-skill-slot')?.querySelector('.planner-pet-skill-picker');
+      if(query&&picker)picker.open=true;
+      for(const option of picker?.querySelectorAll('[data-pet-skill-pick]')??[])option.hidden=!!query&&!norm(option.textContent).includes(query);
+    });
     document.addEventListener('click',e=>{
       if(state.page!=='planner')return;
       const tab=e.target.closest('[data-planner-tab]');if(tab){planner.active=tab.dataset.plannerTab;planner.query='';planner.share='';render();return;}
+      const skill=e.target.closest('[data-pet-skill-pick]');
+      if(skill){
+        const slot=Number(skill.dataset.petSkillPick),skillId=skill.dataset.petSkillId,b=activeBuild();
+        const signature=db.pets.find(p=>p.id===b.petId)?.signature;
+        if(skillId!==signature&&!b.petSkills.some(item=>item.skillId===skillId&&item.slot!==slot)){
+          const previous=b.petSkills.find(item=>item.slot===slot);
+          b.petSkills=b.petSkills.filter(item=>item.slot!==slot);
+          b.petSkills.push({slot,skillId,level:previous?.skillId===skillId?previous.level:1});
+          b.petObservedPreset=null;setDraft(b);render();
+        }
+        return;
+      }
       const slot=e.target.closest('[data-planner-slot]');if(slot){planner.slot=slot.dataset.plannerSlot;planner.query='';planner.pickerPage=1;render();return;}
       const remove=e.target.closest('[data-planner-remove]');if(remove){delete activeBuild().gear[remove.dataset.plannerRemove];render();return;}
       const equip=e.target.closest('[data-planner-equip]');if(equip){const item=db.items.find(x=>x.id===equip.dataset.plannerEquip);if(item&&model.canEquip(item,activeBuild())){activeBuild().gear[item.slot]={id:item.id,plus:0};setDraft(activeBuild());render();}return;}
+      const observed=e.target.closest('[data-pet-observed-reference]');
+      if(observed){
+        const preset=globalThis.StonestormPets.observedReferencePreset(),b=activeBuild();
+        b.level=Math.max(b.level,preset.level);
+        b.petId=preset.petId;b.petLevel=preset.level;b.petForm=preset.form;b.petRank=0;
+        b.petRankVerified=false;b.petObservedPreset=preset.presetId;
+        b.petSkills=preset.skills.map((skill,index)=>({slot:index+1,skillId:skill.skillId,level:skill.level}));
+        setDraft(b);planner.message=preset.label+' betöltve megfigyelt referenciaként; a megfigyelt Mesterfok külön adat, a nyers ranghatás kizárva.';render();return;
+      }
       const page=e.target.closest('[data-planner-page]');if(page){planner.pickerPage+=Number(page.dataset.plannerPage);updatePicker();return;}
       if(e.target.closest('#planner-copy')){const other=planner.active==='A'?'B':'A';planner.drafts[other]=model.normalize(activeBuild(),db).build;planner.editing[other]=null;planner.message='Az összeállítás másolata a '+other+' buildbe került.';render();}
       if(e.target.closest('#planner-compare')){planner.comparing=!planner.comparing;render();}
@@ -194,6 +266,6 @@ globalThis.AtlasExtensions={
       }
     }
     function home(){return `<div class="feature-links"><a href="#atlas/gallery">${media.render(media.get('uikit','btn_help'),{thumbnail:true})}<span>Képtár<small>${num(catalog.stats.available)} eredeti grafika</small></span></a><a href="#atlas/compare">${media.render(media.get('uikit','btn_character'),{thumbnail:true})}<span>Felszerelés-összehasonlító<small>Két megjelenés egymás mellett</small></span></a><a href="#atlas/planner">${media.render(media.get('uikit','btn_arena'),{thumbnail:true})}<span>Karaktertervező<small>Építs, hasonlíts össze, ments</small></span></a></div>`;}
-    return {screens:{arena:homeArena.arena,gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page,bonuses:bonusSystem.page,updates:syncUI.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home,bonusInfo:bonusSystem.itemInfo};
+    return {screens:{arena:homeArena.arena,gallery:galleryPage,compare:comparePage,planner:plannerPage,'stat-limits':statLimits.page,bonuses:bonusSystem.page,updates:syncUI.page,upcoming:futureUI.page},detail:(kind,id)=>kind==='image'?imageDetail(id):null,actions:detailActions,afterRender,onRoute,home,bonusInfo:bonusSystem.itemInfo};
   }
 };

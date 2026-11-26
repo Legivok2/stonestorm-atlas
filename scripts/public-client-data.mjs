@@ -54,7 +54,7 @@ export function staticModule(text){
   function walk(node){
     if(!node||typeof node!=='object')return;
     if(node.type==='Property'&&!node.computed){
-      const key=node.key?.value??node.key?.name,match=typeof key==='string'?key.match(/^\.\/([a-z0-9_-]+)\.hu\.json$/):null;
+      const key=node.key?.value??node.key?.name,match=typeof key==='string'?key.match(/^\.\/([a-z0-9_-]+)\.(?:hu|en)\.json$/):null;
       if(match){const value=literal(node.value,env);if(value!==unknown)namespaces[match[1]]=value;}
     }
     for(const value of Object.values(node))if(Array.isArray(value))value.forEach(walk);else if(value&&typeof value==='object')walk(value);

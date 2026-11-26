@@ -1,4 +1,4 @@
-name: Atlas Auto-Sync V1
+name: Atlas Auto-Sync V3
 
 on:
   schedule:
@@ -26,7 +26,7 @@ jobs:
       contents: write
       pages: read
     outputs:
-      publish: ${{ steps.sync.outputs.publish }}
+      publish: ${{ steps.publication.outputs.publish }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -37,8 +37,19 @@ jobs:
           node-version: '22'
       - name: Install locked build dependencies
         run: npm ci
+      - name: Inspect future content independently of engine import
+        id: future
+        env:
+          REQUESTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$REQUESTED_MODE" = "read-only" ]; then
+            node scripts/future-content-sync.mjs --read-only
+          else
+            node scripts/future-content-sync.mjs
+          fi
       - name: Collect public data and import only validated records
         id: sync
+        continue-on-error: true
         env:
           AUTO_PUBLISH: ${{ vars.ATLAS_SYNC_AUTO_PUBLISH }}
           REQUESTED_MODE: ${{ inputs.mode }}
@@ -48,30 +59,51 @@ jobs:
           else
             node scripts/atlas-sync.mjs --read-only
           fi
+      - name: Decide whether verified content needs publication
+        id: publication
+        env:
+          FUTURE_PUBLISH: ${{ steps.future.outputs.publish }}
+          DATA_PUBLISH: ${{ steps.sync.outputs.publish }}
+          DATA_OUTCOME: ${{ steps.sync.outcome }}
+        run: |
+          if [ "$DATA_OUTCOME" = "failure" ]; then
+            echo '::warning::Data Engine import failed and rolled back. The independent watcher keeps its verified evidence.'
+          fi
+          if [ "$FUTURE_PUBLISH" = "true" ] || [ "$DATA_PUBLISH" = "true" ]; then
+            echo 'publish=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'publish=false' >> "$GITHUB_OUTPUT"
+          fi
       - name: Check source and regression tests
         run: |
           npm run check
           npm test
           npm run test:sync:apply
       - name: Build and verify changed Atlas before committing
-        if: steps.sync.outputs.publish == 'true'
+        if: steps.publication.outputs.publish == 'true'
         run: |
           npm run build:pages
           npm run test:pages
+      - name: Deliver important queued observations when configured
+        if: inputs.mode != 'read-only'
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.ATLAS_FUTURE_DISCORD_WEBHOOK }}
+        run: node scripts/notify-future-content.mjs
       - name: Keep only the current snapshot and bounded reports in Git
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/data-engine.json data/addon-pet-model.json reports/data-engine-coverage.json addons/stonestorm-statcap-overlay/pet-data.js addons/stonestorm-statcap-overlay/pet-model.js downloads/stonestorm-statcap-overlay.zip downloads/stat-addon.json js/addon-release.js snapshots/manifest.json snapshots/current/content.json snapshots/current/home-arena-client.json reports/latest-sync.json reports/latest-sync.md data/home-arena.json data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
+          git add -- addons/stonestorm-statcap-overlay/equipment-data.js data/data-engine-contract.json data/future-content.json data/future-image-references.json data/future-notifications.json js/future-content.js snapshots/future/content.json snapshots/future/manifest.json reports/future-content.json reports/future-content.md data/data-engine.json data/addon-pet-model.json reports/data-engine-coverage.json addons/stonestorm-statcap-overlay/pet-data.js addons/stonestorm-statcap-overlay/pet-model.js downloads/stonestorm-statcap-overlay.zip downloads/stat-addon.json js/addon-release.js snapshots/manifest.json snapshots/current/content.json snapshots/current/home-arena-client.json reports/latest-sync.json reports/latest-sync.md data/home-arena.json data/sync-status.json js/sync-status.js data/sync-import.json data/atlas.json js/atlas-data.js data/image-manifest.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync public Stonestorm data and inspection report'
             git push origin HEAD:main
           fi
       - name: Configure Pages for a tested data change
-        if: steps.sync.outputs.publish == 'true'
+        if: steps.publication.outputs.publish == 'true'
         uses: actions/configure-pages@v5
       - name: Upload the approved site directly from this workflow
-        if: steps.sync.outputs.publish == 'true'
+        if: steps.publication.outputs.publish == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist

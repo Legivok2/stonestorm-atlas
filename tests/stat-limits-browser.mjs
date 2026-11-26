@@ -27,7 +27,7 @@ try{
     assert.equal(await page.locator('[data-excess="evadeBoss"]').textContent(),'6,2 százalékpont');
     await page.locator('#stat-crit').fill('65');assert.equal(await page.locator('[data-effective="crit"]').textContent(),'50%');assert.equal(await page.locator('[data-excess="crit"]').textContent(),'15 százalékpont');
     await page.locator('#stat-reduction').fill('100');assert.equal(await page.locator('[data-effective="reduction"]').textContent(),'75%');
-    await page.locator('#stat-evade').fill('100');assert.equal(await page.locator('[data-effective="evadeNormal"]').textContent(),'35%');assert.equal(await page.locator('[data-excess="evadeBoss"]').textContent(),'88 százalékpont');
+    await page.locator('#stat-evade').fill('100');assert.equal(await page.locator('[data-effective="evadeNormal"]').textContent(),'30%');assert.equal(await page.locator('[data-excess="evadeBoss"]').textContent(),'88 százalékpont');
     for(const value of ['', '-5', 'abc']){await page.locator('#stat-crit').fill(value);assert.equal(await page.locator('#stat-crit').getAttribute('aria-invalid'),'true');assert(!await page.locator('[data-stat-result="crit"]').textContent().then(text=>/NaN|Infinity/.test(text)));}
     await page.locator('#stat-reset').click();
     const reward=async key=>(await page.locator(`[data-reward-result="${key}"]`).textContent()).replace(/\s/g,'');
@@ -52,18 +52,10 @@ try{
     await page.locator('[data-reward-stat="drop"]').click();await page.locator('#reward-equipment').fill('120');assert.equal(await reward('effective'),'110%');assert.equal(await reward('lost'),'20százalékpont');
     await page.locator('#reward-equipment').fill('-1');assert.equal(await page.locator('#reward-equipment').getAttribute('aria-invalid'),'true');assert.equal(await page.locator('[data-reward-result]').count(),0);
     await page.locator('#reward-example').click();
-    const result=async key=>(await page.locator(`[data-critical-result="${key}"]`).textContent()).replace(/\s/g,'');
-    await page.locator('#critical-example').click();assert.equal(await result('multiplier'),'1,90×');assert.equal(await result('hit'),'19000');assert.equal(await result('average'),'14500');
-    await page.locator('#stat-criticalBonus').fill('+40');await page.locator('#stat-criticalGear').fill('+0');assert.equal(await result('multiplier'),'1,90×');
-    await page.locator('#stat-criticalNormal').fill('10 000');await page.locator('#stat-criticalChance').fill('65');await page.locator('#stat-criticalGear').fill('60');
-    assert.equal(await result('total'),'+100%');assert.equal(await result('effective'),'+75%');assert.equal(await result('excess'),'25százalékpont');assert.equal(await result('multiplier'),'2,25×');assert.equal(await result('chance'),'50%');assert.equal(await result('chance-excess'),'15százalékpont');assert.equal(await result('average'),'16250');
-    await page.locator('#stat-criticalGear').fill('');await page.locator('#stat-criticalBonus').fill('-10');assert.equal(await result('multiplier'),'1,50×');assert.equal(await result('effective'),'+0%');
-    await page.locator('#stat-criticalChance').fill('-1');assert.equal(await page.locator('#stat-criticalChance').getAttribute('aria-invalid'),'true');assert.equal(await page.locator('[data-critical-result]').count(),0);
-    await page.locator('#critical-example').click();assert.equal(await page.locator('#critical-weapon-table tbody tr').count(),6);assert.equal(await page.locator('.critical-tier').count(),30);
-    await page.locator('#critical-weapon-level').fill('54');await page.locator('[data-critical-band="5"][data-critical-tier="4"]').click();assert.equal(await page.locator('#stat-criticalBonus').inputValue(),'44,8');assert.equal(await result('hit'),'19480');
-    for(const [level,bonus] of [[1,'40'],[14,'40'],[15,'40'],[25,'40'],[26,'41,2'],[36,'41,2'],[37,'42,4'],[45,'42,4'],[46,'43,6'],[53,'43,6'],[54,'44,8'],[60,'44,8']]){await page.locator('#critical-weapon-level').fill(String(level));assert.equal(await page.locator('#stat-criticalBonus').inputValue(),bonus,String(level));}
-    for(const level of ['0','61','2.5','']){await page.locator('#critical-weapon-level').fill(level);assert.equal(await page.locator('#critical-weapon-level').getAttribute('aria-invalid'),'true');assert.equal(await page.locator('.critical-tier:disabled').count(),30);}
-    await page.locator('#critical-example').click();
+    assert.match(await page.locator('#critical-results').textContent(),/soft-cap/i);
+    assert.equal(await page.locator('[data-critical-result]').count(),0,'Unknown new soft-cap must not display old final damage');
+    await page.locator('#critical-example').click();assert.equal(await page.locator('#critical-weapon-table tbody tr').count(),6);
+    await page.locator('#critical-weapon-level').fill('54');await page.locator('[data-critical-band="5"][data-critical-tier="4"]').click();assert.equal(await page.locator('#stat-criticalBonus').inputValue(),'44,8');
     await page.locator('#stat-reset').click();await page.locator('#stat-crit').fill('42');
     await showNav();await page.locator('#atlas-nav [data-atlas-page="bonuses"]').click();await page.locator('#bonus-catalog-title').waitFor();assert.equal(await page.locator('.bonus-catalog tbody tr').count(),20);
     for(const [pool,count] of [['weapon',5],['armor',5],['jewel',10]]){await page.locator('#bonus-pool').selectOption(pool);assert.equal(await page.locator('.bonus-pool-chips .atlas-chip').count(),count);}

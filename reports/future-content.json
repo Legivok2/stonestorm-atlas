@@ -1,0 +1,260 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-21T13:20:51.422Z",
+  "gameVersion": "fbc93606674a",
+  "summary": {
+    "maxLevel": 60,
+    "equipmentMaxLevel": 60,
+    "xpEntries": 60,
+    "mapCount": 6,
+    "dungeonCount": 4,
+    "maxMapIndex": 6,
+    "maxTier": 5,
+    "referenceEntries": 60,
+    "baselineMaxLevel": 60
+  },
+  "coverage": {
+    "api": "checked",
+    "client": "partial; current entrypoint may be unconfirmed",
+    "entrypointConfirmed": true,
+    "locales": {
+      "hu": "checked",
+      "en": "checked"
+    },
+    "official": "Only accessible, dated official evidence is announced; unavailable sources are not a negative finding.",
+    "warnings": [],
+    "activation": "Active status requires explicit game-observation evidence; API presence and true flags alone are insufficient."
+  },
+  "potentialContent": [
+    {
+      "id": "55ee2baf5f4f8b241fa33cf3d6f838cfc91e0670a22d8bde089adb7946674a5d",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Bossreakciók",
+      "key": "bossReact",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/bossReact",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "9d8bf59f1da5e2284de4cadccfb394c1b068d50b64a8465fd4af0466b430de5b",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Webes előfizetés",
+      "key": "webSubscription",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/webSubscription",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "d1b4a1c0e4edb6fac90b098a5842a3ddf267cb3d474a743e38a68a475ac0b612",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Érmés pénzrendszer",
+      "key": "coinMoney",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/coinMoney",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "f73e58be6f96731985022c633ab958e4cc6fc4b44db1842583bb4d123e062c56",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Bolti vásárlás visszaállítása",
+      "key": "storeRestore",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/storeRestore",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "8c9256ff648de8cb04d9727dbec5225b743ce7787096d022f5124dda08951897",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Esőzsák",
+      "key": "rainSack",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/rainSack",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "504ec5958ac040b0fb7bb8fc9bdc172751b53c0cc268adc73113842ef5eaa38a",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Csapatkód",
+      "key": "partyCode",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/partyCode",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "3d61c132b45d938dec65dddee7ccbc290e4813fea847397ea15a212c88a37268",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Zenei közvetítés",
+      "key": "musicStream",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/musicStream",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "bc0e8a00cc33d93fde186ef3173cb3b56c1315e3e6b28e300c43dc284dea503a",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Támogatói rendszer",
+      "key": "patron",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/patron",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "19597c0982ddf1f690e1906b13d6a1171164cd611f5208e032d67f18c08abeae",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Prémiumbolt",
+      "key": "premiumShop",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/premiumShop",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "8e5751d21d06e9aae507642ea9f7375e9d40f6979ccede4a32d7a7a525ab8a45",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Holdkártya",
+      "key": "moonCard",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/moonCard",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "fdc513e201f9d113f355eff0b65b17416cb9dc0cc7fc7170c1bec496265a4e58",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Viharrang",
+      "key": "stormRank",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/stormRank",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "16a8bb66131b3e5141eadea5f35dc2bd212ca93e8f044feb2123ec0f9204960f",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Kilépési kártya",
+      "key": "exitCard",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/exitCard",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "d175efced1855fdf06c3ca0a92f4c7c4f0f07c64a57bad7b69aceb0cc2b21e17",
+      "category": "Funkciókapcsolók",
+      "nameHu": "Visszatérési levél",
+      "key": "winbackMail",
+      "status": "prepared",
+      "reason": "Kikapcsolt nyilvános kapcsoló. Nincs bizonyíték a tervezett aktiválására.",
+      "firstSeenAt": "2026-11-20T19:30:37.464Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/features/winbackMail",
+      "sourceHash": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+      "relatedImages": []
+    },
+    {
+      "id": "1f9094f442a97b9a5ea992883e57ae556b43b8e7eb931c12f15891b009b79d97",
+      "category": "Grafikák",
+      "nameHu": "Nyilvános grafikai hivatkozás",
+      "key": "https://stonestorm.gg/art/ui/nyang_pile-128.webp?v=b1860c50",
+      "status": "prepared",
+      "reason": "Képhivatkozás; önmagában nem igazol új játékfunkciót vagy aktiválást.",
+      "firstSeenAt": "2026-11-21T13:16:33.230Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/assets/ComingSoonPage-D2TJz4Bx.js",
+      "sourcePath": "reference: https://stonestorm.gg/art/ui/nyang_pile-128.webp?v=b1860c50",
+      "sourceHash": "c9a23854d067ba583684809524ba6930a569be94e6c39c9d76cb0c6f7fac20b4",
+      "relatedImages": [
+        {
+          "url": "https://stonestorm.gg/art/ui/nyang_pile-128.webp?v=b1860c50",
+          "status": "public-reference",
+          "label": "Nyilvános képhivatkozás; tartalomazonosítás nélkül"
+        }
+      ]
+    },
+    {
+      "id": "9328797404df829054ba2f6e90f7f9be7db3658085eb0c3c1f86d5e6067bc1e7",
+      "category": "Grafikák",
+      "nameHu": "Nyilvános grafikai hivatkozás",
+      "key": "https://stonestorm.gg/landing/mounts/lidercparipa_cut-487.webp?v=d9f5e441",
+      "status": "prepared",
+      "reason": "Képhivatkozás; önmagában nem igazol új játékfunkciót vagy aktiválást.",
+      "firstSeenAt": "2026-11-21T13:16:33.230Z",
+      "lastCheckedAt": "2026-11-21T13:20:51.422Z",
+      "source": "https://stonestorm.gg/assets/ComingSoonPage-D2TJz4Bx.js",
+      "sourcePath": "reference: https://stonestorm.gg/landing/mounts/lidercparipa_cut-487.webp?v=d9f5e441",
+      "sourceHash": "c9a23854d067ba583684809524ba6930a569be94e6c39c9d76cb0c6f7fac20b4",
+      "relatedImages": [
+        {
+          "url": "https://stonestorm.gg/landing/mounts/lidercparipa_cut-487.webp?v=d9f5e441",
+          "status": "public-reference",
+          "label": "Nyilvános képhivatkozás; tartalomazonosítás nélkül"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "observations": 33844,
+    "potential": 15,
+    "announced": 0,
+    "removed": 0,
+    "newEvents": 0,
+    "importantEvents": 0
+  }
+}

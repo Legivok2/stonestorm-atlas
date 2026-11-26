@@ -2,11 +2,13 @@ import {equal,sha256} from './atlas-sync-model.mjs';
 
 export const roomStats=['maxHp','atkMin','atkMax','def','harcero','xp','nyang'];
 const finite=v=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=0&&v<=1e12;
+const defence=v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1e12;
 const dungeonKeys=['id','keyId','minLevel','maxLevel','keyCoins','keysPerDay','firstClearCoins','minFreeSlots','heroic','trophies','potionCap','runPay','deeper','recommendedLevel','rooms'];
 const roomKeys=['room','creatureId','role','level','maxHp','atkMin','atkMax','def','harcero','xp','nyang','item','tags','share'];
 export function dungeonRecord(row){return Object.fromEntries(Object.entries(row).filter(([k])=>!['name','description','provenance'].includes(k)));}
 export function dungeonStructure(row){
   const copy=structuredClone(dungeonRecord(row));
+  delete copy.recommendedLevel;
   for(const container of [copy,copy.heroic])if(Array.isArray(container?.rooms))container.rooms=container.rooms.map(room=>Object.fromEntries(Object.entries(room).filter(([k])=>!roomStats.includes(k)))).sort((a,b)=>a.room-b.room);
   return copy;
 }
@@ -15,6 +17,7 @@ export function validateDungeon(candidate,previous,db){
   if(Object.keys(candidate).some(k=>!dungeonKeys.includes(k))||!equal(Object.keys(candidate).sort(),Object.keys(dungeonRecord(previous)).sort()))throw Error('Ismeretlen vagy hiányos kazamataszerkezet');
   if(!candidate.heroic||!equal(Object.keys(candidate.heroic).sort(),['minLevel','keyCost','firstClearCoins','rooms'].sort()))throw Error('Ismeretlen hősi szabály');
   if(!db.economy.stackables.some(x=>x.id===candidate.keyId&&x.kind==='key'))throw Error('Hiányzó kazamatakulcs-kapcsolat');
+  if(candidate.recommendedLevel<candidate.minLevel||candidate.recommendedLevel>candidate.maxLevel)throw Error('Érvénytelen ajánlott kazamataszint');
   if(!equal(dungeonStructure(candidate),dungeonStructure(previous)))throw Error('Megváltozott kazamatamechanika vagy teremkapcsolat');
   if(!['minLevel','maxLevel','keyCoins','keysPerDay','firstClearCoins','minFreeSlots','potionCap','recommendedLevel'].every(k=>finite(candidate[k]))||candidate.minLevel<1||candidate.maxLevel<candidate.minLevel||!['minLevel','keyCost','firstClearCoins'].every(k=>finite(candidate.heroic[k])))throw Error('Érvénytelen kazamataszabály');
   const normalCreatures=new Set(previous.rooms.map(x=>x.creatureId));
@@ -29,7 +32,7 @@ export function validateDungeon(candidate,previous,db){
       seen.add(room.room);
       if(Object.keys(room).some(k=>!roomKeys.includes(k))||!equal(Object.keys(room).sort(),Object.keys(old).sort()))throw Error('Ismeretlen vagy hiányos teremmező');
       if(!['regular','miniboss','boss'].includes(room.role)||!finite(room.level)||room.level<1||typeof room.item!=='boolean'||typeof room.creatureId!=='string'||!/^d_[a-z0-9_]+$/.test(room.creatureId)||('tags' in room&&(!Array.isArray(room.tags)||!room.tags.every(t=>typeof t==='string')))||('share' in room&&(typeof room.share!=='number'||!Number.isFinite(room.share)||room.share<0||room.share>1)))throw Error('Érvénytelen teremszerep vagy metaadat');
-      if(!roomStats.every(k=>finite(room[k]))||room.maxHp===0||room.harcero===0||room.atkMin>room.atkMax)throw Error('Érvénytelen teremstatisztika');
+      if(!roomStats.every(k=>(k==='def'?defence:finite)(room[k]))||room.maxHp===0||room.harcero===0||room.atkMin>room.atkMax)throw Error('Érvénytelen teremstatisztika');
     }
   }
   return candidate;
@@ -55,7 +58,9 @@ export function planDungeons(content,db,overlay,provenance){
       validateDungeon(raw,previous,db);
       if(!content.stackables?.some(x=>x.id===raw.keyId&&x.kind==='key'))throw Error('A nyilvános konfigurációból hiányzik a kazamatakulcs');
       validated.push(raw.id);
-      const fields=dungeonStatChanges(raw,previous);if(!fields.length)continue;
+      const fields=dungeonStatChanges(raw,previous);
+      if(raw.recommendedLevel!==previous.recommendedLevel)fields.push({path:'/dungeons/'+raw.id+'/recommendedLevel',before:previous.recommendedLevel,after:raw.recommendedLevel,stat:'recommendedLevel'});
+      if(!fields.length)continue;
       overlay.dungeons??={};overlay.dungeons[raw.id]={record:raw,structureHash:sha256(dungeonStructure(previous)),provenance:{...provenance('/dungeons/'+raw.id),baseSource:previous.provenance?.baseSource??previous.provenance?.source,scope:'Ismert normál/hősi teremstatisztikák nyilvános API-ból; a szerkezet és a kapcsolatok a kézi alappal egyeznek'}};
       accepted.push({path:'/dungeons/'+raw.id,kind:'changed',fieldChanges:fields});
     }catch(e){review.push({path:'/dungeons/'+raw.id,reason:e.message});}
@@ -68,7 +73,8 @@ export function planDungeons(content,db,overlay,provenance){
 export function applyDungeons(db,overlay,validateProvenance){
   for(const [key,entry] of Object.entries(overlay.dungeons??{})){
     const previous=db.dungeons.find(x=>x.id===key);
-    if(key!==entry.record.id||entry.structureHash!==sha256(dungeonStructure(previous??{})))throw Error('Eltérő kazamata-importazonosító vagy alapstruktúra');
+    const structure=dungeonStructure(previous??{}),legacyHash=sha256({...structure,recommendedLevel:previous?.recommendedLevel});
+    if(key!==entry.record.id||![sha256(structure),legacyHash].includes(entry.structureHash))throw Error('Eltérő kazamata-importazonosító vagy alapstruktúra');
     validateProvenance(entry.provenance);validateDungeon(entry.record,previous,db);
     // A szövegek és nevek a kézi, magyar forrásból származnak.
     Object.assign(previous,structuredClone(entry.record),{provenance:structuredClone(entry.provenance)});

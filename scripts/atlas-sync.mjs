@@ -6,14 +6,17 @@ import {API,sha256,equal,diffJSON,category,validateContent,localBaseline,planImp
 import {reconcileReview,loadReviewAliases,reviewGroups,classifications} from './sync-review.mjs';
 import {collectPublicSystems} from './collect-home-arena.mjs';
 import {compatibleClientData} from './home-arena-model.mjs';
-import {planEngine} from './data-engine.mjs';
+import {planEngine,migrateEngineV3} from './data-engine.mjs';
+import {watchContent,watcherBootstrap,officialArticles,imageCollectorReferences,watcherReport,packWatcher} from './future-content-watcher.mjs';
+import {staticClientEvidence,localeLanguage} from './future-content-client.mjs';
+import {queueNotifications} from './notify-future-content.mjs';
 import {makePetModel} from './build-addon-pets.mjs';
 import {staticModule,clientReferences} from './public-client-data.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=(root,file,fallback=null)=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):fallback;
 function write(root,file,value){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});const temp=target+'.tmp';try{fs.writeFileSync(temp,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(temp,target);}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
-export const syncStateFiles=['data/data-engine.json','data/addon-pet-model.json','reports/data-engine-coverage.json','addons/stonestorm-statcap-overlay/pet-data.js','addons/stonestorm-statcap-overlay/pet-model.js','downloads/stonestorm-statcap-overlay.zip','downloads/stat-addon.json','js/addon-release.js','data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
+export const syncStateFiles=['addons/stonestorm-statcap-overlay/equipment-data.js','data/future-image-references.json','data/future-notifications.json','reports/future-content.json','data/data-engine-contract.json','data/future-content.json','js/future-content.js','data/data-engine.json','data/addon-pet-model.json','reports/data-engine-coverage.json','addons/stonestorm-statcap-overlay/pet-data.js','addons/stonestorm-statcap-overlay/pet-model.js','downloads/stonestorm-statcap-overlay.zip','downloads/stat-addon.json','js/addon-release.js','data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
 export async function fetchPublic(url,previous,fetcher=fetch){
   const u=new URL(url);
   if(u.origin!=='https://stonestorm.gg'||u.username||u.password)throw Error('Nem engedélyezett adatforrás');
@@ -34,14 +37,16 @@ export function discover(text,base){
   const urls=new Set();
   for(const m of text.matchAll(/["'`](\/?(?:\.?\.?\/)?(?:assets\/)?[a-zA-Z0-9_./-]+\.(?:js|json|webmanifest|webp|png|svg|css)(?:\?[^"'`<>\s]*)?)["'`]/g)){
     if(/\.json$/.test(m[1])&&!/^(?:\/|\.\/|assets\/)/.test(m[1]))continue;
-    const u=new URL(m[1],m[1].startsWith('assets/')?'https://stonestorm.gg/':base);if(u.origin==='https://stonestorm.gg')urls.add(u.href);
+    const u=new URL(m[1],m[1].startsWith('assets/')?'https://stonestorm.gg/':base);if(u.origin==='https://stonestorm.gg'&&!u.pathname.startsWith('/cdn-cgi/'))urls.add(u.href);
   }
   return [...urls].sort();
 }
-async function inspectResources(previous={},fetcher=fetch){
+export async function inspectResources(previous={},fetcher=fetch){
   // Egy 403, átmeneti hiba vagy a kérési költségkeret nem törölheti a korábbi leltárt.
   const resources=structuredClone(previous),queue=['https://stonestorm.gg/'],seen=new Set(),warnings=[];
-  const priority=url=>/index-.*\.js/.test(url)?0:/art-manifest|texts\.hu|\/hu-|\.hu-/.test(url)?1:/\.json|webmanifest/.test(url)?2:3;
+  let entrypointConfirmed=false,fallbackUsed=false;
+  for(const r of Object.values(resources))r.observedThisCheck=false;
+  const priority=url=>/index-.*\.js/.test(url)?0:/art-manifest|texts\.(?:hu|en)|\/(?:hu|en)-|\.(?:hu|en)-/.test(url)?1:/\.json|webmanifest/.test(url)?2:3;
   let bytes=0,requests=0;
   while(queue.length&&requests<48&&bytes<12*1024*1024){
     queue.sort((a,b)=>priority(a)-priority(b)||a.localeCompare(b));
@@ -51,24 +56,36 @@ async function inspectResources(previous={},fetcher=fetch){
     try{
       const cached=previous[url];
       // Vite hash-elt, változatlan URL: a korábbi hash és hivatkozáslista újrahasználható.
-      const hashed=cached&&/\/[\w.-]+-[\w-]{8,}\.js$/.test(url);
+      const needsAnalysis=localeLanguage(url)||/art-manifest/.test(url);
+      const hashed=cached&&/\/[\w.-]+-[\w-]{8,}\.js$/.test(url)&&!(needsAnalysis&&cached.analysisVersion!==1);
       if(!hashed)requests++;
       const resource=hashed?{...cached,status:'cached',unchanged:true}:await fetchPublic(url,cached,fetcher);
-      const refs=resource.text?discover(resource.text,url):resource.references??[];
+      if(resource.text?.trimStart().startsWith('<')&&/Just a moment|cf-chl/.test(resource.text))throw Error('Public entrypoint access challenge; inspection unavailable');
+      const analysis=resource.text&&/\.js$/.test(url)&&needsAnalysis?staticClientEvidence(resource.text,url):null;
+      const refs=resource.text?[...new Set([...discover(resource.text,url),...(analysis?.staticReferences??[])])]:resource.references??[];
       const {text,...metadata}=resource;
-      resources[url]={...metadata,references:refs,kind:/\.hu-|\/hu-/.test(url)?'hu-localization':/art-manifest/.test(url)?'graphics-manifest':'public-client'};
+      resources[url]={...metadata,references:refs,kind:localeLanguage(url)?localeLanguage(url)+'-localization':/art-manifest/.test(url)?'graphics-manifest':'public-client',language:localeLanguage(url)};
+      resources[url].observedThisCheck=true;
+      if(analysis)Object.assign(resources[url],{analysisVersion:1,localeEntries:analysis.localeEntries,artEntries:analysis.artEntries,analysisWarnings:analysis.warnings});
+      if(url==='https://stonestorm.gg/'&&refs.some(u=>/\/assets\/index-[\w-]+\.js$/.test(u)))entrypointConfirmed=true;
+      if(resource.text&&!/\.js$/.test(url)){
+        resources[url].official=officialArticles(resource.text,url);
+        for(const m of resource.text.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)){const link=new URL(m[1],url);if(link.origin==='https://stonestorm.gg'&&/^\/(?:news|updates|changelog)(?:\/|$)/.test(link.pathname)&&!queue.includes(link.href)&&!seen.has(link.href))queue.push(link.href);}
+      }
       bytes+=resource.status===200?resource.bytes:0;
       for(const ref of refs){
-        if(/\.(?:webp|png|svg)(?:\?|$)/.test(ref)){resources[ref]={url:ref,kind:'image-reference',downloaded:false};continue;}
+        if(/\.(?:webp|png|svg)(?:\?|$)/.test(ref)){resources[ref]={url:ref,kind:'image-reference',downloaded:false,observedThisCheck:true,discoveredFrom:url,referenceSourceHash:resource.sha256};continue;}
         // A bundler által hivatkozott *.hu.json fejlesztői nevek nem publikus végpontok;
         // a tényleges, hash-elt magyar JS-modulokat vizsgáljuk.
-        if(/\/assets\/.*\.json$/.test(ref))continue;
+        if(/\/assets\/.*\.json$/.test(ref)&&!/art-manifest/.test(ref))continue;
         if(!seen.has(ref)&&!queue.includes(ref))queue.push(ref);
       }
-    }catch(e){warnings.push({url,reason:e.message});if(previous[url])resources[url]={...previous[url],status:'stale'};}
+    }catch(e){warnings.push({url,reason:e.message});if(previous[url])resources[url]={...previous[url],status:'stale',observedThisCheck:false};
+      if(url==='https://stonestorm.gg/'&&!fallbackUsed){fallbackUsed=true;queue.push(...Object.keys(previous).filter(u=>/^https:\/\/stonestorm\.gg\/assets\/[\w.-]+\.js$/.test(u)&&!/turnstile|challenge/i.test(u)));}
+    }
   }
   const discovered=[...new Set([...Object.keys(resources),...queue,...Object.values(resources).flatMap(r=>r.references??[])])].sort();
-  return {resources,discovered,warnings,budget:{requests,downloadedBytes:bytes,unfetched:queue.length,maxRequests:48,maxBytes:12*1024*1024}};
+  return {resources,discovered,warnings,entrypointConfirmed,complete:entrypointConfirmed&&!warnings.length&&!queue.length,budget:{requests,downloadedBytes:bytes,unfetched:queue.length,maxRequests:48,maxBytes:12*1024*1024}};
 }
 function markdown(r){
   if(r.reviewSummary){
@@ -99,7 +116,9 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const db=read(root,'data/atlas.json');
     const priorImport=read(root,'data/sync-import.json',{schema:1,records:{},sets:{}});
     const plan=planImport(content,db,priorImport,now);
-    const engineState=read(root,'data/data-engine.json'),contracts=read(root,'data/data-engine-contract.json');
+    const originalEngine=read(root,'data/data-engine.json'),originalContracts=read(root,'data/data-engine-contract.json');
+    const migration=migrateEngineV3(originalEngine,originalContracts,content);
+    const engineState=migration.state,contracts=migration.contracts;
     if(!engineState||!contracts)throw Error('Missing Data Engine V2 contract/state');
     let petCandidate=null;
     const petChanged=!equal(engineState.branches.pets.data,content.pets)||!equal(engineState.branches.petSpine.data,content.spine?.hero?.pets);
@@ -120,7 +139,9 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
         if(!equal(petCandidate.locale,currentModel.locale))throw Error('Changed pet localization requires review');
       }catch(e){petCandidate=null;plan.review.push({path:'/pets/client',reason:e.message});}
     }
-    const enginePlan=planEngine(content,engineState,contracts,{petProof:!!petCandidate});
+    const enginePlan=planEngine(content,engineState,contracts,{petProof:!!petCandidate,now});
+    enginePlan.accepted.unshift(...migration.accepted);
+    if(content.harcero.rules.supportSoft?.length)enginePlan.review.push({path:'/harcero/client-soft-cap',reason:'Az új share-, reductionCurve- és supportSoft-képletekhez friss, az aktuális belépőmodullal igazolt kliensbizonyíték hiányzik. A konfiguráció importált; a végleges számítás nem igazolt.'});
     plan.accepted.push(...enginePlan.accepted);plan.review.push(...enginePlan.review);
     let publicSystems=null,publicSystemsCache=null,clientCandidate=null;
     if(inspect&&db.homeArena){
@@ -137,12 +158,18 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     const priorReport=read(root,'reports/latest-sync.json',{});
     const inventory=inspect?await inspectResources(previous.resources,fetcher):{resources:previous.resources??{},discovered:previous.discovered??[],warnings:[],budget:{inspected:false}};
     const resourceChanges=Object.entries(inventory.resources).filter(([url,r])=>r.sha256&&previous.resources?.[url]?.sha256!==r.sha256).map(([url,r])=>({url,sha256:r.sha256,beforeHash:previous.resources?.[url]?.sha256??null,category:category(url)}));
+    const knownActive=Object.fromEntries(['maps','bosses','dungeons','mounts','items','pets'].map(k=>[k,db[k].map(x=>x.id)]));knownActive.families=db.sets.map(x=>x.familyId);
+    const futureManagedSeparately=!!read(root,'snapshots/future/manifest.json')&&read(root,'data/future-content.json')?.schema===2;
+    const future=futureManagedSeparately?read(root,'data/future-content.json'):watchContent({content,previousContent:read(root,'snapshots/future/content.json')??old,catalog:read(root,'data/image-catalog.json'),inspection:inventory,knownActive,previous:read(root,'data/future-content.json'),resources:inspect?inventory.resources:{},official:Object.values(inventory.resources).filter(r=>r.observedThisCheck).flatMap(r=>r.official??[]),now,sourceHash:contentMeta.sha256});
+    const futurePublicationNeeded=!futureManagedSeparately&&(future.changed||read(root,'data/future-content.json')?.pendingPublication===true);
+    if(!futureManagedSeparately)future.pendingPublication=apply?false:futurePublicationNeeded;
     report={...report,status:unchanged?'unchanged':'checked',baseline:old?'Teljes korábbi publikus snapshot':'Részleges helyi forrásadatok; első megfigyelés',gameVersion:content.version,atlasDataVersion:db.dataVersion,sourceHash:contentMeta.sha256,sources:[contentMeta,...Object.values(inventory.resources).filter(x=>x.sha256)],counts:Object.fromEntries(['added','changed','removed'].map(k=>[k,changes.filter(x=>x.kind===k).length])),changes,accepted:plan.accepted,resourceChanges,publicSystems,clientInspected:inspect,discovery:inventory.budget,warnings:inventory.warnings};
     const statusBefore=read(root,'data/sync-status.json',{});
     const newStatus={schema:1,lastSuccessfulCheck:now,gameVersion:content.version,atlasDataVersion:plan.accepted.length&&apply?content.version:db.dataVersion,lastAutomaticUpdate:statusBefore.lastAutomaticUpdate??null,lastImportCounts:statusBefore.lastImportCounts??{added:0,changed:0},mode:apply?'apply':'read-only',changeCounts:report.counts,importable:plan.accepted.length,reportUrl:'https://github.com/Legivok2/stonestorm-atlas/blob/main/reports/latest-sync.md'};
     if(apply&&plan.accepted.length){
       plan.overlay.gameVersion=content.version;plan.overlay.checkedAt=now;plan.overlay.sourceHash=contentMeta.sha256;
-      if(enginePlan.accepted.length){save('reports/history/data-engine/'+sha256(engineState)+'.json',engineState);save('data/data-engine.json',enginePlan.state);}
+      if(enginePlan.accepted.length){save('reports/history/data-engine/'+sha256(originalEngine)+'.json',originalEngine);save('data/data-engine-contract.json',contracts);}
+      save('data/data-engine.json',enginePlan.state);
       const petApplied=enginePlan.accepted.some(x=>x.path==='/pets');
       if(petApplied&&petCandidate)save('data/addon-pet-model.json',petCandidate);
       save('data/sync-import.json',plan.overlay);
@@ -160,11 +187,17 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
       }
       report.applied=true;report.status='applied';newStatus.lastAutomaticUpdate=now;newStatus.lastImportCounts={added:plan.accepted.filter(x=>x.kind==='added').length,changed:plan.accepted.filter(x=>x.kind==='changed').length};
     }
+    if(apply&&!report.applied)save('data/data-engine.json',enginePlan.state);
+    const branchStatus=Object.fromEntries(Object.keys(enginePlan.state.branches).map(k=>{const b=(apply?enginePlan.state:originalEngine).branches[k];return [k,{gameVersion:b?.gameVersion??null,sha256:b?.sha256??null,checkedVersion:content.version,checkedSourceHash:enginePlan.state.branches[k]?.checkedSourceHash,checkedAt:now,status:b?.sha256===enginePlan.state.branches[k]?.checkedSourceHash?'compared-current':'stale'}];}));
+    Object.assign(newStatus,{engineVersion:3,branches:branchStatus,freshness:Object.values(branchStatus).every(b=>b.status==='compared-current')?'compared-current':'partial'});
+    report.branches=branchStatus;report.futureContent={new:future.newIds.length,observations:future.observations.length+(future.baselineArchive?.count??0),coverage:future.coverage};
+    if(!futureManagedSeparately){save('data/future-content.json',packWatcher(future));save('js/future-content.js',watcherBootstrap(future));save('data/future-image-references.json',imageCollectorReferences(future));save('data/future-notifications.json',queueNotifications(future,read(root,'data/future-notifications.json',{schema:1,pending:[],delivered:[]})));save('reports/future-content.json',watcherReport(future));}
     // Csak a ténylegesen újraépített, tesztelt Atlas-adat adhat importlezárási bizonyítékot.
     const reconciled=reconcileReview({previous:priorReport,changes,resourceChanges,plan,content,db:report.applied?read(root,'data/atlas.json'):db,aliases:loadReviewAliases(root),initialReport:read(root,'reports/initial-sync.json',{}),sources:report.sources,sourceHash:contentMeta.sha256,now});
-    report.review=reconciled.open;report.reviewLedger=reconciled.ledger;report.reviewSummary=reconciled.summary;report.reviewBaseline=reconciled.baseline;
+    report.review=reconciled.open;report.reviewLedger=reconciled.ledger;report.reviewSummary=reconciled.summary;report.reviewBaseline=reconciled.baseline;report.reviewImports=priorReport.reviewImports??[];
+    report.reviewCohorts=report.reviewImports.map(batch=>{const ids=new Set(batch.openIds),items=reconciled.ledger.filter(x=>ids.has(x.id));return {source:batch.source,sha256:batch.sha256,checkedAt:batch.checkedAt,originalOpen:batch.openRecords,resolved:items.filter(x=>x.status==='resolved').length,open:items.filter(x=>x.status==='open').length,historical:items.filter(x=>x.resolution?.historicalSuperseded).length};});newStatus.reviewCohorts=report.reviewCohorts;
     const closed=new Set(reconciled.closedNow);
-    Object.assign(newStatus,{reviewVersion:2,pending:report.review.length,pendingItems:report.review.slice(0,60),reviewSummary:reconciled.summary,groups:reviewGroups(report.review.filter(x=>x.carried)),manualGroups:reviewGroups(report.review.filter(x=>['mechanism','conflict'].includes(x.classification))),processedGroups:reviewGroups(reconciled.ledger.filter(x=>closed.has(x.id))),resolvedGroups:reviewGroups(reconciled.ledger.filter(x=>x.status==='resolved')),currentGroups:reviewGroups(reconciled.ledger.filter(x=>!x.carried))});
+    Object.assign(newStatus,{reviewVersion:2,pending:report.review.length,pendingItems:report.review.slice(0,60),reviewSummary:reconciled.summary,historicalGroups:reviewGroups(reconciled.ledger.filter(x=>x.historyState==='historical-superseded')),groups:reviewGroups(report.review.filter(x=>x.carried&&x.historyState!=='historical-superseded')),manualGroups:reviewGroups(report.review.filter(x=>x.historyState!=='historical-superseded'&&['mechanism','conflict'].includes(x.classification))),processedGroups:reviewGroups(reconciled.ledger.filter(x=>closed.has(x.id))),resolvedGroups:reviewGroups(reconciled.ledger.filter(x=>x.status==='resolved')),currentGroups:reviewGroups(reconciled.ledger.filter(x=>!x.carried))});
     // Történeti archiválás és állapotmentés; a tranzakció még visszavonható.
     if(!unchanged){
       if(old)save('snapshots/history/'+previous.content.sha256+'.json',old);
@@ -175,7 +208,7 @@ export async function runSync({root=ROOT,apply=false,fetcher=fetch,now=new Date(
     save('data/sync-status.json',newStatus);
     save('js/sync-status.js','/* Generált Auto-Sync állapot. */\nwindow.STONESTORM_SYNC_STATUS = '+JSON.stringify(newStatus).replaceAll('<','\\u003c')+';\n');
     save('reports/latest-sync.json',report);save('reports/latest-sync.md',markdown(report));
-    if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied}\nreview=${report.review.length>0}\n`);
+    if(outputFile)fs.appendFileSync(outputFile,`publish=${report.applied||apply&&futurePublicationNeeded}\nreview=${report.review.length>0}\n`);
     return report;
   }catch(e){
     const rollbackErrors=[];

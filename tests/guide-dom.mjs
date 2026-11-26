@@ -4,11 +4,12 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {pathToFileURL} from 'node:url';
 import {root} from '../scripts/publication-plan.mjs';
+import {guideHtml} from '../scripts/build-guide-pages.mjs';
 const {JSDOM,VirtualConsole}=await import(pathToFileURL(path.join(root,'.integration/qa/node_modules/jsdom/lib/api.js')));
 const base=process.env.GUIDE_TEST_BASE_URL??'https://example.test/stonestorm-atlas/';
 const live=!!process.env.GUIDE_TEST_BASE_URL;
 const read=async file=>{
-  if(!live)return fs.readFileSync(path.join(root,'dist',file),'utf8');
+  if(!live)return file==='index.html'?guideHtml(fs.readFileSync(path.join(root,'index.html'),'utf8')):fs.readFileSync(path.join(root,file),'utf8');
   const response=await fetch(new URL(file,base));assert.equal(response.status,200,file);return response.text();
 };
 const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e));

@@ -34,6 +34,11 @@ export function catalogInputs(root){return {catalog:read(root,'data/image-catalo
 export async function discover({root=ROOT,fetcher=fetch,from=null,sleep=pause,maxRequests=18}={}){
  const release=jobLock(root);try{
  const {catalog,manifest,db}=catalogInputs(root),images=[],sources=[],warnings=[],queue=[],seen=new Set();let entrypointConfirmed=false,requests=0,discoveryBlocked=false;
+ const future=read(root,'data/future-image-references.json');
+ if(future?.kind==='atlas-future-image-references'){
+   for(const image of future.images??[])try{images.push(reference(image.url,'future-content-watcher',{discovery:'future-content-watcher',observationIds:image.observationIds,evidenceSources:image.sources}));}catch{warnings.push('A tartalomfigyelő egyik hivatkozása nem felel meg a Collector képcím-szabályának.');}
+   sources.push({kind:'future-content-watcher',gameVersion:future.gameVersion,count:future.images.length});
+ }
  if(from){const bytes=fs.readFileSync(from);if(bytes.length>4*1024*1024)throw Error('Az importfájl legfeljebb 4 MiB lehet');const imported=importReferences(JSON.parse(bytes));images.push(...imported.images);warnings.push(...imported.rejected);sources.push({kind:'user-reference-export',sha256:sha256(bytes),count:imported.images.length});}
  else{
    try{const r=await boundedFetch(origin+'/',{fetcher,maxBytes:4*1024*1024});requests++;const html=r.bytes.toString('utf8');sources.push({url:origin+'/',sha256:sha256(r.bytes),status:200});for(const m of html.matchAll(/<script[^>]+src=["']([^"']+)["']/g)){const url=new URL(m[1],origin).href;try{sourceURL(url);if(/\/index-[\w-]+\.js$/.test(url))queue.push(url);}catch{}}entrypointConfirmed=queue.length>0;}catch(e){requests++;warnings.push('Nyilvános kezdőlap: '+e.message+'. Nincs hozzáférés-megkerülés.');if(e.status===429)discoveryBlocked=true;}
