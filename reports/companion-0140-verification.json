@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "version": "0.14.0",
+  "at": "2026-11-26T17:18:39.274Z",
+  "nativeMV3": true,
+  "realReact": true,
+  "syntheticState": true,
+  "liveGameVerified": false,
+  "cases": [
+    {
+      "name": "Legacy preferences migrate to normal Overview; only five normal routes and valid quick targets are visible",
+      "passed": true
+    },
+    {
+      "name": "Overview shows exact verified crit/support and contextual evasion; no unknown limit card or invented overflow",
+      "passed": true
+    },
+    {
+      "name": "Stats use nonempty groups; unknown final damage support disappears while known basic stats remain",
+      "passed": true
+    },
+    {
+      "name": "Three presets save actual item identities; normal preview has no apply, mock, JSON, ID list or read diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Rename and delete modify only the selected local preset; names and draft input remain usable",
+      "passed": true
+    },
+    {
+      "name": "Normal XP comparison shows gear contributions only and saves a proposal without applying items",
+      "passed": true
+    },
+    {
+      "name": "Raid comparison retains HU abbreviated XP, original offer data and only known time metrics",
+      "passed": true
+    },
+    {
+      "name": "All three themes change panel, navigation, cards, controls and text; density controls are removed",
+      "passed": true
+    },
+    {
+      "name": "Theme and geometry save locally; presets survive a real reload and no character data enters UI settings",
+      "passed": true
+    },
+    {
+      "name": "One central developer toggle reveals labelled research/interfaces and guarded Apply; obsolete iframe tests remain absent",
+      "passed": true
+    },
+    {
+      "name": "Atlas requires explicit arm, exports only anonymized sample data and stops immediately when developer mode is disabled",
+      "passed": true
+    },
+    {
+      "name": "Quiet normal notifications deduplicate and disabling a notification immediately removes its toast",
+      "passed": true
+    },
+    {
+      "name": "Pet statistics remain active in normal mode, with original portrait and no activation click",
+      "passed": true
+    },
+    {
+      "name": "All normal routes and themes fit 1440×900",
+      "passed": true
+    },
+    {
+      "name": "All normal routes and themes fit 900×800",
+      "passed": true
+    },
+    {
+      "name": "All normal routes and themes fit 390×844",
+      "passed": true
+    },
+    {
+      "name": "All normal routes and themes fit 320×760",
+      "passed": true
+    },
+    {
+      "name": "Appearance reset preserves presets and restores Emerald with developer mode off",
+      "passed": true
+    },
+    {
+      "name": "Normal Chrome extension popup has useful navigation and no collection controls or automatic reads",
+      "passed": true
+    },
+    {
+      "name": "Stale character data hides normal cards without a network poll",
+      "passed": true
+    },
+    {
+      "name": "Legacy-on Mining stays original until an explicit developer action and is restored on developer opt-out",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": 0,
+  "fixtureReads": 5
+}

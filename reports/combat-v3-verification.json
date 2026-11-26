@@ -1,0 +1,906 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-20T20:05:58.950Z",
+  "previousVersion": "c530ea20d7ec",
+  "gameVersion": "fbc93606674a",
+  "source": {
+    "url": "https://stonestorm.gg/api/content",
+    "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+  },
+  "importedRecords": 76,
+  "apiDifferences": 1049,
+  "changedRoomStatistics": 381,
+  "roomsVerified": 80,
+  "roomDetails": [
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 1,
+      "sha256": "fa0c04163896e80cf81bc9411dce504dd29226067d6eb0d557bb758341c3d2d8",
+      "equal": true,
+      "def": 18
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 2,
+      "sha256": "36bb97830af78130886063f0b4094e1238d756d158255fe4d59896a27176b277",
+      "equal": true,
+      "def": 18
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 3,
+      "sha256": "98f7f7a70a9e7a790262e389c7ad8784aa68095360542fdf726889cbd4e2bc02",
+      "equal": true,
+      "def": 20
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 4,
+      "sha256": "afadafd0a75d5b12da9dfcb3ace0f39fd28bc9d1be5d6bf684ecd960436dbd61",
+      "equal": true,
+      "def": 20
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 5,
+      "sha256": "a2fac1bb407b840546c1aae6bb4c3705298d416446932353729f68a3f06c2bf7",
+      "equal": true,
+      "def": 25
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 6,
+      "sha256": "941a94b948e8dc4c8b016c739c0e59baad8c30789daba2834dcaf0d777cb2e2b",
+      "equal": true,
+      "def": 21
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 7,
+      "sha256": "d9eaf75bf6fcfd09c95452f70eaad63b5cc56feb90303d7523bdea2ec0a8f6c8",
+      "equal": true,
+      "def": 21
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 8,
+      "sha256": "828983c54bdc35861714ed353600c41545df134baae71d0cdb40648c15ede1c4",
+      "equal": true,
+      "def": 23
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 9,
+      "sha256": "746d82454d4a5174670b1622bc7049bb21ef90b2d2c350086f6703859cf500ad",
+      "equal": true,
+      "def": 23
+    },
+    {
+      "dungeon": "wild",
+      "mode": "normal",
+      "room": 10,
+      "sha256": "e7afb24b9ce577c314c7fa9be8cd525bc5777874b662827e427b56592679172c",
+      "equal": true,
+      "def": 28
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 1,
+      "sha256": "26f55e0b3560f9e6ca2f4c58c393de60eaae2c54b6b0b1318d6e72c41364e840",
+      "equal": true,
+      "def": 353.55793627532057
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 2,
+      "sha256": "1560c3ad6ad491c0be1861665957e9928fbedf49ae052968d95c22bcf68325ca",
+      "equal": true,
+      "def": 353.55793627532057
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 3,
+      "sha256": "46f1e15189c2ecd2b0c53a96f40dca90cabfa17e72ebd7c33aa8612b32be7003",
+      "equal": true,
+      "def": 369.02961570313414
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 4,
+      "sha256": "00fd1d001eacfbb7093f7e47f251310acc4da157bab713fd928c447d361406c2",
+      "equal": true,
+      "def": 369.02961570313414
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 5,
+      "sha256": "4abd17428b37e0ce2377d712a8267ca24712359c7371032c46921ba31513fb5a",
+      "equal": true,
+      "def": 495.3857002271272
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 6,
+      "sha256": "88753505ab9d730eef01a37157d753460b6c89fcd68cd9f0fae5997734efc81d",
+      "equal": true,
+      "def": 380.7509927365523
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 7,
+      "sha256": "4d03d7a98c99d806478075825156994f9620e181d2cff8bf3e19a600c033688c",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 8,
+      "sha256": "f0c60dffc91c537bab09db2714d454d7cb3145d619e849efcc2c7ddc36cf76a8",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 9,
+      "sha256": "dfad89726d507618561837c9627a30f597eba9aedf81ec7bb58cc46d6ccb8370",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "wild",
+      "mode": "heroic",
+      "room": 10,
+      "sha256": "7bb893723cc9cee0c76d5f684fd10ec375d80140cd3cc26466fb93541928eb48",
+      "equal": true,
+      "def": 532.537731190878
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 1,
+      "sha256": "48c259b9a4f5b1070229f391b8575bff5ab9f9b16d4f5994fc7c44e7acca793b",
+      "equal": true,
+      "def": 34.64863781703344
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 2,
+      "sha256": "27ba35e0fb952659e30c950f53626d22b8970602d1baf52506ec09d524f9c9ca",
+      "equal": true,
+      "def": 34.64863781703344
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 3,
+      "sha256": "0366a9f7ffdda6fcfc9014e76c09c9491d015cae88577dc5e39bdc171ff3879a",
+      "equal": true,
+      "def": 39.309668936176415
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 4,
+      "sha256": "3ea308923c13fff1b61b898e50a71f194ce4ab0c1958f9d0488c0225aa837f59",
+      "equal": true,
+      "def": 44.28406374638855
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 5,
+      "sha256": "5434a6791447cf9562936522f35cf23173681b5a87db29952978c34fedcbf9bc",
+      "equal": true,
+      "def": 62.61931582339215
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 6,
+      "sha256": "e269f49c4f1a21d67e768049b42a2a84fcf890d97d54e9ae0e69b4991f956267",
+      "equal": true,
+      "def": 53.800528796325985
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 7,
+      "sha256": "09f6b579678833b975d4fa24fc3eb213ee1efeb880b1d50bb8e18929e344331a",
+      "equal": true,
+      "def": 58.19508966266126
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 8,
+      "sha256": "8233a960bab9756192b7aeb8a665d264bd200744e016a9bc02d73bbdcf7b2e1d",
+      "equal": true,
+      "def": 64.28819654633159
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 9,
+      "sha256": "2261ba4e48eef2ae070e46e7ef617c83fc9a8121de65e0cc76e37cb804a58046",
+      "equal": true,
+      "def": 64.28819654633159
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "normal",
+      "room": 10,
+      "sha256": "f6fc84ca72065c64ddff2fb1d891e707b0bde3caf26c0fb412c2192b2bb73358",
+      "equal": true,
+      "def": 91.59094551388485
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 1,
+      "sha256": "91e1dab015128cf7458a716285bc9a24b32c190426e9c4a75bc1442123c02b60",
+      "equal": true,
+      "def": 369.02961570313414
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 2,
+      "sha256": "2b4d509826deac72a734b3607eac5ecaa3f540e9d0ffb61327ad18045d12746f",
+      "equal": true,
+      "def": 369.02961570313414
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 3,
+      "sha256": "16a8f0b23f14aa6e2da74c1ae98b9df83e73a9a72a8744f53861efaf387ba01e",
+      "equal": true,
+      "def": 380.7509927365523
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 4,
+      "sha256": "88cf47edbb1f9550ebd3544271c1ca984d6d1481a2b42123d67c6388ca5b0d14",
+      "equal": true,
+      "def": 380.7509927365523
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 5,
+      "sha256": "11db28a56c45cb285efe0e1b66094829a88ce420d684d4098c0c74966afefeab",
+      "equal": true,
+      "def": 513.7875288357577
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 6,
+      "sha256": "3f99a9de5c0f454d38f9bd447729511851b56e58636d5b6cab754102570637e8",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 7,
+      "sha256": "11bc0710f13dfc048e94fd152885b3549e10acee2cf2f3e8dd49db3783eb7f49",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 8,
+      "sha256": "f88df14dd75b30194904d2ad737e70584427f81e3ff3fbefaafa84b17489b786",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 9,
+      "sha256": "d6bbd54fd5bf9369d74edda64f11f2fa032d453dccd053ab0fd2f7af168f5921",
+      "equal": true,
+      "def": 425.6724601990993
+    },
+    {
+      "dungeon": "monkey",
+      "mode": "heroic",
+      "room": 10,
+      "sha256": "17a0c123332c8903cbc1003af8d080b79dbf0342970b594ec642dffbdb5af9bd",
+      "equal": true,
+      "def": 551.6367596457716
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 1,
+      "sha256": "e18b46fe12eb8e187f575eb2a37f97d08a50df9a69ef0d16b2074e6069ec0510",
+      "equal": true,
+      "def": 109.77100768941351
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 2,
+      "sha256": "971c0b011c7f16ac0b744366ccad9be86acceb604a72250c6cde291201ea538b",
+      "equal": true,
+      "def": 118.22696406302055
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 3,
+      "sha256": "195d537e2e78b773739ab663d348a006a31fa91fc8e7b690abf5b66d238c9296",
+      "equal": true,
+      "def": 124.7834815823067
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 4,
+      "sha256": "338cbae6802ad7ab0df7add5054d1dd326cecf147b0f088e77baa5500e68da64",
+      "equal": true,
+      "def": 133.81913036029837
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 5,
+      "sha256": "8ec54a1c1a397babfde27363ea7b337e3723e218e34fc756e990ed7baf34e648",
+      "equal": true,
+      "def": 183.75442930547186
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 6,
+      "sha256": "36e2de0ea6c610da54f61fd0d7bfc780003d833ca8bbef1b985575eb6393380b",
+      "equal": true,
+      "def": 160.36710140835362
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 7,
+      "sha256": "f74cc0f0768d4404f99fbcf9feeedf81d7c75ece701db72d3045c41ffc557d56",
+      "equal": true,
+      "def": 168.02475764968614
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 8,
+      "sha256": "4e2f15a164442f9546a00e101fe3ee7ea573b215df67e9eb0c71cef8356a8ae2",
+      "equal": true,
+      "def": 178.56143050839177
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 9,
+      "sha256": "599a8ec354448610da732b38c7b8fbfa739fffe6de8d90b0c9b50f190a9f3177",
+      "equal": true,
+      "def": 197.77222711873424
+    },
+    {
+      "dungeon": "spider",
+      "mode": "normal",
+      "room": 10,
+      "sha256": "e9dea27de459ff054c58a41abb32ddcd8697c2d7e6e1cc27434d6936cfdccb71",
+      "equal": true,
+      "def": 271.11941957976927
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 1,
+      "sha256": "61c41def721b1c9caf2da86267345db0e239e470771f47cd35439436604582de",
+      "equal": true,
+      "def": 380.7509927365523
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 2,
+      "sha256": "40276a9996d76665ea349a7534a2c4a402439a898b736571634cc774184c16f1",
+      "equal": true,
+      "def": 380.7509927365523
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 3,
+      "sha256": "04b40ba6ae87035e887635d325a2be01e843f08fee920ea115a1b9d76f6187d0",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 4,
+      "sha256": "83d24565c93e1dfc2902662b91d9d98b9f747a397e382a92c19a6eb520b66c60",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 5,
+      "sha256": "70ced4c2929a122a26d6f3183d126fe3a1c9042e19db5d1f582ecaa60c310d0d",
+      "equal": true,
+      "def": 532.537731190878
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 6,
+      "sha256": "ebcf35d42636e0c343533a2acb1df59925f3a233895a6dec01a886d132482d38",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 7,
+      "sha256": "e4cf8d5baca718e08fb41b96f1665055134dabb92611410694aa3d8ed42dc7b7",
+      "equal": true,
+      "def": 425.6724601990993
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 8,
+      "sha256": "519dbc8d1304063293dbcf32f1a1138d1f3614141dfa9b939d04f6330359d36e",
+      "equal": true,
+      "def": 425.6724601990993
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 9,
+      "sha256": "6f5d665b148a2fdb24186e7771ca6757263857d17cc601fc9332ff2fe5c43794",
+      "equal": true,
+      "def": 442.7015963739943
+    },
+    {
+      "dungeon": "spider",
+      "mode": "heroic",
+      "room": 10,
+      "sha256": "cbe4b3faa2ddb2114437a0dd9c175d357fc1df47bf5430d3fc1e547cb17a09a5",
+      "equal": true,
+      "def": 571.0850593224527
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 1,
+      "sha256": "20ae7f2d2ac1326a59e977d7d4008837e50ed4c4ddb2a38284ae1ed35eacf8cf",
+      "equal": true,
+      "def": 264.8935153583941
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 2,
+      "sha256": "19e91a63dce73a15219ce47db30c14742a2914f6954828914c4068fb8c0c43ec",
+      "equal": true,
+      "def": 274.7852532873121
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 3,
+      "sha256": "72aeaacfcb77ec21b060c7339e91c0d5af8a1702fc471eee73fe51b12a41dbfe",
+      "equal": true,
+      "def": 302.2953991801109
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 4,
+      "sha256": "11c96d2bcc779af8051a1ff8a57bc995138e39be5957d91ba7d4fd5bf066bf8c",
+      "equal": true,
+      "def": 312.88101186767165
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 5,
+      "sha256": "91f0b789b28a70064598e2de2d8824ba4e0f23d23db2d2f6c46de6bc9c775225",
+      "equal": true,
+      "def": 425.2528086293389
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 6,
+      "sha256": "a441b32b2e008ce17112bc1a4807594e76179f8c79c48ec68a7a1e8610795cdd",
+      "equal": true,
+      "def": 353.55793627532057
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 7,
+      "sha256": "4813327924ec3af30868ef7d81b325922a8c7c1a662e1355483fbc862136ca46",
+      "equal": true,
+      "def": 369.02961570313414
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 8,
+      "sha256": "af7d43dcc8807755d3793121961cd1379722fca7665aa230a5880061c835e8cb",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 9,
+      "sha256": "566f86d6827b79ddc3bf455046548da184a1838a9ded187e0e6fb08d16d13fae",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "normal",
+      "room": 10,
+      "sha256": "3c1c2706886457f53a28f3cc1e8291de7c52a41ef887b0c88ddee7855e45d333",
+      "equal": true,
+      "def": 551.6367596457716
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 1,
+      "sha256": "8e7fc430c7f4dda3058b3431a61ea7fbb5abff1e2ed0e1a00d1a21ef645c6d1f",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 2,
+      "sha256": "97aa8746f648b1e14c9f1e9c6a34a5953af2f31619006aa2dad068093b445a5a",
+      "equal": true,
+      "def": 396.8277661739593
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 3,
+      "sha256": "e931ecee2315f82353199fe5edcec068441d8a7f9fece7fa0f2935cc96974621",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 4,
+      "sha256": "2d5a6da6b7b290f7d1811b8d75b33b3cf6d8b4a93a9be81e9a8a3ac1729782f9",
+      "equal": true,
+      "def": 408.9889775545944
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 5,
+      "sha256": "0a9ae3363625e4c126ce95146ccdb2ce2322dc77d0f6f8f4777b40466dc4b3ac",
+      "equal": true,
+      "def": 551.6367596457716
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 6,
+      "sha256": "b5fbb53c1914158e6216714e09e88b0b05180ba6c1f7b31b136c6f2638efd183",
+      "equal": true,
+      "def": 425.6724601990993
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 7,
+      "sha256": "f89e4ef453b519bc2933a3fea3173193a893039bab27e8aba56e088d60cb47a6",
+      "equal": true,
+      "def": 442.7015963739943
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 8,
+      "sha256": "2b4cd86e6d320874a522e69d395ae223176a051917159c2a4c20e73f71ffb26a",
+      "equal": true,
+      "def": 442.7015963739943
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 9,
+      "sha256": "0cb543eeb26e9a2676ffaf6e2b02574e133e778ff2aa7875db573f05da35a5bc",
+      "equal": true,
+      "def": 455.5663351403221
+    },
+    {
+      "dungeon": "dragon",
+      "mode": "heroic",
+      "room": 10,
+      "sha256": "aa0527012de60da5df79ee412bcfe1fbe349550a8ca89635b23a70aef59a5396",
+      "equal": true,
+      "def": 595.3936261239853
+    }
+  ],
+  "branches": {
+    "pets": {
+      "sourcePath": "pets",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "6057fe284c73c756f4e8b396eb70a876c97c6ee414f0724cbf7c199ff33ae7c6",
+      "status": "compared-current"
+    },
+    "petSpine": {
+      "sourcePath": "spine.hero.pets",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "6149e4ebd9450deed1031d570f48959316abc94ebcd61d803e8d551743f6a05c",
+      "status": "compared-current"
+    },
+    "mounts": {
+      "sourcePath": "mounts",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
+      "status": "compared-current"
+    },
+    "research": {
+      "sourcePath": "lean.researchSteps",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "199154d56a15a68fb44d9b164b84b9b6b2f5f3dccf17efe5f7e12e29e6b15b33",
+      "status": "compared-current"
+    },
+    "forge": {
+      "sourcePath": "forge",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "4b6a77e675b38ab29554970676b65ce750191d69277f7276b08a985075f3644a",
+      "status": "compared-current"
+    },
+    "stats": {
+      "sourcePath": "harcero",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "1db5c76a7d0afb1eb5a8081c776402875cf273e13e6b7a0168936bd0307a0761",
+      "status": "compared-current"
+    },
+    "bonus": {
+      "sourcePath": "bonus",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "d5d800fda205f1996d57dd475fbc9a68980cc6ecc6abcac8b97861f5a1a3e2f5",
+      "status": "compared-current"
+    },
+    "limits": {
+      "sourcePath": "limits",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "bcee79ec107cb312585baeaace9c963001565db897ad1fa8c57977c82dc5dc80",
+      "status": "compared-current"
+    },
+    "rewards": {
+      "sourcePath": "reward",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "292252dd9e9a4772a7bf14e99e06d97028d981155e11c9edd012a22fee14689d",
+      "status": "compared-current"
+    },
+    "polish": {
+      "sourcePath": "polish",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "3dfe6519c7ab01e9dceb7188a7fe5f774667e67fad34be7c0cb50e07538538a3",
+      "status": "compared-current"
+    },
+    "stones": {
+      "sourcePath": "stones",
+      "contentVersion": "c530ea20d7ec",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "d362a0493e7fff406995932d4739f294022d7450b70ec5555a291ed62a26d82b",
+      "status": "compared-current"
+    },
+    "skills": {
+      "sourcePath": "lean.skills",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "98aa98d54b85b665eb9f4c5d7f7144dca21b1911c2695dfe75e7b778e526a93b",
+      "status": "compared-current"
+    },
+    "playRef": {
+      "sourcePath": "playRef",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "b954b736ab61cb2d124fc64ce2d0ca3b861cde10753e2f81a2e47cabcadb71d1",
+      "status": "compared-current"
+    },
+    "spine": {
+      "sourcePath": "spine",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "cf3e95c90a0475ca66f80cb6bc87d8f343c3a81884e007d0b862ef169c4ea360",
+      "status": "compared-current"
+    },
+    "maps": {
+      "sourcePath": "maps",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "b1b3d510b5c24d95674f7a6e3b43f4519327a04a60729f4c9029147754fb208f",
+      "status": "compared-current"
+    },
+    "features": {
+      "sourcePath": "features",
+      "contentVersion": "fbc93606674a",
+      "comparedVersion": "fbc93606674a",
+      "sha256": "2da3447ed5c1d58eb7414288a66a829ea10c400acefce6a9204b24eb6610467f",
+      "status": "compared-current"
+    }
+  },
+  "schemaMigration": {
+    "from": 2,
+    "to": 3,
+    "unchangedContractsPreserved": true
+  },
+  "recommendations": [
+    {
+      "id": "wild",
+      "before": 13,
+      "after": 13
+    },
+    {
+      "id": "monkey",
+      "before": 26,
+      "after": 26
+    },
+    {
+      "id": "spider",
+      "before": 43,
+      "after": 36
+    },
+    {
+      "id": "dragon",
+      "before": 60,
+      "after": 48
+    }
+  ],
+  "caps": {
+    "monsterEvadeBefore": 0.35,
+    "monsterEvadeAfter": 0.3,
+    "combatEvadeMax": 0.3,
+    "critCap": 0.5,
+    "reductionCap": 0.75,
+    "supportCaps": {
+      "vsBoss": 0.35,
+      "potionHeal": 0.25,
+      "skillDamage": 0.5,
+      "critDamage": 0.75,
+      "lifesteal": 0.08,
+      "damageTaken": 0.2
+    },
+    "bossEvadeCaps": {
+      "mapBoss": 0.12,
+      "guardian": 0.14,
+      "towerBoss": 0.16
+    }
+  },
+  "backlog": {
+    "requestedCount": 2396,
+    "localCheckoutBeforeOpen": 393,
+    "source": "https://github.com/Legivok2/stonestorm-atlas/blob/aa0f984782f76761304b22f0286e67290b442d93/reports/latest-sync.json",
+    "sourceSha256": "9de4eb827c1938bad8ff0e161c8862bbd434f1218691bef7b7de945677c6f7da",
+    "cohort": {
+      "source": "https://github.com/Legivok2/stonestorm-atlas/blob/aa0f984782f76761304b22f0286e67290b442d93/reports/latest-sync.json",
+      "sha256": "9de4eb827c1938bad8ff0e161c8862bbd434f1218691bef7b7de945677c6f7da",
+      "checkedAt": "2026-11-20T19:16:42.973Z",
+      "originalOpen": 2396,
+      "resolved": 2012,
+      "open": 384,
+      "historical": 576
+    },
+    "availableNowLedger": 3111,
+    "resolvedTotal": 2726,
+    "openNow": 385,
+    "classified": {
+      "automatic": 0,
+      "unsupported": 63,
+      "mechanism": 3,
+      "observation": 318,
+      "conflict": 1
+    },
+    "historicalOpen": 0,
+    "historicalResolved": 960
+  },
+  "future": {
+    "maxLevel": 60,
+    "xpTableLength": 60,
+    "mapCount": 6,
+    "maxMapIndex": 6,
+    "announced": 0,
+    "currentPrepared": 0,
+    "newAlerts": 0,
+    "coverage": {
+      "api": "checked",
+      "client": "unavailable",
+      "official": "Only explicit dated official announcements; inaccessible or unparsed pages are not evidence",
+      "activation": "active means present/enabled in public configuration; server availability is not independently verified"
+    }
+  },
+  "limitations": [
+    "Current public entrypoint is access-challenged; no bypass attempted.",
+    "New soft-cap and share formulas require fresh client evidence.",
+    "Bonus panel cross-check used browser fixtures, not a signed-in live character.",
+    "No remote commit, webhook send or Pages deployment performed."
+  ],
+  "historicalResolved": 0,
+  "tests": {
+    "nodeTestRunner": {
+      "tests": 158,
+      "passed": 158,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs",
+      "includes": "Actual apply pipeline, pet proof gate, schema migration rollback, failure rollback, watcher false-alert fixtures, images, guide and all prior models"
+    },
+    "browserSuites": [
+      "stat-limits-browser",
+      "data-engine-browser",
+      "atlas-sync-browser",
+      "home-arena-browser",
+      "addon-browser",
+      "combat-v3-browser",
+      "atlas-design-browser",
+      "pet-system-browser",
+      "image-manager-browser",
+      "addon-095-browser",
+      "addon-pet-source-browser",
+      "addon-095-native"
+    ],
+    "dom": {
+      "detailRecords": 469,
+      "passed": [
+        "dom-smoke",
+        "features-dom",
+        "guide-dom"
+      ]
+    },
+    "hosting": {
+      "fullPagesHeadChecks": 3781,
+      "guideBuildAndHosting": "passed in isolated checkout",
+      "httpSmoke": "passed"
+    },
+    "publication": {
+      "deployed": false,
+      "webhookSent": false
+    }
+  }
+}

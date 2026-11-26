@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T13:42:25.766Z",
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Stat Cap Overlay",
+    "version": "0.9.8",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 198067,
+    "sha256": "768ad9fe0de15a0588c6de6aff9a57b7ea242a776469232694bdcabca73a5bd5"
+  },
+  "previousVersion": "0.9.7",
+  "published": false,
+  "validation": {
+    "unitTests": {
+      "passed": 148,
+      "failed": 0,
+      "command": "npm test"
+    },
+    "nativeHome": {
+      "verifiedAt": "2026-11-21T13:40:09.811Z",
+      "nativeMV3": true,
+      "version": "0.9.8",
+      "fixture": "Public DOM/CSS reconstruction with sample state; no real account",
+      "results": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 980,
+          "height": 680,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 900,
+          "height": 480,
+          "tabs": 6,
+          "passed": true
+        }
+      ],
+      "apiRequests": 0,
+      "writes": 0,
+      "errors": [],
+      "mutations": 3
+    },
+    "regressions": [
+      "npm run check",
+      "npm run check:addon",
+      "npm run test:addon:095:native",
+      "npm run test:addon:095:browser",
+      "npm run test:addon:pets:browser",
+      "node tests/combat-v3-browser.mjs",
+      "npm run build:pages",
+      "npm run test:pages",
+      "npm run test:addon:browser",
+      "npm run audit:publish"
+    ]
+  },
+  "sources": {
+    "checkedAt": "2026-11-21T13:33:16.808Z",
+    "description": "Read-only static inspection. Test-only DOM reconstruction, not an authenticated character snapshot.",
+    "sources": [
+      {
+        "url": "https://stonestorm.gg/assets/HomeModal-hJZoEX3j.js",
+        "sha256": "0edacf197e4eb0fe0ba49b2c8a8483547997cbbb5758aa954e7fe43536a93d1c",
+        "bytes": 79547
+      },
+      {
+        "url": "https://stonestorm.gg/assets/index-DUXP6NSi.css",
+        "sha256": "f6fa5c37a3d47a298287f69720762e2669fedf14d5a4cdf58668934c67bc2f6f",
+        "bytes": 70567
+      },
+      {
+        "url": "https://stonestorm.gg/assets/GameApp-Du2HaLsq.css",
+        "sha256": "7d4785f6827ed1f093d5a290f6712ceba5a0e1fb6474e20652749dbba45d91df",
+        "bytes": 1106505
+      },
+      {
+        "url": "https://stonestorm.gg/assets/NpcModal-ui3lr9-K.js",
+        "sha256": "f9ffcad4548b839367c64b5e577c33a2d69c4f8e5e2620bd5fc05bd0a27f3e75",
+        "bytes": 2584
+      }
+    ]
+  },
+  "screenshots": {
+    "before1920": ".integration/home-expanded/before-1920.png",
+    "after1920": ".integration/home-expanded/after-1920.png",
+    "before2560": ".integration/home-expanded/before-2560.png",
+    "after2560": ".integration/home-expanded/after-2560.png",
+    "mobile": ".integration/home-expanded/after-mobile.png",
+    "comparison": ".integration/home-expanded/before-after.png"
+  },
+  "limits": [
+    "Tests use a reconstructed public game DOM/CSS with sample state; no authenticated character session was used.",
+    "The addon requires the documented Home modal selectors. A future game DOM change may require an update."
+  ]
+}

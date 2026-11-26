@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T17:51:28.046Z",
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Stat Cap Overlay",
+    "version": "0.9.10",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 297993,
+    "sha256": "d84a3bf2ecf5615f5a7d9b864814651ef7306f40f46b36107241d9a300beb24f"
+  },
+  "previousVersion": "0.9.9",
+  "status": "passed-local-validation",
+  "published": false,
+  "pushed": false,
+  "liveGameTested": false,
+  "validation": {
+    "unit": {
+      "passed": 219,
+      "failed": 0,
+      "newFeatureTestsIncluded": 47
+    },
+    "newFeatureBrowser": {
+      "passed": 22,
+      "failed": 0,
+      "nativeMV3": true
+    },
+    "captureRefresh": "passed",
+    "syncApply": {
+      "passed": 4,
+      "failed": 0
+    },
+    "regressions": {
+      "homeExpanded": "passed: six tabs, six viewports, native MV3",
+      "equipmentPresets": "passed: 3 slots, per-character local storage, XP/Nyang optimizer, mock flow, native MV3",
+      "petTooltip": "passed: desktop/mobile, inactive/active pets, 0 activation clicks",
+      "anonymousExport": "passed: native popup and isolated/closed overlay with real local download",
+      "statLimits": "passed: desktop 1440, mobile 390 and small-mobile 320",
+      "addonDownload": "passed: ZIP hash, 3 viewports, update/error/fallback behavior"
+    },
+    "builds": {
+      "addon": "passed",
+      "syntaxAndLocalReferences": "passed",
+      "pages": "passed",
+      "pagesHTTP": {
+        "passedFiles": 3783,
+        "failed": 0
+      }
+    }
+  },
+  "browser": {
+    "verifiedAt": "2026-11-21T17:48:52.328Z",
+    "version": "0.9.10",
+    "nativeMV3": true,
+    "mockOnly": true,
+    "cases": [
+      {
+        "name": "Original layout and one original tabpanel",
+        "passed": true
+      },
+      {
+        "name": "Toggle, four visible panels, original identities preserved",
+        "passed": true
+      },
+      {
+        "name": "All four tabs navigate only after explicit clicks and retain snapshots",
+        "passed": true
+      },
+      {
+        "name": "Mining layout and scrolling 1920×1080",
+        "passed": true
+      },
+      {
+        "name": "Mining layout and scrolling 2560×1440",
+        "passed": true
+      },
+      {
+        "name": "Mining layout and scrolling 1280×800",
+        "passed": true
+      },
+      {
+        "name": "Mining layout and scrolling 900×650",
+        "passed": true
+      },
+      {
+        "name": "Mining layout and scrolling 390×844",
+        "passed": true
+      },
+      {
+        "name": "React parent replacement, unique controls, preference retained",
+        "passed": true
+      },
+      {
+        "name": "Restored original dimensions, no unrelated modal changes",
+        "passed": true
+      },
+      {
+        "name": "Storage and fresh snapshots after reload",
+        "passed": true
+      },
+      {
+        "name": "SPA exit cleans mining and detects all three offer cards",
+        "passed": true
+      },
+      {
+        "name": "Separate card values and conservative ranking",
+        "passed": true
+      },
+      {
+        "name": "Missing reward and malformed time never borrowed from other facts",
+        "passed": true
+      },
+      {
+        "name": "Reroll and removal clear old values, including all-offers removal",
+        "passed": true
+      },
+      {
+        "name": "Manual override, visible source, per-offer restore, persistence",
+        "passed": true
+      },
+      {
+        "name": "Observed exact API beats rounded DOM; no automatic API request",
+        "passed": true
+      },
+      {
+        "name": "Stale API cannot resurrect rerolled or removed cards",
+        "passed": true
+      },
+      {
+        "name": "An expired API replay keeps its original timestamp and is rejected",
+        "passed": true
+      },
+      {
+        "name": "DOM duplication is detected rather than silently selected",
+        "passed": true
+      },
+      {
+        "name": "Mobile overlay and observers settle",
+        "passed": true
+      },
+      {
+        "name": "Zero game writes, launches, resource clicks or page errors",
+        "passed": true
+      }
+    ],
+    "passed": 22,
+    "writes": 0,
+    "apiRequests": 2,
+    "explicitFixtureAPIReads": 2,
+    "errors": []
+  },
+  "unchangedCoreModules": [
+    {
+      "file": "equipment-model.js",
+      "sha256": "4c0dc029292c344fe34ef49ded6871d501decf399f15e9c9d2556ef5a824c1b3",
+      "unchanged": true
+    },
+    {
+      "file": "equipment-ui.js",
+      "sha256": "9b8d55dda210d53808f601d695102e060ab3863e62eb4146683b43e7c8db17b8",
+      "unchanged": true
+    },
+    {
+      "file": "pet-tooltip.js",
+      "sha256": "b4f88f729550fecf4e3867ec9768cf7a554c7cf3f2c4a502d789779589f7196c",
+      "unchanged": true
+    },
+    {
+      "file": "home-expanded.js",
+      "sha256": "13db24e248184f01000909d592be5f860c8dadc8c761ffc9f5522a1bc70a6a02",
+      "unchanged": true
+    },
+    {
+      "file": "research-sanitizer.js",
+      "sha256": "93017ab326c5ef6cc9a906562b016e223b2885c6b0e015e30f2f44031b3a6530",
+      "unchanged": true
+    }
+  ],
+  "publicSources": [
+    {
+      "url": "https://stonestorm.gg/",
+      "sha256": "f74bf694caedf643e82a16ee41574e0cf2fa1bbb3ee8eac0eed6f6961e694494"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+      "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+      "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/HuntPage-DslotEk1.js",
+      "sha256": "086c021109fdb926c79508073f958afa4f55a7d0d7b443d5b4de688c8b1bd72f"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/MiningPage-DMAMF98u.js",
+      "sha256": "15f2c7fcafb3358fa5cf23d37c581cd506d1d64865463ee0df94fd497e59fcba"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/HeroSwitchMenu-BAeuhwSH.js",
+      "sha256": "254030243fda99a787b2a271a929bb2dd4a868ff88899b5ffd0b816a73a88ac7"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/expedition-time-0gJHKilC.js",
+      "sha256": "7584f43ac5d322b24becaee1f1b7b30b30c69750f53d43f026b914cb97760155"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/reward-boost-BJul5okT.js",
+      "sha256": "3e72536baab6ba61c5cb0f2a122447841d25e2d34a6754364a1c73e021a28ac8"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-B2l65l5X.css",
+      "sha256": "4b4f554504a354be5ee788a31a5777fa1f2eaa12417e4d35255835cd46d287be"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/constants-De0gJKRt.js",
+      "sha256": "139313646d8b5b1da9350c7f682b579382f40a37bc70192e59c72fcbf04ee1ed"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/hu-D9r5Wgz9.js",
+      "sha256": "4cabe64071cf7d94dabd4254f2c6e34d7b7f894885bca15a5525ccd027c2d37f"
+    }
+  ],
+  "beforeSource": {
+    "content": "tests/fixtures/mining-raids-before-content.fixture.mjs",
+    "sha256": "71247ff416e5d85fba7945d1313b9f7a3a98776bdf1cfab076c71e8c892a1454",
+    "manifest": "tests/fixtures/mining-raids-before-manifest.json"
+  },
+  "screenshots": [
+    {
+      "path": ".integration/mining-raids/mining-before-1920.png",
+      "bytes": 1808154,
+      "sha256": "e45aedbe9e5b8a47250eb968ad4775aedb0c0f6efab2249042e8905db5e3fcc0"
+    },
+    {
+      "path": ".integration/mining-raids/mining-after-1920.png",
+      "bytes": 878319,
+      "sha256": "3145d2923bd82bd8f3544fc6d4e7b0a7083f86d1b7a7e6a60fd79650cc9ab65e"
+    },
+    {
+      "path": ".integration/mining-raids/mining-after-2560.png",
+      "bytes": 1212497,
+      "sha256": "9ebbe7512233601eaa38a83d776499728e5bbca30799396c8b79755d264fc136"
+    },
+    {
+      "path": ".integration/mining-raids/mining-after-1280.png",
+      "bytes": 580911,
+      "sha256": "6e1ff89cd56c0a667fc4f5d68af2da6481f6748f234122c415a7c609d50a3e43"
+    },
+    {
+      "path": ".integration/mining-raids/mining-after-900.png",
+      "bytes": 407415,
+      "sha256": "2d51edd62605c9454ced6c91249270e358196cd20816fa0fe73faf582b989131"
+    },
+    {
+      "path": ".integration/mining-raids/mining-after-390.png",
+      "bytes": 277133,
+      "sha256": "ccf9a778f2224bb23fe34db1adc3cdd19cafc64c86794e7bfa12523053c3c994"
+    },
+    {
+      "path": ".integration/mining-raids/raids-before-1920.png",
+      "bytes": 262719,
+      "sha256": "9f744b7b53e88eba7cfc343349569968b03a18a1bd66003c109f2fa3ac5fc440"
+    },
+    {
+      "path": ".integration/mining-raids/raids-after-1920.png",
+      "bytes": 179200,
+      "sha256": "19dcf6fa25cff8db42d2e64fd7efbca98bec1353ca52b0f449c8d65d9b5a493c"
+    },
+    {
+      "path": ".integration/mining-raids/raids-after-390.png",
+      "bytes": 80771,
+      "sha256": "f972d1d063be9158f63a6ffde4f292ab2b7a9597bb1fb358f0828876ca31f16f"
+    }
+  ],
+  "answers": {
+    "oldBug": "Single k/m suffix regex plus 350-character flattened-page scanning; kk was unsupported.",
+    "recognized": 3,
+    "expected": 3,
+    "bestXPPerEnergy": {
+      "kind": "long",
+      "displayEstimate": 52777.77777777778,
+      "range": [
+        52777.77777777778,
+        55555.555555555555
+      ]
+    },
+    "bestNyangPerEnergy": {
+      "kind": "long",
+      "displayEstimate": 10372.222222222223,
+      "range": [
+        10372.222222222223,
+        10375
+      ]
+    },
+    "durationsProvidedInUserSample": false,
+    "fourMiningPanels": true,
+    "interactive": "Only the original active React tabpanel",
+    "previews": "Other three panels are timestamped text-only observations; unvisited tabs explicitly have no observed data."
+  }
+}

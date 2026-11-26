@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-21T17:17:01.781Z",
+  "gameVersion": "fbc93606674a",
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/",
+      "sha256": "7e42710fc576e6fa6ee0424ece5c138a40eb1b5d22d4728361549cce5fb2d1de",
+      "entry": "/assets/index-C8sNneJf.js"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+      "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/HeroSwitchMenu-BAeuhwSH.js",
+      "sha256": "254030243fda99a787b2a271a929bb2dd4a868ff88899b5ffd0b816a73a88ac7"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterPage-1iyHKFOC.js",
+      "sha256": "52b2d2144edfeba0cdfa49ae95ac77996b9961529e23e4b95c975796e3a6a9ad"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterSelectPage-CZ5YeaDg.js",
+      "sha256": "b629a147656589e5f1025c23aa8461c498eb665e4602a4fafee229ac0ce7f579"
+    },
+    {
+      "url": "https://stonestorm.gg/api/content",
+      "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+      "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/ItemTipBody-DPCDOQV-.js",
+      "sha256": "547e6b3d66e7134e43dd9142386ebe83586f70f21433fd0d3e848b7a8d40fc53"
+    }
+  ],
+  "identity": {
+    "character": "state.id",
+    "instance": "state.items[].id",
+    "template": "state.items[].templateId",
+    "location": "equippedSlot + invIndex",
+    "requiredLevel": "flags/itemLevel branch from client HL/z6",
+    "dom": [
+      ".pdoll__slot--<slot>",
+      ".inv-grid__cell[data-inv]",
+      ".inv-grid__item"
+    ],
+    "note": "Static public render logic inspected. No authenticated character payload or real character DOM was accessed."
+  },
+  "originalMechanism": {
+    "equip": {
+      "method": "POST",
+      "path": "/api/inventory/equip",
+      "bodyKeys": [
+        "itemId"
+      ]
+    },
+    "unequip": {
+      "method": "POST",
+      "path": "/api/inventory/unequip",
+      "bodyKeys": [
+        "slot"
+      ]
+    },
+    "productionEnabled": false,
+    "adapterShipped": "mock only; no HTTP writer"
+  },
+  "formulas": {
+    "gear": "Observed numerical values and lines; bonuses plus reviewed polish fallback when lines are absent",
+    "sets": "Current full/classic thresholds; TR tier values with capScale, no upgrade multiplier on set steps",
+    "rewards": "Normal/paid split from observed mods and derived gear bonuses; cap 100 percentage points + paid cap 50",
+    "harcero": "Unsupported full-combination model: optimizer disabled; current observed value may be displayed",
+    "hpDefence": "Delta projection from observed values and mods: always partial",
+    "drop": "No gear drop stat in the reviewed pool or unique effects; retains current equipment"
+  },
+  "constraints": [
+    "Unknown IDs, flags, set/unique membership or fields stop analysis",
+    "Same template never replaces instance identity",
+    "Fresh observation required within 120 seconds",
+    "Only owned and usable items are searched",
+    "Conservative empty bag-cell requirement for unequip before replacement",
+    "Changed/unverified game version disables analysis",
+    "A request shape does not prove server authorization or atomicity"
+  ]
+}

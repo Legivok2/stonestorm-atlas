@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-21T20:33:52.108Z",
+  "actualPublicClient": true,
+  "authenticatedGameAccess": false,
+  "liveCharacterWrites": 0,
+  "followUp2026-11-23": {
+    "authenticatedGameAccess": false,
+    "liveCharacterWrites": 0,
+    "entry": "/assets/index-B-KQL_s0.js",
+    "entrySha256": "3f6b20fd9aea509a70c831d071ae179e80e9e6daa72d62cd1facfb8e291db493",
+    "itemSheet": "/assets/ItemSheet-BWXvXj86.js",
+    "itemSheetSha256": "9aa4180500ebd4beee6665ca5bd00effca66d97dd2985e3fafe7bab7822a7b9f",
+    "gameApp": "/assets/GameApp-C3ojBE57.js",
+    "gameAppSha256": "446ab10f1a19f446214098cadbd86f25313b732268c181b1cb883826ba01dc51",
+    "verification": "The public page loaded the new entry in a browser. Its X, b3, dA, by and store setter function bodies, ItemSheet calls, non-idempotent transport guard, inventory capacity and content version match the reviewed contract. Authenticated state and live writes were not checked."
+  },
+  "gameVersion": "fbc93606674a",
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/",
+      "sha256": "72bdfc4250f63f55de58ae1dd1f0b91725900a3807c13348dab0937423e738c5"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+      "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/ItemSheet-DzKiAIRw.js",
+      "sha256": "48bd6cad384623d007ff5d53f2dfc66e117b88b0c46a7c6b46d93e0fa64982da"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterPage-1iyHKFOC.js",
+      "sha256": "52b2d2144edfeba0cdfa49ae95ac77996b9961529e23e4b95c975796e3a6a9ad"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/PaperDoll-Cm5IwTvu.js",
+      "sha256": "e4581deb4e08f51eb1bb0439f0d310692e19a231bb39d0dcbffb87088ba20a30"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+      "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+    },
+    {
+      "url": "https://stonestorm.gg/api/content",
+      "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+    }
+  ],
+  "contract": {
+    "entry": "/assets/index-C8sNneJf.js",
+    "equip": {
+      "export": "b3",
+      "method": "POST",
+      "path": "/api/inventory/equip",
+      "body": [
+        "itemId"
+      ]
+    },
+    "unequip": {
+      "export": "dA",
+      "method": "POST",
+      "path": "/api/inventory/unequip",
+      "body": [
+        "slot"
+      ]
+    },
+    "read": {
+      "export": "X",
+      "method": "GET",
+      "path": "/api/character"
+    },
+    "store": {
+      "export": "a",
+      "read": "getState",
+      "apply": "getState().setState(response.state)"
+    },
+    "busy": {
+      "export": "by"
+    },
+    "itemInstance": "state.items[].id",
+    "template": "templateId",
+    "inventoryPosition": "invIndex",
+    "equipmentSlot": "equippedSlot",
+    "capacity": "content.limits.inventorySize + 8 * state.extraSlots",
+    "requirements": "itemLevel for set/unique flags, otherwise item.level; item.classes",
+    "writeRetry": "No automatic POST retry: no requestId or idempotent flag in these two operations.",
+    "replacement": "Native equip permits a nonempty target; adapter deliberately requires separate unequip/free cell.",
+    "uncertainResult": "Stop, quarantine journal, manual state reread and acknowledgement before a new transaction."
+  }
+}

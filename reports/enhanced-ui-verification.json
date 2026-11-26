@@ -1,0 +1,532 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T19:11:35.299Z",
+  "version": "0.10.0",
+  "previousVersion": "0.9.11",
+  "published": false,
+  "pushed": false,
+  "liveAccountVerified": false,
+  "actualGameDOMAccess": false,
+  "qa": "Native MV3 on a private-free React reconstruction of public game DOM/CSS. No live gameplay acceptance asserted.",
+  "validation": {
+    "enhanced": {
+      "passed": 68,
+      "failed": 0,
+      "nativeMV3": true,
+      "reactVersion": "19.2.0",
+      "apiRequests": 0,
+      "writes": 0,
+      "resourceActions": 0,
+      "errors": [],
+      "viewports": [
+        [
+          1920,
+          1080
+        ],
+        [
+          2560,
+          1440
+        ],
+        [
+          1440,
+          900
+        ],
+        [
+          1000,
+          700
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "cases": [
+        {
+          "name": "One common controller; old Home/Mining settings migrate without a second manager",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "alchemist: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "alchemist: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "alchemist: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "alchemist: weekly limit remains a readable original field",
+          "passed": true
+        },
+        {
+          "name": "alchemist: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "alchemist: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "seal: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "seal: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "seal: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "seal: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "seal: public client card wrappers keep names readable and actions below the details",
+          "passed": true
+        },
+        {
+          "name": "seal: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "seal: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "seal: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "stable: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "stable: three areas keep all original owned, stored and rental controls",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "stable: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "stable: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "shop: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "shop: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "shop: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "shop: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "shop: original purchase control does not overlap item name or stats",
+          "passed": true
+        },
+        {
+          "name": "shop: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "shop: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "shop: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "fishing: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "fishing: cast button is reachable in narrow, wide and folded idle modes",
+          "passed": true
+        },
+        {
+          "name": "fishing: all five original tabs work without casting or resource actions",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "fishing: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "fishing: every active state suspends the layout; hook/reel targets remain native and unobscured",
+          "passed": true
+        },
+        {
+          "name": "Central panel exposes all seven switches and global restore applies without reload",
+          "passed": true
+        },
+        {
+          "name": "Settings persist through document reload and old tabs are not presented as live",
+          "passed": true
+        },
+        {
+          "name": "Unrelated DOM churn does not reread current tab contents; observers settle",
+          "passed": true
+        },
+        {
+          "name": "No API request, purchase, sale, crafting, rental or fishing action was initiated",
+          "passed": true
+        }
+      ]
+    },
+    "home": {
+      "passed": 6,
+      "failed": 0,
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 980,
+          "height": 680,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 900,
+          "height": 480,
+          "tabs": 6,
+          "passed": true
+        }
+      ],
+      "apiRequests": 0,
+      "writes": 0
+    },
+    "miningRaids": {
+      "passed": 22,
+      "failed": 0
+    },
+    "equipmentRepair": {
+      "passed": 13,
+      "failed": 0,
+      "usesActualOfficialDecoder": true,
+      "liveAccount": false
+    },
+    "equipmentPresets": {
+      "passed": true,
+      "command": "node tests/addon-equipment-browser.mjs"
+    },
+    "nativeResearchExport": {
+      "passed": true,
+      "command": "node tests/addon-095-native.mjs"
+    },
+    "petTooltip": {
+      "passed": true,
+      "command": "node tests/addon-pet-source-browser.mjs"
+    },
+    "statLimits": {
+      "passed": true,
+      "command": "node tests/stat-limits-browser.mjs"
+    },
+    "unit": {
+      "passed": 256,
+      "failed": 0,
+      "enhancedCasesIncluded": 20,
+      "command": "npm test",
+      "captureRefresh": "passed"
+    },
+    "projectCheck": {
+      "passed": true,
+      "command": "npm run check"
+    },
+    "addonPackage": {
+      "passed": true,
+      "command": "npm run check:addon"
+    },
+    "pagesBuild": {
+      "passed": true,
+      "files": 3784,
+      "command": "npm run build:pages"
+    },
+    "pagesSmoke": {
+      "passed": true,
+      "http200": 3783,
+      "command": "npm run test:pages"
+    },
+    "addonDownload": {
+      "passed": true,
+      "viewports": [
+        "1440x1000",
+        "390x844",
+        "320x760"
+      ],
+      "command": "npm run test:addon:browser",
+      "notes": "Fresh final dist; ZIP bytes and SHA-256, actual download, version notice, failures and blocked storage verified. Initial run overlapped dist generation and was rerun sequentially after the build."
+    }
+  },
+  "surfaces": [
+    {
+      "id": "home",
+      "panels": 2,
+      "interactive": "Original selected tab",
+      "previews": 0,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "mining",
+      "panels": 4,
+      "interactive": "One original selected tab",
+      "previews": 3,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "alchemist",
+      "panels": 3,
+      "interactive": "One original selected tab",
+      "previews": 2,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "seal",
+      "panels": 3,
+      "interactive": "One original selected tab",
+      "previews": 2,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "stable",
+      "panels": 3,
+      "interactive": "All present original sections",
+      "previews": 0,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "shop",
+      "panels": 4,
+      "interactive": "One original selected tab",
+      "previews": 3,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    },
+    {
+      "id": "fishing",
+      "panels": 1,
+      "interactive": "Original selected tab; addon layout suspended during active fishing",
+      "previews": 0,
+      "restoreTestPassed": true,
+      "localBrowserTestsPassed": true
+    }
+  ],
+  "screenshots": {
+    "liveGame": false,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "gallery": ".integration/enhanced-ui/gallery.html",
+    "pairs": [
+      {
+        "id": "alchemist",
+        "before": ".integration/enhanced-ui/alchemist-before-1920.png",
+        "after": ".integration/enhanced-ui/alchemist-after-1920.png"
+      },
+      {
+        "id": "seal",
+        "before": ".integration/enhanced-ui/seal-before-1920.png",
+        "after": ".integration/enhanced-ui/seal-after-1920.png"
+      },
+      {
+        "id": "stable",
+        "before": ".integration/enhanced-ui/stable-before-1920.png",
+        "after": ".integration/enhanced-ui/stable-after-1920.png"
+      },
+      {
+        "id": "shop",
+        "before": ".integration/enhanced-ui/shop-before-1920.png",
+        "after": ".integration/enhanced-ui/shop-after-1920.png"
+      },
+      {
+        "id": "fishing",
+        "before": ".integration/enhanced-ui/fishing-before-1920.png",
+        "after": ".integration/enhanced-ui/fishing-after-1920.png"
+      }
+    ]
+  },
+  "sourceEvidence": "tests/fixtures/enhanced-ui-sources.json",
+  "limitations": [
+    "Live authenticated game DOM unavailable; screenshots contain labelled sample state.",
+    "Inactive hybrid panels are prior observations, not live actionable tabs.",
+    "Previous equipment repair still awaits live-account acceptance; live equip remains disabled."
+  ],
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Stat Cap Overlay",
+    "version": "0.10.0",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 346360,
+    "sha256": "f148bbf877ba407a4e02ff533d5d7251fcfb87194c71c2f6a5920e9bd0c7c8a9"
+  }
+}

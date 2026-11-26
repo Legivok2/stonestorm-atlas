@@ -50,14 +50,14 @@ try{
   await popup.addInitScript(()=>{window.chrome={tabs:{query:async()=>[{id:1,url:'https://stonestorm.gg/'}],sendMessage:async(_,message)=>window.sendSharedResearch(message.type)}};});
   await popup.goto('https://stonestorm.gg/extension/research-popup.html');await popup.locator('[data-research-status]').filter({hasText:'2 anonimizált'}).waitFor();
   assert.match(await popup.locator('[data-research-categories]').textContent(),/Szobák és témák/);
-  const [download]=await Promise.all([popup.waitForEvent('download'),popup.locator('[data-research="export"]').click()]);const json=JSON.parse(fs.readFileSync(await download.path()));assert.equal(json.addonVersion,'0.9.6');assert.equal(json.samples.length,2);assert(!JSON.stringify(json).includes('PRIVATE_'));
+  const [download]=await Promise.all([popup.waitForEvent('download'),popup.locator('[data-research="export"]').click()]);const json=JSON.parse(fs.readFileSync(await download.path()));assert.equal(json.addonVersion,'0.13.2');assert.equal(json.samples.length,2);assert(!JSON.stringify(json).includes('PRIVATE_'));
   assert.equal(await page.evaluate(()=>window.StonestormResearchController.status().count),0);
   await popup.locator('[data-research="arm"]').click();await page.evaluate(async()=>{await fetch('/api/home/rooms');});await page.waitForFunction(()=>window.StonestormResearchController.status().count===2);
   await page.evaluate(()=>{window.testStatShadow.querySelector('[data-close]').click();window.testStatShadow.querySelector('[data-toggle]').click();});await page.waitForFunction(()=>window.testStatShadow.querySelector('[data-research="stop"]'));
   await page.evaluate(()=>window.testStatShadow.querySelector('[data-research="stop"]').click());await popup.locator('[data-research-status]').filter({hasText:'0 anonimizált'}).waitFor();
   assert.equal(await page.evaluate(()=>window.switchCount),0);assert.deepEqual(errors,[]);
   await page.screenshot({path:path.join(root,'.integration/browser-qa/addon-095-'+name+'.png')});
-  await page.locator('.activate').click();assert.equal(await page.evaluate(()=>window.switchCount),1,'A játék saját kattintása változatlanul működik');
+  await page.evaluate(()=>window.testStatShadow.querySelector('[data-close]').click());await page.locator('.activate').click();assert.equal(await page.evaluate(()=>window.switchCount),1,'A játék saját kattintása változatlanul működik');
   console.log(name+': inaktív tooltip, fókusz/Escape, újrarenderelés/fülváltás, közös popup–overlay gyűjtés, anonim letöltés és törlés rendben.');await context.close();
  }
 }finally{await browser.close();}

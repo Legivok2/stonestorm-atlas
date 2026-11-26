@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T17:18:50.573Z",
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Stat Cap Overlay",
+    "version": "0.9.9",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 267558,
+    "sha256": "177e28d2073aebd8c4244bb2c17886e483d821cc5969535eea4f2d0fd2ebe382"
+  },
+  "published": false,
+  "pushed": false,
+  "liveEquipmentChanges": 0,
+  "answers": {
+    "instanceId": "state.items[].id (type-preserving); templateId is not identity",
+    "presets": "Three local named 8-slot presets per state.id; per-slot storage prevents different-slot overwrite",
+    "oneButtonChange": "Original POST shapes found; shipped adapter is mock only and live UI actions remain disabled",
+    "optimization": {
+      "xp": "Whole combinations with reward caps, polishing and cumulative set steps",
+      "nyang": "Whole combinations with reward caps, polishing and cumulative set steps",
+      "drop": "No gear drop effect in the reviewed model; keeps current equipment",
+      "harcero": "Disabled: full-combination combat model unverified",
+      "hpDefence": "Partial projection only"
+    },
+    "dangerousOperations": "No HTTP writer or game-button automation in the new modules; mock whitelist contains only equip and unequip",
+    "unverified": [
+      "No authenticated inventory DOM or actual private character payload inspected",
+      "No live equip/unequip test",
+      "Server-side equip authorization and atomic replacement/full-bag behavior",
+      "Full combined Harcero model and every special combat effect"
+    ],
+    "tests": {
+      "unit": 172,
+      "equipment": 24,
+      "isolatedImportPipeline": 4,
+      "nativeEquipment": {
+        "verifiedAt": "2026-11-21T17:17:08.219Z",
+        "nativeMV3": true,
+        "version": "0.9.9",
+        "mockOnly": true,
+        "presetSlots": 3,
+        "owners": 2,
+        "viewports": [
+          1440,
+          390
+        ],
+        "writes": 0,
+        "gameButtonClicks": 0,
+        "errors": [],
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/"
+          },
+          {
+            "method": "GET",
+            "path": "/api/content"
+          },
+          {
+            "method": "GET",
+            "path": "/api/character"
+          },
+          {
+            "method": "GET",
+            "path": "/api/character"
+          },
+          {
+            "method": "GET",
+            "path": "/api/character"
+          },
+          {
+            "method": "GET",
+            "path": "/api/character"
+          },
+          {
+            "method": "GET",
+            "path": "/"
+          },
+          {
+            "method": "GET",
+            "path": "/api/content"
+          },
+          {
+            "method": "GET",
+            "path": "/api/character"
+          }
+        ]
+      }
+    }
+  },
+  "sourceEvidence": "data/equipment-presets-evidence.json",
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/",
+      "sha256": "7e42710fc576e6fa6ee0424ece5c138a40eb1b5d22d4728361549cce5fb2d1de",
+      "entry": "/assets/index-C8sNneJf.js"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+      "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/HeroSwitchMenu-BAeuhwSH.js",
+      "sha256": "254030243fda99a787b2a271a929bb2dd4a868ff88899b5ffd0b816a73a88ac7"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterPage-1iyHKFOC.js",
+      "sha256": "52b2d2144edfeba0cdfa49ae95ac77996b9961529e23e4b95c975796e3a6a9ad"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterSelectPage-CZ5YeaDg.js",
+      "sha256": "b629a147656589e5f1025c23aa8461c498eb665e4602a4fafee229ac0ce7f579"
+    },
+    {
+      "url": "https://stonestorm.gg/api/content",
+      "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+      "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/ItemTipBody-DPCDOQV-.js",
+      "sha256": "547e6b3d66e7134e43dd9142386ebe83586f70f21433fd0d3e848b7a8d40fc53"
+    }
+  ],
+  "previousLogicPreserved": {
+    "capture.js": true,
+    "content.js": true
+  },
+  "benchmark": {
+    "items": 248,
+    "elapsedMs": 12,
+    "nodes": 25,
+    "optimal": true,
+    "xp": 0.39999999999999997
+  },
+  "screenshots": [
+    ".integration/equipment-presets/equipment-1440.png",
+    ".integration/equipment-presets/equipment-preview-1440.png",
+    ".integration/equipment-presets/equipment-390.png",
+    ".integration/equipment-presets/equipment-preview-390.png"
+  ],
+  "checks": [
+    "npm run check",
+    "npm test",
+    "npm run test:addon:equipment:browser",
+    "npm run test:sync:apply",
+    "npm run test:addon:095:native",
+    "npm run test:addon:095:browser",
+    "npm run test:addon:pets:browser",
+    "npm run test:addon:home",
+    "node tests/combat-v3-browser.mjs",
+    "npm run build:pages",
+    "npm run test:pages",
+    "npm run check:addon",
+    "npm run audit:publish"
+  ]
+}

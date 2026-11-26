@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://stonestorm.gg/",
+    "sha256": "0def17aa4cc0015053d58125787e4857df3e8e73dabb898124826609541b83de"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+    "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+    "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/ShopModal-1UK_TZdo.js",
+    "sha256": "f9ea2ddf9f343c59907c5a0f3545e2fa83d2b7470105b40c6a03665082281571"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/StableModal-DCkf2V6b.js",
+    "sha256": "79859e3bec0d60b39662213b8ea4f5469da906797eb782792e140eddde2b0905"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/AlchemistPanel-DTg89zaP.js",
+    "sha256": "002e6e46fd73bbe1463f022313d033dc0a7324743602ef61c067423eb8d3a323"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/MerchantModal-DRe3DGLl.js",
+    "sha256": "db5e295c5d3987cf67fef4eb22a5f85abe69ea960c2bdfa33fa5f09249016005"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/FishingPage-CvgUwtTA.js",
+    "sha256": "55ab40c7428b248bc7b215fbc3810a15537f2a3b4b72113c077ca4c3e21c6020"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/GameApp-B2l65l5X.css",
+    "sha256": "4b4f554504a354be5ee788a31a5777fa1f2eaa12417e4d35255835cd46d287be"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/texts.hu-4Rk0jbvy.js",
+    "sha256": "7ff512fcd5dbf83b119d632ef0b22089d3553a92133bfb2b206ba9359e61a285"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/HouseModal-tpkvkno9.js",
+    "sha256": "fd27c9879119f15326e029d8243b10af20eef26eb7ec95c75a1692b7855c0200"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/NpcModal-DKLPhtPl.js",
+    "sha256": "ed63c6342c114467f0c7797dabf8391742b2b37cd6b229ad4e66984bf07e29a1"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/OwnMounts-CV7fHkiy.js",
+    "sha256": "c6f8a37c20a3c77d1cea682032e886ad066c25f05338c12a741d73040ddba1b4"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/endgame-fYCZQy5s.css",
+    "sha256": "798515995ac505da5a293de68c9a3a4c54021309cb7245305359fcf0a3370090"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/SoulTab-9mFIzqCN.js",
+    "sha256": "60bdf33e88a3956cef7a75cc98fe2b5b2afd4c81aecf4bed9f5943dfa60ff412"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/RecipesTab-yCAHuKbP.js",
+    "sha256": "ac9cf227f07be02edb1f5e30c721e5c11fc4c2e586b23c60795805bf9991e762"
+  }
+]

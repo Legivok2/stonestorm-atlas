@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-23T14:40:31.894Z",
+  "nativeMV3": true,
+  "realReact": true,
+  "syntheticFixtures": true,
+  "liveGameVerified": false,
+  "twoFrameGatePassed": false,
+  "cases": [
+    {
+      "name": "No unsolicited frames or reads; synthetic clicks cannot open the probe",
+      "passed": true
+    },
+    {
+      "name": "Exactly two same-origin native documents, independent React tab handlers, same synthetic HttpOnly session",
+      "passed": true
+    },
+    {
+      "name": "Both frames accept original input without switching the other frame; native timers and scroll remain independent",
+      "passed": true
+    },
+    {
+      "name": "Export contains diagnostic flags, no cookie/form values, and no claim of live acceptance",
+      "passed": true
+    },
+    {
+      "name": "Repeated trusted starts never duplicate instances; close destroys child contexts and restores the original UI",
+      "passed": true
+    },
+    {
+      "name": "Reopen creates exactly two fresh contexts and close during initialization does not leave background frames",
+      "passed": true
+    },
+    {
+      "name": "Preflight stops on xfo-deny without changing the parent or creating frames",
+      "passed": true
+    },
+    {
+      "name": "Preflight stops on challenge without changing the parent or creating frames",
+      "passed": true
+    },
+    {
+      "name": "Actual parent CSP frame-src is enforced by Chromium even when the preflight GET differs",
+      "passed": true
+    },
+    {
+      "name": "Child frame-ancestors refusal never counts as success; no header removal or alternate preview",
+      "passed": true
+    }
+  ],
+  "writes": 0,
+  "errors": []
+}

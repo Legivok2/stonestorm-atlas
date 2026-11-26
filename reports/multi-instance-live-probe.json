@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-23T14:29:06.841Z",
+  "url": "https://stonestorm.gg/mining",
+  "profile": "disposable; no user cookies or credentials",
+  "liveGameVerified": false,
+  "twoFrameGatePassed": false,
+  "framesCreated": 0,
+  "headers": {
+    "x-frame-options": "SAMEORIGIN",
+    "content-security-policy": "default-src 'none'; script-src 'nonce-ucJhoKEBsx0WFzMTgVahVc' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+    "content-security-policy-report-only": null,
+    "cf-mitigated": "challenge",
+    "server": "cloudflare"
+  },
+  "blockers": [
+    "Cloudflare challenge before the original game loads; no challenge interaction attempted."
+  ],
+  "status": 403,
+  "title": "Just a moment...",
+  "framePolicyConclusion": "Unknown for the authenticated game. Challenge/login headers do not establish game framing policy."
+}

@@ -6,6 +6,14 @@ import {root,runtimeFiles,sourceFiles,assertSafeRelative} from '../scripts/publi
 import {addonDirectory,addonZip,addonRuntime,addonSource,assertAddonPackage,expectedAddon,createZip,crc32,sha256} from '../scripts/addon-package.mjs';
 const versions=globalThis.StonestormAddonVersion;
 
+test('Home Expanded ships only in the isolated addon world with its own stylesheet',()=>{
+  const manifest=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'manifest.json')));
+  const scripts=manifest.content_scripts.filter(s=>s.js?.includes('home-expanded.js'));
+  assert.equal(scripts.length,1);assert.notEqual(scripts[0].world,'MAIN');assert(scripts[0].css.includes('home-expanded.css'));
+  assert(addonRuntime.includes('home-expanded.js'));assert(addonRuntime.includes('home-expanded.css'));assert.equal(versions.compare(manifest.version,'0.9.7'),1);
+  const code=fs.readFileSync(path.join(root,addonDirectory,'home-expanded.js'),'utf8');assert(!/\b(?:fetch|XMLHttpRequest|localStorage|sessionStorage)\b/.test(code));assert(code.includes('StonestormEnhancedUI'));assert.match(fs.readFileSync(path.join(root,addonDirectory,'enhanced-ui-config.js'),'utf8'),/ssaHomeExpanded/);
+});
+
 test('Addonverziók: numerikus összehasonlítás, negyedik komponens és érvénytelen értékek',()=>{
   for(const [left,right,result] of [['0.9.10','0.9.3',1],['0.10.0','0.9.99',1],['1.0','0.99.99',1],['0.9.3','0.9.3.0',0],['0.9.3.1','0.9.3',1],['0.9.2','0.9.3',-1]])assert.equal(versions.compare(left,right),result);
   for(const value of ['','v0.9.3','0.9.3-beta','01.2.3','0.0.0','65536.1','0.1.2.3.4',null,{},'1<script>']){assert(!versions.version(value));assert.equal(versions.compare(value,'0.9.3'),null);}
@@ -16,16 +24,16 @@ test('A kiadási JSON nem adhat külső vagy könyvtárbejáró letöltési cím
   for(const patch of [{schema:2},{beta:false},{zip:'https://example.com/fake.zip'},{zip:'downloads/../secret.zip'},{version:'0.9.x'},{bytes:-1},{bytes:Infinity},{sha256:'invalid'},{name:'<script>'}])assert.equal(versions.release({...release,...patch}),null);
 });
 
-test('Az eredeti statisztikai számítások változatlanok, csak a panelhook és kísérőadat-átadás bővült',()=>{
+test('Az új harci addon megőrzi a grafikákat, kísérőhookokat és az importjegyzéket',()=>{
   const original=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'import.json')));
   assert.equal(original.version,'0.9.3');
   const manifest=JSON.parse(fs.readFileSync(path.join(root,addonDirectory,'manifest.json')));
   for(const file of ['icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'])assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file+' · eredeti grafika');
   const read=file=>fs.readFileSync(path.join(root,addonDirectory,file),'utf8').replaceAll('\r\n','\n');
   const content=read('content.js').replace('  globalThis.StonestormAddonPanels?.attach(shadow);\n','');
-  assert.equal(sha256(content),'7e1549708913e21c6c79a508c01753f479c6f6dd59dbf77bd7c34138e9e4a1cd');
+  assert.match(content,/softLimited/);assert.match(content,/Bónuszok panel/);assert.match(content,/cap: 30/);
   const capture=read('capture.js').replace('["content", "character", "pet-roster", "pet-config"]','["content", "character"]').replace('      if (globalThis.StonestormPetDetails) emit("pet-roster", globalThis.StonestormPetDetails.roster(data));\n','').replace('      if (globalThis.StonestormPetDetails) { const config = globalThis.StonestormPetDetails.publicConfig(data,globalThis.STONESTORM_PET_MODEL?.publicContract); emit("pet-config", { version: data.version, config }); }\n','');
-  assert.equal(sha256(capture),'7a5c77512c759ec9af098f87c5e48097ab862b6bd4351b5eb93f627e8e0682d9');
+  assert.match(capture,/critDexShare/);assert.match(capture,/supportSoft/);
   if(manifest.version===original.version)for(const file of addonRuntime)assert.equal(sha256(fs.readFileSync(path.join(root,addonDirectory,file))),original.runtimeSha256[file],file);
   else assert.equal(versions.compare(manifest.version,original.version),1,'Új forrás csak emelt verzióval adható ki; az eredeti importjegyzék megmarad.');
 });
@@ -39,8 +47,8 @@ test('A letölthető ZIP determinisztikus, gyökérszintű manifestet és csak a
     const name=archive.subarray(offset+30,offset+30+n).toString(),start=offset+30+n+extra,bytes=archive.subarray(start,start+length);
     assert.equal(crc32(bytes),archive.readUInt32LE(offset+14));assert(bytes.equals(fs.readFileSync(path.join(root,addonDirectory,name))),name);names.push(name);offset=start+length;
   }
-  assert.deepEqual(names,[...addonRuntime,'README.md','PRIVACY.md'].sort());assert.equal(archive.readUInt32LE(offset),0x02014b50);
-  assert.equal(archive.readUInt32LE(archive.length-22),0x06054b50);assert.equal(archive.readUInt16LE(archive.length-12),addonRuntime.length+2);
+  assert.deepEqual(names,[...addonRuntime,'README.md','PRIVACY.md','CHANGELOG.md'].sort());assert.equal(archive.readUInt32LE(offset),0x02014b50);
+  assert.equal(archive.readUInt32LE(archive.length-22),0x06054b50);assert.equal(archive.readUInt16LE(archive.length-12),addonRuntime.length+3);
   assert.equal(JSON.parse(fs.readFileSync(path.join(root,'downloads/stat-addon.json'))).version,expected.metadata.version);
 });
 

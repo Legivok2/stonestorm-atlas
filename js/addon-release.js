@@ -1,2 +1,2 @@
 /* Generált kiadási tartalékadat; npm run build:addon. */
-globalThis.STONESTORM_ADDON_RELEASE = {"schema":1,"name":"Stonestorm Stat Cap Overlay","version":"0.9.6","beta":true,"zip":"downloads/stonestorm-statcap-overlay.zip","bytes":182657,"sha256":"fb28007dbbbb01067991bb2baa8822f97ed8e981eb95d3aa02a78ddc729062ef"};
+globalThis.STONESTORM_ADDON_RELEASE = {"schema":1,"name":"Stonestorm Companion","version":"0.14.0","beta":true,"zip":"downloads/stonestorm-statcap-overlay.zip","bytes":528820,"sha256":"f15a8631d0e8daa7460f0d27808346fca71d12a18b31d8d66fa2724012fb0201"};

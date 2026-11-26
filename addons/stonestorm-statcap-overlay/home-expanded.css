@@ -1,0 +1,192 @@
+/* Only a positively identified Home modal receives these addon-owned classes. */
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 60px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--accent-gold-deep, #a27936);
+  border-radius: var(--radius-control, 9px);
+  color: var(--text-primary, #f5e3bc);
+  background: var(--surface-raised, #30251b);
+  box-shadow: inset 0 1px 0 #f5dea633, 0 2px 5px #0005;
+  font: 700 14px/1.2 var(--font-display, system-ui);
+  cursor: var(--cursor-hand, pointer);
+}
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle:hover {
+  border-color: var(--accent-gold, #e0bd73);
+  background: var(--surface-panel, #3b2e20);
+}
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle:focus-visible {
+  outline: 2px solid var(--accent-gold, #e0bd73);
+  outline-offset: 3px;
+}
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle svg {
+  width: 20px; height: 20px; flex: none; fill: none;
+  stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle .ssa-home-icon-restore,
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle .ssa-home-icon-expand { display: none; }
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle .ssa-home-icon-restore { display: initial; }
+.ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head {
+  padding-inline-end: 224px;
+  min-width: 0;
+}
+
+/* No game-node moves, inline size changes, scale, zoom or stacking-order changes. */
+.modal.npc-modal.npc-modal--scene.ssa-home-expanded {
+  box-sizing: border-box;
+  padding: 16px !important;
+  overflow: hidden;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 100% !important;
+  max-width: none !important;
+  height: calc(100vh - 32px) !important;
+  height: calc(100dvh - 32px) !important;
+  max-height: none !important;
+  min-height: 0;
+  margin: 0 !important;
+  overflow: hidden;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head {
+  min-height: 64px;
+  box-sizing: border-box;
+  padding-block: 10px;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head > .npc-modal__portrait {
+  width: 64px;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 12px 16px 16px;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .tabs.sink-tabs {
+  flex: none;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel {
+  flex: 1 1 0;
+  min-height: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 4px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel .furn-offers {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 12px;
+}
+.ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel .home-rooms__grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+}
+
+@media (min-width: 1100px) and (min-height: 600px) {
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel:has(> .home-room):has(> .home-house),
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel.sink-panel--furnish:has(> .home-room):has(> .home-furnish) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+    overflow: auto;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel:has(> .home-house) > .home-room,
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel.sink-panel--furnish > .home-room {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    /* Keep the game's 2560 / 1429 aspect ratio and every anchored child's style. */
+    margin: 0;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel:has(> .home-room) > :is(.home-house, .home-furnish) {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    min-height: 0;
+    max-height: 100%;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding: 0 8px 8px 0;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel > .home-house {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel:has(> .home-room) > :not(.home-room, .home-house, .home-furnish) {
+    grid-column: 2;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel:not(:has(> .home-house, > .home-furnish)) > .home-room {
+    --room-h: min(32dvh, 420px);
+  }
+}
+@media (max-width: 1099px), (max-height: 599px) {
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel.sink-panel--furnish {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel.sink-panel--furnish > * {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel > .home-room {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-width: min(100%, calc(46dvh * 2560 / 1429));
+    height: auto;
+    margin: 0 auto 12px;
+  }
+}
+@media (min-width: 1500px) and (min-height: 600px) {
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel > .home-house > .h2-house {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body > .sink-panel > .home-house > .h2-house > .h2-level {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 700px) {
+  .ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle { width: 42px; padding: 8px; }
+  .ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .ssa-home-toggle > .ssa-home-toggle-label { display: none; }
+  .ssa-home-host > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head { padding-inline-end: 116px; }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 8px;
+    padding-inline-start: 12px;
+  }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head > .npc-modal__portrait { width: 44px; }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__head > .npc-modal__purse {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modal.npc-modal.npc-modal--scene.ssa-home-expanded { padding: 12px !important; }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] { height: calc(100vh - 24px) !important; height: calc(100dvh - 24px) !important; }
+  .ssa-home-expanded > .npc-modal__dialog.home-modal[data-tut-screen="home"] > .npc-modal__body { padding: 8px; }
+}
