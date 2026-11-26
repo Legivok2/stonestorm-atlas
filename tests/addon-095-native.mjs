@@ -27,7 +27,7 @@ try{
  const popup=await context.newPage();await page.bringToFront();await popup.goto(extension.origin+'/research-popup.html');
  await popup.locator('[data-research-status]').filter({hasText:'2 anonimizált'}).waitFor();
  const [download]=await Promise.all([popup.waitForEvent('download'),popup.locator('[data-research="export"]').click()]);
- const exported=JSON.parse(fs.readFileSync(await download.path()));assert.equal(exported.addonVersion,'0.9.6');assert.equal(exported.samples.length,2);assert(!JSON.stringify(exported).includes('fixture-vulture'));
+ const exported=JSON.parse(fs.readFileSync(await download.path()));assert.equal(exported.addonVersion,'0.13.2');assert.equal(exported.samples.length,2);assert(!JSON.stringify(exported).includes('fixture-vulture'));
  assert.equal((await evaluate('StonestormResearchController.status()')).count,0);
  console.log('Native MV3: isolated controller, closed overlay, API replay, inactive tooltip, real Chrome popup, shared state and anonymous JSON download passed');
 }finally{await context.close();assert.equal(path.dirname(profile),path.join(root,'.integration/browser-qa'));assert(path.basename(profile).startsWith('addon095-native-'));fs.rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:200});}

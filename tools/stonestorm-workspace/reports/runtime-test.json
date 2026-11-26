@@ -1,0 +1,91 @@
+{
+  "schema": 2,
+  "version": "0.3.0",
+  "at": "2026-11-26T17:29:49.510Z",
+  "electron": "45.4.1",
+  "nativeElectronRuntime": true,
+  "syntheticLocalFixture": true,
+  "liveGameVerified": false,
+  "cases": [
+    {
+      "name": "Exactly four game WebContentsViews plus isolated local controls in one BaseWindow",
+      "passed": true
+    },
+    {
+      "name": "Four distinct original-UI tab contracts are selected and retained independently",
+      "passed": true
+    },
+    {
+      "name": "Game renderers have no Node, preload or local Workspace bridge",
+      "passed": true
+    },
+    {
+      "name": "All renderers accept trusted input, keep independent values and scroll independently",
+      "passed": true
+    },
+    {
+      "name": "Column and grid bounds resize without overlap; split changes and zoom preserve all webContents",
+      "passed": true
+    },
+    {
+      "name": "Local header IPC works and invalid indices/actions cannot create extra instances",
+      "passed": true
+    },
+    {
+      "name": "The visible separator pointer handler resizes the native game views through the restricted control bridge",
+      "passed": true
+    },
+    {
+      "name": "A native React remount resetting the active tab is corrected through the verified UI in compact mode",
+      "passed": true
+    },
+    {
+      "name": "A changed tab becoming a submit button is rejected without any automatic click",
+      "passed": true
+    },
+    {
+      "name": "Unknown tab IDs restore the original view and never trigger another tab click",
+      "passed": true
+    },
+    {
+      "name": "A delayed DOM observation from an outgoing document cannot overwrite the reloaded tab state",
+      "passed": true
+    },
+    {
+      "name": "Manual page refresh uses original documents and restores all four tab contracts",
+      "passed": true
+    },
+    {
+      "name": "Compact presentation removes and restores CSS without replacing original buttons",
+      "passed": true
+    },
+    {
+      "name": "External navigation, redirects and popups are denied",
+      "passed": true
+    },
+    {
+      "name": "Existing original mining-read HTTP failures and successful retries update only the affected status",
+      "passed": true
+    },
+    {
+      "name": "HTTP 429 is shown as a server limit without guessed tab changes or an automatic reload",
+      "passed": true
+    },
+    {
+      "name": "Interrupted navigation is reported and manual refresh recovers the same renderer",
+      "passed": true
+    },
+    {
+      "name": "Closing BaseWindow destroys four game contents and local controls",
+      "passed": true
+    },
+    {
+      "name": "Own synthetic HttpOnly cookie survives a real Electron restart",
+      "passed": true
+    },
+    {
+      "name": "Closing BaseWindow destroys four game contents and local controls",
+      "passed": true
+    }
+  ]
+}

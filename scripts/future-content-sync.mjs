@@ -1,0 +1,34 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+import {fetchPublic,inspectResources} from './atlas-sync.mjs';
+import {API,sha256,equal} from './atlas-sync-model.mjs';
+import {watchContent,watcherBootstrap,watcherReport,imageCollectorReferences,packWatcher} from './future-content-watcher.mjs';
+import {queueNotifications} from './notify-future-content.mjs';
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=(root,p,fallback=null)=>fs.existsSync(path.join(root,p))?JSON.parse(fs.readFileSync(path.join(root,p),'utf8')):fallback;
+export const futureStateFiles=['data/future-content.json','js/future-content.js','data/future-image-references.json','data/future-notifications.json','reports/future-content.json','reports/future-content.md','snapshots/future/content.json','snapshots/future/manifest.json'];
+export function futureMarkdown(report){
+  const labels={maxLevel:'Konfigurációs játékosszint-plafon',equipmentMaxLevel:'Legmagasabb felszerelési szint',xpEntries:'XP-tábla bejegyzései',mapCount:'Pályák száma',dungeonCount:'Kazamaták száma',maxMapIndex:'Legmagasabb pályaindex',maxTier:'Legmagasabb tier',referenceEntries:'Fejlődési referenciatábla bejegyzései',baselineMaxLevel:'Kiinduló megfigyelt szintplafon'};
+  const statuses={prepared:'Előkészített',announced:'Hivatalosan bejelentett',active:'Aktív',uncertain:'Bizonytalan',removed:'Eltávolított'};
+  const summary=Object.entries(report.summary).map(([k,v])=>'- '+(labels[k]??k)+': '+v).join('\n');
+  const details=report.potentialContent.map(x=>'### '+x.nameHu+'\n\n- Kategória: '+x.category+'\n- Státusz: '+statuses[x.status]+'\n- Magyarázat: '+x.reason+'\n- Azonosító: '+x.key+'\n- Első észlelés: '+x.firstSeenAt+'\n- Utolsó ellenőrzés: '+x.lastCheckedAt+'\n- Pontos forrás: '+x.source+' · '+x.sourcePath+'\n- Forráshash: '+(x.sourceHash??'Csak hivatkozás; nincs letöltött képforrás-hash.')).join('\n\n');
+  return '# Future Content Watcher – ellenőrzési jelentés\n\nEllenőrzés (UTC): '+report.checkedAt+'\n\nJátékverzió: '+report.gameVersion+'\n\n## Eredmény\n\n'+report.counts.observations+' megfigyelés; '+report.counts.potential+' potenciális jelzés; '+report.counts.announced+' igazolt hivatalos bejelentés.\n\nA kikapcsolt kapcsolók és a képhivatkozások a nyilvános fájlokban található nyomok. Nem bizonyítják egy frissítés tervét, időpontját vagy játékbeli aktiválását.\n\n## Szint- és világadatok\n\n'+summary+'\n\n## Potenciális tartalmak\n\n'+(details||'Nincs igazolt potenciális új tartalom.')+'\n\n## Lefedettség\n\nAz API ellenőrizve. A kliens hivatkozásgráfja '+(report.coverage.client==='complete'?'teljes.':'részleges; a nem feldolgozott forrásokról nincs negatív állítás.')+' Magyar lokalizáció: '+(report.coverage.locales.hu==='checked'?'ellenőrizve':'nem elérhető')+'. Angol lokalizáció: '+(report.coverage.locales.en==='checked'?'ellenőrizve':'nem elérhető')+'.\n\nA vizsgálat legfeljebb 48 hálózati kérést és 12 MiB letöltést használ futásonként. A hiányzó vagy hozzáférési hibával visszatérő forrás nem jelent eltávolítást. Csak elérhető, dátumozott hivatalos bizonyíték minősül bejelentésnek; a hírek hiánya nem bizonyítja, hogy máshol sincs közlemény.\n\nMagasabb szintű ellenfél nem bizonyít játékosszint-emelést. Aktív státuszhoz külön játékmegfigyelés szükséges. A teljes gépi leltár és az értékváltozások: data/future-content.json.\n';
+}
+export async function runFutureSync({root=ROOT,fetcher=fetch,now=new Date().toISOString(),inspect=true,publishEnabled=true,outputFile}={}){
+  const backup=new Map(futureStateFiles.map(p=>[p,fs.existsSync(path.join(root,p))?fs.readFileSync(path.join(root,p)):null]));
+  const save=(p,value)=>{const file=path.join(root,p);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file+'.tmp',typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(file+'.tmp',file);};
+  try{
+    const old=read(root,'snapshots/future/content.json'),manifest=read(root,'snapshots/future/manifest.json'),prior=read(root,'data/future-content.json');
+    if(old&&manifest?.content?.sha256!==sha256(fs.readFileSync(path.join(root,'snapshots/future/content.json'))))throw Error('Watcher snapshot hash mismatch');
+    const fetched=await fetchPublic(API,old?manifest.content:null,fetcher),content=fetched.text?JSON.parse(fetched.text):old;
+    const inventory=inspect?await inspectResources(manifest?.resources??read(root,'snapshots/manifest.json',{resources:{}}).resources,fetcher):{resources:{},warnings:[],budget:{inspected:false},complete:false,entrypointConfirmed:false};
+    const db=read(root,'data/atlas.json'),labels={};for(const k of ['maps','items','dungeons','bosses','mobs','pets','mounts','classes'])for(const row of db?.[k]??[])labels[k+':'+row.id]=row.name;
+    const state=watchContent({content,previous:prior,previousContent:old??read(root,'snapshots/current/content.json'),resources:inventory.resources,now,sourceHash:sha256(JSON.stringify(content)),labels,catalog:read(root,'data/image-catalog.json'),inspection:inventory,activationEvidence:read(root,'data/future-content-evidence.json',{activations:[]}).activations});
+    const report=watcherReport(state),needed=state.changed||prior?.pendingPublication===true,publish=publishEnabled&&needed;state.pendingPublication=!publishEnabled&&needed;
+    save('data/future-content.json',packWatcher(state));save('js/future-content.js',watcherBootstrap(state));save('data/future-image-references.json',imageCollectorReferences(state));save('data/future-notifications.json',queueNotifications(state,read(root,'data/future-notifications.json',{schema:1,pending:[],delivered:[]})));
+    save('reports/future-content.json',report);save('reports/future-content.md',futureMarkdown(report));
+    if(!old||!equal(old,content))save('snapshots/future/content.json',JSON.stringify(content));
+    save('snapshots/future/manifest.json',{schema:1,checkedAt:now,gameVersion:content.version,content:{url:API,sha256:sha256(JSON.stringify(content)),etag:fetched.etag,lastModified:fetched.lastModified},resources:inventory.resources});
+    if(outputFile)fs.appendFileSync(outputFile,'publish='+publish+'\n');return {state,report,publish};
+  }catch(error){for(const [p,bytes] of backup){const file=path.join(root,p);if(bytes===null){if(fs.existsSync(file))fs.unlinkSync(file);}else fs.writeFileSync(file,bytes);}if(outputFile)fs.appendFileSync(outputFile,'publish=false\n');throw error;}
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){const result=await runFutureSync({inspect:!process.argv.includes('--content-only'),publishEnabled:!process.argv.includes('--read-only'),outputFile:process.env.GITHUB_OUTPUT});console.log(JSON.stringify({gameVersion:result.state.gameVersion,publish:result.publish,summary:result.state.summary,counts:result.report.counts,coverage:result.state.coverage}));}

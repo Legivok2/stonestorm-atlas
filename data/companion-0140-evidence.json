@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-24T13:06:26.970Z",
+  "gameVersion": "fbc93606674a",
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/assets/index-B-KQL_s0.js",
+      "sha256": "3f6b20fd9aea509a70c831d071ae179e80e9e6daa72d62cd1facfb8e291db493"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/CharacterPage-B704UG3d.js",
+      "sha256": "10a430d96c4cfed800cfadec074d56470fcf20c717329cbbf3b5608abdbc2b5f"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/GameApp-C3ojBE57.js",
+      "sha256": "446ab10f1a19f446214098cadbd86f25313b732268c181b1cb883826ba01dc51"
+    },
+    {
+      "url": "https://stonestorm.gg/api/content",
+      "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+    }
+  ],
+  "entrypointConfirmed": false,
+  "entrypointBlock": "GET / returned Cloudflare HTTP 403; static public modules and API content returned HTTP 200.",
+  "liveAccountTested": false,
+  "rules": {
+    "critCap": 0.5,
+    "supportCaps": {
+      "vsBoss": 0.35,
+      "potionHeal": 0.25,
+      "skillDamage": 0.5,
+      "critDamage": 0.75,
+      "lifesteal": 0.08,
+      "damageTaken": 0.2
+    },
+    "supportSoft": [
+      "skillDamage",
+      "critDamage",
+      "lifesteal",
+      "damageTaken"
+    ],
+    "monsterEvadeCap": 0.3,
+    "bossEvadeCaps": {
+      "mapBoss": 0.12,
+      "guardian": 0.14,
+      "towerBoss": 0.16
+    }
+  },
+  "contracts": {
+    "criticalChance": "Final value: derived.critChance. The complete raw DEX-share critical formula is not inferred; no guaranteed critical overflow is claimed.",
+    "support": "GameApp uses derived.harceroStats directly when available. Effective support fields and supportRaw remain separate; equipment-only sums are never substituted.",
+    "softCap": "Below cap/2: raw. Above: cap/2 + (cap/2)*(raw-cap/2)/(raw-cap/2+cap/2). Diminishing returns, not a hard clipping loss.",
+    "evade": "GameApp ZS + Ls uses character DEX share, level reference share and derived.evadeBonus. The result is labelled normal reference, never an actual named boss chance.",
+    "rewards": "Effective bonus = (min(2, multiplier-paid+equipmentBonus)+paid-1)*100. Requires explicit paid amounts and XP/Nyang equipment bonus. Audited drop equipment term is zero."
+  },
+  "limitations": [
+    "No authenticated character or gameplay write tested",
+    "Static module availability does not prove the latest root entrypoint",
+    "Missing/changed data hides the affected normal stat",
+    "No automatic equip is advertised as live-proven",
+    "Pet source/model/tooltip remain enabled in normal mode"
+  ]
+}

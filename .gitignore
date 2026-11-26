@@ -18,6 +18,7 @@ __pycache__/
 *.bak
 *.zip
 !downloads/stonestorm-statcap-overlay.zip
+!downloads/stonestorm-companion-0.14.0-beta.zip
 *.har
 *.sqlite*
 *.db

@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T13:23:41.371Z",
+  "scope": "Local implementation and preview only",
+  "gameVersion": "fbc93606674a",
+  "liveCheckedAt": "2026-11-21T13:20:51.422Z",
+  "apiSource": "https://stonestorm.gg/api/content",
+  "apiSnapshotSha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4",
+  "summary": {
+    "maxLevel": 60,
+    "equipmentMaxLevel": 60,
+    "xpEntries": 60,
+    "mapCount": 6,
+    "dungeonCount": 4,
+    "maxMapIndex": 6,
+    "maxTier": 5,
+    "referenceEntries": 60,
+    "baselineMaxLevel": 60
+  },
+  "observations": {
+    "observations": 33844,
+    "potential": 15,
+    "announced": 0,
+    "removed": 0,
+    "newEvents": 0,
+    "importantEvents": 0
+  },
+  "findings": {
+    "disabledFlags": [
+      "bossReact",
+      "webSubscription",
+      "coinMoney",
+      "storeRestore",
+      "rainSack",
+      "partyCode",
+      "musicStream",
+      "patron",
+      "premiumShop",
+      "moonCard",
+      "stormRank",
+      "exitCard",
+      "winbackMail"
+    ],
+    "publicImageReferences": [
+      "https://stonestorm.gg/art/ui/nyang_pile-128.webp?v=b1860c50",
+      "https://stonestorm.gg/landing/mounts/lidercparipa_cut-487.webp?v=d9f5e441"
+    ],
+    "confirmedLevelRaise": false,
+    "officialAnnouncements": 0
+  },
+  "repeatCheck": {
+    "changed": false,
+    "newEvents": 0,
+    "importantEvents": 0,
+    "pendingNotifications": 0
+  },
+  "validation": {
+    "unit": {
+      "command": "npm test",
+      "passed": 147,
+      "failed": 0,
+      "log": ".integration/future-watcher-v1/unit-final.log"
+    },
+    "integration": {
+      "command": "node --test tests/sync-apply.test.mjs tests/image-collector.test.mjs tests/image-manager.test.mjs",
+      "passed": 24,
+      "failed": 0,
+      "log": ".integration/future-watcher-v1/integration.log"
+    },
+    "collectorBridge": {
+      "command": "node --test tests/image-collector.test.mjs",
+      "passed": 18,
+      "failed": 0,
+      "log": ".integration/future-watcher-v1/image-bridge.log"
+    },
+    "checks": [
+      "npm run check",
+      "npm run build:pages",
+      "npm run test:pages",
+      "npm run test:dom",
+      "npm run test:future:browser",
+      "npm run test:design:browser",
+      "node tests/combat-v3-browser.mjs",
+      "npm run audit:publish"
+    ],
+    "browserWidths": [
+      390,
+      1440
+    ],
+    "existingDesignWidths": [
+      375,
+      768,
+      1440
+    ],
+    "screenshots": [
+      ".integration/future-watcher-v1/upcoming-390.png",
+      ".integration/future-watcher-v1/upcoming-1440.png"
+    ]
+  },
+  "delivery": {
+    "preview": "http://localhost:4173/#atlas/upcoming",
+    "previewHttpStatus": 200,
+    "embeddedBrowser": "Unavailable browser access host; local URL and headless browser validation succeeded",
+    "remoteCommit": false,
+    "remotePush": false,
+    "deployed": false,
+    "discordMessagesSent": false,
+    "workflow": "Configured locally; six-hour GitHub execution starts after these changes are published"
+  },
+  "limits": [
+    "Client reference graph remains partial within the request/download budget. Hungarian and English locale evidence were parsed statically.",
+    "No active content is inferred from configuration or images.",
+    "No negative claim about inaccessible announcements."
+  ]
+}

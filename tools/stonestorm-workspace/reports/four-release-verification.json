@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "version": "0.2.0",
+  "at": "2026-11-24T14:36:49.846Z",
+  "unit": {
+    "passed": 9,
+    "total": 9
+  },
+  "localElectron": {
+    "passed": 19,
+    "total": 19,
+    "synthetic": true
+  },
+  "originalHTTPSGame": {
+    "passed": 7,
+    "total": 7,
+    "nativeTabs": [
+      "mine",
+      "smelt",
+      "craft",
+      "master"
+    ],
+    "miningReads": 8,
+    "miningMutations": 0
+  },
+  "packagedStartup": {
+    "panels": 4,
+    "httpStatuses": [
+      200,
+      200,
+      200,
+      200
+    ],
+    "freshProfile": true,
+    "authenticated": false,
+    "sourceMatches": true,
+    "asarFiles": 11
+  },
+  "companionFilesUnchanged": 63,
+  "stockSyncAfterRealMutationVerified": false,
+  "resourceConsumingActionsTested": false,
+  "userAcceptancePending": true,
+  "communityImplemented": false,
+  "pushed": false,
+  "build": {
+    "schema": 1,
+    "at": "2026-11-24T14:34:14.874Z",
+    "version": "0.2.0",
+    "electron": "45.4.1",
+    "executable": "dist\\0.2.0\\StoneStorm Workspace-win32-x64\\StoneStorm Workspace.exe",
+    "executableBytes": 249978880,
+    "executableSha256": "22c47740cef668c1ff70889d6ec088bbb5ac0a64713ba813138d3703c50b84a7",
+    "appAsarSha256": "580081552948582223f490d4e426ba7732aede82ca2849ea7e5773d1c1ee85f5",
+    "fuses": {
+      "0": 48,
+      "1": 48,
+      "2": 48,
+      "3": 48,
+      "4": 48,
+      "5": 49,
+      "6": 48,
+      "7": 49,
+      "8": 49,
+      "version": "1"
+    },
+    "signed": false,
+    "containsUserSession": false
+  }
+}

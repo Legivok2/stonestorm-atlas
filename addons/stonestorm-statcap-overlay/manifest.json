@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Stonestorm Stat Cap Overlay",
-  "version": "0.9.6",
+  "name": "Stonestorm Companion",
+  "version": "0.14.0",
   "author": "Patrik",
-  "description": "Készítette: Patrik. Stonestorm karakteradatok, felszerelés-bónuszok és statlimitek összehasonlítása.",
+  "description": "Stonestorm Companion – karakteradatok, statok, felszereléspresetek, portya-összehasonlítás és kísérőstatisztikák. BETA.",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
@@ -11,7 +11,8 @@
     "128": "icons/icon-128.png"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "scripting"
   ],
   "host_permissions": [
     "https://stonestorm.gg/*"
@@ -22,8 +23,14 @@
         "https://stonestorm.gg/*"
       ],
       "js": [
+        "raid-model.js",
         "pet-data.js",
         "pet-model.js",
+        "equipment-model.js",
+        "equipment-live-model.js",
+        "equipment-data.js",
+        "equipment-reader.js",
+        "equipment-capture.js",
         "capture.js",
         "research-sanitizer.js",
         "research-capture.js"
@@ -36,6 +43,11 @@
         "https://stonestorm.gg/*"
       ],
       "js": [
+        "i18n.js",
+        "companion-design.js",
+        "companion-state.js",
+        "companion-stats.js",
+        "companion-components.js",
         "pet-data.js",
         "pet-model.js",
         "research-sanitizer.js",
@@ -44,13 +56,46 @@
         "research-overlay.js",
         "pet-source.js",
         "pet-tooltip.js",
-        "content.js"
+        "equipment-model.js",
+        "equipment-live-model.js",
+        "equipment-data.js",
+        "equipment-storage.js",
+        "equipment-switcher.js",
+        "companion-equipment-view.js",
+        "equipment-live-client.js",
+        "equipment-ui.js",
+        "raid-model.js",
+        "raid-dom.js",
+        "companion-raid-view.js",
+        "raid-ui.js",
+        "enhanced-ui-config.js",
+        "enhanced-ui.js",
+        "companion-shell.js",
+        "content.js",
+        "home-expanded.js",
+        "mining-multipanel.js"
       ],
-      "run_at": "document_idle"
+      "run_at": "document_idle",
+      "css": [
+        "home-expanded.css",
+        "mining-multipanel.css",
+        "enhanced-ui.css"
+      ]
     }
   ],
   "action": {
-    "default_title": "Atlas anonim export",
+    "default_title": "Stonestorm Companion",
     "default_popup": "research-popup.html"
-  }
+  },
+  "minimum_chrome_version": "106",
+  "background": {
+    "service_worker": "equipment-live-worker.mjs",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["i18n/hu.json", "i18n/en.json"],
+      "matches": ["https://stonestorm.gg/*"]
+    }
+  ]
 }

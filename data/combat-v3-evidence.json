@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-20T20:05:58.950Z",
+  "gameVersion": "fbc93606674a",
+  "source": {
+    "url": "https://stonestorm.gg/api/content",
+    "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+  },
+  "archivedClient": {
+    "url": "https://stonestorm.gg/assets/GameApp-StvnmmXt.js",
+    "sha256": "3a22e9fedd66a52e31eea9adb1abce56172d97e7f66d7ef598129e66047b5b2c",
+    "currentEntrypointConfirmed": false,
+    "fieldTokens": {
+      "supportSoft": false,
+      "critDexShare": false,
+      "vitGrowth": false,
+      "strPierce": false,
+      "reductionCurve": false,
+      "capScale": false,
+      "lowT5": false,
+      "bookGrowth": false,
+      "guardMult": true,
+      "dexShare": false,
+      "pveGuardLimit": false,
+      "spShare": false,
+      "healDecay": false
+    },
+    "conclusion": "Archived module token presence does not prove current use. New combat formulas remain unverified."
+  },
+  "accessWarnings": [
+    {
+      "url": "https://stonestorm.gg/",
+      "reason": "Public entrypoint access challenge; inspection unavailable"
+    }
+  ]
+}

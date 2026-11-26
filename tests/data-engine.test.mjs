@@ -21,12 +21,12 @@ test('Data Engine V2: known numeric updates preserve all unrelated values',()=>{
   const c=structuredClone(content);c.mounts[0].price++;c.forge.plusMult[1]+=.001;
   const p=planEngine(c,state,contracts);assert.equal(p.accepted.length,2);assert.equal(p.review.length,0);
   assert.equal(p.state.branches.mounts.data[0].price,c.mounts[0].price);
-  assert.deepEqual(p.state.branches.pets,state.branches.pets);
+  assert.deepEqual(p.state.branches.pets.data,state.branches.pets.data);assert.equal(p.state.branches.pets.sha256,state.branches.pets.sha256);
   assert.equal(state.branches.mounts.data[0].price,content.mounts[0].price);
 });
 test('Data Engine V2: unknown mechanics, missing records, duplicate IDs, NaN and changed enums are quarantined',()=>{
   for(const mutate of [c=>c.pets.v3.unknownMechanic={amount:1},c=>c.pets.types.pop(),c=>c.pets.types[1].id=c.pets.types[0].id,c=>c.pets.types[0].perLevel.xpMult=NaN,c=>c.pets.v3.forms.slots[4]=5]){
-    const c=structuredClone(content);mutate(c);const p=planEngine(c,state,contracts,{petProof:true});assert(p.review.some(x=>x.path==='/pets'));assert.deepEqual(p.state.branches.pets,state.branches.pets);
+    const c=structuredClone(content);mutate(c);const p=planEngine(c,state,contracts,{petProof:true});assert(p.review.some(x=>x.path==='/pets'));assert.deepEqual(p.state.branches.pets.data,state.branches.pets.data);assert.equal(p.state.branches.pets.sha256,state.branches.pets.sha256);
   }
   const c=structuredClone(content);delete c.forge;assert(planEngine(c,state,contracts).review.some(x=>x.path==='/forge'));
 });

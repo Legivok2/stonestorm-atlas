@@ -24,5 +24,53 @@
     const current=stage(form,system),cost=system.v3.forms.cost[form];
     return current&&cost?{from:current,to:stage(form+1,system),requiredLevel:current.maxLevel,base:{...cost},fallbackCores:1}:null;
   }
-  globalThis.StonestormPets=Object.freeze({stage,formForLevel,normalize,skillDescription,feedPreview,evolution});
+  function verifiedReference(petId,level,system,channel='v3'){
+    if(petId!=='pet_wolf'||!Number.isInteger(level)||level<1)return null;
+    const reference=channel==='spine'?system.spine.reference:system.v3.reference;
+    if(reference?.species!==petId||!Array.isArray(reference.bands))return null;
+    const band=[...reference.bands].reverse().find(b=>level>=b.from);
+    return band?{channel,level,band:{...band,skills:(band.skills??[]).map(skill=>({...skill}))}}:null;
+  }
+  function observedReferencePreset(){
+    return Object.freeze({
+      presetId:'mohaagancs-adult-22',
+      source:'prompt-supplied-observation',
+      liveClientDiscovery:false,
+      petId:'pet_u_wild',
+      petName:'Mohaagancs',
+      rarity:'Mitikus',
+      level:22,
+      form:3,
+      formName:'Felnőtt',
+      formCap:35,
+      label:'Mohaagancs 22 · Adult 22/35',
+      suppliedValues:Object.freeze({
+        level:22,
+        form:3,
+        formCap:35,
+        rarity:'Mitikus',
+        xpBonusPct:12.6,
+        trait:Object.freeze({name:'Rárontás',every:3,percent:57.2}),
+        signature:Object.freeze({skillId:'first_strike',name:'Előcsapás',percent:140}),
+        skills:Object.freeze([
+          Object.freeze({skillId:'crit_dmg',name:'Éles karom',level:5}),
+          Object.freeze({skillId:'shield_open',name:'Nyitópajzs',level:5,percent:18})
+        ]),
+        mastery:Object.freeze({rank:11,max:15})
+      }),
+      trait:Object.freeze({name:'Rárontás',every:3,percent:57.2}),
+      signature:Object.freeze({skillId:'first_strike',name:'Előcsapás',percent:140}),
+      skills:Object.freeze([
+        Object.freeze({skillId:'crit_dmg',name:'Éles karom',level:5}),
+        Object.freeze({skillId:'shield_open',name:'Nyitópajzs',level:5,percent:18})
+      ]),
+      mastery:Object.freeze({rank:11,max:15,rawApiRank:null}),
+      promptReferenceXpBonusPct:12.6,
+      atlasModalDisplayedXpBonusPct:12,
+      verifiedCalculationXpBonusPct:12,
+      notSupplied:['gameVersion','rawApiRankMapping'],
+      caveat:'A részletes értékek a feladatban megadott megfigyelésből származnak; nem élő kliensből függetlenül felfedezett referencia. A Mesterfok és a nyers API-rang közötti kapcsolat nem igazolt.'
+    });
+  }
+  globalThis.StonestormPets=Object.freeze({stage,formForLevel,normalize,skillDescription,feedPreview,evolution,verifiedReference,observedReferencePreset});
 })();

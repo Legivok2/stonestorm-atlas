@@ -3,7 +3,6 @@
   if (window.top !== window || document.getElementById("ss-statcap-root")) return;
 
   const STORAGE_KEY = "stonestormStatCap.v1";
-  const RAID_KEY = "stonestormRaidCalc.v1";
   const POTION_KEY = "stonestormPotionPayments.v1";
   // v3 starts fresh: earlier captures could include unequipped items or false positives.
   const ITEM_KEY = "stonestormEquippedCritDamage.v3";
@@ -15,12 +14,11 @@
     { key: "boots", name: "Csizma" }, { key: "bracelet", name: "Karkötő" },
     { key: "necklace", name: "Nyaklánc" }, { key: "earring", name: "Fülbevaló" }
   ];
-  const raidKinds = [{ key: "short", name: "Rövid", marker: /rövid út/i }, { key: "medium", name: "Közepes", marker: /közepes út/i }, { key: "long", name: "Hosszú", marker: /hosszú út/i }];
   const stats = [
-    { key: "defense", name: "Védelem", cap: 1380, unit: "pont", patterns: [/(?:^|\n)\s*(?:védelem|defense)\s*:?\s*(\d+(?:[,.]\d+)?)(?=\s|$)/im] },
+    { key: "defense", name: "Védelem", cap: null, unit: "pont", patterns: [/(?:^|\n)\s*(?:védelem|defense)\s*:?\s*(\d+(?:[,.]\d+)?)(?=\s|$)/im] },
     { key: "crit", name: "Kritikus esély (érvényes)", cap: 50, source: "Karakter · max. 50%", patterns: [/(?:kritikus esély|critical chance)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
-    { key: "evadeBoss", name: "Kitérés · boss ellen", cap: 12, source: "Összes kitérésből számolva", patterns: [/(?:összes kitérés|total evasion|total evade)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
-    { key: "evadeMob", name: "Kitérés · normál szörny", cap: 35, source: "Összes kitérésből számolva", patterns: [/(?:összes kitérés|total evasion|total evade)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
+    { key: "evadeBoss", name: "Kitérés · harci referencia", cap: 12, source: "Összes kitérésből számolva", patterns: [/(?:összes kitérés|total evasion|total evade)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
+    { key: "evadeMob", name: "Kitérés · normál szörny", cap: 30, source: "Összes kitérésből számolva", patterns: [/(?:összes kitérés|total evasion|total evade)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
     { key: "critDamage", name: "Kritikus sebzésbónusz", cap: 75, source: "Felszerelt itemek összegzője", patterns: [] },
     { key: "skillDamage", name: "Képességsebzés-bónusz", cap: 50, source: "Felszerelt itemek összegzője", patterns: [] },
     { key: "vsBoss", name: "Bossok elleni sebzésbónusz", cap: 35, source: "Content API", patterns: [] },
@@ -30,119 +28,18 @@
     { key: "xp", name: "Összes XP-bónusz", cap: null, source: "Tapasztalat (összesen)", patterns: [/(?:összes xp.bónusz|xp.bónusz|xp bonus)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] },
     { key: "nyang", name: "Összes nyangbónusz", cap: null, source: "Nyang (összesen)", patterns: [/(?:összes nyangbónusz|nyangbónusz|nyang bonus)\s*[:+]?\s*(\d+(?:[,.]\d+)?)\s*%/i] }
   ];
-  const state = { visible: false, manual: {}, detected: {}, updated: null, defenseReduction: null, raids: {}, raidManual: {}, itemCrit: null, itemCritSeenAt: 0, critFromItem: false, aggregateXp: false, aggregateNyang: false, equipped: {}, skillEquipped: {}, critChanceEquipped: {}, itemLineTotals: {}, totals: {}, baseStats: {}, changes: [], apiReady: false, apiEquipmentComplete: false, apiItemCount: 0, apiCharacter: null, apiContent: null, panelWidth: 430, panelHeight: 590, maximized: false, panelLeft: null, panelTop: null, resizing: false, openSections: {}, debugVisible: false, potionPayments: {} };
-  const root = document.createElement("div");
-  root.id = "ss-statcap-root";
-  root.style.cssText = "position:fixed;bottom:16px;right:16px;z-index:2147483647;pointer-events:none";
-  const shadow = root.attachShadow({ mode: "closed" });
+  const state = { visible: false, manual: {}, detected: {}, updated: null, defenseReduction: null, itemCrit: null, itemCritSeenAt: 0, critFromItem: false, aggregateXp: false, aggregateNyang: false, equipped: {}, skillEquipped: {}, critChanceEquipped: {}, itemLineTotals: {}, totals: {}, baseStats: {}, changes: [], apiReady: false, apiEquipmentComplete: false, apiItemCount: 0, apiCharacter: null, apiContent: null, panelWidth: 430, panelHeight: 590, maximized: false, panelLeft: null, panelTop: null, resizing: false, openSections: {}, debugVisible: false, potionPayments: {} };
+  const root = document.createElement("div");root.id="ss-statcap-root";
+  const shadow=root.attachShadow({mode:"closed"}),wrap=document.createElement("div");wrap.className="wrap";shadow.append(wrap);document.documentElement.append(root);
+  const companion=globalThis.StonestormCompanion.mount({root,shadow,wrap,onVisibility(visible,mode){state.visible=visible;state.maximized=mode==='full';}});
+  globalThis.StonestormCompanionApp=companion;
+  chrome.runtime.onMessage.addListener((message,sender,reply)=>{if(message?.type!=='ssa-companion-open'||sender.id!==chrome.runtime.id)return false;const pages=StonestormCompanionState.visibleTabs(companion.preferences());if(!pages.includes(message.page))return false;companion.select(message.page);reply({ok:true});return false;});
   globalThis.StonestormAddonPanels?.attach(shadow);
-  document.documentElement.append(root);
-
-  const style = document.createElement("style");
-  style.textContent = `
-    :host{all:initial} *{box-sizing:border-box}
-    .wrap{font:13px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;color:#f6ead4;pointer-events:auto}
-    button,input{font:inherit} button{cursor:pointer}
-    .toggle{float:right;background:#21170f;color:#f6d996;border:1px solid #bd9248;border-radius:14px;padding:10px 14px;box-shadow:0 4px 22px #0009;font-weight:750}
-    .toggle:focus-visible,.head button:focus-visible,input:focus-visible{outline:2px solid #f5d37a;outline-offset:2px}
-    .panel{clear:both;min-width:min(330px,calc(100vw - 32px));min-height:230px;max-width:calc(100vw - 32px);max-height:calc(100vh - 110px);overflow:auto;resize:none;container-type:inline-size;background:linear-gradient(155deg,#231b18,#111723);border:1px solid #987242;border-radius:16px;box-shadow:0 12px 38px #000c;margin-bottom:8px;touch-action:auto}
-    .panel{scrollbar-width:thin;scrollbar-color:#b38a4d #19181d;scrollbar-gutter:stable}
-    .panel::-webkit-scrollbar{width:10px;height:10px}.panel::-webkit-scrollbar-track{background:#19181d;border-radius:10px}.panel::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#c49a58,#7b572f);border:2px solid #19181d;border-radius:10px}.panel::-webkit-scrollbar-thumb:hover{background:#e0b56a}
-    .panel.maximized{resize:none}.panel-content{display:block}.left-col,.right-col{min-width:0}
-    @container (min-width:720px){.panel-content{display:grid;grid-template-columns:minmax(290px,1fr) minmax(340px,1.1fr)}.right-col{border-left:1px solid #796344}.left-col .list{padding:10px 16px}}
-    @container (min-width:1200px){.unified-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:11px}.unified-row{padding:12px;border:1px solid #574832;border-radius:10px;background:#19191e;min-height:90px}.unified-row:last-child{border-bottom:1px solid #574832}.unified>.tracking-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .head{padding:15px;border-bottom:1px solid #5b4734;display:flex;justify-content:space-between;gap:12px;align-items:start}
-    h2{font-size:16px;margin:0;color:#f5ce7e} .subtitle{color:#c7bba6;font-size:11px;margin:3px 0 0}
-    .head button{color:#e9d6b5;background:transparent;border:1px solid #826743;border-radius:8px;padding:4px 8px}.head-actions{display:flex;gap:6px;white-space:nowrap}
-    .list{padding:9px 12px 4px} .stat{padding:10px 0;border-bottom:1px solid #493c38}
-    .stat-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-    .name{font-size:12px;font-weight:700} .badge{color:#111;border-radius:5px;background:#dfc07d;padding:2px 5px;font-size:10px;white-space:nowrap}
-    .badge.unknown{background:#67717d;color:#fff}
-    .stat-mid{display:flex;gap:10px;align-items:center;margin-top:6px}
-    input{width:78px;background:#121721;color:#fff3d7;border:1px solid #6f5a43;border-radius:7px;padding:5px 7px;min-width:0}
-    .meter{flex:1;height:9px;background:#11131b;border:1px solid #625546;border-radius:9px;overflow:hidden}
-    .fill{height:100%;background:linear-gradient(90deg,#4d9e79,#ebc36a);border-radius:9px}
-    .fill.over{background:linear-gradient(90deg,#c59c54,#dd685d)}
-    .meta{color:#c4bba9;font-size:11px;margin-top:5px;display:flex;justify-content:space-between;gap:8px}
-    .warning{color:#ffa395} .footer{padding:11px 13px;font-size:11px;color:#c7bca9}
-    .reset{background:#332c28;border:1px solid #836e4b;color:#f7dfa4;border-radius:8px;padding:6px 9px;margin-top:8px}
-    .hidden{display:none} .small{opacity:.8} .legend{padding:8px 13px;background:#151a22;color:#bfb6a9;font-size:11px}
-    .raid-section{border-top:1px solid #97764d;padding:13px}.raid-title{color:#f5ce7e;font-weight:800;font-size:15px;margin-bottom:5px}
-    .raid-table{width:100%;border-collapse:collapse;font-size:11px}.raid-table th,.raid-table td{padding:5px 3px;text-align:right;border-bottom:1px solid #514337}.raid-table th:first-child,.raid-table td:first-child{text-align:left}
-    .raid-table input{width:55px;padding:4px 2px;text-align:right}.raid-best{color:#79e0a9;font-weight:bold}.raid-note{font-size:11px;color:#c7bca9;margin-top:8px}
-    .equip-section{border-top:1px solid #97764d;padding:13px}.equip-row{display:grid;grid-template-columns:minmax(70px,1fr) repeat(3,minmax(48px,90px));align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid #514337;max-width:680px}
-    .equip-label{font-size:11px;min-width:0}.equip-row input{width:100%}.equip-row button{background:#31291f;color:#f4db9f;border:1px solid #8a7049;border-radius:7px;padding:5px;font-size:10px}
-    .equip-summary{color:#82e6ad;font-weight:750;margin:8px 0}.equip-hint{font-size:11px;color:#c9bda9}
-    .tracking{padding:12px 14px;border-bottom:1px solid #796344}.tracking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-    .tracking-cell{background:#151922;border:1px solid #423b34;border-radius:7px;padding:7px;font-size:11px}.tracking-cell b{display:block;color:#f8d995;font-size:14px}
-    .delta-up{color:#79e0a9}.delta-down{color:#ff8883}.delta-list{display:grid;gap:4px;font-size:11px;margin-top:7px}
-    .summary-note{color:#cbbfae;font-size:11px;margin:7px 0}
-    .source-chip{color:#8de3b3;font-weight:750}.known-stat{color:#f0cf7b;font-weight:750}
-    .source-table{width:100%;border-collapse:collapse;font-size:11px}.source-table th,.source-table td{border-bottom:1px solid #4b4038;padding:4px;text-align:left;vertical-align:top}.source-table td:last-child{text-align:right;font-variant-numeric:tabular-nums}.source-note{font-size:11px;color:#beae96}
-    .unified{padding:12px 14px}.unified-row{padding:9px 0;border-bottom:1px solid #4f4238}.unified-row:last-child{border-bottom:0}.unified-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:700}.unified-top b{color:#f5d17d;font-size:16px;white-space:nowrap}.unified-info{font-size:11px;color:#cdbfa7;margin-top:3px}.unified-warn{color:#ff9d8e}.unified-good{color:#82e6ad}.summary-fold{margin:8px 12px;border:1px solid #756144;border-radius:9px;overflow:hidden}.summary-fold>summary{cursor:pointer;background:#272017;color:#f0cc85;font-weight:750;padding:9px 12px}.summary-fold[open]>summary{border-bottom:1px solid #756144}
-    .stat-detail{margin-top:6px}.stat-detail>summary{cursor:pointer;color:#ecc985;font-size:11px;list-style-position:inside}.stat-detail[open]{border-top:1px dashed #66543a;padding-top:6px}.stat-sources{padding:5px 0 3px 12px;font-size:11px;color:#cdbfa7}.stat-sources>div{padding:2px 0}.debug-tools{padding:8px 12px;border-top:1px solid #5b4734}.debug-tools>button{background:transparent;border:0;color:#bbaa8a;font-size:11px;text-decoration:underline}.debug-content{padding:2px 0 10px}.debug-content .summary-fold{margin:8px 0}.raid-section{border-top:0}
-    .potion-choice{margin-top:7px;padding:8px;background:#29221b;border:1px solid #8a7049;border-radius:8px;font-size:11px}.potion-choice select{max-width:100%;margin-top:4px;background:#121721;color:#f8d995;border:1px solid #8a7049;padding:5px;border-radius:6px}
-    @media(max-width:480px){.panel{max-height:75vh}.toggle{padding:9px 11px}}
-  `;
-  shadow.append(style);
-  const wrap = document.createElement("div");
-  wrap.className = "wrap";
-  shadow.append(wrap);
-  const sizeObserver = new ResizeObserver(entries => {
-    if (state.maximized || state.resizing || !state.visible || !entries.length) return;
-    const rect = entries[0].target.getBoundingClientRect();
-    if (rect.width >= 330) state.panelWidth = Math.round(rect.width);
-    if (rect.height >= 230) state.panelHeight = Math.round(rect.height);
-  });
-  function edgeAt(event, rect) {
-    const margin = 12;
-    const horizontal = event.clientX - rect.left < margin ? "w" : rect.right - event.clientX < margin ? "e" : "";
-    const vertical = event.clientY - rect.top < margin ? "n" : rect.bottom - event.clientY < margin ? "s" : "";
-    return vertical + horizontal;
-  }
-  const resizeCursors = { n: "ns-resize", s: "ns-resize", e: "ew-resize", w: "ew-resize", nw: "nwse-resize", se: "nwse-resize", ne: "nesw-resize", sw: "nesw-resize" };
-  let resizeStart = null;
-  wrap.addEventListener("pointermove", event => {
-    if (resizeStart || state.maximized || !state.visible) return;
-    const panel = wrap.querySelector(".panel");
-    if (!panel || !panel.contains(event.target)) return;
-    panel.style.cursor = resizeCursors[edgeAt(event, panel.getBoundingClientRect())] || "";
-  }, true);
-  wrap.addEventListener("pointerdown", event => {
-    if (state.maximized || !state.visible || event.button !== 0) return;
-    const panel = wrap.querySelector(".panel");
-    if (!panel || !panel.contains(event.target)) return;
-    const rect = panel.getBoundingClientRect();
-    const edge = edgeAt(event, rect);
-    if (!edge) return;
-    event.preventDefault(); event.stopPropagation();
-    resizeStart = { edge, x: event.clientX, y: event.clientY, left: rect.left, top: rect.top, width: rect.width, height: rect.height };
-    state.resizing = true;
-  }, true);
-  window.addEventListener("pointermove", event => {
-    if (!resizeStart) return;
-    const a = resizeStart, dx = event.clientX - a.x, dy = event.clientY - a.y;
-    const minW = Math.min(330, window.innerWidth - 32), minH = 230;
-    const maxW = window.innerWidth - 32, maxH = window.innerHeight - 110;
-    const w = Math.min(maxW, Math.max(minW, a.width + (a.edge.includes("e") ? dx : a.edge.includes("w") ? -dx : 0)));
-    const h = Math.min(maxH, Math.max(minH, a.height + (a.edge.includes("s") ? dy : a.edge.includes("n") ? -dy : 0)));
-    const left = Math.min(window.innerWidth - w - 16, Math.max(16, a.left + (a.edge.includes("w") ? a.width - w : 0)));
-    const top = Math.min(window.innerHeight - h - 58, Math.max(16, a.top + (a.edge.includes("n") ? a.height - h : 0)));
-    const panel = wrap.querySelector(".panel");
-    if (panel) { panel.style.width = `${w}px`; panel.style.height = `${h}px`; }
-    state.panelWidth = w; state.panelHeight = h; state.panelLeft = left; state.panelTop = top;
-    root.style.left = `${left}px`; root.style.top = `${top}px`;
-    root.style.right = "auto"; root.style.bottom = "auto";
-  }, true);
-  window.addEventListener("pointerup", () => { resizeStart = null; state.resizing = false; });
+  globalThis.StonestormEquipmentUI?.attach(shadow);
+  globalThis.StonestormRaidUI?.attach(shadow);
+  globalThis.StonestormEnhancedUI?.attach(shadow);
 
   const format = n => Number(n).toLocaleString("hu-HU", { maximumFractionDigits: 2 });
-  const parseReward = value => {
-    if (!value) return null;
-    const m = String(value).trim().replace(/\s/g, "").match(/^(\d+(?:[,.]\d+)?)([kKmM])?$/);
-    if (!m) return null;
-    return Number(m[1].replace(",", ".")) * (m[2]?.toLowerCase() === "k" ? 1000 : m[2]?.toLowerCase() === "m" ? 1000000 : 1);
-  };
   const parse = input => {
     const n = Number(String(input).trim().replace(",", "."));
     return Number.isFinite(n) && n >= 0 ? n : null;
@@ -197,6 +94,8 @@
       for (const key of ["vsBoss", "potionHeal", "lifesteal", "damageTaken"]) if (isNumber(payload.supportCaps[key])) stats.find(s => s.key === key).cap = payload.supportCaps[key] * 100;
       readApiEquipment();
     } else if (event.data.kind === "character" && Array.isArray(payload.items) && payload.stats && payload.derived) {
+      state.apiSeenAt=Date.now();state.bonusPanel={values:{},at:0};
+      clearTimeout(state.expiryTimer);state.expiryTimer=setTimeout(()=>render(),300010);
       state.apiReady = true;
       state.apiCharacter = payload;
       for (const [key, v] of Object.entries(payload.stats)) if (isNumber(v)) {
@@ -273,27 +172,10 @@
     const fields = [["HP", state.totals.hp], ["SP", state.totals.sp], ["Sebzés", state.totals.damageMin !== undefined && state.totals.damageMax !== undefined ? `${format(state.totals.damageMin)}–${format(state.totals.damageMax)}` : null], ["Védelem", state.totals.defense], ["Harcerő", state.totals.power], ["Erő", state.baseStats.str], ["Ügyesség", state.baseStats.dex], ["Életerő", state.baseStats.vit], ["Intelligencia", state.baseStats.int]];
     const cells = fields.map(([label, value]) => `<div class="tracking-cell">${label}<b>${value !== null && value !== undefined ? typeof value === "number" ? format(value) : value : "–"}</b></div>`).join("");
     const changes = state.changes.slice(0, 8).map(c => `<div class="${c.delta > 0 ? "delta-up" : "delta-down"}">${c.delta > 0 ? "▲" : "▼"} ${c.label}: ${c.delta > 0 ? "+" : ""}${format(c.delta)}</div>`).join("");
-    const itemCritChance = Object.values(state.critChanceEquipped).reduce((sum, n) => sum + (Number.isFinite(n) ? n : 0), 0);
-    const hero = state.apiContent?.hero;
-    const exactRule = isNumber(hero?.critPerDex) && isNumber(hero?.critBase);
-    const dexCrit = isNumber(state.baseStats.dex) && exactRule ? state.baseStats.dex * hero.critPerDex * 100 : null;
-    const baseCrit = exactRule ? hero.critBase * 100 : null;
-    const critModSources = (state.apiCharacter?.modSources || []).map(source => {
-      if (/(?:equipment|gear|item|felszerel)/i.test(source.source || "")) return null; // Already summed from equipped items.
-      const effect = source.effect || {};
-      const v = effect.critBonus ?? effect.critChanceBonus ?? effect.criticalChanceBonus;
-      return isNumber(v) && Math.abs(v) <= 1 ? { source: source.source || "Egyéb", pct: v * 100 } : null;
-    }).filter(Boolean);
-    const bonusCrit = critModSources.reduce((sum, source) => sum + source.pct, 0);
-    const knownRawCrit = itemCritChance + (dexCrit || 0) + (baseCrit || 0) + bonusCrit;
     const observedCrit = state.apiCharacter?.derived?.critChance;
-    const capped = isNumber(observedCrit) && observedCrit >= (state.apiContent?.critCap ?? 0.5) - 0.00001;
-    const minimum = capped ? Math.max(50, knownRawCrit) : knownRawCrit;
-    const critLabel = state.apiReady && exactRule ? `${capped ? "legalább " : "ismert források: "}${format(minimum)}%` : "–";
-    const over = minimum > 50 ? `Legalább ${format(minimum - 50)} százalékpont a cap felett.` : capped ? "A kijelzett 50% capelt; a tényleges túllépés még nem ismert." : "A teljes nyers értékhez minden egyéb bónuszforrást is ellenőrizni kell.";
     const origin = state.apiReady ? `<span class="source-chip">● Character API: ${state.apiItemCount}/8 felszerelt tárgy</span>` : `<span class="warning">A Character API még nem érkezett meg. Frissítsd a játékot (F5).</span>`;
-    const extra = critModSources.length ? ` · azonosított egyéb források: ${critModSources.map(x=>`${escapeHtml(x.source)} ${x.pct >= 0 ? "+" : ""}${format(x.pct)}%`).join(", ")}` : "";
-    const summary = state.apiReady && exactRule ? `Kiolvasott itemek: +${format(itemCritChance)}% · alap: +${format(baseCrit)}% · ${format(state.baseStats.dex)} DEX × ${format(hero.critPerDex * 100)}% = +${format(dexCrit)}%${extra}. Az ismert források összege: <b>${format(knownRawCrit)}%</b>. Nem feltétlenül a teljes nyers stat. ${over}` : "A teljes számításhoz a Character és Content API-válasz szükséges; a kijelzett 50% már limitált érték.";
+    const critLabel = "Nem igazolt";
+    const summary = "A megváltozott DEX-arányos képlet nincs aktuális klienssel igazolva. A végső kritikus esélyt a Character API-ból olvassuk ki; a nyers összegből és a plafonból nem következtetünk biztos túllépésre.";
     return `<section class="tracking"><div class="raid-title">📊 Karakteráttekintés</div><div class="summary-note">${origin}</div><div class="tracking-grid">${cells}<div class="tracking-cell">Kritikus esély (nyers)<b class="known-stat">${critLabel}</b></div><div class="tracking-cell">Kritikus esély (érvényes)<b>${isNumber(observedCrit) ? `${format(observedCrit * 100)}%` : "–"}</b></div></div><div class="summary-note">${summary}</div><div class="raid-title">🔄 Legutóbbi változások</div><div class="delta-list">${changes || "Még nem észleltünk statváltozást ezen az oldalon."}</div></section>`;
   }
   function rewardBreakdown(key) {
@@ -336,17 +218,25 @@
       const description = effects.map(([name, value]) => `${name.endsWith("Mult") ? "+" + format(value * 100) : "+" + format(value * 100)}%`).join(" · ");
       rows.push(`${escapeHtml(item.source || "Egyéb forrás")}: ${description}`);
     }
-    if (key === "crit" && isNumber(state.baseStats.dex) && isNumber(state.apiContent?.hero?.critPerDex)) rows.push(`Ügyesség: ${format(state.baseStats.dex)} DEX × ${format(state.apiContent.hero.critPerDex * 100)}%`);
+
     if (key === "critDamage" || key === "skillDamage") rows.push("A felszerelésből ismert érték részleges lehet.");
     return `<details class="stat-detail" data-section="stat-${key}" ${state.openSections[`stat-${key}`] ? "open" : ""}><summary>Honnan jön ez az érték?</summary><div class="stat-sources">${rows.length ? rows.map(text => `<div>${text}</div>`).join("") : "Még nincs részletes forrásadat."}</div></details>`;
   }
-  function mainDashboard() {
+  const softLimited = key => (state.apiContent?.supportSoft ?? ["skillDamage", "critDamage", "lifesteal", "damageTaken"]).includes(key);
+  function panelValue(key) {
+    return state.bonusPanel && Date.now() - state.bonusPanel.at < 15000 ? state.bonusPanel.values[key] : null;
+  }
+  function statSummary() {
     const api = state.apiCharacter;
     const limited = (label, raw, cap, info = "") => {
       const has = isNumber(raw);
       const excess = has && isNumber(cap) ? Math.max(0, raw - cap) : 0;
       const effectiveValue = has ? Math.min(raw, cap ?? raw) : null;
       const key = label === "Kritikus esély" ? "crit" : label === "Kritikus sebzésbónusz" ? "critDamage" : "skillDamage";
+      if (softLimited(key)) {
+        const observed = panelValue(key);
+        return `<div class="unified-row"><div class="unified-top"><span>${label}</span><b>${isNumber(observed) ? format(observed) + "% · játékpanel" : "Soft-cap: nem igazolt"}</b></div><div class="unified-info">Nyers, ismert rész: ${has ? format(raw) + "%" : "–"} · felső korlát: ${format(cap)}%. A módosított értékhez friss kliensbizonyíték vagy a Bónuszok panel adata szükséges.</div>${statSources(key)}</div>`;
+      }
       return `<div class="unified-row"><div class="unified-top"><span>${label}</span><b>${has ? `${format(effectiveValue)}%` : "–"}</b></div><div class="unified-info">${has ? `Ismert összeg: +${format(raw)}%` : "Nincs még teljes adat"}${isNumber(cap) ? ` · cap: ${format(cap)}%` : ""}${excess ? ` · <span class="unified-warn">legalább ${format(excess)} százalékpont túllépés</span>` : ""}${info ? ` · ${info}` : ""}</div>${statSources(key)}</div>`;
     };
     const reward = (key, label) => {
@@ -356,19 +246,10 @@
       const caveat = r.ambiguousPotions.map(p => `<div class="potion-choice">Aktív ${escapeHtml(p.kind)} (+${format(p.percent)}%) – mivel vetted?<select data-potion="${escapeHtml(p.id)}"><option value="">Válaszd ki…</option><option value="nyang">Nyangért (100%-on belül)</option><option value="coin">Storm Coinért (plafon fölött)</option></select></div>`).join("");
       return `<div class="unified-row"><div class="unified-top"><span>${label}</span><b>+${format(r.effective)}%${caveat ? "*" : ""}</b></div><div class="unified-info">Ingyenes: +${format(r.free)}% / 100% · fizetős: +${format(r.paid)}% · nyers: +${format(r.raw)}% · jelenlegi plafon: +${format(r.knownCap)}% (abszolút max. 150%). ${capText}${caveat ? " A * jelű érték a főzet eredetének megadásáig nem végleges." : ""}</div>${caveat}${statSources(key)}</div>`;
     };
-    const critSources = (api?.modSources || []).filter(x => !/(?:equipment|gear|item|felszerel)/i.test(x.source || "")).reduce((sum, source) => {
-      const value = source.effect?.critBonus ?? source.effect?.critChanceBonus ?? source.effect?.criticalChanceBonus;
-      return sum + (isNumber(value) && Math.abs(value) <= 1 ? value * 100 : 0);
-    }, 0);
-    const gearCrit = Object.values(state.critChanceEquipped).reduce((sum, n) => sum + (isNumber(n) ? n : 0), 0);
-    const hero = state.apiContent?.hero;
-    const hasCritFormula = isNumber(hero?.critBase) && isNumber(hero?.critPerDex) && isNumber(state.baseStats.dex);
-    const critRaw = hasCritFormula ? hero.critBase * 100 + hero.critPerDex * state.baseStats.dex * 100 + gearCrit + critSources : null;
-    const cappedCrit = api?.derived?.critChance === 0.5;
-    const critMin = isNumber(critRaw) ? Math.max(cappedCrit ? 50 : 0, critRaw) : null;
-    const critNote = isNumber(critRaw) ? `Azonosított nyers források: ${format(critRaw)}%. ${cappedCrit && critRaw < 50 ? "A játék 50%-ot ad vissza, tehát további forrás hiányzik." : ""}` : "A nyers számítás még hiányos.";
-    const character = api ? `<div class="tracking-grid">${[["HP",api.derived.maxHp],["SP",api.derived.maxSp],["Sebzés",`${format(api.derived.atkMin)}–${format(api.derived.atkMax)}`],["Védelem",api.derived.def],["Harcerő",api.harcero.full],["Kaszt",api.classId || "–"]].map(([label,value])=>`<div class="tracking-cell">${label}<b>${typeof value === "number" ? format(value) : escapeHtml(value ?? "–")}</b></div>`).join("")}</div>` : '<div class="source-note">Játékadatokra várunk; frissítsd az oldalt (F5).</div>';
-    return `<section class="unified"><div class="raid-title">📊 Összesített statok</div>${character}<div class="source-note">Minden stat egy helyen. A részletes eredetek és szerkeszthető mezők lent külön lenyithatók.</div><div class="unified-results">${reward("xp","Tapasztalat")}${reward("nyang","Nyang")}${reward("drop","Zsákmány")}${limited("Kritikus esély",critMin,50,critNote)}${limited("Kritikus sebzésbónusz",state.apiReady ? equippedTotal() : null,75,"Felszerelésből ismert rész")}${limited("Képesség-sebzésbónusz",state.apiReady ? skillTotal() : null,50,"Felszerelésből ismert rész")}</div></section>`;
+    const critMin = isNumber(api?.derived?.critChance) ? api.derived.critChance * 100 : panelValue("crit");
+    const critNote = "A Character API vagy a Bónuszok panel értéke. A nyers DEX-átváltás új képlete még nem igazolt." + (isNumber(panelValue("crit")) ? " Bónuszok panel ellenőrzés: " + format(panelValue("crit")) + "%" + (Math.abs(panelValue("crit") - critMin) > .01 ? " · eltérés a Character API-hoz képest" : "") : "");
+    const character = api ? `<div class="tracking-grid">${[["HP",api.derived.maxHp],["SP",api.derived.maxSp],["Sebzés",`${format(api.derived.atkMin)}–${format(api.derived.atkMax)}`],["Védelem",api.derived.def],["Harcerő",api.harcero?.full],["Kaszt",api.classId || "–"]].map(([label,value])=>`<div class="tracking-cell">${label}<b>${typeof value === "number" ? format(value) : escapeHtml(value ?? "–")}</b></div>`).join("")}</div>` : '<div class="source-note">Játékadatokra várunk; frissítsd az oldalt (F5).</div>';
+    return `<section class="unified"><div class="raid-title">📊 Összesített statok</div>${character}<div class="source-note">Minden stat egy helyen. A részletes eredetek és szerkeszthető mezők lent külön lenyithatók.</div><div class="unified-results">${reward("xp","Tapasztalat")}${reward("nyang","Nyang")}${reward("drop","Zsákmány")}${limited("Kritikus esély",critMin,stats.find(s => s.key === "crit").cap,critNote)}${limited("Kritikus sebzésbónusz",state.apiReady ? equippedTotal() : null,stats.find(s => s.key === "critDamage").cap,"Felszerelésből ismert rész")}${limited("Képesség-sebzésbónusz",state.apiReady ? skillTotal() : null,stats.find(s => s.key === "skillDamage").cap,"Felszerelésből ismert rész")}</div></section>`;
   }
   const equippedEntries = () => Object.values(state.equipped).filter(n => typeof n === "number" && Number.isFinite(n) && n >= 0);
   const equippedTotal = () => equippedEntries().reduce((a, b) => a + b, 0);
@@ -378,30 +259,19 @@
   const row = s => {
     const value = effective(s);
     const known = value !== null;
+    const soft = softLimited(s.key), observed = panelValue(s.key);
     const applied = !known ? null : s.cap === null ? value : Math.min(s.cap, value);
     const excess = !known || s.cap === null ? 0 : Math.max(0, value - s.cap);
     const manual = Object.prototype.hasOwnProperty.call(state.manual, s.key);
     const unit = s.unit === "pont" ? " pont" : "%";
     const partial = state.apiReady && ["critDamage","skillDamage","vsBoss","potionHeal","lifesteal","damageTaken"].includes(s.key) && !manual;
+    if (soft) return `<div class="stat"><div class="stat-top"><span class="name">${s.name}</span>${badge(s)}</div><div class="meta">Nyers ismert rész: ${known ? format(value) + unit : "–"} · ${isNumber(observed) ? "Bónuszok panel: " + format(observed) + unit : "Módosított érték: még nem igazolt"}</div></div>`;
     return `<div class="stat"><div class="stat-top"><span class="name">${s.name}</span>${badge(s)}</div>
       <div class="stat-mid"><input aria-label="${s.name} értéke" data-stat="${s.key}" inputmode="decimal" placeholder="–" value="${known ? String(value) : ""}" />
       <div class="meter"><div class="fill ${excess > 0 ? "over" : ""}" style="width:${known ? Math.min(100, 100 * applied / (s.cap ?? Math.max(value, 1))) : 0}%"></div></div></div>
       <div class="meta"><span>${known ? `${partial ? "Felszerelésből ismert rész" : "Érvényes / kiolvasott"}: ${format(applied)}${unit}` : "Nincs kiolvasott érték"}${manual ? " · kézi" : known ? " · kiolvasott" : ""}</span><span class="${excess ? "warning" : ""}">${excess ? `Biztos túllépés: ${format(excess)}${unit}` : s.cap === null ? "Nincs ismert cap" : ""}</span></div>${s.key === "critDamage" && state.critFromItem && !manual && !equippedEntries().length ? '<div class="meta warning">Csak egy megfigyelt tárgy, nem a teljes felszerelés.</div>' : ""}${s.key === "defense" ? `<div class="meta">${state.defenseReduction !== null ? `Súgó szerinti csökkentés: ${format(state.defenseReduction)}% / 75%` : "A pontos csökkentéshez nyisd meg a Védelem súgóját."}</div>` : ""}</div>`;
   };
-  const raidValue = (key, field) => state.raidManual[key]?.[field] ?? state.raids[key]?.[field] ?? null;
-  function raidPanel() {
-    const available = raidKinds.map(k => ({ ...k, energy: raidValue(k.key, "energy"), xp: raidValue(k.key, "xp"), nyang: raidValue(k.key, "nyang") }));
-    const topXp = Math.max(0, ...available.filter(r => r.energy > 0 && r.xp !== null).map(r => r.xp / r.energy));
-    const topNyang = Math.max(0, ...available.filter(r => r.energy > 0 && r.nyang !== null).map(r => r.nyang / r.energy));
-    const body = available.map(r => {
-      const xpPer = r.energy > 0 && r.xp !== null ? r.xp / r.energy : null;
-      const nyangPer = r.energy > 0 && r.nyang !== null ? r.nyang / r.energy : null;
-      const inputs = ["energy", "xp", "nyang"].map(f => `<td><input data-raid="${r.key}" data-field="${f}" title="${f}: az XP/nyang teljes érték legyen, pl. 87500" value="${state.raidManual[r.key]?.[f] ?? state.raids[r.key]?.[f] ?? ""}" placeholder="–"></td>`).join("");
-      return `<tr><td>${r.name}</td>${inputs}</tr><tr><td>1 energiára</td><td>—</td><td class="${xpPer !== null && xpPer === topXp ? "raid-best" : ""}">${xpPer !== null ? format(xpPer) : "–"}</td><td class="${nyangPer !== null && nyangPer === topNyang ? "raid-best" : ""}">${nyangPer !== null ? format(nyangPer) : "–"}</td></tr>`;
-    }).join("");
-    const detected = Object.keys(state.raids).length;
-    return `<section class="raid-section"><div class="raid-title">🏹 Portya összehasonlító</div><div class="raid-note">${detected ? `Automatikusan felismert utak: ${detected}/3.` : "Nyisd meg a Vadászat → Portyák oldalt az automatikus kiolvasáshoz."} A zöld szám a legjobb hozam/energia.</div><table class="raid-table"><thead><tr><th>Út</th><th>Energia</th><th>XP</th><th>Nyang</th></tr></thead><tbody>${body}</tbody></table><div class="raid-note">A mezők kézzel felülírhatók. Az XP és nyang értékét teljes számmal add meg (pl. 87500). A portya időtartamát nem veszi figyelembe a rangsor.</div><button class="reset" data-raid-reset>Kézi portyaadatok törlése</button></section>`;
-  }
+  function raidPanel() { return '<section data-ssa-raid-panel></section>'; }
   function equipmentPanel() {
     const count = state.apiReady ? state.apiItemCount : equippedEntries().length;
     const total = equippedTotal();
@@ -417,44 +287,19 @@
     const sourceRows = sources.filter(item => Object.keys(item.effect || {}).length).slice(0, 30).map(item => `<tr><td>${escapeHtml(item.source || "Egyéb forrás")}</td><td>${Object.entries(item.effect).map(([key, val]) => `${escapeHtml(display[key] || key)} ${escapeHtml(formatEffect(key, val))}`).join(" · ")}</td></tr>`).join("");
     return `<section class="equip-section"><div class="raid-title">✨ Bónuszok és források</div><div class="source-note">${state.apiReady ? `Character API: ${sources.length} bónuszforrás. A játék szerinti módosítókat mutatjuk, nem egy második, esetleg duplán számolt összegzést.` : "Az adatok a játék első Character API-kérésével érkeznek. Ha itt nincs adat, frissítsd az oldalt."}</div><details><summary>Összesített API-módosítók (${Object.keys(mods).length})</summary><table class="source-table"><tbody>${totalRows || '<tr><td>Még nincs adat</td></tr>'}</tbody></table></details><details><summary>Részletes források (${sources.length})</summary><table class="source-table"><tbody>${sourceRows || '<tr><td>Még nincs adat</td></tr>'}</tbody></table></details><div class="source-note">A bónuszlap képei szerint az XP/nyang/zsákmány alap plafonja +100%, külön vásárolt rész viheti tovább; a támadás, védelem és életerő bónuszplafonja +50%. Ezeket még ellenőrizni kell az API képletével, ezért a hiányzó nyers értékre nem írunk kitalált túllépést.</div></section>`;
   }
-  function render() {
-    sizeObserver.disconnect();
-    const width = state.maximized ? "calc(100vw - 32px)" : `${state.panelWidth}px`;
-    const height = state.maximized ? "calc(100vh - 110px)" : `${state.panelHeight}px`;
-    wrap.innerHTML = `<div class="${state.visible ? "" : "hidden"} panel ${state.maximized ? "maximized" : ""}" style="width:${width};height:${height}"><div class="head"><div><h2>⚔️ Stonestorm stat limitek</h2><p class="subtitle">Statok és portyák – minden egy helyen</p></div><div class="head-actions"><button type="button" data-maximize title="Teljes méret / vissza">${state.maximized ? "❐" : "□"}</button><button type="button" data-close title="Bezárás">×</button></div></div><div class="panel-content"><div class="left-col">${mainDashboard()}</div><div class="right-col">${raidPanel()}</div></div><div class="debug-tools"><button type="button" data-debug>${state.debugVisible ? "▲ Hibakeresés elrejtése" : "⚙ Hibakeresés / kézi adatok"}</button>${state.debugVisible ? `<div class="debug-content"><details class="summary-fold" data-section="advanced" ${state.openSections.advanced ? "open" : ""}><summary>Részletes statok és kézi értékek</summary>${trackingPanel()}<div class="list">${stats.map(row).join("")}</div><button class="reset" type="button" data-reset>Kézi statadatok törlése</button></details><details class="summary-fold" data-section="equipment" ${state.openSections.equipment ? "open" : ""}><summary>API-források és felszerelések ellenőrzése</summary>${sourcePanel()}${equipmentPanel()}</details></div>` : ""}</div></div><button class="toggle" type="button" data-toggle aria-expanded="${state.visible}">📊 ${state.visible ? "Stat panel elrejtése" : "Stat limitek"}</button>`;
-    if (state.visible) {
-      if (state.panelLeft === null || state.panelTop === null) {
-        const rect = wrap.querySelector(".panel").getBoundingClientRect();
-        state.panelLeft = rect.left; state.panelTop = rect.top;
-      }
-      root.style.left = `${state.maximized ? 16 : state.panelLeft}px`;
-      root.style.top = `${state.maximized ? 16 : state.panelTop}px`;
-      root.style.right = "auto"; root.style.bottom = "auto";
-      sizeObserver.observe(wrap.querySelector(".panel"));
-    }
+  function dashboardModel(){
+    const fresh=state.apiSeenAt&&Date.now()-state.apiSeenAt<=300000;
+    return StonestormCompanionStats.model(fresh?state.apiCharacter:null,state.apiContent,Date.now()-(state.bonusPanel?.at||0)<=300000?state.bonusPanel?.values:{},{crit:Object.keys(state.critChanceEquipped).length?Object.values(state.critChanceEquipped).reduce((a,b)=>a+b,0):null,critDamage:equippedEntries().length?equippedTotal():null,skillDamage:Object.keys(state.skillEquipped).length?skillTotal():null});
   }
-  function dockClosedPanel() {
-    state.visible = false;
-    state.maximized = false;
-    state.panelWidth = 430;
-    state.panelHeight = 590;
-    state.panelLeft = null;
-    state.panelTop = null;
-    root.style.left = "auto";
-    root.style.top = "auto";
-    root.style.right = "16px";
-    root.style.bottom = "16px";
+  function render(){
+    const development=companion.preferences().development,model=dashboardModel(),overview=StonestormCompanionComponents.overview(model,{development});
+    const detail='<details class="summary-fold" data-section="advanced"><summary>Részletes statok és kézi értékek</summary>'+trackingPanel()+'<div class="list">'+stats.map(row).join('')+'</div><button class="reset" type="button" data-reset>Kézi statadatok törlése</button></details><details class="summary-fold" data-section="equipment"><summary>Bónuszforrások és felszerelésértékek</summary>'+sourcePanel()+equipmentPanel()+'</details>';
+    companion.update(overview,StonestormCompanionComponents.stats(model,{development})+(development?'<section data-development-only><h3>Fejlesztés alatt · részletes diagnosztika</h3>'+detail+'</section>':''),model);
   }
-  wrap.addEventListener("click", e => {
-    if (e.target.closest("[data-toggle]")) { if (state.visible) dockClosedPanel(); else state.visible = true; }
-    else if (e.target.closest("[data-maximize]")) state.maximized = !state.maximized;
-    else if (e.target.closest("[data-close]")) dockClosedPanel();
-    else if (e.target.closest("[data-debug]")) state.debugVisible = !state.debugVisible;
-    else if (e.target.closest("[data-reset]")) { state.manual = {}; chrome.storage.local.remove(STORAGE_KEY); }
-    else if (e.target.closest("[data-raid-reset]")) { state.raidManual = {}; chrome.storage.local.remove(RAID_KEY); }
-    else if (e.target.closest("[data-equip-reset]")) { state.equipped = {}; state.skillEquipped = {}; state.critChanceEquipped = {}; chrome.storage.local.remove([ITEM_KEY, SKILL_KEY, CRIT_CHANCE_KEY]); }
-    else return;
-    render();
+  wrap.addEventListener('click',e=>{
+    if(e.target.closest('[data-reset]')){state.manual={};chrome.storage.local.remove(STORAGE_KEY);render();}
+    if(e.target.closest('[data-equip-reset]')){state.equipped={};state.skillEquipped={};state.critChanceEquipped={};chrome.storage.local.remove([ITEM_KEY,SKILL_KEY,CRIT_CHANCE_KEY]);render();}
+    if(e.target.closest('[data-debug]'))companion.select('stats');
   });
   wrap.addEventListener("click", e => {
     const section = e.target.closest("details[data-section] > summary")?.parentElement;
@@ -481,16 +326,6 @@
       if (!raw) delete target[equip]; else target[equip] = value;
       chrome.storage.local.set({ [isCrit ? CRIT_CHANCE_KEY : isSkill ? SKILL_KEY : ITEM_KEY]: target }); render(); return;
     }
-    const raid = e.target?.dataset?.raid;
-    const field = e.target?.dataset?.field;
-    if (raid && field && raidKinds.some(k => k.key === raid) && ["energy", "xp", "nyang"].includes(field)) {
-      const raw = e.target.value.trim();
-      const value = raw ? parseReward(raw) : null;
-      if (raw && (value === null || (field === "energy" && (!Number.isInteger(value) || value < 1)))) { e.target.setCustomValidity("Pozitív számot adj meg; az energia egész szám legyen."); e.target.reportValidity(); return; }
-      if (!state.raidManual[raid]) state.raidManual[raid] = {};
-      if (!raw) delete state.raidManual[raid][field]; else state.raidManual[raid][field] = value;
-      chrome.storage.local.set({ [RAID_KEY]: state.raidManual }); render(); return;
-    }
     const key = e.target?.dataset?.stat;
     if (!key) return;
     const raw = e.target.value.trim();
@@ -503,20 +338,6 @@
     chrome.storage.local.set({ [STORAGE_KEY]: state.manual });
     render();
   });
-  function scanRaids(text) {
-    const found = {};
-    for (const r of raidKinds) {
-      const match = r.marker.exec(text);
-      if (!match) continue;
-      const next = raidKinds.map(other => other.marker.exec(text.slice(match.index + match[0].length))).filter(Boolean).map(x => x.index);
-      const section = text.slice(match.index, match.index + match[0].length + (next.length ? Math.min(...next) : 350)).slice(0, 350);
-      const energy = section.match(/(\d+)\s*energia\b/i);
-      const xp = section.match(/\+?\s*(\d+(?:[,.]\d+)?\s*[kKmM]?)\s*XP\b/i);
-      const nyang = xp && section.slice(section.indexOf(xp[0]) + xp[0].length).match(/(\d+(?:[,.]\d+)?\s*[kKmM]?)(?=\s|$)/);
-      if (energy && xp && nyang) found[r.key] = { energy: Number(energy[1]), xp: parseReward(xp[1]), nyang: parseReward(nyang[1]) };
-    }
-    return found;
-  }
   function scanEquippedItems() {
     if (state.apiReady) return false;
     const slotByName = {
@@ -556,18 +377,30 @@
   }
   function scan() {
     if (!document.body) return;
-    const text = document.body.innerText || "";
+    const text = companion.preferences().development&&!state.apiReady?(document.body.innerText||''):'';
     const characterChanged = scanCharacterValues(text);
-    const equipmentChanged = scanEquippedItems();
-    const raidData = scanRaids(text);
-    const raidChanged = JSON.stringify(raidData) !== JSON.stringify(state.raids);
-    if (raidChanged && Object.keys(raidData).length) state.raids = raidData;
+    const panelLabels = { crit: "Kritikus es?ly", critDamage: "Kritikus sebzés(?:bónusz)?", skillDamage: "Képesség[- ]?sebzés(?:bónusz)?", lifesteal: "Életlopás", damageTaken: "Sebzéscsökkentés", vsBoss: "Bossok ellen", potionHeal: "Gyógyital-hatás" };
+    const oldPanel = JSON.stringify(state.bonusPanel?.values ?? {}), panelValues = {};
+    // Only an explicitly titled, currently visible Bonuses panel is a witness.
+    const headings = [...document.querySelectorAll("h1,h2,h3,h4,[role=heading]")].filter(el => /^Bónuszok$/i.test(el.textContent.trim()) && el.getClientRects().length);
+    for (const title of headings) {
+      const container = title.closest("[role=dialog],section,article") ?? title.parentElement;
+      const panelText = container?.innerText ?? "";
+      if (panelText.length > 12000) continue;
+      for (const [key, label] of Object.entries(panelLabels)) {
+        const match = panelText.match(new RegExp("(?:^|\\n)\\s*" + label + "\\s*[:+]?\\s*(\\d+(?:[,.]\\d+)?)\\s*%", "im"));
+        if (match) panelValues[key] = parse(match[1]);
+      }
+    }
+    if(Object.keys(panelValues).length)state.bonusPanel = { values: panelValues, at: Date.now() };
+    const panelChanged = oldPanel !== JSON.stringify(panelValues);
+    const equipmentChanged = state.apiReady?false:scanEquippedItems();
     const reduction = text.match(/(?:ellen|against)\s*:\s*(\d+(?:[,.]\d+)?)\s*%\s*\.\s*(?:plafon|cap)/i);
     const oldReduction = state.defenseReduction;
     if (reduction) state.defenseReduction = parse(reduction[1]);
     const defenseThreshold = text.match(/(?:plafon|cap)\s*:\s*75\s*%\s*,?\s*(\d+)\s*(?:védelemnél|defen[cs]e)/i);
     const oldDefenseCap = stats[0].cap;
-    if (defenseThreshold) stats[0].cap = parse(defenseThreshold[1]);
+    // A raw defence threshold reaching 75% is not a maximum defence value.
     const found = {};
     for (const s of stats) {
       for (const regex of s.patterns) {
@@ -588,9 +421,9 @@
       state.aggregateNyang = Boolean(nyangTotal);
     }
     if (state.apiReady && isNumber(state.apiCharacter?.derived?.critChance)) found.crit = state.apiCharacter.derived.critChance * 100;
-    if (JSON.stringify(found) !== JSON.stringify(state.detected) || oldReduction !== state.defenseReduction || oldDefenseCap !== stats[0].cap || equipmentChanged || characterChanged || (raidChanged && Object.keys(raidData).length)) {
+    if (panelChanged || JSON.stringify(found) !== JSON.stringify(state.detected) || oldReduction !== state.defenseReduction || oldDefenseCap !== stats[0].cap || equipmentChanged || characterChanged) {
       state.detected = found;
-      if (state.visible && !shadow.activeElement?.matches("input")) render();
+      if (!shadow.activeElement?.matches("input,select")) render();
     }
   }
   let scheduled = false;
@@ -606,11 +439,6 @@
       for (const s of stats) if (typeof saved[s.key] === "number" && saved[s.key] >= 0) state.manual[s.key] = saved[s.key];
     }
     scan(); render();
-  });
-  chrome.storage.local.get(RAID_KEY, data => {
-    const saved = data[RAID_KEY];
-    if (saved && typeof saved === "object") state.raidManual = saved;
-    render();
   });
   chrome.storage.local.get(POTION_KEY, data => {
     const saved = data[POTION_KEY];
@@ -642,6 +470,7 @@
     render();
   });
   render();
+  StonestormCompanionState.shared(chrome.storage).subscribe(()=>render());
   new MutationObserver(schedule).observe(document.body || document.documentElement, { subtree: true, childList: true, characterData: true });
   document.addEventListener("visibilitychange", () => { if (!document.hidden) schedule(); });
 })();

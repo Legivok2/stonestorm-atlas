@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';
+export function buildCompanionAssets(root){const base=path.join(root,'addons/stonestorm-statcap-overlay'),css=fs.readFileSync(path.join(base,'companion.css'),'utf8'),catalog=JSON.parse(fs.readFileSync(path.join(root,'data/image-catalog.json'),'utf8')).entries,items=JSON.parse(fs.readFileSync(path.join(root,'snapshots/current/content.json'),'utf8')).items;
+  const available=new Set(catalog.map(e=>e.id)),art=Object.fromEntries(items.flatMap(i=>{const key=['weapons/','icons/'].map(p=>p+i.id).find(id=>available.has(id));return key?[[i.id,key]]:[];}));
+  const inline=Object.fromEntries(['xp','nyang','drop'].map(k=>[k,'data:image/webp;base64,'+fs.readFileSync(path.join(base,'art',k+'.webp')).toString('base64')]));
+  fs.writeFileSync(path.join(base,'companion-design.js'),'/* Generated from companion.css and the public image catalog. npm run build:addon:companion */\nglobalThis.STONESTORM_COMPANION_CSS = '+JSON.stringify(css)+';\nglobalThis.STONESTORM_COMPANION_TOKENS = '+JSON.stringify(css.match(/:host\{[^}]*\}/)[0])+';\nglobalThis.STONESTORM_COMPANION_ART = '+JSON.stringify(art)+';\nglobalThis.STONESTORM_COMPANION_INLINE_ART = '+JSON.stringify(inline)+';\n');}
+if(process.argv[1]?.endsWith('build-addon-companion.mjs'))buildCompanionAssets(process.cwd());

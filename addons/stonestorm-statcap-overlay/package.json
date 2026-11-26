@@ -2,7 +2,7 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "test": "node tests/capture-refresh.test.js"
+    "test": "node tests/capture-refresh.test.js && node tests/community-hub.test.js"
   },
-  "version": "0.9.6"
+  "version": "0.14.0"
 }

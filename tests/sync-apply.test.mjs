@@ -64,7 +64,7 @@ test('Auto-Sync apply: teljes build és npm test izolált projektben', {timeout:
     const locale=read('data/addon-pet-model.json').locale;
     const publicFetcher=async url=>url===API?Response.json(candidate):url==='https://stonestorm.gg/'?new Response('<script src="/assets/index-TestData.js"></script>'):url.endsWith('/index-TestData.js')?new Response('import "./GameApp-TestData.js"; import "./texts.hu-TestData.js";'):url.endsWith('/GameApp-TestData.js')?new Response(fixture):url.endsWith('/texts.hu-TestData.js')?new Response('const locale={"./pets.hu.json":'+JSON.stringify(locale)+'};'):new Response('denied',{status:403});
     const result=await runSync({root:temp,apply:true,fetcher:publicFetcher});assert.equal(result.applied,true);
-    assert(result.accepted.some(x=>x.path==='/pets'&&x.engine===2));
+    assert(result.accepted.some(x=>x.path==='/pets'&&x.engine===3));
     const built=read('data/atlas.json'),petModel=read('data/addon-pet-model.json');
     assert.deepEqual(built.petModel.config,petModel.config);assert.equal(petModel.gameVersion,candidate.version);
     assert.equal(built.pets.find(p=>p.id==='pet_wolf').perLevel.xpMult,candidate.pets.types.find(p=>p.id==='pet_wolf').perLevel.xpMult);

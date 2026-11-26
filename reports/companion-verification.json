@@ -1,0 +1,1387 @@
+{
+  "schema": 1,
+  "version": "0.11.0",
+  "previousVersion": "0.10.0",
+  "verifiedAt": "2026-11-21T19:53:31.218Z",
+  "published": false,
+  "pushed": false,
+  "liveGameVerified": false,
+  "qa": "Native MV3 + real React, labelled synthetic game state; actual public lean decoder in repair regression.",
+  "browser": {
+    "verifiedAt": "2026-11-21T19:49:52.991Z",
+    "version": "0.11.0",
+    "nativeMV3": true,
+    "realReact": true,
+    "liveGame": false,
+    "cases": [
+      {
+        "name": "Seven routes, one visible page, stable module DOM and zero automatic reads on navigation",
+        "passed": true
+      },
+      {
+        "name": "All three presets persist and use public item images with guarded live actions",
+        "passed": true
+      },
+      {
+        "name": "XP optimizer compares current and proposed equipment; proposal saves locally",
+        "passed": true
+      },
+      {
+        "name": "Preset name draft and focus survive a presentation refresh",
+        "passed": true
+      },
+      {
+        "name": "Actual React replacement leaves addon panel identity and selected route intact",
+        "passed": true
+      },
+      {
+        "name": "Quiet notifications deduplicate, dismiss and honor the off setting",
+        "passed": true
+      },
+      {
+        "name": "Quick shortcuts can be customized and open their real module",
+        "passed": true
+      },
+      {
+        "name": "Shared research controller exports an actual anonymous JSON download",
+        "passed": true
+      },
+      {
+        "name": "Seven Enhanced UI toggles and global restore reuse the existing controller",
+        "passed": true
+      },
+      {
+        "name": "Mini, normal and full modes restore without losing the selected module",
+        "passed": true
+      },
+      {
+        "name": "Pointer drag, keyboard positioning and resize save without touching game actions",
+        "passed": true
+      },
+      {
+        "name": "Navigation arrow keys, close/reopen and Escape keep focus and route",
+        "passed": true
+      },
+      {
+        "name": "Preferences survive an actual document reload; no character or item data enters UI settings",
+        "passed": true
+      },
+      {
+        "name": "Responsive panel, modes and every route at 2560×1440",
+        "passed": true
+      },
+      {
+        "name": "Responsive panel, modes and every route at 1440×900",
+        "passed": true
+      },
+      {
+        "name": "Responsive panel, modes and every route at 1000×700",
+        "passed": true
+      },
+      {
+        "name": "Responsive panel, modes and every route at 390×844",
+        "passed": true
+      },
+      {
+        "name": "Responsive panel, modes and every route at 320×760",
+        "passed": true
+      },
+      {
+        "name": "Inactive companion tooltip stays portrait-based and never activates the pet",
+        "passed": true
+      },
+      {
+        "name": "Missing worn identity explains the exact count and keeps save safely disabled",
+        "passed": true
+      },
+      {
+        "name": "Preset-loss and better-new-item notices come from validated observed state",
+        "passed": true
+      },
+      {
+        "name": "No resource action or gameplay write; no runtime error",
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "writes": 0,
+    "resourceActions": 0,
+    "fixtureCharacterReads": 6
+  },
+  "regressions": {
+    "home": {
+      "verifiedAt": "2026-11-21T19:34:46.656Z",
+      "nativeMV3": true,
+      "version": "0.11.0",
+      "fixture": "Public DOM/CSS reconstruction with sample state; no real account",
+      "results": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 980,
+          "height": 680,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "tabs": 6,
+          "passed": true
+        },
+        {
+          "width": 900,
+          "height": 480,
+          "tabs": 6,
+          "passed": true
+        }
+      ],
+      "apiRequests": 0,
+      "writes": 0,
+      "errors": [],
+      "mutations": 0
+    },
+    "miningRaids": {
+      "verifiedAt": "2026-11-21T19:37:40.342Z",
+      "version": "0.11.0",
+      "nativeMV3": true,
+      "mockOnly": true,
+      "cases": [
+        {
+          "name": "Original layout and one original tabpanel",
+          "passed": true
+        },
+        {
+          "name": "Toggle, four visible panels, original identities preserved",
+          "passed": true
+        },
+        {
+          "name": "All four tabs navigate only after explicit clicks and retain snapshots",
+          "passed": true
+        },
+        {
+          "name": "Mining layout and scrolling 1920×1080",
+          "passed": true
+        },
+        {
+          "name": "Mining layout and scrolling 2560×1440",
+          "passed": true
+        },
+        {
+          "name": "Mining layout and scrolling 1280×800",
+          "passed": true
+        },
+        {
+          "name": "Mining layout and scrolling 900×650",
+          "passed": true
+        },
+        {
+          "name": "Mining layout and scrolling 390×844",
+          "passed": true
+        },
+        {
+          "name": "React parent replacement, unique controls, preference retained",
+          "passed": true
+        },
+        {
+          "name": "Restored original dimensions, no unrelated modal changes",
+          "passed": true
+        },
+        {
+          "name": "Storage and fresh snapshots after reload",
+          "passed": true
+        },
+        {
+          "name": "SPA exit cleans mining and detects all three offer cards",
+          "passed": true
+        },
+        {
+          "name": "Separate card values and conservative ranking",
+          "passed": true
+        },
+        {
+          "name": "Missing reward and malformed time never borrowed from other facts",
+          "passed": true
+        },
+        {
+          "name": "Reroll and removal clear old values, including all-offers removal",
+          "passed": true
+        },
+        {
+          "name": "Manual override, visible source, per-offer restore, persistence",
+          "passed": true
+        },
+        {
+          "name": "Observed exact API beats rounded DOM; no automatic API request",
+          "passed": true
+        },
+        {
+          "name": "Stale API cannot resurrect rerolled or removed cards",
+          "passed": true
+        },
+        {
+          "name": "An expired API replay keeps its original timestamp and is rejected",
+          "passed": true
+        },
+        {
+          "name": "DOM duplication is detected rather than silently selected",
+          "passed": true
+        },
+        {
+          "name": "Mobile overlay and observers settle",
+          "passed": true
+        },
+        {
+          "name": "Zero game writes, launches, resource clicks or page errors",
+          "passed": true
+        }
+      ],
+      "passed": 22,
+      "writes": 0,
+      "apiRequests": 2,
+      "explicitFixtureAPIReads": 2,
+      "errors": []
+    },
+    "enhanced": {
+      "verifiedAt": "2026-11-21T19:35:00.308Z",
+      "version": "0.11.0",
+      "nativeMV3": true,
+      "reactVersion": "19.2.0",
+      "actualGameDOMAccess": false,
+      "fixture": "Public DOM/CSS contracts rendered by real React, synthetic state explicitly labelled",
+      "cases": [
+        {
+          "name": "One common controller; old Home/Mining settings migrate without a second manager",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "alchemist: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "alchemist: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "alchemist: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "alchemist: weekly limit remains a readable original field",
+          "passed": true
+        },
+        {
+          "name": "alchemist: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "alchemist: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "alchemist: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "seal: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "seal: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "seal: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "seal: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "seal: public client card wrappers keep names readable and actions below the details",
+          "passed": true
+        },
+        {
+          "name": "seal: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "seal: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "seal: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "seal: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "stable: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "stable: three areas keep all original owned, stored and rental controls",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "stable: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "stable: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "stable: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "shop: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "shop: all expected panels, inactive panels are honest previews",
+          "passed": true
+        },
+        {
+          "name": "shop: each preview opens only its original React tab after a click",
+          "passed": true
+        },
+        {
+          "name": "shop: overflowing original and preview contents scroll without moving the header",
+          "passed": true
+        },
+        {
+          "name": "shop: original purchase control does not overlap item name or stats",
+          "passed": true
+        },
+        {
+          "name": "shop: observed content updates and previews retain a timestamped source",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "shop: original info control and secondary dialog retain behavior and dimensions",
+          "passed": true
+        },
+        {
+          "name": "shop: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "shop: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "fishing: original view, safe toggle and native node identity",
+          "passed": true
+        },
+        {
+          "name": "fishing: cast button is reachable in narrow, wide and folded idle modes",
+          "passed": true
+        },
+        {
+          "name": "fishing: all five original tabs work without casting or resource actions",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1920×1080 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 2560×1440 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1440×900 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 1000×700 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: responsive 390×844 and independent scrolling",
+          "passed": true
+        },
+        {
+          "name": "fishing: original view restores and drops content observers immediately",
+          "passed": true
+        },
+        {
+          "name": "fishing: close/reopen and React root replacement keep a unique control",
+          "passed": true
+        },
+        {
+          "name": "fishing: every active state suspends the layout; hook/reel targets remain native and unobscured",
+          "passed": true
+        },
+        {
+          "name": "Central panel exposes all seven switches and global restore applies without reload",
+          "passed": true
+        },
+        {
+          "name": "Settings persist through document reload and old tabs are not presented as live",
+          "passed": true
+        },
+        {
+          "name": "Unrelated DOM churn does not reread current tab contents; observers settle",
+          "passed": true
+        },
+        {
+          "name": "No API request, purchase, sale, crafting, rental or fishing action was initiated",
+          "passed": true
+        }
+      ],
+      "passed": 68,
+      "viewports": [
+        [
+          1920,
+          1080
+        ],
+        [
+          2560,
+          1440
+        ],
+        [
+          1440,
+          900
+        ],
+        [
+          1000,
+          700
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "apiRequests": 0,
+      "writes": 0,
+      "resourceActions": 0,
+      "errors": [],
+      "diagnostics": {
+        "discoveryScans": 2,
+        "refreshes": 4,
+        "snapshotReads": 2,
+        "scopedObservers": 1,
+        "records": 1,
+        "active": [
+          {
+            "id": "shop",
+            "enabled": true,
+            "previews": 3,
+            "observedTabs": 1
+          }
+        ]
+      }
+    },
+    "equipmentRepair": {
+      "verifiedAt": "2026-11-21T19:46:54.885Z",
+      "version": "0.11.0",
+      "nativeMV3": true,
+      "usesActualOfficialDecoder": true,
+      "liveAccount": false,
+      "cases": [
+        {
+          "name": "Character and bag visible; no initial character read or stale preset enable",
+          "passed": true
+        },
+        {
+          "name": "User opening the preset panel automatically invokes only the verified GET",
+          "passed": true
+        },
+        {
+          "name": "Diagnostics show 9 items / 8 equipped / 9 unique IDs / 8 worn slots without identifiers",
+          "passed": true
+        },
+        {
+          "name": "All 3 presets save to real Chrome local storage and read back owned instance IDs",
+          "passed": true
+        },
+        {
+          "name": "Rename and saved preset preview work while live equipment stays disabled",
+          "passed": true
+        },
+        {
+          "name": "XP/Nyang/drop previews are available without stats or derived totals",
+          "passed": true
+        },
+        {
+          "name": "Dedicated reread uses one GET; concurrent clicks are coalesced",
+          "passed": true
+        },
+        {
+          "name": "Missing worn ID disables save with its precise cause, not fabricated identity",
+          "passed": true
+        },
+        {
+          "name": "Partial API response clears readiness while local rename/delete remain available",
+          "passed": true
+        },
+        {
+          "name": "Successful reread restores save without reopening character or bag",
+          "passed": true
+        },
+        {
+          "name": "Partial numeric item fields do not prevent identity-only save and preview",
+          "passed": true
+        },
+        {
+          "name": "Presets persist through page reload and current character can save again",
+          "passed": true
+        },
+        {
+          "name": "No original gameplay button click, destructive endpoint or POST was initiated",
+          "passed": true
+        }
+      ],
+      "passed": 13,
+      "items": 9,
+      "equipped": 8,
+      "free": 1,
+      "presetSaveAndReadback": true,
+      "reads": 7,
+      "writes": 0,
+      "gameButtonClicks": 0,
+      "errors": [],
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/character"
+        },
+        {
+          "method": "GET",
+          "path": "/assets/index-C8sNneJf.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/character"
+        },
+        {
+          "method": "GET",
+          "path": "/assets/index-C8sNneJf.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/art/weapons/w_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/a_warrior_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/helmet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/shield_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/boots_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/bracelet_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/necklace_0.webp"
+        },
+        {
+          "method": "GET",
+          "path": "/art/icons/earrings_0.webp"
+        }
+      ]
+    }
+  },
+  "interactivePreview": {
+    "url": "http://127.0.0.1:4318/",
+    "command": "npm run preview:addon:companion",
+    "passed": true,
+    "externalRequests": 0,
+    "writesRejected": true
+  },
+  "screenshots": {
+    "resolution": [
+      1920,
+      1080
+    ],
+    "liveGame": false,
+    "gallery": ".integration/companion/gallery.html",
+    "pairs": [
+      "overview",
+      "stats",
+      "equipment",
+      "raids",
+      "research",
+      "interfaces",
+      "pet"
+    ]
+  },
+  "limitations": [
+    "Live equip disabled",
+    "Full-set Harcero optimization unverified and disabled",
+    "Live-account preset acceptance pending",
+    "Inactive Enhanced panels are past observations"
+  ],
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Companion",
+    "version": "0.11.0",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 463675,
+    "sha256": "beab6392b2d9e30ae2caa57f272850880ce35e0a8a3a49bafc3fa564dd5eb616"
+  },
+  "validation": {
+    "unit": {
+      "passed": 271,
+      "failed": 0,
+      "newCompanionTests": 15,
+      "captureRefresh": "passed"
+    },
+    "companionBrowser": {
+      "passed": 22,
+      "failed": 0,
+      "nativeMV3": true,
+      "realReact": true,
+      "resourceActions": 0,
+      "writes": 0
+    },
+    "home": {
+      "passed": true,
+      "sixTabsAtSixSizes": true
+    },
+    "miningRaids": {
+      "passed": 22,
+      "failed": 0
+    },
+    "enhancedUI": {
+      "passed": 68,
+      "failed": 0
+    },
+    "equipmentRepair": {
+      "passed": 13,
+      "failed": 0,
+      "officialDecoder": true,
+      "actualChromeStorage": true,
+      "liveGame": false
+    },
+    "equipmentPresets": {
+      "passed": true
+    },
+    "nativeExport": {
+      "passed": true,
+      "actualChromePopup": true
+    },
+    "exportBrowser": {
+      "passed": true,
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    "petTooltip": {
+      "passed": true,
+      "viewports": [
+        1440,
+        390
+      ]
+    },
+    "statLimits": {
+      "passed": true,
+      "viewports": [
+        1440,
+        390,
+        320
+      ]
+    },
+    "combatV3": {
+      "passed": true,
+      "roomDisplays": 80,
+      "softCapCrossCheck": true
+    },
+    "localPreview": {
+      "passed": true,
+      "externalRequests": 0
+    },
+    "projectCheck": {
+      "passed": true
+    },
+    "addonPackage": {
+      "passed": true,
+      "deterministic": true
+    },
+    "pages": {
+      "buildPassed": true,
+      "files": 3784,
+      "http200": 3783
+    },
+    "download": {
+      "passed": true,
+      "viewports": [
+        1440,
+        390,
+        320
+      ],
+      "sha256Verified": true
+    },
+    "publicationAudit": {
+      "missingFiles": 0,
+      "secretOrPersonalPatternMatches": 0,
+      "filesOver100MiB": 0
+    },
+    "gitDiffWhitespace": {
+      "passed": true
+    }
+  }
+}

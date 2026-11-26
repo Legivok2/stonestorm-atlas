@@ -37,7 +37,7 @@ test('A publikációs csomag nem tartalmazhat játékmentést vagy helyi titkos 
   for(const file of sourceFiles()){
     assert(!file.startsWith('.integration/'));
     assert(!file.startsWith('.git/'));
-    if(file.endsWith('.zip'))assert.equal(file,'downloads/stonestorm-statcap-overlay.zip');
+    if(file.endsWith('.zip'))assert(['downloads/stonestorm-statcap-overlay.zip','downloads/stonestorm-companion-0.14.0-beta.zip'].includes(file));
     assert.notEqual(file,'Stonestorm.html');
     if(file.startsWith('Stonestorm_files/'))assert(file.endsWith('.webp'));
   }

@@ -14,16 +14,24 @@
     }
   },
   "progression": {
-    "maxLevel": 50,
+    "maxLevel": 60,
+    "activeStatus": "conflicted",
     "formCaps": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "observedFormCaps": [
       10,
       20,
       30,
       40,
       50
     ],
-    "source": "project-owner-current-game-observation",
-    "status": "observed",
+    "source": "current-client-form-caps; project-owner-observation retained separately",
+    "status": "conflicted",
     "checkpoints": [
       10,
       20,
@@ -714,6 +722,15 @@
       40,
       50
     ],
+    "reconciledActiveFormCaps": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "adultLevel22Reference": "not evidenced as a form/unlock level",
+    "adultLevel35ClientCap": true,
     "selectedSource": "project-owner-current-game-observation",
     "costsAreServerOverridable": true,
     "referenceBandsAreNotUnlockLevels": true

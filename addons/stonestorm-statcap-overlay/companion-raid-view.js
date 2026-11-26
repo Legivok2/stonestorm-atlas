@@ -1,0 +1,7 @@
+(() => {
+  'use strict';
+  const C=globalThis.StonestormCompanionComponents;
+  const source=value=>({DOM:"Eredeti ajánlat",API:"Játékadat",kézi:"Kézi adat",hiányzik:"Nincs adat"}[value]??value);
+  function cards(view,sorted,sort,unit,number){const labels={xpPerEnergy:'XP / energia',nyangPerEnergy:'Nyang / energia',xpPerHour:'XP / óra',nyangPerHour:'Nyang / óra',xpPerMinute:'XP / perc',nyangPerMinute:'Nyang / perc'},metrics=['xpPerEnergy','nyangPerEnergy','xpPer'+unit,'nyangPer'+unit];return '<div class="sc-raid-cards">'+sorted.map((r,index)=>'<article class="sc-raid-card '+(view.winners[sort]===r.key?'is-best':'')+'"><div class="sc-raid-symbol">'+C.icon('raids')+(view.winners[sort]===r.key?'<span class="sc-tag">Legjobb út</span>':'<span class="sc-raid-label">ÚTVONAL 0'+(index+1)+'</span>')+'</div><h3>'+C.esc(r.name)+'</h3><p class="sc-raid-energy">'+number(r.fields.energy)+' energia'+(r.fields.minutes.value!==null?' · '+number(r.fields.minutes)+' perc':'')+'</p><div class="sc-raid-metrics">'+metrics.filter(k=>r.metrics[k].value!==null).map(k=>'<div class="sc-raid-metric" title="'+C.esc(r.metrics[k].reason||'A kiolvasott jutalom-előnézetből számolva')+'"><small>'+labels[k]+'</small><strong>'+number(r.metrics[k])+'</strong></div>').join('')+'</div><p class="sc-caption">'+[...new Set(Object.values(r.fields).filter(f=>f.value!==null).map(f=>f.source))].map(s=>C.esc(source(s))).join(' · ')+'</p></article>').join('')+'</div>';}
+  globalThis.StonestormCompanionRaidView=Object.freeze({cards});
+})();

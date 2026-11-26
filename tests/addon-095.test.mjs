@@ -13,7 +13,7 @@ test('Kísérőmodell: közös verziózott adat, az addon modellje a közös for
   assert.deepEqual(logic.validateConfig(model.config),model.config);
   assert.throws(()=>makePetModel({},{},'const changed=1;',[]),/Megváltozott kísérőképlet/);
   const manifest=JSON.parse(fs.readFileSync(new URL('../addons/stonestorm-statcap-overlay/manifest.json',import.meta.url)));
-  assert.equal(manifest.version,'0.9.6');assert.deepEqual(manifest.permissions,['storage']);assert.deepEqual(manifest.host_permissions,['https://stonestorm.gg/*']);
+  assert.equal(manifest.version,'0.14.0');assert.deepEqual(manifest.permissions,['storage','scripting']);assert.deepEqual(manifest.host_permissions,['https://stonestorm.gg/*']);
 });
 test('V3 fajbónusz: formaszorzó és rang, nem a régi szintszorzó; XP és zsákmány külön',()=>{
   assert.equal(logic.describe(pet(),model).bonusValue,.04);
@@ -52,7 +52,7 @@ test('Saját kísérő-felismerés csak szükséges helyi mezőket őriz; az ano
 });
 function controller(clock=Date){
   const listeners={},window={};window.top=window;window.addEventListener=(name,fn)=>listeners[name]=fn;window.dispatchEvent=()=>{};window.postMessage=()=>{};
-  let runtime;const context={window,location:{origin:'https://stonestorm.gg'},Event:class{},Date:clock,StonestormResearch:globalThis.StonestormResearch,chrome:{runtime:{id:'fixture-extension',onMessage:{addListener(fn){runtime=fn;}}}}};
+  let runtime;const context={window,location:{origin:'https://stonestorm.gg'},Event:class{},Date:clock,StonestormResearch:globalThis.StonestormResearch,StonestormCompanionState:{shared:()=>({get:()=>({development:true}),subscribe(){}})},chrome:{runtime:{id:'fixture-extension',onMessage:{addListener(fn){runtime=fn;}}}}};
   vm.runInNewContext(fs.readFileSync(new URL('../addons/stonestorm-statcap-overlay/research-bridge.js',import.meta.url),'utf8'),context);
   return {api:context.StonestormResearchController,runtime,sample(raw){listeners.message({source:window,origin:'https://stonestorm.gg',data:{source:'ss-atlas-research-sample-v1',sample:raw}});}};
 }
@@ -61,7 +61,7 @@ test('Popup és overlay ugyanaz a gyűjtés: kategóriák, visszaszámlálás, e
   c.sample(globalThis.StonestormResearch.sanitize('/api/home/rooms',{rooms:[{id:'rest',rules:{dailyLimit:3}}],name:'PRIVATE_NAME'}));
   let popup;c.runtime({type:'atlas-research-status'},{id:'fixture-extension'},r=>popup=r);assert.equal(popup.count,1);assert.equal(popup.categories[0].name,'Szobák és témák');assert.equal(c.api.status().count,1);
   let denied=false;c.runtime({type:'atlas-research-export'},{id:'wrong-extension'},()=>denied=true);assert.equal(denied,false);assert.equal(c.api.status().count,1);
-  let exported;c.runtime({type:'atlas-research-export'},{id:'fixture-extension'},r=>exported=r);assert.equal(exported.addonVersion,'0.9.6');assert.equal(exported.samples.length,1);assert(!JSON.stringify(exported).includes('PRIVATE_'));assert.equal(c.api.status().count,0);assert.equal(c.api.status().active,false);
+  let exported;c.runtime({type:'atlas-research-export'},{id:'fixture-extension'},r=>exported=r);assert.equal(exported.addonVersion,'0.14.0');assert.equal(exported.samples.length,1);assert(!JSON.stringify(exported).includes('PRIVATE_'));assert.equal(c.api.status().count,0);assert.equal(c.api.status().active,false);
   c.api.command('atlas-research-arm');c.sample(globalThis.StonestormResearch.sanitize('/api/arena/pure',{rules:{minFights:10}}));c.api.command('atlas-research-stop');assert.equal(c.api.status().count,0);
 });
 test('Gyűjtési időkorlát: 60 másodperc után nincs új minta, a korábbi exportálható marad',()=>{

@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "version": "0.13.0",
+  "previousVersion": "0.12.0",
+  "verifiedAt": "2026-11-21T20:35:18.555Z",
+  "status": "Local implementation, isolated verification and packaging complete; live-character acceptance not performed",
+  "published": false,
+  "pushed": false,
+  "liveCharacterTested": false,
+  "liveCharacterWrites": 0,
+  "actualClientEvidence": "data/equipment-live-evidence.json",
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Companion",
+    "version": "0.13.0",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 522787,
+    "sha256": "6fbfb899d5a2fa0132d896486a4e7421975aa90e94efb7846f220bc3319882c2"
+  },
+  "checks": {
+    "unitAndRegression": {
+      "passed": 303,
+      "failed": 0,
+      "newEquipmentSafetyTestsIncluded": 31,
+      "evidence": ".integration/equipment-live/full-test.log"
+    },
+    "addonSource": {
+      "captureRefresh": true,
+      "communityHubV2": true
+    },
+    "nativeEquipment": {
+      "passed": 16,
+      "failed": 0,
+      "realMV3": true,
+      "originalOfficialFunctionBodies": true,
+      "originalStateSetter": true,
+      "realReact": true,
+      "mockServerOnly": true,
+      "onlyEquipUnequipWrites": true,
+      "cases": [
+        {
+          "name": "Verified current client exports, original store setter and worker capabilities enable the saved preset",
+          "passed": true
+        },
+        {
+          "name": "Page postMessage and synthetic clicks cannot authorize any write",
+          "passed": true
+        },
+        {
+          "name": "7 worn versus 8 saved is explicit in an eight-slot confirmation, with no writes before approval",
+          "passed": true
+        },
+        {
+          "name": "7-to-8 execution changes the mock server and the actual original React equipment DOM",
+          "passed": true
+        },
+        {
+          "name": "Two presets with identical templates still switch to different exact instances",
+          "passed": true
+        },
+        {
+          "name": "Missing item disables Apply and the preview names its exact missing slot",
+          "passed": true
+        },
+        {
+          "name": "Full inventory is rejected by both the UI and the private worker before any write",
+          "passed": true
+        },
+        {
+          "name": "Double confirmation has one transaction; a duplicate execute message is rejected",
+          "passed": true
+        },
+        {
+          "name": "Server failure stops after the first rejected operation and quarantines the uncertain result",
+          "passed": true
+        },
+        {
+          "name": "Recovery is read-only and requires a separate trusted acknowledgement",
+          "passed": true
+        },
+        {
+          "name": "Cancellation waits for the in-flight acknowledgement and never starts a second operation",
+          "passed": true
+        },
+        {
+          "name": "Changes while the confirmation is open cancel the whole plan before mutation",
+          "passed": true
+        },
+        {
+          "name": "A repeated apply verifies unchanged presets with zero writes and fills any saved empty/current empty slots consistently",
+          "passed": true
+        },
+        {
+          "name": "A small confirmation remains inside the panel and keyboard Escape cancels without writes",
+          "passed": true
+        },
+        {
+          "name": "Dangerous requests never appear; export excludes all private equipment transaction data",
+          "passed": true
+        },
+        {
+          "name": "Changed or unverified native client signatures keep live Apply disabled",
+          "passed": true
+        }
+      ],
+      "evidence": ".integration/equipment-live/browser-results.json"
+    },
+    "preservedFeatures": {
+      "equipmentRepairNative": 13,
+      "companionNative": 22,
+      "enhancedUINative": 68,
+      "miningRaidsNative": 22,
+      "homeSixTabsAndSixViewportSizes": true,
+      "existingEquipmentPresets": true,
+      "petTooltipDesktopAndMobile": true,
+      "statLimitsThreeViewportSizes": true,
+      "anonymousExportAndNativePopup": true
+    },
+    "syntaxAndLocalReferences": true,
+    "publicClientContractVerified": true,
+    "packageContentHashVerified": true,
+    "localPagesSmokeFiles": 3783,
+    "downloadBrowserThreeViewportSizes": true,
+    "publicationInspection": {
+      "missingFiles": 0,
+      "secretOrPersonalFindings": 0,
+      "largeFiles": 0,
+      "publicationPerformed": false
+    }
+  },
+  "safety": {
+    "nativeEquipAndUnequipOnly": true,
+    "exactInstanceIdentification": true,
+    "allEightSlotsIncludingEmpty": true,
+    "manualConfirmationRequired": true,
+    "serverReadBeforePlanAndEveryStep": true,
+    "verifyWriteResponseAndIndependentGet": true,
+    "stopOnFailureOrCancellation": true,
+    "unknownOutcomeRequiresReadAndManualAcknowledgement": true,
+    "workerRestartNeverResumes": true,
+    "noAutomatedLiveCharacterTests": true
+  },
+  "installation": {
+    "minimumChromeVersion": 106,
+    "newPermission": "scripting",
+    "hostPermissionsUnchanged": true,
+    "reloadExtensionAndGamePage": true,
+    "existingPresetStorageKeysUnchanged": true
+  },
+  "limitations": [
+    "The user account and saved Test preset were unavailable to this session; its exact slot list was not read.",
+    "Actual live-character switching was not tested automatically, as requested.",
+    "Unknown or changed native client contracts keep Apply disabled.",
+    "Harcero optimizer remains disabled until its full combination model is verified."
+  ]
+}

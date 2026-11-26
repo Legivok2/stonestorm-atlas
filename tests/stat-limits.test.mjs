@@ -5,12 +5,13 @@ import '../js/atlas-math.js';
 import '../js/bonus-system.js';
 import '../js/stat-limits.js';
 const math=globalThis.StonestormMath,data=globalThis.StonestormStats;
+// Historical arithmetic fixtures do not assert the current raw-to-effective soft cap.
 const rules=JSON.parse(fs.readFileSync(new URL('../source-data/05_kasztok_kepessegek_harcertek.json',import.meta.url),'utf8')).harcero.rules;
 const hero=JSON.parse(fs.readFileSync(new URL('../source-data/05_kasztok_kepessegek_harcertek.json',import.meta.url),'utf8')).harcero.combat.hero;
 const apiEvidence=JSON.parse(fs.readFileSync(new URL('../data/bonus-system-evidence.json',import.meta.url),'utf8'));
 test('A központi harci limitek egyeznek a mentett forrással; a normál kitérés külön súgóadat',()=>{
   for(const [id,key] of [['reduction','reductionCap'],['crit','critCap'],['evadeBoss','evadeCap']])assert.equal(data.byId[id].cap,rules[key]*100);
-  assert.equal(data.byId.evadeNormal.cap,35);
+  assert.equal(data.byId.evadeNormal.cap,30);
   assert.match(data.byId.evadeNormal.source,/súgó/);
 });
 test('18,2% kitérés: normál 18,2%, boss 12%, veszteség 6,2 százalékpont',()=>{
@@ -41,7 +42,7 @@ test('A megfigyelt XP-/nyangértékek nem limitek, az összegző nem feltételez
   for(const id of ['xp','nyang','drop']){assert.equal(data.byId[id].cap,100);assert.equal(data.byId[id].reliability,'confirmed');}
 });
 test('Minden felsorolt harci limit a content API kivonatával egyezik; a polír nem globális statplafon',()=>{
-  const caps=apiEvidence.statCaps;
+  const caps=JSON.parse(fs.readFileSync(new URL('../snapshots/current/content.json',import.meta.url))).harcero.rules;
   assert.equal(data.byId.crit.cap,caps.critCap*100);assert.equal(data.byId.evadeBoss.cap,caps.evadeCap*100);assert.equal(data.byId.evadeNormal.cap,caps.monsterEvadeCap*100);assert.equal(data.byId.reduction.cap,caps.reductionCap*100);
   for(const id of ['critDamage','skillDamage','vsBoss','potionHeal','lifesteal','damageTaken'])assert.equal(data.byId[id].cap,caps.supportCaps[id]*100,id);
   assert.equal(apiEvidence.rawStatChecks.polishOnly.maxHp,150);assert.equal(data.byId.hp.cap,null);
@@ -63,22 +64,22 @@ test('A fegyverbónusz alapfokozatai helyi forrással egyeznek; minden 1–60. s
   assert.deepEqual(data.critical.weaponBands.map(band=>band.bonuses),[[6,12,20,28,40],[6,12,20,28,40],[6.2,12.4,20.6,28.8,41.2],[6.4,12.7,21.2,29.7,42.4],[6.5,13.1,21.8,30.5,43.6],[6.7,13.4,22.4,31.4,44.8]]);
 });
 test('A 10 000 / 50% / +40% kritikus példa 19 000 kritikus és 14 500 átlagsebzést ad',()=>{
-  const result=math.criticalDamage(10000,50,40,0,data.critical);
+  const result=math.criticalDamage(10000,50,40,0,{...data.critical,softCapUnverified:false});
   assert.equal(result.multiplier,1.9);assert.equal(result.criticalHit,19000);assert.equal(result.averageDamage,14500);
 });
 test('Az 50%-os esély- és 75%-os bónuszkorlát külön érvényesül, a bónusz hozzáadódik az alapszorzóhoz',()=>{
-  const result=math.criticalDamage(10000,65,40,60,data.critical);
+  const result=math.criticalDamage(10000,65,40,60,{...data.critical,softCapUnverified:false});
   assert.equal(result.totalBonus,100);assert.equal(result.chance.effective,50);assert.equal(result.chance.excess,15);
   assert.equal(result.bonus.effective,75);assert.equal(result.bonus.excess,25);assert.equal(result.multiplier,2.25);assert.equal(result.criticalHit,22500);assert.equal(result.averageDamage,16250);
   for(const chance of [0,49.999,50,50.001,100])for(const bonus of [0,74.999,75,75.001,100]){
-    const value=math.criticalDamage(10000,chance,bonus,0,data.critical);
+    const value=math.criticalDamage(10000,chance,bonus,0,{...data.critical,softCapUnverified:false});
     assert.equal(value.chance.effective,Math.min(chance,50));assert.equal(value.bonus.effective,Math.min(bonus,75));assert(value.multiplier<=2.25);
   }
 });
 test('Nulla sebzés, nulla esély és negatív összesített bónusz nem okoz hibás eredményt',()=>{
-  assert.equal(math.criticalDamage(0,50,75,0,data.critical).averageDamage,0);
-  assert.equal(math.criticalDamage(10000,0,75,0,data.critical).averageDamage,10000);
-  const negative=math.criticalDamage(10000,50,-20,10,data.critical);
+  assert.equal(math.criticalDamage(0,50,75,0,{...data.critical,softCapUnverified:false}).averageDamage,0);
+  assert.equal(math.criticalDamage(10000,0,75,0,{...data.critical,softCapUnverified:false}).averageDamage,10000);
+  const negative=math.criticalDamage(10000,50,-20,10,{...data.critical,softCapUnverified:false});
   assert.equal(negative.totalBonus,-10);assert.equal(negative.bonus.effective,0);assert.equal(negative.bonus.excess,0);assert.equal(negative.multiplier,1.5);assert.equal(negative.averageDamage,12500);
   assert.equal(math.parseSignedPercent('-6,2'),-6.2);assert.equal(math.parseSignedPercent('+6,2'),6.2);assert.equal(math.parseSignedPercent('--1'),null);assert.equal(math.parseSignedPercent('++1'),null);assert.equal(math.parseSignedPercent('-0'),0);
 });

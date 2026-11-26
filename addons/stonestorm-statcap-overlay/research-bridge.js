@@ -3,15 +3,17 @@
   'use strict';
   if(window.top!==window)return;
   let until=0,samples={};
+  const preferences=globalThis.StonestormCompanionState?.shared(chrome.storage);
   const subscribers=new Set(),labels={'/api/content':'Nyilvános kísérőszabályok','/api/sinks':'Otthon és berendezés','/api/home/rooms':'Szobák és témák','/api/arena/pure':'Tiszta aréna','/api/arena/pure/season':'Tiszta szezon','/api/arena/bandit':'Bandita Liga','/api/character':'Teaárak és nyilvános képkulcsok'};
   const status=()=>({count:Object.keys(samples).length,active:Date.now()<until,remainingSeconds:Math.max(0,Math.ceil((until-Date.now())/1000)),categories:Object.keys(samples).map(path=>({name:labels[path],count:1}))});
   const notify=()=>{for(const fn of subscribers)fn(status());};
   function command(type){
+    if(['atlas-research-arm','atlas-research-export'].includes(type)&&preferences?.get().development!==true)return {error:'Az Atlas eszközei a Haladó beállítások fejlesztői módjában érhetők el.'};
     if(type==='atlas-research-arm'){samples={};until=Date.now()+60000;window.dispatchEvent(new Event('ss-atlas-research-arm'));window.postMessage({source:'ss-statcap-ready-v2'},location.origin);}
     if(type==='atlas-research-stop'){until=0;samples={};window.dispatchEvent(new Event('ss-atlas-research-stop'));}
     if(type==='atlas-research-export'){
       until=0;window.dispatchEvent(new Event('ss-atlas-research-stop'));
-      const result={schema:1,addonVersion:'0.9.6',source:'user-initiated-anonymized-observation',samples:Object.values(samples)};samples={};notify();return result;
+      const result={schema:1,addonVersion:chrome.runtime?.getManifest?.().version??'0.14.0',source:'user-initiated-anonymized-observation',samples:Object.values(samples)};samples={};notify();return result;
     }
     notify();return status();
   }
@@ -30,4 +32,5 @@
     reply(command(message.type));
   });
   globalThis.StonestormResearchController=Object.freeze({command,status,subscribe(fn){subscribers.add(fn);return()=>subscribers.delete(fn);}});
+  preferences?.subscribe(value=>{if(!value.development&&until){command('atlas-research-stop');}});
 })();

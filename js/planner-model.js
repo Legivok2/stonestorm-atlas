@@ -2,7 +2,7 @@
 (() => {
   const own=(object,key)=>Object.prototype.hasOwnProperty.call(object??{},key);
   const integer=(x,min,max,fallback)=>typeof x==='number'&&Number.isInteger(x)?Math.max(min,Math.min(max,x)):fallback;
-  function empty(db,classId=db.classes[0].id){return {version:1,name:'Új karakterbuild',classId,gender:'male',look:1,level:1,gear:{},petId:null,petLevel:1,traitRank:1,skillRank:1,mountId:null,targetFamily:null};}
+  function empty(db,classId=db.classes[0].id){return {version:3,name:'Új karakterbuild',classId,gender:'male',look:1,level:1,gear:{},petId:null,petLevel:1,petForm:1,petRank:0,petRankVerified:false,petObservedPreset:null,petSkills:[],traitRank:1,skillRank:1,mountId:null,targetFamily:null};}
   const canEquip=(item,build)=>item.level<=build.level&&(!item.classes?.length||item.classes.includes(build.classId));
   function normalize(input,db){
     const errors=[];input=input&&typeof input==='object'&&!Array.isArray(input)?input:{};
@@ -11,11 +11,30 @@
     result.gender=['male','female'].includes(input.gender)?input.gender:'male';
     result.look=integer(input.look,1,2,1);
     result.level=integer(input.level,1,db.economy.limits.maxLevel,1);
-    const petProgress=globalThis.StonestormPets.normalize(input.petLevel,input.petForm,result.level,db.petSystem);
+    // v1 builds and exported legacy snapshots used petBond/bond as the form field.
+    const legacyForm=own(input,'petBond')?input.petBond:own(input,'bond')?input.bond:undefined;
+    const legacyRank=own(input,'petRank')?input.petRank:own(input,'rank')?input.rank:0;
+    const petProgress=globalThis.StonestormPets.normalize(input.petLevel,input.petForm??legacyForm,result.level,db.petSystem);
     result.petLevel=petProgress.level;result.petForm=petProgress.form;
     result.traitRank=integer(input.traitRank,1,5,1);
     result.skillRank=integer(input.skillRank,1,5,1);
-    result.petRank=integer(input.petRank,0,10000,0);
+    result.petRank=integer(legacyRank,0,10000,0);
+    result.petRankVerified=input.petRankVerified===true;
+    result.petObservedPreset=typeof input.petObservedPreset==='string'&&input.petObservedPreset==='mohaagancs-adult-22'?input.petObservedPreset:null;
+    const stage=db.petSystem.stages.find(s=>s.form===result.petForm);
+    const slotLimit=stage?.slots??0;
+    const selectedPet=db.pets.find(p=>p.id===input.petId);
+    const signature=selectedPet?.signature;
+    const seen=new Set();
+    result.petSkills=[];
+    for(const raw of Array.isArray(input.petSkills)?input.petSkills.slice(0,slotLimit):[]){
+      const skillId=typeof raw?.skillId==='string'&&own(db.petSkills,raw.skillId)?raw.skillId:null;
+      const slot=integer(raw?.slot,1,slotLimit,0);
+      const level=integer(raw?.level,1,5,0);
+      if(!skillId||!slot||!level||skillId===signature||seen.has(skillId)||seen.has(slot))continue;
+      seen.add(skillId);seen.add(slot);
+      result.petSkills.push({slot,skillId,level});
+    }
     result.targetFamily=db.sets.some(s=>s.familyId===input.targetFamily)?input.targetFamily:null;
     for(const slot of Object.keys(db.labels.slots)){
       if(!own(input.gear,slot))continue;
@@ -23,9 +42,16 @@
       if(!item||item.slot!==slot||!canEquip(item,result)){errors.push(`${db.labels.slots[slot]}: nem használható vagy ismeretlen tárgy eltávolítva.`);continue;}
       result.gear[slot]={id:item.id,plus:integer(selection.plus,0,db.forge.plusMult.length-1,0)};
     }
-    const pet=db.pets.find(p=>p.id===input.petId);
-    if(pet&&result.level>=db.petRules.minHeroLevel)result.petId=pet.id;
+    if(selectedPet&&result.level>=db.petRules.minHeroLevel)result.petId=selectedPet.id;
     else if(input.petId)errors.push('A kísérő minimumszintje nem teljesül, vagy azonosítója ismeretlen.');
+    if(result.petObservedPreset){
+      const reference=globalThis.StonestormPets.observedReferencePreset();
+      const matchesSkills=reference.skills.length===result.petSkills.length&&reference.skills.every((skill,index)=>{
+        const selected=result.petSkills.find(item=>item.slot===index+1);
+        return selected?.skillId===skill.skillId&&selected.level===skill.level;
+      });
+      if(result.petId!==reference.petId||result.petLevel!==reference.level||result.petForm!==reference.form||result.petRank!==0||result.petRankVerified||!matchesSkills)result.petObservedPreset=null;
+    }
     const mount=db.mounts.find(m=>m.id===input.mountId);
     if(mount&&mount.level<=result.level&&!mount.ramp)result.mountId=mount.id;
     else if(input.mountId)errors.push('A hátas minimumszintje nem teljesül, vagy azonosítója ismeretlen.');
@@ -76,14 +102,20 @@
     }).filter(x=>x.count||x.set.familyId===build.targetFamily);
     const pet=db.pets.find(p=>p.id===build.petId)??null,mount=db.mounts.find(m=>m.id===build.mountId)??null;
     return {build,errors:normalized.errors,baseStats:db.classes.find(c=>c.id===build.classId).baseStats,equipment,equipped,sets,
-      pet:pet?{record:pet,level:build.petLevel,form:build.petForm,slots:db.petSystem.stages[build.petForm-1].slots,traitRank:build.traitRank,skillRank:build.petForm,details:globalThis.StonestormPetDetails.describe({petId:pet.id,level:build.petLevel,form:build.petForm,rank:build.petRank,active:true},db.petModel),rawSpeciesBonus:{...pet.perLevel}}:null,
+      pet:pet?{record:pet,level:build.petLevel,form:build.petForm,slots:db.petSystem.stages[build.petForm-1].slots,traitRank:build.traitRank,skillRank:build.petForm,skills:build.petSkills,details:globalThis.StonestormPetDetails.describe({petId:pet.id,level:build.petLevel,form:build.petForm,rank:build.petRank,active:true,skills:build.petSkills.map(s=>({skillId:s.skillId,level:s.level}))},db.petModel),rawSpeciesBonus:{...pet.perLevel}}:null,
       mount:mount?{record:mount,travelMult:mount.travelMult}:null,
       levelStats:null,finalCombatStats:null,
       limitations:['A karakter szintből származó tulajdonságainak elosztása és a teljes szerveroldali harci képlet nem igazolt.','A felszerelésösszeg számtani komponensösszeg, nem végső támadás, védelem vagy harcerő.','A százalékos szett- és kísérőhatások nem kerülnek bizonyítatlan módon az alapértékekre.','Véletlen tárgybónuszok és egyéb buffok nincsnek általánosítva.']};
   }
   function parse(text,db){
     if(typeof text!=='string'||text.length>12000)return {build:empty(db),errors:['A megosztott build túl hosszú vagy érvénytelen.']};
-    try{const input=JSON.parse(text);if(input?.version!==1)return {build:empty(db),errors:['Nem támogatott buildverzió.']};return normalize(input,db);}catch{return {build:empty(db),errors:['A buildhivatkozás nem érvényes JSON.']};}
+    try{
+      const input=JSON.parse(text);
+      if(input?.version!==undefined&&![0,1,2,3].includes(input.version))return {build:empty(db),errors:['Nem támogatott buildverzió.']};
+      const migrated=normalize(input,db);
+      if(input?.version!==3)migrated.errors.unshift('Régi buildformátumot V3 Pet Builder sémára migráltunk; a kísérőforma, rang és képességhelyek ellenőrizve lettek.');
+      return migrated;
+    }catch{return {build:empty(db),errors:['A buildhivatkozás nem érvényes JSON.']};}
   }
   globalThis.StonestormPlanner=Object.freeze({empty,normalize,calculate,parse,equipmentValues,canEquip});
 })();

@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://stonestorm.gg/",
+    "sha256": "f74bf694caedf643e82a16ee41574e0cf2fa1bbb3ee8eac0eed6f6961e694494"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+    "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/GameApp-JGXOuxWJ.js",
+    "sha256": "8a306a673ff9308467657d74f588c1b16b441d0471cda5860801dda9b4017947"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/HuntPage-DslotEk1.js",
+    "sha256": "086c021109fdb926c79508073f958afa4f55a7d0d7b443d5b4de688c8b1bd72f"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/MiningPage-DMAMF98u.js",
+    "sha256": "15f2c7fcafb3358fa5cf23d37c581cd506d1d64865463ee0df94fd497e59fcba"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/HeroSwitchMenu-BAeuhwSH.js",
+    "sha256": "254030243fda99a787b2a271a929bb2dd4a868ff88899b5ffd0b816a73a88ac7"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/expedition-time-0gJHKilC.js",
+    "sha256": "7584f43ac5d322b24becaee1f1b7b30b30c69750f53d43f026b914cb97760155"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/reward-boost-BJul5okT.js",
+    "sha256": "3e72536baab6ba61c5cb0f2a122447841d25e2d34a6754364a1c73e021a28ac8"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/GameApp-B2l65l5X.css",
+    "sha256": "4b4f554504a354be5ee788a31a5777fa1f2eaa12417e4d35255835cd46d287be"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/constants-De0gJKRt.js",
+    "sha256": "139313646d8b5b1da9350c7f682b579382f40a37bc70192e59c72fcbf04ee1ed"
+  },
+  {
+    "url": "https://stonestorm.gg/assets/hu-D9r5Wgz9.js",
+    "sha256": "4cabe64071cf7d94dabd4254f2c6e34d7b7f894885bca15a5525ccd027c2d37f"
+  }
+]

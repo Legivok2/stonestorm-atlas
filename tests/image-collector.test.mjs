@@ -4,6 +4,12 @@ import {imageURL,referencesFromModule,compareReferences,sha256,report,mappingExp
 import {discover,downloadNew,loadState,saveReview,importMappings,prepareImport,writeJSON,staging,safeFile,mutate} from '../scripts/image-collector.mjs';
 import {codeFiles,sourceFiles,runtimeFiles,assertSafeRelative} from '../scripts/publication-plan.mjs';
 const read=(root,p)=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+test('Future Content Watcher bridge enters discovery with evidence and no automatic mapping',async t=>{
+ const f=await imageFixture(t),url='https://stonestorm.gg/art/icons/future_bridge.webp',catalog=fs.readFileSync(path.join(f.root,'data/image-catalog.json'));
+ writeJSON(f.root,'data/future-image-references.json',{kind:'atlas-future-image-references',gameVersion:'fixture',images:[{url,observationIds:['stable-observation'],sources:[{url:'https://stonestorm.gg/assets/art-manifest-Fixture.js',path:'literal icons',sha256:'a'.repeat(64)}]}]});
+ const state=await discover({root:f.root,from:path.join(f.root,'refs.json'),sleep:f.noSleep}),row=state.candidates.find(x=>x.url===url);
+ assert(row);assert.equal(row.review.status,'pending');assert(row.sources.includes('future-content-watcher'));assert.deepEqual(row.observationIds,['stable-observation']);assert.equal(row.evidenceSources[0].sha256,'a'.repeat(64));assert(fs.readFileSync(path.join(f.root,'data/image-catalog.json')).equals(catalog));
+});
 test('Képcímek: külső host, token, API, redirect-paraméter, traversal és SVG kizárva',()=>{
  for(const url of ['http://stonestorm.gg/art/a.png','https://evil.invalid/art/a.png','https://stonestorm.gg/api/character','https://stonestorm.gg/art/a.png?token=PRIVATE','https://stonestorm.gg/art/a.png?url=elsewhere','https://stonestorm.gg/art/../art/a.png','https://stonestorm.gg/art/a%2fb.png','https://stonestorm.gg/art/a.svg','https://'+'user:pass@stonestorm.gg/art/a.png'])assert.throws(()=>imageURL(url));
  assert.equal(imageURL('https://stonestorm.gg/art/icons/item.webp?v=abc123'),'https://stonestorm.gg/art/icons/item.webp?v=abc123');

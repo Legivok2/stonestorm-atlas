@@ -1,16 +1,19 @@
 import fs from 'node:fs';
+import {buildCompanionAssets} from './build-addon-companion.mjs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 import '../js/addon-version.js';
 import {buildPetAssets} from './build-addon-pets.mjs';
+import {buildEquipmentAssets} from './build-addon-equipment.mjs';
 export const addonDirectory='addons/stonestorm-statcap-overlay';
 export const addonZip='downloads/stonestorm-statcap-overlay.zip';
+export const addonVersionedZip='downloads/stonestorm-companion-0.14.0-beta.zip';
 export const addonMetadata='downloads/stat-addon.json';
-export const addonRuntime=['manifest.json','capture.js','content.js','pet-model.js','pet-data.js','pet-tooltip.js','pet-source.js','research-sanitizer.js','research-capture.js','research-bridge.js','research-ui.js','research-overlay.js','research-popup.html','research-popup.js','research-popup.css','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'];
-export const addonSource=[...addonRuntime,'README.md','PRIVACY.md','PUBLISH.md','package.json','import.json','tests/capture-refresh.test.js'].map(file=>addonDirectory+'/'+file);
-export const addonArtifacts=[addonZip,addonMetadata,'js/addon-release.js'];
+export const addonRuntime=['i18n.js','i18n/hu.json','i18n/en.json','equipment-live-model.js','equipment-live-client.js','equipment-live-main.mjs','equipment-live-worker.mjs','companion-design.js','companion-state.js','companion-stats.js','companion-components.js','companion-equipment-view.js','companion-raid-view.js','companion-shell.js','art/xp.webp','art/nyang.webp','art/drop.webp','enhanced-ui-config.js','enhanced-ui.js','enhanced-ui.css','equipment-reader.js','raid-model.js','raid-dom.js','raid-ui.js','mining-multipanel.js','mining-multipanel.css','equipment-model.js','equipment-data.js','equipment-storage.js','equipment-switcher.js','equipment-ui.js','equipment-capture.js','manifest.json','capture.js','content.js','home-expanded.js','home-expanded.css','pet-model.js','pet-data.js','pet-tooltip.js','pet-source.js','research-sanitizer.js','research-capture.js','research-bridge.js','research-ui.js','research-overlay.js','research-popup.html','research-popup.js','research-popup.css','icons/icon-16.png','icons/icon-32.png','icons/icon-48.png','icons/icon-128.png'];
+export const addonSource=[...addonRuntime,'multi-instance-probe.js','multi-instance-frame-main.js','companion.css','CHANGELOG.md','README.md','PRIVACY.md','PUBLISH.md','package.json','import.json','tests/capture-refresh.test.js','tests/community-hub.test.js'].map(file=>addonDirectory+'/'+file);
+export const addonArtifacts=[addonZip,addonVersionedZip,addonMetadata,'js/addon-release.js'];
 export const sha256=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
 const crcTable=Array.from({length:256},(_,n)=>{for(let i=0;i<8;i++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
 export function crc32(buffer){let crc=0xffffffff;for(const byte of buffer)crc=crcTable[(crc^byte)&255]^(crc>>>8);return (crc^0xffffffff)>>>0;}
@@ -30,25 +33,28 @@ export function createZip(entries){
 export function expectedAddon(root){
   const read=file=>{const target=path.join(root,addonDirectory,file);if(fs.lstatSync(target).isSymbolicLink())throw Error('Szimbolikus link nem kerülhet az addonba.');return fs.readFileSync(target);};
   const manifest=JSON.parse(read('manifest.json'));
-  assert.equal(manifest.manifest_version,3);assert(globalThis.StonestormAddonVersion.version(manifest.version));assert.equal(manifest.name,'Stonestorm Stat Cap Overlay');
-  for(const ref of [...Object.values(manifest.icons),...manifest.content_scripts.flatMap(s=>s.js)])assert(addonRuntime.includes(ref),'Hiányzik az addon tételes csomaglistájából: '+ref);
+  assert.equal(manifest.manifest_version,3);assert(globalThis.StonestormAddonVersion.version(manifest.version));assert.equal(manifest.name,'Stonestorm Companion');
+  for(const ref of [...Object.values(manifest.icons),...manifest.content_scripts.flatMap(s=>[...s.js??[],...s.css??[]])])assert(addonRuntime.includes(ref),'Hiányzik az addon tételes csomaglistájából: '+ref);
+  if(manifest.background?.service_worker)assert(addonRuntime.includes(manifest.background.service_worker));
   const original=JSON.parse(read('import.json'));
   if(manifest.version===original.version)for(const file of addonRuntime)assert.equal(sha256(read(file)),original.runtimeSha256[file],'Az átvett addon futásidejű fájlja változott verzióemelés nélkül: '+file);
-  const zip=createZip([...addonRuntime,'README.md','PRIVACY.md'].sort().map(file=>[file,read(file)]));
+  const zip=createZip([...addonRuntime,'README.md','PRIVACY.md','CHANGELOG.md'].sort().map(file=>[file,read(file)]));
   const metadata={schema:1,name:manifest.name,version:manifest.version,beta:true,zip:addonZip,bytes:zip.length,sha256:sha256(zip)};
   assert(globalThis.StonestormAddonVersion.release(metadata),'Az addon kiadási adata érvénytelen vagy a csomag túl nagy.');
   const json=JSON.stringify(metadata,null,2)+'\n',bootstrap='/* Generált kiadási tartalékadat; npm run build:addon. */\nglobalThis.STONESTORM_ADDON_RELEASE = '+JSON.stringify(metadata)+';\n';
   return {zip,json,bootstrap,metadata};
 }
 export function buildAddon(root){
+  buildCompanionAssets(root);
   buildPetAssets(root);
+  buildEquipmentAssets(root);
   const result=expectedAddon(root);fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
-  for(const [file,bytes] of [[addonZip,result.zip],[addonMetadata,result.json],['js/addon-release.js',result.bootstrap]])fs.writeFileSync(path.join(root,file),bytes);
+  for(const [file,bytes] of [[addonZip,result.zip],[addonVersionedZip,result.zip],[addonMetadata,result.json],['js/addon-release.js',result.bootstrap]])fs.writeFileSync(path.join(root,file),bytes);
   return result.metadata;
 }
 export function assertAddonPackage(root){
   const result=expectedAddon(root);
-  for(const [file,bytes] of [[addonZip,result.zip],[addonMetadata,result.json],['js/addon-release.js',result.bootstrap]])assert(fs.readFileSync(path.join(root,file)).equals(Buffer.from(bytes)),'Eltérő vagy elavult addonkiadás; futtasd: npm run build:addon. Fájl: '+file);
+  for(const [file,bytes] of [[addonZip,result.zip],[addonVersionedZip,result.zip],[addonMetadata,result.json],['js/addon-release.js',result.bootstrap]])assert(fs.readFileSync(path.join(root,file)).equals(Buffer.from(bytes)),'Eltérő vagy elavult addonkiadás; futtasd: npm run build:addon. Fájl: '+file);
   return result.metadata;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){

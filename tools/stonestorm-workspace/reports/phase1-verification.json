@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "phase": 1,
+  "version": "0.1.1",
+  "at": "2026-11-24T13:29:54.253Z",
+  "unit": {
+    "passed": 7,
+    "total": 7
+  },
+  "electronRuntime": {
+    "passed": 10,
+    "total": 10,
+    "syntheticLocalFixture": true
+  },
+  "packagedOriginalSite": {
+    "httpStatus": 200,
+    "location": "https://stonestorm.gg/login",
+    "challengeObserved": false,
+    "error": null,
+    "outcome": "manual-game-and-login-verification-required",
+    "freshEmptyElectronProfile": true,
+    "secondLiveViewOpened": false
+  },
+  "manualLoginVerified": false,
+  "liveGameControlsVerified": false,
+  "liveTwoPanelInteractivityVerified": false,
+  "packagedSourceMatches": true,
+  "companionFilesUnchanged": 63,
+  "companionSettingsAccessed": false,
+  "fourPanelImplemented": false,
+  "communityImplemented": false,
+  "gameCodeInjected": false,
+  "chromeCookiesImported": false,
+  "pushed": false,
+  "build": {
+    "schema": 1,
+    "at": "2026-11-24T13:27:38.123Z",
+    "version": "0.1.1",
+    "electron": "45.4.1",
+    "executable": "dist\\StoneStorm Workspace-win32-x64\\StoneStorm Workspace.exe",
+    "executableBytes": 249978880,
+    "executableSha256": "e170501dfdebf7d7d78e077138e60c43b582708b1de1c6a204b3f71c1ead46da",
+    "appAsarSha256": "503e86b8719acfd720e8fdccc7aba6508cd19cf1dfb95472bed3974ddec23c57",
+    "fuses": {
+      "0": 48,
+      "1": 48,
+      "2": 48,
+      "3": 48,
+      "4": 48,
+      "5": 49,
+      "6": 48,
+      "7": 49,
+      "8": 49,
+      "version": "1"
+    },
+    "signed": false,
+    "containsUserSession": false
+  }
+}

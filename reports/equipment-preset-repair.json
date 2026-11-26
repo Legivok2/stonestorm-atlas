@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-21T18:25:04.196Z",
+  "release": {
+    "schema": 1,
+    "name": "Stonestorm Stat Cap Overlay",
+    "version": "0.9.11",
+    "beta": true,
+    "zip": "downloads/stonestorm-statcap-overlay.zip",
+    "bytes": 316115,
+    "sha256": "f50faf89f5b5ce36744bd8cb1b5a5df19e5b4ed2c5b4bd5f154d91e895b19f4d"
+  },
+  "previousVersion": "0.9.10",
+  "status": "awaiting-user-live-save-confirmation",
+  "taskComplete": false,
+  "published": false,
+  "pushed": false,
+  "rootCauses": [
+    "lean:1 envelope and ~:1 item defaults were not decoded before validation",
+    "extraSlots was required even for identity-only local save",
+    "nextForge upgrade preview was incorrectly treated as a pending transaction"
+  ],
+  "dataFlow": {
+    "character": "GET /api/character -> state",
+    "owner": "state.id",
+    "inventory": "state.items",
+    "instance": "items[].id",
+    "template": "items[].templateId",
+    "location": [
+      "equippedSlot",
+      "invIndex"
+    ],
+    "requirements": "item fields after official lean decoding, based on /api/content templates; flags/itemLevel client branch retained",
+    "mainWorld": [
+      "equipment-model.js",
+      "equipment-data.js",
+      "equipment-reader.js",
+      "equipment-capture.js",
+      "capture.js"
+    ],
+    "isolatedWorld": [
+      "equipment-model.js",
+      "equipment-data.js",
+      "equipment-storage.js",
+      "equipment-switcher.js",
+      "equipment-ui.js"
+    ],
+    "refresh": "Existing official client X export: fT=()=>Wt(\"/api/character\"); no credential inspection or game writer"
+  },
+  "validation": {
+    "unitTests": {
+      "passed": 236,
+      "failed": 0,
+      "newRepairTestsIncluded": 17
+    },
+    "actualPublicClient": {
+      "verifiedAt": "2026-11-21T18:15:35.655Z",
+      "actualPublicClient": true,
+      "authenticatedCharacterRead": false,
+      "cases": 161,
+      "items": 9,
+      "equipped": 8,
+      "freeItems": 1,
+      "leanVersion": 1,
+      "characterGET": {
+        "path": "/api/character",
+        "method": "GET",
+        "export": "X",
+        "verifiedBody": "fT=()=>Wt(\"/api/character\")"
+      },
+      "sources": [
+        {
+          "url": "https://stonestorm.gg/assets/index-C8sNneJf.js",
+          "sha256": "32f9df0ddb2cb589e0f1d0462bdb7753ce6ea52ea44ad37689496e7806958901"
+        },
+        {
+          "url": "https://stonestorm.gg/api/content",
+          "sha256": "ba75bc5f19ee9b4510ed147ed9ab9c788c7c47c43fb1727e1f3cd9f35a8ca3e4"
+        }
+      ],
+      "result": "passed"
+    },
+    "newNativeMV3": {
+      "verifiedAt": "2026-11-21T18:15:45.223Z",
+      "version": "0.9.11",
+      "nativeMV3": true,
+      "usesActualOfficialDecoder": true,
+      "liveAccount": false,
+      "cases": [
+        {
+          "name": "Character and bag visible; no initial character read or stale preset enable",
+          "passed": true
+        },
+        {
+          "name": "User opening the preset panel automatically invokes only the verified GET",
+          "passed": true
+        },
+        {
+          "name": "Diagnostics show 9 items / 8 equipped / 9 unique IDs / 8 worn slots without identifiers",
+          "passed": true
+        },
+        {
+          "name": "All 3 presets save to real Chrome local storage and read back owned instance IDs",
+          "passed": true
+        },
+        {
+          "name": "Rename and saved preset preview work while live equipment stays disabled",
+          "passed": true
+        },
+        {
+          "name": "XP/Nyang/drop previews are available without stats or derived totals",
+          "passed": true
+        },
+        {
+          "name": "Dedicated reread uses one GET; concurrent clicks are coalesced",
+          "passed": true
+        },
+        {
+          "name": "Missing worn ID disables save with its precise cause, not fabricated identity",
+          "passed": true
+        },
+        {
+          "name": "Partial API response clears readiness while local rename/delete remain available",
+          "passed": true
+        },
+        {
+          "name": "Successful reread restores save without reopening character or bag",
+          "passed": true
+        },
+        {
+          "name": "Partial numeric item fields do not prevent identity-only save and preview",
+          "passed": true
+        },
+        {
+          "name": "Presets persist through page reload and current character can save again",
+          "passed": true
+        },
+        {
+          "name": "No original gameplay button click, destructive endpoint or POST was initiated",
+          "passed": true
+        }
+      ],
+      "passed": 13,
+      "items": 9,
+      "equipped": 8,
+      "free": 1,
+      "presetSaveAndReadback": true,
+      "reads": 7,
+      "writes": 0,
+      "gameButtonClicks": 0,
+      "errors": [],
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/character"
+        },
+        {
+          "method": "GET",
+          "path": "/assets/index-C8sNneJf.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        },
+        {
+          "method": "GET",
+          "path": "/character"
+        },
+        {
+          "method": "GET",
+          "path": "/assets/index-C8sNneJf.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/character"
+        }
+      ]
+    },
+    "existingEquipmentRegression": "passed: 3 presets, per-character local storage, XP/Nyang optimizer, mock-only swap",
+    "miningRaidRegression": "passed: 22 native cases",
+    "homeExpandedRegression": "passed: 6 tabs and 6 viewport sizes",
+    "anonymousExportRegression": "passed: native popup, isolated bridge, real local JSON download",
+    "petTooltipRegression": "passed: desktop and mobile; no activation",
+    "syntax": "passed",
+    "addonPackage": "passed",
+    "pagesBuild": "passed",
+    "pagesHTTP": {
+      "passedFiles": 3783,
+      "failed": 0
+    },
+    "addonDownloadRegression": "passed: three viewport sizes, ZIP SHA-256, update/error paths",
+    "statLimitsRegression": "passed: 1440, 390 and 320 pixel viewports"
+  },
+  "liveAcceptance": {
+    "authenticatedAccountObserved": false,
+    "presetSavedInUserGame": null,
+    "userReply": "User will test and report back",
+    "blockers": [
+      "Native pipe unavailable",
+      "Browser access host unavailable"
+    ]
+  },
+  "remainingLimitations": [
+    "Full-combination Harcero optimizer remains disabled; no fabricated calculation",
+    "Live equip/unequip remains disabled; no server-side swap has been tested"
+  ],
+  "screenshots": [
+    {
+      "path": ".integration/equipment-repair/equipment-fixed-1440.png",
+      "sha256": "096da80fcb3c84ba5264ded75fa7f95648aa22e67ea6b96ec02c6d76fd01bacc"
+    }
+  ],
+  "sourceProof": {
+    "beforeModel": "tests/fixtures/equipment-before-lean.fixture.mjs",
+    "sha256": "4c0dc029292c344fe34ef49ded6871d501decf399f15e9c9d2556ef5a824c1b3"
+  }
+}

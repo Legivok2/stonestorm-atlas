@@ -1,5 +1,23 @@
 ﻿# Stonestorm Atlas – Magyar Wiki és Kalauz
 
+## A repository projektjei
+
+- **Stonestorm Atlas:** játékadatok, magyar wiki és információs felületek, a meglévő automatikus adatfrissítési rendszerrel.
+- **Stonestorm Companion:** Chrome-bővítmény, aktuális verziója **0.14.0 BETA**. Statokat és limiteket, kísérőstatisztikákat, felszereléspreseteket, portyákat és kalkulátorokat kínál magyar és angol kezelőfelülettel. Az aktív funkciófejlesztés ennél a verziónál szünetel; hibajavítások és kompatibilitási frissítések továbbra is készülhetnek.
+- **Stonestorm Workspace:** különálló, Electron-alapú Windows-alkalmazás normál játék móddal, több eredeti játékpéldánnyal és négyes Tárnák munkaterülettel. A Workspace **fejlesztői előzetes**, nem végleges kiadás.
+
+Kapcsolat és visszajelzés: **Discord: `pain6089`**
+
+### English overview
+
+- **Stonestorm Atlas:** game data, wiki and reference interfaces, plus the existing automated data update system.
+- **Stonestorm Companion:** a Chrome extension, currently **0.14.0 BETA**, with stats and caps, companion statistics, equipment presets, raids, calculators, and Hungarian/English UI. Active feature development is paused at this version; maintenance fixes may still be released.
+- **Stonestorm Workspace:** a separate Electron-based Windows application with normal game mode, multiple original game instances, and a four-panel Mines workspace. It is a **development preview**, not a final release.
+
+Contact and feedback: **Discord: `pain6089`**
+
+---
+
 A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alkalmazásban. Vanilla JavaScript, helyi képek és adatcsomag; nincs játékfiókkapcsolat, kötelező csomagtelepítés vagy keretrendszer.
 
 > **Teljes Atlas-kiadás, 2026. november 7.:** a projektgazda kifejezetten kérte a teljes helyi változat publikálását, és feloldotta a korábbi engedélyellenőrzési feltételt. A GitHub Pages az eredeti `index.html`, CSS, JavaScript, játékadatok és képek alapján készül; nincs kalauzra egyszerűsített helyettesítő kiadás. A közzétételi utasítás az `.publication/permissions.json` fájlban szerepel, külön az igazolt licencektől.
@@ -28,11 +46,11 @@ A vizuálisan megújult Atlas a [GitHub Pages oldalon](https://legivok2.github.i
 
 Helyi képgyűjtés és vizuális jóváhagyás: [Atlas Image Manager / Image Collector V2](stonestorm_image_tools/IMAGE_COLLECTOR_V2.md). Indítás: `npm run images:manager`, cím: **http://127.0.0.1:4174/**. A gyűjtő az aktív Atlast nem módosítja; az új képek és döntések Gitből kizárt staging mappába kerülnek.
 
-## Ingyenes Chrome-addon · BÉTA
+## Stonestorm Companion · Chrome-bővítmény · BÉTA
 
-Az aktuális kiadás **0.9.6 BÉTA**: közös popup–overlay adatgyűjtés és saját kísérőadatokat használó, aktiválás nélküli tooltip. A ZIP a `downloads/` mappából és a Pages-oldalról is elérhető. Kipróbálás, adatkorlátok és modellfrissítés: [addon útmutató](addons/stonestorm-statcap-overlay/README.md).
+Az aktuális kiadás **0.14.0 BETA**. Magyar és angol felületen kínál áttekintést, statokat és limiteket, kísérőstatisztikákat, felszereléspreseteket, portya-összehasonlítást és helyi kalkulátorokat. Telepítés, adatkorlátok és ellenőrzések: [Companion útmutató](addons/stonestorm-statcap-overlay/README.md).
 
-**[Stonestorm Stat Cap Overlay v0.9.6 – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-statcap-overlay.zip)** · Készítő: Patrik. A weboldal jobb alsó **⚔ Stat Addon – BÉTA** gombja ugyanide vezet. Az aktuális letölthető kiadást a Pages-verzióadat és a sikeres deploy igazolja; a telepített böngészőbővítmény frissítése kézi.
+**[Stonestorm Companion 0.14.0 BETA – ZIP](https://legivok2.github.io/stonestorm-atlas/downloads/stonestorm-companion-0.14.0-beta.zip)** · Készítő: Patrik. A kompatibilitási `stonestorm-statcap-overlay.zip` ugyanazt a csomagot tartalmazza. A telepített böngészőbővítmény frissítése kézi.
 
 Asztali Chrome: csomagold ki a ZIP-et állandó mappába, nyisd meg a `chrome://extensions` oldalt, kapcsold be a Fejlesztői módot, és a **Kicsomagolt bővítmény betöltése** gombbal válaszd a manifestet tartalmazó mappát. Frissítéskor ugyanott cseréld le a fájlokat, majd töltsd újra a meglévő bővítményt és a játék lapját. Részletes [telepítési útmutató](addons/stonestorm-statcap-overlay/README.md) és [adatkezelési összefoglaló](addons/stonestorm-statcap-overlay/PRIVACY.md).
 
@@ -42,10 +60,10 @@ Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `download
 
 ## Mi található benne?
 
-- **⚔ Stat Addon – BÉTA:** jobb alsó letöltőpanel a Stonestorm Stat Cap Overlay v0.9.6-hez, kézi telepítési/frissítési útmutatóval és automatikus újverzió-jelzéssel.
+- **Stonestorm Companion 0.14.0 BETA:** kétnyelvű Chrome-bővítmény kézi telepítési/frissítési útmutatóval és helyben mentett beállításokkal.
 
 - 182 felszerelés, 6 szettcsalád, 22 kísérő, 10 kísérőkészség és 8 hátas.
-- **Kísérőfejlődés:** az 50-es végső szintet követő, ötformás megfigyelési modell, négy átváltozás, 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek és látható klienskonfliktus: `#atlas/pets`. A Planner külön formát és kísérőszintet kezel.
+- **Kísérőfejlődés:** öt kliensforma, 10/20/35/50/60 plafon, négy átváltozás és 0/1/2/3/3 tanulható hely, teljes képességtáblák, etetés/XP/könyvek: `#atlas/pets`. A Pet Builder V2 külön formát és szintet, képességválasztást, 1–5. képességszinteket, helyi mentést és URL-megosztást kezel.
 - 6 pálya, 64 ellenfél, 6 bosskapcsolat, 4 kazamata és 131 alapanyag/fogyóeszköz.
 - 4 kaszt, 3 királyság, 14 kutatási lépés és 5 céhes épület 15 szinttel.
 - 462 megnyitható adatlap, keresés, kategóriaszűrés, rendezés, lapozás és kapcsolódó tartalmak.
@@ -77,7 +95,7 @@ Az új egységtesztek az `npm test` részei. Az opcionális, valódi Chromiumtes
 
 ### Kísérőrendszer és forráseltérések
 
-A `data/pet-system-evidence.json` külön őrzi a 2026-11-09-i `pets.v3`, `spine.hero.pets`, magyar fordítás és a nyilvános kliens ellenőrzését. A build a `db.petSystem` alá integrálja ezeket. A régi `petRules.maxLevel = 10` történeti adatként megmarad; sem a kísérőadatlap, sem a Planner nem használja végső maximumként. A projektgazda jelenlegi megfigyelése szerinti plafonok 10/20/30/40/50, a hivatalos magyar formanevek Kölyök / Fiatal / Felnőtt / Hős / Legendás. Az elérhető klienscsomag 10/20/35/50/60 értékei eltérnek: ez látható, nyitott konfliktus, nem állítjuk az 50-et API-ból függetlenül igazoltnak.
+A `data/pet-system-evidence.json` őrzi a `pets.v3`, `spine.hero.pets`, magyar fordítás és a nyilvános kliens szabályainak elkülönített bizonyítékait. A Planner a kliensmodell 10/20/35/50/60 formaplátóit használja; a régi 10/20/30/40/50-es megfigyelés történeti konfliktusként marad. A Mohaagancs 22/35, +12,6% XP, trait/signature/képesség és 11/15 Mesterfok csak a megadott referenciaállapot, nem általánosított képlet. Mesterfok és nyers API-rang nem azonosított.
 
 A `js/pet-system.js` közös modellje kezeli a formákat, határszinteket, hősszintkorlátot és a képességleírásokat. A `js/pet-ui.js` ugyanazt a fejlődési táblát használja a főoldalon és a 22 faj adatlapján. A 10 készség mind az öt képességszintje látható. Az átváltozási és etetési API-alapköltségek felülírhatóak karakterenként; végleges szerveres árat nem találgatunk. A két XP-megosztási konfiguráció külön látható. A reference minták nem feloldási szintek. A képességkönyv és a fajgyűjtemény Kísérő-könyve külön rendszer.
 
@@ -180,7 +198,7 @@ Az ismert kazamaták normál és hősi termeinek numerikus statjai is importálh
 
 `#atlas/arena`: a Tiszta aréna és a Bandita Liga külön adatlaprészekben. `#atlas/home`: házfokok, szobák, lapozható képes bútornév-katalógus, témák, trófeák, persely és Dongsu teaháza; a kutatások külön megmaradnak. A pontos árak és nem publikus limitek mintára váróként szerepelnek. [Részletes forrás- és hiányjelentés](docs/HOME_ARENA_V2.md).
 
-Az addon 0.9.4 BÉTA a Chrome bővítményikonjáról indítható, anonim kutatási exportot is tartalmaz. A régi statisztikai szkriptek változatlanok. A ZIP újragenerálható: `npm run build:addon`; a main-push után a Pages-workflow csomagolja és ellenőrzi a letöltést.
+A Companion 0.14.0 BETA a Chrome bővítményikonjáról indítható; az opcionális fejlesztői mód anonim kutatási exportot is tartalmaz. A ZIP újragenerálható: `npm run build:addon`; a main-push után a Pages-workflow csomagolja és ellenőrzi a letöltést.
 
 A weboldal futtatása továbbra is build nélkül lehetséges. A buildhez, tesztekhez és Auto-Synchez egyszer `npm ci` szükséges az AST-alapú, kódot nem futtató kliensfeldolgozó miatt. `npm run test:home-arena` és `npm run test:home-arena:browser` ellenőrzi az új rendszereket.
 # Data Engine V2

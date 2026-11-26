@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {equal,sha256,fullSetBonuses} from './atlas-sync-model.mjs';
-import {roomStats} from './dungeon-sync.mjs';
+import {roomStats,dungeonRecord} from './dungeon-sync.mjs';
 import {systemPaths} from './home-arena-model.mjs';
 import {engineBranches} from './data-engine.mjs';
 
@@ -20,9 +20,9 @@ const observed=(content,p,sources)=>p.startsWith('https:')?sources.find(x=>x.url
 const witness=(v)=>sha256({present:v!==undefined,value:v??null});
 const contains=(root,p)=>p===root||p.startsWith(root+'/');
 function engineProof(entry,content,db){
-  const routes=[['/pets/types','/pets'],['/pets/traits','/petTraits'],['/pets/v3/skills','/petSkills'],['/pets/v3/forms','/petForms'],['/pets/v3','/petSystem/v3'],['/spine/hero/pets','/petSystem/spine'],['/mounts','/mounts'],['/lean/researchSteps','/research'],['/forge','/forge']];
+  const routes=[['/pets/types','/pets'],['/pets/traits','/petTraits'],['/pets/v3/skills','/petSkills'],['/pets/v3/forms','/petForms'],['/pets/v3','/petSystem/v3'],['/spine/hero/pets','/petSystem/spine'],['/mounts','/mounts'],['/lean/researchSteps','/research'],['/forge','/forge'],...Object.entries(engineBranches).filter(([k])=>['stats','bonus','limits','rewards','polish','stones','skills','playRef','spine','maps','features'].includes(k)).map(([k,p])=>['/'+p.replaceAll('.','/'),k==='limits'?'/economy/limits':'/dataEngine/publicRules/'+k])];
   const match=routes.find(([p])=>contains(p,entry.path));if(!match||!db.dataEngine)return null;
-  const key=Object.entries(engineBranches).find(([,p])=>contains('/'+p.replaceAll('.','/'),entry.path))?.[0];
+  const key=Object.entries(engineBranches).sort((a,b)=>b[1].length-a[1].length).find(([,p])=>contains('/'+p.replaceAll('.','/'),entry.path))?.[0];
   const branch=db.dataEngine.branches[key],input=atPath(content,'/'+engineBranches[key]?.replaceAll('.','/'));
   const value=atPath(content,entry.path),actual=atPath(db,entry.path.replace(match[0],match[1]));
   // Normalized records add editorial names and provenance. Every API field must
@@ -32,6 +32,7 @@ function engineProof(entry,content,db){
   return null;
 }
 export function reviewSystem(p){
+  if(p.startsWith('https:'))return 'Kliens és fordítások';
   if(p.startsWith('/home-arena/'))return 'Otthon és Aréna';
   // Először a tulajdonos rendszer, csak utána a stat neve: terem-harcerő is Kazamaták.
   if(/^\/dungeons(?:\/|$)|dungeon|Dungeon|portalview/i.test(p))return 'Kazamaták';
@@ -114,8 +115,10 @@ export function classifyReview(entry,{plan,content,db,aliases={}}){
   if(db.homeArena&&Object.values(systemPaths).some(p=>entry.path===p||p.endsWith('/level')&&entry.path===p.slice(0,-6)&&Object.keys(atPath(content,entry.path)??{}).length===1))return 'automatic';
   if(/^\/families(?:\/|$)|^\/harcero\/bossEvadeCaps/.test(entry.path)||/védett|Játékban igazolt/.test(entry.reason??''))return 'conflict';
   if(entry.identity&&roomStats.includes(entry.identity.stat)&&plan.validatedDungeons.includes(entry.identity.dungeonId))return 'automatic';
+  if(/^\/dungeons\/[^/]+$/.test(entry.path)&&plan.validatedDungeons.includes(entry.path.split('/')[2]))return 'automatic';
   if(/^\/spine\/sets\/[^/]+\/full(?:\/|$)/.test(entry.path)&&(plan.resolved.some(p=>contains(p,entry.path))||plan.accepted.some(p=>contains(p.path,entry.path))))return 'automatic';
   if(plan.resolved.some(p=>contains(p,entry.path))&&/^(?:\/(items|mobs|bosses|stackables)\/)/.test(entry.path))return 'automatic';
+  if(/^\/dungeons\/[^/]+\/recommendedLevel$/.test(entry.path)&&plan.validatedDungeons.includes(entry.path.split('/')[2]))return 'automatic';
   if(/^\/dungeons/.test(entry.path))return 'mechanism';
   if(/^\/features\//.test(entry.path))return entry.changeKind==='added'?'mechanism':'unsupported';
   if(/^\/achievementSets\//.test(entry.path))return entry.changeKind==='added'?'mechanism':'unsupported';
@@ -128,6 +131,11 @@ function processingProof(entry,{plan,content,db,aliases,sourceHash}){
   const engine=engineProof(entry,content,db);if(engine)return engine;
   const doc=editorialProof(entry,content,db,aliases);if(doc)return {kind:'documented-review',...doc};
   if(entry.classification!=='automatic')return null;
+  const dungeon=entry.path.match(/^\/dungeons\/([^/]+)$/);
+  if(dungeon&&plan.validatedDungeons.includes(dungeon[1])){
+    const api=content.dungeons.find(x=>x.id===dungeon[1]),atlas=db.dungeons.find(x=>x.id===dungeon[1]);
+    if(api&&atlas&&equal(api,dungeonRecord(atlas)))return {kind:'automatic-import',rule:'validated-whole-dungeon-v3',sourceHash,valueHash:witness(api),explanation:'A korábban elutasított kazamata teljes rekordja, minden terem és az ajánlott szint validált és pontosan egyezik az Atlasban.'};
+  }
   if(db.homeArena){
     for(const [key,p] of Object.entries(systemPaths)){
       const parent=entry.path===p.slice(0,-6)&&p.endsWith('/level')&&Object.keys(atPath(content,entry.path)??{}).length===1;
@@ -144,6 +152,8 @@ function processingProof(entry,{plan,content,db,aliases,sourceHash}){
     const actual=room(atlas)?.[x.stat],expected=room(current)?.[x.stat];
     if(expected!==undefined&&actual===expected)return {kind:'automatic-import',rule:'validated-dungeon-stats-v1',sourceHash,valueHash:witness(expected),identity:x,explanation:'A teljes kazamataséma és minden kapcsolat valid; az Atlas a megfelelő terem API-értékét tartalmazza.'};
   }
+  const recommendation=entry.path.match(/^\/dungeons\/([^/]+)\/recommendedLevel$/);
+  if(recommendation&&plan.validatedDungeons.includes(recommendation[1])){const a=content.dungeons.find(d=>d.id===recommendation[1])?.recommendedLevel,b=db.dungeons.find(d=>d.id===recommendation[1])?.recommendedLevel;if(a===b)return {kind:'automatic-import',rule:'validated-dungeon-recommendation-v3',sourceHash,valueHash:witness(a),explanation:'Az eg?sz aj?nlott szint egyezik a valid?lt kazamata aktu?lis API-?rt?k?vel.'};}
   const api=atPath(content,entry.path),atlasPath=entry.path.replace(/^\/stackables\//,'/economy/stackables/');
   let atlas=atPath(db,atlasPath);
   if(api!==undefined&&plan.resolved.some(p=>contains(p,entry.path))){
@@ -180,11 +190,13 @@ export function reconcileReview({previous={},changes=[],resourceChanges=[],plan,
   for(const change of resourceChanges)observe({...change,path:change.url,reason:change.beforeHash?'Megváltozott kliensfájl hash':'Első forrásleltár; tartalmi változás nem bizonyított',origin:change.beforeHash?'current-change':'first-observation'});
   const closedNow=[];
   for(const item of ledger.values()){
+    item.historyState=item.targetHash!==witness(observed(content,item.path,sources))?'historical-superseded':'current';
     if(item.status==='resolved'&&item.resolution&&item.classification)continue;
     item.system=reviewSystem(item.path);item.classification=classifyReview(item,{plan,content,db,aliases});item.title=reviewTitle(item,db);
+    item.updateGroup=item.system+'@'+(item.firstSeenAt??'legacy');
     if(item.status==='resolved')continue;
     const proof=processingProof(item,{plan,content,db,aliases,sourceHash});
-    if(proof){item.status='resolved';item.resolution={...proof,resolvedAt:now,gameVersion:content.version,targetHash:item.targetHash};closedNow.push(item.id);}
+    if(proof){const historical=item.historyState==='historical-superseded';item.status='resolved';item.resolution={...proof,...historical?{kind:'documented-review',rule:'superseded-by-verified-current-import',supersedingProof:proof,explanation:'Történeti érték: az újabb érték tényleges, hash-sel és mezőegyezéssel igazolt importja felülírta. A korábbi értéket nem állítjuk újonnan importáltnak.'}:{},resolvedAt:now,gameVersion:content.version,targetHash:item.targetHash,currentValueHash:witness(observed(content,item.path,sources)),historicalSuperseded:historical};closedNow.push(item.id);}
   }
   const entries=[...ledger.values()],open=entries.filter(x=>x.status==='open'),resolved=entries.filter(x=>x.status==='resolved');
   const count=rows=>Object.fromEntries(Object.keys(classifications).map(k=>[k,rows.filter(x=>x.classification===k).length]));
@@ -202,8 +214,8 @@ export function reviewGroups(entries){
   for(const item of entries){
     if(!systems.has(item.system))systems.set(item.system,new Map());
     const topics=systems.get(item.system),x=item.identity;
-    const key=(x?`dungeon:${x.dungeonId}:${x.mode}`:item.path.startsWith('https:')?'client':item.title)+':'+item.classification;
-    if(!topics.has(key))topics.set(key,{title:x?item.title.split(' · ')[0]+' · '+(x.mode==='heroic'?'hősi':'normál')+' termek':item.title,classification:item.classification,count:0,paths:[]});
+    const key=(x?`dungeon:${x.dungeonId}:${x.mode}`:item.path.startsWith('https:')?'client':item.title)+':'+item.classification+':'+(item.firstSeenAt??'legacy')+':'+(item.historyState??'current');
+    if(!topics.has(key))topics.set(key,{title:x?item.title.split(' · ')[0]+' · '+(x.mode==='heroic'?'hősi':'normál')+' termek':item.title,classification:item.classification,firstSeenAt:item.firstSeenAt??null,historyState:item.historyState??'current',count:0,paths:[]});
     const topic=topics.get(key);topic.count++;topic.paths.push({path:item.path,title:item.title,status:item.status,reason:item.resolution?.explanation??classifications[item.classification],proof:item.resolution??null});
   }
   return [...systems].sort(([a],[b])=>a.localeCompare(b,'hu')).map(([name,topics])=>({name,count:[...topics.values()].reduce((n,t)=>n+t.count,0),topics:[...topics.values()]}));

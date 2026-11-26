@@ -5,7 +5,7 @@
 ## Felépítés
 
 - `js/planner-model.js`: tiszta, DOM-tól független validálás, fejlesztési értékek, komponensösszeg, szettküszöbök és megosztott build beolvasása.
-- `js/atlas-features.js`: kaszt, nem, grafikai változat, szint, 8 felszerelési hely, tárgyválasztó, kísérő/hátas, A/B összehasonlítás, mentés és megosztás.
+- `js/atlas-features.js`: kaszt, nem, grafikai változat, szint, 8 felszerelési hely, tárgyválasztó, Pet Builder V2, kísérő/hátas, A/B összehasonlítás, mentés és megosztás.
 - `js/image-store.js`: valódi teljes karakterkép választása a páncél `portrait` / `portraitTier` adatai szerint; fegyvert külön jelenítünk meg.
 - `css/atlas-tools.css`: széles képernyőn három panel (helyek, karakter, ismert komponensek), kisebb nézetben tördelődő panelek.
 
@@ -15,7 +15,13 @@ A szinttartomány az adatbázis `limits.maxLevel` értékéből ered: **1–60**
 
 A tárgyválasztó csak a választott kaszttal és szinten használható tárgyakat engedi. Szint- vagy kasztváltás után a korábban használható, most érvénytelen felszerelések eltávolításáról üzenet jelenik meg. A kísérő a mentett `rules.minHeroLevel = 10` fölött választható; a hátas saját minimumszintje is érvényesül. A +fokozat tartományát a `forge.plusMult` tömb hossza adja: **+0–+9**.
 
-A kísérő végső szintmaximuma a jelenlegi játékmegfigyelési modellben **50**, nem a régi `rules.maxLevel = 10`. A külön `petForm` választó öt formát kezel, 10/20/30/40/50 plafonnal; a kísérő a hős szintjét sem lépheti túl. Tanulható helyek: 0/1/2/3/3, a veleszületett készség ettől külön mező. Az elérhető klienscsomag 10/20/35/50/60 értékeivel fennálló konfliktus látható, részletei a Kísérők oldalon vannak. A régi version:1 build link formamező nélkül is betölthető; ilyenkor a szinthez elégséges első formát választjuk. Az új formamező ugyanebben a kompatibilis verzióban megmarad a mentésben és a megosztásban.
+A Data Engine kliensmodellje szerinti öt forma plafonja **10/20/35/50/60**, tanulható helyei **0/1/2/3/3**. A korábbi 10/20/30/40/50-es projektmegfigyelés külön evidencia, nem írja felül az aktív kliensmodellt. A `petForm` és a szint külön választható: a szinthez ajánlott forma mellett a hős- és formaplafon által engedett alternatív állapot is megadható. A formaváltás nem automatikus fejlődés. A Planner a formával együtt frissíti a portrét, a slotokat és a számítható bónuszokat. A régi `rules.maxLevel = 10` történeti adat, nem végső maximum.
+
+A Pet Builder V2 asztali nézete portré/forma, számítható hatások és aktív/lezárt képességhelyek területekre oszlik; mobilon egymás alá rendeződik. A választó csak az adott fajhoz elérhető, nem veleszületett és még nem kiválasztott képességeket kínálja; a szint 1–5 között állítható. A Mesterfok és a nyers API `rank` külön mező. A nyers ranghoz tartozó igazolt API-képlet nem bizonyít Mesterfok-megfeleltetést, ezért a felületen nincs szabad, 0–10000-es rangállító.
+
+A Mohaagancs 22-es preset kizárólag a megadott megfigyelés: Mitikus, Felnőtt 22/35, XP +12,6%, Rárontás 57,2% minden 3. ütés után, Előcsapás 140%, Éles karom 5., Nyitópajzs 5. szint / 18%, Mesterfok 11/15. A V3 modell 0 nyers API-ranggal külön +12%-ot számol; az értékek nem egyesülnek és a prompt-megfigyelés nem válik általános képletté. A Mesterfok nyers ranghoz való megfeleltetése és bónuszhatása nem igazolt.
+
+A régi version:1 build link formamező nélkül is betölthető; migrációkor a szinthez illő első formát választjuk, majd az érvénytelen vagy duplikált slotokat elhagyjuk. Az új mentések a formát, szintet és képességszinteket együtt őrzik.
 
 A Wiki-adatlap „Hozzáadás a tervezőhöz” művelete a célbuild kasztját/szintjét a kiválasztás követelményéhez igazítja, majd ismét validál. Ez eltér az aktuális, változatlan szinthez szűrt tárgyválasztótól; a korábbi inkompatibilis tárgyak eltávolításáról tájékoztat.
 
@@ -46,7 +52,7 @@ Mind a **182 tárgy +0 értéke** egyezik a mentett `values` objektummal; a tesz
 2. Szintből származó tulajdonságok: az elosztás/komplett képlet nem igazolt, `levelStats: null`.
 3. Felszerelések: a konkrét +értékkel számolt azonos statmezők számtani összege.
 4. Szettek: kizárólag a tárgy explicit `family` mezője alapján, külön slotonként számolva. A forrás küszöbei **2/4/6 darab**, nem 2/3/teljes találgatás. Az aktív/inaktív küszöbök és a hiányzó helyek megjelennek.
-5. Kísérő: a `perLevel × választott kísérőszint` nyers fajkomponens külön szerepel. A régi és v3 skálázás eltérése miatt nem tekintjük kész végső buffnak. A trait és igazolt signature választott 1–5. fokozata feltételes hatásként látszik.
+5. Kísérő: kizárólag a V3 Data Engine-modell számítható bónuszai jelennek meg. A faj passzív bónusza, harci trait, signature, tanulható képességek és háttérhatások külön szakaszok. Az ismeretlen harcerő/DPS nem kerül kitalálásra. A nyers API `rank` csak importált, igazolt adatként használható; a prompt szerinti Mesterfok külön, megfigyelésként jelenik meg.
 6. Hátas: csak az ismert `travelMult` és az abból következő időcsökkenés. Nincs hozzáadott energia-, HP- vagy támadásbónusz.
 7. Egyéb véletlen bónuszok / buffok: nincs bizonyítatlan összegzés vagy szabadon kitalált roll.
 
@@ -61,7 +67,7 @@ Két egymástól független munkapéldány él memóriában (A/B); egy build át
 Tárolási kulcs: `stonestorm-atlas-builds-v1`. Szerkezet:
 
 ```json
-{"version":1,"builds":[{"id":"helyi-egyedi-id","build":{"version":1,"name":"Saját build","classId":"ninja","gender":"male","look":1,"level":50,"gear":{"weapon":{"id":"w_ninja_l50","plus":4}},"petId":null,"petLevel":1,"traitRank":1,"skillRank":1,"mountId":null,"targetFamily":null}}]}
+{"version":3,"builds":[{"id":"helyi-egyedi-id","build":{"version":3,"name":"Saját build","classId":"ninja","gender":"male","look":1,"level":50,"gear":{"weapon":{"id":"w_ninja_l50","plus":4}},"petId":"pet_u_wild","petLevel":22,"petForm":3,"petRank":0,"petRankVerified":false,"petObservedPreset":"mohaagancs-adult-22","petSkills":[{"slot":1,"skillId":"crit_dmg","level":5},{"slot":2,"skillId":"shield_open","level":5}],"mountId":null,"targetFamily":null}}]}
 ```
 
 Legfeljebb 20 névvel ellátott build menthető, betölthető, szerkeszthető és törölhető. A már betöltött mentés újramentése ugyanazt az elemet frissíti. Az A/B munkapéldány nem módosítja automatikusan a mentést. Tiltott/megtelt localStorage esetén a felület jelzi a hibát; a memória és megosztási link tovább használható. Az eredeti kalauz tárolási kulcsa változatlan.
@@ -72,6 +78,6 @@ Beolvasáskor verzióellenőrzés, 12000 karakteres felső korlát, engedélyeze
 
 ## Ellenőrzés és fennmaradó feladatok
 
-Automatikus tesztek: mind a 182 +0 képlet, +fokozatok, kaszt/szint/slot megkötések, ismeretlen azonosítók, sérült/verzióhibás/túl hosszú link, szettküszöbök, A/B, mentés/betöltés/törlés és megosztott konfiguráció.
+Automatikus tesztek: mind a 182 +0 képlet, +fokozatok, kaszt/szint/slot megkötések, ismeretlen azonosítók, sérült/verzióhibás/túl hosszú link, szettküszöbök, A/B, mentés/betöltés/törlés, régi build migrációja, mind az öt forma, slotkorlátok, duplikációtiltás, a Mohaagancs referencia és a Pet Builder desktop/mobil elrendezése.
 
-Valódi asztali/mobilos vizuális ellenőrzés még szükséges, mert a munkamenet böngészővezérlése nem elérhető. Jövőbeli fejlesztés: teljes szerveroldali harci képlet, statpontelosztás, további igazolt szetttárgyak, kísérő-v3 verzióhatókör, véletlen bónuszok pontos rollszabályai és buildformátum-migráció.
+A helyi böngészőpróba kizárólag szintetikus mintaadatot használ (`npm run test:pets:browser`); a desktop referenciakép `.integration/previews/pet-builder-reference-desktop.png`. Élő játékbeli teszt nem történt. Fennmaradó bizonytalanság: a Mesterfok és API `rank` kapcsolata, az aktív kliensből függetlenül felfedezett Mohaagancs-pillanatkép, valamint a teljes szerveroldali harcerő/DPS képlete.
