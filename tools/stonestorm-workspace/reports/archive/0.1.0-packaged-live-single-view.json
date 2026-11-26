@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T15:36:14.138Z",
+  "nativeWindow": "BaseWindow",
+  "nativeView": "WebContentsView",
+  "panelCount": 1,
+  "sharedSession": true,
+  "panels": [
+    {
+      "id": 1,
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/login",
+      "titleKind": "stonestorm-title",
+      "loaded": true
+    }
+  ],
+  "events": [],
+  "acceptance": {
+    "electronRuntime": "see runtime-test.json",
+    "singleLive": null,
+    "twoLive": null,
+    "fourLive": "not implemented; live two-view gate required",
+    "communityLive": "not implemented; live gate required"
+  },
+  "ratio": 0.5,
+  "appVersion": "0.1.0",
+  "versions": {
+    "electron": "45.4.1",
+    "chromium": "156.0.8078.100"
+  },
+  "probe": true,
+  "authenticationAutomated": false,
+  "gameCodeInjected": false,
+  "chromeCookiesImported": false,
+  "metrics": [
+    {
+      "type": "Browser",
+      "cpuPercent": 0.39161032095354437,
+      "workingSetKB": 99464
+    },
+    {
+      "type": "GPU",
+      "cpuPercent": 0.6057680908855702,
+      "workingSetKB": 120940
+    },
+    {
+      "type": "Utility",
+      "cpuPercent": 0.007410112185126694,
+      "workingSetKB": 53708
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.1353368257748769,
+      "workingSetKB": 130368
+    }
+  ],
+  "liveGameVerified": false,
+  "outcome": "manual-game-and-login-verification-required",
+  "nextStageStarted": false
+}

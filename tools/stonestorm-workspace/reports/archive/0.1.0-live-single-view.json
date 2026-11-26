@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "at": "2026-11-24T13:25:12.245Z",
+  "nativeWindow": "BaseWindow",
+  "nativeView": "WebContentsView",
+  "panelCount": 1,
+  "sharedSession": true,
+  "panels": [
+    {
+      "id": 1,
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/mining",
+      "titleKind": "stonestorm-title",
+      "loaded": true
+    }
+  ],
+  "events": [],
+  "acceptance": {
+    "electronRuntime": "see runtime-test.json",
+    "singleLive": null,
+    "twoLive": null,
+    "fourLive": "not implemented; live two-view gate required",
+    "communityLive": "not implemented; live gate required"
+  },
+  "ratio": 0.5,
+  "appVersion": "0.1.0",
+  "versions": {
+    "electron": "45.4.1",
+    "chromium": "156.0.8078.100"
+  },
+  "probe": true,
+  "authenticationAutomated": false,
+  "gameCodeInjected": false,
+  "chromeCookiesImported": false,
+  "metrics": [
+    {
+      "type": "Browser",
+      "cpuPercent": 0.23421512869677444,
+      "workingSetKB": 100596
+    },
+    {
+      "type": "GPU",
+      "cpuPercent": 7.258789568014026,
+      "workingSetKB": 159360
+    },
+    {
+      "type": "Utility",
+      "cpuPercent": 0.17243218696629226,
+      "workingSetKB": 57776
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 5.2170398155441005,
+      "workingSetKB": 285036
+    }
+  ],
+  "liveGameVerified": false,
+  "outcome": "manual-game-and-login-verification-required",
+  "nextStageStarted": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "at": "2026-11-24T14:30:13.602Z",
+  "publishedRulesVersion": "2026-11-08",
+  "permission": {
+    "source": "user-stated operator permission in this task",
+    "statement": "Igen van, csináld meg.",
+    "scope": "Workspace presentation CSS",
+    "independentlyVerified": false
+  },
+  "originalDOMVerified": true,
+  "entryScript": "https://stonestorm.gg/assets/index-B-KQL_s0.js",
+  "tabs": [
+    "mine",
+    "smelt",
+    "craft",
+    "master"
+  ],
+  "selectors": [
+    ".game-stage > .hud",
+    ".game-stage > .rail",
+    ".mine-stage",
+    ".mine-safe",
+    ".mine-window",
+    ".mine-tabs",
+    ".mine-window__body"
+  ],
+  "sources": [
+    {
+      "url": "https://stonestorm.gg/assets/LegalPage-nqRhWqJe.js",
+      "status": 200,
+      "sha256": "6c5984b3641726f2c374c2634307fedbe171abdf5f37bf55167f58b0e765de89"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/jatekszabalyzat-BFOS2V43.js",
+      "status": 200,
+      "sha256": "ca92d96ce25f35b38e8ad4e005c1e9b4214ac842a25e83c08819bbf5efdff637"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/aszf-X-ciB1iC.js",
+      "status": 200,
+      "sha256": "0c230331dc4eba3dbb70a40cfa317c68681fd56e041f732d877096849630e544"
+    },
+    {
+      "url": "https://stonestorm.gg/assets/MiningPage-BNOVa2z5.js",
+      "status": 200,
+      "sha256": "cb6e704f13895ce200fd9a0640ad50097ac035911c9ec5b15f8deb44da95fd47"
+    }
+  ],
+  "stockSynchronization": {
+    "automaticAcrossInstances": "not established",
+    "readMechanism": "original MiningPage initial GET /api/mining after document navigation",
+    "workspaceOwnAPICalls": false,
+    "manualRefresh": "load original /mining document; select verified native tab"
+  }
+}

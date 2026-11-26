@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T15:33:12.447Z",
+  "electron": "45.4.1",
+  "nativeElectronRuntime": true,
+  "syntheticLocalFixture": true,
+  "liveGameVerified": false,
+  "manualAuthenticationVerified": false,
+  "liveTwoPanelInteractivityVerified": false,
+  "cases": [
+    {
+      "name": "One BaseWindow and exactly one WebContentsView at startup; second view is gated",
+      "passed": true
+    },
+    {
+      "name": "Native sandboxed renderer has no require/process or Node integration",
+      "passed": true
+    },
+    {
+      "name": "Two distinct webContents share the same persistent session inside one native window",
+      "passed": true
+    },
+    {
+      "name": "Both renderers accept browser-level trusted input, retain separate state and run timers concurrently",
+      "passed": true
+    },
+    {
+      "name": "Independent native bounds follow resizing and a saved split ratio without gaps",
+      "passed": true
+    },
+    {
+      "name": "Out-of-scope navigation, redirects and popups are denied without opening another window",
+      "passed": true
+    },
+    {
+      "name": "Closing a secondary view destroys it and keeps the first original webContents alive",
+      "passed": true
+    },
+    {
+      "name": "Closing BaseWindow destroys all owned webContents",
+      "passed": true
+    },
+    {
+      "name": "Own synthetic HttpOnly session cookie persists across a real Electron restart",
+      "passed": true
+    },
+    {
+      "name": "Closing BaseWindow destroys all owned webContents",
+      "passed": true
+    }
+  ]
+}

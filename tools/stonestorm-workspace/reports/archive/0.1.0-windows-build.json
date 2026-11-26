@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T15:35:07.116Z",
+  "version": "0.1.0",
+  "electron": "45.4.1",
+  "executable": "dist\\StoneStorm Workspace-win32-x64\\StoneStorm Workspace.exe",
+  "executableBytes": 249978880,
+  "executableSha256": "cf94edd75940d023ca21019252c713de6d48cdd2e27ddf5ef8ed2dab9d960fd2",
+  "appAsarSha256": "50a34b8eb612573518b7b5cd55d77fd908fbafb03cbbcdede34dd300fd09e0c2",
+  "fuses": {
+    "0": 48,
+    "1": 48,
+    "2": 48,
+    "3": 48,
+    "4": 48,
+    "5": 49,
+    "6": 48,
+    "7": 49,
+    "8": 49,
+    "version": "1"
+  },
+  "signed": false,
+  "containsUserSession": false
+}

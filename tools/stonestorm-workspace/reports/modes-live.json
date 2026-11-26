@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "version": "0.3.0",
+  "at": "2026-11-24T15:12:10.013Z",
+  "source": "Console transcript of completed live run; failure occurred before its final report write",
+  "realHTTPSGame": true,
+  "result": "partial-rate-limited",
+  "tests": [
+    {
+      "name": "Original normal game starts alone with visible HUD/navigation and no compact CSS",
+      "passed": true
+    },
+    {
+      "name": "Original normal navigation remains available before entering the mining workspace",
+      "passed": true
+    },
+    {
+      "name": "Repeated MINING activation reuses primary and creates exactly three other originals",
+      "passed": true
+    },
+    {
+      "name": "Returning to GAME closes all three secondaries and restores the original authenticated primary",
+      "passed": true
+    }
+  ],
+  "primaryId": 2,
+  "authenticatedPrimaryRetainedOnReturn": true,
+  "blocker": {
+    "path": "/api/mining",
+    "httpStatus": 429,
+    "panel": "Gwangsu",
+    "occurredDuring": "Additional rapid live mode cycling",
+    "primaryIdAtFailure": 2,
+    "affectedWebContentsId": 14
+  },
+  "resourceConsumingActionsTested": false,
+  "automatedGameplayActionsInvoked": false,
+  "miningMutationRequestCount": null,
+  "automaticRetryAfter429": false,
+  "fullRepeatedLiveAcceptance": false,
+  "screenshots": [
+    "mode-normal.png",
+    "mode-mining.png",
+    "mode-returned.png"
+  ]
+}

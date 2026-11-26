@@ -1,0 +1,246 @@
+{
+  "schema": 2,
+  "at": "2026-11-24T14:35:04.110Z",
+  "nativeWindow": "BaseWindow",
+  "nativeView": "WebContentsView",
+  "panelCount": 4,
+  "sharedSession": true,
+  "panels": [
+    {
+      "id": 2,
+      "index": 0,
+      "key": "mine",
+      "name": "Tárna",
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/login",
+      "titleKind": "stonestorm-title",
+      "loaded": true,
+      "selected": null,
+      "compact": false,
+      "contract": "waiting",
+      "lastMiningReadAt": null,
+      "readError": null,
+      "status": "Jelentkezz be kézzel"
+    },
+    {
+      "id": 3,
+      "index": 1,
+      "key": "smelt",
+      "name": "Olvasztó",
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/login",
+      "titleKind": "stonestorm-title",
+      "loaded": true,
+      "selected": null,
+      "compact": false,
+      "contract": "waiting",
+      "lastMiningReadAt": null,
+      "readError": null,
+      "status": "Jelentkezz be kézzel"
+    },
+    {
+      "id": 4,
+      "index": 2,
+      "key": "craft",
+      "name": "Műhely",
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/login",
+      "titleKind": "stonestorm-title",
+      "loaded": true,
+      "selected": null,
+      "compact": false,
+      "contract": "waiting",
+      "lastMiningReadAt": null,
+      "readError": null,
+      "status": "Jelentkezz be kézzel"
+    },
+    {
+      "id": 5,
+      "index": 3,
+      "key": "master",
+      "name": "Gwangsu",
+      "httpStatus": 200,
+      "challenge": false,
+      "error": null,
+      "location": "https://stonestorm.gg/login",
+      "titleKind": "stonestorm-title",
+      "loaded": true,
+      "selected": null,
+      "compact": false,
+      "contract": "waiting",
+      "lastMiningReadAt": null,
+      "readError": null,
+      "status": "Jelentkezz be kézzel"
+    }
+  ],
+  "events": [],
+  "preferences": {
+    "ratio": 0.5,
+    "width": 1440,
+    "height": 960,
+    "mode": "columns",
+    "compact": false,
+    "cuts": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "column": 0.5,
+    "row": 0.5
+  },
+  "ratio": 0.5,
+  "zoom": -1,
+  "layout": {
+    "width": 1424,
+    "height": 921,
+    "headers": [
+      {
+        "x": 0,
+        "y": 44,
+        "width": 352,
+        "height": 34
+      },
+      {
+        "x": 360,
+        "y": 44,
+        "width": 348,
+        "height": 34
+      },
+      {
+        "x": 716,
+        "y": 44,
+        "width": 348,
+        "height": 34
+      },
+      {
+        "x": 1072,
+        "y": 44,
+        "width": 352,
+        "height": 34
+      }
+    ],
+    "games": [
+      {
+        "x": 0,
+        "y": 78,
+        "width": 352,
+        "height": 843
+      },
+      {
+        "x": 360,
+        "y": 78,
+        "width": 348,
+        "height": 843
+      },
+      {
+        "x": 716,
+        "y": 78,
+        "width": 348,
+        "height": 843
+      },
+      {
+        "x": 1072,
+        "y": 78,
+        "width": 352,
+        "height": 843
+      }
+    ],
+    "separators": [
+      {
+        "axis": "x",
+        "index": 0,
+        "x": 352,
+        "y": 44,
+        "width": 8,
+        "height": 877
+      },
+      {
+        "axis": "x",
+        "index": 1,
+        "x": 708,
+        "y": 44,
+        "width": 8,
+        "height": 877
+      },
+      {
+        "axis": "x",
+        "index": 2,
+        "x": 1064,
+        "y": 44,
+        "width": 8,
+        "height": 877
+      }
+    ]
+  },
+  "message": "",
+  "acceptance": {
+    "twoLive": {
+      "source": "user-confirmed-in-task",
+      "success": true
+    },
+    "fourLive": "manual acceptance pending",
+    "communityLive": "not implemented"
+  },
+  "appVersion": "0.2.0",
+  "versions": {
+    "electron": "45.4.1",
+    "chromium": "156.0.8078.100"
+  },
+  "probe": true,
+  "authenticationAutomated": false,
+  "gameClientFilesModified": false,
+  "presentationCSS": true,
+  "originalTabUISelection": true,
+  "chromeCookiesImported": false,
+  "metrics": [
+    {
+      "type": "Browser",
+      "cpuPercent": 0.16447181079752377,
+      "workingSetKB": 144052
+    },
+    {
+      "type": "GPU",
+      "cpuPercent": 0.6824964252661454,
+      "workingSetKB": 165220
+    },
+    {
+      "type": "Utility",
+      "cpuPercent": 0.01470218533261191,
+      "workingSetKB": 96480
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.0006428436459039775,
+      "workingSetKB": 274916
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.05717932370894641,
+      "workingSetKB": 315820
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.05275395074763614,
+      "workingSetKB": 313576
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.04481799808965122,
+      "workingSetKB": 304144
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.06161297155194762,
+      "workingSetKB": 125888
+    }
+  ],
+  "liveGameVerified": false,
+  "outcome": "manual-game-and-login-verification-required",
+  "nextStageStarted": false
+}

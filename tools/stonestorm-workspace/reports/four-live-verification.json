@@ -1,0 +1,279 @@
+{
+  "schema": 1,
+  "version": "0.2.0",
+  "at": "2026-11-24T14:34:11.038Z",
+  "realHTTPSGame": true,
+  "originalUIOnly": true,
+  "loginFlowTested": false,
+  "resourceConsumingActionsTested": false,
+  "liveNativeTabsVerified": true,
+  "tests": [
+    {
+      "name": "Four real HTTPS mining documents have their distinct native tab selected",
+      "passed": true
+    },
+    {
+      "name": "Original game DOM is compact, without HUD/rail/background and without horizontal clipping",
+      "passed": true
+    },
+    {
+      "name": "Each original tab responds to a harmless native UI switch without changing the other instances",
+      "passed": true
+    },
+    {
+      "name": "Original long lists scroll independently",
+      "passed": true
+    },
+    {
+      "name": "Two by two and panel zoom retain all four original webContents",
+      "passed": true
+    },
+    {
+      "name": "Manual panel refresh rereads through original page initialization and restores native tabs",
+      "passed": true
+    },
+    {
+      "name": "All four real panels reflow at 960, 1280 and 1920 application widths",
+      "passed": true
+    }
+  ],
+  "miningReads": 8,
+  "miningMutationRequests": [],
+  "cpuSamplingMilliseconds": 2000,
+  "metrics": [
+    {
+      "type": "Browser",
+      "cpuPercent": 0.21756413486585136,
+      "workingSetKB": 219724
+    },
+    {
+      "type": "GPU",
+      "cpuPercent": 0.017197007720656608,
+      "workingSetKB": 192340
+    },
+    {
+      "type": "Utility",
+      "cpuPercent": 0.011723001228290576,
+      "workingSetKB": 95176
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.00308699064654332,
+      "workingSetKB": 79252
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.18297406743257402,
+      "workingSetKB": 200056
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.1584990853995372,
+      "workingSetKB": 199100
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.15699500765457416,
+      "workingSetKB": 195632
+    },
+    {
+      "type": "Tab",
+      "cpuPercent": 0.140472795794823,
+      "workingSetKB": 214332
+    }
+  ],
+  "snapshot": {
+    "schema": 2,
+    "at": "2026-11-24T14:34:11.038Z",
+    "nativeWindow": "BaseWindow",
+    "nativeView": "WebContentsView",
+    "panelCount": 4,
+    "sharedSession": true,
+    "panels": [
+      {
+        "id": 2,
+        "index": 0,
+        "key": "mine",
+        "name": "Tárna",
+        "httpStatus": 200,
+        "challenge": false,
+        "error": null,
+        "location": "https://stonestorm.gg/mining",
+        "titleKind": "stonestorm-title",
+        "loaded": true,
+        "selected": "mine",
+        "compact": true,
+        "contract": "verified",
+        "lastMiningReadAt": "2026-11-24T14:34:00.480Z",
+        "readError": null,
+        "status": "Aktív · kompakt",
+        "online": true
+      },
+      {
+        "id": 3,
+        "index": 1,
+        "key": "smelt",
+        "name": "Olvasztó",
+        "httpStatus": 200,
+        "challenge": false,
+        "error": null,
+        "location": "https://stonestorm.gg/mining",
+        "titleKind": "stonestorm-title",
+        "loaded": true,
+        "selected": "smelt",
+        "compact": true,
+        "contract": "verified",
+        "lastMiningReadAt": "2026-11-24T14:33:59.403Z",
+        "readError": null,
+        "status": "Aktív · kompakt",
+        "online": true
+      },
+      {
+        "id": 4,
+        "index": 2,
+        "key": "craft",
+        "name": "Műhely",
+        "httpStatus": 200,
+        "challenge": false,
+        "error": null,
+        "location": "https://stonestorm.gg/mining",
+        "titleKind": "stonestorm-title",
+        "loaded": true,
+        "selected": "craft",
+        "compact": true,
+        "contract": "verified",
+        "lastMiningReadAt": "2026-11-24T14:33:59.066Z",
+        "readError": null,
+        "status": "Aktív · kompakt",
+        "online": true
+      },
+      {
+        "id": 5,
+        "index": 3,
+        "key": "master",
+        "name": "Gwangsu",
+        "httpStatus": 200,
+        "challenge": false,
+        "error": null,
+        "location": "https://stonestorm.gg/mining",
+        "titleKind": "stonestorm-title",
+        "loaded": true,
+        "selected": "master",
+        "compact": true,
+        "contract": "verified",
+        "lastMiningReadAt": "2026-11-24T14:34:00.418Z",
+        "readError": null,
+        "status": "Aktív · kompakt",
+        "online": true
+      }
+    ],
+    "events": [],
+    "preferences": {
+      "ratio": 0.5,
+      "width": 1440,
+      "height": 960,
+      "mode": "columns",
+      "compact": true,
+      "cuts": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "column": 0.5,
+      "row": 0.5
+    },
+    "ratio": 0.5,
+    "zoom": -1,
+    "layout": {
+      "width": 1904,
+      "height": 915,
+      "headers": [
+        {
+          "x": 0,
+          "y": 44,
+          "width": 472,
+          "height": 34
+        },
+        {
+          "x": 480,
+          "y": 44,
+          "width": 468,
+          "height": 34
+        },
+        {
+          "x": 956,
+          "y": 44,
+          "width": 468,
+          "height": 34
+        },
+        {
+          "x": 1432,
+          "y": 44,
+          "width": 472,
+          "height": 34
+        }
+      ],
+      "games": [
+        {
+          "x": 0,
+          "y": 78,
+          "width": 472,
+          "height": 837
+        },
+        {
+          "x": 480,
+          "y": 78,
+          "width": 468,
+          "height": 837
+        },
+        {
+          "x": 956,
+          "y": 78,
+          "width": 468,
+          "height": 837
+        },
+        {
+          "x": 1432,
+          "y": 78,
+          "width": 472,
+          "height": 837
+        }
+      ],
+      "separators": [
+        {
+          "axis": "x",
+          "index": 0,
+          "x": 472,
+          "y": 44,
+          "width": 8,
+          "height": 871
+        },
+        {
+          "axis": "x",
+          "index": 1,
+          "x": 948,
+          "y": 44,
+          "width": 8,
+          "height": 871
+        },
+        {
+          "axis": "x",
+          "index": 2,
+          "x": 1424,
+          "y": 44,
+          "width": 8,
+          "height": 871
+        }
+      ]
+    },
+    "message": "Oldalak újratöltve · az adatokat az eredeti kliens tölti be",
+    "acceptance": {
+      "twoLive": {
+        "source": "user-confirmed-in-task",
+        "success": true
+      },
+      "fourLive": "manual acceptance pending",
+      "communityLive": "not implemented"
+    }
+  }
+}
