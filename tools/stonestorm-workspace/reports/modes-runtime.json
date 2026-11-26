@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "version": "0.3.0",
-  "at": "2026-11-26T17:16:49.349Z",
+  "at": "2026-11-26T17:30:11.630Z",
   "syntheticLocalFixture": true,
   "realElectron": true,
   "liveGameVerified": false,
@@ -62,218 +62,218 @@
   "memorySamples": [
     {
       "cycle": 0,
-      "workingSetKB": 428176,
-      "privateBytesKB": 358824,
+      "workingSetKB": 433048,
+      "privateBytesKB": 363912,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 1,
-      "workingSetKB": 430708,
-      "privateBytesKB": 361568,
+      "workingSetKB": 436008,
+      "privateBytesKB": 366876,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 2,
-      "workingSetKB": 433884,
-      "privateBytesKB": 364532,
+      "workingSetKB": 438900,
+      "privateBytesKB": 369712,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 3,
-      "workingSetKB": 436836,
-      "privateBytesKB": 368132,
+      "workingSetKB": 441704,
+      "privateBytesKB": 373164,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 4,
-      "workingSetKB": 438568,
-      "privateBytesKB": 369620,
+      "workingSetKB": 443316,
+      "privateBytesKB": 374544,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 5,
-      "workingSetKB": 441656,
-      "privateBytesKB": 372000,
+      "workingSetKB": 445132,
+      "privateBytesKB": 375596,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 6,
-      "workingSetKB": 443272,
-      "privateBytesKB": 373556,
+      "workingSetKB": 447016,
+      "privateBytesKB": 370792,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 7,
-      "workingSetKB": 444920,
-      "privateBytesKB": 374656,
+      "workingSetKB": 448948,
+      "privateBytesKB": 372660,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 8,
-      "workingSetKB": 445608,
-      "privateBytesKB": 369548,
+      "workingSetKB": 450568,
+      "privateBytesKB": 373560,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 9,
-      "workingSetKB": 448108,
-      "privateBytesKB": 371808,
+      "workingSetKB": 452184,
+      "privateBytesKB": 375308,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 10,
-      "workingSetKB": 450432,
-      "privateBytesKB": 373884,
+      "workingSetKB": 454120,
+      "privateBytesKB": 377116,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 11,
-      "workingSetKB": 452260,
-      "privateBytesKB": 375388,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 12,
-      "workingSetKB": 453188,
-      "privateBytesKB": 376200,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 13,
-      "workingSetKB": 455048,
-      "privateBytesKB": 378020,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 14,
-      "workingSetKB": 456236,
-      "privateBytesKB": 379372,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 15,
-      "workingSetKB": 457852,
-      "privateBytesKB": 380444,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 16,
-      "workingSetKB": 459124,
-      "privateBytesKB": 381780,
-      "processCount": 5,
-      "activeGames": 1
-    },
-    {
-      "cycle": 17,
-      "workingSetKB": 460628,
+      "workingSetKB": 456588,
       "privateBytesKB": 378944,
       "processCount": 5,
       "activeGames": 1
     },
     {
+      "cycle": 12,
+      "workingSetKB": 459556,
+      "privateBytesKB": 381840,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
+      "cycle": 13,
+      "workingSetKB": 460096,
+      "privateBytesKB": 382052,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
+      "cycle": 14,
+      "workingSetKB": 461532,
+      "privateBytesKB": 383816,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
+      "cycle": 15,
+      "workingSetKB": 462732,
+      "privateBytesKB": 384744,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
+      "cycle": 16,
+      "workingSetKB": 464388,
+      "privateBytesKB": 386192,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
+      "cycle": 17,
+      "workingSetKB": 465188,
+      "privateBytesKB": 382520,
+      "processCount": 5,
+      "activeGames": 1
+    },
+    {
       "cycle": 18,
-      "workingSetKB": 461916,
-      "privateBytesKB": 380204,
+      "workingSetKB": 466880,
+      "privateBytesKB": 384156,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 19,
-      "workingSetKB": 463988,
-      "privateBytesKB": 381952,
+      "workingSetKB": 469160,
+      "privateBytesKB": 386028,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 20,
-      "workingSetKB": 465156,
-      "privateBytesKB": 383176,
+      "workingSetKB": 470576,
+      "privateBytesKB": 387436,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 21,
-      "workingSetKB": 466464,
-      "privateBytesKB": 380680,
+      "workingSetKB": 472176,
+      "privateBytesKB": 389152,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 22,
-      "workingSetKB": 468744,
-      "privateBytesKB": 382940,
+      "workingSetKB": 473328,
+      "privateBytesKB": 389328,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 23,
-      "workingSetKB": 470204,
-      "privateBytesKB": 384128,
+      "workingSetKB": 475380,
+      "privateBytesKB": 391524,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 24,
-      "workingSetKB": 468648,
-      "privateBytesKB": 382356,
+      "workingSetKB": 475840,
+      "privateBytesKB": 392028,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 25,
-      "workingSetKB": 471124,
-      "privateBytesKB": 384352,
+      "workingSetKB": 477512,
+      "privateBytesKB": 393436,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 26,
-      "workingSetKB": 473312,
-      "privateBytesKB": 386132,
+      "workingSetKB": 478620,
+      "privateBytesKB": 394272,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 27,
-      "workingSetKB": 474988,
-      "privateBytesKB": 387876,
+      "workingSetKB": 481708,
+      "privateBytesKB": 397844,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 28,
-      "workingSetKB": 476612,
-      "privateBytesKB": 389776,
+      "workingSetKB": 483200,
+      "privateBytesKB": 399200,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 29,
-      "workingSetKB": 478412,
-      "privateBytesKB": 391564,
+      "workingSetKB": 484800,
+      "privateBytesKB": 400448,
       "processCount": 5,
       "activeGames": 1
     },
     {
       "cycle": 30,
-      "workingSetKB": 477420,
-      "privateBytesKB": 390492,
+      "workingSetKB": 484224,
+      "privateBytesKB": 399872,
       "processCount": 5,
       "activeGames": 1
     }

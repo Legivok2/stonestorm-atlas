@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "version": "0.3.0",
-  "at": "2026-11-26T17:16:21.690Z",
+  "at": "2026-11-26T17:29:49.510Z",
   "electron": "45.4.1",
   "nativeElectronRuntime": true,
   "syntheticLocalFixture": true,

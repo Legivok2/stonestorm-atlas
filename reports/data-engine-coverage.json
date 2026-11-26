@@ -1,5 +1,5 @@
 {
-  "schema": 2,
+  "schema": 3,
   "gameVersion": "fbc93606674a",
   "pets": {
     "species": 22,
@@ -1318,7 +1318,12 @@
       "limits",
       "rewards",
       "polish",
-      "stones"
+      "stones",
+      "skills",
+      "playRef",
+      "spine",
+      "maps",
+      "features"
     ],
     "petGate": "Fresh public entrypoint + approved function hashes + unchanged reviewed schema; HTTP 403 blocks pet import",
     "existingAdapters": [

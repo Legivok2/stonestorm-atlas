@@ -640,7 +640,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "6057fe284c73c756f4e8b396eb70a876c97c6ee414f0724cbf7c199ff33ae7c6",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "petSpine": {
@@ -796,7 +796,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "6149e4ebd9450deed1031d570f48959316abc94ebcd61d803e8d551743f6a05c",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "mounts": {
@@ -934,7 +934,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "62c0df52958bc4d4ca44cccd904025a01e1ac149d00a84c05d61dddbec2dcf0b",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "research": {
@@ -1072,7 +1072,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "199154d56a15a68fb44d9b164b84b9b6b2f5f3dccf17efe5f7e12e29e6b15b33",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "forge": {
@@ -1175,7 +1175,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "4b6a77e675b38ab29554970676b65ce750191d69277f7276b08a985075f3644a",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "stats": {
@@ -1649,7 +1649,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "1db5c76a7d0afb1eb5a8081c776402875cf273e13e6b7a0168936bd0307a0761",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "bonus": {
@@ -1761,7 +1761,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "d5d800fda205f1996d57dd475fbc9a68980cc6ecc6abcac8b97861f5a1a3e2f5",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "limits": {
@@ -1838,7 +1838,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "bcee79ec107cb312585baeaace9c963001565db897ad1fa8c57977c82dc5dc80",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "rewards": {
@@ -1862,7 +1862,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "292252dd9e9a4772a7bf14e99e06d97028d981155e11c9edd012a22fee14689d",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "polish": {
@@ -1900,7 +1900,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "3dfe6519c7ab01e9dceb7188a7fe5f774667e67fad34be7c0cb50e07538538a3",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "stones": {
@@ -3032,7 +3032,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "d362a0493e7fff406995932d4739f294022d7450b70ec5555a291ed62a26d82b",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "skills": {
@@ -3236,7 +3236,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "98aa98d54b85b665eb9f4c5d7f7144dca21b1911c2695dfe75e7b778e526a93b",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "playRef": {
@@ -3496,7 +3496,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "b954b736ab61cb2d124fc64ce2d0ca3b861cde10753e2f81a2e47cabcadb71d1",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "spine": {
@@ -6700,7 +6700,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "cf3e95c90a0475ca66f80cb6bc87d8f343c3a81884e007d0b862ef169c4ea360",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "maps": {
@@ -7384,7 +7384,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "b1b3d510b5c24d95674f7a6e3b43f4519327a04a60729f4c9029147754fb208f",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     },
     "features": {
@@ -7493,7 +7493,7 @@
       "status": "public-config",
       "checkedVersion": "fbc93606674a",
       "checkedSourceHash": "2da3447ed5c1d58eb7414288a66a829ea10c400acefce6a9204b24eb6610467f",
-      "checkedAt": "2026-11-20T20:05:58.950Z",
+      "checkedAt": "2026-11-26T17:28:54.719Z",
       "comparison": "unchanged"
     }
   },

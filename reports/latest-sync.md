@@ -1,94 +1,67 @@
 # Atlas frissítési jelentés
 
-Állapot: unchanged
+Állapot: applied
 
-Ellenőrzés: 2026-11-26T08:25:26.832Z
+Ellenőrzés: 2026-11-26T17:28:54.719Z
 
 Játékverzió: fbc93606674a
 
 ## Áttekintés
 
-- Most észlelt új tételek: 0
-- Korábbról nyitva maradt: 2396
-- Automatikusan feldolgozott mezők: 0
-- Dokumentált felülvizsgálattal lezárt: 0
-- Mechanikai / kézi ellenőrzés: 1999
-- Nyitott összesen: 2396
+- Most észlelt új tételek: 18
+- Korábbról nyitva maradt: 384
+- Automatikusan feldolgozott mezők: 1436
+- Dokumentált felülvizsgálattal lezárt: 576
+- Mechanikai / kézi ellenőrzés: 4
+- Nyitott összesen: 402
 
 ## A kiinduló 505 tétel besorolása
 
-- Ismert, validálható adat: 174
-- Ismert rendszer – importáló támogatás hiányzik: 65
-- Új vagy megváltozott játékmechanika: 8
+- Ismert, validálható adat: 183
+- Ismert rendszer – importáló támogatás hiányzik: 63
+- Új vagy megváltozott játékmechanika: 2
 - Korábbi első megfigyelés / forrásleltár: 256
-- Kézi ellenőrzést igénylő eltérés: 2
+- Kézi ellenőrzést igénylő eltérés: 1
 
-Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárási ok.
+Lezárt: 192; nyitott: 313. A változatlan API-válasz önmagában nem lezárási ok.
 
 ## Nyitott rendszerek
 
-### Aréna (4)
-
-- Kliensfájlok és fordítások forrásleltára: 3 tétel – Korábbi első megfigyelés / forrásleltár
-- Aréna · ellenőrzendő adat: 1 tétel – Új vagy megváltozott játékmechanika
-
-### Céh (3)
+### Céh (1)
 
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Kliensfájlok és fordítások forrásleltára: 2 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Egyéb rendszerek (1080)
+### Harci szabályok és fejlődés (2)
 
-- Egyéb rendszerek · ellenőrzendő adat: 1080 tétel – Új vagy megváltozott játékmechanika
-
-### Harci szabályok és fejlődés (21)
-
-- Kitérési korlát a különböző bossok ellen: 1 tétel – Kézi ellenőrzést igénylő eltérés
 - Fejlődési és egyensúlyozási szabályok: 1 tétel – Új vagy megváltozott játékmechanika
-- Harci szabályok és fejlődés · ellenőrzendő adat: 19 tétel – Új vagy megváltozott játékmechanika
+- Harci szabályok és fejlődés · ellenőrzendő adat: 1 tétel – Új vagy megváltozott játékmechanika
 
-### Ház (173)
+### Ház (2)
 
 - Játékrendszerek elérhetőségi kapcsolói: 2 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Ház · ellenőrzendő adat: 171 tétel – Új vagy megváltozott játékmechanika
 
-### Játékrendszerek és események (48)
+### Játékrendszerek és események (42)
 
-- Játékrendszerek elérhetőségi kapcsolói: 44 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Játékrendszerek elérhetőségi kapcsolói: 3 tétel – Új vagy megváltozott játékmechanika
-- Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
+- Játékrendszerek elérhetőségi kapcsolói: 42 tétel – Ismert rendszer – importáló támogatás hiányzik
 
-### Kazamaták (689)
+### Kazamaták (3)
 
 - Teljesítmények és jutalomcsoportok: 3 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Kliensfájlok és fordítások forrásleltára: 2 tétel – Korábbi első megfigyelés / forrásleltár
-- Sárkányfészek · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Sárkányfészek · szerkezet és teremkapcsolatok: 3 tétel – Új vagy megváltozott játékmechanika
-- Sárkányfészek · normál termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · normál termek: 83 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · szerkezet és teremkapcsolatok: 3 tétel – Új vagy megváltozott játékmechanika
-- Pókfészek · normál termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · hősi termek: 90 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · normál termek: 51 tétel – Új vagy megváltozott játékmechanika
-- Vadonodú · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
-- Majomcsapda · szerkezet és teremkapcsolatok: 2 tétel – Új vagy megváltozott játékmechanika
 
-### Képességek és fejlődés (14)
-
-- Kasztképességek: 14 tétel – Ismert rendszer – importáló támogatás hiányzik
-
-### Kísérők (2)
+### Kísérők (1)
 
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
 
-### Kovácsolás és anyagok (314)
+### Kliens és fordítások (335)
+
+- Kliensfájlok és fordítások forrásleltára: 247 tétel – Korábbi első megfigyelés / forrásleltár
+- Kliensfájlok és fordítások forrásleltára: 38 tétel – Korábbi első megfigyelés / forrásleltár
+- Kliensfájlok és fordítások forrásleltára: 33 tétel – Korábbi első megfigyelés / forrásleltár
+- Kliensfájlok és fordítások forrásleltára: 17 tétel – Korábbi első megfigyelés / forrásleltár
+
+### Kovácsolás és anyagok (4)
 
 - Kövek és alapanyagok beszerzési forrásai: 4 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Kliensfájlok és fordítások forrásleltára: 308 tétel – Korábbi első megfigyelés / forrásleltár
-- Kovácsolás és anyagok · ellenőrzendő adat: 2 tétel – Új vagy megváltozott játékmechanika
 
 ### Melléktevékenységek (1)
 
@@ -98,16 +71,11 @@ Lezárt: 183; nyitott: 322. A változatlan API-válasz önmagában nem lezárás
 
 - Régi és teljes szettszabályok eltérése: 1 tétel – Kézi ellenőrzést igénylő eltérés
 
-### Teljesítmények (11)
+### Teljesítmények (10)
 
 - Teljesítmények és jutalomcsoportok: 1 tétel – Új vagy megváltozott játékmechanika
 - Teljesítmények és jutalomcsoportok: 8 tétel – Ismert rendszer – importáló támogatás hiányzik
 - Játékrendszerek elérhetőségi kapcsolói: 1 tétel – Ismert rendszer – importáló támogatás hiányzik
-- Kliensfájlok és fordítások forrásleltára: 1 tétel – Korábbi első megfigyelés / forrásleltár
-
-### Világ és bossok (35)
-
-- Hatodik tájegység · erősségi módosítók: 35 tétel – Új vagy megváltozott játékmechanika
 
 ## Források és részletek
 
