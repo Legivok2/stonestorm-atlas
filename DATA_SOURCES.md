@@ -4,6 +4,10 @@ Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott f�
 
 ## Forrásjegyzék
 
+### Céhek, otthon és kutatások: HU/EN megjelenítés
+
+A céhes épületek és mind a 14 kutatás neve, valamint a kutatások leírása a `snapshots/manifest.json` fájlban rögzített hivatalos magyar és angol lokalizáció egyező név- és szövegpárjaiból származik; eltérő friss adatnál az eredeti név és leírás marad. A céhes épületek hatásösszefoglalói az Atlas szerkesztői szövegei. Az Otthon felületén a forrásban párosítható kliensszövegek hivatalosak; a házfokok és bútorok angol nevei szerkesztői fordítások, nem igazolt játékbeli angol nevek. A megfigyelt árak és feltételek továbbra is egyedi adatmintaként jelennek meg, a hiányzó értékeket nem tekintjük nullának.
+
 ### Világ: HU/EN nevek (2026-11-26)
 
 A pályák, ellenfelek, bossok, kazamaták és az érintett helyszínek angol nevei a `snapshots/manifest.json` mentett hivatalos magyar és angol lokalizációjából származnak. A rekordneveket csak az eredeti magyar név egyezésekor cseréljük le; hiányzó angol névnél az eredetit tartjuk meg. A kazamataleírásoknál ugyanez az egyezési feltétel érvényes. A játékadatok és azonosítók nem változnak.

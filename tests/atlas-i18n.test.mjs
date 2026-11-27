@@ -91,6 +91,29 @@ test('world game names match the captured official locales and do not override c
   }
 });
 
+test('guild and research names and research descriptions match captured client translations',()=>{
+  const {i18n}=load('en');
+  const db=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/atlas.json'),'utf8'));
+  const manifest=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../snapshots/manifest.json'),'utf8'));
+  const resources=Object.values(manifest.resources);
+  const get=(locale,key)=>resources.find(resource=>resource.language===locale&&resource.localeEntries?.[key])?.localeEntries[key];
+  for(const [kind,records] of [['building',db.guild.buildings.map(x=>({id:x.kind,name:x.nameHu}))],['research',db.research]]){
+    for(const record of records){
+      const path=kind==='building'?'/guild/buildings/'+record.id+'/name':'/research/steps/'+record.id+'/title';
+      const key=i18n.gameNameKey(kind,record);
+      assert(key,record.id);
+      assert.equal(i18n.dictionaries.hu[key],get('hu',path));
+      assert.equal(i18n.dictionaries.en[key],get('en',path));
+      assert.equal(i18n.gameNameKey(kind,{...record,name:'Changed name'}),null);
+      if(kind==='research'){
+        const story='/research/steps/'+record.id+'/story',desc='game.researchDescription.'+record.id;
+        assert.equal(i18n.dictionaries.hu[desc],record.description);
+        assert.equal(i18n.dictionaries.en[desc],get('en',story));
+      }
+    }
+  }
+});
+
 test('numbers and dates follow the selected language',()=>{
   const {i18n}=load();
   assert.equal(i18n.formatNumber(12345.5),'12 345,5');
