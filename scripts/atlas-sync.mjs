@@ -11,12 +11,13 @@ import {watchContent,watcherBootstrap,officialArticles,imageCollectorReferences,
 import {staticClientEvidence,localeLanguage} from './future-content-client.mjs';
 import {queueNotifications} from './notify-future-content.mjs';
 import {makePetModel} from './build-addon-pets.mjs';
+import {addonArtifacts} from './addon-package.mjs';
 import {staticModule,clientReferences} from './public-client-data.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=(root,file,fallback=null)=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):fallback;
 function write(root,file,value){const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});const temp=target+'.tmp';try{fs.writeFileSync(temp,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');fs.renameSync(temp,target);}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
-export const syncStateFiles=['addons/stonestorm-statcap-overlay/equipment-data.js','data/future-image-references.json','data/future-notifications.json','reports/future-content.json','data/data-engine-contract.json','data/future-content.json','js/future-content.js','data/data-engine.json','data/addon-pet-model.json','reports/data-engine-coverage.json','addons/stonestorm-statcap-overlay/pet-data.js','addons/stonestorm-statcap-overlay/pet-model.js','downloads/stonestorm-statcap-overlay.zip','downloads/stat-addon.json','js/addon-release.js','data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
+export const syncStateFiles=['addons/stonestorm-statcap-overlay/equipment-data.js','addons/stonestorm-statcap-overlay/companion-design.js','data/future-image-references.json','data/future-notifications.json','reports/future-content.json','data/data-engine-contract.json','data/future-content.json','js/future-content.js','data/data-engine.json','data/addon-pet-model.json','reports/data-engine-coverage.json','addons/stonestorm-statcap-overlay/pet-data.js','addons/stonestorm-statcap-overlay/pet-model.js',...addonArtifacts,'data/sync-import.json','data/atlas.json','js/atlas-data.js','data/image-manifest.json','data/home-arena.json','snapshots/current/content.json','snapshots/current/home-arena-client.json','snapshots/manifest.json','data/sync-status.json','js/sync-status.js','reports/latest-sync.json','reports/latest-sync.md'];
 export async function fetchPublic(url,previous,fetcher=fetch){
   const u=new URL(url);
   if(u.origin!=='https://stonestorm.gg'||u.username||u.password)throw Error('Nem engedélyezett adatforrás');

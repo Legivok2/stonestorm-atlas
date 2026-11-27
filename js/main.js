@@ -2,6 +2,15 @@
   "use strict";
   const data = window.STONESTORM_CONTENT;
   if (!data) return;
+  const english = window.STONESTORM_GUIDE_EN;
+  const isEnglish = () => window.AtlasI18n?.getLocale() === "en";
+  const localeText = (hu, en) => (isEnglish() ? en : hu);
+  const guideArticle = (article) =>
+    isEnglish() && english?.articles[article.id]
+      ? { ...article, ...english.articles[article.id] }
+      : article;
+  const guideFaq = (faq, index) =>
+    isEnglish() && english?.faq[index] ? english.faq[index] : faq;
   document.documentElement.classList.remove("no-js");
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => Array.from(document.querySelectorAll(selector));
@@ -15,8 +24,21 @@
     community: "Közösség",
     shop: "Kódok és Shop",
   };
+  const englishCategories = {
+    character: "Character",
+    start: "First steps",
+    daily: "Daily routine",
+    gear: "Equipment",
+    adventure: "Adventures",
+    community: "Community",
+    shop: "Codes and Shop",
+  };
+  const categoryName = (category) =>
+    (isEnglish() ? englishCategories : categories)[category] ||
+    (isEnglish() ? "Frequently asked question" : "Gyakori kérdés");
   const allowedFilters = ["all", ...Object.keys(categories)];
   let storageAvailable = true;
+  let dailyResetMessage = false;
   let state = {
     classes: [],
     filter: "all",
@@ -93,7 +115,10 @@
   function showStorageStatus() {
     if (!storageAvailable)
       $("#storage-note").textContent =
-        "A böngésző tárhelye nem érhető el. A választások most csak az oldal bezárásáig élnek. A napi lista a helyi naptári napot követi, nem a játék visszaállítását.";
+        localeText(
+          "A böngésző tárhelye nem érhető el. A választások most csak az oldal bezárásáig élnek. A napi lista a helyi naptári napot követi, nem a játék visszaállítását.",
+          "Browser storage is unavailable. Your choices will last only until you close the page. The daily list follows your local calendar day, not the game's reset.",
+        );
   }
   readState();
   // A próbaírás a csak olvasható vagy privát tárhelyet is észleli.
@@ -101,12 +126,17 @@
 
   const mediaItems = data.media || [];
   const mediaById = new Map(mediaItems.map((item) => [item.id, item]));
+  const guideMedia = (item) =>
+    isEnglish() && english?.media[item.id]
+      ? { ...item, ...english.media[item.id] }
+      : item;
   function mediaFigure(item, options = {}) {
+    item = guideMedia(item);
     const figure = node("figure", "guide-figure");
     const link = node("a", "image-trigger");
     link.href = "assets/images/" + item.stem + "-1920.webp";
     link.dataset.mediaId = item.id;
-    link.setAttribute("aria-label", item.title + " – kép nagyítása");
+    link.setAttribute("aria-label", item.title + (isEnglish() ? " – enlarge image" : " – kép nagyítása"));
     link.setAttribute("aria-haspopup", "dialog");
     const image = node("img");
     image.src = "assets/images/" + item.stem + "-640.webp";
@@ -126,7 +156,7 @@
     image.decoding = "async";
     const zoom = node("span", "image-zoom");
     zoom.setAttribute("aria-hidden", "true");
-    zoom.append(icon("search"), document.createTextNode("Nagyítás"));
+    zoom.append(icon("search"), document.createTextNode(isEnglish() ? "Zoom" : "Nagyítás"));
     link.append(image, zoom);
     figure.append(link);
     if (options.caption !== false)
@@ -136,11 +166,13 @@
   function renderMedia() {
     $$("[data-media-slot]").forEach((slot) => {
       const item = mediaById.get(slot.dataset.mediaSlot);
-      if (item) slot.append(mediaFigure(item));
+      if (item) slot.replaceChildren(mediaFigure(item));
     });
+    $("#world-gallery").replaceChildren();
     mediaItems
       .filter((item) => item.gallery)
-      .forEach((item) => {
+      .forEach((source) => {
+        const item = guideMedia(source);
         const card = node("article", "gallery-card");
         const copy = node("div", "gallery-card-copy");
         copy.append(
@@ -167,7 +199,8 @@
         event.altKey
       )
         return;
-      const item = mediaById.get(trigger.dataset.mediaId);
+      const source = mediaById.get(trigger.dataset.mediaId);
+      const item = source && guideMedia(source);
       if (!item) return;
       event.preventDefault();
       opener = trigger;
@@ -230,17 +263,19 @@
 
   function renderClasses() {
     const container = $("#class-cards");
+    container.replaceChildren();
     data.classes.forEach((c) => {
+      const translated = isEnglish() ? english?.classes[c.id] : null;
       const card = node("article", "class-card");
       card.dataset.classId = c.id;
       card.append(
         icon(c.icon, "topic-icon"),
         node("h4", null, c.name),
-        node("div", "class-tags", c.tags),
-        node("p", null, c.description),
+        node("div", "class-tags", translated?.tags ?? c.tags),
+        node("p", null, translated?.description ?? c.description),
       );
-      const stat = node("div", "class-stat", "Elsődleges stat");
-      stat.append(node("strong", null, c.stat));
+      const stat = node("div", "class-stat", localeText("Elsődleges stat", "Primary stat"));
+      stat.append(node("strong", null, translated?.stat ?? c.stat));
       const button = node("button", "compare-button");
       button.type = "button";
       button.setAttribute("aria-controls", "comparison-panel");
@@ -249,16 +284,17 @@
         if (index >= 0) state.classes.splice(index, 1);
         else if (state.classes.length < 2) state.classes.push(c.id);
         else {
-          $("#class-feedback").textContent =
-            "Egyszerre két kaszt hasonlítható össze. Előbb vedd ki az egyik kijelölt kasztot.";
+          $("#class-feedback").textContent = localeText(
+            "Egyszerre két kaszt hasonlítható össze. Előbb vedd ki az egyik kijelölt kasztot.",
+            "You can compare two classes at a time. Remove one of the selected classes first.",
+          );
           return;
         }
-        $("#class-feedback").textContent =
-          state.classes.length === 2
-            ? "Az összehasonlítás elkészült a kártyák alatt."
-            : "Válassz még " +
-              (2 - state.classes.length) +
-              " kasztot az összehasonlításhoz.";
+        $("#class-feedback").textContent = state.classes.length === 2
+          ? localeText("Az összehasonlítás elkészült a kártyák alatt.", "Your comparison is ready below the cards.")
+          : localeText("Válassz még ", "Select ") +
+            (2 - state.classes.length) +
+            localeText(" kasztot az összehasonlításhoz.", " more class to compare.");
         persist();
         updateComparison();
       });
@@ -268,27 +304,41 @@
     updateComparison();
   }
   function updateComparison() {
+    const translatedClass = (c) => isEnglish() ? english?.classes[c.id] ?? c : c;
     $$(".class-card").forEach((card) => {
       const selected = state.classes.includes(card.dataset.classId);
       card.classList.toggle("selected", selected);
       const button = card.querySelector("button");
       const c = data.classes.find((item) => item.id === card.dataset.classId);
       button.textContent = selected
-        ? "✓ Kijelölve · eltávolítás"
-        : "+ Összehasonlítom";
+        ? localeText("✓ Kijelölve · eltávolítás", "✓ Selected · remove")
+        : localeText("+ Összehasonlítom", "+ Compare");
       button.setAttribute("aria-pressed", String(selected));
       button.setAttribute(
         "aria-label",
         c.name +
           (selected
-            ? " eltávolítása az összehasonlításból"
-            : " hozzáadása az összehasonlításhoz"),
+            ? localeText(" eltávolítása az összehasonlításból", " remove from comparison")
+            : localeText(" hozzáadása az összehasonlításhoz", " add to comparison")),
       );
     });
     const selected = state.classes.map((id) =>
       data.classes.find((c) => c.id === id),
     );
-    $("#comparison-count").textContent = selected.length + " / 2 kiválasztva";
+    $("#comparison-count").textContent = selected.length + (isEnglish() ? " / 2 selected" : " / 2 kiválasztva");
+    if (state.classes.length === 2) {
+      $("#class-feedback").textContent = localeText(
+        "Az összehasonlítás elkészült a kártyák alatt.",
+        "Your comparison is ready below the cards.",
+      );
+    } else if (state.classes.length === 1) {
+      $("#class-feedback").textContent = localeText(
+        "Válassz még egy kasztot az összehasonlításhoz.",
+        "Select one more class to compare.",
+      );
+    } else {
+      $("#class-feedback").textContent = "";
+    }
     const container = $("#comparison-content");
     container.replaceChildren();
     if (selected.length !== 2) {
@@ -297,8 +347,8 @@
           "p",
           null,
           selected.length
-            ? "Már csak egy kaszt hiányzik. Jelöld ki a fenti kártyák egyikét."
-            : "Warrior, Ninja, Mage vagy Shaman? Két kijelöléssel egymás mellé teheted a fegyverüket, a fő statjukat és a harci stílusukat.",
+            ? localeText("Már csak egy kaszt hiányzik. Jelöld ki a fenti kártyák egyikét.", "Choose one more class from the cards above.")
+            : localeText("Warrior, Ninja, Mage vagy Shaman? Két kijelöléssel egymás mellé teheted a fegyverüket, a fő statjukat és a harci stílusukat.", "Warrior, Ninja, Mage or Shaman? Select two to compare their weapons, primary stats and combat styles side by side."),
         ),
       );
       return;
@@ -307,11 +357,11 @@
     const caption = node(
       "caption",
       "sr-only",
-      selected.map((c) => c.name).join(" és ") + " összehasonlítása",
+      selected.map((c) => c.name).join(localeText(" és ", " and ")) + localeText(" összehasonlítása", " comparison"),
     );
     const head = node("thead"),
       header = node("tr");
-    ["Tulajdonság", ...selected.map((c) => c.name)].forEach((name) => {
+    [localeText("Tulajdonság", "Attribute"), ...selected.map((c) => c.name)].forEach((name) => {
       const th = node("th", null, name);
       th.scope = "col";
       header.append(th);
@@ -319,16 +369,16 @@
     head.append(header);
     const body = node("tbody");
     [
-      ["Elsődleges stat", "stat"],
-      ["Fegyver", "weapon"],
-      ["Harci stílus", "focus"],
-      ["Tipp · választás", "tip"],
+      [localeText("Elsődleges stat", "Primary stat"), "stat"],
+      [localeText("Fegyver", "Weapon"), "weapon"],
+      [localeText("Harci stílus", "Combat style"), "focus"],
+      [localeText("Tipp · választás", "Tip · choice"), "tip"],
     ].forEach(([label, key]) => {
       const tr = node("tr"),
         th = node("th", null, label);
       th.scope = "row";
       tr.append(th);
-      selected.forEach((c) => tr.append(node("td", null, c[key])));
+      selected.forEach((c) => tr.append(node("td", null, translatedClass(c)[key] ?? c[key])));
       body.append(tr);
     });
     table.append(caption, head, body);
@@ -343,7 +393,23 @@
     }
   }
   function renderDaily() {
-    data.daily.forEach((task) => {
+    renderDailyTasks();
+    $("#reset-daily").addEventListener("click", () => {
+      state.daily = { date: localDay(), done: [] };
+      dailyResetMessage = true;
+      persist();
+      updateDaily();
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) ensureDailyDate();
+    });
+    window.addEventListener("focus", ensureDailyDate);
+    window.setInterval(ensureDailyDate, 30000);
+  }
+  function renderDailyTasks() {
+    $("#daily-checklist").replaceChildren();
+    data.daily.forEach((task, index) => {
+      const translated = isEnglish() ? english?.daily[index] : null;
       const label = node("label", "check-item");
       const input = node("input");
       input.type = "checkbox";
@@ -351,11 +417,12 @@
       input.value = task.id;
       const copy = node("span");
       copy.append(
-        node("strong", null, task.title),
-        node("small", null, task.description),
+        node("strong", null, translated?.title ?? task.title),
+        node("small", null, translated?.description ?? task.description),
       );
       input.addEventListener("change", () => {
         const checked = input.checked;
+        dailyResetMessage = false;
         ensureDailyDate();
         state.daily.done = state.daily.done.filter((id) => id !== task.id);
         if (checked) state.daily.done.push(task.id);
@@ -365,19 +432,7 @@
       label.append(input, copy);
       $("#daily-checklist").append(label);
     });
-    $("#reset-daily").addEventListener("click", () => {
-      state.daily = { date: localDay(), done: [] };
-      persist();
-      updateDaily();
-      $("#daily-message").textContent =
-        "A pipákat töröltük. Kezdődhet egy új kör.";
-    });
     updateDaily();
-    document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) ensureDailyDate();
-    });
-    window.addEventListener("focus", ensureDailyDate);
-    window.setInterval(ensureDailyDate, 30000);
   }
   function updateDaily() {
     $$("#daily-checklist input").forEach((input) => {
@@ -389,18 +444,22 @@
     $("#daily-progress").setAttribute("aria-valuemax", String(total));
     $("#daily-progress").setAttribute("aria-valuenow", String(done));
     $("#daily-progress span").style.width = (done / total) * 100 + "%";
-    $("#daily-message").textContent =
-      done === total
-        ? "Minden pipa a helyén. Szép kaland volt!"
+    $("#daily-message").textContent = dailyResetMessage
+      ? localeText("A pipákat töröltük. Kezdődhet egy új kör.", "Checkmarks cleared. Start a fresh round.")
+      : done === total
+        ? localeText("Minden pipa a helyén. Szép kaland volt!", "Every box is checked. Well done!")
         : done
-          ? done + " kész, " + (total - done) + " teendő vár még rád."
-          : "Minden kaland egy lépéssel kezdődik.";
+          ? isEnglish()
+            ? done + " complete, " + (total - done) + " tasks left."
+            : done + " kész, " + (total - done) + " teendő vár még rád."
+          : localeText("Minden kaland egy lépéssel kezdődik.", "Every adventure starts with one step.");
   }
 
   function renderLibrary() {
-    data.articles.forEach((article, index) => {
-      const details = node("details", "library-item");
-      details.id = "cikk-" + article.id;
+    data.articles.forEach((source, index) => {
+      const article = guideArticle(source);
+      const details = document.getElementById("cikk-" + source.id) || node("details", "library-item");
+      details.id = "cikk-" + source.id;
       const summary = node("summary");
       summary.append(
         node("span", null, String(index + 1).padStart(2, "0")),
@@ -408,7 +467,7 @@
       );
       const content = node("div", "article-body");
       content.append(
-        node("span", "article-tag", categories[article.category]),
+        node("span", "article-tag", categoryName(article.category)),
         node("p", null, article.intro),
       );
       mediaItems
@@ -423,18 +482,19 @@
         content.append(list);
       });
       if (article.tip)
-        content.append(node("p", "inline-tip", "Tipp · " + article.tip));
-      details.append(summary, content);
-      $("#article-library").append(details);
+        content.append(node("p", "inline-tip", (isEnglish() ? "Tip · " : "Tipp · ") + article.tip));
+      details.replaceChildren(summary, content);
+      if (!details.parentNode) $("#article-library").append(details);
     });
-    data.faq.forEach((faq, index) => {
-      const details = node("details", "faq-item");
+    data.faq.forEach((source, index) => {
+      const faq = guideFaq(source, index);
+      const details = document.getElementById("gyik-" + index) || node("details", "faq-item");
       details.id = "gyik-" + index;
-      details.append(
+      details.replaceChildren(
         node("summary", null, faq.question),
         node("p", null, faq.answer),
       );
-      $("#faq-list").append(details);
+      if (!details.parentNode) $("#faq-list").append(details);
     });
   }
   const normalize = (text) =>
@@ -443,19 +503,19 @@
       .replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("hu-HU")
       .replace(/[’‘]/g, "'");
+  const articleText = (article) => [
+    article.title,
+    article.intro,
+    ...article.sections.flatMap((s) => [s.heading || "", ...s.items]),
+    article.tip || "",
+  ].join(" ");
   const searchIndex = data.articles.map((article) => ({
     title: article.title,
     category: article.category,
     href: "#cikk-" + article.id,
     excerpt: article.intro,
-    searchable: normalize(
-      [
-        article.title,
-        article.intro,
-        ...article.sections.flatMap((s) => [s.heading || "", ...s.items]),
-        article.tip || "",
-      ].join(" "),
-    ),
+    source: article,
+    searchable: normalize(articleText(article) + " " + (english?.articles[article.id] ? articleText(english.articles[article.id]) : "")),
   }));
   data.faq.forEach((faq, index) =>
     searchIndex.push({
@@ -463,7 +523,8 @@
       category: "faq",
       href: "#gyik-" + index,
       excerpt: faq.answer,
-      searchable: normalize(faq.question + " " + faq.answer),
+      faqIndex: index,
+      searchable: normalize(faq.question + " " + faq.answer + " " + (english?.faq[index]?.question || "") + " " + (english?.faq[index]?.answer || "")),
     }),
   );
   function renderSearch() {
@@ -482,7 +543,7 @@
     if (!filtering) {
       $("#search-status").textContent =
         data.articles.length +
-        " kereshető fejezet · A kereső az ékezet nélküli szavakat is felismeri.";
+        (isEnglish() ? " searchable chapters · Search also works without accents." : " kereshető fejezet · A kereső az ékezet nélküli szavakat is felismeri.");
       return;
     }
     const matches = searchIndex.filter(
@@ -490,19 +551,17 @@
         (state.filter === "all" || state.filter === article.category) &&
         tokens.every((token) => article.searchable.includes(token)),
     );
-    $("#search-status").textContent =
-      matches.length +
-      " találat" +
-      (query ? " a(z) „" + query + "” keresésre" : " a kiválasztott témában") +
-      ".";
+    $("#search-status").textContent = isEnglish()
+      ? matches.length + (query ? " results for “" + query + "”." : " results in the selected topic.")
+      : matches.length + " találat" + (query ? " a(z) „" + query + "” keresésre" : " a kiválasztott témában") + ".";
     if (!matches.length) {
       const empty = node("div", "empty-state");
       empty.append(
-        node("h3", null, "Erre most nincs találat."),
+        node("h3", null, isEnglish() ? "No results found." : "Erre most nincs találat."),
         node(
           "p",
           null,
-          "Próbálj rövidebb kifejezést, például: energia, Spirit Stone vagy Mage. A témaszűrőt is visszaállíthatod.",
+          isEnglish() ? "Try a shorter term, such as energy, Spirit Stone or Mage. You can also reset the topic filter." : "Próbálj rövidebb kifejezést, például: energia, Spirit Stone vagy Mage. A témaszűrőt is visszaállíthatod.",
         ),
       );
       results.append(empty);
@@ -511,17 +570,18 @@
     matches.forEach((article) => {
       const a = node("a", "search-result");
       a.href = article.href;
+      const translation = article.source ? guideArticle(article.source) : guideFaq(data.faq[article.faqIndex], article.faqIndex);
+      const title = translation.title || translation.question;
+      const text = translation.intro || translation.answer;
       const excerpt =
-        article.excerpt.length > 210
-          ? article.excerpt.slice(0, 207) + "…"
-          : article.excerpt;
+        text.length > 210 ? text.slice(0, 207) + "…" : text;
       a.append(
-        node("h3", null, article.title),
+        node("h3", null, title),
         node("p", null, excerpt),
         node(
           "small",
           null,
-          (categories[article.category] || "Gyakori kérdés") + " · Megnyitás →",
+          categoryName(article.category) + (isEnglish() ? " · Open →" : " · Megnyitás →"),
         ),
       );
       a.addEventListener("click", () => {
@@ -567,19 +627,24 @@
   function setupNavigation() {
     const toggle = $("#menu-toggle"),
       nav = $("#main-nav");
+    function setMenuLabel(open) {
+      const key = open ? "header.closeNavigation" : "header.openNavigation";
+      toggle.dataset.atlasI18nLabel = key;
+      toggle.setAttribute(
+        "aria-label",
+        globalThis.AtlasI18n?.t(key) ?? (open ? "Navigáció bezárása" : "Navigáció megnyitása"),
+      );
+    }
     function closeMenu(returnFocus) {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Navigáció megnyitása");
+      setMenuLabel(false);
       if (returnFocus) toggle.focus();
     }
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
       toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute(
-        "aria-label",
-        open ? "Navigáció bezárása" : "Navigáció megnyitása",
-      );
+      setMenuLabel(open);
       nav.classList.toggle("open", open);
     });
     nav.addEventListener("click", (event) => {
@@ -650,6 +715,14 @@
   setupLightbox();
   setupSearch();
   setupNavigation();
+  window.AtlasI18n?.onChange(() => {
+    renderClasses();
+    renderDailyTasks();
+    renderLibrary();
+    renderSearch();
+    renderMedia();
+    showStorageStatus();
+  });
   window.addEventListener("hashchange", revealHash);
   revealHash();
 })();

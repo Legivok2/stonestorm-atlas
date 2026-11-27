@@ -15,6 +15,7 @@ test('A nyilvános kalauz minden fájlja az engedélyezett forráskiadásból sz
 test('A publikus HTML működő kalauzt kínál, és jelzi a teljes Atlas hiányát',()=>{
   const html=guideHtml(fs.readFileSync(path.join(root,'index.html'),'utf8'));
   assert.deepEqual([...html.matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]),['js/content.js','js/main.js']);
+  assert(!html.includes('id="atlas-language"'));
   assert(!html.includes('Az Atlas betöltése'));
   assert(!html.includes('href="#atlas/'));
   assert(html.includes('még nem érhető el a nyilvános kiadásban'));

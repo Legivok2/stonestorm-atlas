@@ -68,7 +68,7 @@ try{
     for(const text of ['Mitikus','Felnőtt','Előcsapás','Éles karom','Nyitópajzs','11/15'])assert(observedText.includes(text),`Mohaagancs-megfigyelésből hiányzik: ${text}`);
     assert.match(observedText,/57[,.]2%/);
     assert.match(observedText,/12[,.]6%/);
-    assert.match(observedText,/Atlas-modal érték \+12%/);
+    assert.match(observedText,/Atlas-modal érték: \+12%/);
     assert.doesNotMatch(await page.locator('.planner-pet-skill-options').first().textContent(),/undefined|NaN|\{\{/);
     const previewDir=path.join(root,'.integration','previews');fs.mkdirSync(previewDir,{recursive:true});
     await page.locator('.planner-pet-builder').screenshot({path:path.join(previewDir,`pet-builder-reference-${name}.png`)});

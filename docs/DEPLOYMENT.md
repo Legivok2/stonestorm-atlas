@@ -25,9 +25,21 @@ Hiány esetén a workflow leáll; nem helyettesíti a teljes oldalt egy másik v
 
 ## Közzétételi felhatalmazás és licencek
 
-A projektgazda 2026. november 7-én kifejezetten feloldotta a korábbi engedélyellenőrzési feltételt, és kérte a teljes helyi változat publikálását az összes játékból származó képpel és feldolgozott adatcsomaggal együtt: „Igen, feloldom a feltételt; a teljes helyi változatot publikáld.”
+### Fejlesztői engedély
 
-Ez az `.publication/permissions.json` `publicationAuthorization` mezőjében szerepel, név szerint megadott hatókörökkel. A kiadói licencállapot ettől nem változik `confirmed` értékre: a Creator Kit korábbi igazolt állapota megmarad, a többi csoport licencállapota továbbra is `pending`. Az audit külön jelzi a tisztázatlan licenceket (`rightsPending`) és a közzétételt blokkoló, felhatalmazás nélküli csoportokat (`rightsBlocking`). Új, a megadott hatókörön kívüli anyagra nem vonatkozik ez az utasítás.
+A projektgazda 2026. november 27-én a StoneStorm fejlesztőitől kapott következő engedélyt idézte:
+
+> You have our permission to use StoneStorm game artwork, icons, game data, and translated descriptions for your free, non-commercial Atlas/wiki project.
+>
+> This includes:
+>
+> - Displaying game assets and information on your public wiki.
+> - Creating and displaying optimized thumbnails and previews of our game artwork.
+> - Including these materials in your public GitHub repository, where they can be viewed, downloaded, and included in forks of the wiki project.
+>
+> Just make sure to credit StoneStorm as the original source of the game assets and keep the project non-commercial.
+
+Ez a felhasználó által átadott idézet, amelynek eredetét a projekt önállóan nem hitelesítette; nem általános, kereskedelmi vagy más projektekre szóló licenc. A közzététel feltétele a nem kereskedelmi Atlas/wiki és a StoneStorm forrásmegjelölése. A korábbi projektgazdai közzétételi utasítás és az egyes hatókörök továbbra is külön szerepelnek a `.publication/permissions.json` fájlban.
 
 ## Frissítés
 

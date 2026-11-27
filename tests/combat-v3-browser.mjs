@@ -10,7 +10,7 @@ const api=JSON.parse(fs.readFileSync(path.join(root,'snapshots/current/content.j
 const server=createPreview(path.join(root,'dist'));await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const base='http://127.0.0.1:'+server.address().port+'/stonestorm-atlas/',browser=await chromium.launch({headless:true});
 try{
-  for(const width of [1440,390]){
+  for(const width of [1440,375]){
     const page=await browser.newPage({viewport:{width,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
     await page.goto(base+'#atlas/upcoming',{waitUntil:'networkidle'});
     await page.locator('#future-content-root').waitFor();assert.equal(await page.locator('#future-content-root').count(),1);
@@ -18,9 +18,21 @@ try{
     let count=0;
     for(const d of api.dungeons){
       await page.evaluate(id=>location.hash='#atlas/world/dungeon/'+id,d.id);await page.locator('#atlas-detail[open]').waitFor();
-      const text=await page.locator('#atlas-detail-body').textContent();
-      for(const room of [...d.rooms,...d.heroic.rooms]){assert(text.includes(String(room.def)),d.id+' room '+room.room+' raw defence');count++;}
-      assert(text.includes(String(d.recommendedLevel)));
+      for(const [locale,formatLocale] of [['hu','hu-HU'],['en','en-US']]){
+        await page.locator(`#atlas-detail [data-atlas-language="${locale}"]`).click();
+        const format=value=>new Intl.NumberFormat(formatLocale,{useGrouping:false,maximumFractionDigits:20}).format(value);
+        const rows=page.locator('#folio-panel-overview .atlas-related tbody tr');
+        const expected=[...d.rooms,...d.heroic.rooms];
+        assert.equal(await rows.count(),expected.length,d.id+' room count');
+        for(const [index,room] of expected.entries()){
+          const display=await rows.nth(index).locator('td').nth(6).textContent();
+          assert.equal(display,format(room.def),`${d.id} ${locale} room ${room.room} raw defence`);
+          assert.equal(Number(display.replace(',','.')),room.def);
+        }
+      }
+      count+=d.rooms.length+d.heroic.rooms.length;
+      assert((await page.locator('#atlas-detail-body').textContent()).includes(String(d.recommendedLevel)));
+      await page.locator('#atlas-detail [data-atlas-language="hu"]').click();
     }
     assert.equal(count,80);await page.locator('#atlas-detail-close').click();
     await page.evaluate(()=>location.hash='#atlas/stat-limits');await page.locator('#critical-results').waitFor();assert.match(await page.locator('#critical-results').textContent(),/soft-cap/);assert.equal(await page.locator('[data-critical-result]').count(),0);
@@ -34,14 +46,23 @@ try{
   await page.goto('https://stonestorm.gg/');await page.evaluate(()=>{const original=Element.prototype.attachShadow;Element.prototype.attachShadow=function(opts){const shadow=original.call(this,opts);if(this.id==='ss-statcap-root')window.statShadow=shadow;return shadow;};window.chrome={runtime:{id:'combat-fixture',onMessage:{addListener(){}}},storage:{local:{get(k,cb){cb?.({});return Promise.resolve({});},set(){return Promise.resolve();}},onChanged:{addListener(){}}}};});
   const manifest=JSON.parse(fs.readFileSync(path.join(root,addon,'manifest.json')));
   for(const group of manifest.content_scripts)for(const file of group.js)await page.addScriptTag({content:fs.readFileSync(path.join(root,addon,file),'utf8')});
-  await page.evaluate(async()=>{await fetch('/api/content');await fetch('/api/character');});await page.waitForTimeout(1000);
-  await page.evaluate(()=>window.statShadow.querySelector('[data-toggle]').click());
-  let text=await page.evaluate(()=>window.statShadow.querySelector('.unified').textContent);assert.match(text,/Soft-cap: nem igazolt/);assert.match(text,/42%/);assert(!/75% · játékpanel/.test(text));
+  await page.evaluate(()=>StonestormCompanionState.shared(chrome.storage).set({development:true}));
+  await page.evaluate(async()=>{await fetch('/api/content');await fetch('/api/character');});
+  await page.waitForFunction(()=>window.statShadow.querySelector('[data-sc-cap="crit"]')?.textContent.includes('42%'));
+  await page.evaluate(()=>{window.statShadow.querySelector('[data-toggle]').click();window.statShadow.querySelector('[data-sc-nav="stats"]').click();});
+  let text=await page.evaluate(()=>window.statShadow.querySelector('[data-sc-stats]').textContent);
+  assert.match(text,/Kritikus esély.*42% \/ 50%/s);
+  assert.match(text,/Kritikus sebzésbónusz · Nem igazolt · Nem igazolt végérték · ismert felszereléssorok 80%/);
+  assert.equal(await page.evaluate(()=>window.statShadow.querySelector('[data-sc-cap="critDamage"]')),null);
+  assert.equal(await page.evaluate(()=>window.statShadow.querySelector('[data-sc-cap="skillDamage"]')),null);
   await page.evaluate(()=>document.querySelector('main').innerHTML='<section><h3>Bónuszok</h3><div>Kritikus esély: 42%</div><div>Kritikus sebzésbónusz: 33%</div><div>Képességsebzésbónusz: 27%</div></section>');
-  await page.waitForFunction(()=>window.statShadow.querySelector('.unified').textContent.includes('33% · játékpanel'));
-  text=await page.evaluate(()=>window.statShadow.querySelector('.unified').textContent);assert.match(text,/Nyers, ismert rész: 80%/);assert.match(text,/27% · játékpanel/);
+  await page.waitForTimeout(1200);
+  text=await page.evaluate(()=>window.statShadow.querySelector('[data-sc-stats]').textContent);
+  assert.match(text,/ismert felszereléssorok 80%/);
+  assert.equal(await page.evaluate(()=>window.statShadow.querySelector('[data-sc-cap="critDamage"]')),null);
+  assert.equal(await page.evaluate(()=>window.statShadow.querySelector('[data-sc-cap="skillDamage"]')),null);
   await page.screenshot({path:path.join(root,'.integration/combat-v3/addon-panel.png')});
-  await page.evaluate(()=>document.querySelector('main').textContent='Karakter');await page.waitForFunction(()=>!window.statShadow.querySelector('.unified').textContent.includes('33% · játékpanel'));
+  await page.evaluate(()=>document.querySelector('main').textContent='Karakter');
   assert.equal(writes,0);await page.close();
-  console.log('Combat V3 browser: 80 exact room displays at desktop/mobile, 30% cap, honest unknown soft cap, live Bonuses panel cross-check, no game writes.');
+  console.log('Combat V3 browser: 80 exact room displays at desktop/mobile, 30% cap, current Companion verified critical and unverified bonus diagnostics, no game writes.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}

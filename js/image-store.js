@@ -17,7 +17,7 @@
     })[0]??null;
   }
   function render(image,{className='',alt='',eager=false,thumbnail=false}={}){
-    if(!image)return '<span class="atlas-image-missing" role="img" aria-label="Nincs elérhető kép">Nincs kép</span>';
+    if(!image){const t=globalThis.AtlasI18n?.t;return `<span class="atlas-image-missing" role="img" aria-label="${esc(t?t('system.imageMissingLabel'):'Nincs elérhető kép')}" data-atlas-i18n-label="system.imageMissingLabel" data-atlas-i18n="system.imageMissing">${esc(t?t('system.imageMissing'):'Nincs kép')}</span>`;}
     return `<img class="${esc(className)}" data-catalog-image="${esc(image.id)}" src="${esc(thumbnail?image.thumbnail:image.file)}" alt="${esc(alt||image.title||image.name)}" width="${image.width}" height="${image.height}" loading="${eager?'eager':'lazy'}" decoding="async" />`;
   }
   function character(classId,gender,armor,look=1){
@@ -32,5 +32,5 @@
     return null;
   }
   globalThis.AtlasImages=Object.freeze({catalog,entries,related,forRecord,render,character,pet,get:(category,name)=>entries.get(category+'/'+name)??null});
-  document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement&&e.target.dataset.catalogImage){const p=document.createElement('span');p.className='atlas-image-missing';p.setAttribute('role','img');p.setAttribute('aria-label','A kép nem tölthető be');p.textContent='A kép nem érhető el';e.target.replaceWith(p);}},true);
+  document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement&&e.target.dataset.catalogImage){const p=document.createElement('span'),t=globalThis.AtlasI18n?.t;p.className='atlas-image-missing';p.setAttribute('role','img');p.setAttribute('aria-label',t?t('system.imageLoadErrorLabel'):'A kép nem tölthető be');p.dataset.atlasI18nLabel='system.imageLoadErrorLabel';p.dataset.atlasI18n='system.imageLoadError';p.textContent=t?t('system.imageLoadError'):'A kép nem érhető el';e.target.replaceWith(p);}},true);
 })();

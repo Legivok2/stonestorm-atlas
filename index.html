@@ -7,18 +7,21 @@
     <meta
       name="description"
       content="Magyar Stonestorm Wiki és Atlas: felszerelések, szettek, kísérők, hátasok, bossok, céhes kalkulátorok és kereshető kezdőkalauz."
+      data-atlas-i18n-content="header.description"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="hu_HU" />
     <meta
       property="og:title"
       content="Stonestorm Atlas – Magyar Wiki és Kalauz"
+      data-atlas-i18n-content="header.title"
     />
     <meta
       property="og:description"
       content="Egyetlen magyar kódex: játékadatok, összekapcsolt adatlapok, kalkulátorok és részletes kezdőkalauz."
+      data-atlas-i18n-content="header.ogDescription"
     />
-    <title>Stonestorm Atlas – Magyar Wiki és Kalauz</title>
+    <title data-atlas-i18n="header.title">Stonestorm Atlas – Magyar Wiki és Kalauz</title>
     <link rel="icon" type="image/webp" href="assets/images/icon-stone.webp" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/atlas-theme.css" />
@@ -28,7 +31,10 @@
     <link rel="stylesheet" href="css/sync.css" />
     <link rel="stylesheet" href="css/future-content.css" />
     <link rel="stylesheet" href="css/home-arena.css" />
+    <script src="js/atlas-i18n.js" defer></script>
+    <script src="js/atlas-language.js" defer></script>
     <script src="js/content.js" defer></script>
+    <script src="js/guide-en.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/atlas-data.js" defer></script>
     <script src="js/atlas-math.js" defer></script>
@@ -121,13 +127,14 @@
         />
       </symbol>
     </svg>
-    <a class="skip-link" href="#tartalom">Ugrás a tartalomra</a>
+    <a class="skip-link" href="#tartalom" data-atlas-i18n="header.skip">Ugrás a tartalomra</a>
     <header class="site-header">
       <div class="header-inner">
         <a
           class="brand brand-official"
           href="#kezdolap"
           aria-label="Stonestorm Atlas – kezdőlap"
+          data-atlas-i18n-label="header.homeLabel"
         >
           <img
             src="assets/images/logo-horizontal.webp"
@@ -144,27 +151,33 @@
           aria-expanded="false"
           aria-controls="main-nav"
           aria-label="Navigáció megnyitása"
+          data-atlas-i18n-label="header.openNavigation"
         >
           <span></span><span></span><span></span>
         </button>
-        <nav id="main-nav" aria-label="Fő navigáció">
-          <a class="active" href="#kezdolap" aria-current="location"
+        <nav id="main-nav" aria-label="Fő navigáció" data-atlas-i18n-label="header.navigation">
+          <a class="active" href="#kezdolap" aria-current="location" data-atlas-i18n="header.home"
             >Kezdőlap</a
           >
           <a href="#atlas">Atlas</a>
-          <a href="#atlas/gallery">Képtár</a>
-          <a href="#atlas/compare">Összehasonlító</a>
-          <a href="#atlas/planner">Karaktertervező</a>
-          <a href="#utmutato">Kezdőkalauz</a>
+          <a href="#atlas/gallery" data-atlas-i18n="navigation.gallery">Képtár</a>
+          <a href="#atlas/compare" data-atlas-i18n="header.compare">Összehasonlító</a>
+          <a href="#atlas/planner" data-atlas-i18n="navigation.planner">Karaktertervező</a>
+          <a href="#utmutato" data-atlas-i18n="header.guide">Kezdőkalauz</a>
         </nav>
         <a
           class="official-link"
           href="https://stonestorm.gg"
           target="_blank"
           rel="noopener noreferrer"
-          >Hivatalos játék <span aria-hidden="true">↗</span
-          ><span class="sr-only"> (új lapon)</span></a
+          ><span data-atlas-i18n="header.official">Hivatalos játék</span> <span aria-hidden="true">↗</span
+          ><span class="sr-only" data-atlas-i18n="header.newTab"> (új lapon)</span></a
         >
+        <div class="atlas-language" id="atlas-language" role="group" aria-label="Nyelv / Language">
+          <button type="button" lang="hu" data-atlas-language="hu" aria-pressed="true">Magyar</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" lang="en" data-atlas-language="en" aria-pressed="false">English</button>
+        </div>
       </div>
     </header>
 
@@ -172,17 +185,17 @@
       <span id="kezdolap" class="atlas-anchor" aria-hidden="true"></span>
       <section id="atlas" class="atlas-section" aria-labelledby="atlas-heading">
         <div class="container atlas-layout">
-          <button type="button" id="atlas-nav-backdrop" class="atlas-nav-backdrop" aria-label="Kategóriamenü bezárása" hidden></button>
+          <button type="button" id="atlas-nav-backdrop" class="atlas-nav-backdrop" aria-label="Kategóriamenü bezárása" data-atlas-i18n-label="sidebar.close" hidden></button>
           <aside class="atlas-sidebar" id="atlas-sidebar">
-            <div class="atlas-sidebar-heading"><a href="#atlas/overview"><svg class="atlas-icon" aria-hidden="true"><use href="#compass" /></svg><span>ATLAS<small>A VIHAR KÓDEXE</small></span></a><button type="button" id="atlas-nav-close" aria-label="Kategóriamenü bezárása">×</button></div>
-            <nav id="atlas-nav" aria-label="Atlas kategóriák"></nav>
-            <div class="atlas-sidebar-note"><p class="eyebrow">A KÓDEX SZÁMOKBAN</p><div id="atlas-stats" class="atlas-stats"></div><a href="#atlas/sources">Források és ismert hiányok ↗</a></div>
+            <div class="atlas-sidebar-heading"><a href="#atlas/overview"><svg class="atlas-icon" aria-hidden="true"><use href="#compass" /></svg><span>ATLAS<small data-atlas-i18n="sidebar.subtitle">A VIHAR KÓDEXE</small></span></a><button type="button" id="atlas-nav-close" aria-label="Kategóriamenü bezárása" data-atlas-i18n-label="sidebar.close">×</button></div>
+            <nav id="atlas-nav" aria-label="Atlas kategóriák" data-atlas-i18n-label="sidebar.categories"></nav>
+            <div class="atlas-sidebar-note"><p class="eyebrow" data-atlas-i18n="sidebar.stats">A KÓDEX SZÁMOKBAN</p><div id="atlas-stats" class="atlas-stats"></div><a href="#atlas/sources" data-atlas-i18n="sidebar.sources">Források és ismert hiányok ↗</a></div>
           </aside>
           <div class="atlas-main">
-            <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span>Fejezetek</span></button><div><p class="eyebrow">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
-            <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" hidden>×</button><kbd>/</kbd></div></header>
-            <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span>Független rajongói enciklopédia</span></div>
-            <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div>
+            <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" data-atlas-i18n-label="workspace.openCategories" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span data-atlas-i18n="workspace.chapters">Fejezetek</span></button><div><p class="eyebrow" data-atlas-i18n="workspace.knowledge">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
+            <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search" data-atlas-i18n="workspace.searchLabel">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" data-atlas-i18n-placeholder="workspace.searchPlaceholder" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" data-atlas-i18n-label="workspace.clearSearch" hidden>×</button><kbd>/</kbd></div></header>
+            <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span data-atlas-i18n="workspace.independent">Független rajongói enciklopédia</span></div>
+            <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p data-atlas-i18n="system.loading">Az Atlas betöltése…</p></div>
           </div>
         </div>
       </section>
@@ -194,10 +207,10 @@
       >
         <div class="section-heading compact">
           <div>
-            <p class="eyebrow">AZ ELSŐ LÉPÉSTŐL A LEGENDÁIG</p>
-            <h2 id="overview-title">Találd meg a saját utad.</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.static.overviewEyebrow">AZ ELSŐ LÉPÉSTŐL A LEGENDÁIG</p>
+            <h2 id="overview-title" data-atlas-i18n="guide.static.overviewTitle">Találd meg a saját utad.</h2>
           </div>
-          <p>
+          <p data-atlas-i18n="guide.static.overviewSubtitle">
             Minden, ami a kezdetekhez kell.<br />Lépésről lépésre, érthetően.
           </p>
         </div>
@@ -207,10 +220,10 @@
             ><svg class="topic-icon" aria-hidden="true">
               <use href="#swords" />
             </svg>
-            <h3>Karakteralkotás</h3>
-            <p>Válassz királyságot és találd meg<br />a hozzád illő kasztot.</p>
+            <h3 data-atlas-i18n="guide.static.topicCharacter">Karakteralkotás</h3>
+            <p data-atlas-i18n="guide.static.topicCharacterCopy">Válassz királyságot és találd meg<br />a hozzád illő kasztot.</p>
             <span class="card-link"
-              >Megalkotom a hősöm <b aria-hidden="true">↗</b></span
+              ><span data-atlas-i18n="guide.static.topicCharacterLink">Megalkotom a hősöm</span> <b aria-hidden="true">↗</b></span
             ></a
           >
           <a class="topic-card" href="#elso-lepesek"
@@ -218,12 +231,12 @@
             ><svg class="topic-icon" aria-hidden="true">
               <use href="#compass" />
             </svg>
-            <h3>Első lépések</h3>
-            <p>
+            <h3 data-atlas-i18n="guide.static.topicSteps">Első lépések</h3>
+            <p data-atlas-i18n="guide.static.topicStepsCopy">
               A falutól az első expedícióig.<br />Így indulj el a kalandodon.
             </p>
             <span class="card-link"
-              >Útnak indulok <b aria-hidden="true">↗</b></span
+              ><span data-atlas-i18n="guide.static.topicStepsLink">Útnak indulok</span> <b aria-hidden="true">↗</b></span
             ></a
           >
           <a class="topic-card" href="#napi-rutin"
@@ -231,12 +244,12 @@
             ><svg class="topic-icon" aria-hidden="true">
               <use href="#sun" />
             </svg>
-            <h3>Napi rutin</h3>
-            <p>
+            <h3 data-atlas-i18n="guide.static.topicDaily">Napi rutin</h3>
+            <p data-atlas-i18n="guide.static.topicDailyCopy">
               Kis lépések, biztos fejlődés.<br />Hozd ki a legtöbbet a napodból.
             </p>
             <span class="card-link"
-              >Megnézem a teendőket <b aria-hidden="true">↗</b></span
+              ><span data-atlas-i18n="guide.static.topicDailyLink">Megnézem a teendőket</span> <b aria-hidden="true">↗</b></span
             ></a
           >
           <a class="topic-card" href="#fejlodes"
@@ -244,24 +257,24 @@
             ><svg class="topic-icon" aria-hidden="true">
               <use href="#anvil" />
             </svg>
-            <h3>Fejlődés és felszerelés</h3>
-            <p>
+            <h3 data-atlas-i18n="guide.static.topicProgress">Fejlődés és felszerelés</h3>
+            <p data-atlas-i18n="guide.static.topicProgressCopy">
               Erősebb hős, jobb felszerelés.<br />Ismerd meg a fejlődés
               alapjait.
             </p>
             <span class="card-link"
-              >Erősebb leszek <b aria-hidden="true">↗</b></span
+              ><span data-atlas-i18n="guide.static.topicProgressLink">Erősebb leszek</span> <b aria-hidden="true">↗</b></span
             ></a
           >
         </div>
         <div class="intro-note">
           <svg class="icon" aria-hidden="true"><use href="#spark" /></svg>
           <p>
-            A <strong>Stonestorm</strong> kelet-ázsiai fantasyvilágban játszódó
+            <span data-atlas-i18n="guide.static.introBefore">A </span><strong>Stonestorm</strong><span data-atlas-i18n="guide.static.introAfter"> kelet-ázsiai fantasyvilágban játszódó
             idle MMORPG. Hősöd akkor is vadászhat és fejlődhet, amikor te mással
-            foglalkozol. Ez a kalauz segít átlátni az első döntéseket.
+            foglalkozol. Ez a kalauz segít átlátni az első döntéseket.</span>
           </p>
-          <a href="#forrasok">A kalauzról <span aria-hidden="true">↗</span></a>
+          <a href="#forrasok"><span data-atlas-i18n="guide.static.aboutGuide">A kalauzról</span> <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
@@ -272,26 +285,26 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">01 / A HŐS SZÜLETÉSE</p>
-            <h2 id="character-title">Melyik útra lépsz?</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.static.characterEyebrow">01 / A HŐS SZÜLETÉSE</p>
+            <h2 id="character-title" data-atlas-i18n="guide.static.characterTitle">Melyik útra lépsz?</h2>
           </div>
-          <span class="section-tag">Karakteralkotás</span>
+          <span class="section-tag" data-atlas-i18n="guide.static.topicCharacter">Karakteralkotás</span>
         </div>
         <div class="kingdom-layout">
           <div>
-            <h3>Három zászló. Egy döntés.</h3>
+            <h3 data-atlas-i18n="guide.static.kingdomTitle">Három zászló. Egy döntés.</h3>
             <p>
-              Bonghwa piros, Horang sárga, Miru kék királyság. A céhek azonos
-              világban mindháromból fogadnak tagokat. A
-              <em>Few members, extra reward</em> jelölésű választás Pioneer pack
-              jutalmát a kártyán megadott szinten kapod.
+              <span data-atlas-i18n="guide.static.kingdomCopyBefore">Bonghwa piros, Horang sárga, Miru kék királyság. A céhek azonos
+              világban mindháromból fogadnak tagokat. A királyságot jelölő
+              </span><em>Few members, extra reward</em><span data-atlas-i18n="guide.static.kingdomCopyAfter"> jelzésű választással Pioneer pack
+              jutalmat kapsz a kártyán megadott szinten.</span>
             </p>
             <div class="notice warning">
               <svg class="icon" aria-hidden="true"><use href="#alert" /></svg>
               <p>
-                <strong>A királyság végleges választás.</strong> Amíg a hős még
+                <strong data-atlas-i18n="guide.static.kingdomWarningTitle">A királyság végleges választás.</strong> <span data-atlas-i18n="guide.static.kingdomWarningCopy">Amíg a hős még
                 új, egyszer ingyen újrakezdhetsz. A barátokkal azonos világot
-                válasszatok.
+                válasszatok.</span>
               </p>
             </div>
           </div>
@@ -299,35 +312,35 @@
             <article class="kingdom kingdom-red">
               <span class="kingdom-seal" aria-hidden="true">炎</span>
               <h4>Bonghwa</h4>
-              <p>Az első lehetséges otthonod.</p>
+              <p data-atlas-i18n="guide.static.kingdomBonghwa">Az első lehetséges otthonod.</p>
             </article>
             <article class="kingdom kingdom-gold">
               <span class="kingdom-seal" aria-hidden="true">虎</span>
               <h4>Horang</h4>
-              <p>Egy másik zászló, közös kaland.</p>
+              <p data-atlas-i18n="guide.static.kingdomHorang">Egy másik zászló, közös kaland.</p>
             </article>
             <article class="kingdom kingdom-blue">
               <span class="kingdom-seal" aria-hidden="true">龍</span>
               <h4>Miru</h4>
-              <p>A harmadik út a világba.</p>
+              <p data-atlas-i18n="guide.static.kingdomMiru">A harmadik út a világba.</p>
             </article>
           </div>
         </div>
-        <p class="fine-print">
+        <p class="fine-print" data-atlas-i18n="guide.static.kingdomFinePrint">
           A jelképek saját, hangulati illusztrációk, nem hivatalos címerek.
         </p>
         <div class="subheading">
           <div>
-            <h3>Négy kaszt. Melyik illik hozzád?</h3>
-            <p>Jelölj ki két kasztot az összehasonlításhoz.</p>
+            <h3 data-atlas-i18n="guide.static.classesTitle">Négy kaszt. Melyik illik hozzád?</h3>
+            <p data-atlas-i18n="guide.static.classesCopy">Jelölj ki két kasztot az összehasonlításhoz.</p>
           </div>
-          <span class="tiny-label">NÉGY KÜLÖNBÖZŐ HARCI STÍLUS</span>
+          <span class="tiny-label" data-atlas-i18n="guide.static.classesEyebrow">NÉGY KÜLÖNBÖZŐ HARCI STÍLUS</span>
         </div>
         <div class="class-grid" id="class-cards"></div>
         <div class="comparison" id="comparison-panel">
           <div class="comparison-heading">
-            <h4>Kasztok egymás mellett</h4>
-            <span id="comparison-count">Válassz két kasztot</span>
+            <h4 data-atlas-i18n="guide.static.comparisonTitle">Kasztok egymás mellett</h4>
+            <span id="comparison-count" data-atlas-i18n="guide.static.comparisonCount">Válassz két kasztot</span>
           </div>
           <div id="comparison-content" class="comparison-content"></div>
         </div>
@@ -339,15 +352,15 @@
         ></p>
         <div class="two-column">
           <article class="panel">
-            <h3>Elsődleges statok</h3>
+            <h3 data-atlas-i18n="guide.static.statsTitle">Elsődleges statok</h3>
             <p>
-              <strong>Strength:</strong> Warrior és Mage sebzése.
-              <strong>Dexterity:</strong> Ninja sebzése, továbbá mindenkinek
-              kritikus találat és kitérés. <strong>Vitality:</strong> HP és
-              védelem. <strong>Intelligence:</strong> Shaman sebzése és a
-              képességhez szükséges SP.
+              <strong>Strength:</strong> <span data-atlas-i18n="guide.static.statsStrength">Warrior és Mage sebzése.</span>
+              <strong>Dexterity:</strong> <span data-atlas-i18n="guide.static.statsDexterity">Ninja sebzése, továbbá mindenkinek
+              kritikus találat és kitérés.</span> <strong>Vitality:</strong> <span data-atlas-i18n="guide.static.statsVitality">HP és
+              védelem.</span> <strong>Intelligence:</strong> <span data-atlas-i18n="guide.static.statsIntelligence">Shaman sebzése és a
+              képességhez szükséges SP.</span>
             </p>
-            <p class="muted">
+            <p class="muted" data-atlas-i18n="guide.static.statsDetails">
               Minden szinten statpontokat kapsz. A Suggested split elosztja őket
               a kasztodhoz; a Reset stats visszaadja a pontokat, és az első
               reset ingyenes. A két skill path közül korán választhatsz,
@@ -357,8 +370,8 @@
           <aside class="notice tip">
             <svg class="icon" aria-hidden="true"><use href="#spark" /></svg>
             <div>
-              <strong>Tipp · Kezdd egyszerűen</strong>
-              <p>
+              <strong data-atlas-i18n="guide.static.simpleTipTitle">Tipp · Kezdd egyszerűen</strong>
+              <p data-atlas-i18n="guide.static.simpleTip">
                 Használd a Suggested split lehetőséget, amíg kiismered a
                 kasztod. A Warrior hivatalosan is kezdőbarát. A harc
                 automatikus: elegendő SP-nél képesség, alacsony HP-nál potion
@@ -370,15 +383,15 @@
         <div class="character-showcase">
           <div data-media-slot="character"></div>
           <div class="showcase-copy">
-            <p class="eyebrow">ISMERD MEG A KARAKTERLAPOT</p>
-            <h3>A hős a részletekben él.</h3>
-            <p>
+            <p class="eyebrow" data-atlas-i18n="guide.static.characterSheetEyebrow">ISMERD MEG A KARAKTERLAPOT</p>
+            <h3 data-atlas-i18n="guide.static.characterSheetTitle">A hős a részletekben él.</h3>
+            <p data-atlas-i18n="guide.static.characterSheetCopy">
               A Character oldalon együtt látod a felszerelést, a statokat és a
               képességeket. A hivatalos képernyőképen egy Warrior karakterlapját
               nézheted meg.
             </p>
             <a class="text-link" href="#cikk-gear"
-              >Felszerelés és Combat Power <span aria-hidden="true">→</span></a
+              ><span data-atlas-i18n="guide.static.characterSheetLink">Felszerelés és Combat Power</span> <span aria-hidden="true">→</span></a
             >
           </div>
         </div>
@@ -392,23 +405,23 @@
         >
           <div class="section-heading">
             <div>
-              <p class="eyebrow">02 / AZ ELSŐ KALAND</p>
-              <h2 id="steps-title">A faluból indul minden.</h2>
+              <p class="eyebrow" data-atlas-i18n="guide.static.stepsEyebrow">02 / AZ ELSŐ KALAND</p>
+              <h2 id="steps-title" data-atlas-i18n="guide.static.stepsTitle">A faluból indul minden.</h2>
             </div>
-            <span class="section-tag">Első lépések</span>
+            <span class="section-tag" data-atlas-i18n="guide.static.topicSteps">Első lépések</span>
           </div>
           <div class="steps-layout">
             <ol class="steps">
               <li>
                 <span class="step-num">01</span>
                 <div>
-                  <h3>Mentsd el a vendéghősöd</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepSaveTitle">Mentsd el a vendéghősöd</h3>
+                  <p data-atlas-i18n="guide.static.stepSave">
                     Egy érintéssel kezdhetsz vendégként. A későbbi e-mailes
                     fiókmentés ingyenes és néhány Storm Coins jutalmat ad.
                     Kódbeváltáshoz és chathez is szükséges.
                   </p>
-                  <span class="inline-tip"
+                  <span class="inline-tip" data-atlas-i18n="guide.static.stepSaveTip"
                     >Tipp: a mobilos kezdőképernyőről indított játék külön
                     böngészőnek számít. Előbb mentsd a hőst!</span
                   >
@@ -417,8 +430,8 @@
               <li>
                 <span class="step-num">02</span>
                 <div>
-                  <h3>Kövesd Gilhwa útmutatását</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepGilhwaTitle">Kövesd Gilhwa útmutatását</h3>
+                  <p data-atlas-i18n="guide.static.stepGilhwa">
                     A leckék bármikor újraolvashatók a ? gomb mögötti Book of
                     tips gyűjteményben. Ha valamit hosszan nyomva tartasz,
                     Gilhwa elmagyarázza.
@@ -428,8 +441,8 @@
               <li>
                 <span class="step-num">03</span>
                 <div>
-                  <h3>Captain Mugang és a történet</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepStoryTitle">Captain Mugang és a történet</h3>
+                  <p data-atlas-i18n="guide.static.stepStory">
                     A felső tekercs mutatja az aktuális történeti parancsot. A
                     fejezetek jutalmakat adnak, és a következő map bosshoz
                     vezetnek. Ha nincs új történeti feladat, napi Captain’s
@@ -440,8 +453,8 @@
               <li>
                 <span class="step-num">04</span>
                 <div>
-                  <h3>Ismerd meg a falusi NPC-ket</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepNpcsTitle">Ismerd meg a falusi NPC-ket</h3>
+                  <p data-atlas-i18n="guide.static.stepNpcs">
                     Dongsu: Daily Tasks. Gangdo: Blacksmith. Minah: potions;
                     Kalbin: weapons; Taesan: armour; Jamul: materials. A
                     felkiáltójel azt mutatja, hogy valaki vár rád.
@@ -451,14 +464,14 @@
               <li>
                 <span class="step-num">05</span>
                 <div>
-                  <h3>Induljon az első Forays expedíció</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepForayTitle">Induljon az első Forays expedíció</h3>
+                  <p data-atlas-i18n="guide.static.stepForay">
                     Hunt → Forays: válassz rövid, közepes vagy hosszú utat. A
                     kártya mutatja az időt, energiát, jutalmat és a nehézséget:
                     Easy, Even vagy Tough. Az állomások döntései után a stone
                     guardians és egy választható láda vár.
                   </p>
-                  <span class="inline-tip"
+                  <span class="inline-tip" data-atlas-i18n="guide.static.stepForayTip"
                     >Tipp: kezdd Easy úttal, és nézd meg a tooltipben a győzelmi
                     esélyt.</span
                   >
@@ -467,8 +480,8 @@
               <li>
                 <span class="step-num">06</span>
                 <div>
-                  <h3>Indíts Background Hunt vadászatot</h3>
-                  <p>
+                  <h3 data-atlas-i18n="guide.static.stepHuntTitle">Indíts Background Hunt vadászatot</h3>
+                  <p data-atlas-i18n="guide.static.stepHunt">
                     Hunt → Hunting spots: válassz helyet az óránkénti XP és
                     nyang alapján. A hős offline is gyűjt, de a zsák
                     megtelésekor megáll. Gyűjtsd be rendszeresen; a Go here jobb
@@ -479,17 +492,17 @@
             </ol>
             <aside class="journey-aside">
               <div class="journey-image" data-media-slot="village"></div>
-              <h3>Nem kell mindent<br />az első napon.</h3>
-              <p class="muted">
+              <h3 data-atlas-i18n="guide.static.journeyTitle">Nem kell mindent<br />az első napon.</h3>
+              <p class="muted" data-atlas-i18n="guide.static.journeyCopy">
                 Gilhwa bemutatja az újonnan megnyíló rendszereket. Kezdésként a
                 történet, a Forays és a Background Hunt legyen kéznél.
               </p>
               <a class="text-link" href="#napi-rutin"
-                >Alakíts ki napi rutint <span aria-hidden="true">→</span></a
+                ><span data-atlas-i18n="guide.static.journeyLink">Alakíts ki napi rutint</span> <span aria-hidden="true">→</span></a
               >
               <div class="source-note">
-                <strong>Today's to-do · minden egy helyen</strong>
-                <p>
+                <strong data-atlas-i18n="guide.static.todoTitle">Today's to-do · minden egy helyen</strong>
+                <p data-atlas-i18n="guide.static.todoCopy">
                   A HUD gombja Now, Later és Anytime csoportokban mutatja a
                   teendőket. Go there: odaugrás. Claim all: több kész jutalom
                   átvétele egyszerre.
@@ -507,23 +520,23 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">03 / KIS LÉPÉSEK, BIZTOS HALADÁS</p>
-            <h2 id="daily-title">Egy jó nap néhány pipával kezdődik.</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.static.dailyEyebrow">03 / KIS LÉPÉSEK, BIZTOS HALADÁS</p>
+            <h2 id="daily-title" data-atlas-i18n="guide.static.dailyTitle">Egy jó nap néhány pipával kezdődik.</h2>
           </div>
-          <span class="section-tag">Napi rutin</span>
+          <span class="section-tag" data-atlas-i18n="guide.static.topicDaily">Napi rutin</span>
         </div>
         <div class="daily-layout">
           <div class="daily-intro">
-            <h3>A te ritmusod. A te kalandod.</h3>
-            <p>
+            <h3 data-atlas-i18n="guide.static.dailyIntroTitle">A te ritmusod. A te kalandod.</h3>
+            <p data-atlas-i18n="guide.static.dailyIntro">
               Ez a saját ellenőrzőlistád. Pipáld ki, amit elvégeztél, és
               folytasd onnan, ahol abbahagytad.
             </p>
             <div class="routine-card">
               <svg class="icon" aria-hidden="true"><use href="#sun" /></svg>
               <div>
-                <h4>Belépéskor</h4>
-                <p>
+                <h4 data-atlas-i18n="guide.static.whenLogin">Belépéskor</h4>
+                <p data-atlas-i18n="guide.static.whenLoginCopy">
                   Jutalmak, napi feladatok, energia és az elérhető
                   bosspróbálkozások ellenőrzése.
                 </p>
@@ -532,19 +545,19 @@
             <div class="routine-card">
               <svg class="icon" aria-hidden="true"><use href="#moon" /></svg>
               <div>
-                <h4>Kilépés előtt</h4>
-                <p>
+                <h4 data-atlas-i18n="guide.static.whenLeaving">Kilépés előtt</h4>
+                <p data-atlas-i18n="guide.static.whenLeavingCopy">
                   Tipp: nézd át a felszerelést, gyűjtsd be a jutalmakat, és
                   ellenőrizd a háttérvadászatot.
                 </p>
               </div>
             </div>
-            <p class="fine-print">
+            <p class="fine-print" data-atlas-i18n="guide.static.dailySystems">
               Ha már megnyílt: napi companion Feed, ingyenes dungeon keys, Guild
               Raid támadás és Hakmun mintáinak leadása. A Stormcatcher pihenőjét
               a Today's to-do mutatja.
             </p>
-            <p class="fine-print">
+            <p class="fine-print" data-atlas-i18n="guide.static.dailyAvailability">
               Az egyes napi rendszerek elérhetőségét és próbálkozásait mindig a
               játékban ellenőrizd. A listán szereplés nem jelenti, hogy minden
               funkció már megnyílt a karakterednek.
@@ -554,8 +567,8 @@
           <div class="checklist-panel">
             <div class="checklist-top">
               <div>
-                <span class="eyebrow">A MAI KALANDOD</span>
-                <h3>Napi ellenőrzőlista</h3>
+                <span class="eyebrow" data-atlas-i18n="guide.static.today">A MAI KALANDOD</span>
+                <h3 data-atlas-i18n="guide.static.checklistTitle">Napi ellenőrzőlista</h3>
               </div>
               <span class="progress-counter" id="daily-counter">0 / 8</span>
             </div>
@@ -563,6 +576,7 @@
               class="progress-track"
               role="progressbar"
               aria-label="Elvégzett napi teendők"
+              data-atlas-i18n-label="guide.static.progressLabel"
               aria-valuemin="0"
               aria-valuemax="8"
               aria-valuenow="0"
@@ -573,14 +587,15 @@
             <div id="daily-checklist"></div>
             <div class="checklist-bottom">
               <span id="daily-message" role="status" aria-live="polite"
-                >Minden kaland egy lépéssel kezdődik.</span
+                data-atlas-i18n="guide.static.dailyMessage">Minden kaland egy lépéssel kezdődik.</span
               ><button class="text-button" type="button" id="reset-daily">
-                Pipák törlése <span aria-hidden="true">↺</span>
+                <span data-atlas-i18n="guide.static.clearChecks">Pipák törlése</span> <span aria-hidden="true">↺</span>
               </button>
             </div>
             <p class="storage-note" id="storage-note">
-              Mentés csak ebben a böngészőben. Új lista a helyi naptár szerinti
+              <span data-atlas-i18n="guide.static.storageNote">Mentés csak ebben a böngészőben. Új lista a helyi naptár szerinti
               következő napon; ez nem a játék napi visszaállítása.
+              </span>
             </p>
           </div>
         </div>
@@ -594,10 +609,10 @@
         >
           <div class="section-heading">
             <div>
-              <p class="eyebrow">04 / A KÖVETKEZŐ SZINT</p>
-              <h2 id="progress-title">Az erő a részletekben rejlik.</h2>
+              <p class="eyebrow" data-atlas-i18n="guide.static.progressEyebrow">04 / A KÖVETKEZŐ SZINT</p>
+              <h2 id="progress-title" data-atlas-i18n="guide.static.progressTitle">Az erő a részletekben rejlik.</h2>
             </div>
-            <span class="section-tag">Fejlődés és felszerelés</span>
+            <span class="section-tag" data-atlas-i18n="guide.static.topicProgress">Fejlődés és felszerelés</span>
           </div>
           <div class="equipment-grid">
             <article class="panel cp-panel">
@@ -605,25 +620,25 @@
                 <use href="#shield" />
               </svg>
               <h3>Combat Power</h3>
-              <p>
+              <p data-atlas-i18n="guide.static.cpCopy">
                 Kattints a HUD CP értékére az összetevőihez. A Hunt oldal sávja
                 a térkép átlagos hőséhez mér. A tárgyon látható ▲ jel a jelenleg
                 viseltnél jobbat mutatja.
               </p>
-              <p class="inline-tip">
+              <p class="inline-tip" data-atlas-i18n="guide.static.cpTip">
                 Tipp: a CP-változásra jobban figyelj, mint önmagában a tárgy
                 színére. A viselési szint a tárgykártyán látható.
               </p>
             </article>
             <article class="panel rarity-panel">
-              <h3>Ismerd fel a ritkaságokat</h3>
-              <p>Alacsonyabbtól a magasabb ritkaság felé:</p>
+              <h3 data-atlas-i18n="guide.static.rarityTitle">Ismerd fel a ritkaságokat</h3>
+              <p data-atlas-i18n="guide.static.rarityCopy">Alacsonyabbtól a magasabb ritkaság felé:</p>
               <div class="rarities">
                 <span class="common">Common</span><span class="rare">Rare</span
                 ><span class="heroic">Heroic</span
                 ><span class="mythic">Mythic</span>
               </div>
-              <p class="fine-print">
+              <p class="fine-print" data-atlas-i18n="guide.static.rarityDetails">
                 A Heroic lila, a map boss saját Mythic tárgya arany. Magasabb
                 ritkasággal több bónuszsor és foglalat jár. A fegyver és armour
                 kaszthoz kötött; a többi felsorolt slot közös.
@@ -632,9 +647,9 @@
           </div>
           <div class="forge-layout">
             <article class="forge-main">
-              <p class="eyebrow">A KOVÁCS MELLETT</p>
-              <h3>Mielőtt lecsap a kalapács.</h3>
-              <p>
+              <p class="eyebrow" data-atlas-i18n="guide.static.forgeEyebrow">A KOVÁCS MELLETT</p>
+              <h3 data-atlas-i18n="guide.static.forgeTitle">Mielőtt lecsap a kalapács.</h3>
+              <p data-atlas-i18n="guide.static.forgeCopy">
                 Blacksmith → Upgrade. Gangdo a Chance alatt mutatja a pontos
                 esélyt, a Cost alatt az árat. Hiányzó anyagnál a Where from?
                 segít.
@@ -643,15 +658,15 @@
                 <div>
                   <span class="phase-mark safe">✓</span>
                   <h4>Safe steps</h4>
-                  <p>
+                  <p data-atlas-i18n="guide.static.safeStepsCopy">
                     Az első, biztonságosnak jelölt lépések mindig sikerülnek.
                     Tipp: fejleszd így minden viselt tárgyadat.
                   </p>
                 </div>
                 <div>
                   <span class="phase-mark risk">!</span>
-                  <h4>Kockázatos lépések</h4>
-                  <p>
+                  <h4 data-atlas-i18n="guide.static.riskyStepsTitle">Kockázatos lépések</h4>
+                  <p data-atlas-i18n="guide.static.riskyStepsCopy">
                     Védelem nélkül sikertelenségkor a tárgy és a belehelyezett
                     Spirit Stone-ok is elégnek.
                   </p>
@@ -659,7 +674,7 @@
               </div>
               <div class="notice warning">
                 <svg class="icon" aria-hidden="true"><use href="#alert" /></svg>
-                <p>
+                <p data-atlas-i18n="guide.static.forgeWarning">
                   A forrás nem ad számszerű biztonsági határt. Mindig a
                   következő lépés Chance és Cost értékét ellenőrizd.
                 </p>
@@ -672,7 +687,7 @@
                 >
                 <div>
                   <h4>Ashward Scroll</h4>
-                  <p>
+                  <p data-atlas-i18n="guide.static.scrollCopy">
                     Sikertelenségkor a tárgy megmarad, de egy fejlesztési
                     fokozatot visszaesik.
                   </p>
@@ -684,7 +699,7 @@
                 >
                 <div>
                   <h4>Stormstone Dust</h4>
-                  <p>
+                  <p data-atlas-i18n="guide.static.dustCopy">
                     Sikertelenségkor a tárgy megmarad, és a fejlesztési
                     fokozatát is megtartja.
                   </p>
@@ -695,8 +710,8 @@
                   >◇</span
                 >
                 <div>
-                  <h4>Spirit Stone-ok</h4>
-                  <p>
+                  <h4 data-atlas-i18n="guide.static.spiritStonesTitle">Spirit Stone-ok</h4>
+                  <p data-atlas-i18n="guide.static.spiritStonesCopy">
                     A bossoktól a Blacksmith → Sockets fülre kerülnek. Rare vagy
                     jobb tárgyba ingyen illeszthetők.
                   </p>
@@ -709,9 +724,9 @@
               <svg><use href="#claw" /></svg>
             </div>
             <div>
-              <p class="eyebrow">AZ ELSŐ NAGY KIHÍVÁS</p>
+              <p class="eyebrow" data-atlas-i18n="guide.static.bossEyebrow">AZ ELSŐ NAGY KIHÍVÁS</p>
               <h3>Old Stripes</h3>
-              <p>
+              <p data-atlas-i18n="guide.static.bossCopy">
                 A Village Outskirts első map bossa. Legyőzése megnyitja a
                 Highwayman Country térképet. A Hunt → Boss kártyája mutatja az
                 esélyt és a napi ingyenes próbálkozásaidat; ezek csak
@@ -719,8 +734,8 @@
               </p>
             </div>
             <div class="boss-tip">
-              <strong>Tipp · Készülj fel</strong>
-              <p>
+              <strong data-atlas-i18n="guide.static.bossTipTitle">Tipp · Készülj fel</strong>
+              <p data-atlas-i18n="guide.static.bossTip">
                 Az első győzelem biztosan ad set-darabot, Heroic tárgyat és
                 Spirit Stone-t. Ingyenes vereség után a Momentum segíti a
                 következő próbát.
@@ -730,15 +745,15 @@
           <div class="boss-showcase">
             <div data-media-slot="flamebeard"></div>
             <div class="showcase-copy">
-              <p class="eyebrow">EGY PILLANTÁS A KÉSŐBBI HARCOKBA</p>
-              <h3>Amikor a boss visszaüt.</h3>
-              <p>
+              <p class="eyebrow" data-atlas-i18n="guide.static.bossShowcaseEyebrow">EGY PILLANTÁS A KÉSŐBBI HARCOKBA</p>
+              <h3 data-atlas-i18n="guide.static.bossShowcaseTitle">Amikor a boss visszaüt.</h3>
+              <p data-atlas-i18n="guide.static.bossShowcaseCopy">
                 A hivatalos Creator Kit Flamebeard elleni harcot mutat be.
                 Nagyítsd ki a képet, és ismerd meg a harci felületet: a
                 résztvevők, a HP és a képességek jelzéseit.
               </p>
               <a class="text-link" href="#cikk-bosses"
-                >Tovább a bosskalauzhoz <span aria-hidden="true">→</span></a
+                ><span data-atlas-i18n="guide.static.bossGuideLink">Tovább a bosskalauzhoz</span> <span aria-hidden="true">→</span></a
               >
             </div>
           </div>
@@ -752,25 +767,24 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">PILLANATOK A VIHAR VILÁGÁBÓL</p>
-            <h2 id="gallery-title">Ez a világ rád vár.</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.static.galleryEyebrow">PILLANATOK A VIHAR VILÁGÁBÓL</p>
+            <h2 id="gallery-title" data-atlas-i18n="guide.static.galleryTitle">Ez a világ rád vár.</h2>
           </div>
-          <span class="section-tag">Eredeti Stonestorm-képek</span>
+          <span class="section-tag" data-atlas-i18n="guide.static.galleryTag">Eredeti Stonestorm-képek</span>
         </div>
-        <p class="gallery-intro">
+        <p class="gallery-intro" data-atlas-i18n="guide.static.galleryIntro">
           A falu főterétől a Stormcatcher tetejéig. Fedezd fel a játék
           hangulatát a hivatalos Creator Kit képein — kattints a részletekért.
         </p>
         <div class="world-gallery" id="world-gallery"></div>
         <p class="gallery-credit">
-          Képek:
+          <span data-atlas-i18n="guide.static.galleryCredit">Képek:</span>
           <a
             href="https://stonestorm.gg/press"
             target="_blank"
             rel="noopener noreferrer"
-            >Stonestorm · hivatalos Creator Kit ↗</a
-          >. A feloldásokat és az indulási időpontokat az útmutató megfelelő
-          fejezetei jelzik.
+            >Stonestorm · official Creator Kit ↗</a
+            ><span data-atlas-i18n="guide.static.galleryCreditCopy">. A feloldásokat és az indulási időpontokat az útmutató megfelelő fejezetei jelzik.</span>
         </p>
       </section>
 
@@ -781,12 +795,12 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">MINDIG VAN EGY KÖVETKEZŐ KALAND</p>
-            <h2 id="library-title">A részletek, amikor szükséged van rájuk.</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.libraryEyebrow">MINDIG VAN EGY KÖVETKEZŐ KALAND</p>
+            <h2 id="library-title" data-atlas-i18n="guide.libraryTitle">A részletek, amikor szükséged van rájuk.</h2>
           </div>
-          <span class="section-tag">Bővíthető kézikönyv</span>
+          <span class="section-tag" data-atlas-i18n="guide.libraryTag">Bővíthető kézikönyv</span>
         </div>
-        <p class="library-intro">
+        <p class="library-intro" data-atlas-i18n="guide.libraryIntro">
           A teljes Discord-útmutató kezdőknek fontos témái, rövid fejezetekben.
           Nyisd ki, ami éppen érdekel, vagy keress a lenti tudásbázisban.
         </p>
@@ -801,33 +815,36 @@
         >
           <div class="section-heading">
             <div>
-              <p class="eyebrow">JÓ, HA KÉZNÉL VAN</p>
-              <h2 id="knowledge-title">Kérdezz. Keress. Indulj tovább.</h2>
+              <p class="eyebrow" data-atlas-i18n="guide.searchEyebrow">JÓ, HA KÉZNÉL VAN</p>
+              <h2 id="knowledge-title" data-atlas-i18n="guide.searchTitle">Kérdezz. Keress. Indulj tovább.</h2>
             </div>
-            <span class="section-tag">Tudásbázis és GYIK</span>
+            <span class="section-tag" data-atlas-i18n="guide.searchTag">Tudásbázis és GYIK</span>
           </div>
           <form class="search-form" role="search" id="search-form">
-            <label for="knowledge-search" class="sr-only"
+            <label for="knowledge-search" class="sr-only" data-atlas-i18n="guide.searchLabel"
               >Keresés az útmutató tudásbázisában</label
             ><svg class="icon" aria-hidden="true"><use href="#search" /></svg
             ><input
               id="knowledge-search"
               type="search"
               placeholder="Miben segíthetünk? Például: kovácsolás, kaszt, napi rutin…"
+              data-atlas-i18n-placeholder="guide.searchPlaceholder"
               autocomplete="off"
               maxlength="150"
             /><kbd aria-hidden="true">/</kbd
-            ><button type="button" id="clear-search" hidden>Törlés</button>
+            ><button type="button" id="clear-search" data-atlas-i18n="guide.clear" hidden>Törlés</button>
           </form>
           <div
             class="search-filters"
             role="group"
             aria-label="Tudásbázis témaszűrő"
+            data-atlas-i18n-label="guide.filtersLabel"
           >
             <button
               class="filter active"
               type="button"
               data-filter="all"
+              data-atlas-i18n="guide.all"
               aria-pressed="true"
             >
               Minden téma</button
@@ -835,6 +852,7 @@
               class="filter"
               type="button"
               data-filter="character"
+              data-atlas-i18n="guide.character"
               aria-pressed="false"
             >
               Karakter</button
@@ -842,6 +860,7 @@
               class="filter"
               type="button"
               data-filter="start"
+              data-atlas-i18n="guide.start"
               aria-pressed="false"
             >
               Első lépések</button
@@ -849,6 +868,7 @@
               class="filter"
               type="button"
               data-filter="daily"
+              data-atlas-i18n="guide.daily"
               aria-pressed="false"
             >
               Napi rutin</button
@@ -856,6 +876,7 @@
               class="filter"
               type="button"
               data-filter="gear"
+              data-atlas-i18n="guide.gear"
               aria-pressed="false"
             >
               Felszerelés</button
@@ -863,6 +884,7 @@
               class="filter"
               type="button"
               data-filter="adventure"
+              data-atlas-i18n="guide.adventure"
               aria-pressed="false"
             >
               Kalandok</button
@@ -870,6 +892,7 @@
               class="filter"
               type="button"
               data-filter="community"
+              data-atlas-i18n="guide.community"
               aria-pressed="false"
             >
               Közösség</button
@@ -877,6 +900,7 @@
               class="filter"
               type="button"
               data-filter="shop"
+              data-atlas-i18n="guide.shop"
               aria-pressed="false"
             >
               Kódok és Shop
@@ -900,22 +924,23 @@
       >
         <svg class="icon" aria-hidden="true"><use href="#book" /></svg>
         <div>
-          <h2 id="sources-title">A kalauzról és a forrásokról</h2>
-          <p>Nem hivatalos, rajongók által készített magyar útmutató.</p>
+          <h2 id="sources-title" data-atlas-i18n="guide.static.sourcesTitle">A kalauzról és a forrásokról</h2>
+          <p data-atlas-i18n="guide.static.sourcesLead">Nem hivatalos, rajongók által készített magyar útmutató.</p>
           <p>
+            <span data-atlas-i18n="guide.static.sourcesFirst">
             Elsődleges forrás: a játék hivatalos Discord-szerverének
             útmutatóiból összeállított, a projekt gazdája által átadott teljes
-            TXT-dokumentum. Feldolgozva: 2026. október 31. Hivatalos weboldal:
+            TXT-dokumentum. Feldolgozva: 2026. október 31. Hivatalos weboldal:</span>
             <a
               href="https://stonestorm.gg"
               target="_blank"
               rel="noopener noreferrer"
               >stonestorm.gg ↗</a
-            >. A „Tipp” szövegek ajánlások; a játékbeli elnevezéseket angolul
+            ><span data-atlas-i18n="guide.static.sourcesFirstAfter">. A „Tipp” szövegek ajánlások; a játékbeli elnevezéseket angolul
             hagytuk. A játék gyakran változik, ezért eltérésnél a frissebb
-            hivatalos leírás és a játék felülete az irányadó.
+            hivatalos leírás és a játék felülete az irányadó.</span>
           </p>
-          <p>
+          <p data-atlas-i18n="guide.static.sourcesSecond">
             A dokumentum szerint az App Store, Google Play és Steam változatok
             fejlesztés alatt állnak; a Kingdom War és Banner League 2026.
             november 9-én indul. Az időszakos kódokat és ajánlatokat a forrás
@@ -924,8 +949,8 @@
             magyar kalauz önálló rajongói oldal.
           </p>
           <details>
-            <summary>Mit tárol ez az oldal?</summary>
-            <p>
+            <summary data-atlas-i18n="guide.static.privacyTitle">Mit tárol ez az oldal?</summary>
+            <p data-atlas-i18n="guide.static.privacyCopy">
               A napi lista dátumát és pipáit, a kiválasztott kasztokat, a
               témaszűrőt és a külön elmentett karakterbuildeket a böngésződ
               localStorage tárhelyén. Nincs analitika,
@@ -939,9 +964,10 @@
       </section>
       <noscript
         ><div class="container notice warning">
-          A fejezetek JavaScript nélkül is olvashatók. A kasztkártyákhoz, a
+          <span data-atlas-i18n="guide.static.noScript">A fejezetek JavaScript nélkül is olvashatók. A kasztkártyákhoz, a
           keresőhöz, a GYIK-hez és a napi lista mentéséhez engedélyezd a
           JavaScriptet.
+          </span>
         </div></noscript
       >
     </main>
@@ -956,20 +982,19 @@
             alt="Stonestorm"
             loading="lazy"
           />
-          <span class="brand-subtitle">MAGYAR KALAUZ</span></a
+          <span class="brand-subtitle" data-atlas-i18n="guide.static.brandSubtitle">MAGYAR KALAUZ</span></a
         >
-        <p>Kalandra fel. A saját tempódban.</p>
+        <p data-atlas-i18n="guide.static.footerTagline">Kalandra fel. A saját tempódban.</p>
         <a
           href="https://stonestorm.gg"
           target="_blank"
           rel="noopener noreferrer"
-          >Hivatalos Stonestorm <span aria-hidden="true">↗</span
-          ><span class="sr-only"> (új lapon)</span></a
+          ><span data-atlas-i18n="guide.static.officialLink">Hivatalos Stonestorm</span> <span aria-hidden="true">↗</span
+          ><span class="sr-only" data-atlas-i18n="header.newTab"> (új lapon)</span></a
         >
       </div>
       <div class="container footer-legal">
-        Nem hivatalos, rajongók által készített magyar útmutató. A Stonestorm
-        név a jogosultjához tartozik.
+        <span data-atlas-i18n="guide.static.footerLegal">Nem hivatalos, nem kereskedelmi rajongói útmutató. A játékanyagok eredeti forrása a StoneStorm; a Stonestorm név a jogosultjához tartozik.</span>
       </div>
     </footer>
     <dialog
@@ -980,8 +1005,8 @@
     >
       <div class="lightbox-toolbar">
         <div>
-          <p class="eyebrow">STONESTORM · KÉPNÉZŐ</p>
-          <h2 id="lightbox-title">Kép nagyítása</h2>
+          <p class="eyebrow" data-atlas-i18n="guide.static.lightboxEyebrow">STONESTORM · KÉPNÉZŐ</p>
+          <h2 id="lightbox-title" data-atlas-i18n="guide.static.lightboxTitle">Kép nagyítása</h2>
         </div>
         <button
           id="lightbox-close"
@@ -989,6 +1014,7 @@
           type="button"
           autofocus
           aria-label="Képnéző bezárása"
+          data-atlas-i18n-label="guide.static.closeLightboxLabel"
         >
           ×
         </button>
@@ -1003,12 +1029,12 @@
           class="lightbox-original"
           target="_blank"
           rel="noopener noreferrer"
-          >Teljes méret ↗<span class="sr-only"> (új lapon)</span></a
+          ><span data-atlas-i18n="guide.static.fullSize">Teljes méret</span> ↗<span class="sr-only" data-atlas-i18n="header.newTab"> (új lapon)</span></a
         >
-        <span>Bezárás: <kbd>Esc</kbd></span>
+        <span><span data-atlas-i18n="guide.static.closeHint">Bezárás:</span> <kbd>Esc</kbd></span>
       </div>
       <p id="lightbox-error" class="lightbox-error" role="status" hidden>
-        A kép nem tölthető be. Zárd be a képnézőt, majd próbáld újra.
+        <span data-atlas-i18n="guide.static.imageError">A kép nem tölthető be. Zárd be a képnézőt, majd próbáld újra.</span>
       </p>
     </dialog>
     <a
@@ -1016,33 +1042,34 @@
       id="back-top"
       href="#kezdolap"
       aria-label="Vissza a tetejére"
+      data-atlas-i18n-label="guide.static.backTop"
       hidden
       >↑</a
     >
-    <button id="stat-addon-toggle" class="stat-addon-toggle" type="button" aria-expanded="false" aria-controls="stat-addon-panel" hidden>⚔ Stat Addon – BÉTA <span class="stat-addon-new" aria-hidden="true" title="Frissített kísérő-tooltip és Atlas adatgyűjtés">FRISS</span><span id="stat-addon-indicator" class="stat-addon-indicator" hidden aria-hidden="true">🔔</span></button>
+    <button id="stat-addon-toggle" class="stat-addon-toggle" type="button" aria-expanded="false" aria-controls="stat-addon-panel" hidden><span data-atlas-i18n="addon.button">⚔ Stat Addon – BÉTA</span> <span class="stat-addon-new" aria-hidden="true" title="Frissített kísérő-tooltip és Atlas adatgyűjtés" data-atlas-i18n-title="addon.newTitle" data-atlas-i18n="addon.new">FRISS</span><span id="stat-addon-indicator" class="stat-addon-indicator" hidden aria-hidden="true">🔔</span></button>
     <section id="stat-addon-panel" class="stat-addon-panel" role="dialog" aria-modal="false" aria-labelledby="stat-addon-title" hidden>
-      <button id="stat-addon-close" class="stat-addon-close" type="button" aria-label="Addonpanel bezárása">×</button>
-      <p class="eyebrow">INGYENES CHROME-BŐVÍTMÉNY · PATRIK</p>
+      <button id="stat-addon-close" class="stat-addon-close" type="button" aria-label="Addonpanel bezárása" data-atlas-i18n-label="addon.close">×</button>
+      <p class="eyebrow" data-atlas-i18n="addon.eyebrow">INGYENES CHROME-BŐVÍTMÉNY · PATRIK</p>
       <h2 id="stat-addon-title">Stonestorm Stat Cap Overlay</h2>
       <span id="stat-addon-version"></span>
-      <p>A karakterstatisztikák, felszerelésbónuszok és statlimitek összehasonlítása közvetlenül a játék fölött.</p>
-      <p class="stat-addon-beta"><strong>BÉTA-állapot.</strong> Felismerési hibák és adateltérések előfordulhatnak.</p>
-      <p id="stat-addon-update" class="stat-addon-update" role="status" hidden>🔔 Új verzió elérhető!</p>
+      <p data-atlas-i18n="addon.intro">A karakterstatisztikák, felszerelésbónuszok és statlimitek összehasonlítása közvetlenül a játék fölött.</p>
+      <p class="stat-addon-beta" data-atlas-i18n="addon.beta">BÉTA-állapot. Felismerési hibák és adateltérések előfordulhatnak.</p>
+      <p id="stat-addon-update" class="stat-addon-update" role="status" data-atlas-i18n="addon.update" hidden>🔔 Új verzió elérhető!</p>
       <a id="stat-addon-download" class="stat-addon-download" href="downloads/stonestorm-statcap-overlay.zip" download>ZIP letöltése</a>
       <p id="stat-addon-size" class="stat-addon-size"></p>
-      <h3>Telepítés · asztali Chrome</h3>
-      <ol><li>Csomagold ki a ZIP-et egy állandó mappába.</li><li>Nyisd meg: <code>chrome://extensions</code>, és kapcsold be a <strong>Fejlesztői módot</strong>.</li><li><strong>Kicsomagolt bővítmény betöltése</strong>: válaszd a <code>manifest.json</code> fájlt közvetlenül tartalmazó mappát.</li><li>Frissítsd a Stonestorm játékoldalát.</li></ol>
-      <h3>Frissítés · kézzel</h3>
-      <p>Az új ZIP fájljaival cseréld le a korábbi fájlokat ugyanabban a mappában. A bővítmények oldalán kattints az <strong>Újratöltés</strong> ikonra, majd frissítsd a játékot is. A meglévő bővítményt ne távolítsd el a frissítéshez.</p>
-      <p class="stat-addon-note">A panel mobilon is elérhető; a telepítési lépések asztali Chrome-ra vonatkoznak. Nincs automatikus telepítés vagy Chrome Web Store-frissítés.</p>
-      <details><summary>Saját verzió és frissítési jelzés</summary>
-        <p class="stat-addon-note">Az Atlas nem tudja automatikusan kiolvasni a telepített verziót. Megadott verzió hiányában az előzőleg látott kiadáshoz hasonlít. A verzióadatot csak ebben a böngészőben tárolja.</p>
+      <h3 data-atlas-i18n="addon.install">Telepítés · asztali Chrome</h3>
+      <ol><li data-atlas-i18n="addon.step1">Csomagold ki a ZIP-et egy állandó mappába.</li><li><span data-atlas-i18n="addon.step2a">Nyisd meg:</span> <code>chrome://extensions</code>, <span data-atlas-i18n="addon.step2b">és kapcsold be a</span> <strong data-atlas-i18n="addon.developer">Fejlesztői módot</strong>.</li><li><strong data-atlas-i18n="addon.loadUnpacked">Kicsomagolt bővítmény betöltése</strong>: <span data-atlas-i18n="addon.step3">válaszd a manifest.json fájlt közvetlenül tartalmazó mappát.</span></li><li data-atlas-i18n="addon.step4">Frissítsd a Stonestorm játékoldalát.</li></ol>
+      <h3 data-atlas-i18n="addon.manualUpdate">Frissítés · kézzel</h3>
+      <p data-atlas-i18n="addon.updateCopy">Az új ZIP fájljaival cseréld le a korábbi fájlokat ugyanabban a mappában. A bővítmények oldalán kattints az Újratöltés ikonra, majd frissítsd a játékot is. A meglévő bővítményt ne távolítsd el a frissítéshez.</p>
+      <p class="stat-addon-note" data-atlas-i18n="addon.mobileNote">A panel mobilon is elérhető; a telepítési lépések asztali Chrome-ra vonatkoznak. Nincs automatikus telepítés vagy Chrome Web Store-frissítés.</p>
+      <details><summary data-atlas-i18n="addon.versionTitle">Saját verzió és frissítési jelzés</summary>
+        <p class="stat-addon-note" data-atlas-i18n="addon.versionCopy">Az Atlas nem tudja automatikusan kiolvasni a telepített verziót. Megadott verzió hiányában az előzőleg látott kiadáshoz hasonlít. A verzióadatot csak ebben a böngészőben tárolja.</p>
         <p id="stat-addon-baseline"></p>
-        <form id="stat-addon-version-form"><label for="stat-addon-installed-input">Telepített verzióm (opcionális)</label><input id="stat-addon-installed-input" type="text" inputmode="decimal" maxlength="23" aria-describedby="stat-addon-installed-error" /><div class="stat-addon-actions"><button type="submit">Verzió mentése</button><button id="stat-addon-installed" type="button">Ezt a verziót telepítettem</button></div><p id="stat-addon-installed-error" class="stat-addon-error" role="status"></p></form>
+        <form id="stat-addon-version-form"><label for="stat-addon-installed-input" data-atlas-i18n="addon.installedVersion">Telepített verzióm (opcionális)</label><input id="stat-addon-installed-input" type="text" inputmode="decimal" maxlength="23" aria-describedby="stat-addon-installed-error" /><div class="stat-addon-actions"><button type="submit" data-atlas-i18n="addon.save">Verzió mentése</button><button id="stat-addon-installed" type="button" data-atlas-i18n="addon.installed">Ezt a verziót telepítettem</button></div><p id="stat-addon-installed-error" class="stat-addon-error" role="status"></p></form>
       </details>
-      <div class="stat-addon-actions"><button id="stat-addon-check" type="button">Frissítés keresése</button><a href="https://github.com/Legivok2/stonestorm-atlas/tree/main/addons/stonestorm-statcap-overlay" target="_blank" rel="noopener noreferrer">Forrás és adatkezelés ↗</a></div>
+      <div class="stat-addon-actions"><button id="stat-addon-check" type="button" data-atlas-i18n="addon.check">Frissítés keresése</button><a href="https://github.com/Legivok2/stonestorm-atlas/tree/main/addons/stonestorm-statcap-overlay" target="_blank" rel="noopener noreferrer" data-atlas-i18n="addon.source">Forrás és adatkezelés ↗</a></div>
       <p id="stat-addon-check-status" class="stat-addon-status" aria-live="polite"></p>
-      <details class="stat-addon-integrity"><summary>ZIP ellenőrzőösszeg · SHA-256</summary><code id="stat-addon-sha"></code></details>
+      <details class="stat-addon-integrity"><summary data-atlas-i18n="addon.integrity">ZIP ellenőrzőösszeg · SHA-256</summary><code id="stat-addon-sha"></code></details>
     </section>
   </body>
 </html>

@@ -2,7 +2,7 @@
 
 ## A repository projektjei
 
-- **Stonestorm Atlas:** játékadatok, magyar wiki és információs felületek, a meglévő automatikus adatfrissítési rendszerrel.
+- **Stonestorm Atlas:** játékadatok, magyar és angol wiki és információs felületek, a meglévő automatikus adatfrissítési rendszerrel.
 - **Stonestorm Companion:** Chrome-bővítmény, aktuális verziója **0.14.0 BETA**. Statokat és limiteket, kísérőstatisztikákat, felszereléspreseteket, portyákat és kalkulátorokat kínál magyar és angol kezelőfelülettel. Az aktív funkciófejlesztés ennél a verziónál szünetel; hibajavítások és kompatibilitási frissítések továbbra is készülhetnek.
 - **Stonestorm Workspace:** különálló, Electron-alapú Windows-alkalmazás normál játék móddal, több eredeti játékpéldánnyal és négyes Tárnák munkaterülettel. A Workspace **fejlesztői előzetes**, nem végleges kiadás.
 
@@ -10,7 +10,7 @@ Kapcsolat és visszajelzés: **Discord: `pain6089`**
 
 ### English overview
 
-- **Stonestorm Atlas:** game data, wiki and reference interfaces, plus the existing automated data update system.
+- **Stonestorm Atlas:** game data, Hungarian and English wiki and reference interfaces, plus the existing automated data update system.
 - **Stonestorm Companion:** a Chrome extension, currently **0.14.0 BETA**, with stats and caps, companion statistics, equipment presets, raids, calculators, and Hungarian/English UI. Active feature development is paused at this version; maintenance fixes may still be released.
 - **Stonestorm Workspace:** a separate Electron-based Windows application with normal game mode, multiple original game instances, and a four-panel Mines workspace. It is a **development preview**, not a final release.
 
@@ -20,7 +20,7 @@ Contact and feedback: **Discord: `pain6089`**
 
 A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alkalmazásban. Vanilla JavaScript, helyi képek és adatcsomag; nincs játékfiókkapcsolat, kötelező csomagtelepítés vagy keretrendszer.
 
-> **Teljes Atlas-kiadás, 2026. november 7.:** a projektgazda kifejezetten kérte a teljes helyi változat publikálását, és feloldotta a korábbi engedélyellenőrzési feltételt. A GitHub Pages az eredeti `index.html`, CSS, JavaScript, játékadatok és képek alapján készül; nincs kalauzra egyszerűsített helyettesítő kiadás. A közzétételi utasítás az `.publication/permissions.json` fájlban szerepel, külön az igazolt licencektől.
+> **Teljes Atlas-kiadás:** a StoneStorm a játékassetek és játékadatok eredeti forrása. A projektgazda által idézett fejlesztői engedély a nem kereskedelmi Atlas/wikire, az előnézetekre és a nyilvános repositoryra vonatkozik; részletek: [közzétételi engedély](docs/DEPLOYMENT.md#fejlesztői-engedély).
 
 ## Megnyitás
 
@@ -29,6 +29,10 @@ A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alk
 GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stonestorm-atlas). A Pages-közzététel és a későbbi frissítés részletei: [DEPLOYMENT.md](docs/DEPLOYMENT.md). A teljes csomag `/stonestorm-atlas/` alkönyvtáras működése ellenőrizve. A `stage:github` az auditált teljes forrás- és képcsomagot választja ki.
 
 A teljes statikus kiadás: `npm run build:pages`, ellenőrzése: `npm run test:pages`. A workflow minden main-push után ezt telepíti. Hiányzó adat vagy közzétételi felhatalmazás esetén leáll, nem cseréli le az oldalt a korábbi kalauzkiadásra.
+
+**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a kezdőkalauzt (26 cikk és 10 GYIK-bejegyzés) és az Atlas jelenlegi fő funkcióit magyarul és angolul is elérhetővé teszi; a nyelv a böngészőben mentődik. Az igazolatlan angol játéknevek helyett az eredeti nevek, az ismeretlen külső forrású szabad szövegek pedig eredeti alakban maradnak. A felszerelésadatokban nincs ritkaságmező, ezért a meglévő tier látható.
+
+**Atlas HU/EN support:** the Magyar / English selector in the header makes the beginner guide (26 articles and 10 FAQ entries) and all current main Atlas features available in Hungarian and English; the preference is stored in the browser. Original game names are retained where English names are unverified, as is unknown free text from external sources. Equipment data has no rarity field, so the existing tier is shown instead.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 
@@ -73,6 +77,7 @@ Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `download
 - **Felszerelés-/kinézet-összehasonlító:** négy kaszt, férfi/női, két grafikai változat, két fegyver/páncél/teljes karakterkép összevetése: `#atlas/compare`.
 - **Character Planner:** validált nyolc felszerelési hely, +0–+9, valódi szettkapcsolatok, kísérő/hátas, teljes karakterelőnézet, A/B build, helyi mentés és megosztási link: `#atlas/planner`.
 - **📊 Stat limitek:** tizenhat statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, kritikus sebzésmodell, fegyverbónusz-táblázat és forrásos XP-/nyang-/zsákmánykalkulátor: `#atlas/stat-limits`.
+- A Character Planner, a felszerelés-összehasonlító, a Stat limitek és a Bónuszrendszer HU/EN felületet használ. A százalékos kalkulátorok tizedesvesszőt és tizedespontot is elfogadnak; az igazolatlan kritikus soft-cap mellett nem jelenítünk meg végső sebzésértéket.
 - **Bónuszrendszer:** egységes 20-as tárgybónusz-katalógus, külön fegyver-/páncél-/ékszerpoolok, tizenegy bónuszforrás dokumentációja, tárgyadatlap-kapcsolatok és a megosztott jutalomkalkulátor: `#atlas/bonuses`.
 
 A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására példa: `#atlas/equipment/item/w_warrior_0`. A modális adatlap Escape-pel és a bezárógombbal zárható.
@@ -162,6 +167,10 @@ npm install --prefix .integration/qa --no-save --package-lock=false jsdom@24.1.3
 npm run test:dom
 ```
 
+- `npm run test:atlas:calculators:i18n:browser`: a Pages build után a karaktertervező, statlimitek, kritikus és jutalomkalkulátor, valamint az összehasonlító HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
+- `npm run test:atlas:system:i18n:browser`: a Pages build után a Sync, Watcher, forrásjelzések és Atlas addonpanel HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
+- `npm run test:atlas:gallery:i18n:browser`: a Pages build után a Képtár generált címkéinek, keresésének és adatlapjainak HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
+
 A fenti automatikus ellenőrzések sikeresek. **Valódi böngészős/vizuális ellenőrzés az új verzión nem történt**, mert ebben a munkamenetben a böngésző- és natív vezérlés nem elérhető. A jsdom nem helyettesíti a tényleges mobilos tördelés és a natív dialógus ellenőrzését. Az eredeti README 2026. októberi böngészőeredményei a régi kalauzra vonatkoznak.
 
 ## Adatok és korlátok
@@ -174,9 +183,9 @@ A korábbi kalauz a napi lista helyi dátumát/pipáit, a két kasztot és téma
 
 Megmaradt a 12 eredeti Creator Kit-grafika 32 WebP-változata. Az Atlas további 20 eredeti nevű játékmentési grafikát használ. A ZIP-ben ténylegesen **48** WebP van (a kézikönyv 47-et ír); mindnek azonos párja van a meglévő mentésben, ezért nincs újabb futásidejű másolat.
 
-Az új katalógus **2103** helyi WebP-t tartalmaz (2077 különböző tartalom): 882 azonosított, 314 részben azonosított, 907 ismeretlen kapcsolatú kép. Az 1587 kis előnézet a listákhoz készült, az eredetik változatlanok. A katalógus- és játékmentési képek nyilvános újraközlési engedélye nincs igazolva; a korábbi Creator Kit-engedély nem terjed ki rájuk automatikusan.
+Az új katalógus **2103** helyi WebP-t tartalmaz (2077 különböző tartalom): 882 azonosított, 314 részben azonosított, 907 ismeretlen kapcsolatú kép. Az 1587 kis előnézet a listákhoz készült, az eredetik változatlanok. A korábbi Creator Kit-engedély nem terjedt ki automatikusan a katalógus- és játékmentési képekre.
 
-A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A további játékanyagok igazolt licencállapota nem változott; a teljes kiadás a projektgazda külön, 2026-11-07-i közzétételi utasítására készül. A licencállapot és a közzétételi felhatalmazás külön mezőben marad.
+A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A további játékanyagokra a projektgazda által idézett, kizárólag nem kereskedelmi wiki-engedély vonatkozik: [részletek](docs/DEPLOYMENT.md#fejlesztői-engedély). A képrekordok korábbi engedélyállapotai történeti jelölések.
 
 A Pages-artifact csak a szükséges futásidejű fájlokat tartalmazza: `index.html`, `css/`, `js/`, `assets/`, a használt régi WebP-k és a `stonestorm_image_tools/downloaded/` képei. **A mentett `Stonestorm.html`, játék-JS/CSS, letöltőscript, CSV, ZIP, `source-data/` és `.integration/` nem része a közzétett webhelynek.** A feldolgozott forrásadatok és saját buildeszközök a forrás-repositoryban szerepelnek. Az alkalmazáshivatkozások relatívak.
 

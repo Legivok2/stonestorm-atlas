@@ -1,0 +1,25 @@
+name: Validate Atlas pull request
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npm run build:addon
+      - run: npm run check
+      - run: npm test
+      - run: npm run test:sync:apply
+      - run: npm run audit:publish
+      - run: npm run build:pages
+      - run: npm run test:pages
