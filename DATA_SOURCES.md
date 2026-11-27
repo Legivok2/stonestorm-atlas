@@ -144,9 +144,9 @@ A felhasználó által kitöltött XP/energia sorok **saját mérések**, nem a 
 - Azonosított boss: `m4_boss.webp`, kizárólag a 4. pálya bossának adatlapján/kártyáján.
 - Erőforrás: `energy.webp`, `nyang_small.webp`, `coin_dragon.webp`, `luck_ore.webp`.
 
-Pontos útvonalak, SHA-256, ZIP-beli eredeti útvonal, felhasználási kör és engedélyállapot: `data/image-manifest.json`. Ezekhez `permission: unverified-public-reuse` tartozik. A korábbi Creator Kit-engedélyt nem terjesztettük ki automatikusan a játékmentési képekre.
+Pontos útvonalak, SHA-256, ZIP-beli eredeti útvonal, felhasználási kör és korábbi engedélyállapot: `data/image-manifest.json`. A `permission: unverified-public-reuse` történeti jelölés; a projektgazda később külön [fejlesztői wiki-engedélyt](docs/DEPLOYMENT.md#fejlesztői-engedély) idézett. A Creator Kit-engedélyt nem terjesztettük ki automatikusan a játékmentési képekre.
 
-A további, újonnan átadott katalógusból mind a 182 tárgyhoz, 22 kísérőhöz és 8 hátashoz elérhető kép. A kísérők fajkapcsolata részleges státuszú, a grafikai sorszám fejlődési jelentése nincs igazolva. Egy fájlnév nem hoz létre új tárgystatisztikát. A képkatalógus egészéhez `permission: unverified-public-reuse` tartozik, a korábbi Creator Kit-engedély erre sem terjed ki automatikusan.
+A további, újonnan átadott katalógusból mind a 182 tárgyhoz, 22 kísérőhöz és 8 hátashoz elérhető kép. A kísérők fajkapcsolata részleges státuszú, a grafikai sorszám fejlődési jelentése nincs igazolva. Egy fájlnév nem hoz létre új tárgystatisztikát. A képkatalógus `permission: unverified-public-reuse` mezője történeti; a későbbi wiki-engedély hatókörét a fenti hivatkozás rögzíti.
 
 ## Futásidejű kizárások
 

@@ -18,9 +18,11 @@ try{
     await page.goto(base+'#atlas/overview',{waitUntil:'networkidle'});
     assert.equal(await page.locator('html').getAttribute('lang'),'hu');
     assert.equal(await page.locator('.atlas-portal .eyebrow').textContent(),'A VIHAR VILÁGA · MAGYAR KÓDEX');
+    assert.match(await page.locator('.footer-legal').innerText(),/nem kereskedelmi.*eredeti forrása a StoneStorm/);
     await page.locator('#portal-query').fill('keresés');
     await page.locator('#atlas-language [data-atlas-language="en"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'),'en');
+    assert.match(await page.locator('.footer-legal').innerText(),/non-commercial.*StoneStorm is the original source/);
     assert.equal(await page.locator('#atlas-language [data-atlas-language="en"]').getAttribute('aria-pressed'),'true');
     assert.equal(await page.locator('#portal-query').inputValue(),'keresés');
     assert.equal(await page.locator('.atlas-portal .eyebrow').textContent(),'THE WORLD OF THE STORM · CODEX');

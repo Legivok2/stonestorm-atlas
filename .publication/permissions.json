@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-11-07",
+  "reviewedAt": "2026-11-27",
   "publicationAuthorization": {
     "status": "owner-requested-without-license-verification",
     "grantedAt": "2026-11-07",
@@ -15,19 +15,19 @@
       "basis": "A korábbi nyilvántartás a projektgazda nyilvános GitHub Pages-felhasználásra és optimalizálásra vonatkozó megerősítését rögzíti."
     },
     "game-art-catalog": {
-      "status": "pending",
-      "evidence": "",
-      "basis": "A felhasználó a hivatalos letölthetőséget megerősítette, de az újraközlésre és származtatott előnézetekre vonatkozó engedély vagy licenc nincs megadva."
+      "status": "confirmed",
+      "evidence": "docs/DEPLOYMENT.md#fejlesztői-engedély",
+      "basis": "A felhasználó által idézett fejlesztői engedély a nem kereskedelmi wikire, nyilvános repositoryra, forkokra és optimalizált előnézetekre vonatkozik; a forrást meg kell jelölni."
     },
     "saved-game-art": {
-      "status": "pending",
-      "evidence": "",
-      "basis": "A játékmentési WebP-k nyilvános terjesztési engedélye nincs igazolva."
+      "status": "confirmed",
+      "evidence": "docs/DEPLOYMENT.md#fejlesztői-engedély",
+      "basis": "A felhasználó által idézett fejlesztői engedély a játék grafikáira és ikonjaira terjed ki a nem kereskedelmi wikiben és nyilvános repositoryjában, forrásmegjelöléssel."
     },
     "game-data-and-localization": {
-      "status": "pending",
-      "evidence": "",
-      "basis": "A teljes mentett magyar lokalizáció és kliensből származó szövegek nyilvános forráscsomagban történő terjesztésének hatókörét is tisztázni kell."
+      "status": "confirmed",
+      "evidence": "docs/DEPLOYMENT.md#fejlesztői-engedély",
+      "basis": "A felhasználó által idézett fejlesztői engedély a játékadatokra és fordított leírásokra terjed ki a nem kereskedelmi wikiben és nyilvános repositoryjában, forrásmegjelöléssel."
     }
   }
 }

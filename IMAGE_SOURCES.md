@@ -2,11 +2,11 @@
 
 Creator Kit-nyilvántartás: **2026. október 31.** Atlas-integrációs kiegészítés: **2026. november 6.**
 
-Az alábbi eredeti engedély a korábbi `assets/images/` Creator Kit-képekre vonatkozik. Az új Atlas ezen felül **20** azonosított képet használ a `Stonestorm_files/` mappából, eredeti fájlnévvel. Ezek eredete, SHA-256 lenyomata és **nem igazolt nyilvános újraközlési engedélye** a `data/image-manifest.json` és a `DATA_SOURCES.md` fájlban szerepel. A korábbi engedélyt nem terjesztettük ki automatikusan az új képekre. A ZIP 48 WebP-je mind azonos a helyi mentés megfelelő képével; a kézikönyvben említett 47 darabos szám pontatlan. Az alábbi kihagyási leírás a korábbi, 2026. októberi verzió történeti állapota.
+Az alábbi eredeti engedély a korábbi `assets/images/` Creator Kit-képekre vonatkozik. A projektgazda által később idézett, a játék grafikáira és előnézeteire is kiterjedő nem kereskedelmi wiki-engedélyt a [közzétételi dokumentáció](docs/DEPLOYMENT.md#fejlesztői-engedély) rögzíti. Az Atlas ezen felül **20** azonosított képet használ a `Stonestorm_files/` mappából, eredeti fájlnévvel. Ezek eredete, SHA-256 lenyomata és történeti engedélyállapota a `data/image-manifest.json` és a `DATA_SOURCES.md` fájlban szerepel. A ZIP 48 WebP-je mind azonos a helyi mentés megfelelő képével; a kézikönyvben említett 47 darabos szám pontatlan. Az alábbi kihagyási leírás a korábbi, 2026. októberi verzió történeti állapota.
 
 ## Engedély és forrás
 
-A teljes katalógusintegráció után a Wiki a `stonestorm_image_tools/downloaded/` **2103** érvényes képét is kezeli (26 kategória, 2077 külön képtartalom). Új központi jegyzék: `data/image-catalog.json`; audit: `data/image-audit.json`; szabályok: `docs/IMAGE_INTEGRATION.md`. Mindegyik új rekordhoz `unverified-public-reuse` engedélyállapot tartozik. A 1587 kis előnézet származtatott optimalizálás, a fájlnév a forráshashből készül. Az eredeti fájlok nem változtak.
+A teljes katalógusintegráció után a Wiki a `stonestorm_image_tools/downloaded/` **2103** érvényes képét is kezeli (26 kategória, 2077 külön képtartalom). Új központi jegyzék: `data/image-catalog.json`; audit: `data/image-audit.json`; szabályok: `docs/IMAGE_INTEGRATION.md`. Az `unverified-public-reuse` rekordállapot a későbbi wiki-engedély előtti történeti jelölés. A 1587 kis előnézet származtatott optimalizálás, a fájlnév a forráshashből készül. Az eredeti fájlok nem változtak.
 
 A projekt gazdája az `SS` mappát adta át a weboldal képeinek forrásaként. Külön rákérdezésre megerősítette a képek nyilvános GitHub Pages rajongói oldalon történő használatához és méretoptimalizálásához szükséges engedély meglétét:
 

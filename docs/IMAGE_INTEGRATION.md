@@ -80,6 +80,6 @@ A teljes Character Planner részleteit a `docs/CHARACTER_PLANNER.md` írja le.
 
 ## Jogosultság és QA
 
-A 2103 katalóguskép nyilvános újraközlési engedélye **nem igazolt**, a rekordokban `unverified-public-reuse` szerepel. Ez független a korábbi Creator Kit engedélyétől. Most kizárólag helyi fejlesztés történt, nincs nyilvános publikálás.
+A rekordok `unverified-public-reuse` mezője az integráció idején rögzített történeti állapot. A projektgazda által később idézett, nem kereskedelmi wikire és nyilvános repositoryra vonatkozó fejlesztői engedélyt a [közzétételi dokumentáció](DEPLOYMENT.md#fejlesztői-engedély) tartalmazza; ez különbözik a korábbi Creator Kit-engedélytől.
 
 A fájlok Pillow-ellenőrzése, Node-adat-/számítási tesztek, jsdom-interakciós regresszió és HTTP-erőforráspróbák sikeresek. A munkamenetben a browser access host és a natív Computer Use kapcsolat nem elérhető: **valódi asztali/mobilos böngészős, vizuális és natív fókuszteszt még hátravan**. A reszponzív szabályokat megírtuk, de a jsdom nem végez tényleges tördelést vagy képernyőképes ellenőrzést.

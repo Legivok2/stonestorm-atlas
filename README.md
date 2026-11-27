@@ -20,7 +20,7 @@ Contact and feedback: **Discord: `pain6089`**
 
 A korábbi magyar kezdőkalauz és az új Codex-adatcsomag egyetlen statikus alkalmazásban. Vanilla JavaScript, helyi képek és adatcsomag; nincs játékfiókkapcsolat, kötelező csomagtelepítés vagy keretrendszer.
 
-> **Teljes Atlas-kiadás, 2026. november 7.:** a projektgazda kifejezetten kérte a teljes helyi változat publikálását, és feloldotta a korábbi engedélyellenőrzési feltételt. A GitHub Pages az eredeti `index.html`, CSS, JavaScript, játékadatok és képek alapján készül; nincs kalauzra egyszerűsített helyettesítő kiadás. A közzétételi utasítás az `.publication/permissions.json` fájlban szerepel, külön az igazolt licencektől.
+> **Teljes Atlas-kiadás:** a StoneStorm a játékassetek és játékadatok eredeti forrása. A projektgazda által idézett fejlesztői engedély a nem kereskedelmi Atlas/wikire, az előnézetekre és a nyilvános repositoryra vonatkozik; részletek: [közzétételi engedély](docs/DEPLOYMENT.md#fejlesztői-engedély).
 
 ## Megnyitás
 
@@ -183,9 +183,9 @@ A korábbi kalauz a napi lista helyi dátumát/pipáit, a két kasztot és téma
 
 Megmaradt a 12 eredeti Creator Kit-grafika 32 WebP-változata. Az Atlas további 20 eredeti nevű játékmentési grafikát használ. A ZIP-ben ténylegesen **48** WebP van (a kézikönyv 47-et ír); mindnek azonos párja van a meglévő mentésben, ezért nincs újabb futásidejű másolat.
 
-Az új katalógus **2103** helyi WebP-t tartalmaz (2077 különböző tartalom): 882 azonosított, 314 részben azonosított, 907 ismeretlen kapcsolatú kép. Az 1587 kis előnézet a listákhoz készült, az eredetik változatlanok. A katalógus- és játékmentési képek nyilvános újraközlési engedélye nincs igazolva; a korábbi Creator Kit-engedély nem terjed ki rájuk automatikusan.
+Az új katalógus **2103** helyi WebP-t tartalmaz (2077 különböző tartalom): 882 azonosított, 314 részben azonosított, 907 ismeretlen kapcsolatú kép. Az 1587 kis előnézet a listákhoz készült, az eredetik változatlanok. A korábbi Creator Kit-engedély nem terjedt ki automatikusan a katalógus- és játékmentési képekre.
 
-A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A további játékanyagok igazolt licencállapota nem változott; a teljes kiadás a projektgazda külön, 2026-11-07-i közzétételi utasítására készül. A licencállapot és a közzétételi felhatalmazás külön mezőben marad.
+A Creator Kit korábbi engedélye az `assets/images/sources.json` és `IMAGE_SOURCES.md` fájlban szerepel. A további játékanyagokra a projektgazda által idézett, kizárólag nem kereskedelmi wiki-engedély vonatkozik: [részletek](docs/DEPLOYMENT.md#fejlesztői-engedély). A képrekordok korábbi engedélyállapotai történeti jelölések.
 
 A Pages-artifact csak a szükséges futásidejű fájlokat tartalmazza: `index.html`, `css/`, `js/`, `assets/`, a használt régi WebP-k és a `stonestorm_image_tools/downloaded/` képei. **A mentett `Stonestorm.html`, játék-JS/CSS, letöltőscript, CSV, ZIP, `source-data/` és `.integration/` nem része a közzétett webhelynek.** A feldolgozott forrásadatok és saját buildeszközök a forrás-repositoryban szerepelnek. Az alkalmazáshivatkozások relatívak.
 
