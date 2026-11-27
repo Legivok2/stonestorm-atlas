@@ -18,9 +18,21 @@ try{
     let count=0;
     for(const d of api.dungeons){
       await page.evaluate(id=>location.hash='#atlas/world/dungeon/'+id,d.id);await page.locator('#atlas-detail[open]').waitFor();
-      const text=await page.locator('#atlas-detail-body').textContent();
-      for(const room of [...d.rooms,...d.heroic.rooms]){assert(text.includes(String(room.def)),d.id+' room '+room.room+' raw defence');count++;}
-      assert(text.includes(String(d.recommendedLevel)));
+      for(const [locale,formatLocale] of [['hu','hu-HU'],['en','en-US']]){
+        await page.locator(`#atlas-detail [data-atlas-language="${locale}"]`).click();
+        const format=value=>new Intl.NumberFormat(formatLocale,{useGrouping:false,maximumFractionDigits:20}).format(value);
+        const rows=page.locator('#folio-panel-overview .atlas-related tbody tr');
+        const expected=[...d.rooms,...d.heroic.rooms];
+        assert.equal(await rows.count(),expected.length,d.id+' room count');
+        for(const [index,room] of expected.entries()){
+          const display=await rows.nth(index).locator('td').nth(6).textContent();
+          assert.equal(display,format(room.def),`${d.id} ${locale} room ${room.room} raw defence`);
+          assert.equal(Number(display.replace(',','.')),room.def);
+        }
+      }
+      count+=d.rooms.length+d.heroic.rooms.length;
+      assert((await page.locator('#atlas-detail-body').textContent()).includes(String(d.recommendedLevel)));
+      await page.locator('#atlas-detail [data-atlas-language="hu"]').click();
     }
     assert.equal(count,80);await page.locator('#atlas-detail-close').click();
     await page.evaluate(()=>location.hash='#atlas/stat-limits');await page.locator('#critical-results').waitFor();assert.match(await page.locator('#critical-results').textContent(),/soft-cap/);assert.equal(await page.locator('[data-critical-result]').count(),0);

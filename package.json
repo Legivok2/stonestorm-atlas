@@ -21,6 +21,7 @@
     "test:atlas:guild-home:i18n:browser": "node tests/atlas-guild-home-i18n-browser.mjs",
     "test:atlas:progression:i18n:browser": "node tests/atlas-progression-i18n-browser.mjs",
     "test:atlas:calculators:i18n:browser": "node tests/calculators-i18n-browser.mjs",
+    "test:atlas:system:i18n:browser": "node tests/system-i18n-browser.mjs",
     "test:guide:i18n:browser": "node tests/guide-i18n-browser.mjs",
     "test:addon:browser": "node tests/addon-browser.mjs",
     "test:pets:browser": "node tests/pet-system-browser.mjs",

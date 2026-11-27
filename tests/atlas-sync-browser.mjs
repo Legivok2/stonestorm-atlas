@@ -51,7 +51,11 @@ try{
       await page.locator('#atlas-detail[open]').waitFor();
       const rows=page.locator('#atlas-detail-body .atlas-related').filter({hasText:'Hősi termek'}).first().locator('tbody tr');
       assert.equal(await rows.count(),10);
-      for(const [index,room] of dungeon.heroic.rooms.entries())assert.deepEqual((await rows.nth(index).locator('td').allTextContents()).map(s=>s.replace(/\s/g,'')),[room.room,room.level,num(room.maxHp),num(room.atkMin)+'–'+num(room.atkMax),String(room.def),num(room.harcero),num(room.xp),num(room.nyang)].map(x=>String(x).replace(/\s/g,'')));
+      const exact=v=>new Intl.NumberFormat('hu-HU',{useGrouping:false,maximumFractionDigits:20}).format(v);
+      for(const [index,room] of dungeon.heroic.rooms.entries()){
+        const cells=await rows.nth(index).locator('td').allTextContents();
+        assert.deepEqual([cells[0],...cells.slice(3)].map(s=>s.replace(/\s/g,'')),[room.room,room.level,num(room.maxHp),num(room.atkMin)+'–'+num(room.atkMax),exact(room.def),num(room.harcero),num(room.xp),num(room.nyang)].map(x=>String(x).replace(/\s/g,'')));
+      }
       await page.locator('#atlas-detail-close').click();
     }
     await page.evaluate(()=>location.hash='#atlas/updates');

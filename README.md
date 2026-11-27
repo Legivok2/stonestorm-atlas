@@ -168,6 +168,7 @@ npm run test:dom
 ```
 
 - `npm run test:atlas:calculators:i18n:browser`: a Pages build után a karaktertervező, statlimitek, kritikus és jutalomkalkulátor, valamint az összehasonlító HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
+- `npm run test:atlas:system:i18n:browser`: a Pages build után a Sync, Watcher, forrásjelzések és Atlas addonpanel HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
 
 A fenti automatikus ellenőrzések sikeresek. **Valódi böngészős/vizuális ellenőrzés az új verzión nem történt**, mert ebben a munkamenetben a böngésző- és natív vezérlés nem elérhető. A jsdom nem helyettesíti a tényleges mobilos tördelés és a natív dialógus ellenőrzését. Az eredeti README 2026. októberi böngészőeredményei a régi kalauzra vonatkoznak.
 

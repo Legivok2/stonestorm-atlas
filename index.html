@@ -195,7 +195,7 @@
             <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" data-atlas-i18n-label="workspace.openCategories" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span data-atlas-i18n="workspace.chapters">Fejezetek</span></button><div><p class="eyebrow" data-atlas-i18n="workspace.knowledge">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
             <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search" data-atlas-i18n="workspace.searchLabel">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" data-atlas-i18n-placeholder="workspace.searchPlaceholder" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" data-atlas-i18n-label="workspace.clearSearch" hidden>×</button><kbd>/</kbd></div></header>
             <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span data-atlas-i18n="workspace.independent">Független rajongói enciklopédia</span></div>
-            <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div>
+            <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p data-atlas-i18n="system.loading">Az Atlas betöltése…</p></div>
           </div>
         </div>
       </section>
@@ -1047,30 +1047,30 @@
       hidden
       >↑</a
     >
-    <button id="stat-addon-toggle" class="stat-addon-toggle" type="button" aria-expanded="false" aria-controls="stat-addon-panel" hidden>⚔ Stat Addon – BÉTA <span class="stat-addon-new" aria-hidden="true" title="Frissített kísérő-tooltip és Atlas adatgyűjtés">FRISS</span><span id="stat-addon-indicator" class="stat-addon-indicator" hidden aria-hidden="true">🔔</span></button>
+    <button id="stat-addon-toggle" class="stat-addon-toggle" type="button" aria-expanded="false" aria-controls="stat-addon-panel" hidden><span data-atlas-i18n="addon.button">⚔ Stat Addon – BÉTA</span> <span class="stat-addon-new" aria-hidden="true" title="Frissített kísérő-tooltip és Atlas adatgyűjtés" data-atlas-i18n-title="addon.newTitle" data-atlas-i18n="addon.new">FRISS</span><span id="stat-addon-indicator" class="stat-addon-indicator" hidden aria-hidden="true">🔔</span></button>
     <section id="stat-addon-panel" class="stat-addon-panel" role="dialog" aria-modal="false" aria-labelledby="stat-addon-title" hidden>
-      <button id="stat-addon-close" class="stat-addon-close" type="button" aria-label="Addonpanel bezárása">×</button>
-      <p class="eyebrow">INGYENES CHROME-BŐVÍTMÉNY · PATRIK</p>
+      <button id="stat-addon-close" class="stat-addon-close" type="button" aria-label="Addonpanel bezárása" data-atlas-i18n-label="addon.close">×</button>
+      <p class="eyebrow" data-atlas-i18n="addon.eyebrow">INGYENES CHROME-BŐVÍTMÉNY · PATRIK</p>
       <h2 id="stat-addon-title">Stonestorm Stat Cap Overlay</h2>
       <span id="stat-addon-version"></span>
-      <p>A karakterstatisztikák, felszerelésbónuszok és statlimitek összehasonlítása közvetlenül a játék fölött.</p>
-      <p class="stat-addon-beta"><strong>BÉTA-állapot.</strong> Felismerési hibák és adateltérések előfordulhatnak.</p>
-      <p id="stat-addon-update" class="stat-addon-update" role="status" hidden>🔔 Új verzió elérhető!</p>
+      <p data-atlas-i18n="addon.intro">A karakterstatisztikák, felszerelésbónuszok és statlimitek összehasonlítása közvetlenül a játék fölött.</p>
+      <p class="stat-addon-beta" data-atlas-i18n="addon.beta">BÉTA-állapot. Felismerési hibák és adateltérések előfordulhatnak.</p>
+      <p id="stat-addon-update" class="stat-addon-update" role="status" data-atlas-i18n="addon.update" hidden>🔔 Új verzió elérhető!</p>
       <a id="stat-addon-download" class="stat-addon-download" href="downloads/stonestorm-statcap-overlay.zip" download>ZIP letöltése</a>
       <p id="stat-addon-size" class="stat-addon-size"></p>
-      <h3>Telepítés · asztali Chrome</h3>
-      <ol><li>Csomagold ki a ZIP-et egy állandó mappába.</li><li>Nyisd meg: <code>chrome://extensions</code>, és kapcsold be a <strong>Fejlesztői módot</strong>.</li><li><strong>Kicsomagolt bővítmény betöltése</strong>: válaszd a <code>manifest.json</code> fájlt közvetlenül tartalmazó mappát.</li><li>Frissítsd a Stonestorm játékoldalát.</li></ol>
-      <h3>Frissítés · kézzel</h3>
-      <p>Az új ZIP fájljaival cseréld le a korábbi fájlokat ugyanabban a mappában. A bővítmények oldalán kattints az <strong>Újratöltés</strong> ikonra, majd frissítsd a játékot is. A meglévő bővítményt ne távolítsd el a frissítéshez.</p>
-      <p class="stat-addon-note">A panel mobilon is elérhető; a telepítési lépések asztali Chrome-ra vonatkoznak. Nincs automatikus telepítés vagy Chrome Web Store-frissítés.</p>
-      <details><summary>Saját verzió és frissítési jelzés</summary>
-        <p class="stat-addon-note">Az Atlas nem tudja automatikusan kiolvasni a telepített verziót. Megadott verzió hiányában az előzőleg látott kiadáshoz hasonlít. A verzióadatot csak ebben a böngészőben tárolja.</p>
+      <h3 data-atlas-i18n="addon.install">Telepítés · asztali Chrome</h3>
+      <ol><li data-atlas-i18n="addon.step1">Csomagold ki a ZIP-et egy állandó mappába.</li><li><span data-atlas-i18n="addon.step2a">Nyisd meg:</span> <code>chrome://extensions</code>, <span data-atlas-i18n="addon.step2b">és kapcsold be a</span> <strong data-atlas-i18n="addon.developer">Fejlesztői módot</strong>.</li><li><strong data-atlas-i18n="addon.loadUnpacked">Kicsomagolt bővítmény betöltése</strong>: <span data-atlas-i18n="addon.step3">válaszd a manifest.json fájlt közvetlenül tartalmazó mappát.</span></li><li data-atlas-i18n="addon.step4">Frissítsd a Stonestorm játékoldalát.</li></ol>
+      <h3 data-atlas-i18n="addon.manualUpdate">Frissítés · kézzel</h3>
+      <p data-atlas-i18n="addon.updateCopy">Az új ZIP fájljaival cseréld le a korábbi fájlokat ugyanabban a mappában. A bővítmények oldalán kattints az Újratöltés ikonra, majd frissítsd a játékot is. A meglévő bővítményt ne távolítsd el a frissítéshez.</p>
+      <p class="stat-addon-note" data-atlas-i18n="addon.mobileNote">A panel mobilon is elérhető; a telepítési lépések asztali Chrome-ra vonatkoznak. Nincs automatikus telepítés vagy Chrome Web Store-frissítés.</p>
+      <details><summary data-atlas-i18n="addon.versionTitle">Saját verzió és frissítési jelzés</summary>
+        <p class="stat-addon-note" data-atlas-i18n="addon.versionCopy">Az Atlas nem tudja automatikusan kiolvasni a telepített verziót. Megadott verzió hiányában az előzőleg látott kiadáshoz hasonlít. A verzióadatot csak ebben a böngészőben tárolja.</p>
         <p id="stat-addon-baseline"></p>
-        <form id="stat-addon-version-form"><label for="stat-addon-installed-input">Telepített verzióm (opcionális)</label><input id="stat-addon-installed-input" type="text" inputmode="decimal" maxlength="23" aria-describedby="stat-addon-installed-error" /><div class="stat-addon-actions"><button type="submit">Verzió mentése</button><button id="stat-addon-installed" type="button">Ezt a verziót telepítettem</button></div><p id="stat-addon-installed-error" class="stat-addon-error" role="status"></p></form>
+        <form id="stat-addon-version-form"><label for="stat-addon-installed-input" data-atlas-i18n="addon.installedVersion">Telepített verzióm (opcionális)</label><input id="stat-addon-installed-input" type="text" inputmode="decimal" maxlength="23" aria-describedby="stat-addon-installed-error" /><div class="stat-addon-actions"><button type="submit" data-atlas-i18n="addon.save">Verzió mentése</button><button id="stat-addon-installed" type="button" data-atlas-i18n="addon.installed">Ezt a verziót telepítettem</button></div><p id="stat-addon-installed-error" class="stat-addon-error" role="status"></p></form>
       </details>
-      <div class="stat-addon-actions"><button id="stat-addon-check" type="button">Frissítés keresése</button><a href="https://github.com/Legivok2/stonestorm-atlas/tree/main/addons/stonestorm-statcap-overlay" target="_blank" rel="noopener noreferrer">Forrás és adatkezelés ↗</a></div>
+      <div class="stat-addon-actions"><button id="stat-addon-check" type="button" data-atlas-i18n="addon.check">Frissítés keresése</button><a href="https://github.com/Legivok2/stonestorm-atlas/tree/main/addons/stonestorm-statcap-overlay" target="_blank" rel="noopener noreferrer" data-atlas-i18n="addon.source">Forrás és adatkezelés ↗</a></div>
       <p id="stat-addon-check-status" class="stat-addon-status" aria-live="polite"></p>
-      <details class="stat-addon-integrity"><summary>ZIP ellenőrzőösszeg · SHA-256</summary><code id="stat-addon-sha"></code></details>
+      <details class="stat-addon-integrity"><summary data-atlas-i18n="addon.integrity">ZIP ellenőrzőösszeg · SHA-256</summary><code id="stat-addon-sha"></code></details>
     </section>
   </body>
 </html>

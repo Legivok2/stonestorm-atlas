@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const i18n=globalThis.AtlasI18n;
-  const selector='[data-atlas-i18n],[data-atlas-i18n-placeholder],[data-atlas-i18n-label],[data-atlas-i18n-content],[data-atlas-i18n-alt]';
+  const selector='[data-atlas-i18n],[data-atlas-i18n-placeholder],[data-atlas-i18n-label],[data-atlas-i18n-content],[data-atlas-i18n-alt],[data-atlas-i18n-title]';
   function applyElement(element){
     const params={...element.dataset};
     const text=element.dataset.atlasI18n;
@@ -9,7 +9,7 @@
       const value=i18n.t(text,params);
       if(element.textContent!==value)element.textContent=value;
     }
-    for(const [data,attribute] of [['atlasI18nPlaceholder','placeholder'],['atlasI18nLabel','aria-label'],['atlasI18nContent','content'],['atlasI18nAlt','alt']]){
+    for(const [data,attribute] of [['atlasI18nPlaceholder','placeholder'],['atlasI18nLabel','aria-label'],['atlasI18nContent','content'],['atlasI18nAlt','alt'],['atlasI18nTitle','title']]){
       const key=element.dataset[data];
       if(key){
         const value=i18n.t(key,params);

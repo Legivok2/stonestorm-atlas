@@ -46,6 +46,19 @@ test('calculator source labels and explanations match the current bonus data',as
   assert.equal(i18n.dictionaries.hu['limits.source.reward'],reward.source);
 });
 
+test('bundled Sync and Watcher evidence descriptions have English translations',()=>{
+  const {i18n}=load('en'),{hu,en}=i18n.dictionaries;
+  const sync=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/sync-status.json'),'utf8'));
+  const watcher=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/future-content.json'),'utf8'));
+  const has=(prefix,text)=>Object.keys(hu).some(key=>key.startsWith(prefix)&&hu[key]===text&&en[key]);
+  for(const [id,name] of Object.entries(watcher.categoryNames))assert.equal(hu['future.category.'+id],name,id);
+  for(const row of watcher.observations.filter(item=>!item.legacy))assert(has('future.reason.',row.statusReason),row.statusReason);
+  for(const group of ['currentGroups','processedGroups','resolvedGroups','manualGroups','historicalGroups','groups'].flatMap(key=>sync[key]??[])){
+    assert(has('sync.text.',group.name),group.name);
+    for(const item of group.topics.flatMap(topic=>topic.paths))assert(has('sync.reason.',item.reason),item.reason);
+  }
+});
+
 test('language changes are saved, notified and restored without touching other preferences',()=>{
   const {i18n,values}=load();
   values.set('build','saved build');

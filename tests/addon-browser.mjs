@@ -43,12 +43,13 @@ try{
   const context=await browser.newContext(),page=await context.newPage();let remote=release,fail=false;
   await page.route('**/downloads/stat-addon.json?*',route=>fail?route.abort():route.fulfill({json:remote}));
   await page.goto(base,{waitUntil:'networkidle'});await page.locator('#stat-addon-toggle').click();
-  remote={...release,version:'0.13.1'};await page.locator('#stat-addon-check').click();await page.locator('#stat-addon-check').waitFor({state:'visible'});
-  await page.waitForFunction(()=>document.getElementById('stat-addon-version').textContent==='v0.13.1');assert(await page.locator('#stat-addon-update').isVisible());
+  const parts=release.version.split('.').map(Number),newVersion=[parts[0],parts[1],parts[2]+1].join('.');
+  remote={...release,version:newVersion};await page.locator('#stat-addon-check').click();await page.locator('#stat-addon-check').waitFor({state:'visible'});
+  await page.waitForFunction(version=>document.getElementById('stat-addon-version').textContent==='v'+version,newVersion);assert(await page.locator('#stat-addon-update').isVisible());
   remote={...release,zip:'https://example.com/wrong.zip'};await page.locator('#stat-addon-check').click();await page.waitForFunction(()=>document.getElementById('stat-addon-check-status').textContent.includes('nem sikerült'));
-  assert.match(await page.locator('#stat-addon-download').getAttribute('href'),/stonestorm-statcap-overlay\.zip/);assert.equal(await page.locator('#stat-addon-version').textContent(),'v0.13.1');
+  assert.match(await page.locator('#stat-addon-download').getAttribute('href'),/stonestorm-statcap-overlay\.zip/);assert.equal(await page.locator('#stat-addon-version').textContent(),'v'+newVersion);
   fail=true;await page.locator('#stat-addon-check').click();await page.waitForFunction(()=>!document.getElementById('stat-addon-check').disabled);assert(await page.locator('#stat-addon-download').isVisible());await context.close();
   const blocked=await browser.newContext();await blocked.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw Error('Storage blocked');}}));
   const fallback=await blocked.newPage();await fallback.goto(base,{waitUntil:'networkidle'});await fallback.locator('#stat-addon-toggle').click();assert(await fallback.locator('#stat-addon-download').isVisible());await blocked.close();
-  console.log('Új kiadás (0.13.1), hibás kiadási adat, hálózati hiba és tiltott helyi tárolás: rendben.');
+  console.log('Új kiadás, hibás kiadási adat, hálózati hiba és tiltott helyi tárolás: rendben.');
 }finally{await browser.close();if(server)await new Promise(resolve=>server.close(resolve));}

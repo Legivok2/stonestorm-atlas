@@ -5,7 +5,7 @@
   const media=globalThis.AtlasImages;
   let extension={};
   const $=s=>document.querySelector(s);
-  if(!db||!math){$('#atlas-screen').textContent='Az Atlas adatai nem töltődtek be. Ellenőrizd a js/atlas-data.js fájlt.';return;}
+  if(!db||!math){const showError=()=>{$('#atlas-screen').textContent=globalThis.AtlasI18n.t('system.loadError');};showError();globalThis.AtlasI18n.onChange(showError);return;}
   const i18n=globalThis.AtlasI18n;
   const t=(key,params)=>i18n.t(key,params);
   $('#atlas-data-version').dataset.atlasI18n='workspace.dataVersion';
@@ -247,11 +247,12 @@
     $('#atlas-xp-output').innerHTML=out.length?table([t('mechanics.trip'),t('mechanics.xpEnergy'),t('mechanics.xpHour'),t('mechanics.runs'),t('mechanics.totalXp'),t('mechanics.totalTime')],out):'<p>'+esc(t('mechanics.invalid'))+'</p>';
   }
   function sources(){
-    return petUI.engineOverview()+heading('A kódex mögött: visszakövethető források','A támogatott adatok elsődleges forrása a verziózott nyilvános konfiguráció. A történeti csomag megmarad, az Auto-Sync tesztelt importként vezeti át a friss adatokat; az oldal nem kapcsolódik játékosfiókhoz.')+`<p><a class="atlas-inline-link" href="#atlas/updates">Atlas frissítések és ellenőrzési állapot →</a></p><div class="atlas-source-legend">${chip('Ellenőrzött adat · mentett forrás','verified')}${chip('Részben ellenőrzött / megfigyelt','unknown')}${chip('Képletből számolt','verified')}${chip('Ismeretlen adat','unknown')}</div><h4 class="atlas-subheading">Eltérések és tisztázatlan adatok</h4>${db.conflicts.map(c=>`<article class="atlas-conflict"><h4>${esc(c.title)}</h4><p>${esc(c.description)}</p><small>${c.sources.map(esc).join(' · ')}</small></article>`).join('')}
-      <h4 class="atlas-subheading">Adatlefedettség és ismert hiányok</h4>${table(['Adatkör','Állapot'],[['Céhes nyang- és alapanyagköltségek','Nem ismert; a next mezők null értékűek voltak.'],['Képkatalógus',num(media?.catalog.stats.available)+' helyi kép; 110 logikai forma–képkulcs kapcsolat ismert; a jelenlegi kísérőfájlokhoz szükséges petArt jegyzék hiányzik.'],['Angol játéknevek','Nem áll rendelkezésre angol lokalizáció; nem fordítjuk vissza találgatva.'],['Tárgy → szett tagság','48 tárgynál igazolt family mező. Azonos szint vagy képfájlnév önmagában nem bizonyít tagságot.'],['Ház és bútorok','Bútorgrafikák már vannak; költség és XP-bónusz továbbra sem ismert.'],['Végső karakterstatisztika','A fejlesztett felszereléskomponensek kiszámíthatók; a teljes szerveroldali harci képlet nem igazolt.'],['Események és élő játékszabályok','Csak a dátumozott helyi források állnak rendelkezésre.']])}
-      <h4 class="atlas-subheading">A beépített 14 forrásfájl</h4>${table(['Fájl','Állapot'],db.sources.map(x=>[esc(x.file),'Helyi pillanatkép · SHA-256 nyilvántartva']))}
-      <h4 class="atlas-subheading">A teljes képkatalógus</h4>${rows([['Katalógusbejegyzések',num(media.catalog.stats.manifestEntries)],['Érvényes helyi képek',num(media.catalog.stats.available)],['Azonosított',num(media.catalog.stats.identified)],['Részben azonosított',num(media.catalog.stats.partial)],['Ismeretlen',num(media.catalog.stats.unknown)]])}${notice('Források: stonestorm_image_tools/manifest.json és results.csv. A képpárosításokat a forrás art, family, portrait, portraitTier és azonosítómezői, illetve a mentett kliens képkiválasztási szabályai támasztják alá. A Ro/cT választó a formák logikai kulcsát igazolja. A tényleges fájlt a karakterválasz petArt jegyzéke választja ki; enélkül a történeti helyi kísérőképek részben azonosítottak. A bútorokhoz nincs igazolt bónuszadat.')}
-      <div class="atlas-conflict"><h4>Képek eredete és engedélyei</h4><p>A korábbi Creator Kit 12 eredeti grafikája (32 WebP-változat) megmaradt. A projekt korábbi nyilvántartása ezekhez felhasználási engedélyt rögzít. Az Atlas további ${db.images.length} eredeti nevű játékmentési grafikára hivatkozik; ezek nyilvános újraközlési engedélye nincs igazolva.</p><p>A ZIP-ben a kézikönyvben írt 47 helyett ténylegesen 48 WebP-kép található; mind azonos a meglévő mentési képekkel. Nem készítettünk újabb futásidejű másolatot. A képek pontos útvonala és hash-e a data/image-manifest.json jegyzékben szerepel.</p></div>`;
+    const conflictText=(c,field)=>{const key='sources.conflict.'+c.id+'.'+(field==='title'?'title':'copy');return i18n.dictionaries.hu[key]===c[field]?t(key):c[field];};
+    return petUI.engineOverview()+heading(t('sources.title'),t('sources.copy'))+`<p><a class="atlas-inline-link" href="#atlas/updates">${t('sources.updates')}</a></p><div class="atlas-source-legend">${chip(t('sources.verified'),'verified')}${chip(t('sources.observed'),'unknown')}${chip(t('sources.derived'),'verified')}${chip(t('sources.unknown'),'unknown')}</div><h4 class="atlas-subheading">${t('sources.conflicts')}</h4>${db.conflicts.map(c=>`<article class="atlas-conflict"><h4>${esc(conflictText(c,'title'))}</h4><p>${esc(conflictText(c,'description'))}</p><small>${c.sources.map(esc).join(' · ')}</small></article>`).join('')}
+      <h4 class="atlas-subheading">${t('sources.coverage')}</h4>${table([t('sources.domain'),t('sources.status')],[[t('sources.guild'),t('sources.guildCopy')],[t('sources.images'),t('sources.imagesCopy',{count:num(media?.catalog.stats.available)})],[t('sources.englishNames'),t('sources.englishNamesCopy')],[t('sources.setMembership'),t('sources.setMembershipCopy')],[t('sources.home'),t('sources.homeCopy')],[t('sources.finalStats'),t('sources.finalStatsCopy')],[t('sources.events'),t('sources.eventsCopy')]])}
+      <h4 class="atlas-subheading">${t('sources.files')}</h4>${table([t('sources.file'),t('sources.status')],db.sources.map(x=>[esc(x.file),t('sources.snapshot')]))}
+      <h4 class="atlas-subheading">${t('sources.catalog')}</h4>${rows([[t('sources.catalogEntries'),num(media.catalog.stats.manifestEntries)],[t('sources.localImages'),num(media.catalog.stats.available)],[t('sources.identified'),num(media.catalog.stats.identified)],[t('sources.partial'),num(media.catalog.stats.partial)],[t('sources.unidentified'),num(media.catalog.stats.unknown)]])}${notice(t('sources.imageEvidence'))}
+      <div class="atlas-conflict"><h4>${t('sources.permissions')}</h4><p>${esc(t('sources.permissionsCopy',{count:num(db.images.length)}))}</p><p>${t('sources.zip')}</p></div>`;
   }
   function render(){
     const headingKey=state.query?'workspace.searchResults':'navigation.'+state.page;
@@ -346,7 +347,7 @@
     render();
     if(parts[2]&&parts[3]){
       const body=detail(parts[2],parts[3]);
-      if(!body){$('#atlas-detail-body').innerHTML='<h2 id="atlas-detail-title">Nem található adatlap</h2><p>Ez az azonosító nem szerepel a mentett adatcsomagban.</p>';}
+      if(!body){$('#atlas-detail-body').innerHTML=`<h2 id="atlas-detail-title">${esc(t('system.detailMissing'))}</h2><p>${esc(t('system.detailMissingCopy'))}</p>`;}
       else $('#atlas-detail-body').innerHTML=body;
       if(!dialog.open){lastOpener=document.activeElement;dialog.showModal();document.body.classList.add('atlas-dialog-open');}
       dialog.scrollTop=0;$('#atlas-detail-close').focus({preventScroll:true});
@@ -369,7 +370,7 @@
     try{parts=hashPath.split('/').map(decodeURIComponent);}catch{return;}
     if(parts[0]!=='atlas'||!parts[2]||!parts[3])return;
     const body=detail(parts[2],parts[3]);
-    if(!body)return;
+    if(!body){$('#atlas-detail-body').innerHTML=`<h2 id="atlas-detail-title">${esc(t('system.detailMissing'))}</h2><p>${esc(t('system.detailMissingCopy'))}</p>`;return;}
     $('#atlas-detail-body').innerHTML=body;
     [...dialog.querySelectorAll('input,select,textarea')].forEach((control,index)=>{
       const saved=formState[index];
@@ -404,7 +405,7 @@
   extension=globalThis.AtlasExtensions?.init({db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render,petUI})??{};
   i18n.onChange(()=>{
     const portalQuery=$('#portal-query')?.value;
-    const preserveTools=['planner','stat-limits','bonuses'].includes(state.page)&&!state.query;
+    const preserveTools=['planner','stat-limits','bonuses','updates','upcoming','sources','arena'].includes(state.page)&&!state.query;
     const openDetails=preserveTools?[...document.querySelectorAll('#atlas-screen details')].map(element=>element.open):[];
     const skillInput=preserveTools&&document.activeElement?.matches('[data-planner-pet-skill-search]')?{slot:document.activeElement.dataset.plannerPetSkillSearch,value:document.activeElement.value}:null;
     render();
