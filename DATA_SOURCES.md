@@ -4,6 +4,10 @@ Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott f�
 
 ## Forrásjegyzék
 
+### Energia, kasztok és anyagok: HU/EN megjelenítés
+
+A négy kaszt neve és leírása, a képességek és utak nevei, a királyságok jelmondatai, valamint a párosítható anyag- és tárgynevek és típusszövegek a `snapshots/manifest.json` mentett magyar és angol kliensfordításából származnak. A neveket meglévő magyar név esetén csak pontos egyezéskor használjuk; név nélküli anyagoknál a mentett kliens azonosítójához rendelt névpár jelenik meg, ahol rendelkezésre áll. Egyébként az azonosító marad. Az XP / energia összehasonlító kizárólag a felhasználó méréseivel és a változatlan képlettel számol; az energiafeltöltés eltérő forrásértékei továbbra sem általános élő árak.
+
 ### Céhek, otthon és kutatások: HU/EN megjelenítés
 
 A céhes épületek és mind a 14 kutatás neve, valamint a kutatások leírása a `snapshots/manifest.json` fájlban rögzített hivatalos magyar és angol lokalizáció egyező név- és szövegpárjaiból származik; eltérő friss adatnál az eredeti név és leírás marad. A céhes épületek hatásösszefoglalói az Atlas szerkesztői szövegei. Az Otthon felületén a forrásban párosítható kliensszövegek hivatalosak; a házfokok és bútorok angol nevei szerkesztői fordítások, nem igazolt játékbeli angol nevek. A megfigyelt árak és feltételek továbbra is egyedi adatmintaként jelennek meg, a hiányzó értékeket nem tekintjük nullának.

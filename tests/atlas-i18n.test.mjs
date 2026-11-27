@@ -114,6 +114,38 @@ test('guild and research names and research descriptions match captured client t
   }
 });
 
+test('class, kingdom and material translations match captured client locales',()=>{
+  const {i18n}=load('en');
+  const db=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/atlas.json'),'utf8'));
+  const manifest=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../snapshots/manifest.json'),'utf8'));
+  const resources=Object.values(manifest.resources);
+  const get=(locale,key)=>resources.find(resource=>resource.language===locale&&resource.localeEntries?.[key])?.localeEntries[key];
+  for(const record of db.classes){
+    const key=i18n.gameNameKey('class',record);
+    assert.equal(i18n.dictionaries.hu[key],get('hu','/classes/'+record.id+'/name'));
+    assert.equal(i18n.dictionaries.en[key],get('en','/classes/'+record.id+'/name'));
+    for(const locale of ['hu','en'])assert.equal(i18n.dictionaries[locale]['classes.description.'+record.id],get(locale,'/classes/'+record.id+'/desc'));
+    for(const locale of ['hu','en']){
+      assert.equal(i18n.dictionaries[locale]['classes.skillName.'+record.skill.id],get(locale,'/skills/'+record.skill.id));
+      for(const path of record.availablePaths)assert.equal(i18n.dictionaries[locale]['classes.pathName.'+path.id],get(locale,'/paths/'+path.id+'/name'));
+    }
+    assert.equal(i18n.gameNameKey('class',{...record,name:'Changed name'}),null);
+  }
+  for(const id of db.kingdoms)for(const locale of ['hu','en'])assert.equal(i18n.dictionaries[locale]['classes.kingdomMotto.'+id],get(locale,'/kingdoms/'+id+'/motto'));
+  for(const [id,kind] of Object.entries(db.economy.stackKindNames))for(const field of ['name','hint'])for(const locale of ['hu','en']){
+    assert.equal(i18n.dictionaries[locale]['materials.kind.'+id+'.'+field],get(locale,'/stackKinds/'+id+'/'+field));
+    if(locale==='hu')assert.equal(kind[field],get(locale,'/stackKinds/'+id+'/'+field));
+  }
+  for(const record of db.economy.stackables){
+    const path='/stackables/'+record.id,hu=get('hu',path),en=get('en',path),key=i18n.gameNameKey('material',record);
+    if(hu&&en&&(record.name==null||hu===record.name)){
+      assert.equal(i18n.dictionaries.hu[key],hu);
+      assert.equal(i18n.dictionaries.en[key],en);
+      assert.equal(i18n.gameNameKey('material',{...record,name:'Changed name'}),null);
+    }else assert.equal(key,null,record.id);
+  }
+});
+
 test('numbers and dates follow the selected language',()=>{
   const {i18n}=load();
   assert.equal(i18n.formatNumber(12345.5),'12 345,5');

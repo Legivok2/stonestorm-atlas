@@ -63,8 +63,8 @@ try{
     await page.locator('#atlas-detail-title').getByText('Village Outskirts').waitFor();
     assert.match(await page.locator('#atlas-detail').innerText(),/Wild Dogs \(m1_dogs\)/);
     await page.locator('#atlas-detail a[href="#atlas/materials/material/mat_m1_dogs"]').click();
-    await page.locator('#atlas-detail-title').getByText('Kutyafog').waitFor();
-    assert.equal(await page.locator('#atlas-detail-title').textContent(),'Kutyafog');
+    await page.locator('#atlas-detail-title').getByText('Dog Fang').waitFor();
+    assert.equal(await page.locator('#atlas-detail-title').textContent(),'Dog Fang');
     await page.goto(base+'#atlas/world/dungeon/wild',{waitUntil:'networkidle'});
     assert.equal(await page.locator('#atlas-detail-title').textContent(),'Wildwood Den');
     assert.match(await page.locator('#folio-panel-overview').innerText(),/Normal rooms/);
