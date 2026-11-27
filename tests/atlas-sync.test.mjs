@@ -6,12 +6,23 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {API,sha256,diffJSON,validateContent,fullSetBonuses,planImport,applyOverlay,equal} from '../scripts/atlas-sync-model.mjs';
 import {runSync,fetchPublic,discover,syncStateFiles} from '../scripts/atlas-sync.mjs';
+import {addonArtifacts} from '../scripts/addon-package.mjs';
 import {dungeonRecord,dungeonStructure} from '../scripts/dungeon-sync.mjs';
 import {reconcileReview,reviewGroups,loadReviewAliases} from '../scripts/sync-review.mjs';
 
 const root=new URL('../',import.meta.url);
 const load=file=>JSON.parse(fs.readFileSync(new URL(file,root),'utf8'));
 const source=()=>load('snapshots/current/content.json');
+test('Auto-Sync protects and commits every Companion release artifact',()=>{
+  const workflow=fs.readFileSync(new URL('.github/workflows/atlas-sync.yml',root),'utf8');
+  const add=workflow.match(/^\s*git add -- (.+)$/m);
+  assert(add,'Missing Auto-Sync staging list');
+  const staged=new Set(add[1].trim().split(/\s+/));
+  for(const file of [...addonArtifacts,'addons/stonestorm-statcap-overlay/companion-design.js']){
+    assert(syncStateFiles.includes(file),'Missing rollback: '+file);
+    assert(staged.has(file),'Missing workflow staging: '+file);
+  }
+});
 const base=()=>{
   const db=load('data/atlas.json');
   // A tesztek a kézi alapból indulnak, nem a gépen már élesített felülrétegből.
