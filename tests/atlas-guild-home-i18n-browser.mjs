@@ -47,6 +47,11 @@ try{
     await page.locator('#atlas-language [data-atlas-language=en]').click();
     await page.locator('#atlas-search').fill('Főhadiszállás');
     assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Headquarters');
+    await page.locator('#atlas-search').fill('Guild member capacity');
+    assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Headquarters');
+    await page.locator('#atlas-language [data-atlas-language=hu]').click();
+    assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Főhadiszállás');
+    await page.locator('#atlas-language [data-atlas-language=en]').click();
     await page.goto(base+'#atlas/home',{waitUntil:'networkidle'});
     assert.match(await page.locator('.home-cover').innerText(),/Your first home/);
     const furniture=page.locator('[data-home-section=furnitureSection]');
@@ -87,6 +92,10 @@ try{
     await page.locator('#atlas-search').fill('Kőerezet a fogban');
     await page.locator('#atlas-search-category').selectOption('home');
     assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Stone Veins in the Fang');
+    await page.locator('#atlas-search').fill('tiny blue veins');
+    assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Stone Veins in the Fang');
+    await page.locator('#atlas-language [data-atlas-language=hu]').click();
+    assert.equal(await page.locator('.atlas-card h4').first().textContent(),'Kőerezet a fogban');
     const coverage=await page.evaluate(async()=>{
       const failures=[],db=window.STONESTORM_ATLAS,i18n=window.AtlasI18n;
       const records=[...db.guild.buildings.map(x=>({kind:'building',page:'guild',id:x.kind,name:x.nameHu})),...db.research.map(x=>({kind:'research',page:'home',id:x.id,name:x.name}))];

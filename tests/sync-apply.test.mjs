@@ -19,6 +19,9 @@ test('Auto-Sync apply: teljes build és npm test izolált projektben', {timeout:
   for(const file of sourceFiles()){
     const target=path.join(temp,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(root,file),target);
   }
+  for(const file of ['tools/stonestorm-workspace/src/i18n/hu.json','tools/stonestorm-workspace/src/i18n/en.json','tools/stonestorm-workspace/src/policy.cjs','tools/stonestorm-workspace/src/chrome.html','tools/stonestorm-workspace/src/main.cjs']){
+    const target=path.join(temp,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(root,file),target);
+  }
   fs.cpSync(path.join(root,'node_modules'),path.join(temp,'node_modules'),{recursive:true});
   const read=file=>JSON.parse(fs.readFileSync(path.join(temp,file),'utf8'));
   const save=(file,value)=>fs.writeFileSync(path.join(temp,file),JSON.stringify(value));

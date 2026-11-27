@@ -31,7 +31,7 @@ try{
   input('#catalog-category','weapons');input('#catalog-query','w_ninja_l50','input');assert.equal(d.querySelectorAll('.catalog-card').length,1);
   await go(new URL(d.querySelector('.catalog-card').href,w.location.href).hash);check();assert(d.querySelector('#atlas-detail').open);assert.match(d.querySelector('#atlas-detail-body').textContent,/Jégagyar|w_ninja_l50/);
   d.querySelector('#atlas-detail-close').click();await new Promise(r=>setTimeout(r,20));
-  input('#catalog-query','','input');input('#catalog-category','all');input('#catalog-status','unknown');assert([...d.querySelectorAll('.catalog-copy .atlas-chip')].every(x=>x.textContent==='Ismeretlen'));
+  input('#catalog-query','','input');input('#catalog-category','all');input('#catalog-status','unknown');const unknownChips=[...d.querySelectorAll('.catalog-copy .atlas-chip')];assert(unknownChips.length);assert(unknownChips.every(x=>x.textContent===w.AtlasI18n.t('gallery.unknown')));
   await go('#atlas/compare');assert.equal(d.querySelectorAll('[data-viewer-pick]').length,17);
   d.querySelectorAll('[data-viewer-pick]')[0].click();d.querySelectorAll('#viewer-images [data-viewer-pick]')[1].click();assert.equal(d.querySelectorAll('.viewer-panels article').length,2);assert(d.querySelector('#viewer-comparison table'));
   input('#viewer-mode','appearance');assert.equal(d.querySelectorAll('.viewer-panels article').length,0);

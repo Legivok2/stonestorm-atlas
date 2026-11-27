@@ -2,7 +2,7 @@
 
 ## A repository projektjei
 
-- **Stonestorm Atlas:** játékadatok, magyar wiki és információs felületek, a meglévő automatikus adatfrissítési rendszerrel.
+- **Stonestorm Atlas:** játékadatok, magyar és angol wiki és információs felületek, a meglévő automatikus adatfrissítési rendszerrel.
 - **Stonestorm Companion:** Chrome-bővítmény, aktuális verziója **0.14.0 BETA**. Statokat és limiteket, kísérőstatisztikákat, felszereléspreseteket, portyákat és kalkulátorokat kínál magyar és angol kezelőfelülettel. Az aktív funkciófejlesztés ennél a verziónál szünetel; hibajavítások és kompatibilitási frissítések továbbra is készülhetnek.
 - **Stonestorm Workspace:** különálló, Electron-alapú Windows-alkalmazás normál játék móddal, több eredeti játékpéldánnyal és négyes Tárnák munkaterülettel. A Workspace **fejlesztői előzetes**, nem végleges kiadás.
 
@@ -10,7 +10,7 @@ Kapcsolat és visszajelzés: **Discord: `pain6089`**
 
 ### English overview
 
-- **Stonestorm Atlas:** game data, wiki and reference interfaces, plus the existing automated data update system.
+- **Stonestorm Atlas:** game data, Hungarian and English wiki and reference interfaces, plus the existing automated data update system.
 - **Stonestorm Companion:** a Chrome extension, currently **0.14.0 BETA**, with stats and caps, companion statistics, equipment presets, raids, calculators, and Hungarian/English UI. Active feature development is paused at this version; maintenance fixes may still be released.
 - **Stonestorm Workspace:** a separate Electron-based Windows application with normal game mode, multiple original game instances, and a four-panel Mines workspace. It is a **development preview**, not a final release.
 
@@ -30,9 +30,9 @@ GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stone
 
 A teljes statikus kiadás: `npm run build:pages`, ellenőrzése: `npm run test:pages`. A workflow minden main-push után ezt telepíti. Hiányzó adat vagy közzétételi felhatalmazás esetén leáll, nem cseréli le az oldalt a korábbi kalauzkiadásra.
 
-**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a teljes kezdőkalauzt (26 cikket és 10 GYIK-bejegyzést), valamint a Felszerelések és Szettcsaládok listáit, szűrőit és adatlapjait is azonnal váltja; a nyelv a böngészőben mentődik. Az angol itemnevek nem szerepelnek a mentett adatokban, ezért az eredeti játékbeli magyar nevek maradnak; ritkaságmező sincs a felszerelésadatokban, így a meglévő tier látható. Más dinamikus Atlas-felületek még nem teljesen lokalizáltak.
+**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a kezdőkalauzt (26 cikk és 10 GYIK-bejegyzés) és az Atlas jelenlegi fő funkcióit magyarul és angolul is elérhetővé teszi; a nyelv a böngészőben mentődik. Az igazolatlan angol játéknevek helyett az eredeti nevek, az ismeretlen külső forrású szabad szövegek pedig eredeti alakban maradnak. A felszerelésadatokban nincs ritkaságmező, ezért a meglévő tier látható.
 
-**Atlas HU/EN support:** the Magyar / English selector immediately switches the complete beginner guide (26 articles and 10 FAQ entries) and the Equipment and Equipment Sets lists, filters and detail pages; the preference is stored in the browser. No English equipment names are present in the saved data, so the original in-game Hungarian names are retained; the equipment data also has no rarity field, so the existing tier is shown instead. Other dynamic Atlas interfaces are not yet fully localized.
+**Atlas HU/EN support:** the Magyar / English selector in the header makes the beginner guide (26 articles and 10 FAQ entries) and all current main Atlas features available in Hungarian and English; the preference is stored in the browser. Original game names are retained where English names are unverified, as is unknown free text from external sources. Equipment data has no rarity field, so the existing tier is shown instead.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 

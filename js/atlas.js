@@ -102,18 +102,18 @@
         values.push(...dictionaryValues('game.dungeonLore.'+x.id));
         for(const room of x.rooms)values.push(...dictionaryValues('game.creature.'+room.creatureId));
       }
-      if(kind==='research'||kind==='building'){
-        const key=i18n.gameNameKey(kind,x);
-        if(key)values.push(...dictionaryValues(key));
-        if(kind==='research'){
-          values.push(...dictionaryValues('research.kicker'),...dictionaryValues('game.researchDescription.'+x.id));
-          for(const stat of Object.keys(x.reward??{}))values.push(...dictionaryValues('stat.'+stat));
-        }else values.push(...dictionaryValues('guild.building'),...dictionaryValues('guild.effect.'+x.id));
-      }
       if(kind==='map'){
         for(const spot of x.spots)values.push(...dictionaryValues('game.spot.'+spot.id),...dictionaryValues('game.material.'+spot.materialId));
         for(const boss of db.bosses.filter(b=>b.mapIndex===x.index)){const name=i18n.gameNameKey('boss',boss);if(name)values.push(...dictionaryValues(name));}
       }
+    }
+    if(kind==='research'||kind==='building'){
+      const key=i18n.gameNameKey(kind,x);
+      if(key)values.push(...dictionaryValues(key));
+      if(kind==='research'){
+        values.push(...dictionaryValues('research.kicker'),...dictionaryValues('game.researchDescription.'+x.id));
+        for(const stat of Object.keys(x.reward??{}))values.push(...dictionaryValues('stat.'+stat));
+      }else values.push(...dictionaryValues('guild.building'),...dictionaryValues('guild.effect.'+x.id));
     }
     return norm(values.join(' '));
   };
