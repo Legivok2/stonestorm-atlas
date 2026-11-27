@@ -20,6 +20,7 @@
     "test:guide:i18n:browser": "node tests/guide-i18n-browser.mjs",
     "test:addon:browser": "node tests/addon-browser.mjs",
     "test:pets:browser": "node tests/pet-system-browser.mjs",
+    "test:pets:localization:browser": "node tests/pets-mounts-i18n-browser.mjs",
     "test:stats:browser": "node tests/stat-limits-browser.mjs",
     "test:dom": "node tests/dom-smoke.mjs && node tests/features-dom.mjs",
     "test:dom:guide": "node tests/guide-dom.mjs",

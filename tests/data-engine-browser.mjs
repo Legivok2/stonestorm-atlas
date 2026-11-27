@@ -15,7 +15,7 @@ try{
     await page.goto(base+'#atlas/pets',{waitUntil:'networkidle'});
     const card=page.locator('.atlas-card[href="#atlas/pets/pet/pet_vulture"]');
     assert.match(await card.locator('.atlas-card-desc').textContent(),/Zsákmány \+4%/);
-    assert.match(await card.locator('.card-form-label').textContent(),/1\. SZINT.*KÖLYÖK.*0\. RANG/);
+    assert.match(await card.locator('.card-form-label').textContent(),/1\. SZINT.*Kölyök.*0\. RANG/i);
     assert(!/0,8%|nyers fajadat|Részben azonosított kép/.test(await card.textContent()));
     const all=await page.evaluate(()=>window.STONESTORM_ATLAS.pets.map(p=>({id:p.id,value:p.bonusByForm[0].value})));
     for(const pet of all){const text=await page.locator(`.atlas-card[href="#atlas/pets/pet/${pet.id}"] .atlas-card-desc`).textContent();assert(text.includes(new Intl.NumberFormat('hu-HU',{maximumFractionDigits:2}).format(pet.value*100)+'%'),pet.id);}
@@ -36,10 +36,17 @@ try{
     await page.locator('[data-pet-calculator]').screenshot({path:path.join(root,'.integration/browser-qa/engine-detail-'+name+'.png')});
     assert(await page.evaluate(()=>document.querySelector('#atlas-detail').scrollWidth<=document.querySelector('#atlas-detail').clientWidth+1),name+' detail overflow');
     await page.locator('#atlas-detail-close').click();await page.evaluate(()=>location.hash='#atlas/planner');await page.locator('#planner-level').fill('60');await page.locator('#planner-level').dispatchEvent('change');
-    await page.locator('#planner-pet').selectOption('pet_vulture');assert.equal(await page.locator('[data-planner-pet-bonus]').getAttribute('data-planner-pet-bonus'),'0.04');
-    await page.locator('#planner-pet-form').selectOption('2');await page.locator('#planner-pet-rank').fill('2');await page.locator('#planner-pet-rank').dispatchEvent('change');assert.equal(await page.locator('[data-planner-pet-bonus]').getAttribute('data-planner-pet-bonus'),'0.068');
+    await page.locator('#planner-pet').selectOption('pet_vulture');
+    await page.locator('#planner-pet-form').selectOption('2');
+    assert.equal(await page.locator('#planner-pet-rank').count(),0,'raw API rank is not editable in the current Planner UI');
+    const numericResult=()=>page.evaluate(()=>{const db=window.STONESTORM_ATLAS,build={...StonestormPlanner.empty(db),level:60,petId:'pet_vulture',petLevel:10,petForm:2};const result=StonestormPlanner.calculate(build,db);return {bonus:result.pet.details.bonusValue,rawBonus:result.pet.rawSpeciesBonus,skills:result.pet.details.sections.map(section=>section.items)};});
+    const beforeLocale=await numericResult();
+    await page.evaluate(()=>window.AtlasI18n.setLocale('en'));
+    assert.equal(await page.locator('#planner-pet').inputValue(),'pet_vulture');
+    assert.equal(await page.locator('#planner-pet-form').inputValue(),'2');
+    assert.deepEqual(await numericResult(),beforeLocale,'locale change must not alter Pet Builder numeric results');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name+' overflow');assert.deepEqual(errors,[]);
-    console.log('Data Engine UI '+name+': 22 cards, vulture 4%, form/rank 6.8%, Planner consistency, no overflow.');await page.close();
+    console.log('Data Engine UI '+name+': 22 cards, verified companion data, no editable API rank, locale-stable Planner calculations, no overflow.');await page.close();
   }
   const page=await browser.newPage({viewport:{width:1280,height:900}}),api=JSON.parse(fs.readFileSync(path.join(root,'snapshots/current/content.json'))),addon='addons/stonestorm-statcap-overlay/',manifest=JSON.parse(fs.readFileSync(path.join(root,addon,'manifest.json')));
   let writes=0;await page.route('https://stonestorm.gg/**',route=>{if(route.request().method()!=='GET')writes++;const p=new URL(route.request().url()).pathname;if(p==='/api/content')return route.fulfill({json:api});if(p==='/api/character')return route.fulfill({json:{state:{pets:[{id:'local-fixture',petId:'pet_vulture',level:1,form:1,rank:0,active:false}]}}});return route.fulfill({contentType:'text/html',body:'<!doctype html><meta charset="utf-8"><div class="pet-row" data-pet="local-fixture"><div class="pet-row__name" tabindex="0">Keselyűfióka <span class="chip">Kölyök</span></div><div class="pet-row__level">1. szint</div><button>Fő kísérő legyen</button></div>'});});

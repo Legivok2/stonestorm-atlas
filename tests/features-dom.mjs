@@ -29,7 +29,7 @@ try{
   await go('#atlas/gallery');assert.equal(d.querySelectorAll('.catalog-card').length,24);
   for(const category of w.STONESTORM_IMAGES.categories){input('#catalog-category',category.id);assert(d.querySelectorAll('.catalog-card').length>0,category.id);}
   input('#catalog-category','weapons');input('#catalog-query','w_ninja_l50','input');assert.equal(d.querySelectorAll('.catalog-card').length,1);
-  d.querySelector('.catalog-card').click();await new Promise(r=>setTimeout(r,20));check();assert(d.querySelector('#atlas-detail').open);assert.match(d.querySelector('#atlas-detail-body').textContent,/Jégagyar|w_ninja_l50/);
+  await go(new URL(d.querySelector('.catalog-card').href,w.location.href).hash);check();assert(d.querySelector('#atlas-detail').open);assert.match(d.querySelector('#atlas-detail-body').textContent,/Jégagyar|w_ninja_l50/);
   d.querySelector('#atlas-detail-close').click();await new Promise(r=>setTimeout(r,20));
   input('#catalog-query','','input');input('#catalog-category','all');input('#catalog-status','unknown');assert([...d.querySelectorAll('.catalog-copy .atlas-chip')].every(x=>x.textContent==='Ismeretlen'));
   await go('#atlas/compare');assert.equal(d.querySelectorAll('[data-viewer-pick]').length,17);
@@ -43,13 +43,13 @@ try{
   input('#planner-class','ninja');input('#planner-level',60);
   input('#planner-family','m1');d.querySelector('#planner-apply-set').click();check();
   assert.match(d.querySelector('.planner-bonus-panel').textContent,/Aktív · 2 db/);
-  input('#planner-pet','pet_wolf');input('#planner-pet-level',10);input('#planner-pet-rank',5);input('#planner-mount','pony');
+  input('#planner-pet','pet_wolf');input('#planner-pet-level',10);assert.equal(d.querySelector('#planner-pet-rank'),null);input('#planner-mount','pony');
   input('[data-planner-plus="weapon"]',9);
   assert(d.querySelector('.planner-character-image img').src.includes('downloaded/body')||d.querySelector('.planner-character-image img').src.includes('Stonestorm_files'));
   input('#planner-name','Nindzsa teszt <b>','input');d.querySelector('#planner-save').click();check();
   const saved=JSON.parse(w.localStorage.getItem('stonestorm-atlas-builds-v1'));assert.equal(saved.builds.length,1);assert.equal(saved.builds[0].build.gear.weapon.plus,9);
   const fresh=sibling(JSON.stringify(saved));try{const doc=fresh.document;assert.equal(doc.querySelector('#planner-saved').options.length,2);const chooser=doc.querySelector('#planner-saved');chooser.value=saved.builds[0].id;chooser.dispatchEvent(new fresh.Event('change',{bubbles:true}));doc.querySelector('#planner-load').click();assert.equal(doc.querySelector('#planner-pet').value,'pet_wolf');assert.equal(doc.querySelector('#planner-name').value,'Nindzsa teszt <b>');}finally{fresh.close();}
-  const blocked=sibling(null,true);try{blocked.document.querySelector('#planner-save').click();assert.match(blocked.document.querySelector('#planner-message').textContent,/tárhelye nem írható/);}finally{blocked.close();}
+  const blocked=sibling(null,true);try{blocked.document.querySelector('#planner-save').click();assert.match(blocked.document.querySelector('#planner-message').textContent,/böngészőtárhely nem írható/);}finally{blocked.close();}
   d.querySelector('#planner-copy').click();d.querySelector('#planner-compare').click();check();assert.match(d.querySelector('#atlas-screen').textContent,/Build A és B/);
   d.querySelector('#planner-share-button').click();const shared=d.querySelector('#planner-share').value;assert(shared.includes('#atlas/planner?build='));
   d.querySelector('#planner-new').click();assert.equal(d.querySelector('#planner-level').value,'1');
