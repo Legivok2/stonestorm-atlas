@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {root} from '../scripts/publication-plan.mjs';
@@ -10,6 +11,7 @@ const server=createPreview(path.join(root,'dist'));
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base='http://127.0.0.1:'+server.address().port+'/stonestorm-atlas/';
 const browser=await chromium.launch({headless:true});
+const watcher=JSON.parse(fs.readFileSync(path.join(root,'data/future-content.json'),'utf8'));
 try{
   for(const width of [375,1440]){
     const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
@@ -124,6 +126,25 @@ try{
     await failed.evaluate(()=>AtlasI18n.setLocale('en'));
     assert.match(await failed.locator('#stat-addon-check-status').innerText(),/Could not check/);
     await fallback.close();
+    const fixtures=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),fixturePage=await fixtures.newPage();
+    const next=structuredClone(watcher),template=next.observations.find(row=>row.category==='features');
+    const reasons=[
+      ['removed','A teljes, sikeresen ellenőrzött saját forráságban már nem szerepel. Ez nem hozzáférési hiba.','No longer present in its complete'],
+      ['prepared','Az art-manifest nyilvános képkulcsa. Nem találgatunk hozzá fájlcímet és nem állítunk aktiválást.','A public image key from the art manifest'],
+      ['uncertain','Kliensmodul; a fájlnév nem igazol új játékmódot.','Client module; the file name does not verify'],
+      ['announced','Dátumozott, strukturált hivatalos közlemény. A tényleges játékbeli elérhetőség ettől külön bizonyíték.','Dated, structured official announcement'],
+      ['active','External evidence: unchanged','External evidence: unchanged']
+    ];
+    next.checkedAt='2026-11-27T00:00:00Z';
+    next.observations.push(...reasons.map(([status,statusReason],index)=>({...template,id:'fixture-'+index,key:'fixture-'+index,nameHu:['Funkciókapcsoló','Grafikai katalógusbejegyzés','Nyilvános kliensmodul','Magyar fordítás: forrásszöveg','Funkciókapcsoló'][index],status,statusReason,potential:true,legacy:false})));
+    await fixturePage.route('**/data/future-content.json',route=>route.fulfill({json:next}));
+    await fixturePage.goto(base+'#atlas/upcoming',{waitUntil:'networkidle'});
+    await fixturePage.locator('#atlas-language [data-atlas-language=en]').click();
+    for(const [index,[,,expected]] of reasons.entries())assert.match(await fixturePage.locator(`[data-future-observation="fixture-${index}"]`).innerText(),new RegExp(expected));
+    assert.match(await fixturePage.locator('[data-future-observation="fixture-1"] h4').innerText(),/Art catalog entry/);
+    assert.match(await fixturePage.locator('[data-future-observation="fixture-2"] h4').innerText(),/Public client module/);
+    assert.equal(await fixturePage.locator('[data-future-observation="fixture-3"] h4').innerText(),'Hungarian translation: forrásszöveg');
+    await fixtures.close();
     console.log(`Chromium ${width}px: Sync, Watcher, errors, locale, filters and evidence verified.`);
   }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

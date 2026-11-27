@@ -10,7 +10,7 @@ const server=createPreview(path.join(root,'dist'));await new Promise(r=>server.l
 const base='http://127.0.0.1:'+server.address().port+'/stonestorm-atlas/';
 const browser=await chromium.launch({headless:true});
 try{
-  for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844],['small-mobile',320,760]]){
+  for(const [name,width,height] of [['desktop',1440,1000],['mobile',375,844],['small-mobile',320,760]]){
     const page=await browser.newPage({viewport:{width,height}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
     await page.goto(base+'#atlas/pets',{waitUntil:'networkidle'});
     const card=page.locator('.atlas-card[href="#atlas/pets/pet/pet_vulture"]');
@@ -55,7 +55,12 @@ try{
   await page.evaluate(async()=>{await fetch('/api/content');await fetch('/api/character');});await page.locator('.pet-row__name').hover();await page.waitForFunction(()=>window.petShadow?.textContent.includes('Zsákmány +4%'));
   assert.match(await page.evaluate(()=>window.petShadow.textContent),/Nem fő kísérő/);assert.equal(writes,0);
   await page.screenshot({path:path.join(root,'.integration/browser-qa/engine-addon-inactive.png')});
-  const sample=await page.evaluate(()=>{StonestormResearchController.command('atlas-research-arm');return fetch('/api/content').then(()=>new Promise(r=>setTimeout(()=>r(StonestormResearchController.command('atlas-research-export')),100)));});
+  await page.evaluate(()=>StonestormCompanionState.shared(chrome.storage).set({development:true}));
+  const armed=await page.evaluate(()=>StonestormResearchController.command('atlas-research-arm'));
+  assert.equal(armed.active,true,'research capture must be armed in development mode');
+  await page.evaluate(()=>fetch('/api/content'));
+  await page.waitForFunction(()=>StonestormResearchController.status().count>0);
+  const sample=await page.evaluate(()=>StonestormResearchController.command('atlas-research-export'));
   assert(sample.samples.some(x=>x.endpoint==='/api/content'));assert(!JSON.stringify(sample).includes('local-fixture'));
   console.log('Addon actual tooltip: inactive vulture +4%, no activation calls; public config export without owned identifiers.');await page.close();
 }finally{await browser.close();await new Promise(r=>server.close(r));}

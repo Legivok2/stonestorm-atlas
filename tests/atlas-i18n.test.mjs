@@ -59,6 +59,24 @@ test('bundled Sync and Watcher evidence descriptions have English translations',
   }
 });
 
+test('source-defined Sync and Watcher message types have translations',async()=>{
+  const {i18n}=load('en'),{hu,en}=i18n.dictionaries;
+  const has=(prefix,text)=>Object.keys(hu).some(key=>key.startsWith(prefix)&&hu[key]===text&&en[key]);
+  const {classifications,reviewSystem,reviewTitle}=await import('../scripts/sync-review.mjs');
+  for(const reason of Object.values(classifications))assert(has('sync.reason.',reason),reason);
+  const syncSource=fs.readFileSync(path.resolve(import.meta.dirname,'../scripts/sync-review.mjs'),'utf8');
+  for(const [,reason] of syncSource.matchAll(/explanation:'([^']+)'/g))assert(has('sync.reason.',reason),reason);
+  const db=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/atlas.json'),'utf8'));
+  const paths=['https://stonestorm.gg/game.js','/home-arena/api','/dungeons/new','/families/x','/pets/x','/mounts/new','/items/x','/arena/x','/home/x','/guild/x','/research/x','/achievementSets/x','/harcero/x','/maps/x','/features/x','/stones/x','/lean/skills/x','/lean/fishing/x','/other','/harcero/bossEvadeCaps','/onboarding/x','/spine/gate',...['skills','itemRules','worldBoss','bossAttempts','endgame','sidequests','alchemist','soulShop','fishing','patron','unknown'].map(x=>'/lean/'+x)];
+  for(const p of paths){
+    for(const text of [reviewSystem(p),...reviewTitle({path:p},db).split(' · ')])assert(has('sync.text.',text),`${p}: ${text}`);
+  }
+  for(const file of ['future-content-analyzers.mjs','future-content-client.mjs','future-content-watcher.mjs']){
+    const source=fs.readFileSync(path.resolve(import.meta.dirname,'../scripts',file),'utf8');
+    for(const [,reason] of source.matchAll(/statusReason\s*[:=]\s*'([^']+)'/g))assert(has('future.reason.',reason),`${file}: ${reason}`);
+  }
+});
+
 test('language changes are saved, notified and restored without touching other preferences',()=>{
   const {i18n,values}=load();
   values.set('build','saved build');

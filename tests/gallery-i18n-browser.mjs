@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {root} from '../scripts/publication-plan.mjs';
+import {createPreview} from '../scripts/serve-pages.mjs';
+
+process.env.PLAYWRIGHT_BROWSERS_PATH??=path.join(root,'.integration/browser-qa/browsers');
+const {chromium}=await import(pathToFileURL(path.join(root,'.integration/browser-qa/node_modules/playwright/index.mjs')));
+const server=createPreview(path.join(root,'dist'));
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const base='http://127.0.0.1:'+server.address().port+'/stonestorm-atlas/';
+const browser=await chromium.launch({headless:true});
+try{
+  for(const width of [375,1440]){
+    const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'}),errors=[];
+    page.on('pageerror',error=>errors.push(error.message));
+    await page.goto(base+'#atlas/gallery',{waitUntil:'networkidle'});
+    const original=await page.evaluate(()=>JSON.stringify(STONESTORM_IMAGES));
+    await page.locator('#catalog-category').selectOption('body');
+    await page.locator('#catalog-status').selectOption('identified');
+    await page.locator('#catalog-query').fill('mage female t0 variant 1');
+    const card=page.locator('.catalog-card').filter({has:page.locator('[data-catalog-image="body/mage_blade_female_t0"]')});
+    assert.equal(await card.count(),1,'English search must work in Hungarian');
+    assert.equal(await card.locator('h4').innerText(),'Mágus · nő · t0 · 1. változat');
+    await page.locator('#atlas-language [data-atlas-language=en]').click();
+    assert.equal(await page.locator('#catalog-category').inputValue(),'body');
+    assert.equal(await page.locator('#catalog-status').inputValue(),'identified');
+    assert.equal(await page.locator('#catalog-query').inputValue(),'mage female t0 variant 1');
+    assert.equal(await card.locator('h4').innerText(),'Mage · female · t0 · variant 1');
+    assert.equal(await card.locator('img').getAttribute('alt'),'Mage · female · t0 · variant 1');
+    assert.equal(await page.locator('#catalog-category option[value=body]').innerText(),'Characters · full body');
+    assert.match(await page.locator('#catalog-status-line').innerText(),/results · page/);
+    await card.click();
+    await page.locator('#atlas-detail[open]').waitFor();
+    assert.equal(await page.locator('#atlas-detail-title').innerText(),'Mage · female · t0 · variant 1');
+    assert.equal(await page.locator('#atlas-detail-body img').first().getAttribute('alt'),'Mage · female · t0 · variant 1');
+    assert.match(await page.locator('#atlas-detail-body').innerText(),/Saved client MD\/o1\/i1/);
+    await page.locator('#atlas-detail [data-atlas-language=hu]').click();
+    assert.equal(await page.locator('#atlas-detail-title').innerText(),'Mágus · nő · t0 · 1. változat');
+    assert.equal(await page.locator('#catalog-query').inputValue(),'mage female t0 variant 1');
+    await page.locator('#atlas-detail-close').click();
+    await page.locator('#atlas-detail').waitFor({state:'hidden'});
+    await page.locator('#catalog-query').fill('not-a-real-image');
+    assert.match(await page.locator('.atlas-empty').innerText(),/Nincs ilyen kép/);
+    await page.locator('#atlas-language [data-atlas-language=en]').click();
+    assert.match(await page.locator('.atlas-empty').innerText(),/No matching image/);
+    await page.locator('#catalog-category').selectOption('all');
+    await page.locator('#catalog-query').fill('d_dragon_cultist');
+    const dungeon=page.locator('.catalog-card[href="#atlas/gallery/image/mobs%2Fd_dragon_cultist"]');
+    assert.equal(await dungeon.locator('h4').innerText(),"Dragon's Nest");
+    await dungeon.locator('img').evaluate(image=>image.dispatchEvent(new Event('error')));
+    assert.equal(await dungeon.locator('.atlas-image-missing').innerText(),'Image unavailable');
+    assert.equal(await dungeon.locator('.atlas-image-missing').getAttribute('aria-label'),'Image could not be loaded');
+    assert.equal(await page.evaluate(()=>JSON.stringify(STONESTORM_IMAGES)),original);
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`overflow at ${width}`);
+    assert.deepEqual(errors,[]);
+    await page.close();
+    console.log(`Gallery Chromium ${width}px: generated titles, search, filters, details, image errors and data verified.`);
+  }
+}finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

@@ -13,9 +13,10 @@ globalThis.AtlasFutureContentUI={
     };
     const category=(row,locale=i18n.getLocale())=>i18n.dictionaries[locale]['future.category.'+row.category]??data?.categoryNames?.[row.category]??row.category;
     const name=(row,locale=i18n.getLocale())=>{
-      const original=row.nameHu??t('future.observation');
+      const original=row.nameHu??i18n.t('future.observation',{},locale);
       if(locale==='hu')return original;
       const direct=lookup(original,'future.name.',locale);if(direct)return direct;
+      if(i18n.dictionaries.hu['future.category.'+row.category]===original)return category(row,locale);
       const types={maps:'map',mobs:'mob',bosses:'boss',dungeons:'dungeon',pets:'pet',classes:'class'};
       const kind=types[row.category],record=kind?{id:row.entityId??row.key,name:original}:null,key=record&&i18n.gameNameKey(kind,record);
       if(key)return i18n.dictionaries[locale][key];
@@ -32,6 +33,7 @@ globalThis.AtlasFutureContentUI={
         }
       }
       if(original.startsWith('Angol fordítás: '))return i18n.t('future.name.translation',{name:original.slice('Angol fordítás: '.length)},locale);
+      if(original.startsWith('Magyar fordítás: '))return i18n.t('future.name.hungarianTranslation',{name:original.slice('Magyar fordítás: '.length)},locale);
       return original;
     };
     const reason=row=>lookup(row.statusReason,'future.reason.')??row.statusReason??t('future.awaitingEvidence');
