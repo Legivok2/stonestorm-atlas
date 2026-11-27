@@ -404,7 +404,15 @@
   extension=globalThis.AtlasExtensions?.init({db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render,petUI})??{};
   i18n.onChange(()=>{
     const portalQuery=$('#portal-query')?.value;
+    const preserveTools=['planner','stat-limits','bonuses'].includes(state.page)&&!state.query;
+    const openDetails=preserveTools?[...document.querySelectorAll('#atlas-screen details')].map(element=>element.open):[];
+    const skillInput=preserveTools&&document.activeElement?.matches('[data-planner-pet-skill-search]')?{slot:document.activeElement.dataset.plannerPetSkillSearch,value:document.activeElement.value}:null;
     render();
+    if(preserveTools)document.querySelectorAll('#atlas-screen details').forEach((element,index)=>{element.open=!!openDetails[index];});
+    if(skillInput){
+      const input=document.querySelector(`[data-planner-pet-skill-search="${skillInput.slot}"]`);
+      if(input){input.value=skillInput.value;input.dispatchEvent(new Event('input',{bubbles:true}));}
+    }
     if(portalQuery!==undefined&&$('#portal-query'))$('#portal-query').value=portalQuery;
     refreshLocalizedDetail();
   });

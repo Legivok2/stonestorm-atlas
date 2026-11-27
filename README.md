@@ -77,6 +77,7 @@ Forrás: `addons/stonestorm-statcap-overlay/`. Csomag és verzióadat: `download
 - **Felszerelés-/kinézet-összehasonlító:** négy kaszt, férfi/női, két grafikai változat, két fegyver/páncél/teljes karakterkép összevetése: `#atlas/compare`.
 - **Character Planner:** validált nyolc felszerelési hely, +0–+9, valódi szettkapcsolatok, kísérő/hátas, teljes karakterelőnézet, A/B build, helyi mentés és megosztási link: `#atlas/planner`.
 - **📊 Stat limitek:** tizenhat statisztika, forrás- és megbízhatósági jelölések, azonnali harci limitkalkulátor, kritikus sebzésmodell, fegyverbónusz-táblázat és forrásos XP-/nyang-/zsákmánykalkulátor: `#atlas/stat-limits`.
+- A Character Planner, a felszerelés-összehasonlító, a Stat limitek és a Bónuszrendszer HU/EN felületet használ. A százalékos kalkulátorok tizedesvesszőt és tizedespontot is elfogadnak; az igazolatlan kritikus soft-cap mellett nem jelenítünk meg végső sebzésértéket.
 - **Bónuszrendszer:** egységes 20-as tárgybónusz-katalógus, külön fegyver-/páncél-/ékszerpoolok, tizenegy bónuszforrás dokumentációja, tárgyadatlap-kapcsolatok és a megosztott jutalomkalkulátor: `#atlas/bonuses`.
 
 A globális kereső billentyűparancsa **/**. Adatlap közvetlen hivatkozására példa: `#atlas/equipment/item/w_warrior_0`. A modális adatlap Escape-pel és a bezárógombbal zárható.
@@ -165,6 +166,8 @@ A teljes adat-/képkatalógus újraépítéséhez Python 3 és Pillow is szüks�
 npm install --prefix .integration/qa --no-save --package-lock=false jsdom@24.1.3
 npm run test:dom
 ```
+
+- `npm run test:atlas:calculators:i18n:browser`: a Pages build után a karaktertervező, statlimitek, kritikus és jutalomkalkulátor, valamint az összehasonlító HU/EN Chromium-ellenőrzése 375 és 1440 px szélességen.
 
 A fenti automatikus ellenőrzések sikeresek. **Valódi böngészős/vizuális ellenőrzés az új verzión nem történt**, mert ebben a munkamenetben a böngésző- és natív vezérlés nem elérhető. A jsdom nem helyettesíti a tényleges mobilos tördelés és a natív dialógus ellenőrzését. Az eredeti README 2026. októberi böngészőeredményei a régi kalauzra vonatkoznak.
 

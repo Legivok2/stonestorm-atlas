@@ -29,6 +29,23 @@ test('Atlas dictionaries contain matching translations and parameters',()=>{
   }
 });
 
+test('calculator source labels and explanations match the current bonus data',async()=>{
+  await import('../js/bonus-system.js');
+  const {i18n}=load('en'),{sources,reward,entries}=globalThis.StonestormBonuses;
+  for(const entry of entries)assert(i18n.dictionaries.en['stat.'+entry.id],entry.id);
+  for(const source of sources){
+    for(const field of ['name','explanation']){
+      const key=`bonus.source.${source.id}.${field}`;
+      assert.equal(i18n.dictionaries.hu[key],source[field],key);
+      assert(i18n.dictionaries.en[key],key);
+    }
+    const key=['equipment','imperial','potionsNyang','potionsCoins'].includes(source.id)?`bonus.source.${source.id}.source`:'bonus.source.normalSource';
+    assert.equal(i18n.dictionaries.hu[key],source.source,key);
+  }
+  assert.equal(i18n.dictionaries.hu['bonus.formula'],reward.formula);
+  assert.equal(i18n.dictionaries.hu['limits.source.reward'],reward.source);
+});
+
 test('language changes are saved, notified and restored without touching other preferences',()=>{
   const {i18n,values}=load();
   values.set('build','saved build');
