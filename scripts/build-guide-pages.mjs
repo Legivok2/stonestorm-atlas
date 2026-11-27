@@ -11,6 +11,7 @@ export function guideHtml(source){
     html=html.replace(pattern,replacement);
   }
   html=html.replace(/^.*<script src="js\/(?!content\.js|main\.js)[^"]+" defer><\/script>.*\r?\n/gm,'');
+  html=html.replace(/        <div class="atlas-language" id="atlas-language"[\s\S]*?<\/div>\r?\n/,'');
   html=html.replace(/^.*<link rel="stylesheet" href="css\/(?!style\.css|atlas\.css|atlas-theme\.css)[^"]+"\s*\/>.*\r?\n/gm,'');
   html=html.replace(/^.*<link rel="stylesheet" href="css\/atlas-tools\.css" \/>.*\r?\n/gm,'');
   html=html.replace(/^.*<link rel="stylesheet" href="css\/stat-addon\.css" \/>.*\r?\n/gm,'');
@@ -37,8 +38,8 @@ export function guideHtml(source){
           </div>`);
   if(html.includes('class="hero-description"'))replace(/<p class="hero-description">[\s\S]*?<\/p>/,`<p class="hero-description">Kezdőlépések, kasztválasztás és napi kalandok.<br />Fedezd fel a Stonestorm magyar kalauzát,<br class="desktop-break" /> és vágj neki felkészülten a játéknak.</p>`);
   html=html.replace(/2026\. november 6-i adatpillanatkép/g,'Nyilvános kezdőkalauz');
-  replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/,`<meta name="description" content="Magyar Stonestorm kezdőkalauz: kasztválasztás, napi rutin, kereshető útmutatók és képgaléria. Megnyitható böngészőben, telepítés nélkül." />`);
-  replace(/<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/,`<meta property="og:description" content="Magyar kezdőkalauz, kaszt-összehasonlító, napi lista és kereshető tudástár. A teljes Atlas kiadása előkészítés alatt." />`);
+  replace(/<meta\s+name="description"\s+content="[^"]*"(?:\s+data-atlas-i18n-content="[^"]*")?\s*\/>/,`<meta name="description" content="Magyar Stonestorm kezdőkalauz: kasztválasztás, napi rutin, kereshető útmutatók és képgaléria. Megnyitható böngészőben, telepítés nélkül." />`);
+  replace(/<meta\s+property="og:description"\s+content="[^"]*"(?:\s+data-atlas-i18n-content="[^"]*")?\s*\/>/,`<meta property="og:description" content="Magyar kezdőkalauz, kaszt-összehasonlító, napi lista és kereshető tudástár. A teljes Atlas kiadása előkészítés alatt." />`);
   html=html.replace(/href="#atlas[^"\s]*"/g,'href="#atlas"');
   return html;
 }

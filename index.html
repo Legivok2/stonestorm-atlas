@@ -7,18 +7,21 @@
     <meta
       name="description"
       content="Magyar Stonestorm Wiki és Atlas: felszerelések, szettek, kísérők, hátasok, bossok, céhes kalkulátorok és kereshető kezdőkalauz."
+      data-atlas-i18n-content="header.description"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="hu_HU" />
     <meta
       property="og:title"
       content="Stonestorm Atlas – Magyar Wiki és Kalauz"
+      data-atlas-i18n-content="header.title"
     />
     <meta
       property="og:description"
       content="Egyetlen magyar kódex: játékadatok, összekapcsolt adatlapok, kalkulátorok és részletes kezdőkalauz."
+      data-atlas-i18n-content="header.ogDescription"
     />
-    <title>Stonestorm Atlas – Magyar Wiki és Kalauz</title>
+    <title data-atlas-i18n="header.title">Stonestorm Atlas – Magyar Wiki és Kalauz</title>
     <link rel="icon" type="image/webp" href="assets/images/icon-stone.webp" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/atlas-theme.css" />
@@ -28,7 +31,10 @@
     <link rel="stylesheet" href="css/sync.css" />
     <link rel="stylesheet" href="css/future-content.css" />
     <link rel="stylesheet" href="css/home-arena.css" />
+    <script src="js/atlas-i18n.js" defer></script>
+    <script src="js/atlas-language.js" defer></script>
     <script src="js/content.js" defer></script>
+    <script src="js/guide-en.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/atlas-data.js" defer></script>
     <script src="js/atlas-math.js" defer></script>
@@ -121,13 +127,14 @@
         />
       </symbol>
     </svg>
-    <a class="skip-link" href="#tartalom">Ugrás a tartalomra</a>
+    <a class="skip-link" href="#tartalom" data-atlas-i18n="header.skip">Ugrás a tartalomra</a>
     <header class="site-header">
       <div class="header-inner">
         <a
           class="brand brand-official"
           href="#kezdolap"
           aria-label="Stonestorm Atlas – kezdőlap"
+          data-atlas-i18n-label="header.homeLabel"
         >
           <img
             src="assets/images/logo-horizontal.webp"
@@ -144,27 +151,33 @@
           aria-expanded="false"
           aria-controls="main-nav"
           aria-label="Navigáció megnyitása"
+          data-atlas-i18n-label="header.openNavigation"
         >
           <span></span><span></span><span></span>
         </button>
-        <nav id="main-nav" aria-label="Fő navigáció">
-          <a class="active" href="#kezdolap" aria-current="location"
+        <nav id="main-nav" aria-label="Fő navigáció" data-atlas-i18n-label="header.navigation">
+          <a class="active" href="#kezdolap" aria-current="location" data-atlas-i18n="header.home"
             >Kezdőlap</a
           >
           <a href="#atlas">Atlas</a>
-          <a href="#atlas/gallery">Képtár</a>
-          <a href="#atlas/compare">Összehasonlító</a>
-          <a href="#atlas/planner">Karaktertervező</a>
-          <a href="#utmutato">Kezdőkalauz</a>
+          <a href="#atlas/gallery" data-atlas-i18n="navigation.gallery">Képtár</a>
+          <a href="#atlas/compare" data-atlas-i18n="header.compare">Összehasonlító</a>
+          <a href="#atlas/planner" data-atlas-i18n="navigation.planner">Karaktertervező</a>
+          <a href="#utmutato" data-atlas-i18n="header.guide">Kezdőkalauz</a>
         </nav>
         <a
           class="official-link"
           href="https://stonestorm.gg"
           target="_blank"
           rel="noopener noreferrer"
-          >Hivatalos játék <span aria-hidden="true">↗</span
-          ><span class="sr-only"> (új lapon)</span></a
+          ><span data-atlas-i18n="header.official">Hivatalos játék</span> <span aria-hidden="true">↗</span
+          ><span class="sr-only" data-atlas-i18n="header.newTab"> (új lapon)</span></a
         >
+        <div class="atlas-language" id="atlas-language" role="group" aria-label="Nyelv / Language">
+          <button type="button" lang="hu" data-atlas-language="hu" aria-pressed="true">Magyar</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" lang="en" data-atlas-language="en" aria-pressed="false">English</button>
+        </div>
       </div>
     </header>
 
@@ -172,16 +185,16 @@
       <span id="kezdolap" class="atlas-anchor" aria-hidden="true"></span>
       <section id="atlas" class="atlas-section" aria-labelledby="atlas-heading">
         <div class="container atlas-layout">
-          <button type="button" id="atlas-nav-backdrop" class="atlas-nav-backdrop" aria-label="Kategóriamenü bezárása" hidden></button>
+          <button type="button" id="atlas-nav-backdrop" class="atlas-nav-backdrop" aria-label="Kategóriamenü bezárása" data-atlas-i18n-label="sidebar.close" hidden></button>
           <aside class="atlas-sidebar" id="atlas-sidebar">
-            <div class="atlas-sidebar-heading"><a href="#atlas/overview"><svg class="atlas-icon" aria-hidden="true"><use href="#compass" /></svg><span>ATLAS<small>A VIHAR KÓDEXE</small></span></a><button type="button" id="atlas-nav-close" aria-label="Kategóriamenü bezárása">×</button></div>
-            <nav id="atlas-nav" aria-label="Atlas kategóriák"></nav>
-            <div class="atlas-sidebar-note"><p class="eyebrow">A KÓDEX SZÁMOKBAN</p><div id="atlas-stats" class="atlas-stats"></div><a href="#atlas/sources">Források és ismert hiányok ↗</a></div>
+            <div class="atlas-sidebar-heading"><a href="#atlas/overview"><svg class="atlas-icon" aria-hidden="true"><use href="#compass" /></svg><span>ATLAS<small data-atlas-i18n="sidebar.subtitle">A VIHAR KÓDEXE</small></span></a><button type="button" id="atlas-nav-close" aria-label="Kategóriamenü bezárása" data-atlas-i18n-label="sidebar.close">×</button></div>
+            <nav id="atlas-nav" aria-label="Atlas kategóriák" data-atlas-i18n-label="sidebar.categories"></nav>
+            <div class="atlas-sidebar-note"><p class="eyebrow" data-atlas-i18n="sidebar.stats">A KÓDEX SZÁMOKBAN</p><div id="atlas-stats" class="atlas-stats"></div><a href="#atlas/sources" data-atlas-i18n="sidebar.sources">Források és ismert hiányok ↗</a></div>
           </aside>
           <div class="atlas-main">
-            <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span>Fejezetek</span></button><div><p class="eyebrow">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
-            <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" hidden>×</button><kbd>/</kbd></div></header>
-            <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span>Független rajongói enciklopédia</span></div>
+            <header class="atlas-workspace-bar"><div class="atlas-workspace-label"><button type="button" id="atlas-nav-toggle" aria-label="Atlas kategóriák megnyitása" data-atlas-i18n-label="workspace.openCategories" aria-expanded="false" aria-controls="atlas-sidebar"><svg class="atlas-icon" aria-hidden="true"><use href="#book" /></svg><span data-atlas-i18n="workspace.chapters">Fejezetek</span></button><div><p class="eyebrow" data-atlas-i18n="workspace.knowledge">STONESTORM / TUDÁSTÁR</p><h2 id="atlas-heading">Áttekintés</h2></div></div>
+            <div class="atlas-searchbar"><svg class="icon" aria-hidden="true"><use href="#search" /></svg><label class="sr-only" for="atlas-search" data-atlas-i18n="workspace.searchLabel">Globális keresés az Atlasban és a kalauzban</label><input id="atlas-search" type="search" placeholder="Keresés az Atlasban…" data-atlas-i18n-placeholder="workspace.searchPlaceholder" autocomplete="off" /><button id="atlas-clear" type="button" aria-label="Atlas keresés törlése" data-atlas-i18n-label="workspace.clearSearch" hidden>×</button><kbd>/</kbd></div></header>
+            <div class="atlas-version-line"><span id="atlas-data-version">ADATVERZIÓ</span><span data-atlas-i18n="workspace.independent">Független rajongói enciklopédia</span></div>
             <div id="atlas-controls"></div><p id="atlas-result-status" class="atlas-result-status" role="status" aria-live="polite"></p><div id="atlas-screen"><p>Az Atlas betöltése…</p></div>
           </div>
         </div>
@@ -781,12 +794,12 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">MINDIG VAN EGY KÖVETKEZŐ KALAND</p>
-            <h2 id="library-title">A részletek, amikor szükséged van rájuk.</h2>
+            <p class="eyebrow" data-atlas-i18n="guide.libraryEyebrow">MINDIG VAN EGY KÖVETKEZŐ KALAND</p>
+            <h2 id="library-title" data-atlas-i18n="guide.libraryTitle">A részletek, amikor szükséged van rájuk.</h2>
           </div>
-          <span class="section-tag">Bővíthető kézikönyv</span>
+          <span class="section-tag" data-atlas-i18n="guide.libraryTag">Bővíthető kézikönyv</span>
         </div>
-        <p class="library-intro">
+        <p class="library-intro" data-atlas-i18n="guide.libraryIntro">
           A teljes Discord-útmutató kezdőknek fontos témái, rövid fejezetekben.
           Nyisd ki, ami éppen érdekel, vagy keress a lenti tudásbázisban.
         </p>
@@ -801,33 +814,36 @@
         >
           <div class="section-heading">
             <div>
-              <p class="eyebrow">JÓ, HA KÉZNÉL VAN</p>
-              <h2 id="knowledge-title">Kérdezz. Keress. Indulj tovább.</h2>
+              <p class="eyebrow" data-atlas-i18n="guide.searchEyebrow">JÓ, HA KÉZNÉL VAN</p>
+              <h2 id="knowledge-title" data-atlas-i18n="guide.searchTitle">Kérdezz. Keress. Indulj tovább.</h2>
             </div>
-            <span class="section-tag">Tudásbázis és GYIK</span>
+            <span class="section-tag" data-atlas-i18n="guide.searchTag">Tudásbázis és GYIK</span>
           </div>
           <form class="search-form" role="search" id="search-form">
-            <label for="knowledge-search" class="sr-only"
+            <label for="knowledge-search" class="sr-only" data-atlas-i18n="guide.searchLabel"
               >Keresés az útmutató tudásbázisában</label
             ><svg class="icon" aria-hidden="true"><use href="#search" /></svg
             ><input
               id="knowledge-search"
               type="search"
               placeholder="Miben segíthetünk? Például: kovácsolás, kaszt, napi rutin…"
+              data-atlas-i18n-placeholder="guide.searchPlaceholder"
               autocomplete="off"
               maxlength="150"
             /><kbd aria-hidden="true">/</kbd
-            ><button type="button" id="clear-search" hidden>Törlés</button>
+            ><button type="button" id="clear-search" data-atlas-i18n="guide.clear" hidden>Törlés</button>
           </form>
           <div
             class="search-filters"
             role="group"
             aria-label="Tudásbázis témaszűrő"
+            data-atlas-i18n-label="guide.filtersLabel"
           >
             <button
               class="filter active"
               type="button"
               data-filter="all"
+              data-atlas-i18n="guide.all"
               aria-pressed="true"
             >
               Minden téma</button
@@ -835,6 +851,7 @@
               class="filter"
               type="button"
               data-filter="character"
+              data-atlas-i18n="guide.character"
               aria-pressed="false"
             >
               Karakter</button
@@ -842,6 +859,7 @@
               class="filter"
               type="button"
               data-filter="start"
+              data-atlas-i18n="guide.start"
               aria-pressed="false"
             >
               Első lépések</button
@@ -849,6 +867,7 @@
               class="filter"
               type="button"
               data-filter="daily"
+              data-atlas-i18n="guide.daily"
               aria-pressed="false"
             >
               Napi rutin</button
@@ -856,6 +875,7 @@
               class="filter"
               type="button"
               data-filter="gear"
+              data-atlas-i18n="guide.gear"
               aria-pressed="false"
             >
               Felszerelés</button
@@ -863,6 +883,7 @@
               class="filter"
               type="button"
               data-filter="adventure"
+              data-atlas-i18n="guide.adventure"
               aria-pressed="false"
             >
               Kalandok</button
@@ -870,6 +891,7 @@
               class="filter"
               type="button"
               data-filter="community"
+              data-atlas-i18n="guide.community"
               aria-pressed="false"
             >
               Közösség</button
@@ -877,6 +899,7 @@
               class="filter"
               type="button"
               data-filter="shop"
+              data-atlas-i18n="guide.shop"
               aria-pressed="false"
             >
               Kódok és Shop

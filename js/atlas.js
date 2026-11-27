@@ -6,7 +6,10 @@
   let extension={};
   const $=s=>document.querySelector(s);
   if(!db||!math){$('#atlas-screen').textContent='Az Atlas adatai nem töltődtek be. Ellenőrizd a js/atlas-data.js fájlt.';return;}
-  $('#atlas-data-version').textContent='ADATVERZIÓ · '+db.dataVersion;
+  const i18n=globalThis.AtlasI18n;
+  $('#atlas-data-version').dataset.atlasI18n='workspace.dataVersion';
+  $('#atlas-data-version').dataset.version=db.dataVersion;
+  $('#atlas-data-version').textContent=i18n.t('workspace.dataVersion',{version:db.dataVersion});
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('hu');
   const num=v=>v===null||v===undefined||!Number.isFinite(Number(v))?'Nem ismert':Number(v).toLocaleString('hu-HU',{maximumFractionDigits:2});
@@ -35,7 +38,7 @@
   const statRows=obj=>rows(Object.entries(obj??{}).map(([k,v])=>[label(k),value(k,v)]));
   const table=(heads,body)=>`<div class="atlas-table-wrap"><table class="atlas-table"><thead><tr>${heads.map(x=>`<th scope="col">${esc(x)}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   const route=(page,kind,id)=>`#atlas/${page}${kind?'/'+kind+'/'+encodeURIComponent(id):''}`;
-  const link=(page,kind,x,text)=>x?`<a class="atlas-inline-link" href="${route(page,kind,x.id)}">${esc(text??x.name??x.id)} ↗</a>`:notice('Nincs kapcsolt adat a forrásban.');
+  const link=(page,kind,x,text)=>{if(!x)return notice('Nincs kapcsolt adat a forrásban.');const key=text==null?i18n.gameNameKey(kind,x):null;return `<a class="atlas-inline-link" href="${route(page,kind,x.id)}"><span ${key?`data-atlas-i18n="${esc(key)}"`:''}>${esc(key?i18n.t(key):text??x.name??x.id)}</span> ↗</a>`;};
   const heading=(title,copy)=>`<div class="atlas-page-heading"><p class="eyebrow">STONESTORM / KÓDEX</p><h3>${esc(title)}</h3><p>${esc(copy)}</p></div>`;
   const petUI=globalThis.AtlasPetUI.init({db,media,esc,num,pct,chip,notice,rows,table,link});
   const sourceNote=x=>`<div class="atlas-source-note">${chip(!x.name?'Részben ellenőrzött adat · névhiány':x.provenance?.status==='derived'?'Képletből számolt adat':'Ellenőrzött adat · mentett forrás',!x.name?'unknown':'verified')}<p>${esc(x.provenance?.source??'ATLAS_VSCODE_KEZIKONYV.md')}<br />${esc(x.provenance?.checkedAt??db.updated)} · A pillanatképben ellenőrzött, az élő szerveren eltérhet.</p></div>`;
@@ -43,17 +46,19 @@
   const state={page:'overview',query:'',searchCategory:'all',slot:'all',character:'all',rarity:'all',maxLevel:'',sort:'name',pageNumber:1,world:'maps'};
   const collections={equipment:['item',db.items],sets:['set',db.sets],pets:['pet',db.pets],mounts:['mount',db.mounts],materials:['material',db.economy.stackables],classes:['class',db.classes]};
   const allEntries=[];
-  const add=(page,kind,list)=>list.forEach(x=>allEntries.push({page,kind,record:x,title:x.name??x.id,text:norm([x.name,x.id,x.descriptionHu,x.description,x.level,x.rarity,rarities[x.rarity],slots[x.slot],...(x.classes??[]).map(c=>classNames[c]),JSON.stringify(x.values??{}),JSON.stringify(x.perLevel??{})].join(' '))}));
+  const add=(page,kind,list)=>list.forEach(x=>{const key=i18n.gameNameKey(kind,x);allEntries.push({page,kind,record:x,title:x.name??x.id,text:norm([x.name,x.id,key?i18n.dictionaries.en[key]:'',x.descriptionHu,x.description,x.level,x.rarity,rarities[x.rarity],slots[x.slot],...(x.classes??[]).map(c=>classNames[c]),JSON.stringify(x.values??{}),JSON.stringify(x.perLevel??{})].join(' '))});});
   Object.entries(collections).forEach(([p,[k,list]])=>add(p,k,list));
   [['map','maps'],['mob','mobs'],['boss','bosses'],['dungeon','dungeons']].forEach(([k,p])=>add('world',k,db[p]));
   add('home','research',db.research);
   Object.entries(db.petSkills).forEach(([id,x])=>add('pets','skill',[{...x,id,name:db.petSkillNames[id]?.name??id,description:db.petSkillNames[id]?.desc}]));
   db.guild.buildings.forEach(x=>add('guild','building',[{...x,id:x.kind,name:x.nameHu}]));
-  for(const a of window.STONESTORM_CONTENT.articles)allEntries.push({page:'guide',title:a.title,href:'#cikk-'+a.id,text:norm([a.title,a.intro,...a.sections.flatMap(s=>[s.heading,...s.items])].join(' ')),excerpt:a.intro});
-  for(const [i,a] of window.STONESTORM_CONTENT.faq.entries())allEntries.push({page:'guide',title:a.question,href:'#gyik-'+i,text:norm(a.question+' '+a.answer),excerpt:a.answer});
+  const guideEnglish=window.STONESTORM_GUIDE_EN;
+  const guideText=a=>a?[a.title,a.intro,...a.sections.flatMap(s=>[s.heading,...s.items]),a.tip].join(' '):'';
+  for(const a of window.STONESTORM_CONTENT.articles){const en=guideEnglish?.articles[a.id];allEntries.push({page:'guide',title:a.title,href:'#cikk-'+a.id,text:norm(guideText(a)+' '+guideText(en)),excerpt:a.intro,english:en&&{title:en.title,excerpt:en.intro}});}
+  for(const [i,a] of window.STONESTORM_CONTENT.faq.entries()){const en=guideEnglish?.faq[i];allEntries.push({page:'guide',title:a.question,href:'#gyik-'+i,text:norm(a.question+' '+a.answer+' '+(en?.question??'')+' '+(en?.answer??'')),excerpt:a.answer,english:en&&{title:en.question,excerpt:en.answer}});}
   const matches=x=>norm(state.query).split(/\s+/).filter(Boolean).every(t=>x.text.includes(t));
 
-  $('#atlas-stats').innerHTML=[[db.items.length,'felszerelés'],[db.pets.length,'kísérő'],[db.mounts.length,'hátas'],[db.mobs.length,'ellenfél'],[db.guild.buildings.length,'céhes épület']].map(([n,t])=>`<div><strong>${num(n)}</strong><span>${t}</span></div>`).join('');
+  $('#atlas-stats').innerHTML=[[db.items.length,'sidebar.items'],[db.pets.length,'sidebar.pets'],[db.mounts.length,'sidebar.mounts'],[db.mobs.length,'sidebar.enemies'],[db.guild.buildings.length,'sidebar.buildings']].map(([n,key])=>`<div><strong>${num(n)}</strong><span data-atlas-i18n="${key}">${esc(i18n.t(key))}</span></div>`).join('');
   $('#atlas-nav').innerHTML=design.navigation(categories);
   function overview(){return design.overview();}
   function optionSelect(id,title,options,selected){return `<label>${title}<select id="${id}">${id==='atlas-sort'?'':'<option value="all">Mindegyik</option>'}${Object.entries(options).map(([k,v])=>`<option value="${esc(k)}" ${k===selected?'selected':''}>${esc(v)}</option>`).join('')}</select></label>`;}
@@ -111,7 +116,7 @@
     const entity=entries.filter(e=>e.record),guides=entries.filter(e=>e.href);
     const html=entity.length?paginated(entity):'';
     $('#atlas-result-status').textContent=`${entries.length} találat az egész tudástárban · ${entity.length} adatlap, ${guides.length} kalauzcikk / kérdés`;
-    return heading('A keresés eredménye','A kereső minden Atlas-kategóriában és a megőrzött kalauz teljes szövegében keres. Ékezet nélkül is használható.')+html+(!entries.length?'<div class="atlas-empty"><h4>Nincs ilyen találat.</h4><p>Próbálj más keresőkifejezést vagy kategóriát.</p><button type="button" id="atlas-reset">Szűrők törlése</button></div>':'')+(guides.length?`<h4 class="atlas-subheading">A kalauzban</h4><div class="atlas-guide-results">${guides.map(e=>`<a href="${e.href}"><h4>${esc(e.title)}</h4><p>${esc(e.excerpt)}</p><span>Útmutató megnyitása ↗</span></a>`).join('')}</div>`:'');
+    return heading('A keresés eredménye','A kereső minden Atlas-kategóriában és a megőrzött kalauz teljes szövegében keres. Ékezet nélkül is használható.')+html+(!entries.length?'<div class="atlas-empty"><h4>Nincs ilyen találat.</h4><p>Próbálj más keresőkifejezést vagy kategóriát.</p><button type="button" id="atlas-reset">Szűrők törlése</button></div>':'')+(guides.length?`<h4 class="atlas-subheading">${i18n.getLocale()==='en'?'In the guide':'A kalauzban'}</h4><div class="atlas-guide-results">${guides.map(e=>{const display=i18n.getLocale()==='en'&&e.english?e.english:e;return `<a href="${e.href}"><h4>${esc(display.title)}</h4><p>${esc(display.excerpt)}</p><span>${i18n.getLocale()==='en'?'Open guide':'Útmutató megnyitása'} ↗</span></a>`;}).join('')}</div>`:'');
   }
   function world(){
     const tabs=[['maps','Pályák','map'],['bosses','Bossok','boss'],['mobs','Ellenfelek','mob'],['dungeons','Kazamaták','dungeon']];
@@ -166,7 +171,9 @@
       <div class="atlas-conflict"><h4>Képek eredete és engedélyei</h4><p>A korábbi Creator Kit 12 eredeti grafikája (32 WebP-változat) megmaradt. A projekt korábbi nyilvántartása ezekhez felhasználási engedélyt rögzít. Az Atlas további ${db.images.length} eredeti nevű játékmentési grafikára hivatkozik; ezek nyilvános újraközlési engedélye nincs igazolva.</p><p>A ZIP-ben a kézikönyvben írt 47 helyett ténylegesen 48 WebP-kép található; mind azonos a meglévő mentési képekkel. Nem készítettünk újabb futásidejű másolatot. A képek pontos útvonala és hash-e a data/image-manifest.json jegyzékben szerepel.</p></div>`;
   }
   function render(){
-    $('#atlas-heading').textContent=state.query?'Keresési eredmények':pageTitle(state.page);
+    const headingKey=state.query?'workspace.searchResults':'navigation.'+state.page;
+    $('#atlas-heading').dataset.atlasI18n=headingKey;
+    $('#atlas-heading').textContent=i18n.t(headingKey);
     $('#atlas-screen').dataset.page=state.page;
     $('#atlas-clear').hidden=!state.query;
     document.querySelectorAll('[data-atlas-page]').forEach(a=>{const active=a.dataset.atlasPage===state.page;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});

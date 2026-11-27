@@ -2,6 +2,14 @@
   "use strict";
   const data = window.STONESTORM_CONTENT;
   if (!data) return;
+  const english = window.STONESTORM_GUIDE_EN;
+  const isEnglish = () => window.AtlasI18n?.getLocale() === "en";
+  const guideArticle = (article) =>
+    isEnglish() && english?.articles[article.id]
+      ? { ...article, ...english.articles[article.id] }
+      : article;
+  const guideFaq = (faq, index) =>
+    isEnglish() && english?.faq[index] ? english.faq[index] : faq;
   document.documentElement.classList.remove("no-js");
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => Array.from(document.querySelectorAll(selector));
@@ -15,6 +23,18 @@
     community: "Közösség",
     shop: "Kódok és Shop",
   };
+  const englishCategories = {
+    character: "Character",
+    start: "First steps",
+    daily: "Daily routine",
+    gear: "Equipment",
+    adventure: "Adventures",
+    community: "Community",
+    shop: "Codes and Shop",
+  };
+  const categoryName = (category) =>
+    (isEnglish() ? englishCategories : categories)[category] ||
+    (isEnglish() ? "Frequently asked question" : "Gyakori kérdés");
   const allowedFilters = ["all", ...Object.keys(categories)];
   let storageAvailable = true;
   let state = {
@@ -101,12 +121,17 @@
 
   const mediaItems = data.media || [];
   const mediaById = new Map(mediaItems.map((item) => [item.id, item]));
+  const guideMedia = (item) =>
+    isEnglish() && english?.media[item.id]
+      ? { ...item, ...english.media[item.id] }
+      : item;
   function mediaFigure(item, options = {}) {
+    item = guideMedia(item);
     const figure = node("figure", "guide-figure");
     const link = node("a", "image-trigger");
     link.href = "assets/images/" + item.stem + "-1920.webp";
     link.dataset.mediaId = item.id;
-    link.setAttribute("aria-label", item.title + " – kép nagyítása");
+    link.setAttribute("aria-label", item.title + (isEnglish() ? " – enlarge image" : " – kép nagyítása"));
     link.setAttribute("aria-haspopup", "dialog");
     const image = node("img");
     image.src = "assets/images/" + item.stem + "-640.webp";
@@ -126,7 +151,7 @@
     image.decoding = "async";
     const zoom = node("span", "image-zoom");
     zoom.setAttribute("aria-hidden", "true");
-    zoom.append(icon("search"), document.createTextNode("Nagyítás"));
+    zoom.append(icon("search"), document.createTextNode(isEnglish() ? "Zoom" : "Nagyítás"));
     link.append(image, zoom);
     figure.append(link);
     if (options.caption !== false)
@@ -136,11 +161,13 @@
   function renderMedia() {
     $$("[data-media-slot]").forEach((slot) => {
       const item = mediaById.get(slot.dataset.mediaSlot);
-      if (item) slot.append(mediaFigure(item));
+      if (item) slot.replaceChildren(mediaFigure(item));
     });
+    $("#world-gallery").replaceChildren();
     mediaItems
       .filter((item) => item.gallery)
-      .forEach((item) => {
+      .forEach((source) => {
+        const item = guideMedia(source);
         const card = node("article", "gallery-card");
         const copy = node("div", "gallery-card-copy");
         copy.append(
@@ -167,7 +194,8 @@
         event.altKey
       )
         return;
-      const item = mediaById.get(trigger.dataset.mediaId);
+      const source = mediaById.get(trigger.dataset.mediaId);
+      const item = source && guideMedia(source);
       if (!item) return;
       event.preventDefault();
       opener = trigger;
@@ -398,9 +426,10 @@
   }
 
   function renderLibrary() {
-    data.articles.forEach((article, index) => {
-      const details = node("details", "library-item");
-      details.id = "cikk-" + article.id;
+    data.articles.forEach((source, index) => {
+      const article = guideArticle(source);
+      const details = document.getElementById("cikk-" + source.id) || node("details", "library-item");
+      details.id = "cikk-" + source.id;
       const summary = node("summary");
       summary.append(
         node("span", null, String(index + 1).padStart(2, "0")),
@@ -408,7 +437,7 @@
       );
       const content = node("div", "article-body");
       content.append(
-        node("span", "article-tag", categories[article.category]),
+        node("span", "article-tag", categoryName(article.category)),
         node("p", null, article.intro),
       );
       mediaItems
@@ -423,18 +452,19 @@
         content.append(list);
       });
       if (article.tip)
-        content.append(node("p", "inline-tip", "Tipp · " + article.tip));
-      details.append(summary, content);
-      $("#article-library").append(details);
+        content.append(node("p", "inline-tip", (isEnglish() ? "Tip · " : "Tipp · ") + article.tip));
+      details.replaceChildren(summary, content);
+      if (!details.parentNode) $("#article-library").append(details);
     });
-    data.faq.forEach((faq, index) => {
-      const details = node("details", "faq-item");
+    data.faq.forEach((source, index) => {
+      const faq = guideFaq(source, index);
+      const details = document.getElementById("gyik-" + index) || node("details", "faq-item");
       details.id = "gyik-" + index;
-      details.append(
+      details.replaceChildren(
         node("summary", null, faq.question),
         node("p", null, faq.answer),
       );
-      $("#faq-list").append(details);
+      if (!details.parentNode) $("#faq-list").append(details);
     });
   }
   const normalize = (text) =>
@@ -443,19 +473,19 @@
       .replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("hu-HU")
       .replace(/[’‘]/g, "'");
+  const articleText = (article) => [
+    article.title,
+    article.intro,
+    ...article.sections.flatMap((s) => [s.heading || "", ...s.items]),
+    article.tip || "",
+  ].join(" ");
   const searchIndex = data.articles.map((article) => ({
     title: article.title,
     category: article.category,
     href: "#cikk-" + article.id,
     excerpt: article.intro,
-    searchable: normalize(
-      [
-        article.title,
-        article.intro,
-        ...article.sections.flatMap((s) => [s.heading || "", ...s.items]),
-        article.tip || "",
-      ].join(" "),
-    ),
+    source: article,
+    searchable: normalize(articleText(article) + " " + (english?.articles[article.id] ? articleText(english.articles[article.id]) : "")),
   }));
   data.faq.forEach((faq, index) =>
     searchIndex.push({
@@ -463,7 +493,8 @@
       category: "faq",
       href: "#gyik-" + index,
       excerpt: faq.answer,
-      searchable: normalize(faq.question + " " + faq.answer),
+      faqIndex: index,
+      searchable: normalize(faq.question + " " + faq.answer + " " + (english?.faq[index]?.question || "") + " " + (english?.faq[index]?.answer || "")),
     }),
   );
   function renderSearch() {
@@ -482,7 +513,7 @@
     if (!filtering) {
       $("#search-status").textContent =
         data.articles.length +
-        " kereshető fejezet · A kereső az ékezet nélküli szavakat is felismeri.";
+        (isEnglish() ? " searchable chapters · Search also works without accents." : " kereshető fejezet · A kereső az ékezet nélküli szavakat is felismeri.");
       return;
     }
     const matches = searchIndex.filter(
@@ -490,19 +521,17 @@
         (state.filter === "all" || state.filter === article.category) &&
         tokens.every((token) => article.searchable.includes(token)),
     );
-    $("#search-status").textContent =
-      matches.length +
-      " találat" +
-      (query ? " a(z) „" + query + "” keresésre" : " a kiválasztott témában") +
-      ".";
+    $("#search-status").textContent = isEnglish()
+      ? matches.length + (query ? " results for “" + query + "”." : " results in the selected topic.")
+      : matches.length + " találat" + (query ? " a(z) „" + query + "” keresésre" : " a kiválasztott témában") + ".";
     if (!matches.length) {
       const empty = node("div", "empty-state");
       empty.append(
-        node("h3", null, "Erre most nincs találat."),
+        node("h3", null, isEnglish() ? "No results found." : "Erre most nincs találat."),
         node(
           "p",
           null,
-          "Próbálj rövidebb kifejezést, például: energia, Spirit Stone vagy Mage. A témaszűrőt is visszaállíthatod.",
+          isEnglish() ? "Try a shorter term, such as energy, Spirit Stone or Mage. You can also reset the topic filter." : "Próbálj rövidebb kifejezést, például: energia, Spirit Stone vagy Mage. A témaszűrőt is visszaállíthatod.",
         ),
       );
       results.append(empty);
@@ -511,17 +540,18 @@
     matches.forEach((article) => {
       const a = node("a", "search-result");
       a.href = article.href;
+      const translation = article.source ? guideArticle(article.source) : guideFaq(data.faq[article.faqIndex], article.faqIndex);
+      const title = translation.title || translation.question;
+      const text = translation.intro || translation.answer;
       const excerpt =
-        article.excerpt.length > 210
-          ? article.excerpt.slice(0, 207) + "…"
-          : article.excerpt;
+        text.length > 210 ? text.slice(0, 207) + "…" : text;
       a.append(
-        node("h3", null, article.title),
+        node("h3", null, title),
         node("p", null, excerpt),
         node(
           "small",
           null,
-          (categories[article.category] || "Gyakori kérdés") + " · Megnyitás →",
+          categoryName(article.category) + (isEnglish() ? " · Open →" : " · Megnyitás →"),
         ),
       );
       a.addEventListener("click", () => {
@@ -567,19 +597,24 @@
   function setupNavigation() {
     const toggle = $("#menu-toggle"),
       nav = $("#main-nav");
+    function setMenuLabel(open) {
+      const key = open ? "header.closeNavigation" : "header.openNavigation";
+      toggle.dataset.atlasI18nLabel = key;
+      toggle.setAttribute(
+        "aria-label",
+        globalThis.AtlasI18n?.t(key) ?? (open ? "Navigáció bezárása" : "Navigáció megnyitása"),
+      );
+    }
     function closeMenu(returnFocus) {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Navigáció megnyitása");
+      setMenuLabel(false);
       if (returnFocus) toggle.focus();
     }
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
       toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute(
-        "aria-label",
-        open ? "Navigáció bezárása" : "Navigáció megnyitása",
-      );
+      setMenuLabel(open);
       nav.classList.toggle("open", open);
     });
     nav.addEventListener("click", (event) => {
@@ -650,6 +685,11 @@
   setupLightbox();
   setupSearch();
   setupNavigation();
+  window.AtlasI18n?.onChange(() => {
+    renderLibrary();
+    renderSearch();
+    renderMedia();
+  });
   window.addEventListener("hashchange", revealHash);
   revealHash();
 })();
