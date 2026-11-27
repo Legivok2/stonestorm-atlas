@@ -30,9 +30,9 @@ GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stone
 
 A teljes statikus kiadás: `npm run build:pages`, ellenőrzése: `npm run test:pages`. A workflow minden main-push után ezt telepíti. Hiányzó adat vagy közzétételi felhatalmazás esetén leáll, nem cseréli le az oldalt a korábbi kalauzkiadásra.
 
-**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a kezdőkalauzban, mind a 26 cikkben és mind a 10 GYIK-bejegyzésben is azonnal vált; a nyelv a böngészőben mentődik. A teljes Atlas-adatlapok és több adatvezérelt felület még nem teljesen lokalizált. A kísérőnevek a mentett hivatalos kliensfordításból származnak; más, nem igazolt játéknevek eredeti nyelven maradhatnak.
+**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a teljes kezdőkalauzt (26 cikket és 10 GYIK-bejegyzést), valamint a Felszerelések és Szettcsaládok listáit, szűrőit és adatlapjait is azonnal váltja; a nyelv a böngészőben mentődik. Az angol itemnevek nem szerepelnek a mentett adatokban, ezért az eredeti játékbeli magyar nevek maradnak; ritkaságmező sincs a felszerelésadatokban, így a meglévő tier látható. Más dinamikus Atlas-felületek még nem teljesen lokalizáltak.
 
-**Atlas HU/EN support:** the Magyar / English selector immediately switches the beginner guide, all 26 articles and all 10 FAQ entries; the preference is stored in the browser. Atlas data details and several data-driven interfaces are not yet fully localized. Companion names come from the saved official client translations; other game names without verified translations may remain in their original language.
+**Atlas HU/EN support:** the Magyar / English selector immediately switches the complete beginner guide (26 articles and 10 FAQ entries) and the Equipment and Equipment Sets lists, filters and detail pages; the preference is stored in the browser. No English equipment names are present in the saved data, so the original in-game Hungarian names are retained; the equipment data also has no rarity field, so the existing tier is shown instead. Other dynamic Atlas interfaces are not yet fully localized.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 

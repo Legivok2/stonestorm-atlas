@@ -7,20 +7,23 @@
   const $=s=>document.querySelector(s);
   if(!db||!math){$('#atlas-screen').textContent='Az Atlas adatai nem töltődtek be. Ellenőrizd a js/atlas-data.js fájlt.';return;}
   const i18n=globalThis.AtlasI18n;
+  const t=(key,params)=>i18n.t(key,params);
   $('#atlas-data-version').dataset.atlasI18n='workspace.dataVersion';
   $('#atlas-data-version').dataset.version=db.dataVersion;
   $('#atlas-data-version').textContent=i18n.t('workspace.dataVersion',{version:db.dataVersion});
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('hu');
-  const num=v=>v===null||v===undefined||!Number.isFinite(Number(v))?'Nem ismert':Number(v).toLocaleString('hu-HU',{maximumFractionDigits:2});
-  const exact=v=>Number.isFinite(v)?esc(String(v)):'Nem ismert';
-  const pct=v=>v===null||v===undefined?'Nem ismert':num(v*100)+'%';
+  const num=v=>v===null||v===undefined||!Number.isFinite(Number(v))?t('common.unknown'):i18n.formatNumber(Number(v),{maximumFractionDigits:2});
+  const exact=v=>Number.isFinite(v)?esc(i18n.formatNumber(v,{useGrouping:false,maximumFractionDigits:20})):t('common.unknown');
+  const pct=v=>v===null||v===undefined?t('common.unknown'):num(v*100)+'%';
   const slots=db.labels.slots, rarities={common:'Gyakori',rare:'Ritka',heroic:'Hősi',unique:'Egyedi'};
+  const slotName=id=>t('equipment.slot.'+id);
   const classNames=Object.fromEntries(db.classes.map(x=>[x.id,x.name]));
+  for(const entry of db.classes)Object.defineProperty(classNames,entry.id,{enumerable:true,configurable:true,get:()=>t('equipment.class.'+entry.id)});
   const buildingEffects={hq:'Céhtagok férőhelye',forge:'Kovácsolási bónusz',dojo:'XP-bónusz',warehouse:'Nyangbónusz',banner:'Céhes portyatámadás'};
   const statNames={atkMin:'Min. sebzés',atkMax:'Max. sebzés',def:globalThis.StonestormBonuses.byId.defence.name,maxSp:'Max. mana',str:'Erő',dex:'Ügyesség',vit:'Vitalitás',int:'Intelligencia',xpMult:'XP-bónusz',nyangMult:'Nyangbónusz',atkMult:'Sebzésbónusz',hpMult:'Életerőbónusz',defMult:'Védelembónusz',critBonus:'Kritikus esély',evadeBonus:'Kitérés',vsHuman:'Emberek ellen',dropMult:'Zsákmánybónusz',ignoreDef:'Védelemáttörés',spCost:'Manaköltség',every:'Ütések közötti gyakoriság',hits:'Találatok száma',mult:'Sebzésszorzó'};
   Object.assign(statNames,Object.fromEntries(globalThis.StonestormBonuses.entries.map(entry=>[entry.id,entry.name])));
-  const label=k=>statNames[k]??k;
+  const label=k=>i18n.dictionaries[i18n.getLocale()]['stat.'+k]??statNames[k]??k;
   // Százalékos statisztikák kulcs szerint, nem az érték nagysága alapján.
   const fraction=k=>globalThis.StonestormBonuses.byId[k]?.unit==='percent'||/Mult$|Bonus$|^vs[A-Z]|^(crit|potionHeal|skillDamage|lifesteal|ignoreDef)$/.test(k);
   const value=(k,v)=>fraction(k)?pct(v):num(v);
@@ -30,7 +33,7 @@
   const categories=[
     ['overview','Áttekintés','btn_help','book'],['equipment','Felszerelések','btn_character','swords'],['sets','Szettcsaládok','emblem_storm','shield'],['pets','Kísérők',null,'claw'],['mounts','Hátasok',null,'compass'],['world','Világ és bossok','btn_hunt','compass'],['guild','Céhrendszer','btn_guild','shield'],['home','Otthon és kutatás','btn_city','book'],['mechanics','Energia és fejlődés','energy','spark'],['classes','Kasztok és királyságok','btn_arena','swords'],['materials','Anyagok és tárgyak','btn_premium','anvil'],...(globalThis.AtlasExtensions?.categories??[]),['sources','Források és státusz','btn_help','book']
   ];
-  const pageTitle=id=>categories.find(x=>x[0]===id)?.[1]??'Atlas';
+  const pageTitle=id=>id==='equipment'||id==='sets'?t('navigation.'+id):categories.find(x=>x[0]===id)?.[1]??'Atlas';
   const glyph=(type)=>icon(({weapon:'swords',armor:'shield',helmet:'shield',shield:'shield',boots:'compass',bracelet:'sun',necklace:'spark',earrings:'moon',pet:'claw',mount:'compass',set:'shield',map:'compass',mob:'claw',boss:'claw',dungeon:'book',material:'anvil',research:'book',class:'swords',skill:'spark'})[type]??'book');
   const chip=(s,cls='')=>`<span class="atlas-chip ${esc(cls)}">${esc(s)}</span>`;
   const notice=s=>`<p class="atlas-notice">${esc(s)}</p>`;
@@ -38,15 +41,35 @@
   const statRows=obj=>rows(Object.entries(obj??{}).map(([k,v])=>[label(k),value(k,v)]));
   const table=(heads,body)=>`<div class="atlas-table-wrap"><table class="atlas-table"><thead><tr>${heads.map(x=>`<th scope="col">${esc(x)}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   const route=(page,kind,id)=>`#atlas/${page}${kind?'/'+kind+'/'+encodeURIComponent(id):''}`;
-  const link=(page,kind,x,text)=>{if(!x)return notice('Nincs kapcsolt adat a forrásban.');const key=text==null?i18n.gameNameKey(kind,x):null;return `<a class="atlas-inline-link" href="${route(page,kind,x.id)}"><span ${key?`data-atlas-i18n="${esc(key)}"`:''}>${esc(key?i18n.t(key):text??x.name??x.id)}</span> ↗</a>`;};
-  const heading=(title,copy)=>`<div class="atlas-page-heading"><p class="eyebrow">STONESTORM / KÓDEX</p><h3>${esc(title)}</h3><p>${esc(copy)}</p></div>`;
+  const link=(page,kind,x,text)=>{if(!x)return notice('Nincs kapcsolt adat a forrásban.');const key=text==null?i18n.gameNameKey(kind,x):null;const display=kind==='set'&&x.nameIsEditorial&&i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):key?i18n.t(key):text??x.name??x.id;return `<a class="atlas-inline-link" href="${route(page,kind,x.id)}"><span ${key?`data-atlas-i18n="${esc(key)}"`:''}>${esc(display)}</span> ↗</a>`;};
+  const heading=(title,copy)=>`<div class="atlas-page-heading"><p class="eyebrow">${t('common.codex')}</p><h3>${esc(title)}</h3><p>${esc(copy)}</p></div>`;
   const petUI=globalThis.AtlasPetUI.init({db,media,esc,num,pct,chip,notice,rows,table,link});
-  const sourceNote=x=>`<div class="atlas-source-note">${chip(!x.name?'Részben ellenőrzött adat · névhiány':x.provenance?.status==='derived'?'Képletből számolt adat':'Ellenőrzött adat · mentett forrás',!x.name?'unknown':'verified')}<p>${esc(x.provenance?.source??'ATLAS_VSCODE_KEZIKONYV.md')}<br />${esc(x.provenance?.checkedAt??db.updated)} · A pillanatképben ellenőrzött, az élő szerveren eltérhet.</p></div>`;
+  const sourceNote=x=>`<div class="atlas-source-note">${chip(t(!x.name?'common.sourcePartial':x.provenance?.status==='derived'?'common.sourceDerived':'common.sourceVerified'),!x.name?'unknown':'verified')}<p>${esc(x.provenance?.source??'ATLAS_VSCODE_KEZIKONYV.md')}<br />${esc(x.provenance?.checkedAt??db.updated)} · ${esc(t('common.sourceSnapshot'))}</p></div>`;
   const design=globalThis.AtlasDesign.init({db,media,esc,num,pct,icon,chip,slots,rarities,classNames,route,label,value,notice});
   const state={page:'overview',query:'',searchCategory:'all',slot:'all',character:'all',rarity:'all',maxLevel:'',sort:'name',pageNumber:1,world:'maps'};
   const collections={equipment:['item',db.items],sets:['set',db.sets],pets:['pet',db.pets],mounts:['mount',db.mounts],materials:['material',db.economy.stackables],classes:['class',db.classes]};
   const allEntries=[];
-  const add=(page,kind,list)=>list.forEach(x=>{const key=i18n.gameNameKey(kind,x);allEntries.push({page,kind,record:x,title:x.name??x.id,text:norm([x.name,x.id,key?i18n.dictionaries.en[key]:'',x.descriptionHu,x.description,x.level,x.rarity,rarities[x.rarity],slots[x.slot],...(x.classes??[]).map(c=>classNames[c]),JSON.stringify(x.values??{}),JSON.stringify(x.perLevel??{})].join(' '))});});
+  const dictionaryValues=key=>[i18n.dictionaries.hu[key],i18n.dictionaries.en[key]].filter(Boolean);
+  const setTitle=x=>i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):x.name;
+  const searchText=(kind,x)=>{
+    const values=[x.name,x.nameHu,x.nameEn,x.id,x.descriptionHu,x.description,x.level,x.rarity,JSON.stringify(x.values??{}),JSON.stringify(x.perLevel??{})];
+    if(kind==='item'){
+      values.push(...dictionaryValues('navigation.equipment'),'felszerelés','felszerelések','gear','item',slots[x.slot],...dictionaryValues('equipment.slot.'+x.slot));
+      for(const classId of x.classes??[])values.push(...dictionaryValues('equipment.class.'+classId));
+      for(const [key,value] of Object.entries(x.values??{}))if(value!==0)values.push(...dictionaryValues('stat.'+key));
+      if(x.tier!==undefined)values.push('tier','fokozat','t'+x.tier,String(x.tier));
+      if(x.family)values.push('set','sets','equipment set','szett','szettek','szettcsalád',...db.items.filter(item=>item.family===x.family).map(item=>item.name));
+    }
+    if(kind==='set'){
+      values.push(setTitle(x),...dictionaryValues('sets.copy'),'set','sets','equipment set','szett','szettek','szettcsalád');
+      values.push(...dictionaryValues('sets.mapName.'+x.familyId));
+      for(const slot of x.slots)values.push(slots[slot],...dictionaryValues('equipment.slot.'+slot));
+      for(const stat of x.bonuses.flatMap(b=>b.stats))values.push(...dictionaryValues('stat.'+stat.stat));
+      values.push(...db.items.filter(item=>item.family===x.familyId).map(item=>item.name));
+    }
+    return norm(values.join(' '));
+  };
+  const add=(page,kind,list)=>list.forEach(x=>{const key=i18n.gameNameKey(kind,x);allEntries.push({page,kind,record:x,title:kind==='set'?setTitle(x):x.name??x.id,text:norm([searchText(kind,x),key?i18n.dictionaries.en[key]:''].join(' '))});});
   Object.entries(collections).forEach(([p,[k,list]])=>add(p,k,list));
   [['map','maps'],['mob','mobs'],['boss','bosses'],['dungeon','dungeons']].forEach(([k,p])=>add('world',k,db[p]));
   add('home','research',db.research);
@@ -61,17 +84,18 @@
   $('#atlas-stats').innerHTML=[[db.items.length,'sidebar.items'],[db.pets.length,'sidebar.pets'],[db.mounts.length,'sidebar.mounts'],[db.mobs.length,'sidebar.enemies'],[db.guild.buildings.length,'sidebar.buildings']].map(([n,key])=>`<div><strong>${num(n)}</strong><span data-atlas-i18n="${key}">${esc(i18n.t(key))}</span></div>`).join('');
   $('#atlas-nav').innerHTML=design.navigation(categories);
   function overview(){return design.overview();}
-  function optionSelect(id,title,options,selected){return `<label>${title}<select id="${id}">${id==='atlas-sort'?'':'<option value="all">Mindegyik</option>'}${Object.entries(options).map(([k,v])=>`<option value="${esc(k)}" ${k===selected?'selected':''}>${esc(v)}</option>`).join('')}</select></label>`;}
+  function optionSelect(id,title,options,selected){return `<label>${esc(title)}<select id="${id}">${id==='atlas-sort'?'':`<option value="all">${esc(t('common.all'))}</option>`}${Object.entries(options).map(([k,v])=>`<option value="${esc(k)}" ${k===selected?'selected':''}>${esc(v)}</option>`).join('')}</select></label>`;}
   function controls(){
     if(!collections[state.page] && state.page!=='world')return '';
-    return `<div class="atlas-filters">${state.page==='equipment'?optionSelect('atlas-slot','Felszerelési hely',slots,state.slot)+optionSelect('atlas-class','Kaszt',classNames,state.character):''}${state.page==='pets'?optionSelect('atlas-rarity','Ritkaság',rarities,state.rarity):''}${state.page==='equipment'?`<label>Legfeljebb ennyi szint<input id="atlas-max-level" type="number" min="1" max="999" placeholder="Bármelyik" value="${esc(state.maxLevel)}" /></label>`:''}${optionSelect('atlas-sort','Rendezés',{name:'Név: A → Z',level:'Szint: növekvő',levelDesc:'Szint: csökkenő'},state.sort)}</div>`;
+    const sortOptions={name:t('common.sort.name'),level:t('common.sort.level'),levelDesc:t('common.sort.levelDesc')};
+    return `<div class="atlas-filters">${state.page==='equipment'?optionSelect('atlas-slot',t('equipment.filter.slot'),Object.fromEntries(Object.keys(slots).map(id=>[id,slotName(id)])),state.slot)+optionSelect('atlas-class',t('equipment.filter.class'),classNames,state.character):''}${state.page==='pets'?optionSelect('atlas-rarity','Ritkaság',rarities,state.rarity):''}${state.page==='equipment'?`<label>${t('equipment.filter.maxLevel')}<input id="atlas-max-level" type="number" min="1" max="999" placeholder="${esc(t('equipment.anyLevel'))}" value="${esc(state.maxLevel)}" /></label>`:''}${optionSelect('atlas-sort',t('common.sort'),sortOptions,state.sort)}</div>`;
   }
   const summary=(kind,x)=>{
-    if(kind==='item')return `${slots[x.slot]} · ${x.level}. szint`;
+    if(kind==='item')return `${slotName(x.slot)} · ${t('equipment.itemSummary',{level:num(x.level)})}`;
     if(kind==='pet')return `${rarities[x.rarity]??x.rarity} · ${x.map}. pálya`;
     if(kind==='mount'&&x.ramp)return 'Szintfüggő kliensbeállítás · hatás ellenőrizendő';
     if(kind==='mount')return `${x.level}. szint · −${num((1-x.travelMult)*100)}% utazási idő`;
-    if(kind==='set')return `${x.itemLevel}. szint · ${x.slots.length} felszerelési hely`;
+    if(kind==='set')return t('sets.summary',{level:num(x.itemLevel),count:num(x.slots.length)});
     if(kind==='map')return `${x.minLevel}–${x.maxLevel}. szint · ${x.spots.length} helyszín`;
     if(kind==='boss')return `${x.recommendedLevel}. ajánlott szint · ${x.mapIndex}. pálya`;
     if(kind==='mob')return `${num(x.level)} szint · ${num(x.maxHp)} HP`;
@@ -84,19 +108,19 @@
   const itemSummary=x=>Object.entries(x.values??{}).filter(([,v])=>v!==0).slice(0,2).map(([k,v])=>label(k)+' '+value(k,v)).join(' · ');
   function card(entry){
     const {page,kind,record:x}=entry;
-    const desc=kind==='item'?itemSummary(x):kind==='pet'?petUI.cardSummary(x):kind==='mount'?num(x.price)+' '+x.currency+' / '+x.days+' nap':kind==='mob'?num(x.xp)+' XP · '+num(x.nyangMin)+'–'+num(x.nyangMax)+' nyang':kind==='research'?Object.entries(x.reward).map(([k,v])=>label(k)+' +'+value(k,v)).join(' · '):kind==='map'?db.bosses.find(b=>b.mapIndex===x.index)?.name:kind==='dungeon'?x.description:kind==='material'?db.economy.stackKindNames[x.kind]?.hint:kind==='set'?x.bonuses.map(b=>b.pieces+' db: '+b.stats.map(s=>label(s.stat)+' +'+value(s.stat,s.value)).join(', ')).join(' · '):'';
+    const desc=kind==='item'?itemSummary(x):kind==='pet'?petUI.cardSummary(x):kind==='mount'?num(x.price)+' '+x.currency+' / '+x.days+' nap':kind==='mob'?num(x.xp)+' XP · '+num(x.nyangMin)+'–'+num(x.nyangMax)+' nyang':kind==='research'?Object.entries(x.reward).map(([k,v])=>label(k)+' +'+value(k,v)).join(' · '):kind==='map'?db.bosses.find(b=>b.mapIndex===x.index)?.name:kind==='dungeon'?x.description:kind==='material'?db.economy.stackKindNames[x.kind]?.hint:kind==='set'?x.bonuses.map(b=>t('sets.pieces',{count:num(b.pieces)})+': '+b.stats.map(s=>label(s.stat)+' +'+value(s.stat,s.value)).join(', ')).join(' · '):'';
     const catalogImage=media?.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:x.id);
     const image=catalogImage?null:((kind==='boss'&&x.mobId==='m4_boss')||(kind==='mob'&&x.id==='m4_boss')?'m4_boss':null);
     return design.card(entry,desc,summary(kind,x),glyph(kind==='item'?x.slot:kind));
   }
 
-  function sorted(list){return [...list].sort((a,b)=>state.sort==='name'?(a.title??a.record.name??a.record.id).localeCompare(b.title??b.record.name??b.record.id,'hu'):(state.sort==='levelDesc'?-1:1)*((a.record.level??a.record.minLevel??a.record.itemLevel??a.record.recommendedLevel??0)-(b.record.level??b.record.minLevel??b.record.itemLevel??b.record.recommendedLevel??0)));}
+  function sorted(list){const name=entry=>entry.kind==='set'?setTitle(entry.record):entry.record.name??entry.record.id;return [...list].sort((a,b)=>state.sort==='name'?name(a).localeCompare(name(b),i18n.getLocale()):(state.sort==='levelDesc'?-1:1)*((a.record.level??a.record.minLevel??a.record.itemLevel??a.record.recommendedLevel??0)-(b.record.level??b.record.minLevel??b.record.itemLevel??b.record.recommendedLevel??0)));}
   function paginated(entries){
     const list=sorted(entries),count=Math.ceil(list.length/24);
     state.pageNumber=Math.max(1,Math.min(state.pageNumber,count||1));
-    $('#atlas-result-status').textContent=`${list.length} találat${list.length?` · ${state.pageNumber}. oldal / ${count}`:''}`;
-    if(!list.length)return `<div class="atlas-empty">${icon('search')}<h4>Nincs ilyen találat.</h4><p>Próbálj más nevet vagy azonosítót, vagy állítsd vissza a szűrőket.</p><button type="button" id="atlas-reset">Szűrők törlése</button></div>`;
-    return `<div class="atlas-card-grid">${list.slice((state.pageNumber-1)*24,state.pageNumber*24).map(card).join('')}</div>${count>1?`<div class="atlas-pagination"><button type="button" data-pagination="-1" ${state.pageNumber===1?'disabled':''}>← Előző</button><span>${state.pageNumber} / ${count}</span><button type="button" data-pagination="1" ${state.pageNumber===count?'disabled':''}>Következő →</button></div>`:''}`;
+    $('#atlas-result-status').textContent=`${t('common.results',{count:num(list.length)})}${list.length?` · ${t('common.page',{page:num(state.pageNumber),pages:num(count)})}`:''}`;
+    if(!list.length)return `<div class="atlas-empty">${icon('search')}<h4>${t('common.noResults')}</h4><p>${t('common.tryOtherSearch')}</p><button type="button" id="atlas-reset">${t('common.resetFilters')}</button></div>`;
+    return `<div class="atlas-card-grid">${list.slice((state.pageNumber-1)*24,state.pageNumber*24).map(card).join('')}</div>${count>1?`<div class="atlas-pagination"><button type="button" data-pagination="-1" ${state.pageNumber===1?'disabled':''}>${t('common.previous')}</button><span>${num(state.pageNumber)} / ${num(count)}</span><button type="button" data-pagination="1" ${state.pageNumber===count?'disabled':''}>${t('common.next')}</button></div>`:''}`;
   }
   function collection(){
     const [kind,list]=collections[state.page];
@@ -108,15 +132,15 @@
     if(state.page==='classes')extra=`<h4 class="atlas-subheading">Három királyság</h4><div class="atlas-kingdoms">${db.kingdoms.map(k=>`<article class="kingdom-${k}"><h4>${esc(db.kingdomNames[k].name)}</h4><p>${esc(db.kingdomNames[k].motto)}</p></article>`).join('')}</div><a class="atlas-inline-link" href="#karakteralkotas">Kaszt-összehasonlítás a kalauzban →</a>`;
     if(state.page==='mounts')extra=travelTool();
     if(state.page==='materials')extra=`<div class="atlas-resource-ribbon"><div>${art('nyang_small','Nyang')}<span>Nyang</span></div><div>${art('coin_dragon','Viharérme')}<span>Viharérme</span></div><div>${art('luck_ore','Szerencseérc')}<span>Szerencseérc · kovácsolási segédanyag</span></div></div>`;
-    const copies={equipment:'Fegyverek, vértek és ékszerek. Szűrj kaszt és szint szerint, és találd meg a következő felszerelésed.',sets:'Ismerd meg a 2, 4 és 6 darabbal aktiválódó bónuszokat, a kapcsolódó tárgyakat és bossokat.',pets:'Fajbónuszok, ritkaságok, alaptulajdonságok és fejlődési adatok.',mounts:'A hátas az utazási időt módosítja. Energiacsökkentő hatása nem igazolt.',classes:'Magyar kasztnevek a kliensfordításból, az eredeti kalauz megőrzött összehasonlítójával.',materials:'A teljes, 131 elemes alapanyag- és fogyóeszközlista magyar nevekkel.'};
+    const copies={equipment:t('equipment.copy'),sets:t('sets.copy'),pets:'Fajbónuszok, ritkaságok, alaptulajdonságok és fejlődési adatok.',mounts:'A hátas az utazási időt módosítja. Energiacsökkentő hatása nem igazolt.',classes:'Magyar kasztnevek a kliensfordításból, az eredeti kalauz megőrzött összehasonlítójával.',materials:'A teljes, 131 elemes alapanyag- és fogyóeszközlista magyar nevekkel.'};
     return heading(pageTitle(state.page),copies[state.page])+(state.page==='pets'?paginated(entries)+`<details class="pet-guide-fold" id="pet-guide"><summary>Fejlődési útmutató · formák, etetés és képességek</summary>${extra}</details>`:paginated(entries)+extra);
   }
   function globalSearch(){
     const entries=allEntries.filter(matches).filter(e=>state.searchCategory==='all'||e.page===state.searchCategory);
     const entity=entries.filter(e=>e.record),guides=entries.filter(e=>e.href);
     const html=entity.length?paginated(entity):'';
-    $('#atlas-result-status').textContent=`${entries.length} találat az egész tudástárban · ${entity.length} adatlap, ${guides.length} kalauzcikk / kérdés`;
-    return heading('A keresés eredménye','A kereső minden Atlas-kategóriában és a megőrzött kalauz teljes szövegében keres. Ékezet nélkül is használható.')+html+(!entries.length?'<div class="atlas-empty"><h4>Nincs ilyen találat.</h4><p>Próbálj más keresőkifejezést vagy kategóriát.</p><button type="button" id="atlas-reset">Szűrők törlése</button></div>':'')+(guides.length?`<h4 class="atlas-subheading">${i18n.getLocale()==='en'?'In the guide':'A kalauzban'}</h4><div class="atlas-guide-results">${guides.map(e=>{const display=i18n.getLocale()==='en'&&e.english?e.english:e;return `<a href="${e.href}"><h4>${esc(display.title)}</h4><p>${esc(display.excerpt)}</p><span>${i18n.getLocale()==='en'?'Open guide':'Útmutató megnyitása'} ↗</span></a>`;}).join('')}</div>`:'');
+    $('#atlas-result-status').textContent=t('common.globalSearchStatus',{count:num(entries.length),records:num(entity.length),guide:num(guides.length)});
+    return heading(t('common.globalSearchTitle'),t('common.globalSearchCopy'))+html+(!entries.length?`<div class="atlas-empty"><h4>${t('common.noResults')}</h4><p>${t('common.tryOtherSearch')}</p><button type="button" id="atlas-reset">${t('common.resetFilters')}</button></div>`:'')+(guides.length?`<h4 class="atlas-subheading">${t('common.inGuide')}</h4><div class="atlas-guide-results">${guides.map(e=>{const display=i18n.getLocale()==='en'&&e.english?e.english:e;return `<a href="${e.href}"><h4>${esc(display.title)}</h4><p>${esc(display.excerpt)}</p><span>${t('common.openGuide')} ↗</span></a>`;}).join('')}</div>`:'');
   }
   function world(){
     const tabs=[['maps','Pályák','map'],['bosses','Bossok','boss'],['mobs','Ellenfelek','mob'],['dungeons','Kazamaták','dungeon']];
@@ -177,7 +201,7 @@
     $('#atlas-screen').dataset.page=state.page;
     $('#atlas-clear').hidden=!state.query;
     document.querySelectorAll('[data-atlas-page]').forEach(a=>{const active=a.dataset.atlasPage===state.page;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-    $('#atlas-controls').innerHTML=state.query?`<div class="atlas-filters">${optionSelect('atlas-search-category','Keresés ebben a kategóriában',Object.fromEntries([...categories.filter(x=>x[0]!=='overview').map(x=>[x[0],x[1]]),['guide','Kezdőkalauz és GYIK']]),state.searchCategory)}${optionSelect('atlas-sort','Rendezés',{name:'Név: A → Z',level:'Szint: növekvő',levelDesc:'Szint: csökkenő'},state.sort)}</div>`:controls();
+    $('#atlas-controls').innerHTML=state.query?`<div class="atlas-filters">${optionSelect('atlas-search-category',t('common.searchInCategory'),Object.fromEntries([...categories.filter(x=>x[0]!=='overview').map(([id])=>[id,t('navigation.'+id)]),['guide',t('common.guideCategory')]]),state.searchCategory)}${optionSelect('atlas-sort',t('common.sort'),{name:t('common.sort.name'),level:t('common.sort.level'),levelDesc:t('common.sort.levelDesc')},state.sort)}</div>`:controls();
     $('#atlas-result-status').textContent='';
     const screens={overview,guild,home,mechanics,sources,world,...extension.screens};
     $('#atlas-screen').innerHTML=state.query?globalSearch():collections[state.page]?collection():(screens[state.page]??overview)();
@@ -193,11 +217,12 @@
     let x=allEntries.find(e=>e.kind===kind&&e.record?.id===id)?.record,body='',image='';
     if(!x)return null;
     if(kind==='item'){
-      body=related('Alapstatisztikák',statRows(x.values))+related('Követelmények és árak',rows([['Felszerelési hely',slots[x.slot]],['Szint',num(x.level)],['Kaszt',(x.classes??[]).map(c=>classNames[c]??c).join(', ')||'Minden kaszt'],['Fokozat (tier)','T'+x.tier],['Vételár',num(x.buyPrice)+' nyang'],['Eladási ár',num(x.sellPrice)+' nyang']]))+
-        related('Fejlesztés',table(['Következő +fokozat','Alapesély a tárgy tierje szerint'],(db.forge.chancesByTier[x.tier]??db.forge.chances).map((v,i)=>[i+1,pct(v)]))+notice('Mentett alapkonfiguráció; segédanyagok, események és további szabályok módosíthatják az esélyt. A teljes fejlesztési költséget ez nem igazolja.'))+
-        related('Szettkapcsolat',x.family?db.sets.filter(s=>s.familyId===x.family).map(s=>link('sets','set',s)).join(' '):notice('Ehhez a tárgyhoz nincs family mezőben igazolt szettkapcsolat.'));
+      body=related(t('equipment.baseStats'),statRows(x.values))+related(t('equipment.requirementsPrices'),rows([[t('equipment.slot'),slotName(x.slot)],[t('equipment.level'),num(x.level)],[t('equipment.class'),(x.classes??[]).map(c=>classNames[c]??c).join(', ')||t('equipment.anyClass')],[t('equipment.tier'),'T'+x.tier],[t('equipment.buyPrice'),num(x.buyPrice)+' '+t('equipment.currency')],[t('equipment.sellPrice'),num(x.sellPrice)+' '+t('equipment.currency')]]))+
+        related(t('equipment.upgrade'),table([t('equipment.nextTier'),t('equipment.baseChance')],(db.forge.chancesByTier[x.tier]??db.forge.chances).map((v,i)=>[num(i+1),pct(v)]))+notice(t('equipment.forgeNotice'))) +
+        related(t('equipment.setRelationship'),x.family?db.sets.filter(s=>s.familyId===x.family).map(s=>link('sets','set',s)).join(' '):notice(t('equipment.noVerifiedSet')));
     }else if(kind==='set'){
-      body=notice('A cím pályanévből képzett szerkesztői címke, nem igazolt hivatalos szettnév.')+related('Szettbónuszok',x.bonuses.map(b=>`<h4>${b.pieces} felszerelt darab</h4>${statRows(Object.fromEntries(b.stats.map(s=>[s.stat,s.value])))}`).join(''))+rows([['Szint',x.itemLevel],['Helyek',x.slots.map(s=>slots[s]).join(', ')],['Egyedi tárgyazonosító',x.unique.id]])+related('Kapcsolódó boss és pálya',link('world','boss',db.bosses.find(b=>b.id===x.bossId))+link('world','map',mapFor(x.mapIndex)));
+      const familyItems=db.items.filter(item=>item.family===x.familyId);
+      body=notice(t('sets.editorialDisclaimer'))+related(t('sets.bonuses'),x.bonuses.map(b=>`<h4>${t('sets.pieces',{count:num(b.pieces)})}</h4>${statRows(Object.fromEntries(b.stats.map(s=>[s.stat,s.value])))}`).join(''))+rows([[t('sets.level'),num(x.itemLevel)],[t('sets.slots'),x.slots.map(s=>slotName(s)).join(', ')],[t('sets.uniqueId'),x.unique.id]])+related(t('sets.relatedEquipment'),familyItems.length?familyItems.map(item=>link('equipment','item',item)).join(' '):notice(t('sets.itemsMissing')))+related(t('sets.relatedBossMap'),link('world','boss',db.bosses.find(b=>b.id===x.bossId))+link('world','map',mapFor(x.mapIndex)));
     }else if(kind==='pet'){
       body=petUI.calculator(x)+
         related('Feloldás',rows([['Hős minimumszint',db.petRules.minHeroLevel],['Kelési idő',db.petRules.hatchHours+' óra']]))+petUI.detail()+
@@ -228,10 +253,10 @@
     }
     const chosen=media?.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id);
     if(kind==='item')body+=extension.bonusInfo?.(x.slot)??'';
-    if(chosen)image=media.render(chosen,{className:'atlas-detail-art',alt:x.name});
+    if(chosen)image=media.render(chosen,{className:'atlas-detail-art',alt:kind==='set'?setTitle(x):x.name});
     if(kind==='pet')image=petUI.portrait(x);
     const pictures=media?.related(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id)??[];
-    return design.detail({kind,x,id,image,body,actions:extension.actions?.(kind,x)??'',glyph:glyph(kind==='item'?x.slot:kind),pictures:pictures.length?related('Kapcsolódó grafikák',`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">Teljes Képtár →</a>`):'',english:rows([['Angol megnevezés',x.nameEn??'Nem áll rendelkezésre']]),source:sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})});
+    return design.detail({kind,x,id,image,body,actions:extension.actions?.(kind,x)??'',glyph:glyph(kind==='item'?x.slot:kind),pictures:pictures.length?related('Kapcsolódó grafikák',`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">Teljes Képtár →</a>`):'',english:rows([[t('common.englishName'),x.nameEn??t('equipment.englishNameUnavailable')]]),source:sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})});
   }
   function trait(kind){
     const t=db.petTraits[kind];
@@ -262,6 +287,29 @@
   navToggle.addEventListener('click',()=>toggleNav(navToggle.getAttribute('aria-expanded')!=='true'));
   $('#atlas-nav-close').addEventListener('click',()=>toggleNav(false));navBackdrop.addEventListener('click',()=>toggleNav(false));
   function selectDetailTab(button){const key=button.dataset.detailTab,folio=button.closest('.folio');for(const tab of folio.querySelectorAll('[data-detail-tab]')){const active=tab===button;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}for(const panel of folio.querySelectorAll('.folio-panel'))panel.hidden=panel.id!=='folio-panel-'+key;}
+  function refreshLocalizedDetail(){
+    const dialog=$('#atlas-detail');
+    if(!dialog.open)return;
+    const tab=dialog.querySelector('[data-detail-tab][aria-selected="true"]')?.dataset.detailTab;
+    const scrollTop=dialog.scrollTop,[hashPath]=location.hash.slice(1).split('?');
+    const formState=[...dialog.querySelectorAll('input,select,textarea')].map(control=>({tag:control.tagName,value:control.value,checked:control.checked}));
+    let parts;
+    try{parts=hashPath.split('/').map(decodeURIComponent);}catch{return;}
+    if(parts[0]!=='atlas'||!parts[2]||!parts[3])return;
+    const body=detail(parts[2],parts[3]);
+    if(!body)return;
+    $('#atlas-detail-body').innerHTML=body;
+    [...dialog.querySelectorAll('input,select,textarea')].forEach((control,index)=>{
+      const saved=formState[index];
+      if(!saved||saved.tag!==control.tagName)return;
+      control.value=saved.value;
+      control.checked=saved.checked;
+      control.dispatchEvent(new Event('input',{bubbles:true}));
+    });
+    const activeTab=tab&&dialog.querySelector(`[data-detail-tab="${tab}"]`);
+    if(activeTab)selectDetailTab(activeTab);
+    dialog.scrollTop=scrollTop;
+  }
   document.addEventListener('submit',e=>{if(e.target.id==='atlas-portal-search'){e.preventDefault();state.query=$('#portal-query').value.trim();$('#atlas-search').value=state.query;state.pageNumber=1;render();$('#atlas-search').focus({preventScroll:true});}});
   document.addEventListener('keydown',e=>{const tab=e.target.closest('[data-detail-tab]');if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const tabs=[...tab.closest('.folio-tabs').querySelectorAll('[data-detail-tab]')],i=tabs.indexOf(tab),next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectDetailTab(tabs[next]);tabs[next].focus();}if(document.body.classList.contains('atlas-nav-open')){if(e.key==='Escape')toggleNav(false);if(e.key==='Tab'){const focusable=[...$('#atlas-sidebar').querySelectorAll('a,button')].filter(el=>el.getClientRects().length),first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}}});
   window.matchMedia?.('(min-width:1025px)').addEventListener?.('change',event=>{if(event.matches&&document.body.classList.contains('atlas-nav-open'))toggleNav(false);});
@@ -282,5 +330,11 @@
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.altKey&&!e.metaKey&&!e.target.closest('input,select,textarea,[contenteditable="true"]')&&!$('#atlas-detail').open&&!$('#image-lightbox').open){e.preventDefault();e.stopImmediatePropagation();$('#atlas-search').focus();$('#atlas').scrollIntoView({block:'start'});}},true);
   window.addEventListener('hashchange',()=>syncRoute());
   extension=globalThis.AtlasExtensions?.init({db,media,esc,norm,num,pct,slots,rarities,classNames,label,value,icon,chip,notice,rows,statRows,table,route,link,heading,state,render})??{};
+  i18n.onChange(()=>{
+    const portalQuery=$('#portal-query')?.value;
+    render();
+    if(portalQuery!==undefined&&$('#portal-query'))$('#portal-query').value=portalQuery;
+    refreshLocalizedDetail();
+  });
   render();syncRoute(false);
 })();

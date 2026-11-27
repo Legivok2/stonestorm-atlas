@@ -62,7 +62,11 @@ globalThis.AtlasBonusUI={
         <section class="bonus-source-documentation" aria-labelledby="bonus-sources-title"><h4 class="atlas-subheading" id="bonus-sources-title">Bónuszforrások és plafonbesorolás</h4>${sourceTable()}</section>${calculator()}`;
     }
     function afterRender(){updatePool();$('#bonus-pool').addEventListener('change',event=>{draft.pool=event.target.value;updatePool();});afterRenderCalculator();}
-    function itemInfo(slot){const pool=data.poolForSlot(slot);return `<section class="atlas-related bonus-item-info"><h4>Típushoz tartozó bónuszpool</h4>${pool?`<p>${pool.map(id=>esc(data.byId[id].name)).join(' · ')}</p><p>${data.evidence.checkedAt}-i klienspool; nem garantált, szintfüggetlen vagy teljes szerveres kiosztási lista.</p>`:notice('Ehhez az altípushoz nincs igazolt külön pool-hozzárendelés. Nem tekintjük mind a 20 bónuszt automatikusan elérhetőnek.')}<a class="atlas-inline-link" href="#atlas/bonuses?slot=${encodeURIComponent(slot)}">Bónuszkatalógus és források →</a></section>`;}
+    function itemInfo(slot){
+      const pool=data.poolForSlot(slot),i18n=globalThis.AtlasI18n,t=(key,params)=>i18n.t(key,params);
+      const statName=id=>i18n.dictionaries[i18n.getLocale()]['stat.'+id]??data.byId[id].name;
+      return `<section class="atlas-related bonus-item-info"><h4>${t('equipment.bonusPool')}</h4>${pool?`<p>${pool.map(id=>esc(statName(id))).join(' · ')}</p><p>${t('equipment.bonusPoolSource',{date:data.evidence.checkedAt})}</p>`:notice(t('equipment.bonusPoolUnavailable'))}<a class="atlas-inline-link" href="#atlas/bonuses?slot=${encodeURIComponent(slot)}">${t('equipment.bonusCatalog')}</a></section>`;
+    }
     function onRoute(parts,params){if(parts[1]==='bonuses'){const slot=params.get('slot');draft.contextSlot=Object.hasOwn(data.equipmentPools,slot)?slot:null;const pool=draft.contextSlot?data.equipmentPools[draft.contextSlot]:null;if(pool)draft.pool=pool;}}
     return {page,afterRender,calculator,afterRenderCalculator,resetCalculator,itemInfo,onRoute};
   }

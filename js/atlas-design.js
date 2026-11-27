@@ -2,6 +2,7 @@
 globalThis.AtlasDesign={
   init(ui){
     const {db,media,esc,num,pct,icon,chip,slots,rarities,classNames,route,label,value,notice}=ui;
+    const i18n=globalThis.AtlasI18n,t=(key,params)=>i18n.t(key,params);
     const illustration=(category,name,alt,cls='',altKey='')=>{
       const html=media.render(media.get(category,name),{alt,className:cls,eager:true});
       return altKey?html.replace('<img ',`<img data-atlas-i18n-alt="${esc(altKey)}" `):html;
@@ -27,15 +28,19 @@ globalThis.AtlasDesign={
     }
     function card({page,kind,record:x},desc,summary,glyph){
       const type=kind==='pet'?'pet':kind==='item'?'equipment':['boss','mob','map','dungeon'].includes(kind)?'world':'record';
-      const image=media.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:x.id);
-      const art=image?media.render(image,{alt:x.name,thumbnail:kind!=='pet',className:'card-illustration'}):glyph;
-      const rarity=kind==='pet'?rarities[x.rarity]??x.rarity:null;
-      const badge=kind==='item'?'T'+x.tier:rarity??({boss:'BOSS',mob:'ELLENFÉL',map:'PÁLYA',dungeon:'KAZAMATA',set:'SZETT',research:'KUTATÁS'})[kind]??'KÓDEX';
-      const level=x.level??x.minLevel??x.itemLevel??x.recommendedLevel;
-      const kicker=kind==='item'?slots[x.slot]:({pet:'Kísérő',boss:'Világ boss',mob:'Ellenfél',map:'Felfedezés',dungeon:'Kihívás',set:'Szettcsalád',research:'Kutatás',mount:'Hátas'})[kind]??'Tudástár';
-      const stats=kind==='item'?Object.entries(x.values??{}).filter(([,v])=>v!==0).slice(0,2).map(([k,v])=>smallStat(label(k),value(k,v))).join(''):kind==='boss'?smallStat('Ajánlott szint',x.recommendedLevel)+smallStat('Pálya',x.mapIndex):'';
       const nameKey=globalThis.AtlasI18n.gameNameKey(kind,x),nameI18n=!!nameKey;
-      return `<a class="atlas-card card--${type} rarity-${esc(x.rarity??'common')} ${image?'has-game-art':''}" href="${route(page,kind,x.id)}"><div class="card-visual"><div class="card-labels">${chip(badge,'card-rarity')}${level!==undefined?`<span class="card-level">${esc(level)}. szint</span>`:''}</div><div class="card-art">${art}</div>${kind==='pet'?'<span class="card-form-label">1. SZINT · KÖLYÖK · 0. RANG</span>':''}</div><div class="card-copy"><p class="card-kicker">${esc(kicker)}</p><h4 ${nameI18n?`data-atlas-i18n="${esc(nameKey)}"`:''}>${esc(nameI18n?globalThis.AtlasI18n.t(nameKey):x.name??x.id)}</h4><p class="atlas-card-meta">${esc(summary)}</p><p class="atlas-card-desc">${esc(kind==='pet'?desc.split(' · ')[0]:desc??'Tulajdonságok és kapcsolódó tartalmak.')}</p>${stats?`<dl class="card-stats">${stats}</dl>`:''}<div class="atlas-card-foot"><span>${kind==='item'?esc((x.classes??[]).map(c=>classNames[c]??c).join(' · ')||'Minden kaszt'):kind==='pet'?'Fajbónusz és fejlődés':'Részletes adatlap'}</span><b aria-hidden="true">↗</b></div></div></a>`;
+      const recordName=kind==='set'&&x.nameIsEditorial&&i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):nameI18n?t(nameKey):x.name??x.id;
+      const image=media.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:x.id);
+      const art=image?media.render(image,{alt:recordName,thumbnail:kind!=='pet',className:'card-illustration'}):glyph;
+      const rarity=kind==='pet'?rarities[x.rarity]??x.rarity:null;
+      const rarityClass=x.rarity?`rarity-${esc(x.rarity)}`:'';
+      const badge=kind==='item'?t('equipment.tierBadge',{tier:x.tier}):kind==='set'?t('sets.badge'):rarity??({boss:'BOSS',mob:'ELLENFÉL',map:'PÁLYA',dungeon:'KAZAMATA',set:'SZETT',research:'KUTATÁS'})[kind]??'KÓDEX';
+      const level=x.level??x.minLevel??x.itemLevel??x.recommendedLevel;
+      const kicker=kind==='item'?t('equipment.slot.'+x.slot):kind==='set'?t('sets.kicker'):({pet:'Kísérő',boss:'Világ boss',mob:'Ellenfél',map:'Felfedezés',dungeon:'Kihívás',set:'Szettcsalád',research:'Kutatás',mount:'Hátas'})[kind]??'Tudástár';
+      const stats=kind==='item'?Object.entries(x.values??{}).filter(([,v])=>v!==0).slice(0,2).map(([k,v])=>smallStat(label(k),value(k,v))).join(''):kind==='boss'?smallStat('Ajánlott szint',x.recommendedLevel)+smallStat('Pálya',x.mapIndex):'';
+      const footer=kind==='item'?(x.classes??[]).map(c=>classNames[c]??c).join(' · ')||t('equipment.allClasses'):kind==='set'?t('sets.badgeFoot'):kind==='pet'?'Fajbónusz és fejlődés':t('common.detail');
+      const levelText=level===undefined?'':t('common.levelBadge',{level:num(level)});
+      return `<a class="atlas-card card--${type} ${rarityClass} ${image?'has-game-art':''}" href="${route(page,kind,x.id)}"><div class="card-visual"><div class="card-labels">${chip(badge,'card-rarity')}${level!==undefined?`<span class="card-level">${esc(levelText)}</span>`:''}</div><div class="card-art">${art}</div>${kind==='pet'?'<span class="card-form-label">1. SZINT · KÖLYÖK · 0. RANG</span>':''}</div><div class="card-copy"><p class="card-kicker">${esc(kicker)}</p><h4 ${nameI18n?`data-atlas-i18n="${esc(nameKey)}"`:''}>${esc(recordName)}</h4><p class="atlas-card-meta">${esc(summary)}</p><p class="atlas-card-desc">${esc(kind==='pet'?desc.split(' · ')[0]:desc??'Tulajdonságok és kapcsolódó tartalmak.')}</p>${stats?`<dl class="card-stats">${stats}</dl>`:''}<div class="atlas-card-foot"><span>${esc(footer)}</span><b aria-hidden="true">↗</b></div></div></a>`;
     }
     function detail({kind,x,id,image,body,actions,source,glyph,pictures,english}){
       const template=document.createElement('template');template.innerHTML=body;const sections={overview:[],bonuses:[],development:[],acquisition:[],related:[]};let calculator='';
@@ -43,20 +48,24 @@ globalThis.AtlasDesign={
         if(node.nodeType!==1){if(node.textContent.trim())sections.overview.push(esc(node.textContent));continue;}
         if(kind==='pet'&&node.matches('.pet-calculator')){calculator=node.outerHTML;continue;}
         const title=node.querySelector(':scope > h4,:scope > h5')?.textContent??'';let tab='overview';
-        if(node.matches('.pet-development-detail')||/Fejlesztés|Fejlődés/.test(title))tab='development';
-        else if(/Kapcsolódó|Szettkapcsolat/.test(title))tab='related';
-        else if(/Feloldás|Követelmények|Minta forrása/.test(title))tab='acquisition';
-        else if(/statisztikák|bónusz|Jutalom|Kasztképesség/i.test(title))tab='bonuses';
+        if(node.matches('.pet-development-detail')||/Fejlesztés|Fejlődés|Upgrading|Development/.test(title))tab='development';
+        else if(/Kapcsolódó|Szettkapcsolat|Related|Set membership/.test(title))tab='related';
+        else if(/Feloldás|Követelmények|Minta forrása|Requirements/.test(title))tab='acquisition';
+        else if(/statisztikák|bónusz|Jutalom|Kasztképesség|stats|bonuses/i.test(title))tab='bonuses';
         sections[tab].push(node.outerHTML);
       }
       if(kind==='pet'&&calculator){const fragment=document.createElement('template');fragment.innerHTML=calculator;const result=fragment.content.querySelector('[data-pet-calc-result]');if(result){for(const node of result.querySelectorAll('[data-pet-bonus]'))node.removeAttribute('data-pet-bonus');sections.bonuses.push(`<section data-pet-bonus-summary>${result.innerHTML}</section>`);}}
-      sections.related.push(pictures);sections.overview.push(`<details class="folio-source"><summary>Források és adatbiztonság</summary>${english}${source}</details>`);
-      const tabs=[['overview','Áttekintés'],['bonuses','Bónuszok'],['development','Fejlődés'],['acquisition','Megszerzés'],['related','Kapcsolódó tartalmak']];
-      const facts=kind==='pet'?[['Ritkaság',rarities[x.rarity]??x.rarity],['Fejlődési formák',db.petSystem.stages.length],['Végső szint',db.petSystem.maxLevel]]:kind==='item'?[['Hely',slots[x.slot]],['Követelményszint',x.level],['Fokozat','T'+x.tier]]:kind==='boss'?[['Ajánlott szint',x.recommendedLevel],['Pálya',x.mapIndex]]:[];
+      sections.related.push(pictures);sections.overview.push(`<details class="folio-source"><summary>${t('common.sources')}</summary>${english}${source}</details>`);
+      const localizeRecord=['item','set'].includes(kind),tabs=localizeRecord?[['overview',t('common.tab.overview')],['bonuses',t('common.tab.bonuses')],['development',t('common.tab.development')],['acquisition',t('common.tab.acquisition')],['related',t('common.tab.related')]]:[['overview','Áttekintés'],['bonuses','Bónuszok'],['development','Fejlődés'],['acquisition','Megszerzés'],['related','Kapcsolódó tartalmak']];
+      const facts=kind==='pet'?[['Ritkaság',rarities[x.rarity]??x.rarity],['Fejlődési formák',db.petSystem.stages.length],['Végső szint',db.petSystem.maxLevel]]:kind==='item'?[[t('equipment.slot'),t('equipment.slot.'+x.slot)],[t('equipment.level'),x.level],[t('equipment.tier'),'T'+x.tier]]:kind==='set'?[[t('sets.level'),x.itemLevel],[t('sets.slots'),x.slots.map(slot=>t('equipment.slot.'+slot)).join(', ')]]:kind==='boss'?[['Ajánlott szint',x.recommendedLevel],['Pálya',x.mapIndex]]:[];
       if(kind==='item')facts.push(...Object.entries(x.values??{}).filter(([,v])=>v!==0).slice(0,2).map(([k,v])=>[label(k),value(k,v)]));
       if(kind==='boss'){const mob=db.mobs.find(m=>m.id===x.mobId);if(mob)facts.push(['Életerő',num(mob.maxHp)],['Sebzés',num(mob.atkMin)+'–'+num(mob.atkMax)]);}
       const nameKey=globalThis.AtlasI18n.gameNameKey(kind,x),nameI18n=!!nameKey;
-      return `<div class="folio" data-folio-kind="${esc(kind)}"><header class="folio-hero"><div class="folio-illustration">${image||`<div class="folio-glyph">${glyph}</div>`}${kind!=='pet'?'<p class="folio-art-caption">JÁTÉKBELI ILLUSZTRÁCIÓ · HELYI KÉPKATALÓGUS</p>':''}</div><div class="folio-intro"><p class="eyebrow">STONESTORM ATLAS / ${esc(({pet:'KÍSÉRŐ',item:'FELSZERELÉS',boss:'BOSS',building:'ÉPÜLET'})[kind]??'ADATLAP')}</p><h2 id="atlas-detail-title" ${nameI18n?`data-atlas-i18n="${esc(nameKey)}"`:''}>${esc(nameI18n?globalThis.AtlasI18n.t(nameKey):x.name??id)}</h2><dl class="folio-facts">${facts.map(([k,v])=>smallStat(k,v)).join('')}</dl>${actions}${calculator}<details class="folio-identifier"><summary>Adatbázis-azonosító</summary><code>${esc(id)}</code></details></div></header><div class="folio-tabs" role="tablist" aria-label="Adatlap fejezetei">${tabs.map(([key,title],i)=>`<button type="button" role="tab" id="folio-tab-${key}" data-detail-tab="${key}" aria-selected="${i===0}" tabindex="${i===0?0:-1}" aria-controls="folio-panel-${key}">${title}</button>`).join('')}</div>${tabs.map(([key,title],i)=>`<section class="folio-panel" role="tabpanel" id="folio-panel-${key}" aria-labelledby="folio-tab-${key}" ${i?'hidden':''}>${sections[key].filter(Boolean).join('')||notice('Ehhez a fejezethez nincs további igazolt adat. Az áttekintés és a források megmutatják az ismert tulajdonságokat.')}</section>`).join('')}</div>`;
+      const recordName=kind==='set'&&x.nameIsEditorial&&i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):nameI18n?t(nameKey):x.name??id;
+      const eyebrow=localizeRecord?(kind==='item'?'EQUIPMENT':'EQUIPMENT SET'):{pet:'KÍSÉRŐ',boss:'BOSS',building:'ÉPÜLET'}[kind]??'ADATLAP';
+      const emptySection=localizeRecord?t('common.noSectionData'):'Ehhez a fejezethez nincs további igazolt adat. Az áttekintés és a források megmutatják az ismert tulajdonságokat.';
+      const artCaption=localizeRecord?t('common.imageCaption'):'JÁTÉKBELI ILLUSZTRÁCIÓ · HELYI KÉPKATALÓGUS';
+      return `<div class="folio" data-folio-kind="${esc(kind)}"><header class="folio-hero"><div class="folio-illustration">${image||`<div class="folio-glyph">${glyph}</div>`}${kind!=='pet'?`<p class="folio-art-caption">${artCaption}</p>`:''}</div><div class="folio-intro"><p class="eyebrow">STONESTORM ATLAS / ${esc(eyebrow)}</p><h2 id="atlas-detail-title" ${nameI18n?`data-atlas-i18n="${esc(nameKey)}"`:''}>${esc(recordName)}</h2><dl class="folio-facts">${facts.map(([k,v])=>smallStat(k,v)).join('')}</dl>${actions}${calculator}<details class="folio-identifier"><summary>${localizeRecord?t('common.identifier'):'Adatbázis-azonosító'}</summary><code>${esc(id)}</code></details></div></header><div class="folio-tabs" role="tablist" aria-label="${localizeRecord?t('common.tabsLabel'):'Adatlap fejezetei'}">${tabs.map(([key,title],i)=>`<button type="button" role="tab" id="folio-tab-${key}" data-detail-tab="${key}" aria-selected="${i===0}" tabindex="${i===0?0:-1}" aria-controls="folio-panel-${key}">${title}</button>`).join('')}</div>${tabs.map(([key],i)=>`<section class="folio-panel" role="tabpanel" id="folio-panel-${key}" aria-labelledby="folio-tab-${key}" ${i?'hidden':''}>${sections[key].filter(Boolean).join('')||notice(emptySection)}</section>`).join('')}</div>`;
     }
     return {navigation,overview,card,detail};
   }

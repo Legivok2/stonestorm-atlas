@@ -51,7 +51,7 @@ try{
     const value=await page.locator('[data-effective="reduction"]').textContent();
     await page.locator('#atlas-language [data-atlas-language="hu"]').click();
     assert.equal(await page.locator('#stat-reduction').inputValue(),'65,5');
-    assert.equal(await page.locator('[data-effective="reduction"]').textContent(),value);
+    assert.equal((await page.locator('[data-effective="reduction"]').textContent()).replace(',','.'),value.replace(',','.'));
     assert.deepEqual(errors,[]);
     await context.close();
     console.log(width+' px: language switch, persistence and calculator input verified');
