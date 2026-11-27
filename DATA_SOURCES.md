@@ -4,6 +4,10 @@ Az eredeti teljes adatcsomag integrációja: **2026-11-06**, helyben átadott f�
 
 ## Forrásjegyzék
 
+### Világ: HU/EN nevek (2026-11-26)
+
+A pályák, ellenfelek, bossok, kazamaták és az érintett helyszínek angol nevei a `snapshots/manifest.json` mentett hivatalos magyar és angol lokalizációjából származnak. A rekordneveket csak az eredeti magyar név egyezésekor cseréljük le; hiányzó angol névnél az eredetit tartjuk meg. A kazamataleírásoknál ugyanez az egyezési feltétel érvényes. A játékadatok és azonosítók nem változnak.
+
 ### Felhasználói Chrome-addon (2026-11-09)
 
 Stonestorm Stat Cap Overlay v0.9.3, készítő a manifest szerint Patrik. A felhasználó által átadott hét futásidejű fájl változatlan másolata az `addons/stonestorm-statcap-overlay/` mappában szerepel; az `import.json` SHA-256 lenyomatokat rögzít. Ez az import nem új, Atlas által ellenőrzött statképlet-adatforrás: az addon meglévő számításait nem módosítja, és nem írja felül az Atlas megbízhatósági jelöléseit. A kiegészített README, PRIVACY és PUBLISH dokumentáció az integráció része. A ZIP tartalma a kijelölt fájlokkal bájtra ellenőrzött; a generált kiadási JSON csak verziót, fájlméretet és csomaglenyomatot közöl, karakteradatot nem.

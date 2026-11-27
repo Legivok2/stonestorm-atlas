@@ -17,6 +17,7 @@
     "test:i18n": "node --test tests/i18n.test.mjs",
     "test:atlas:i18n:browser": "node tests/atlas-i18n-browser.mjs",
     "test:atlas:equipment:i18n:browser": "node tests/atlas-equipment-i18n-browser.mjs",
+    "test:atlas:world:i18n:browser": "node tests/atlas-world-i18n-browser.mjs",
     "test:guide:i18n:browser": "node tests/guide-i18n-browser.mjs",
     "test:addon:browser": "node tests/addon-browser.mjs",
     "test:pets:browser": "node tests/pet-system-browser.mjs",

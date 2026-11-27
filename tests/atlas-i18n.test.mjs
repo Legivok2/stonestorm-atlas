@@ -72,6 +72,25 @@ test('game names do not override newer or unmatched records',()=>{
   assert.equal(i18n.gameNameKey('pet',{id:'new_pet',name:'Keselyűfióka'}),null);
 });
 
+test('world game names match the captured official locales and do not override changed records',()=>{
+  const {i18n}=load('en');
+  const db=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../data/atlas.json'),'utf8'));
+  const manifest=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../snapshots/manifest.json'),'utf8'));
+  const resources=Object.values(manifest.resources);
+  const get=(locale,key)=>resources.find(resource=>resource.language===locale&&resource.localeEntries?.[key])?.localeEntries[key];
+  for(const [kind,collection,prefix] of [['map','maps','maps'],['mob','mobs','mobs'],['boss','bosses','bosses'],['dungeon','dungeons','dungeon/names']]){
+    for(const record of db[collection]){
+      const path='/'+prefix+'/'+record.id,hu=get('hu',path),en=get('en',path),key=i18n.gameNameKey(kind,record);
+      if(hu===record.name&&en){
+        assert(key,record.id);
+        assert.equal(i18n.dictionaries.hu[key],hu);
+        assert.equal(i18n.dictionaries.en[key],en);
+        assert.equal(i18n.gameNameKey(kind,{...record,name:'Changed name'}),null);
+      }else assert.equal(key,null,record.id);
+    }
+  }
+});
+
 test('numbers and dates follow the selected language',()=>{
   const {i18n}=load();
   assert.equal(i18n.formatNumber(12345.5),'12 345,5');

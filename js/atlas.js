@@ -42,7 +42,7 @@
   const statRows=obj=>rows(Object.entries(obj??{}).map(([k,v])=>[label(k),value(k,v)]));
   const table=(heads,body)=>`<div class="atlas-table-wrap"><table class="atlas-table"><thead><tr>${heads.map(x=>`<th scope="col">${esc(x)}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   const route=(page,kind,id)=>`#atlas/${page}${kind?'/'+kind+'/'+encodeURIComponent(id):''}`;
-  const link=(page,kind,x,text)=>{if(!x)return notice('Nincs kapcsolt adat a forrásban.');const key=text==null?i18n.gameNameKey(kind,x):null;const display=kind==='set'&&x.nameIsEditorial&&i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):key?i18n.t(key):text??x.name??x.id;return `<a class="atlas-inline-link" href="${route(page,kind,x.id)}"><span ${key?`data-atlas-i18n="${esc(key)}"`:''}>${esc(display)}</span> ↗</a>`;};
+  const link=(page,kind,x,text)=>{if(!x)return notice(t('world.emptyLink'));const key=text==null?i18n.gameNameKey(kind,x):null;const display=kind==='set'&&x.nameIsEditorial&&i18n.getLocale()==='en'?t('sets.familyName',{map:t('sets.mapName.'+x.familyId)}):key?i18n.t(key):text??x.name??x.id;return `<a class="atlas-inline-link" href="${route(page,kind,x.id)}"><span ${key?`data-atlas-i18n="${esc(key)}"`:''}>${esc(display)}</span> ↗</a>`;};
   const heading=(title,copy)=>`<div class="atlas-page-heading"><p class="eyebrow">${t('common.codex')}</p><h3>${esc(title)}</h3><p>${esc(copy)}</p></div>`;
   const petUI=globalThis.AtlasPetUI.init({db,media,esc,num,pct,chip,notice,rows,table,link});
   const sourceNote=x=>`<div class="atlas-source-note">${chip(t(!x.name?'common.sourcePartial':x.provenance?.status==='derived'?'common.sourceDerived':'common.sourceVerified'),!x.name?'unknown':'verified')}<p>${esc(x.provenance?.source??'ATLAS_VSCODE_KEZIKONYV.md')}<br />${esc(x.provenance?.checkedAt??db.updated)} · ${esc(t('common.sourceSnapshot'))}</p></div>`;
@@ -81,6 +81,20 @@
       values.push('mount','mounts','ride','rides','travel','travel time','speed','duration','rental','hátas','hátasok','utazás','utazási idő',...dictionaryValues('navigation.mounts'),...dictionaryValues('mounts.copy'),...dictionaryValues('mount.desc.'+x.id));
       if(x.ramp)values.push(...dictionaryValues('mounts.levelConfig'));
     }
+    if(['map','mob','boss','dungeon'].includes(kind)){
+      const key=i18n.gameNameKey(kind,x);
+      if(key)values.push(...dictionaryValues(key));
+      values.push(...dictionaryValues('world.'+({map:'maps',mob:'mobs',boss:'bosses',dungeon:'dungeons'})[kind]));
+      if(kind==='mob'||kind==='boss')values.push(...['level','power','hp','damage','defence','combatUnknown'].flatMap(field=>dictionaryValues('world.'+field)),'XP','Nyang');
+      if(kind==='dungeon'){
+        values.push(...dictionaryValues('game.dungeonLore.'+x.id));
+        for(const room of x.rooms)values.push(...dictionaryValues('game.creature.'+room.creatureId));
+      }
+      if(kind==='map'){
+        for(const spot of x.spots)values.push(...dictionaryValues('game.spot.'+spot.id),...dictionaryValues('game.material.'+spot.materialId));
+        for(const boss of db.bosses.filter(b=>b.mapIndex===x.index)){const name=i18n.gameNameKey('boss',boss);if(name)values.push(...dictionaryValues(name));}
+      }
+    }
     return norm(values.join(' '));
   };
   const add=(page,kind,list)=>list.forEach(x=>{const key=i18n.gameNameKey(kind,x);allEntries.push({page,kind,record:x,title:kind==='set'?setTitle(x):x.name??x.id,text:norm([searchText(kind,x),key?i18n.dictionaries.en[key]:''].join(' '))});});
@@ -110,19 +124,22 @@
     if(kind==='mount'&&x.ramp)return t('mounts.levelConfig');
     if(kind==='mount')return t('mounts.summary',{level:num(x.level),reduction:num((1-x.travelMult)*100)});
     if(kind==='set')return t('sets.summary',{level:num(x.itemLevel),count:num(x.slots.length)});
-    if(kind==='map')return `${x.minLevel}–${x.maxLevel}. szint · ${x.spots.length} helyszín`;
-    if(kind==='boss')return `${x.recommendedLevel}. ajánlott szint · ${x.mapIndex}. pálya`;
-    if(kind==='mob')return `${num(x.level)} szint · ${num(x.maxHp)} HP`;
-    if(kind==='dungeon')return `${x.minLevel}–${x.maxLevel}. szint · ${x.rooms.length} terem`;
+    if(kind==='map')return t('world.mapSummary',{min:num(x.minLevel),max:num(x.maxLevel),count:num(x.spots.length)});
+    if(kind==='boss')return t('world.bossSummary',{level:num(x.recommendedLevel),map:num(x.mapIndex)});
+    if(kind==='mob')return t('world.mobSummary',{level:num(x.level),hp:num(x.maxHp)});
+    if(kind==='dungeon')return t('world.dungeonSummary',{min:num(x.minLevel),max:num(x.maxLevel),count:num(x.rooms.length)});
     if(kind==='research')return `${x.minLevel}. szint · ${x.samplesNeeded} minta`;
     if(kind==='material')return db.economy.stackKindNames[x.kind]?.name??x.kind;
     if(kind==='class')return 'Alapstatisztikák és képesség';
     return 'Részletes játékadat';
   };
   const itemSummary=x=>Object.entries(x.values??{}).filter(([,v])=>v!==0).slice(0,2).map(([k,v])=>label(k)+' '+value(k,v)).join(' · ');
+  const gameName=(kind,x)=>{const key=i18n.gameNameKey(kind,x);return key?t(key):x?.name??x?.id??'';};
+  const worldMaterial=id=>{const material=db.economy.stackables.find(a=>a.id===id),key='game.material.'+id;return material?link('materials','material',material,i18n.dictionaries.hu[key]===material.name?t(key):material.name):esc(id);};
+  const dungeonDescription=x=>i18n.dictionaries.hu['game.dungeonLore.'+x.id]===x.description?t('game.dungeonLore.'+x.id):x.description;
   function card(entry){
     const {page,kind,record:x}=entry;
-    const desc=kind==='item'?itemSummary(x):kind==='pet'?petUI.cardSummary(x):kind==='mount'?t('mounts.card.price',{price:num(x.price),currency:t('mounts.currency.'+x.currency),days:num(x.days)}):kind==='mob'?num(x.xp)+' XP · '+num(x.nyangMin)+'–'+num(x.nyangMax)+' nyang':kind==='research'?Object.entries(x.reward).map(([k,v])=>label(k)+' +'+value(k,v)).join(' · '):kind==='map'?db.bosses.find(b=>b.mapIndex===x.index)?.name:kind==='dungeon'?x.description:kind==='material'?db.economy.stackKindNames[x.kind]?.hint:kind==='set'?x.bonuses.map(b=>t('sets.pieces',{count:num(b.pieces)})+': '+b.stats.map(s=>label(s.stat)+' +'+value(s.stat,s.value)).join(', ')).join(' · '):'';
+    const desc=kind==='item'?itemSummary(x):kind==='pet'?petUI.cardSummary(x):kind==='mount'?t('mounts.card.price',{price:num(x.price),currency:t('mounts.currency.'+x.currency),days:num(x.days)}):kind==='mob'?num(x.xp)+' XP · '+num(x.nyangMin)+'–'+num(x.nyangMax)+' Nyang':kind==='research'?Object.entries(x.reward).map(([k,v])=>label(k)+' +'+value(k,v)).join(' · '):kind==='map'?gameName('boss',db.bosses.find(b=>b.mapIndex===x.index)):kind==='dungeon'?dungeonDescription(x):kind==='material'?db.economy.stackKindNames[x.kind]?.hint:kind==='set'?x.bonuses.map(b=>t('sets.pieces',{count:num(b.pieces)})+': '+b.stats.map(s=>label(s.stat)+' +'+value(s.stat,s.value)).join(', ')).join(' · '):'';
     const catalogImage=media?.forRecord(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:x.id);
     const image=catalogImage?null:((kind==='boss'&&x.mobId==='m4_boss')||(kind==='mob'&&x.id==='m4_boss')?'m4_boss':null);
     return design.card(entry,desc,summary(kind,x),glyph(kind==='item'?x.slot:kind));
@@ -157,9 +174,9 @@
     return heading(t('common.globalSearchTitle'),t('common.globalSearchCopy'))+html+(!entries.length?`<div class="atlas-empty"><h4>${t('common.noResults')}</h4><p>${t('common.tryOtherSearch')}</p><button type="button" id="atlas-reset">${t('common.resetFilters')}</button></div>`:'')+(guides.length?`<h4 class="atlas-subheading">${t('common.inGuide')}</h4><div class="atlas-guide-results">${guides.map(e=>{const display=i18n.getLocale()==='en'&&e.english?e.english:e;return `<a href="${e.href}"><h4>${esc(display.title)}</h4><p>${esc(display.excerpt)}</p><span>${t('common.openGuide')} ↗</span></a>`;}).join('')}</div>`:'');
   }
   function world(){
-    const tabs=[['maps','Pályák','map'],['bosses','Bossok','boss'],['mobs','Ellenfelek','mob'],['dungeons','Kazamaták','dungeon']];
+    const tabs=[['maps','map'],['bosses','boss'],['mobs','mob'],['dungeons','dungeon']];
     const tab=tabs.find(x=>x[0]===state.world);
-    return heading('A falu határától a viharig','Pályák, ellenfelek, bossok és kazamaták. Az adatlapok egymásra hivatkoznak.')+`<div class="atlas-tabs" role="group" aria-label="Világ alkategóriák">${tabs.map(([id,t])=>`<button type="button" data-world="${id}" aria-pressed="${id===state.world}">${t} <small>${db[id].length}</small></button>`).join('')}</div>`+paginated(allEntries.filter(e=>e.page==='world'&&e.kind===tab[2]));
+    return heading(t('world.title'),t('world.copy'))+`<div class="atlas-tabs" role="group" aria-label="${esc(t('world.tabs'))}">${tabs.map(([id])=>`<button type="button" data-world="${id}" aria-pressed="${id===state.world}">${esc(t('world.'+id))} <small>${db[id].length}</small></button>`).join('')}</div>`+paginated(allEntries.filter(e=>e.page==='world'&&e.kind===tab[1]));
   }
   function guild(){
     return heading('Építsd fel a céhed','Fejlesztési tervező, szintenkénti hatások és a dokumentált céhes gyorsítás képlete.')+
@@ -255,13 +272,15 @@
       body=`<p>${esc(description)}</p>`+rows([[t('mounts.detail.level'),num(x.level)],[t('mounts.detail.travelMultiplier'),num(x.travelMult)],[t('mounts.detail.timeReduction'),pct(1-x.travelMult)],[t('mounts.detail.rentalPrice'),num(x.price)+' '+t('mounts.currency.'+x.currency)],[t('mounts.detail.duration'),num(x.days)+' '+t('mounts.travel.days')],[t('mounts.detail.availability'),t('mounts.detail.unknown')]])+notice(t('mounts.detail.energyWarning'));
       if(x.ramp)body=notice(t('mounts.detail.rampWarning'))+table([t('mounts.detail.rampLevel'),t('mounts.detail.rawMultiplier')],x.ramp.map(r=>[num(r.level),num(r.travelMult)]))+body;
     }else if(kind==='map'){
-      body=(x.strength?rows([['Portya erősségi paraméter',exact(x.strength.run)],['Boss erősségi paraméter',exact(x.strength.boss)]]):'')+table(['Viharkő','Erősségi paraméter'],x.stones.map(s=>[esc(s.id),s.strength===undefined?'Nincs külön érték':exact(s.strength)]))+notice('Nyers skálázási paraméterek; nem számított győzelmi esélyek.')+rows([['Szinttartomány',x.minLevel+'–'+x.maxLevel],['Helyszínek száma',x.spots.length],['Viharkövek száma',x.stones.length]])+related('A terület bossai',db.bosses.filter(b=>b.mapIndex===x.index).map(b=>link('world','boss',b)).join(' '))+related('Ellenfelek',db.mobs.filter(m=>m.mapIndex===x.index).map(m=>link('world','mob',m)).join(' '))+related('Helyszínek',table(['Azonosító','Feloldási szint','Anyag'],x.spots.map(s=>[esc(s.id),num(s.opensAt),esc(db.economy.stackables.find(a=>a.id===s.materialId)?.name??s.materialId)])));
+      body=(x.strength?rows([[t('world.runStrength'),exact(x.strength.run)],[t('world.bossStrength'),exact(x.strength.boss)]]):'')+table([t('world.stone'),t('world.strength')],x.stones.map(s=>[esc(s.id),s.strength===undefined?t('world.noValue'):exact(s.strength)]))+notice(t('world.strengthNotice'))+rows([[t('world.levelRange'),x.minLevel+'–'+x.maxLevel],[t('world.spotCount'),x.spots.length],[t('world.stoneCount'),x.stones.length]])+related(t('world.areaBosses'),db.bosses.filter(b=>b.mapIndex===x.index).map(b=>link('world','boss',b)).join(' '))+related(t('world.enemies'),db.mobs.filter(m=>m.mapIndex===x.index).map(m=>link('world','mob',m)).join(' '))+related(t('world.spots'),table([t('world.id'),t('world.unlockLevel'),t('world.material')],x.spots.map(s=>[esc(i18n.dictionaries.hu['game.spot.'+s.id]?t('game.spot.'+s.id)+' ('+s.id+')':s.id),num(s.opensAt),worldMaterial(s.materialId)])));
     }else if(kind==='boss'||kind==='mob'){
       const m=kind==='boss'?db.mobs.find(m=>m.id===x.mobId):x;
       if(m.id==='m4_boss')image=art('m4_boss',x.name,'atlas-detail-art');
-      body=rows([['Magyar név',m.name??'Nem ismert'],['Szint',num(m.level)],['Harcerő',num(m.harcero)],['HP',num(m.maxHp)],['Sebzés',num(m.atkMin)+'–'+num(m.atkMax)],['Védelem',num(m.def)],['XP',num(m.xp)],['Nyang',num(m.nyangMin)+'–'+num(m.nyangMax)]])+related('Kapcsolódó pálya',link('world','map',mapFor(m.mapIndex)))+related('Kapcsolódó szettcsalád',db.sets.filter(s=>s.bossId===(kind==='boss'?x.id:db.bosses.find(b=>b.mobId===m.id)?.id)).map(s=>link('sets','set',s)).join(' ')||notice('Nincs kapcsolt szettcsalád a forrásban.'));
+      body=rows([[t('world.name'),gameName('mob',m)],[t('world.level'),num(m.level)],[t('world.power'),num(m.harcero)],[t('world.hp'),num(m.maxHp)],[t('world.damage'),num(m.atkMin)+'–'+num(m.atkMax)],[t('world.defence'),num(m.def)],['XP',num(m.xp)],['Nyang',num(m.nyangMin)+'–'+num(m.nyangMax)]])+notice(t('world.combatUnknown'))+related(t('world.relatedMap'),link('world','map',mapFor(m.mapIndex)))+(m.materialId?related(t('world.relatedMaterial'),worldMaterial(m.materialId)):'')+related(t('world.relatedSets'),db.sets.filter(s=>s.bossId===(kind==='boss'?x.id:db.bosses.find(b=>b.mobId===m.id)?.id)).map(s=>link('sets','set',s)).join(' ')||notice(t('world.noSets')));
     }else if(kind==='dungeon'){
-      body=`<p>${esc(x.description)}</p>`+rows([['Minimumszint',x.minLevel],['Maximumszint',x.maxLevel],['Ajánlott szint',x.recommendedLevel],['Kulcs ára',num(x.keyCoins)+' VÉ'],['Kulcs / nap',x.keysPerDay],['Hősi minimumszint',x.heroic.minLevel]])+notice('A védelem teljes API-pontértéke látható; a játék kerekítési szabálya még nem igazolt.')+related('Normál termek',table(['Terem','Lény azonosítója','Szint','HP','Sebzés','Védelem','Harcerő','XP','Nyang'],x.rooms.map(r=>[r.room,esc(r.creatureId),r.level,num(r.maxHp),num(r.atkMin)+'–'+num(r.atkMax),exact(r.def),num(r.harcero),num(r.xp),num(r.nyang)])))+related('Hősi termek',table(['Terem','Szint','HP','Sebzés','Védelem','Harcerő','XP','Nyang'],x.heroic.rooms.map(r=>[r.room,r.level,num(r.maxHp),num(r.atkMin)+'–'+num(r.atkMax),exact(r.def),num(r.harcero),num(r.xp),num(r.nyang)])));
+      const roomHeaders=[t('world.room'),t('world.creature'),t('world.role'),t('world.level'),'HP',t('world.damage'),t('world.defence'),t('world.power'),'XP','Nyang'];
+      const roomRows=rooms=>rooms.map(r=>[r.room,esc(i18n.dictionaries.hu['game.creature.'+r.creatureId]?t('game.creature.'+r.creatureId)+' ('+r.creatureId+')':r.creatureId),esc(t(({regular:'world.roleRegular',miniboss:'world.roleMiniboss',boss:'world.roleBoss'})[r.role]??'world.roleUnknown')),r.level,num(r.maxHp),num(r.atkMin)+'–'+num(r.atkMax),exact(r.def),num(r.harcero),num(r.xp),num(r.nyang)]);
+      body=`<p>${esc(dungeonDescription(x))}</p>`+rows([[t('world.minimumLevel'),x.minLevel],[t('world.maximumLevel'),x.maxLevel],[t('world.recommendedLevel'),x.recommendedLevel],[t('world.keyPrice'),num(x.keyCoins)+' '+t('world.currency')],[t('world.keysPerDay'),x.keysPerDay],[t('world.heroicLevel'),x.heroic.minLevel],[t('world.heroicKeyCost'),x.heroic.keyCost],[t('world.freeSlots'),x.minFreeSlots],[t('world.potionCap'),x.potionCap],[t('world.firstClear'),num(x.firstClearCoins)+' '+t('world.currency')],[t('world.heroicFirstClear'),num(x.heroic.firstClearCoins)+' '+t('world.currency')]])+notice(t('world.defenceNotice'))+notice(t('world.lootUnknown'))+related(t('world.normalRooms'),table(roomHeaders,roomRows(x.rooms)))+related(t('world.heroicRooms'),table(roomHeaders,roomRows(x.heroic.rooms)));
     }else if(kind==='class'){
       body=(x.availablePaths?.length?related('Képességutak · aktuális API',table(['Út','Könyvparaméter','Fő hatás','Hatáskorlát'],x.availablePaths.map(p=>[esc(p.id),exact(p.bookRate),esc(p.main?.kind??'Nincs külön fő hatás'),p.main?exact(p.main.limit):'–']))+notice('Nyers képességparaméterek; a teljes könyv- és soft-cap képlet még nem igazolt.')):'')+related('Alapstatisztikák',statRows(x.baseStats))+related('Kasztképesség: '+x.skill.id,statRows(Object.fromEntries(Object.entries(x.skill).filter(([k])=>k!=='id'))))+`<a class="atlas-inline-link" href="#karakteralkotas">Kasztválasztó és összehasonlítás →</a>`;
     }else if(kind==='research'){
@@ -279,7 +298,7 @@
     if(kind==='pet')image=petUI.portrait(x);
     const pictures=media?.related(kind==='boss'?'mob':kind,kind==='boss'?x.mobId:id)??[];
     const englishNameKey=i18n.gameNameKey(kind,x);
-    return design.detail({kind,x,id,image,body,actions:extension.actions?.(kind,x)??'',glyph:glyph(kind==='item'?x.slot:kind),pictures:pictures.length?related(t('common.relatedArt'),`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">${t('common.openGallery')}</a>`):'',english:rows([[t('common.englishName'),englishNameKey?t(englishNameKey):x.nameEn??t('equipment.englishNameUnavailable')]]),source:sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})});
+    return design.detail({kind,x,id,image,body,actions:extension.actions?.(kind,x)??'',glyph:glyph(kind==='item'?x.slot:kind),pictures:pictures.length?related(t('common.relatedArt'),`<div class="atlas-media-strip">${pictures.slice(0,10).map(im=>`<a href="${route('gallery','image',im.id)}">${media.render(im)}<span>${esc(im.name)}</span></a>`).join('')}</div><a class="atlas-inline-link" href="#atlas/gallery">${t('common.openGallery')}</a>`):'',english:rows([[t('common.englishName'),englishNameKey?(['map','mob','boss','dungeon'].includes(kind)?i18n.dictionaries.en[englishNameKey]:t(englishNameKey)):x.nameEn??t('equipment.englishNameUnavailable')]]),source:sourceNote({...x,provenance:x.provenance??(kind==='building'?db.guild.provenance:{source:'03_kiserok.json',status:'verified'})})});
   }
   function trait(kind){
     const t=db.petTraits[kind];
@@ -292,7 +311,7 @@
     const dialog=$('#atlas-detail');
     if(parts[0]!=='atlas'){if(dialog.open)dialog.close();return;}
     const requested=categories.some(x=>x[0]===parts[1])?parts[1]:'overview';
-    if(state.page!==requested||state.query){state.page=requested;state.query='';$('#atlas-search').value='';state.pageNumber=1;}
+    if(state.page!==requested||(state.query&&!(requested==='world'&&((parts[2]&&parts[3])||dialog.open)))){state.page=requested;state.query='';$('#atlas-search').value='';state.pageNumber=1;}
     extension.onRoute?.(parts,new URLSearchParams(hashQuery));
     render();
     if(parts[2]&&parts[3]){
