@@ -11,6 +11,22 @@ window.STONESTORM_GUIDE_EN = {
     "rune-row": {title:"Another game",alt:"Rune Row tiles on a teahouse table with the original scoring interface.",caption:"Rune Row · a glimpse inside the teahouse",tag:"RUNE ROW"},
     "fair-wheel": {title:"Give luck a spin",alt:"Bingbing beside the colourful Fair Wheel and its in-game free-spin button.",caption:"Fair Wheel · Bingbing and the daily spin",tag:"A CHANCE EVERY DAY"}
   },
+  classes: {
+    warrior: {tags:"Melee · Tough · Good for beginners",description:"A durable melee fighter wielding a two-handed sword. The official guide marks this class as beginner-friendly.",stat:"Strength",weapon:"Two-handed sword",focus:"Melee combat and durability",tip:"A good starting point if you are new to the game."},
+    ninja: {tags:"Melee · Ranged",description:"Fights with twin daggers up close and a bow at range. Dexterity is the primary stat.",stat:"Dexterity",weapon:"Twin daggers and bow",focus:"Close and ranged combat",tip:"For players who enjoy two different combat styles."},
+    mage: {tags:"Melee · Magic",description:"A magical melee fighter wielding a flaming sword. Strength is the main stat, with some Intelligence.",stat:"Strength + some Intelligence",weapon:"Flaming sword",focus:"Melee combat and magic",tip:"For a blend of swordplay and magic."},
+    shaman: {tags:"Ranged · Magic · Support",description:"Summons lightning with a fan and talismans. A ranged, magical support class.",stat:"Intelligence",weapon:"Fan and talismans",focus:"Ranged magic and support",tip:"For players drawn to a magical support role."}
+  },
+  daily: [
+    {title:"Login calendar reward",description:"Claim today's gift; missing a day pauses the streak instead of resetting it."},
+    {title:"Free Fair Wheel spin",description:"At Bingbing, once unlocked. It refreshes at the daily reset."},
+    {title:"Daily Tasks and Daily chest",description:"At Dongsu's board: after completing tasks, claim both the rewards and the chest."},
+    {title:"Check Weekly Challenges",description:"Make progress on the weekly goals; new challenges arrive on Monday."},
+    {title:"Spend energy on Forays",description:"Check the next refill and avoid being at the cap beforehand."},
+    {title:"Collect Background Hunt loot",description:"Hunting stops when your bag is full. Check your hunting spot too."},
+    {title:"Free daily boss attempts",description:"Hunt → Boss: the card shows your remaining attempts and chance to win."},
+    {title:"Before you leave",description:"Tip: check Background Hunt and start a longer Foray; the Travel Chest starts once a day."}
+  ],
   articles: {
     account: {
       title: "Accounts, guest play and starting on mobile",

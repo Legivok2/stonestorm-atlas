@@ -6,7 +6,7 @@ import {createPreview} from '../scripts/serve-pages.mjs';
 
 process.env.PLAYWRIGHT_BROWSERS_PATH??=path.join(root,'.integration/browser-qa/browsers');
 const {chromium}=await import(pathToFileURL(path.join(root,'.integration/browser-qa/node_modules/playwright/index.mjs')));
-const server=createPreview(root);
+const server=createPreview(process.env.GUIDE_I18N_BROWSER_ROOT??root);
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base='http://127.0.0.1:'+server.address().port+'/stonestorm-atlas/';
 const browser=await chromium.launch({headless:true});
@@ -21,12 +21,23 @@ try{
     assert.match(await article.locator('summary').innerText(),/Kovácsolás/);
     await page.locator('#knowledge-search').fill('forging');
     assert(await page.locator('.search-result[href="#cikk-forge"]').count());
+    const activeNavigation=await page.locator('#main-nav a[aria-current="location"]').getAttribute('href');
+    await page.locator('.compare-button').nth(0).click();
+    await page.locator('.compare-button').nth(1).click();
+    await page.locator('#task-login').check();
     await page.locator('[data-filter="gear"]').click();
     await page.locator('#atlas-language [data-atlas-language="en"]').click();
+    assert.equal(await page.locator('#atlas-heading').innerText(),'Overview');
+    assert.equal(await page.locator('#main-nav a[aria-current="location"]').getAttribute('href'),activeNavigation);
     assert.equal(await article.getAttribute('open'),'');
     assert.equal(new URL(page.url()).hash,'#cikk-forge');
     assert.match(await article.locator('summary').innerText(),/Forging/);
     assert.match(await article.locator('.article-body').innerText(),/failed upgrade burns the item/);
+    assert.equal(await page.locator('#faq-list .faq-item').count(),10);
+    assert.equal(await page.locator('#article-library .library-item').count(),26);
+    assert.equal(await page.locator('#task-login').isChecked(),true);
+    assert.equal(await page.locator('.class-card.selected').count(),2);
+    assert.match(await page.locator('#class-cards .class-card').nth(0).innerText(),/durable melee fighter/);
     const coverage=await page.evaluate(()=>{
       const source=window.STONESTORM_CONTENT,translations=window.STONESTORM_GUIDE_EN;
       const errors=[];
@@ -37,11 +48,28 @@ try{
         if(target.querySelector('.article-body > p').textContent!==en.intro)errors.push(entry.id+' intro');
         const items=[...target.querySelectorAll('.article-body > ul > li')].map(el=>el.textContent);
         if(JSON.stringify(items)!==JSON.stringify(en.sections.flatMap(section=>section.items)))errors.push(entry.id+' items');
+        const headings=[...target.querySelectorAll('.article-body > h4')].map(el=>el.textContent);
+        const expectedHeadings=en.sections.map(section=>section.heading).filter(Boolean);
+        if(JSON.stringify(headings)!==JSON.stringify(expectedHeadings))errors.push(entry.id+' headings');
+        if(entry.tip&&!target.querySelector('.article-body > .inline-tip')?.textContent.endsWith(en.tip))errors.push(entry.id+' tip');
       }
       translations.faq.forEach((faq,index)=>{
         const target=document.getElementById('gyik-'+index);
         if(target.querySelector('summary').textContent!==faq.question||target.querySelector('p').textContent!==faq.answer)errors.push('faq '+index);
       });
+      for(const element of document.querySelectorAll('[data-atlas-i18n^="guide.static."],[data-atlas-i18n-label^="guide.static."]')){
+        const key=element.dataset.atlasI18n||element.dataset.atlasI18nLabel;
+        if(!window.AtlasI18n.dictionaries.en[key])errors.push('missing static key '+key);
+        else if(element.hasAttribute('data-atlas-i18n-label')){
+          if(element.getAttribute('aria-label')!==window.AtlasI18n.dictionaries.en[key])errors.push('static label '+key);
+        }else if(!['guide.static.comparisonCount','guide.static.dailyMessage'].includes(key)&&element.textContent!==window.AtlasI18n.dictionaries.en[key]){
+          errors.push('static text '+key);
+        }
+      }
+      const guideText=[...document.querySelectorAll('#utmutato,#karakteralkotas,#elso-lepesek,#napi-rutin,#fejlodes,#vilagkepek,#reszletes-utmutato,#tudasbazis,#forrasok,.site-footer,#image-lightbox')]
+        .map(element=>element.innerText).join(' ');
+      const accented=[...guideText.matchAll(/.{0,24}[áéíóöőúüűÁÉÍÓÖŐÚÜŰ].{0,24}/g)].map(match=>match[0]);
+      if(accented.length)errors.push('Hungarian accented text remains in English guide: '+accented.slice(0,6).join(' | '));
       return errors;
     });
     assert.deepEqual(coverage,[]);
@@ -58,8 +86,11 @@ try{
     assert.match(await page.locator('#gyik-3').innerText(),/What can I do when I run out of energy/);
     assert.match(await page.locator('#gyik-3 p').innerText(),/next refill/);
     await page.locator('#atlas-language [data-atlas-language="hu"]').click();
+    assert.equal(await page.locator('#atlas-heading').innerText(),'Áttekintés');
     assert.equal(await page.locator('#gyik-3').getAttribute('open'),'');
     assert.match(await page.locator('#gyik-3 summary').innerText(),/elfogyott az energiám/);
+    assert.equal(await page.locator('#task-login').isChecked(),true);
+    assert.equal(await page.locator('.class-card.selected').count(),2);
     await page.locator('#atlas-language [data-atlas-language="en"]').click();
     assert.equal(await page.locator('#gyik-3').getAttribute('open'),'');
     await page.locator('#cikk-maps summary').click();
@@ -68,7 +99,12 @@ try{
     assert.match(await page.locator('.atlas-guide-results a[href="#cikk-forge"] h4').innerText(),/Forging/);
     await page.reload({waitUntil:'networkidle'});
     assert.equal(await page.locator('html').getAttribute('lang'),'en');
+    assert.equal(await page.locator('#atlas-heading').innerText(),'Overview');
     assert.match(await page.locator('#cikk-forge summary').innerText(),/Forging/);
+    assert.equal(await page.locator('#cikk-forge').getAttribute('open'),'');
+    assert.equal(await page.locator('#task-login').isChecked(),true);
+    assert.equal(await page.locator('.class-card.selected').count(),2);
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'document overflow at '+width+'px');
     assert.deepEqual(errors,[]);
     await context.close();
     console.log(width+' px: guide articles, FAQ, bilingual search and in-place switching verified');

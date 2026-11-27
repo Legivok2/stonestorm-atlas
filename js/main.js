@@ -4,6 +4,7 @@
   if (!data) return;
   const english = window.STONESTORM_GUIDE_EN;
   const isEnglish = () => window.AtlasI18n?.getLocale() === "en";
+  const localeText = (hu, en) => (isEnglish() ? en : hu);
   const guideArticle = (article) =>
     isEnglish() && english?.articles[article.id]
       ? { ...article, ...english.articles[article.id] }
@@ -37,6 +38,7 @@
     (isEnglish() ? "Frequently asked question" : "Gyakori kérdés");
   const allowedFilters = ["all", ...Object.keys(categories)];
   let storageAvailable = true;
+  let dailyResetMessage = false;
   let state = {
     classes: [],
     filter: "all",
@@ -113,7 +115,10 @@
   function showStorageStatus() {
     if (!storageAvailable)
       $("#storage-note").textContent =
-        "A böngésző tárhelye nem érhető el. A választások most csak az oldal bezárásáig élnek. A napi lista a helyi naptári napot követi, nem a játék visszaállítását.";
+        localeText(
+          "A böngésző tárhelye nem érhető el. A választások most csak az oldal bezárásáig élnek. A napi lista a helyi naptári napot követi, nem a játék visszaállítását.",
+          "Browser storage is unavailable. Your choices will last only until you close the page. The daily list follows your local calendar day, not the game's reset.",
+        );
   }
   readState();
   // A próbaírás a csak olvasható vagy privát tárhelyet is észleli.
@@ -258,17 +263,19 @@
 
   function renderClasses() {
     const container = $("#class-cards");
+    container.replaceChildren();
     data.classes.forEach((c) => {
+      const translated = isEnglish() ? english?.classes[c.id] : null;
       const card = node("article", "class-card");
       card.dataset.classId = c.id;
       card.append(
         icon(c.icon, "topic-icon"),
         node("h4", null, c.name),
-        node("div", "class-tags", c.tags),
-        node("p", null, c.description),
+        node("div", "class-tags", translated?.tags ?? c.tags),
+        node("p", null, translated?.description ?? c.description),
       );
-      const stat = node("div", "class-stat", "Elsődleges stat");
-      stat.append(node("strong", null, c.stat));
+      const stat = node("div", "class-stat", localeText("Elsődleges stat", "Primary stat"));
+      stat.append(node("strong", null, translated?.stat ?? c.stat));
       const button = node("button", "compare-button");
       button.type = "button";
       button.setAttribute("aria-controls", "comparison-panel");
@@ -277,16 +284,17 @@
         if (index >= 0) state.classes.splice(index, 1);
         else if (state.classes.length < 2) state.classes.push(c.id);
         else {
-          $("#class-feedback").textContent =
-            "Egyszerre két kaszt hasonlítható össze. Előbb vedd ki az egyik kijelölt kasztot.";
+          $("#class-feedback").textContent = localeText(
+            "Egyszerre két kaszt hasonlítható össze. Előbb vedd ki az egyik kijelölt kasztot.",
+            "You can compare two classes at a time. Remove one of the selected classes first.",
+          );
           return;
         }
-        $("#class-feedback").textContent =
-          state.classes.length === 2
-            ? "Az összehasonlítás elkészült a kártyák alatt."
-            : "Válassz még " +
-              (2 - state.classes.length) +
-              " kasztot az összehasonlításhoz.";
+        $("#class-feedback").textContent = state.classes.length === 2
+          ? localeText("Az összehasonlítás elkészült a kártyák alatt.", "Your comparison is ready below the cards.")
+          : localeText("Válassz még ", "Select ") +
+            (2 - state.classes.length) +
+            localeText(" kasztot az összehasonlításhoz.", " more class to compare.");
         persist();
         updateComparison();
       });
@@ -296,27 +304,41 @@
     updateComparison();
   }
   function updateComparison() {
+    const translatedClass = (c) => isEnglish() ? english?.classes[c.id] ?? c : c;
     $$(".class-card").forEach((card) => {
       const selected = state.classes.includes(card.dataset.classId);
       card.classList.toggle("selected", selected);
       const button = card.querySelector("button");
       const c = data.classes.find((item) => item.id === card.dataset.classId);
       button.textContent = selected
-        ? "✓ Kijelölve · eltávolítás"
-        : "+ Összehasonlítom";
+        ? localeText("✓ Kijelölve · eltávolítás", "✓ Selected · remove")
+        : localeText("+ Összehasonlítom", "+ Compare");
       button.setAttribute("aria-pressed", String(selected));
       button.setAttribute(
         "aria-label",
         c.name +
           (selected
-            ? " eltávolítása az összehasonlításból"
-            : " hozzáadása az összehasonlításhoz"),
+            ? localeText(" eltávolítása az összehasonlításból", " remove from comparison")
+            : localeText(" hozzáadása az összehasonlításhoz", " add to comparison")),
       );
     });
     const selected = state.classes.map((id) =>
       data.classes.find((c) => c.id === id),
     );
-    $("#comparison-count").textContent = selected.length + " / 2 kiválasztva";
+    $("#comparison-count").textContent = selected.length + (isEnglish() ? " / 2 selected" : " / 2 kiválasztva");
+    if (state.classes.length === 2) {
+      $("#class-feedback").textContent = localeText(
+        "Az összehasonlítás elkészült a kártyák alatt.",
+        "Your comparison is ready below the cards.",
+      );
+    } else if (state.classes.length === 1) {
+      $("#class-feedback").textContent = localeText(
+        "Válassz még egy kasztot az összehasonlításhoz.",
+        "Select one more class to compare.",
+      );
+    } else {
+      $("#class-feedback").textContent = "";
+    }
     const container = $("#comparison-content");
     container.replaceChildren();
     if (selected.length !== 2) {
@@ -325,8 +347,8 @@
           "p",
           null,
           selected.length
-            ? "Már csak egy kaszt hiányzik. Jelöld ki a fenti kártyák egyikét."
-            : "Warrior, Ninja, Mage vagy Shaman? Két kijelöléssel egymás mellé teheted a fegyverüket, a fő statjukat és a harci stílusukat.",
+            ? localeText("Már csak egy kaszt hiányzik. Jelöld ki a fenti kártyák egyikét.", "Choose one more class from the cards above.")
+            : localeText("Warrior, Ninja, Mage vagy Shaman? Két kijelöléssel egymás mellé teheted a fegyverüket, a fő statjukat és a harci stílusukat.", "Warrior, Ninja, Mage or Shaman? Select two to compare their weapons, primary stats and combat styles side by side."),
         ),
       );
       return;
@@ -335,11 +357,11 @@
     const caption = node(
       "caption",
       "sr-only",
-      selected.map((c) => c.name).join(" és ") + " összehasonlítása",
+      selected.map((c) => c.name).join(localeText(" és ", " and ")) + localeText(" összehasonlítása", " comparison"),
     );
     const head = node("thead"),
       header = node("tr");
-    ["Tulajdonság", ...selected.map((c) => c.name)].forEach((name) => {
+    [localeText("Tulajdonság", "Attribute"), ...selected.map((c) => c.name)].forEach((name) => {
       const th = node("th", null, name);
       th.scope = "col";
       header.append(th);
@@ -347,16 +369,16 @@
     head.append(header);
     const body = node("tbody");
     [
-      ["Elsődleges stat", "stat"],
-      ["Fegyver", "weapon"],
-      ["Harci stílus", "focus"],
-      ["Tipp · választás", "tip"],
+      [localeText("Elsődleges stat", "Primary stat"), "stat"],
+      [localeText("Fegyver", "Weapon"), "weapon"],
+      [localeText("Harci stílus", "Combat style"), "focus"],
+      [localeText("Tipp · választás", "Tip · choice"), "tip"],
     ].forEach(([label, key]) => {
       const tr = node("tr"),
         th = node("th", null, label);
       th.scope = "row";
       tr.append(th);
-      selected.forEach((c) => tr.append(node("td", null, c[key])));
+      selected.forEach((c) => tr.append(node("td", null, translatedClass(c)[key] ?? c[key])));
       body.append(tr);
     });
     table.append(caption, head, body);
@@ -371,7 +393,23 @@
     }
   }
   function renderDaily() {
-    data.daily.forEach((task) => {
+    renderDailyTasks();
+    $("#reset-daily").addEventListener("click", () => {
+      state.daily = { date: localDay(), done: [] };
+      dailyResetMessage = true;
+      persist();
+      updateDaily();
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) ensureDailyDate();
+    });
+    window.addEventListener("focus", ensureDailyDate);
+    window.setInterval(ensureDailyDate, 30000);
+  }
+  function renderDailyTasks() {
+    $("#daily-checklist").replaceChildren();
+    data.daily.forEach((task, index) => {
+      const translated = isEnglish() ? english?.daily[index] : null;
       const label = node("label", "check-item");
       const input = node("input");
       input.type = "checkbox";
@@ -379,11 +417,12 @@
       input.value = task.id;
       const copy = node("span");
       copy.append(
-        node("strong", null, task.title),
-        node("small", null, task.description),
+        node("strong", null, translated?.title ?? task.title),
+        node("small", null, translated?.description ?? task.description),
       );
       input.addEventListener("change", () => {
         const checked = input.checked;
+        dailyResetMessage = false;
         ensureDailyDate();
         state.daily.done = state.daily.done.filter((id) => id !== task.id);
         if (checked) state.daily.done.push(task.id);
@@ -393,19 +432,7 @@
       label.append(input, copy);
       $("#daily-checklist").append(label);
     });
-    $("#reset-daily").addEventListener("click", () => {
-      state.daily = { date: localDay(), done: [] };
-      persist();
-      updateDaily();
-      $("#daily-message").textContent =
-        "A pipákat töröltük. Kezdődhet egy új kör.";
-    });
     updateDaily();
-    document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) ensureDailyDate();
-    });
-    window.addEventListener("focus", ensureDailyDate);
-    window.setInterval(ensureDailyDate, 30000);
   }
   function updateDaily() {
     $$("#daily-checklist input").forEach((input) => {
@@ -417,12 +444,15 @@
     $("#daily-progress").setAttribute("aria-valuemax", String(total));
     $("#daily-progress").setAttribute("aria-valuenow", String(done));
     $("#daily-progress span").style.width = (done / total) * 100 + "%";
-    $("#daily-message").textContent =
-      done === total
-        ? "Minden pipa a helyén. Szép kaland volt!"
+    $("#daily-message").textContent = dailyResetMessage
+      ? localeText("A pipákat töröltük. Kezdődhet egy új kör.", "Checkmarks cleared. Start a fresh round.")
+      : done === total
+        ? localeText("Minden pipa a helyén. Szép kaland volt!", "Every box is checked. Well done!")
         : done
-          ? done + " kész, " + (total - done) + " teendő vár még rád."
-          : "Minden kaland egy lépéssel kezdődik.";
+          ? isEnglish()
+            ? done + " complete, " + (total - done) + " tasks left."
+            : done + " kész, " + (total - done) + " teendő vár még rád."
+          : localeText("Minden kaland egy lépéssel kezdődik.", "Every adventure starts with one step.");
   }
 
   function renderLibrary() {
@@ -686,9 +716,12 @@
   setupSearch();
   setupNavigation();
   window.AtlasI18n?.onChange(() => {
+    renderClasses();
+    renderDailyTasks();
     renderLibrary();
     renderSearch();
     renderMedia();
+    showStorageStatus();
   });
   window.addEventListener("hashchange", revealHash);
   revealHash();

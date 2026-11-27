@@ -39,4 +39,28 @@ test('every guide article and FAQ has a complete English counterpart',()=>{
     translated(en.faq[index]?.answer,faq.answer,'faq'+index+'.answer');
   });
   assert.deepEqual(missing,[],'Missing or unchanged translations: '+missing.join(', '));
+  assert.equal(en.classes && Object.keys(en.classes).length,hu.classes.length);
+  assert.equal(en.daily.length,hu.daily.length);
+  hu.classes.forEach((entry)=>{
+    const translation=en.classes[entry.id];
+    assert(translation?.description?.trim(),entry.id+' class description');
+    assert.notEqual(translation.description,entry.description,entry.id+' class was not translated');
+  });
+  hu.daily.forEach((entry,index)=>{
+    assert(en.daily[index]?.title?.trim(),'daily title '+entry.id);
+    assert(en.daily[index]?.description?.trim(),'daily description '+entry.id);
+    assert.notEqual(en.daily[index].title,entry.title,'daily title '+entry.id);
+    assert.notEqual(en.daily[index].description,entry.description,'daily description '+entry.id);
+  });
+});
+
+test('all static guide translation attributes resolve in the shared Atlas dictionaries',()=>{
+  const i18nContext={localStorage:{getItem:()=>null,setItem:()=>{}},console:{warn:()=>{}}};
+  vm.runInNewContext(fs.readFileSync(new URL('../js/atlas-i18n.js',import.meta.url),'utf8'),i18nContext);
+  const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+  const keys=[...html.matchAll(/data-atlas-i18n(?:-label)?="(guide\.static\.[^"]+)"/g)].map(match=>match[1]);
+  const unique=[...new Set(keys)];
+  const missing=unique.filter(key=>!i18nContext.AtlasI18n.dictionaries.en[key]?.trim());
+  assert.deepEqual(missing,[]);
+  assert(unique.length>=100,'Expected translations across all static guide sections');
 });

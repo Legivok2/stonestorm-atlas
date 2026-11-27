@@ -30,9 +30,9 @@ GitHub repository: [Legivok2/stonestorm-atlas](https://github.com/Legivok2/stone
 
 A teljes statikus kiadás: `npm run build:pages`, ellenőrzése: `npm run test:pages`. A workflow minden main-push után ezt telepíti. Hiányzó adat vagy közzétételi felhatalmazás esetén leáll, nem cseréli le az oldalt a korábbi kalauzkiadásra.
 
-**Atlas nyelvi előzetes:** a fejléc Magyar / English kapcsolója és az áttekintés egy része kétnyelvű, de a teljes Atlas, a kezdőkalauz és az adatlapok angol fordítása még nem teljes. A beállítás a böngészőben mentődik. A kísérőnevek a mentett hivatalos kliensfordításból származnak; más játéknevek eredeti nyelven maradhatnak.
+**Atlas HU/EN támogatás:** a fejléc Magyar / English kapcsolója a kezdőkalauzban, mind a 26 cikkben és mind a 10 GYIK-bejegyzésben is azonnal vált; a nyelv a böngészőben mentődik. A teljes Atlas-adatlapok és több adatvezérelt felület még nem teljesen lokalizált. A kísérőnevek a mentett hivatalos kliensfordításból származnak; más, nem igazolt játéknevek eredeti nyelven maradhatnak.
 
-**Atlas language preview:** the Magyar / English selector and parts of the overview are bilingual, but the complete Atlas, beginner guide and detail pages are not yet fully translated. The preference is stored in the browser. Companion names come from the saved official client translations; other game names may remain in their original language.
+**Atlas HU/EN support:** the Magyar / English selector immediately switches the beginner guide, all 26 articles and all 10 FAQ entries; the preference is stored in the browser. Atlas data details and several data-driven interfaces are not yet fully localized. Companion names come from the saved official client translations; other game names without verified translations may remain in their original language.
 
 Node.js 20 vagy újabb verzióval, a projektmappában:
 
