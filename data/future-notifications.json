@@ -1,5 +1,1414 @@
 {
   "schema": 1,
-  "pending": [],
+  "pending": [
+    {
+      "id": "2a3c23e586debc6b4e94b7710aeec363596e62b116baff3aeadd5f70863ab472",
+      "observationId": "70772e1d8c529b632548bd33ffc578e18380b464d031c02c2e28375581678fbc",
+      "revision": 1,
+      "kind": "limit-raised",
+      "category": "maxLevel",
+      "nameHu": "A konfiguráció maximális játékosszintje",
+      "key": "limits.maxLevel",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": 60,
+      "after": 99,
+      "beforeStatus": "prepared",
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/limits/maxLevel",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "74d7314293aaa32253340373a276cd791767275aface09f9c8d76bc79a0fa892",
+      "observationId": "5e197a70930bcf7fbcdbbb0f7cd4a330c6d2c9f79f2f7e79468c1f8bfa713413",
+      "revision": 1,
+      "kind": "table-expanded",
+      "category": "xp",
+      "nameHu": "XP-táblázat",
+      "key": "spine.xpTable",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": [
+        143,
+        390,
+        848,
+        1620,
+        2813,
+        5138,
+        8849,
+        14536,
+        22983,
+        35210,
+        52544,
+        76690,
+        109827,
+        154726,
+        214888,
+        294720,
+        352410,
+        417240,
+        489630,
+        570000,
+        658770,
+        756360,
+        863190,
+        979680,
+        1106250,
+        1243320,
+        1391310,
+        1550640,
+        1721730,
+        1905000,
+        2100870,
+        2309760,
+        2532090,
+        2768280,
+        3018750,
+        3283920,
+        3564210,
+        3860040,
+        4171830,
+        4500000,
+        5087219,
+        5727876,
+        6425038,
+        7181856,
+        8001563,
+        8887476,
+        9842999,
+        10871616,
+        11976899,
+        13162500,
+        13966605,
+        14802840,
+        15671835,
+        16574220,
+        17510625,
+        18481680,
+        19488015,
+        20530260,
+        21609045,
+        22725000
+      ],
+      "after": [
+        143,
+        390,
+        848,
+        1620,
+        2813,
+        5138,
+        8849,
+        14536,
+        22983,
+        35210,
+        52544,
+        76690,
+        109827,
+        154726,
+        214888,
+        294720,
+        352410,
+        417240,
+        489630,
+        570000,
+        658770,
+        756360,
+        863190,
+        979680,
+        1106250,
+        1243320,
+        1391310,
+        1550640,
+        1721730,
+        1905000,
+        2100870,
+        2309760,
+        2532090,
+        2768280,
+        3018750,
+        3283920,
+        3564210,
+        3860040,
+        4171830,
+        4500000,
+        5087219,
+        5727876,
+        6425038,
+        7181856,
+        8001563,
+        8887476,
+        9842999,
+        10871616,
+        11976899,
+        13162500,
+        13966605,
+        14802840,
+        15671835,
+        16574220,
+        17510625,
+        18481680,
+        19488015,
+        20530260,
+        21609045,
+        22725000,
+        23878755,
+        25070940,
+        26302185,
+        27573120,
+        28884375,
+        30236580,
+        31630365,
+        33066360,
+        34545195,
+        36067500,
+        37633905,
+        39245040,
+        40901535,
+        42604020,
+        44353125,
+        46149480,
+        47993715,
+        49886460,
+        51828345,
+        53820000,
+        55862055,
+        57955140,
+        60099885,
+        62296920,
+        64546875,
+        66850380,
+        69208065,
+        71620560,
+        74088495,
+        76612500,
+        79193205,
+        81831240,
+        84527235,
+        87281820,
+        90095625,
+        92969280,
+        95903415,
+        98898660,
+        101955645
+      ],
+      "beforeStatus": "prepared",
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/spine/xpTable",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "ed7e9f5e07f52fb8178c2893c7a62e465ef4f00c596153519d904f94e3881008",
+      "observationId": "e35f24be8ecc212a3d5cbf92aeb9ed9ea7f4c066d0baa2489d649b8d4ba96ca8",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "maps",
+      "nameHu": "M7 pálya",
+      "key": "m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "m7",
+        "index": 7,
+        "minLevel": 61,
+        "maxLevel": 70,
+        "spots": [
+          {
+            "id": "m7_shoals",
+            "mobId": "m7_reef_crab",
+            "mobIds": [
+              "m7_reef_crab",
+              "m7_storm_gull"
+            ],
+            "materialId": "mat_m7_crab_claw",
+            "opensAt": 61
+          },
+          {
+            "id": "m7_wreck_bay",
+            "mobId": "m7_zap_jelly",
+            "mobIds": [
+              "m7_zap_jelly",
+              "m7_wreck_octopus",
+              "m7_drowned_sailor"
+            ],
+            "materialId": "mat_m7_wreck_plank",
+            "opensAt": 62
+          },
+          {
+            "id": "m7_dead_lighthouse",
+            "mobId": "m7_spine_urchin",
+            "mobIds": [
+              "m7_spine_urchin",
+              "m7_lamp_warden"
+            ],
+            "materialId": "mat_m7_lamp_glass",
+            "opensAt": 64
+          },
+          {
+            "id": "m7_breakwater",
+            "mobId": "m7_coral_brute",
+            "mobIds": [
+              "m7_coral_brute",
+              "m7_wail_siren",
+              "m7_reef_pirate"
+            ],
+            "materialId": "mat_m7_barnacle",
+            "opensAt": 66
+          },
+          {
+            "id": "m7_stonefall_cove",
+            "mobId": "m7_storm_ray",
+            "mobIds": [
+              "m7_storm_ray",
+              "m7_wave_serpent",
+              "m7_stone_clam"
+            ],
+            "materialId": "mat_m7_storm_pearl",
+            "opensAt": 68
+          }
+        ],
+        "stones": [
+          {
+            "id": "stone_m7_1",
+            "level": 61,
+            "waves": [
+              "m7_reef_crab",
+              "m7_storm_gull",
+              "m7_zap_jelly"
+            ],
+            "strength": 2.1
+          },
+          {
+            "id": "stone_m7_2",
+            "level": 64,
+            "waves": [
+              "m7_zap_jelly",
+              "m7_wreck_octopus",
+              "m7_drowned_sailor"
+            ],
+            "strength": 2.2
+          },
+          {
+            "id": "stone_m7_3",
+            "level": 66,
+            "waves": [
+              "m7_spine_urchin",
+              "m7_coral_brute",
+              "m7_wail_siren"
+            ],
+            "strength": 2.4
+          },
+          {
+            "id": "stone_m7_4",
+            "level": 68,
+            "waves": [
+              "m7_lamp_warden",
+              "m7_reef_pirate",
+              "m7_storm_ray"
+            ],
+            "strength": 2.55
+          }
+        ],
+        "strength": {
+          "run": 2.3,
+          "boss": 3.1
+        },
+        "boss": {
+          "id": "boss_m7",
+          "mobId": "m7_boss"
+        },
+        "tide": {
+          "periodHours": 3,
+          "spots": [
+            "m7_shoals",
+            "m7_wreck_bay",
+            "m7_dead_lighthouse",
+            "m7_breakwater",
+            "m7_stonefall_cove"
+          ],
+          "lootMult": 1.5,
+          "fishing": {
+            "rare": 1.3,
+            "epic": 1.3,
+            "legendary": 1.3
+          }
+        }
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/maps/6",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "327516b099ff9c7d6e73929103dbc04ae7a0cb4fd88ddc917b437a9c538eec5f",
+      "observationId": "1fa6d7c93c58c352fb6f751000dbb949b2f7ea985271810346271fe35dcb5993",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "bosses",
+      "nameHu": "Bossok",
+      "key": "boss_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "boss_m7",
+        "mobId": "m7_boss",
+        "mapIndex": 7,
+        "recommendedLevel": 70
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/bosses/6",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "eae1c7e9122c2bcf7d7b8a467be1533522e09d172a872dfde337c90cc656d635",
+      "observationId": "0f80544dce0e40126c1452bce195a206e6dab05251b0a1c482fa0a9d432a27be",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_warrior_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_warrior_6",
+        "slot": "weapon",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "warrior"
+        ],
+        "values": {
+          "atkMin": 138,
+          "atkMax": 195,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/11",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "c6443f1f8779f5992c257f9ea09f7d30a127ea4d29d45668a3d586d3b42cfea9",
+      "observationId": "1f5b13f400ae290b4b9b6eba7bfe973559f6150cf93344035c0c440e5d499fd8",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_ninja_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_ninja_6",
+        "slot": "weapon",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "ninja"
+        ],
+        "values": {
+          "atkMin": 138,
+          "atkMax": 195,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/23",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "1a7dfe2252c4215e61367d5c22a3e468f5b60d23630e2aaf944ebd6e317e0b1a",
+      "observationId": "380100d1be73c1ef1407cd610fa56aba4a2eea1ed53428ce4736f2222c319d3d",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_mage_blade_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_mage_blade_6",
+        "slot": "weapon",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "mage_blade"
+        ],
+        "values": {
+          "atkMin": 138,
+          "atkMax": 195,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/35",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "7b3bef2ad13a815c82c48ce2d01a8cf57bb84c5267a1868dda49a02d7ce95794",
+      "observationId": "7b449ddc578d2330e4e169547053ffec7f31fba54ea59bd1f949d57a286dec78",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_shaman_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_shaman_6",
+        "slot": "weapon",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "shaman"
+        ],
+        "values": {
+          "atkMin": 138,
+          "atkMax": 195,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/47",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "078ca61adf2b1fd02126a7c518ae92d74b14d5a06de300a8d896333abce12c8d",
+      "observationId": "a9e0a1de3e0d337d358817df43036ae18df50ec8328107f67a3adeb09fa18b1b",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_warrior_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_warrior_6",
+        "slot": "armor",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "warrior"
+        ],
+        "portraitTier": 5,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 113,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/57",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "6e0b0368594ea7ebaa1d21308212bcdeb668ad3049780c8b8f0fe8cc8892adf8",
+      "observationId": "b56aeeff9f2ebd75655a47695f01360f57870e3171bcde978e3a24ee73fa1250",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_ninja_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_ninja_6",
+        "slot": "armor",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "ninja"
+        ],
+        "portraitTier": 5,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 113,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/67",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "86b873409213fd392acf4ae682ca4932c72d85e8cd11ad567b135bb18801211f",
+      "observationId": "b09a7085842a4b57ea4dbae92acb6e6971364bf5a3a07081a3afffffff6896a2",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_mage_blade_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_mage_blade_6",
+        "slot": "armor",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "mage_blade"
+        ],
+        "portraitTier": 5,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 113,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/77",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "07c9255d2edc6b780bac3d71c4904056e202de19ad9643be377d6a7f5f6ad504",
+      "observationId": "bf28a5b5104401457c77abea9925533e751b31479a0caadecdc09f2b2a92f408",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_shaman_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_shaman_6",
+        "slot": "armor",
+        "level": 67,
+        "tier": 6,
+        "classes": [
+          "shaman"
+        ],
+        "portraitTier": 5,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 113,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15075,
+        "buyPrice": 75375
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/87",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "6ad881315d53a4d64de1f5f8ee82fcc6984605b5196925679da35c3468ef7113",
+      "observationId": "f3ff66e2b0508c1cca09cc1c0d0f9eb418399b7970ef9664656c0331f1213636",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "helmet_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "helmet_6",
+        "slot": "helmet",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 59,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/98",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "7ae350284365c983b52e76c5f041c966062db110dbc35807003aac02b6b5e544",
+      "observationId": "f5672e3147d393224ff04a594a2cb0bfd5fc7a87ae181adbc225da988d25f01b",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "shield_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "shield_6",
+        "slot": "shield",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 74,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/109",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "83f5ac4013a95a8cb76e2101da4c4551c94fcd97b67e139398b550fbf9e80252",
+      "observationId": "3a8d2cf7e5f6a0f98a0b97fb80d891fc60d867e19ebba13d323985d6fc64bce7",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "boots_6",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "boots_6",
+        "slot": "boots",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 44,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/120",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "691477bda368494fb1594b6676dbeaeb0aea4fa87ad07d2d61549083ef791c0a",
+      "observationId": "ab974b16d47ca4de99621e4f1087f52f540d5a0cea680b3463ccc1a4b1c2979c",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "bracelet_5",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "bracelet_5",
+        "slot": "bracelet",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 0,
+          "maxHp": 870,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/129",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "9a12e728db7c785d75bfc48c9e2805105496e8f51539c3f2eb3b25097cfbe3e0",
+      "observationId": "fa29acc50d244ccc3ea31097da89447b8387eaab5ad83b8f0d49fa9f3b18ae30",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "necklace_5",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "necklace_5",
+        "slot": "necklace",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0.08,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/138",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "7c21a9ff36e3874533d9151ce4f1402a438eb22d28cade04cbc9d45c8ed13da5",
+      "observationId": "03c5ffd4435bec15e7b9a0e010d57772c886a2fac28eb8ca9cadab2e88275408",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "earrings_5",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "earrings_5",
+        "slot": "earrings",
+        "level": 70,
+        "tier": 6,
+        "classes": null,
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 37
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/147",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "863f574966a870ba53f0e61734a7064c88341c0bfc326b581884d1bdabcf0372",
+      "observationId": "060518f8662e7362706583eb5c499a5433e70bf1e9ddea16bc6eec34b179ade1",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_warrior_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_warrior_set_m7",
+        "slot": "weapon",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "warrior"
+        ],
+        "art": "w_warrior_5",
+        "family": "m7",
+        "values": {
+          "atkMin": 144,
+          "atkMax": 203,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/196",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "086696d01d757db81b82188dbb4d658dbd72c34e827585f8dbbfc7a56b6e9f57",
+      "observationId": "157b7178bf676ff7ea3b29d19e8ce52b74570c018895fecb7940a6a1daabfb47",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_warrior_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_warrior_set_m7",
+        "slot": "armor",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "warrior"
+        ],
+        "portraitTier": 5,
+        "art": "a_warrior_5",
+        "portrait": "set_m7",
+        "family": "m7",
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 118,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/197",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "d5c8fe995fb7664ef223ecea612300d87cbd1597ac196cb75fde78f7716b223d",
+      "observationId": "cfdc7224f21b14a3a16ed0b91cd71efdf12228f3edde62040a756a4d1a01e941",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_ninja_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_ninja_set_m7",
+        "slot": "weapon",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "ninja"
+        ],
+        "art": "w_ninja_5",
+        "family": "m7",
+        "values": {
+          "atkMin": 144,
+          "atkMax": 203,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/198",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "88bf71125e5931d4e87839e10fbb5207cbb688e9e88b1b0df1404a0fc3ece742",
+      "observationId": "2ecf0343299be5aa92e5b9b484407b3c9c64a5dca0115f5b2eaffa6314d65dd0",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_ninja_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_ninja_set_m7",
+        "slot": "armor",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "ninja"
+        ],
+        "portraitTier": 5,
+        "art": "a_ninja_5",
+        "portrait": "set_m7",
+        "family": "m7",
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 118,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/199",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "cae539cc9a28794d884f7556141aa6fb053ce78ed2492a2cb65ef886346655c7",
+      "observationId": "404d76b4f7080557dcf6fbd5e5e30bdc0fe77fbdc89a039162f23f674ebe418c",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_shaman_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_shaman_set_m7",
+        "slot": "weapon",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "shaman"
+        ],
+        "art": "w_shaman_5",
+        "family": "m7",
+        "values": {
+          "atkMin": 144,
+          "atkMax": 203,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/200",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "c8c683ec6a360b6b90de699da55ece1f98d748e8b285fc2774b526350a06781e",
+      "observationId": "a0caac758a6bc8eed008af3251802522bd7a843c6e4c831e007283d5a378425f",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_shaman_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_shaman_set_m7",
+        "slot": "armor",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "shaman"
+        ],
+        "portraitTier": 5,
+        "art": "a_shaman_5",
+        "portrait": "set_m7",
+        "family": "m7",
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 118,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/201",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "fe82b62936e582f505fe9ba0d25b8a8d39e04fa79622a0cdb86d5ef40547ba70",
+      "observationId": "7f7f2bca7ce4d2c8c402dcd0bfc47fa8655479ebd7d17659a6a777f9083b3344",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "w_mage_blade_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "w_mage_blade_set_m7",
+        "slot": "weapon",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "mage_blade"
+        ],
+        "art": "w_mage_blade_5",
+        "family": "m7",
+        "values": {
+          "atkMin": 144,
+          "atkMax": 203,
+          "def": 0,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/202",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "25107b4b1f690be3667cdc02a009a1e499dc35d75da858001753e84addd90f94",
+      "observationId": "e6aa9a74896fb0ff188fbe11d80fa587128bc87c50e100d8804db559383fd64b",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "items",
+      "nameHu": "Felszerelések",
+      "key": "a_mage_blade_set_m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "a_mage_blade_set_m7",
+        "slot": "armor",
+        "level": 70,
+        "tier": 6,
+        "classes": [
+          "mage_blade"
+        ],
+        "portraitTier": 5,
+        "art": "a_mage_blade_5",
+        "portrait": "set_m7",
+        "family": "m7",
+        "values": {
+          "atkMin": 0,
+          "atkMax": 0,
+          "def": 118,
+          "maxHp": 0,
+          "crit": 0,
+          "attack": 0
+        },
+        "sellPrice": 15750,
+        "buyPrice": 78750
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/items/203",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "b383249d3d2734040c60f78eefd60b891c0987a26c610a3f01c7717d43b47f32",
+      "observationId": "7c18b80b2557054e31f920d0dd8059211b3809d5fc6eabc36c8be9cdbcccdd7d",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "families",
+      "nameHu": "Szettcsaládok",
+      "key": "m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "id": "m7",
+        "bossId": "boss_m7",
+        "mapIndex": 7,
+        "itemLevel": 70,
+        "marks": {
+          "win": 1,
+          "firstKill": 4,
+          "loss": 1,
+          "paidLoss": 0
+        },
+        "set": {
+          "id": "set_m7",
+          "icon": "icons/set_m7",
+          "slots": [
+            "weapon",
+            "armor",
+            "helmet",
+            "bracelet",
+            "necklace",
+            "earrings"
+          ],
+          "bonuses": [
+            {
+              "pieces": 2,
+              "stats": [
+                {
+                  "stat": "maxHp",
+                  "value": 230
+                }
+              ]
+            },
+            {
+              "pieces": 4,
+              "stats": [
+                {
+                  "stat": "vsUndead",
+                  "value": 0.08
+                },
+                {
+                  "stat": "vsBoss",
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "pieces": 6,
+              "stats": [
+                {
+                  "stat": "damageTaken",
+                  "value": 0.06
+                }
+              ]
+            }
+          ]
+        },
+        "unique": {
+          "id": "uniq_m7",
+          "icon": "icons/uniq_m7",
+          "slot": "boots",
+          "lines": [
+            {
+              "type": "maxHp",
+              "tier": 4
+            },
+            {
+              "type": "defence",
+              "tier": 4
+            },
+            {
+              "type": "damageTaken",
+              "tier": 4
+            }
+          ],
+          "effect": {
+            "kind": "stun",
+            "value": 0.08,
+            "storm": 0.11
+          },
+          "stormTier": 5
+        },
+        "loot": {
+          "set": {
+            "B": 0.11,
+            "A": 0.135,
+            "S": 0.17,
+            "first": 1,
+            "hard": 0.6
+          },
+          "unique": {
+            "B": 0.015,
+            "A": 0.018,
+            "S": 0.021,
+            "first": 0.015,
+            "hard": 0.105
+          },
+          "trophies": {
+            "B": 1,
+            "A": 1,
+            "S": 2,
+            "first": 3,
+            "hard": 3
+          }
+        }
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/families/families/6",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    },
+    {
+      "id": "babb44bd1d82f1496b8d8f2b0adcf7d8919588b233d449f7024e9ca9f16f35c8",
+      "observationId": "75e88cff48d1ba680b6bc634d95a9486a08d8cae782584c645080aa73e7003a2",
+      "revision": 1,
+      "kind": "discovered",
+      "category": "sets",
+      "nameHu": "Szettcsalád bónuszszabályai",
+      "key": "m7",
+      "at": "2026-11-27T21:21:27.628Z",
+      "gameVersion": "ba413b66ea0d",
+      "before": null,
+      "after": {
+        "familyLevel": 70,
+        "full": [
+          {
+            "pieces": 2,
+            "stats": [
+              {
+                "stat": "maxHp",
+                "tier": 3
+              }
+            ]
+          },
+          {
+            "pieces": 4,
+            "stats": [
+              {
+                "stat": "attack",
+                "tier": 3
+              },
+              {
+                "stat": "vsBoss",
+                "tier": 3
+              }
+            ]
+          },
+          {
+            "pieces": 6,
+            "stats": [
+              {
+                "stat": "damageTaken",
+                "tier": 5
+              }
+            ]
+          }
+        ],
+        "classic": [
+          {
+            "pieces": 2,
+            "stats": [
+              {
+                "stat": "maxHp",
+                "tier": 3
+              }
+            ]
+          },
+          {
+            "pieces": 3,
+            "stats": [
+              {
+                "stat": "attack",
+                "tier": 3
+              }
+            ]
+          },
+          {
+            "pieces": 4,
+            "stats": [
+              {
+                "stat": "vsBoss",
+                "tier": 3
+              },
+              {
+                "stat": "damageTaken",
+                "tier": 3
+              }
+            ]
+          }
+        ]
+      },
+      "beforeStatus": null,
+      "status": "prepared",
+      "source": "https://stonestorm.gg/api/content",
+      "sourcePath": "/spine/sets/m7",
+      "sourceHash": "e56a489fbe767fba81ac68b3c0ceaf2f369f2b428d1c18920461bfbf7157e488",
+      "important": true
+    }
+  ],
   "delivered": []
 }
